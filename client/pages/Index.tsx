@@ -67,7 +67,7 @@ export default function Index() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Link
-              to="/start-your-influencer-journey"
+              to="/quiz"
               className="neon-button flex items-center gap-2 group"
             >
               Start Your Influencer Quiz
