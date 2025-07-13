@@ -57,12 +57,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        // FameChase brand colors
+        // Neon-Garden theme colors
         "electric-blue": "#0085FF",
         "soft-violet": "#C3A9FF",
         "neon-green": "#00FF41",
+        "neon-pink": "#FF10F0",
+        "neon-yellow": "#FFFF00",
+        "neon-cyan": "#00FFFF",
         "fame-dark": "#0F0F23",
         "fame-darker": "#08081A",
+        "garden-white": "#FFFFFF",
+        "garden-gray": "#F8F9FA",
+        "garden-dark": "#1A1A1A",
       },
       borderRadius: {
         lg: "var(--radius)",
