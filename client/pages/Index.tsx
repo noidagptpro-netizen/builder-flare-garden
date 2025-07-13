@@ -1,5 +1,6 @@
 import { ArrowRight, Users, Star, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import ExpandableFooter from "../components/ExpandableFooter";
 
 export default function Index() {
   return (
@@ -161,54 +162,7 @@ export default function Index() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-fame-darker py-12 border-t border-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-xl font-bold text-white mb-4">
-                FameChase<span className="text-neon-green">.com</span>
-              </div>
-              <p className="text-gray-400">
-                India's premier platform for aspiring content creators and
-                influencers.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-4">
-                📄 About FameChase
-              </h4>
-              <p className="text-gray-400 text-sm">
-                Empowering creators across India's Tier 1-3 cities with
-                AI-powered growth insights and professional tools.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-4">📬 Contact</h4>
-              <p className="text-gray-400 text-sm">mail@famechase.com</p>
-            </div>
-
-            <div>
-              <h4 className="text-white font-semibold mb-4">Legal</h4>
-              <div className="space-y-2 text-sm">
-                <div>
-                  <span className="text-gray-400">🔒 Privacy Policy</span>
-                </div>
-                <div>
-                  <span className="text-gray-400">📜 Terms & Conditions</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-            <p className="text-gray-400 text-sm">
-              © 2024 FameChase.com. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <ExpandableFooter />
     </div>
   );
 }
