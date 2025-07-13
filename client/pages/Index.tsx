@@ -77,8 +77,102 @@ export default function Index() {
         </div>
       </main>
 
-      {/* Features Preview Section */}
+      {/* How It Works Section */}
       <section className="relative z-10 bg-fame-dark py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+              How <span className="text-neon-green">It Works</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Your journey from content creator to income earner in 3 simple
+              steps
+            </p>
+          </div>
+
+          {/* Roadmap */}
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              {/* Progress Line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-neon-green via-electric-blue to-soft-violet opacity-60"></div>
+
+              {/* Steps */}
+              <div className="space-y-16">
+                {/* Step 1 */}
+                <div className="flex items-center">
+                  <div className="flex-1 text-right pr-8">
+                    <div className="bg-fame-darker rounded-2xl p-6 border border-neon-green/20">
+                      <h3 className="text-xl font-bold text-white mb-3">
+                        📝 Take The Quiz
+                      </h3>
+                      <p className="text-gray-300">
+                        Answer questions about your content, audience, and
+                        goals. Takes just 3 minutes to complete.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="relative z-10 w-12 h-12 bg-neon-green rounded-full flex items-center justify-center text-black font-bold text-xl">
+                    1
+                  </div>
+                  <div className="flex-1 pl-8"></div>
+                </div>
+
+                {/* Step 2 */}
+                <div className="flex items-center">
+                  <div className="flex-1 pr-8"></div>
+                  <div className="relative z-10 w-12 h-12 bg-electric-blue rounded-full flex items-center justify-center text-white font-bold text-xl">
+                    2
+                  </div>
+                  <div className="flex-1 text-left pl-8">
+                    <div className="bg-fame-darker rounded-2xl p-6 border border-electric-blue/20">
+                      <h3 className="text-xl font-bold text-white mb-3">
+                        🔍 Get AI Analysis
+                      </h3>
+                      <p className="text-gray-300">
+                        Our AI analyzes your profile and generates a
+                        personalized Fame Score with growth insights.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div className="flex items-center">
+                  <div className="flex-1 text-right pr-8">
+                    <div className="bg-fame-darker rounded-2xl p-6 border border-soft-violet/20">
+                      <h3 className="text-xl font-bold text-white mb-3">
+                        💰 Start Earning
+                      </h3>
+                      <p className="text-gray-300">
+                        Get professional tools, templates, and strategies to
+                        monetize your content immediately.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="relative z-10 w-12 h-12 bg-soft-violet rounded-full flex items-center justify-center text-black font-bold text-xl">
+                    3
+                  </div>
+                  <div className="flex-1 pl-8"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-16">
+            <Link
+              to="/quiz"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-4 px-8 rounded-full text-lg hover:shadow-lg hover:shadow-neon-green/30 transition-all duration-300"
+            >
+              Start Your Journey Now
+              <ArrowRight className="w-5 h-5" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Preview Section */}
+      <section className="relative z-10 bg-fame-darker py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
