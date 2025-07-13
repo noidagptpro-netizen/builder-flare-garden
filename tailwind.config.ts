@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // FameChase brand colors
+        "electric-blue": "#0085FF",
+        "soft-violet": "#C3A9FF",
+        "neon-green": "#00FF41",
+        "fame-dark": "#0F0F23",
+        "fame-darker": "#08081A",
       },
       borderRadius: {
         lg: "var(--radius)",
