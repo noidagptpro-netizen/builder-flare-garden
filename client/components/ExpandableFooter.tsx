@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronDown, ChevronUp, Mail } from "lucide-react";
+import { X, Mail } from "lucide-react";
 
 const footerContent = {
   about: {
@@ -69,10 +69,14 @@ interface ExpandableFooterProps {
 export default function ExpandableFooter({
   className = "",
 }: ExpandableFooterProps) {
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
+  const [activePopup, setActivePopup] = useState<string | null>(null);
 
-  const toggleSection = (section: string) => {
-    setExpandedSection(expandedSection === section ? null : section);
+  const openPopup = (section: string) => {
+    setActivePopup(section);
+  };
+
+  const closePopup = () => {
+    setActivePopup(null);
   };
 
   return (
@@ -127,39 +131,68 @@ export default function ExpandableFooter({
           </div>
         </div>
 
-        {/* Expandable Sections */}
+        {/* Footer Links */}
         <div className="border-t border-gray-800 pt-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {Object.entries(footerContent).map(([key, section]) => (
-              <div
+              <button
                 key={key}
-                className="bg-fame-dark rounded-lg overflow-hidden"
+                onClick={() => openPopup(key)}
+                className="bg-fame-dark rounded-lg p-4 text-left hover:bg-gray-800/50 transition-colors"
               >
-                <button
-                  onClick={() => toggleSection(key)}
-                  className="w-full px-4 py-3 text-left flex items-center justify-between hover:bg-gray-800/50 transition-colors"
-                >
-                  <span className="text-white font-medium text-sm">
-                    {section.title}
-                  </span>
-                  {expandedSection === key ? (
-                    <ChevronUp className="w-4 h-4 text-gray-400" />
-                  ) : (
-                    <ChevronDown className="w-4 h-4 text-gray-400" />
-                  )}
-                </button>
-
-                {expandedSection === key && (
-                  <div className="px-4 pb-4">
-                    <div className="text-gray-300 text-xs leading-relaxed whitespace-pre-line">
-                      {section.content}
-                    </div>
-                  </div>
-                )}
-              </div>
+                <span className="text-white font-medium text-sm">
+                  {section.title}
+                </span>
+                <div className="text-gray-400 text-xs mt-1">
+                  Click to read more
+                </div>
+              </button>
             ))}
           </div>
         </div>
+
+        {/* Popup Modal */}
+        {activePopup && (
+          <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
+            <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden">
+              {/* Header */}
+              <div className="flex items-center justify-between p-6 border-b border-gray-200">
+                <h2 className="text-xl font-bold text-garden-dark">
+                  {
+                    footerContent[activePopup as keyof typeof footerContent]
+                      .title
+                  }
+                </h2>
+                <button
+                  onClick={closePopup}
+                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                >
+                  <X className="w-5 h-5 text-gray-500" />
+                </button>
+              </div>
+
+              {/* Content */}
+              <div className="p-6 overflow-y-auto max-h-[60vh]">
+                <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                  {
+                    footerContent[activePopup as keyof typeof footerContent]
+                      .content
+                  }
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="p-6 border-t border-gray-200 bg-gray-50">
+                <button
+                  onClick={closePopup}
+                  className="w-full bg-neon-green text-black font-semibold py-3 rounded-lg hover:bg-green-400 transition-colors"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Copyright */}
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
