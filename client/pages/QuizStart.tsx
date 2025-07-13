@@ -79,10 +79,13 @@ export default function QuizStart() {
 
             {/* CTA */}
             <div className="space-y-6">
-              <button className="neon-button flex items-center gap-2 group mx-auto">
+              <Link
+                to="/quiz"
+                className="neon-button flex items-center gap-2 group mx-auto"
+              >
                 Start Fame Score Quiz
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </button>
+              </Link>
 
               <p className="text-gray-500 text-sm">
                 Takes 2-3 minutes • 100% Free • No credit card required
