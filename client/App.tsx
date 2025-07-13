@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import QuizStart from "./pages/QuizStart";
 import Quiz from "./pages/Quiz";
+import NewQuiz from "./pages/NewQuiz";
 import Results from "./pages/Results";
 import Shop from "./pages/Shop";
 import Admin from "./pages/Admin";
@@ -28,7 +29,7 @@ const App = () => (
             path="/start-your-influencer-journey"
             element={<QuizStart />}
           />
-          <Route path="/quiz" element={<Quiz />} />
+          <Route path="/quiz" element={<NewQuiz />} />
           <Route path="/results" element={<Results />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/admin" element={<Admin />} />
