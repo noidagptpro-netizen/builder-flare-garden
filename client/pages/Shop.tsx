@@ -47,7 +47,7 @@ const products: Product[] = [
     features: [
       "Personalized Media Kit PDF",
       "30+ Email Templates for Brand Outreach",
-      "Professional Rate Card Calculator",
+      "Professional Pricing Calculator",
       "Content Calendar Template (3 months)",
       "Growth Strategy Workbook",
       "Hashtag Research Guide",
