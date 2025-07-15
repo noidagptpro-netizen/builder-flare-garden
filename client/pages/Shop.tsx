@@ -494,9 +494,14 @@ export default function Shop() {
               ))}
             </div>
 
-            <button className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-4 rounded-lg text-lg hover:shadow-lg transition-all">
+            <a
+              href="https://e7a22213a4e3477583ae6730113431ab-6064e56fbfd24606b13adf123.projects.builder.codes/shop"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-4 rounded-lg text-lg hover:shadow-lg transition-all block text-center"
+            >
               Get Complete Bundle - Save ₹700
-            </button>
+            </a>
 
             <div className="text-center text-xs text-gray-500 mt-3">
               ⏰ Offer valid for next 24 hours only
