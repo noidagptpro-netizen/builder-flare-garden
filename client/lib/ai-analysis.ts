@@ -381,7 +381,12 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
     });
   }
 
-  if (data.biggestChallenge === "Monetization") {
+  if (
+    data.biggestChallenge.some(
+      (challenge) =>
+        challenge.includes("monetization") || challenge.includes("customers"),
+    )
+  ) {
     weaknesses.push(
       `💡 Monetization knowledge gap! The difference between earning ₹0 and ₹50K+ is usually just knowing the right strategies.`,
     );
