@@ -548,7 +548,9 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
   }
 
   // Challenge-specific recommendations
-  if (data.biggestChallenge === "Low engagement") {
+  if (
+    data.biggestChallenge.some((challenge) => challenge.includes("engagement"))
+  ) {
     recommendations.push(
       "Ask questions in captions and respond to all comments within 2 hours",
     );
@@ -557,7 +559,12 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     );
   }
 
-  if (data.biggestChallenge === "Content ideas") {
+  if (
+    data.biggestChallenge.some(
+      (challenge) =>
+        challenge.includes("ideas") || challenge.includes("content"),
+    )
+  ) {
     recommendations.push(
       "Create content pillars: 40% education, 30% entertainment, 20% inspiration, 10% promotion",
     );
