@@ -112,7 +112,7 @@ export default function ExpandableFooter({
               <div className="text-gray-400">Digital Templates</div>
               <div className="text-gray-400">Brand Outreach Kits</div>
               <div className="text-gray-400">Media Kits</div>
-              <div className="text-gray-400">Rate Cards</div>
+              <div className="text-gray-400">Pricing Guidelines</div>
             </div>
           </div>
 
