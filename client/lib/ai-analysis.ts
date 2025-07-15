@@ -416,7 +416,6 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
   }
 
   // OPPORTUNITIES - Exciting and specific to their situation
-  const currentYear = new Date().getFullYear();
 
   if (age >= 18 && age <= 35) {
     opportunities.push(
