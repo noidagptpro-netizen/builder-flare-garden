@@ -73,8 +73,8 @@ const getFollowerScore = (followerCount: string): number => {
   return scoreMap[followerCount] || 10;
 };
 
-// Experience scoring
-const getExperienceScore = (experience: string): number => {
+// Experience scoring - now handles multiple selections
+const getExperienceScore = (experience: string[]): number => {
   const scoreMap: { [key: string]: number } = {
     "Just started (0-6 months)": 5,
     "Beginner (6 months - 1 year)": 15,
@@ -82,7 +82,15 @@ const getExperienceScore = (experience: string): number => {
     "Experienced (2-3 years)": 50,
     "Expert (3+ years)": 70,
   };
-  return scoreMap[experience] || 5;
+
+  if (experience.length === 0) return 5;
+
+  // Calculate average score for multiple selections
+  const totalScore = experience.reduce(
+    (sum, exp) => sum + (scoreMap[exp] || 5),
+    0,
+  );
+  return Math.round(totalScore / experience.length);
 };
 
 // Posting frequency scoring
