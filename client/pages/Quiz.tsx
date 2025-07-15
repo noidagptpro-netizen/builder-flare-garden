@@ -6,8 +6,17 @@ import {
   Youtube,
   Linkedin,
   Globe,
+  ChevronDown,
+  Twitter,
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 interface QuizData {
   name: string;
@@ -183,7 +192,7 @@ const languages = {
   },
   hindi: {
     title: "फेम स्कोर क्विज़",
-    subtitle: "अपनी क्रिएटर यात्रा के लि�� व्यक्तिगत सुझाव पाएं",
+    subtitle: "अपनी क्रिएटर यात्रा के लि�� व्य���्तिगत सुझाव पाएं",
     steps: {
       1: "व्यक्तिगत जानकारी",
       2: "प्लेटफॉर्म विवरण",
@@ -201,7 +210,7 @@ const languages = {
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       niche: "आपका कंटेंट किस विषय पर है?",
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
-      postingFrequency: "आप कितनी बार कंटेंट प���स्ट करते हैं?",
+      postingFrequency: "आप कितनी बार कंटेंट प���स���ट करते हैं?",
       experience: "आप कितने समय से कंटेंट बना रहे हैं?",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       biggestChallenge: "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौती क्या है?",
@@ -221,7 +230,7 @@ const languages = {
         "वेबसाइट/ब्लॉग",
       ],
       followerRanges: [
-        "1K से कम",
+        "1K स�� कम",
         "1K - 5K",
         "5K - 10K",
         "10K - 50K",
@@ -257,7 +266,7 @@ const languages = {
         "सप्ताह में 3-4 बार",
         "साप्ताहिक",
         "महीने में 2-3 बार",
-        "मासिक",
+        "���ासिक",
         "अनियमित",
       ],
       experiences: [
@@ -290,7 +299,7 @@ const languages = {
         "10K फॉलोअर्स तक पहुंचना",
         "कमाई शुरू करना",
         "ब्रांड डील पाना",
-        "अपना व्यापार शुरू ��रना",
+        "अपना व्यापार शुरू ����ना",
         "फुल-टाइम क्रिएटर बनना",
         "एंगेजमेंट बढ़ाना",
         "व्यक्तिगत ब्रांड बनाना",
