@@ -48,10 +48,12 @@ export default function QuizStart() {
 
             {/* What you'll get */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              <div className="bg-fame-dark border border-gray-800 rounded-xl p-6">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
                 <Target className="w-8 h-8 text-electric-blue mb-3 mx-auto" />
-                <h3 className="text-white font-semibold mb-2">Fame Score</h3>
-                <p className="text-gray-400 text-sm">
+                <h3 className="text-garden-dark font-semibold mb-2">
+                  Fame Score
+                </h3>
+                <p className="text-gray-600 text-sm">
                   Your influence rating 0-100
                 </p>
               </div>
