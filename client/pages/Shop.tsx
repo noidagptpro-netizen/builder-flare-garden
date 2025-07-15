@@ -504,6 +504,15 @@ export default function Shop() {
           </div>
         </section>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-white py-8 border-t border-gray-200 mt-16">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-gray-600 text-sm">
+            © 2025 FameChase.com. All rights reserved.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
