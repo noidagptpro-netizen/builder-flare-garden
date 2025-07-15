@@ -169,14 +169,18 @@ const languages = {
         "₹1L+",
       ],
       challenges: [
-        "Low engagement",
-        "Inconsistent posting",
-        "Finding my niche",
-        "Growing followers",
-        "Content ideas",
-        "Monetization",
-        "Brand collaborations",
-        "Time management",
+        "Getting consistent views and engagement",
+        "Finding my unique voice/style",
+        "Algorithm changes affecting reach",
+        "Balancing authenticity with brand appeal",
+        "Competing with bigger creators",
+        "Converting followers to paying customers",
+        "Dealing with negative comments/trolls",
+        "Burnout and content fatigue",
+        "Understanding analytics and metrics",
+        "Building genuine community",
+        "Staying relevant with trends",
+        "Managing multiple platforms efficiently",
       ],
       goals: [
         "Reach 10K followers",
@@ -208,7 +212,7 @@ const languages = {
       email: "ईमेल पता",
       age: "उम्र",
       city: "आप किस शहर से हैं?",
-      primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
+      primaryPlatform: "आप मुख��यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (सभी लागू का चयन करें)",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
@@ -221,7 +225,7 @@ const languages = {
       goals: "अगले 6 महीनों के लिए आपका मुख्य लक्ष्य क्या है?",
       socialLinks:
         "अपने सोशल मीडिया प्रोफाइल जोड़ें (वैकल्पिक लेकिन बेहतर विश्लेषण के लिए अनुशंसित)",
-      bio: "अपने और अपने कंटेंट क��� बारे में बताएं (वैकल्पिक)",
+      bio: "अपने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
     },
     options: {
       platforms: [
@@ -294,7 +298,7 @@ const languages = {
         "अनियमित पोस्टिंग",
         "अपना विषय खोजना",
         "फॉलोअर्स बढ़ाना",
-        "कं��ेंट आइडिया",
+        "कंटेंट आइडिया",
         "कमाई",
         "ब्रांड कोलैबोरेशन",
         "समय प्रबंधन",
