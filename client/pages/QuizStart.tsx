@@ -58,24 +58,28 @@ export default function QuizStart() {
                 </p>
               </div>
 
-              <div className="bg-fame-dark border border-gray-800 rounded-xl p-6">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
                 <TrendingUp className="w-8 h-8 text-neon-green mb-3 mx-auto" />
-                <h3 className="text-white font-semibold mb-2">Growth Plan</h3>
-                <p className="text-gray-400 text-sm">3-6 month strategy</p>
+                <h3 className="text-garden-dark font-semibold mb-2">
+                  Growth Plan
+                </h3>
+                <p className="text-gray-600 text-sm">3-6 month strategy</p>
               </div>
 
-              <div className="bg-fame-dark border border-gray-800 rounded-xl p-6">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
                 <DollarSign className="w-8 h-8 text-soft-violet mb-3 mx-auto" />
-                <h3 className="text-white font-semibold mb-2">
+                <h3 className="text-garden-dark font-semibold mb-2">
                   Income Potential
                 </h3>
-                <p className="text-gray-400 text-sm">Monetization roadmap</p>
+                <p className="text-gray-600 text-sm">Monetization roadmap</p>
               </div>
 
-              <div className="bg-fame-dark border border-gray-800 rounded-xl p-6">
+              <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-lg">
                 <Clock className="w-8 h-8 text-electric-blue mb-3 mx-auto" />
-                <h3 className="text-white font-semibold mb-2">Quick Results</h3>
-                <p className="text-gray-400 text-sm">Analysis in 3 minutes</p>
+                <h3 className="text-garden-dark font-semibold mb-2">
+                  Quick Results
+                </h3>
+                <p className="text-gray-600 text-sm">Analysis in 3 minutes</p>
               </div>
             </div>
 
