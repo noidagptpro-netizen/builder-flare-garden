@@ -59,11 +59,11 @@ export default function Index() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-            Turn Your Content
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Transform Your Passion Into
             <br />
             <span className="bg-gradient-to-r from-neon-green to-electric-blue bg-clip-text text-transparent">
-              Into ₹50K+ Income
+              ₹50K+ Monthly Income
             </span>
           </h1>
 
@@ -126,10 +126,8 @@ export default function Index() {
               <div className="text-gray-600">Creators Helped</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 mb-2">
-                ₹2.5Cr+
-              </div>
-              <div className="text-gray-600">Revenue Generated</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">98%</div>
+              <div className="text-gray-600">Success Rate</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-gray-900 mb-2">4.9/5</div>
@@ -376,21 +374,20 @@ export default function Index() {
             <div className="bg-white rounded-2xl p-8 shadow-lg border">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-red-400 rounded-full flex items-center justify-center text-white font-bold">
-                  P
+                  A
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">
-                    Priya Sharma
-                  </div>
-                  <div className="text-gray-600 text-sm">Fashion Blogger</div>
+                  <div className="font-semibold text-gray-900">Ananya K.</div>
+                  <div className="text-gray-600 text-sm">Beauty Creator</div>
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                "Went from ₹0 to ₹45K/month in 3 months using FameChase tools.
-                The media kit landed me 5 brand deals!"
+                "Using the professional media kit template, I secured my first
+                brand collaboration within 2 weeks. The pricing guide helped me
+                negotiate ₹35K for a single post."
               </p>
               <div className="text-neon-green font-semibold">
-                +₹45K monthly income
+                +₹35K first brand deal
               </div>
             </div>
 
@@ -398,19 +395,20 @@ export default function Index() {
             <div className="bg-white rounded-2xl p-8 shadow-lg border">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center text-white font-bold">
-                  R
+                  V
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">Rahul Tech</div>
+                  <div className="font-semibold text-gray-900">Vikash M.</div>
                   <div className="text-gray-600 text-sm">Tech Reviewer</div>
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                "The AI analysis showed me exactly what I was missing. Now I
-                earn ₹80K+ monthly from sponsorships."
+                "The growth strategy helped me understand my audience better. I
+                optimized my content using the insights and grew from 5K to 25K
+                followers in 4 months."
               </p>
               <div className="text-electric-blue font-semibold">
-                +₹80K monthly income
+                +20K followers in 4 months
               </div>
             </div>
 
@@ -418,21 +416,20 @@ export default function Index() {
             <div className="bg-white rounded-2xl p-8 shadow-lg border">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center text-white font-bold">
-                  S
+                  M
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">
-                    Sneha Fitness
-                  </div>
-                  <div className="text-gray-600 text-sm">Fitness Coach</div>
+                  <div className="font-semibold text-gray-900">Meera S.</div>
+                  <div className="text-gray-600 text-sm">Lifestyle Blogger</div>
                 </div>
               </div>
               <p className="text-gray-600 mb-4">
-                "Launched my online course after getting the growth strategy.
-                Made ₹2.5L in the first month!"
+                "The email templates were game-changers. I used them to reach
+                out to 50 brands and got responses from 12. Now I have
+                consistent monthly collaborations."
               </p>
               <div className="text-soft-violet font-semibold">
-                +₹2.5L course sales
+                +12 active brand partnerships
               </div>
             </div>
           </div>
