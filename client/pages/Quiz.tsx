@@ -81,6 +81,7 @@ const languages = {
       2: "Platform Details",
       3: "Content Strategy",
       4: "Goals & Challenges",
+      5: "Social Profiles",
     },
     questions: {
       name: "What's your name?",
@@ -101,6 +102,8 @@ const languages = {
       socialLinks:
         "Add your social media profiles (optional but recommended for better analysis)",
       bio: "Tell us about yourself and your content (optional)",
+      socialMediaIds:
+        "Social Media Profile URLs (Optional - helps us analyze your content better)",
     },
     options: {
       platforms: [
@@ -205,12 +208,13 @@ const languages = {
   },
   hindi: {
     title: "फेम स्कोर क्विज़",
-    subtitle: "अपनी क्रिएटर यात्रा के लि�� व्यक्तिगत सुझाव पाएं",
+    subtitle: "अपनी क्रिएटर यात्रा के लिए व्यक्तिगत सुझाव पाएं",
     steps: {
       1: "व्यक्तिगत जानकारी",
-      2: "प्लेटफॉर्म विवरण",
+      2: "प्लेटफॉर्म ��िवरण",
       3: "कंटेंट रणनीति",
       4: "लक्ष्य और चुनौतियां",
+      5: "सोशल प्रोफाइल",
     },
     questions: {
       name: "आपका नाम क्या है?",
@@ -219,18 +223,20 @@ const languages = {
       city: "आप किस शहर से हैं?",
       primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
       secondaryPlatforms:
-        "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (सभी ला��ू का चयन करें)",
-      followerCount: "आपके प्राथमिक प्लेटफॉर्म पर क��तने फॉलोअर्स हैं?",
+        "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (सभी लागू का चयन करें)",
+      followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       niche: "आपका कंटेंट किस विषय पर है?",
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
-      postingFrequency: "आप कितनी बार कंटेंट प���स्ट करते हैं?",
-      experience: "आप कितने समय से कंटेंट बना रहे हैं?",
+      postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
+      experience: "आप कितने समय से कंटेंट बना र���े हैं?",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       biggestChallenge: "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौती क्या है?",
       goals: "अगले 6 महीनों के लिए आपका मुख्य लक्ष्य क्या है?",
       socialLinks:
         "अपने सोशल मीडिया प्रोफाइल जोड़ें (वैकल्पिक लेकिन बेहतर विश्लेषण के लिए अनुशंसित)",
-      bio: "अ��ने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
+      bio: "अपने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
+      socialMediaIds:
+        "सोशल मीडिया प्रोफाइल लिंक (वैकल्पिक - आपके कंटेंट का बेहतर विश्लेषण करने में मदद करता है)",
     },
     options: {
       platforms: [
@@ -267,10 +273,10 @@ const languages = {
       contentTypes: [
         "फोटो और कैरोसेल",
         "छोटे वीडियो/रील्स",
-        "���ंबे वीडियो",
+        "लंबे वीडियो",
         "लाइव स्ट्रीम",
         "स्टोरीज़",
-        "लिखि�� पोस्ट",
+        "लिखित पोस्ट",
         "पॉडकास्ट",
         "मिश्रित कंटेंट",
       ],
@@ -304,7 +310,7 @@ const languages = {
         "एल्गोरिदम बदलाव से पहुंच में कमी",
         "ऑथेंटिसिटी और ब्रांड अपील का संतुलन",
         "बड़े क्रिएटर्स से कॉम्पिटिशन",
-        "फॉलोअर्स को पेइंग कस्टमर बनाना",
+        "फॉलोअर्स को पे���ंग कस्टमर बनाना",
         "नेगेटिव कमेंट्स/ट्रोल्स से निपटना",
         "बर्नआउट और कंटेंट थकान",
         "एनालिटिक्स और मेट्रिक्स समझना",
@@ -376,7 +382,6 @@ export default function Quiz() {
   };
 
   const handleSubmit = () => {
-    // Store quiz data in localStorage for results page
     localStorage.setItem("fameChaseQuizData", JSON.stringify(quizData));
     navigate("/results");
   };
@@ -399,23 +404,111 @@ export default function Quiz() {
     updateQuizData(field, newValues);
   };
 
-  const updateSocialId = (
-    platform: keyof QuizData["socialLinks"],
-    value: string,
-  ) => {
-    setQuizData((prev) => ({
-      ...prev,
-      socialLinks: {
-        ...prev.socialLinks,
-        [platform]: value,
-      },
-    }));
-  };
+  const PopupSelector = ({
+    title,
+    options,
+    onSelect,
+    selectedValue,
+  }: {
+    title: string;
+    options: string[];
+    onSelect: (value: string) => void;
+    selectedValue: string;
+  }) => (
+    <Dialog>
+      <DialogTrigger asChild>
+        <button className="w-full p-3 border border-gray-300 rounded-lg text-left flex items-center justify-between bg-white hover:bg-gray-50 transition-colors">
+          <span
+            className={selectedValue ? "text-garden-dark" : "text-gray-500"}
+          >
+            {selectedValue || `Select ${title}`}
+          </span>
+          <ChevronDown className="w-4 h-4 text-gray-400" />
+        </button>
+      </DialogTrigger>
+      <DialogContent className="max-w-md">
+        <DialogHeader>
+          <DialogTitle>Choose {title}</DialogTitle>
+        </DialogHeader>
+        <div className="grid gap-2 max-h-60 overflow-y-auto">
+          {options.map((option) => (
+            <button
+              key={option}
+              onClick={() => onSelect(option)}
+              className={`p-3 text-left rounded-lg border transition-colors ${
+                selectedValue === option
+                  ? "bg-neon-green border-neon-green text-black"
+                  : "bg-white border-gray-200 text-garden-dark hover:bg-gray-50"
+              }`}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+
+  const MultiSelectPopup = ({
+    title,
+    options,
+    onToggle,
+    selectedValues,
+    minSelection,
+  }: {
+    title: string;
+    options: string[];
+    onToggle: (value: string) => void;
+    selectedValues: string[];
+    minSelection: number;
+  }) => (
+    <Dialog>
+      <DialogTrigger asChild>
+        <button className="w-full p-3 border border-gray-300 rounded-lg text-left flex items-center justify-between bg-white hover:bg-gray-50 transition-colors">
+          <span
+            className={
+              selectedValues.length > 0 ? "text-garden-dark" : "text-gray-500"
+            }
+          >
+            {selectedValues.length > 0
+              ? `${selectedValues.length} selected`
+              : `Select ${title} (minimum ${minSelection})`}
+          </span>
+          <ChevronDown className="w-4 h-4 text-gray-400" />
+        </button>
+      </DialogTrigger>
+      <DialogContent className="max-w-md">
+        <DialogHeader>
+          <DialogTitle>
+            Choose {title} (minimum {minSelection})
+          </DialogTitle>
+        </DialogHeader>
+        <div className="grid gap-2 max-h-60 overflow-y-auto">
+          {options.map((option) => (
+            <button
+              key={option}
+              onClick={() => onToggle(option)}
+              className={`p-3 text-left rounded-lg border transition-colors ${
+                selectedValues.includes(option)
+                  ? "bg-neon-green border-neon-green text-black"
+                  : "bg-white border-gray-200 text-garden-dark hover:bg-gray-50"
+              }`}
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+        <div className="text-sm text-gray-600 mt-2">
+          Selected: {selectedValues.length} / {minSelection} minimum
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
 
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="relative z-10 px-4 py-6">
+      <header className="relative z-10 px-4 py-6 border-b border-gray-200">
         <div className="container mx-auto flex justify-between items-center">
           <Link to="/" className="text-xl font-bold text-garden-dark">
             FameChase<span className="text-neon-green">.com</span>
@@ -440,14 +533,14 @@ export default function Quiz() {
       </header>
 
       {/* Progress Bar */}
-      <div className="container mx-auto px-4 mb-8">
+      <div className="container mx-auto px-4 mb-8 mt-8">
         <div className="flex justify-center mb-4">
           <div className="flex space-x-2">
             {[1, 2, 3, 4, 5].map((step) => (
               <div
                 key={step}
                 className={`w-8 h-2 rounded-full ${
-                  step <= currentStep ? "bg-neon-green" : "bg-gray-600"
+                  step <= currentStep ? "bg-neon-green" : "bg-gray-300"
                 }`}
               />
             ))}
@@ -470,54 +563,54 @@ export default function Quiz() {
             {currentStep === 1 && (
               <div className="space-y-6">
                 <div>
-                  <label className="block text-white font-semibold mb-2">
+                  <label className="block text-garden-dark font-semibold mb-2">
                     {t.questions.name}
                   </label>
                   <input
                     type="text"
                     value={quizData.name}
                     onChange={(e) => updateQuizData("name", e.target.value)}
-                    className="w-full bg-fame-darker border border-gray-600 text-white px-4 py-3 rounded-lg focus:border-electric-blue focus:outline-none"
+                    className="w-full bg-white border border-gray-300 text-garden-dark px-4 py-3 rounded-lg focus:border-electric-blue focus:outline-none"
                     placeholder="Enter your name"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-white font-semibold mb-2">
+                  <label className="block text-garden-dark font-semibold mb-2">
                     {t.questions.email}
                   </label>
                   <input
                     type="email"
                     value={quizData.email}
                     onChange={(e) => updateQuizData("email", e.target.value)}
-                    className="w-full bg-fame-darker border border-gray-600 text-white px-4 py-3 rounded-lg focus:border-electric-blue focus:outline-none"
+                    className="w-full bg-white border border-gray-300 text-garden-dark px-4 py-3 rounded-lg focus:border-electric-blue focus:outline-none"
                     placeholder="your@email.com"
                   />
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-white font-semibold mb-2">
+                    <label className="block text-garden-dark font-semibold mb-2">
                       {t.questions.age}
                     </label>
                     <input
                       type="number"
                       value={quizData.age}
                       onChange={(e) => updateQuizData("age", e.target.value)}
-                      className="w-full bg-fame-darker border border-gray-600 text-white px-4 py-3 rounded-lg focus:border-electric-blue focus:outline-none"
+                      className="w-full bg-white border border-gray-300 text-garden-dark px-4 py-3 rounded-lg focus:border-electric-blue focus:outline-none"
                       placeholder="25"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-white font-semibold mb-2">
+                    <label className="block text-garden-dark font-semibold mb-2">
                       {t.questions.city}
                     </label>
                     <input
                       type="text"
                       value={quizData.city}
                       onChange={(e) => updateQuizData("city", e.target.value)}
-                      className="w-full bg-fame-darker border border-gray-600 text-white px-4 py-3 rounded-lg focus:border-electric-blue focus:outline-none"
+                      className="w-full bg-white border border-gray-300 text-garden-dark px-4 py-3 rounded-lg focus:border-electric-blue focus:outline-none"
                       placeholder="Mumbai"
                     />
                   </div>
@@ -529,7 +622,7 @@ export default function Quiz() {
             {currentStep === 2 && (
               <div className="space-y-6">
                 <div>
-                  <label className="block text-white font-semibold mb-4">
+                  <label className="block text-garden-dark font-semibold mb-4">
                     {t.questions.primaryPlatform}
                   </label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -542,7 +635,7 @@ export default function Quiz() {
                         className={`p-3 rounded-lg border text-sm font-medium transition-colors ${
                           quizData.primaryPlatform === platform
                             ? "bg-electric-blue border-electric-blue text-white"
-                            : "bg-fame-darker border-gray-600 text-gray-300 hover:border-gray-500"
+                            : "bg-white border-gray-300 text-garden-dark hover:border-gray-400"
                         }`}
                       >
                         {platform}
@@ -552,7 +645,7 @@ export default function Quiz() {
                 </div>
 
                 <div>
-                  <label className="block text-white font-semibold mb-4">
+                  <label className="block text-garden-dark font-semibold mb-4">
                     {t.questions.secondaryPlatforms}
                   </label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -563,7 +656,7 @@ export default function Quiz() {
                         className={`p-3 rounded-lg border text-sm font-medium transition-colors ${
                           quizData.secondaryPlatforms.includes(platform)
                             ? "bg-neon-green border-neon-green text-black"
-                            : "bg-fame-darker border-gray-600 text-gray-300 hover:border-gray-500"
+                            : "bg-white border-gray-300 text-garden-dark hover:border-gray-400"
                         }`}
                       >
                         {platform}
@@ -573,7 +666,7 @@ export default function Quiz() {
                 </div>
 
                 <div>
-                  <label className="block text-white font-semibold mb-4">
+                  <label className="block text-garden-dark font-semibold mb-4">
                     {t.questions.followerCount}
                   </label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -584,7 +677,7 @@ export default function Quiz() {
                         className={`p-3 rounded-lg border text-sm font-medium transition-colors ${
                           quizData.followerCount === range
                             ? "bg-electric-blue border-electric-blue text-white"
-                            : "bg-fame-darker border-gray-600 text-gray-300 hover:border-gray-500"
+                            : "bg-white border-gray-300 text-garden-dark hover:border-gray-400"
                         }`}
                       >
                         {range}
@@ -594,7 +687,7 @@ export default function Quiz() {
                 </div>
 
                 <div>
-                  <label className="block text-white font-semibold mb-4">
+                  <label className="block text-garden-dark font-semibold mb-4">
                     {t.questions.niche}
                   </label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -605,7 +698,7 @@ export default function Quiz() {
                         className={`p-3 rounded-lg border text-sm font-medium transition-colors ${
                           quizData.niche === niche
                             ? "bg-electric-blue border-electric-blue text-white"
-                            : "bg-fame-darker border-gray-600 text-gray-300 hover:border-gray-500"
+                            : "bg-white border-gray-300 text-garden-dark hover:border-gray-400"
                         }`}
                       >
                         {niche}
@@ -620,70 +713,48 @@ export default function Quiz() {
             {currentStep === 3 && (
               <div className="space-y-6">
                 <div>
-                  <label className="block text-white font-semibold mb-4">
+                  <label className="block text-garden-dark font-semibold mb-4">
                     {t.questions.contentType}
                   </label>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {t.options.contentTypes.map((type) => (
-                      <button
-                        key={type}
-                        onClick={() => updateQuizData("contentType", type)}
-                        className={`p-3 rounded-lg border text-sm font-medium transition-colors ${
-                          quizData.contentType === type
-                            ? "bg-electric-blue border-electric-blue text-white"
-                            : "bg-fame-darker border-gray-600 text-gray-300 hover:border-gray-500"
-                        }`}
-                      >
-                        {type}
-                      </button>
-                    ))}
-                  </div>
+                  <PopupSelector
+                    title="Content Type"
+                    options={t.options.contentTypes}
+                    onSelect={(value) => updateQuizData("contentType", value)}
+                    selectedValue={quizData.contentType}
+                  />
                 </div>
 
                 <div>
-                  <label className="block text-white font-semibold mb-4">
+                  <label className="block text-garden-dark font-semibold mb-4">
                     {t.questions.postingFrequency}
                   </label>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    {t.options.frequencies.map((freq) => (
-                      <button
-                        key={freq}
-                        onClick={() => updateQuizData("postingFrequency", freq)}
-                        className={`p-3 rounded-lg border text-sm font-medium transition-colors ${
-                          quizData.postingFrequency === freq
-                            ? "bg-electric-blue border-electric-blue text-white"
-                            : "bg-fame-darker border-gray-600 text-gray-300 hover:border-gray-500"
-                        }`}
-                      >
-                        {freq}
-                      </button>
-                    ))}
-                  </div>
+                  <PopupSelector
+                    title="Posting Frequency"
+                    options={t.options.frequencies}
+                    onSelect={(value) =>
+                      updateQuizData("postingFrequency", value)
+                    }
+                    selectedValue={quizData.postingFrequency}
+                  />
                 </div>
 
                 <div>
-                  <label className="block text-white font-semibold mb-4">
+                  <label className="block text-garden-dark font-semibold mb-4">
                     {t.questions.experience}
                   </label>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {t.options.experiences.map((exp) => (
-                      <button
-                        key={exp}
-                        onClick={() => updateQuizData("experience", exp)}
-                        className={`p-3 rounded-lg border text-sm font-medium transition-colors ${
-                          quizData.experience === exp
-                            ? "bg-electric-blue border-electric-blue text-white"
-                            : "bg-fame-darker border-gray-600 text-gray-300 hover:border-gray-500"
-                        }`}
-                      >
-                        {exp}
-                      </button>
-                    ))}
-                  </div>
+                  <MultiSelectPopup
+                    title="Experience Level"
+                    options={t.options.experiences}
+                    onToggle={(value) =>
+                      toggleMultipleChoice("experience", value)
+                    }
+                    selectedValues={quizData.experience}
+                    minSelection={3}
+                  />
                 </div>
 
                 <div>
-                  <label className="block text-white font-semibold mb-4">
+                  <label className="block text-garden-dark font-semibold mb-4">
                     {t.questions.monthlyIncome}
                   </label>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
@@ -694,7 +765,7 @@ export default function Quiz() {
                         className={`p-3 rounded-lg border text-sm font-medium transition-colors ${
                           quizData.monthlyIncome === income
                             ? "bg-electric-blue border-electric-blue text-white"
-                            : "bg-fame-darker border-gray-600 text-gray-300 hover:border-gray-500"
+                            : "bg-white border-gray-300 text-garden-dark hover:border-gray-400"
                         }`}
                       >
                         {income}
@@ -705,57 +776,59 @@ export default function Quiz() {
               </div>
             )}
 
-            {/* Step 4: Goals, Challenges & Social Links */}
+            {/* Step 4: Goals, Challenges */}
             {currentStep === 4 && (
               <div className="space-y-6">
                 <div>
-                  <label className="block text-white font-semibold mb-4">
+                  <label className="block text-garden-dark font-semibold mb-4">
                     {t.questions.biggestChallenge}
                   </label>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    {t.options.challenges.map((challenge) => (
-                      <button
-                        key={challenge}
-                        onClick={() =>
-                          updateQuizData("biggestChallenge", challenge)
-                        }
-                        className={`p-3 rounded-lg border text-sm font-medium transition-colors ${
-                          quizData.biggestChallenge === challenge
-                            ? "bg-electric-blue border-electric-blue text-white"
-                            : "bg-fame-darker border-gray-600 text-gray-300 hover:border-gray-500"
-                        }`}
-                      >
-                        {challenge}
-                      </button>
-                    ))}
-                  </div>
+                  <MultiSelectPopup
+                    title="Biggest Challenges"
+                    options={t.options.challenges}
+                    onToggle={(value) =>
+                      toggleMultipleChoice("biggestChallenge", value)
+                    }
+                    selectedValues={quizData.biggestChallenge}
+                    minSelection={3}
+                  />
                 </div>
 
                 <div>
-                  <label className="block text-white font-semibold mb-4">
+                  <label className="block text-garden-dark font-semibold mb-4">
                     {t.questions.goals}
                   </label>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {t.options.goals.map((goal) => (
-                      <button
-                        key={goal}
-                        onClick={() => updateQuizData("goals", goal)}
-                        className={`p-3 rounded-lg border text-sm font-medium transition-colors ${
-                          quizData.goals === goal
-                            ? "bg-electric-blue border-electric-blue text-white"
-                            : "bg-fame-darker border-gray-600 text-gray-300 hover:border-gray-500"
-                        }`}
-                      >
-                        {goal}
-                      </button>
-                    ))}
-                  </div>
+                  <MultiSelectPopup
+                    title="Goals"
+                    options={t.options.goals}
+                    onToggle={(value) => toggleMultipleChoice("goals", value)}
+                    selectedValues={quizData.goals}
+                    minSelection={3}
+                  />
                 </div>
 
-                {/* Social Media Links */}
+                {/* Bio */}
                 <div>
-                  <label className="block text-white font-semibold mb-4">
-                    {t.questions.socialLinks}
+                  <label className="block text-garden-dark font-semibold mb-2">
+                    {t.questions.bio}
+                  </label>
+                  <textarea
+                    value={quizData.bio}
+                    onChange={(e) => updateQuizData("bio", e.target.value)}
+                    rows={4}
+                    placeholder="Tell us about your content style, your audience, what makes you unique..."
+                    className="w-full bg-white border border-gray-300 text-garden-dark px-4 py-3 rounded-lg focus:border-electric-blue focus:outline-none resize-none"
+                  />
+                </div>
+              </div>
+            )}
+
+            {/* Step 5: Social Media Links */}
+            {currentStep === 5 && (
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-garden-dark font-semibold mb-4">
+                    {t.questions.socialMediaIds}
                   </label>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
@@ -767,7 +840,7 @@ export default function Quiz() {
                           updateSocialLink("instagram", e.target.value)
                         }
                         placeholder="https://instagram.com/yourusername"
-                        className="flex-1 bg-fame-darker border border-gray-600 text-white px-4 py-2 rounded-lg focus:border-electric-blue focus:outline-none"
+                        className="flex-1 bg-white border border-gray-300 text-garden-dark px-4 py-2 rounded-lg focus:border-electric-blue focus:outline-none"
                       />
                     </div>
 
@@ -780,7 +853,7 @@ export default function Quiz() {
                           updateSocialLink("youtube", e.target.value)
                         }
                         placeholder="https://youtube.com/@yourchannel"
-                        className="flex-1 bg-fame-darker border border-gray-600 text-white px-4 py-2 rounded-lg focus:border-electric-blue focus:outline-none"
+                        className="flex-1 bg-white border border-gray-300 text-garden-dark px-4 py-2 rounded-lg focus:border-electric-blue focus:outline-none"
                       />
                     </div>
 
@@ -793,7 +866,35 @@ export default function Quiz() {
                           updateSocialLink("linkedin", e.target.value)
                         }
                         placeholder="https://linkedin.com/in/yourname"
-                        className="flex-1 bg-fame-darker border border-gray-600 text-white px-4 py-2 rounded-lg focus:border-electric-blue focus:outline-none"
+                        className="flex-1 bg-white border border-gray-300 text-garden-dark px-4 py-2 rounded-lg focus:border-electric-blue focus:outline-none"
+                      />
+                    </div>
+
+                    <div className="flex items-center gap-3">
+                      <Twitter className="w-5 h-5 text-blue-400" />
+                      <input
+                        type="url"
+                        value={quizData.socialLinks.twitter}
+                        onChange={(e) =>
+                          updateSocialLink("twitter", e.target.value)
+                        }
+                        placeholder="https://twitter.com/yourusername"
+                        className="flex-1 bg-white border border-gray-300 text-garden-dark px-4 py-2 rounded-lg focus:border-electric-blue focus:outline-none"
+                      />
+                    </div>
+
+                    <div className="flex items-center gap-3">
+                      <div className="w-5 h-5 bg-gradient-to-r from-pink-500 to-yellow-500 rounded-sm flex items-center justify-center text-white text-xs font-bold">
+                        T
+                      </div>
+                      <input
+                        type="url"
+                        value={quizData.socialLinks.tiktok}
+                        onChange={(e) =>
+                          updateSocialLink("tiktok", e.target.value)
+                        }
+                        placeholder="https://tiktok.com/@yourusername"
+                        className="flex-1 bg-white border border-gray-300 text-garden-dark px-4 py-2 rounded-lg focus:border-electric-blue focus:outline-none"
                       />
                     </div>
 
@@ -806,24 +907,14 @@ export default function Quiz() {
                           updateSocialLink("website", e.target.value)
                         }
                         placeholder="https://yourwebsite.com"
-                        className="flex-1 bg-fame-darker border border-gray-600 text-white px-4 py-2 rounded-lg focus:border-electric-blue focus:outline-none"
+                        className="flex-1 bg-white border border-gray-300 text-garden-dark px-4 py-2 rounded-lg focus:border-electric-blue focus:outline-none"
                       />
                     </div>
                   </div>
-                </div>
-
-                {/* Bio */}
-                <div>
-                  <label className="block text-white font-semibold mb-2">
-                    {t.questions.bio}
-                  </label>
-                  <textarea
-                    value={quizData.bio}
-                    onChange={(e) => updateQuizData("bio", e.target.value)}
-                    rows={4}
-                    placeholder="Tell us about your content style, your audience, what makes you unique..."
-                    className="w-full bg-fame-darker border border-gray-600 text-white px-4 py-3 rounded-lg focus:border-electric-blue focus:outline-none resize-none"
-                  />
+                  <p className="text-gray-600 text-sm mt-3">
+                    Adding your social media profiles helps our AI provide more
+                    personalized analysis and recommendations.
+                  </p>
                 </div>
               </div>
             )}
@@ -833,7 +924,7 @@ export default function Quiz() {
               {currentStep > 1 && (
                 <button
                   onClick={handleBack}
-                  className="flex items-center gap-2 bg-gray-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-colors"
+                  className="flex items-center gap-2 bg-gray-200 text-garden-dark px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition-colors"
                 >
                   <ArrowLeft className="w-4 h-4" />
                   {t.buttons.back}
@@ -842,10 +933,10 @@ export default function Quiz() {
 
               <div className="flex-1"></div>
 
-              {currentStep < 4 ? (
+              {currentStep < 5 ? (
                 <button
                   onClick={handleNext}
-                  className="flex items-center gap-2 neon-button"
+                  className="flex items-center gap-2 bg-neon-green text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 transition-colors"
                 >
                   {t.buttons.next}
                   <ArrowRight className="w-4 h-4" />
@@ -853,7 +944,7 @@ export default function Quiz() {
               ) : (
                 <button
                   onClick={handleSubmit}
-                  className="flex items-center gap-2 neon-button"
+                  className="flex items-center gap-2 bg-neon-green text-black px-6 py-3 rounded-lg font-semibold hover:bg-green-400 transition-colors"
                 >
                   {t.buttons.submit}
                   <ArrowRight className="w-4 h-4" />
