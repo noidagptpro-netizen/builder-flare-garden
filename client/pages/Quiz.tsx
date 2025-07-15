@@ -268,7 +268,7 @@ const languages = {
         "फोटो और कैरोसेल",
         "छोटे वीडियो/रील्स",
         "लंबे वीडियो",
-        "लाइव स्��्रीम",
+        "लाइव स्ट्रीम",
         "स्टोरीज़",
         "लिखि�� पोस्ट",
         "पॉडकास्ट",
@@ -280,7 +280,7 @@ const languages = {
         "साप्ताहिक",
         "महीने में 2-3 बार",
         "मासिक",
-        "अनियमित",
+        "अनियम���त",
       ],
       experiences: [
         "अभी शुरू किया (0-6 महीने)",
@@ -301,12 +301,12 @@ const languages = {
       challenges: [
         "लगातार व्यूज और एंगेजमेंट पाना",
         "अपनी यूनीक आवाज़/स्टाइल खोजना",
-        "एल्गोरिदम बदलाव से ��हुंच में कमी",
+        "एल्गोरिदम बदलाव से पहुंच में कमी",
         "ऑथेंटिसिटी और ब्रांड अपील का संतुलन",
         "बड़े क्रिएटर्स से कॉम्पिटिशन",
         "फॉलोअर्स को पेइंग कस्टमर बनाना",
         "नेगेटिव कमेंट्स/ट्रोल्स से निपटना",
-        "बर्नआउट और कंटेंट थकान",
+        "बर्नआउट ���र कंटेंट थकान",
         "एनालिटिक्स और मेट्रिक्स समझना",
         "सच्ची कम्युनिटी बनाना",
         "ट्रेंड्स के साथ रिलेवेंट रहना",
@@ -386,6 +386,30 @@ export default function Quiz() {
       ? quizData.secondaryPlatforms.filter((p) => p !== platform)
       : [...quizData.secondaryPlatforms, platform];
     updateQuizData("secondaryPlatforms", platforms);
+  };
+
+  const toggleMultipleChoice = (
+    field: "experience" | "biggestChallenge" | "goals",
+    value: string,
+  ) => {
+    const currentValues = quizData[field];
+    const newValues = currentValues.includes(value)
+      ? currentValues.filter((v) => v !== value)
+      : [...currentValues, value];
+    updateQuizData(field, newValues);
+  };
+
+  const updateSocialId = (
+    platform: keyof QuizData["socialLinks"],
+    value: string,
+  ) => {
+    setQuizData((prev) => ({
+      ...prev,
+      socialLinks: {
+        ...prev.socialLinks,
+        [platform]: value,
+      },
+    }));
   };
 
   return (
