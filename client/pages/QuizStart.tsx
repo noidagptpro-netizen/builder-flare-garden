@@ -13,10 +13,10 @@ export default function QuizStart() {
       {/* Header */}
       <header className="relative z-10 px-4 py-6">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold text-white">
+          <Link to="/" className="text-xl font-bold text-garden-dark">
             FameChase<span className="text-neon-green">.com</span>
           </Link>
-          <div className="text-gray-400 text-sm">Step 1 of 3</div>
+          <div className="text-gray-600 text-sm">Step 1 of 5</div>
         </div>
       </header>
 
