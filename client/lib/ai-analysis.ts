@@ -9,15 +9,17 @@ interface QuizData {
   niche: string;
   contentType: string;
   postingFrequency: string;
-  experience: string;
+  experience: string[];
   monthlyIncome: string;
-  biggestChallenge: string;
-  goals: string;
+  biggestChallenge: string[];
+  goals: string[];
   socialLinks: {
     instagram: string;
     youtube: string;
     linkedin: string;
     website: string;
+    twitter: string;
+    tiktok: string;
   };
   bio: string;
   language: string;
