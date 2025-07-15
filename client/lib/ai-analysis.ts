@@ -235,16 +235,28 @@ const getGrowthTrajectory = (data: QuizData, fameScore: number): string => {
       "Foundation building phase. Focus on content quality, posting consistency, and authentic audience growth before monetization.";
   }
 
-  // Add challenge-specific advice
-  if (data.biggestChallenge === "Low engagement") {
-    trajectory +=
-      " Priority: Improve content engagement through interactive posts and community building.";
-  } else if (data.biggestChallenge === "Inconsistent posting") {
-    trajectory +=
-      " Priority: Establish consistent content calendar and batch creation process.";
-  } else if (data.biggestChallenge === "Content ideas") {
-    trajectory +=
-      " Priority: Develop content strategy framework and idea generation systems.";
+  // Add challenge-specific advice based on multiple selections
+  if (data.biggestChallenge.length > 0) {
+    const topChallenge = data.biggestChallenge[0]; // Focus on the first selected challenge
+    if (topChallenge.includes("engagement")) {
+      trajectory +=
+        " Priority: Improve content engagement through interactive posts and community building.";
+    } else if (
+      topChallenge.includes("voice") ||
+      topChallenge.includes("style")
+    ) {
+      trajectory +=
+        " Priority: Develop unique content style and establish authentic brand voice.";
+    } else if (topChallenge.includes("algorithm")) {
+      trajectory +=
+        " Priority: Optimize content strategy for current platform algorithms and diversify reach.";
+    } else if (
+      topChallenge.includes("monetization") ||
+      topChallenge.includes("customers")
+    ) {
+      trajectory +=
+        " Priority: Develop conversion funnels and audience monetization strategies.";
+    }
   }
 
   return trajectory;
@@ -277,7 +289,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
 
   if (getExperienceScore(data.experience) >= 50) {
     strengths.push(
-      `💡 ${data.experience} of content creation gives you invaluable experience. You understand what works and can spot trends early.`,
+      `��� ${data.experience} of content creation gives you invaluable experience. You understand what works and can spot trends early.`,
     );
   } else if (getExperienceScore(data.experience) >= 30) {
     strengths.push(
