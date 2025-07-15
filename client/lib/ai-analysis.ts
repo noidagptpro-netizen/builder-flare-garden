@@ -750,6 +750,11 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
     return `₹${amount}`;
   };
 
+  // Add market-specific insights
+  const marketInsights = generateMarketInsights(data, fameScore);
+  const competitorAnalysis = generateCompetitorAnalysis(data);
+  const growthPotential = calculateGrowthPotential(data, fameScore);
+
   return {
     fameScore,
     confidenceScore,
@@ -757,6 +762,11 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
     experienceLevel: getExperienceLevelDescription(data.experience, fameScore),
     growthTrajectory: getGrowthTrajectory(data, fameScore),
     swotAnalysis: generateSWOTAnalysis(data, fameScore),
+    marketInsights,
+    competitorAnalysis,
+    growthPotential,
+    incomeProjection: formatIncome(sixMonthProjection),
+    suggestions: generatePersonalizedRecommendations(data),
     monetizationRoadmap: {
       currentPhase:
         followerCount >= 50000
