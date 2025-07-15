@@ -29,7 +29,7 @@ const App = () => (
             path="/start-your-influencer-journey"
             element={<QuizStart />}
           />
-          <Route path="/quiz" element={<NewQuiz />} />
+          <Route path="/quiz" element={<Quiz />} />
           <Route path="/results" element={<Results />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/admin" element={<Admin />} />
