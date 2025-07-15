@@ -11,6 +11,9 @@ import {
   Clock,
   CheckCircle,
   Globe,
+  CreditCard,
+  Shield,
+  Zap,
 } from "lucide-react";
 import { analyzeQuizData } from "../lib/ai-analysis";
 
@@ -25,15 +28,17 @@ interface QuizData {
   niche: string;
   contentType: string;
   postingFrequency: string;
-  experience: string;
+  experience: string[];
   monthlyIncome: string;
-  biggestChallenge: string;
-  goals: string;
+  biggestChallenge: string[];
+  goals: string[];
   socialLinks: {
     instagram: string;
     youtube: string;
     linkedin: string;
     website: string;
+    twitter: string;
+    tiktok: string;
   };
   bio: string;
   language: string;
@@ -43,11 +48,18 @@ const languages = {
   english: {
     title: "Your Fame Score Results",
     subtitle: "Personalized analysis based on your creator profile",
-    limitedOffer: "🎁 LIMITED TIME OFFER",
-    offerDescription:
-      "These premium insights and downloads are available for creators with verified profiles.",
-    offerExpiry: "Offer valid until: July 20, 2025",
+    paymentBanner: "🎁 Your Downloads Are Ready!",
+    downloads: "Your Downloads Are Ready!",
+    downloadItems: [
+      "Personalized Media Kit PDF",
+      "Custom Creator Bio Templates",
+      "Brand Outreach Templates",
+      "Professional Rate Card",
+      "Live Profile Page",
+      "AI Growth Strategy",
+    ],
     unlockButton: "Unlock Complete Analysis - ₹99",
+    offerExpiry: "Offer valid until: January 20, 2025",
     fameScore: "Fame Score",
     confidenceScore: "Confidence Score",
     experienceLevel: "Experience Level",
@@ -63,40 +75,24 @@ const languages = {
     nextSteps: "Next Steps",
     recommendations: "Personalized Recommendations",
     contentStrategy: "Content Strategy",
-    downloads: "🎁 Your Downloads Are Ready!",
-    downloadItems: [
-      "Personalized Media Kit PDF",
-      "Custom Creator Bio Templates",
-      "Brand Outreach Templates",
-      "Professional Rate Card",
-      "Live Profile Page",
-      "AI Growth Strategy",
+    paymentFeatures: [
+      "✅ Complete 50-page Creator Analysis Report",
+      "✅ Personalized Media Kit with Your Branding",
+      "✅ 30+ Email Templates for Brand Outreach",
+      "✅ Professional Rate Card Calculator",
+      "✅ Live Creator Profile Page",
+      "✅ AI-Powered Content Calendar (3 months)",
+      "✅ Growth Strategy Workbook",
+      "✅ Analytics Dashboard Access",
     ],
+    paymentSecurity:
+      "💳 Secure Payment • 📱 Instant Download • 💯 Money-back Guarantee",
   },
   hindi: {
     title: "आपके फेम स्कोर परिणाम",
     subtitle: "आपकी क्रिएटर प्रोफाइल के आधार पर व्यक्तिगत विश्लेषण",
-    limitedOffer: "🎁 सीमित समय का ऑफर",
-    offerDescription:
-      "ये प्रीमियम अंतर्दृष्टि और डाउनलोड वेरिफाइड प्रोफाइल वाले क्रिएटर्स के लिए उपलब्ध हैं।",
-    offerExpiry: "ऑफर की अवधि: 20 जुलाई, 2025 तक",
-    unlockButton: "पूर्ण विश्लेषण अनलॉक करें - ₹99",
-    fameScore: "फेम स्कोर",
-    confidenceScore: "कॉन्फिडेंस स्कोर",
-    experienceLevel: "अनुभव स्तर",
-    growthTrajectory: "ग्रोथ ट्रैजेक्टरी",
-    swotAnalysis: "SWOT विश्लेषण",
-    strengths: "शक्तियां",
-    weaknesses: "कमजोरियां",
-    opportunities: "��वसर",
-    threats: "खतरे",
-    monetization: "मॉनेटाइज़ेशन रोडमैप",
-    currentPhase: "वर्तमान चरण",
-    incomeProjection: "आय अनुमान",
-    nextSteps: "अगले कदम",
-    recommendations: "व्यक्तिगत सुझाव",
-    contentStrategy: "कंटेंट रणनीति",
-    downloads: "🎁 आपके डाउनलोड तैयार हैं!",
+    paymentBanner: "🎁 आपके डाउनलोड तैयार हैं!",
+    downloads: "आपके डाउनलोड तैयार हैं!",
     downloadItems: [
       "व्यक्तिगत मीडिया किट PDF",
       "कस्टम क्रिएटर बायो टेम्प्लेट",
@@ -105,6 +101,35 @@ const languages = {
       "लाइव प्रोफाइल पेज",
       "AI ग्रोथ स्ट्रैटेजी",
     ],
+    unlockButton: "पूर्ण विश्लेषण अनलॉक करें - ₹99",
+    offerExpiry: "ऑफर की अवधि: 20 जनवरी, 2025 तक",
+    fameScore: "फेम स्कोर",
+    confidenceScore: "कॉन्फिडेंस स्कोर",
+    experienceLevel: "अनुभव स्तर",
+    growthTrajectory: "ग्रोथ ट्रैजेक्टरी",
+    swotAnalysis: "SWOT विश्लेषण",
+    strengths: "शक्तियां",
+    weaknesses: "कमजोरियां",
+    opportunities: "अवसर",
+    threats: "खतरे",
+    monetization: "मॉनेटाइज़ेशन रोडमैप",
+    currentPhase: "वर्तमान चरण",
+    incomeProjection: "आय अनुमान",
+    nextSteps: "अगले कदम",
+    recommendations: "व्यक्तिगत सुझाव",
+    contentStrategy: "कंटेंट रणनीति",
+    paymentFeatures: [
+      "✅ पूर्ण 50-पेज क्रिएटर एनालिसिस रिपोर्ट",
+      "✅ आपकी ब्रांड��ंग के साथ व्यक्तिगत मीडिया किट",
+      "✅ ब्रांड आउटरीच के लिए 30+ ईमेल टेम्प्लेट",
+      "✅ प्रोफेशनल रेट कार्ड कैलकुलेटर",
+      "✅ लाइव क्रिएटर प्रोफाइल पेज",
+      "✅ AI-पावर्ड कंटेंट कैलेंडर (3 महीने)",
+      "✅ ग्रोथ स्ट्रैटेजी वर्कबुक",
+      "✅ एनालिटिक्स डैशबोर्ड एक्सेस",
+    ],
+    paymentSecurity:
+      "💳 सुरक्षित भुगतान • 📱 इंस्टेंट डाउनलोड • 💯 मनी-बैक गारंटी",
   },
 };
 
@@ -149,23 +174,30 @@ export default function Results() {
     return () => clearInterval(timer);
   }, []);
 
+  const handlePayment = () => {
+    // Redirect to actual payment integration
+    const paymentUrl =
+      "https://e7a22213a4e3477583ae6730113431ab-main.projects.builder.my/results";
+    window.open(paymentUrl, "_blank");
+  };
+
   if (!quizData || !analysis) {
     return (
-      <div className="min-h-screen bg-fame-darker flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 border-4 border-electric-blue border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-white">Analyzing your creator profile...</p>
+          <p className="text-garden-dark">Analyzing your creator profile...</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-fame-darker">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="relative z-10 px-4 py-6">
+      <header className="relative z-10 px-4 py-6 border-b border-gray-200">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold text-white">
+          <Link to="/" className="text-xl font-bold text-garden-dark">
             FameChase<span className="text-neon-green">.com</span>
           </Link>
 
@@ -175,7 +207,7 @@ export default function Results() {
               onChange={(e) =>
                 setLanguage(e.target.value as "english" | "hindi")
               }
-              className="bg-fame-dark border border-gray-600 text-white px-3 py-1 rounded-lg text-sm"
+              className="bg-white border border-gray-300 text-garden-dark px-3 py-1 rounded-lg text-sm"
             >
               <option value="english">English</option>
               <option value="hindi">हिंदी</option>
@@ -183,7 +215,7 @@ export default function Results() {
 
             <Link
               to="/"
-              className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+              className="flex items-center gap-2 text-gray-600 hover:text-garden-dark transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
@@ -192,11 +224,20 @@ export default function Results() {
         </div>
       </header>
 
-      {/* Limited Time Offer Banner */}
-      <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-4">
+      {/* Payment Wall Banner */}
+      <div className="bg-gradient-to-r from-neon-green via-electric-blue to-soft-violet text-white py-6">
         <div className="container mx-auto px-4 text-center">
-          <div className="font-bold text-lg mb-2">{t.limitedOffer}</div>
-          <div className="text-sm opacity-90 mb-2">{t.offerDescription}</div>
+          <div className="font-bold text-2xl mb-3">{t.paymentBanner}</div>
+          <div className="text-lg mb-3">
+            Personalized Media Kit PDF • Custom Creator Bio Templates • Brand
+            Outreach Templates
+          </div>
+          <div className="text-lg mb-3">
+            Professional Rate Card • Live Profile Page • AI Growth Strategy
+          </div>
+          <div className="flex justify-center items-center gap-4 text-lg font-bold mb-4">
+            <span>{t.unlockButton}</span>
+          </div>
           <div className="flex justify-center items-center gap-4 text-sm">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
@@ -210,15 +251,15 @@ export default function Results() {
       </div>
 
       <main className="relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-fame-darker via-fame-dark to-fame-darker"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
 
         <div className="relative z-10 container mx-auto px-4 py-12">
           {/* Header */}
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold text-garden-dark mb-4">
               {t.title}
             </h1>
-            <p className="text-xl text-gray-300 mb-6">{t.subtitle}</p>
+            <p className="text-xl text-gray-600 mb-6">{t.subtitle}</p>
             <div className="text-neon-green font-semibold">
               Hello {quizData.name}! Here's your personalized analysis.
             </div>
@@ -228,9 +269,9 @@ export default function Results() {
             {/* Left Column - Core Metrics */}
             <div className="lg:col-span-2 space-y-8">
               {/* Fame Score Card */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-8">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
                 <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold text-white flex items-center gap-3">
+                  <h2 className="text-2xl font-bold text-garden-dark flex items-center gap-3">
                     <Star className="w-8 h-8 text-yellow-400" />
                     {t.fameScore}
                   </h2>
@@ -244,8 +285,8 @@ export default function Results() {
 
                 <div className="flex items-center gap-4 mb-4">
                   <div className="flex items-center gap-2">
-                    <span className="text-gray-300">{t.confidenceScore}:</span>
-                    <span className="font-semibold text-white">
+                    <span className="text-gray-700">{t.confidenceScore}:</span>
+                    <span className="font-semibold text-garden-dark">
                       {analysis.confidenceScore}%
                     </span>
                     <div className="relative">
@@ -263,7 +304,7 @@ export default function Results() {
                   </div>
                 </div>
 
-                <div className="w-full bg-gray-700 rounded-full h-3 mb-6">
+                <div className="w-full bg-gray-200 rounded-full h-3 mb-6">
                   <div
                     className="bg-gradient-to-r from-electric-blue to-neon-green h-3 rounded-full transition-all duration-1000"
                     style={{ width: `${analysis.fameScore}%` }}
@@ -272,18 +313,18 @@ export default function Results() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
+                    <h3 className="text-lg font-semibold text-garden-dark mb-2">
                       {t.experienceLevel}
                     </h3>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-600 text-sm">
                       {analysis.experienceLevel}
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
+                    <h3 className="text-lg font-semibold text-garden-dark mb-2">
                       {t.currentPhase}
                     </h3>
-                    <p className="text-gray-300 text-sm">
+                    <p className="text-gray-600 text-sm">
                       {analysis.monetizationRoadmap.currentPhase}
                     </p>
                   </div>
@@ -291,37 +332,37 @@ export default function Results() {
               </div>
 
               {/* Growth Trajectory */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white flex items-center gap-3 mb-6">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
+                <h2 className="text-2xl font-bold text-garden-dark flex items-center gap-3 mb-6">
                   <TrendingUp className="w-8 h-8 text-neon-green" />
                   {t.growthTrajectory}
                 </h2>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {analysis.growthTrajectory}
                 </p>
               </div>
 
               {/* Income Projection */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white flex items-center gap-3 mb-6">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
+                <h2 className="text-2xl font-bold text-garden-dark flex items-center gap-3 mb-6">
                   <DollarSign className="w-8 h-8 text-electric-blue" />
                   {t.incomeProjection}
                 </h2>
                 <div className="grid md:grid-cols-3 gap-6">
                   <div className="text-center">
-                    <div className="text-gray-400 text-sm mb-2">Current</div>
-                    <div className="text-2xl font-bold text-white">
+                    <div className="text-gray-500 text-sm mb-2">Current</div>
+                    <div className="text-2xl font-bold text-garden-dark">
                       {analysis.monetizationRoadmap.incomeProjection.current}
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-gray-400 text-sm mb-2">3 Months</div>
+                    <div className="text-gray-500 text-sm mb-2">3 Months</div>
                     <div className="text-2xl font-bold text-neon-green">
                       {analysis.monetizationRoadmap.incomeProjection.threeMonth}
                     </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-gray-400 text-sm mb-2">6 Months</div>
+                    <div className="text-gray-500 text-sm mb-2">6 Months</div>
                     <div className="text-2xl font-bold text-electric-blue">
                       {analysis.monetizationRoadmap.incomeProjection.sixMonth}
                     </div>
@@ -330,8 +371,8 @@ export default function Results() {
               </div>
 
               {/* SWOT Analysis */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white flex items-center gap-3 mb-6">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
+                <h2 className="text-2xl font-bold text-garden-dark flex items-center gap-3 mb-6">
                   <Target className="w-8 h-8 text-soft-violet" />
                   {t.swotAnalysis}
                 </h2>
@@ -345,7 +386,7 @@ export default function Results() {
                         (item: string, index: number) => (
                           <li
                             key={index}
-                            className="text-gray-300 text-sm flex items-start gap-2"
+                            className="text-gray-600 text-sm flex items-start gap-2"
                           >
                             <CheckCircle className="w-4 h-4 text-neon-green mt-0.5 flex-shrink-0" />
                             {item}
@@ -355,7 +396,7 @@ export default function Results() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-yellow-400 mb-3">
+                    <h3 className="text-lg font-semibold text-yellow-600 mb-3">
                       ⚠️ {t.weaknesses}
                     </h3>
                     <ul className="space-y-2">
@@ -363,9 +404,9 @@ export default function Results() {
                         (item: string, index: number) => (
                           <li
                             key={index}
-                            className="text-gray-300 text-sm flex items-start gap-2"
+                            className="text-gray-600 text-sm flex items-start gap-2"
                           >
-                            <div className="w-4 h-4 border-2 border-yellow-400 rounded-full mt-0.5 flex-shrink-0"></div>
+                            <div className="w-4 h-4 border-2 border-yellow-600 rounded-full mt-0.5 flex-shrink-0"></div>
                             {item}
                           </li>
                         ),
@@ -381,7 +422,7 @@ export default function Results() {
                         (item: string, index: number) => (
                           <li
                             key={index}
-                            className="text-gray-300 text-sm flex items-start gap-2"
+                            className="text-gray-600 text-sm flex items-start gap-2"
                           >
                             <div className="w-4 h-4 bg-electric-blue rounded-full mt-0.5 flex-shrink-0"></div>
                             {item}
@@ -391,7 +432,7 @@ export default function Results() {
                     </ul>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-red-400 mb-3">
+                    <h3 className="text-lg font-semibold text-red-500 mb-3">
                       ⚡ {t.threats}
                     </h3>
                     <ul className="space-y-2">
@@ -399,9 +440,9 @@ export default function Results() {
                         (item: string, index: number) => (
                           <li
                             key={index}
-                            className="text-gray-300 text-sm flex items-start gap-2"
+                            className="text-gray-600 text-sm flex items-start gap-2"
                           >
-                            <div className="w-4 h-4 border-2 border-red-400 rounded-full mt-0.5 flex-shrink-0"></div>
+                            <div className="w-4 h-4 border-2 border-red-500 rounded-full mt-0.5 flex-shrink-0"></div>
                             {item}
                           </li>
                         ),
@@ -412,8 +453,8 @@ export default function Results() {
               </div>
 
               {/* Personalized Recommendations */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
+                <h2 className="text-2xl font-bold text-garden-dark mb-6">
                   {t.recommendations}
                 </h2>
                 <div className="space-y-4">
@@ -421,12 +462,12 @@ export default function Results() {
                     (rec: string, index: number) => (
                       <div
                         key={index}
-                        className="flex items-start gap-3 p-4 bg-fame-darker rounded-lg"
+                        className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg"
                       >
                         <div className="w-6 h-6 bg-neon-green text-black rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
                           {index + 1}
                         </div>
-                        <p className="text-gray-300">{rec}</p>
+                        <p className="text-gray-600">{rec}</p>
                       </div>
                     ),
                   )}
@@ -434,51 +475,71 @@ export default function Results() {
               </div>
             </div>
 
-            {/* Right Column - Downloads & CTA */}
+            {/* Right Column - Payment Wall & CTA */}
             <div className="space-y-8">
-              {/* Downloads Section */}
-              <div className="bg-fame-dark border border-neon-green rounded-2xl p-6">
-                <h3 className="text-xl font-bold text-white mb-4">
-                  {t.downloads}
-                </h3>
+              {/* Payment CTA Section */}
+              <div className="bg-gradient-to-br from-neon-green to-electric-blue rounded-2xl p-6 text-black sticky top-4">
+                <h3 className="text-2xl font-bold mb-4">{t.downloads}</h3>
+
                 <div className="space-y-3 mb-6">
-                  {t.downloadItems.map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3 p-3 bg-fame-darker rounded-lg opacity-50"
-                    >
-                      <Download className="w-5 h-5 text-gray-500" />
-                      <span className="text-gray-400 text-sm">{item}</span>
+                  {t.paymentFeatures.map((feature, index) => (
+                    <div key={index} className="flex items-start gap-2 text-sm">
+                      <span>{feature}</span>
                     </div>
                   ))}
                 </div>
-                <button className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-4 rounded-lg text-lg hover:opacity-90 transition-opacity">
+
+                <div className="text-center mb-6">
+                  <div className="text-4xl font-bold mb-2">₹99</div>
+                  <div className="text-sm opacity-80">One-time payment</div>
+                </div>
+
+                <button
+                  onClick={handlePayment}
+                  className="w-full bg-black text-white font-bold py-4 rounded-lg text-lg hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 mb-4"
+                >
+                  <CreditCard className="w-5 h-5" />
                   {t.unlockButton}
                 </button>
+
+                <div className="text-center text-sm opacity-80">
+                  {t.paymentSecurity}
+                </div>
+
+                <div className="flex items-center justify-center gap-4 mt-3 text-xs">
+                  <div className="flex items-center gap-1">
+                    <Shield className="w-3 h-3" />
+                    <span>SSL Secure</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Zap className="w-3 h-3" />
+                    <span>Instant Access</span>
+                  </div>
+                </div>
               </div>
 
               {/* Content Strategy */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-6">
-                <h3 className="text-xl font-bold text-white mb-4">
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
+                <h3 className="text-xl font-bold text-garden-dark mb-4">
                   {t.contentStrategy}
                 </h3>
                 <div className="space-y-4">
                   <div>
-                    <div className="text-sm text-gray-400 mb-1">
+                    <div className="text-sm text-gray-500 mb-1">
                       Posting Frequency
                     </div>
-                    <div className="text-white">
+                    <div className="text-garden-dark">
                       {analysis.contentStrategy.posting}
                     </div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400 mb-1">
+                    <div className="text-sm text-gray-500 mb-1">
                       Content Mix
                     </div>
                     <div className="space-y-1">
                       {analysis.contentStrategy.contentTypes.map(
                         (type: string, index: number) => (
-                          <div key={index} className="text-white text-sm">
+                          <div key={index} className="text-garden-dark text-sm">
                             • {type}
                           </div>
                         ),
@@ -486,10 +547,10 @@ export default function Results() {
                     </div>
                   </div>
                   <div>
-                    <div className="text-sm text-gray-400 mb-1">
+                    <div className="text-sm text-gray-500 mb-1">
                       Best Posting Times
                     </div>
-                    <div className="text-white">
+                    <div className="text-garden-dark">
                       {analysis.contentStrategy.bestTimes}
                     </div>
                   </div>
@@ -498,8 +559,8 @@ export default function Results() {
 
               {/* Social Links */}
               {Object.values(quizData.socialLinks).some((link) => link) && (
-                <div className="bg-fame-dark border border-gray-800 rounded-2xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">
+                <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
+                  <h3 className="text-xl font-bold text-garden-dark mb-4">
                     Your Profiles
                   </h3>
                   <div className="space-y-3">
@@ -508,7 +569,7 @@ export default function Results() {
                         href={quizData.socialLinks.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-pink-400 hover:text-pink-300 transition-colors"
+                        className="flex items-center gap-3 text-pink-500 hover:text-pink-400 transition-colors"
                       >
                         <div className="w-8 h-8 bg-pink-500 rounded-lg flex items-center justify-center">
                           📷
@@ -521,7 +582,7 @@ export default function Results() {
                         href={quizData.socialLinks.youtube}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-red-400 hover:text-red-300 transition-colors"
+                        className="flex items-center gap-3 text-red-500 hover:text-red-400 transition-colors"
                       >
                         <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center">
                           ▶️
@@ -534,9 +595,9 @@ export default function Results() {
                         href={quizData.socialLinks.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-blue-400 hover:text-blue-300 transition-colors"
+                        className="flex items-center gap-3 text-blue-600 hover:text-blue-500 transition-colors"
                       >
-                        <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
+                        <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
                           💼
                         </div>
                         LinkedIn
@@ -547,7 +608,7 @@ export default function Results() {
                         href={quizData.socialLinks.website}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-gray-400 hover:text-gray-300 transition-colors"
+                        className="flex items-center gap-3 text-gray-600 hover:text-gray-500 transition-colors"
                       >
                         <Globe className="w-8 h-8" />
                         Website

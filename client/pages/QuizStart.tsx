@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 
 export default function QuizStart() {
   return (
-    <div className="min-h-screen bg-fame-darker">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="relative z-10 px-4 py-6">
         <div className="container mx-auto flex justify-between items-center">
