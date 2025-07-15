@@ -188,15 +188,21 @@ const getExperienceLevelDescription = (
   experience: string[],
   fameScore: number,
 ): string => {
+  const primaryExperience = experience[0] || "Just started (0-6 months)";
+  const experienceText =
+    experience.length > 1
+      ? `Multi-level Experience (${experience.slice(0, 2).join(", ")})`
+      : primaryExperience;
+
   const experienceMap: { [key: string]: string } = {
-    "Just started (0-6 months)": `Beginner Creator (${experience}) - Building foundation and learning platform dynamics`,
-    "Beginner (6 months - 1 year)": `Early-Stage Creator (${experience}) - Developing consistency and finding voice`,
-    "Growing (1-2 years)": `Developing Creator (${experience}) - Building engaged audience and refining content strategy`,
-    "Experienced (2-3 years)": `Established Creator (${experience}) - Strong content foundation with growth momentum`,
-    "Expert (3+ years)": `Veteran Creator (${experience}) - Experienced with proven track record and audience loyalty`,
+    "Just started (0-6 months)": `Beginner Creator (${experienceText}) - Building foundation and learning platform dynamics`,
+    "Beginner (6 months - 1 year)": `Early-Stage Creator (${experienceText}) - Developing consistency and finding voice`,
+    "Growing (1-2 years)": `Developing Creator (${experienceText}) - Building engaged audience and refining content strategy`,
+    "Experienced (2-3 years)": `Established Creator (${experienceText}) - Strong content foundation with growth momentum`,
+    "Expert (3+ years)": `Veteran Creator (${experienceText}) - Experienced with proven track record and audience loyalty`,
   };
 
-  let baseDescription = experienceMap[experience] || "Creator";
+  let baseDescription = experienceMap[primaryExperience] || "Creator";
 
   if (fameScore >= 80) {
     baseDescription += " - High-performing with excellent market positioning";
