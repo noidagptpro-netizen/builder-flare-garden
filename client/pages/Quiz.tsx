@@ -134,15 +134,23 @@ const languages = {
       ],
       niches: [
         "Fashion & Beauty",
-        "Technology",
+        "Technology & AI",
         "Food & Cooking",
-        "Travel",
+        "Travel & Adventure",
         "Fitness & Health",
-        "Education",
-        "Entertainment",
-        "Business & Finance",
-        "Lifestyle",
+        "Personal Finance & Investing",
+        "Entertainment & Comedy",
+        "Entrepreneurship & Business",
+        "Lifestyle & Wellness",
         "Art & Design",
+        "Gaming & Esports",
+        "Music & Dance",
+        "Education & Learning",
+        "Sports & Athletics",
+        "Motivation & Self-Help",
+        "Parenting & Family",
+        "DIY & Crafts",
+        "Spirituality & Mindfulness",
         "Other",
       ],
       contentTypes: [
@@ -242,7 +250,7 @@ const languages = {
       biggestChallenge:
         "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क्या हैं? (कम से कम 3 चुनें)",
       goals:
-        "अगले 6 महीनों के लिए आपके मुख्य लक्ष्य क्या हैं? (कम से कम 3 चुनें)",
+        "अगले 6 महीनों के लिए आपके मुख्य लक्ष्��� क्या हैं? (कम से कम 3 चुनें)",
       socialLinks:
         "अपने सोशल मीडिया प्रोफाइल जोड़ें (वैकल्पिक लेकिन बेहतर विश्लेषण के लिए अनुशंसित)",
       bio: "अपने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
