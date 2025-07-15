@@ -426,8 +426,10 @@ export default function Shop() {
                   </div>
 
                   {/* Purchase Button */}
-                  <button
-                    onClick={() => handlePurchase(product.id)}
+                  <a
+                    href="https://e7a22213a4e3477583ae6730113431ab-6064e56fbfd24606b13adf123.projects.builder.codes/shop"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-full py-3 rounded-lg font-semibold transition-all duration-200 flex items-center justify-center gap-2 ${
                       product.isPopular
                         ? "bg-neon-green text-black hover:bg-green-400 shadow-lg"
@@ -436,7 +438,7 @@ export default function Shop() {
                   >
                     <ShoppingCart className="w-4 h-4" />
                     Buy Now - ₹{product.price}
-                  </button>
+                  </a>
 
                   <div className="text-xs text-center text-gray-500 mt-2">
                     💳 Secure payment • 📱 Instant download • 💯 Money-back
