@@ -664,6 +664,78 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
   return recommendations;
 };
 
+const generateMarketInsights = (data: QuizData, fameScore: number) => {
+  const insights = [];
+  const followerNum = getFollowerCount(data.followerCount);
+
+  // Market size insights based on niche
+  const nicheMarketData = {
+    "Fashion & Beauty": "₹1.2 lakh crore market, growing 25% annually",
+    "Technology & AI": "₹4.2 lakh crore IT market, highest CPM rates",
+    "Personal Finance & Investing":
+      "₹50,000 crore fintech market, premium audience",
+    "Fitness & Health": "₹35,000 crore wellness market, post-COVID boom",
+    "Education & Learning":
+      "₹1.8 lakh crore edtech market, highest conversion rates",
+    "Food & Cooking": "₹55,000 crore food market, highest engagement rates",
+  };
+
+  if (nicheMarketData[data.niche as keyof typeof nicheMarketData]) {
+    insights.push(
+      `Your ${data.niche} niche represents a ${nicheMarketData[data.niche as keyof typeof nicheMarketData]} in India.`,
+    );
+  }
+
+  return insights;
+};
+
+const generateCompetitorAnalysis = (data: QuizData) => {
+  const followerNum = getFollowerCount(data.followerCount);
+
+  if (followerNum >= 100000) {
+    return "You're in the top 2% of creators in your niche. Focus on maintaining leadership position.";
+  } else if (followerNum >= 50000) {
+    return "You're in the top 5% of creators. Close to breaking into the elite tier.";
+  } else if (followerNum >= 10000) {
+    return "You're in the top 15% of creators. Strong position for brand partnerships.";
+  } else if (followerNum >= 1000) {
+    return "You're ahead of 70% of creators. Focus on reaching the 10K milestone.";
+  } else {
+    return "Starting phase. 95% of creators never reach 1K followers - you can be different.";
+  }
+};
+
+const calculateGrowthPotential = (
+  data: QuizData,
+  fameScore: number,
+): number => {
+  let potential = 50; // Base potential
+
+  // Add points based on various factors
+  if (fameScore >= 70) potential += 30;
+  else if (fameScore >= 50) potential += 20;
+  else if (fameScore >= 30) potential += 10;
+
+  if (
+    data.experience.some(
+      (exp) => exp.includes("Expert") || exp.includes("Experienced"),
+    )
+  ) {
+    potential += 15;
+  }
+
+  if (data.secondaryPlatforms.length >= 2) potential += 10;
+
+  if (
+    data.postingFrequency === "Daily" ||
+    data.postingFrequency === "3-4 times a week"
+  ) {
+    potential += 15;
+  }
+
+  return Math.min(potential, 95);
+};
+
 export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
   // Calculate base fame score
   let fameScore = 0;
