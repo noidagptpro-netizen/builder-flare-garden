@@ -620,7 +620,12 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
   }
 
   // Medium priority recommendations
-  if (data.biggestChallenge === "Brand collaborations") {
+  if (
+    data.biggestChallenge.some(
+      (challenge) =>
+        challenge.includes("brand") || challenge.includes("collaboration"),
+    )
+  ) {
     recommendations.push({
       name: "Brand Outreach Templates",
       reason:
