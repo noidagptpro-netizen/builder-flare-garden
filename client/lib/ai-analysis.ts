@@ -642,11 +642,18 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
   if (data.secondaryPlatforms.length >= 2) fameScore += 5;
   if (data.secondaryPlatforms.length >= 3) fameScore += 3;
 
-  // Bonus for social links provided
+  // Enhanced social links analysis
   const socialLinksCount = Object.values(data.socialLinks).filter((link) =>
     link.trim(),
   ).length;
   fameScore += socialLinksCount * 2;
+
+  // Additional bonus for platform diversity
+  const platformDiversity = new Set([
+    data.primaryPlatform,
+    ...data.secondaryPlatforms,
+  ]).size;
+  fameScore += Math.min(platformDiversity * 1.5, 8); // Max 8 points for diversity
 
   // Bio bonus
   if (data.bio && data.bio.length > 50) fameScore += 3;
