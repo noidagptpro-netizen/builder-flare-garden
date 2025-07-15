@@ -219,8 +219,8 @@ const languages = {
       city: "आप किस शहर से हैं?",
       primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
       secondaryPlatforms:
-        "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (सभी लागू का चयन करें)",
-      followerCount: "आपके प्राथमिक प्लेटफॉर्म पर क��तने फॉलो��र्स हैं?",
+        "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (सभी ला��ू का चयन करें)",
+      followerCount: "आपके प्राथमिक प्लेटफॉर्म पर क��तने फॉलोअर्स हैं?",
       niche: "आपका कंटेंट किस विषय पर है?",
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट प���स्ट करते हैं?",
@@ -230,7 +230,7 @@ const languages = {
       goals: "अगले 6 महीनों के लिए आपका मुख्य लक्ष्य क्या है?",
       socialLinks:
         "अपने सोशल मीडिया प्रोफाइल जोड़ें (वैकल्पिक लेकिन बेहतर विश्लेषण के लिए अनुशंसित)",
-      bio: "अपने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
+      bio: "अ��ने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
     },
     options: {
       platforms: [
@@ -267,7 +267,7 @@ const languages = {
       contentTypes: [
         "फोटो और कैरोसेल",
         "छोटे वीडियो/रील्स",
-        "लंबे वीडियो",
+        "���ंबे वीडियो",
         "लाइव स्ट्रीम",
         "स्टोरीज़",
         "लिखि�� पोस्ट",
@@ -302,7 +302,7 @@ const languages = {
         "लगातार व्यूज और एंगेजमेंट पाना",
         "अपनी यूनीक आवाज़/स्टाइल खोजना",
         "एल्गोरिदम बदलाव से पहुंच में कमी",
-        "ऑथेंटिसिटी और ब्रांड ���पील का संतुलन",
+        "ऑथेंटिसिटी और ब्रांड अपील का संतुलन",
         "बड़े क्रिएटर्स से कॉम्पिटिशन",
         "फॉलोअर्स को पेइंग कस्टमर बनाना",
         "नेगेटिव कमेंट्स/ट्रोल्स से निपटना",
@@ -461,11 +461,11 @@ export default function Quiz() {
       {/* Quiz Content */}
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-bold text-white text-center mb-8">
+          <h1 className="text-3xl md:text-5xl font-bold text-garden-dark text-center mb-8">
             {t.title}
           </h1>
 
-          <div className="bg-fame-dark border border-gray-800 rounded-2xl p-8">
+          <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
             {/* Step 1: Personal Info */}
             {currentStep === 1 && (
               <div className="space-y-6">
