@@ -319,8 +319,8 @@ const languages = {
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
         "अपनी niche में go-to एक्सपर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
-        "10K सब्सक्राइबर्स क��� email लिस्ट",
-        "इंडस्ट्री इवेंट्स/पॉडकास्ट्स में बोलना",
+        "10K सब्सक्राइबर्स की email लिस्ट",
+        "इंडस्ट्री इव���ंट्स/पॉडकास्ट्स में बोलना",
         "पैसिव इनकम स्ट्रीम्स बनाना",
         "9-5 job छोड़कर फुल-टाइम जाना",
         "नए प्लेटफॉर्म्स/फॉर्मेट्स में expand करना",
@@ -434,7 +434,7 @@ export default function Quiz() {
               <option value="hindi">हिंदी</option>
             </select>
 
-            <div className="text-gray-400 text-sm">Step {currentStep} of 4</div>
+            <div className="text-gray-600 text-sm">Step {currentStep} of 5</div>
           </div>
         </div>
       </header>
