@@ -13,6 +13,10 @@ import {
   TrendingUp,
   CheckCircle,
   Sparkles,
+  User,
+  Mail,
+  MapPin,
+  Calendar,
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import {
@@ -82,11 +86,10 @@ const languages = {
     title: "Creator Success Quiz",
     subtitle: "Get your personalized growth strategy in 3 minutes",
     steps: {
-      1: "About You",
-      2: "Your Platforms",
-      3: "Content & Growth",
-      4: "Goals & Strategy",
-      5: "Connect (Optional)",
+      1: "Your Platforms",
+      2: "Content & Growth",
+      3: "Goals & Strategy",
+      4: "Social Presence",
     },
     questions: {
       name: "What's your name?",
@@ -104,11 +107,9 @@ const languages = {
         "How long have you been creating content? (Select all levels you've experienced)",
       monthlyIncome: "What's your current monthly income from content?",
       biggestChallenge:
-        "What are your biggest challenges as a creator? (Select at least 3)",
-      goals:
-        "What are your main goals for the next 6 months? (Select at least 3)",
-      socialLinks:
-        "Add your social media profiles (optional but recommended for better analysis)",
+        "What are your biggest challenges as a creator? (Select max 3)",
+      goals: "What are your main goals for the next 6 months? (Select max 3)",
+      socialLinks: "Share Your Social Presence (Optional)",
       bio: "Tell us about yourself and your content (optional)",
       socialMediaIds:
         "Social Media Profile URLs (Optional - helps us analyze your content better)",
@@ -226,11 +227,10 @@ const languages = {
     title: "क्रिएटर सक्सेस क्विज़",
     subtitle: "3 मिनट में अपनी व्यक्तिगत ग्रोथ रणनीति पाएं",
     steps: {
-      1: "आपके बारे में",
-      2: "आपके प्लेटफॉर्म",
-      3: "कंटेंट और ग्रोथ",
-      4: "लक्ष्य और रणनीति",
-      5: "कनेक्ट (वैकल्पिक)",
+      1: "आपके प्लेटफॉर्म",
+      2: "कंटेंट और ग्रोथ",
+      3: "लक्ष्य और रणनीति",
+      4: "सोशल उपस्थिति",
     },
     questions: {
       name: "आपका नाम क्या है?",
@@ -248,12 +248,11 @@ const languages = {
         "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       biggestChallenge:
-        "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क्या हैं? (कम से कम 3 चुनें)",
+        "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क्या हैं? (अधिकतम 3 चुनें)",
       goals:
-        "अगले 6 महीनों के लिए आपके मुख्य लक्ष्��� क्या हैं? (कम से कम 3 चुनें)",
-      socialLinks:
-        "अपने सोशल मीडिया प्रोफाइल जोड़ें (वैकल्पिक लेकिन बेहतर विश्लेषण के लिए अनुशंसित)",
-      bio: "अपने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
+        "अगले 6 महीनों के लिए आपके मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
+      socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
+      bio: "अपने ��र अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
       socialMediaIds:
         "सोशल मीडिया प्रोफाइल लिंक (वैकल्पिक - आपके कंटेंट का बेहतर विश्लेषण करने में मदद करता है)",
     },
@@ -278,16 +277,24 @@ const languages = {
       ],
       niches: [
         "फैशन और ब्यूटी",
-        "टेक्नोलॉजी",
+        "टेक्नोलॉजी और AI",
         "खाना और खाना बनाना",
-        "यात्रा",
+        "यात्रा और एडवेंचर",
         "फिटनेस और स्वास्थ्य",
-        "शिक्षा",
-        "मनोरंजन",
-        "व्यापार और वित्त",
-        "जीवनशैली",
+        "व्यक्तिगत वित्त और निवेश",
+        "मनोरंज�� और कॉमेडी",
+        "उद्यमिता और व्यापार",
+        "जीवनशैली और कल्याण",
         "कला और डिज़ाइन",
-        "अन्���",
+        "गेमिंग और एस्पोर्ट्स",
+        "संगीत और नृत्य",
+        "शिक्षा और सीखना",
+        "खेल और एथलेटिक्स",
+        "प्रेरणा और स्व-सहायता",
+        "पेरेंटिंग और परिवार",
+        "DIY और शिल्प",
+        "आध्यात्म और माइंडफुलनेस",
+        "अन्य",
       ],
       contentTypes: [
         "फोटो और कैरोसेल",
@@ -340,7 +347,7 @@ const languages = {
       goals: [
         "मासिक आय ₹50K+ तक बढ़ाना",
         "100K+ की authentic कम्युनिटी बनाना",
-        "ड्रीम ब्रांड्स ��े साथ पार्टनरशिप",
+        "ड्रीम ब्रांड्स के साथ पार्टनरशिप",
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
         "अपनी niche में go-to एक्सपर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
@@ -389,8 +396,31 @@ export default function Quiz() {
     }));
   };
 
+  const canProceed = () => {
+    switch (currentStep) {
+      case 1:
+        return (
+          quizData.primaryPlatform && quizData.followerCount && quizData.niche
+        );
+      case 2:
+        return (
+          quizData.contentType &&
+          quizData.postingFrequency &&
+          quizData.monthlyIncome
+        );
+      case 3:
+        return (
+          quizData.biggestChallenge.length > 0 && quizData.goals.length > 0
+        );
+      case 4:
+        return true; // Optional step
+      default:
+        return false;
+    }
+  };
+
   const handleNext = () => {
-    if (currentStep < 5) {
+    if (currentStep < 4 && canProceed()) {
       setCurrentStep(currentStep + 1);
     }
   };
@@ -421,128 +451,21 @@ export default function Quiz() {
   const toggleMultipleChoice = (
     field: "experience" | "biggestChallenge" | "goals",
     value: string,
+    maxSelection?: number,
   ) => {
     const currentValues = quizData[field];
-    const newValues = currentValues.includes(value)
-      ? currentValues.filter((v) => v !== value)
-      : [...currentValues, value];
-    updateQuizData(field, newValues);
+    if (currentValues.includes(value)) {
+      // Remove if already selected
+      const newValues = currentValues.filter((v) => v !== value);
+      updateQuizData(field, newValues);
+    } else {
+      // Add if not at max limit
+      if (!maxSelection || currentValues.length < maxSelection) {
+        const newValues = [...currentValues, value];
+        updateQuizData(field, newValues);
+      }
+    }
   };
-
-  const PopupSelector = ({
-    title,
-    options,
-    onSelect,
-    selectedValue,
-  }: {
-    title: string;
-    options: string[];
-    onSelect: (value: string) => void;
-    selectedValue: string;
-  }) => (
-    <Dialog>
-      <DialogTrigger asChild>
-        <button className="w-full p-4 border-2 border-gray-200 rounded-xl text-left flex items-center justify-between bg-white hover:border-electric-blue hover:shadow-lg transition-all duration-300">
-          <span
-            className={
-              selectedValue ? "text-gray-900 font-medium" : "text-gray-500"
-            }
-          >
-            {selectedValue || `Choose ${title}`}
-          </span>
-          <ChevronDown className="w-5 h-5 text-gray-400" />
-        </button>
-      </DialogTrigger>
-      <DialogContent className="max-w-md bg-white">
-        <DialogHeader>
-          <DialogTitle className="text-gray-900">Select {title}</DialogTitle>
-        </DialogHeader>
-        <div className="grid gap-3 max-h-60 overflow-y-auto">
-          {options.map((option) => (
-            <button
-              key={option}
-              onClick={() => onSelect(option)}
-              className={`p-4 text-left rounded-xl border-2 transition-all duration-300 ${
-                selectedValue === option
-                  ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 font-semibold"
-                  : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
-              }`}
-            >
-              {option}
-            </button>
-          ))}
-        </div>
-      </DialogContent>
-    </Dialog>
-  );
-
-  const MultiSelectPopup = ({
-    title,
-    options,
-    onToggle,
-    selectedValues,
-    minSelection,
-  }: {
-    title: string;
-    options: string[];
-    onToggle: (value: string) => void;
-    selectedValues: string[];
-    minSelection: number;
-  }) => (
-    <Dialog>
-      <DialogTrigger asChild>
-        <button className="w-full p-4 border-2 border-gray-200 rounded-xl text-left flex items-center justify-between bg-white hover:border-electric-blue hover:shadow-lg transition-all duration-300">
-          <span
-            className={
-              selectedValues.length >= minSelection
-                ? "text-gray-900 font-medium"
-                : "text-gray-500"
-            }
-          >
-            {selectedValues.length >= minSelection
-              ? `${selectedValues.length} ${title} selected`
-              : `Select ${title} (minimum ${minSelection})`}
-          </span>
-          <div className="flex items-center gap-2">
-            {selectedValues.length >= minSelection && (
-              <CheckCircle className="w-5 h-5 text-neon-green" />
-            )}
-            <ChevronDown className="w-5 h-5 text-gray-400" />
-          </div>
-        </button>
-      </DialogTrigger>
-      <DialogContent className="max-w-md bg-white">
-        <DialogHeader>
-          <DialogTitle className="text-gray-900">
-            Choose {title} (minimum {minSelection})
-          </DialogTitle>
-        </DialogHeader>
-        <div className="grid gap-3 max-h-60 overflow-y-auto">
-          {options.map((option) => (
-            <button
-              key={option}
-              onClick={() => onToggle(option)}
-              className={`p-4 text-left rounded-xl border-2 transition-all duration-300 ${
-                selectedValues.includes(option)
-                  ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 font-semibold"
-                  : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
-              }`}
-            >
-              <div className="flex items-center gap-3">
-                {selectedValues.includes(option) && (
-                  <CheckCircle className="w-5 h-5 text-neon-green" />
-                )}
-                <span>{option}</span>
-              </div>
-            </button>
-          ))}
-        </div>
-        <div className="text-sm text-gray-600 mt-2 p-3 bg-gray-50 rounded-lg">
-          Selected: {selectedValues.length} / {minSelection} minimum required
-        </div>
-      </DialogContent>
-    </Dialog>
-  );
 
   return (
     <div className="min-h-screen bg-white">
@@ -562,11 +485,11 @@ export default function Quiz() {
               className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
             >
               <option value="english">English</option>
-              <option value="hindi">हिंदी</option>
+              <option value="hindi">हिंद���</option>
             </select>
 
             <div className="text-gray-600 text-sm font-medium">
-              Step {currentStep} of 5
+              Step {currentStep} of 4
             </div>
           </div>
         </div>
@@ -577,7 +500,7 @@ export default function Quiz() {
         <div className="container mx-auto px-4">
           <div className="flex justify-center mb-4">
             <div className="flex space-x-2">
-              {[1, 2, 3, 4, 5].map((step) => (
+              {[1, 2, 3, 4].map((step) => (
                 <div
                   key={step}
                   className={`w-12 h-3 rounded-full transition-all duration-500 ${
@@ -633,85 +556,8 @@ export default function Quiz() {
 
             {!isGenerating && (
               <>
-                {/* Step 1: Personal Info */}
+                {/* Step 1: Platform Details */}
                 {currentStep === 1 && (
-                  <div className="space-y-8">
-                    <div className="text-center mb-8">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        Let's Get to Know You! 👋
-                      </h2>
-                      <p className="text-gray-600">
-                        Tell us about yourself so we can personalize your
-                        experience
-                      </p>
-                    </div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <label className="block text-gray-900 font-semibold mb-3 text-lg">
-                          {t.questions.name}
-                        </label>
-                        <input
-                          type="text"
-                          value={quizData.name}
-                          onChange={(e) =>
-                            updateQuizData("name", e.target.value)
-                          }
-                          className="w-full bg-white border-2 border-gray-200 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
-                          placeholder="Enter your name"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-gray-900 font-semibold mb-3 text-lg">
-                          {t.questions.email}
-                        </label>
-                        <input
-                          type="email"
-                          value={quizData.email}
-                          onChange={(e) =>
-                            updateQuizData("email", e.target.value)
-                          }
-                          className="w-full bg-white border-2 border-gray-200 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
-                          placeholder="your@email.com"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-gray-900 font-semibold mb-3 text-lg">
-                          {t.questions.age}
-                        </label>
-                        <input
-                          type="number"
-                          value={quizData.age}
-                          onChange={(e) =>
-                            updateQuizData("age", e.target.value)
-                          }
-                          className="w-full bg-white border-2 border-gray-200 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
-                          placeholder="25"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-gray-900 font-semibold mb-3 text-lg">
-                          {t.questions.city}
-                        </label>
-                        <input
-                          type="text"
-                          value={quizData.city}
-                          onChange={(e) =>
-                            updateQuizData("city", e.target.value)
-                          }
-                          className="w-full bg-white border-2 border-gray-200 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
-                          placeholder="Mumbai"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Step 2: Platform Details */}
-                {currentStep === 2 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -812,8 +658,8 @@ export default function Quiz() {
                   </div>
                 )}
 
-                {/* Step 3: Content Strategy */}
-                {currentStep === 3 && (
+                {/* Step 2: Content Strategy */}
+                {currentStep === 2 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -828,43 +674,72 @@ export default function Quiz() {
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.contentType}
                       </label>
-                      <PopupSelector
-                        title="Content Type"
-                        options={t.options.contentTypes}
-                        onSelect={(value) =>
-                          updateQuizData("contentType", value)
-                        }
-                        selectedValue={quizData.contentType}
-                      />
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {t.options.contentTypes.map((type) => (
+                          <button
+                            key={type}
+                            onClick={() => updateQuizData("contentType", type)}
+                            className={`p-4 rounded-xl border-2 text-base font-semibold transition-all duration-300 ${
+                              quizData.contentType === type
+                                ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
+                                : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
+                            }`}
+                          >
+                            {type}
+                          </button>
+                        ))}
+                      </div>
                     </div>
 
                     <div>
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.postingFrequency}
                       </label>
-                      <PopupSelector
-                        title="Posting Frequency"
-                        options={t.options.frequencies}
-                        onSelect={(value) =>
-                          updateQuizData("postingFrequency", value)
-                        }
-                        selectedValue={quizData.postingFrequency}
-                      />
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        {t.options.frequencies.map((freq) => (
+                          <button
+                            key={freq}
+                            onClick={() =>
+                              updateQuizData("postingFrequency", freq)
+                            }
+                            className={`p-4 rounded-xl border-2 text-base font-semibold transition-all duration-300 ${
+                              quizData.postingFrequency === freq
+                                ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
+                                : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
+                            }`}
+                          >
+                            {freq}
+                          </button>
+                        ))}
+                      </div>
                     </div>
 
                     <div>
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.experience}
                       </label>
-                      <MultiSelectPopup
-                        title="Experience Levels"
-                        options={t.options.experiences}
-                        onToggle={(value) =>
-                          toggleMultipleChoice("experience", value)
-                        }
-                        selectedValues={quizData.experience}
-                        minSelection={1}
-                      />
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {t.options.experiences.map((exp) => (
+                          <button
+                            key={exp}
+                            onClick={() =>
+                              toggleMultipleChoice("experience", exp)
+                            }
+                            className={`p-4 rounded-xl border-2 text-base font-semibold transition-all duration-300 ${
+                              quizData.experience.includes(exp)
+                                ? "bg-gradient-to-r from-soft-violet/10 to-electric-blue/10 border-soft-violet text-gray-900 shadow-lg"
+                                : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
+                            }`}
+                          >
+                            <div className="flex items-center gap-3">
+                              {quizData.experience.includes(exp) && (
+                                <CheckCircle className="w-5 h-5 text-soft-violet" />
+                              )}
+                              <span>{exp}</span>
+                            </div>
+                          </button>
+                        ))}
+                      </div>
                     </div>
 
                     <div>
@@ -892,8 +767,8 @@ export default function Quiz() {
                   </div>
                 )}
 
-                {/* Step 4: Goals, Challenges */}
-                {currentStep === 4 && (
+                {/* Step 3: Goals, Challenges */}
+                {currentStep === 3 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -908,30 +783,86 @@ export default function Quiz() {
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.biggestChallenge}
                       </label>
-                      <MultiSelectPopup
-                        title="Challenges"
-                        options={t.options.challenges}
-                        onToggle={(value) =>
-                          toggleMultipleChoice("biggestChallenge", value)
-                        }
-                        selectedValues={quizData.biggestChallenge}
-                        minSelection={3}
-                      />
+                      <div className="grid grid-cols-1 gap-4">
+                        {t.options.challenges.map((challenge) => (
+                          <button
+                            key={challenge}
+                            onClick={() =>
+                              toggleMultipleChoice(
+                                "biggestChallenge",
+                                challenge,
+                                3,
+                              )
+                            }
+                            disabled={
+                              !quizData.biggestChallenge.includes(challenge) &&
+                              quizData.biggestChallenge.length >= 3
+                            }
+                            className={`p-4 rounded-xl border-2 text-base font-semibold transition-all duration-300 text-left ${
+                              !quizData.biggestChallenge.includes(challenge) &&
+                              quizData.biggestChallenge.length >= 3
+                                ? "opacity-50 cursor-not-allowed"
+                                : ""
+                            } ${
+                              quizData.biggestChallenge.includes(challenge)
+                                ? "bg-gradient-to-r from-red-50 to-orange-50 border-red-400 text-gray-900 shadow-lg"
+                                : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
+                            }`}
+                          >
+                            <div className="flex items-center gap-3">
+                              {quizData.biggestChallenge.includes(
+                                challenge,
+                              ) && (
+                                <CheckCircle className="w-5 h-5 text-red-500" />
+                              )}
+                              <span>{challenge}</span>
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                      <p className="text-sm text-gray-600 mt-3">
+                        Selected: {quizData.biggestChallenge.length} / 3 maximum
+                      </p>
                     </div>
 
                     <div>
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.goals}
                       </label>
-                      <MultiSelectPopup
-                        title="Goals"
-                        options={t.options.goals}
-                        onToggle={(value) =>
-                          toggleMultipleChoice("goals", value)
-                        }
-                        selectedValues={quizData.goals}
-                        minSelection={3}
-                      />
+                      <div className="grid grid-cols-1 gap-4">
+                        {t.options.goals.map((goal) => (
+                          <button
+                            key={goal}
+                            onClick={() =>
+                              toggleMultipleChoice("goals", goal, 3)
+                            }
+                            disabled={
+                              !quizData.goals.includes(goal) &&
+                              quizData.goals.length >= 3
+                            }
+                            className={`p-4 rounded-xl border-2 text-base font-semibold transition-all duration-300 text-left ${
+                              !quizData.goals.includes(goal) &&
+                              quizData.goals.length >= 3
+                                ? "opacity-50 cursor-not-allowed"
+                                : ""
+                            } ${
+                              quizData.goals.includes(goal)
+                                ? "bg-gradient-to-r from-green-50 to-blue-50 border-green-400 text-gray-900 shadow-lg"
+                                : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
+                            }`}
+                          >
+                            <div className="flex items-center gap-3">
+                              {quizData.goals.includes(goal) && (
+                                <CheckCircle className="w-5 h-5 text-green-500" />
+                              )}
+                              <span>{goal}</span>
+                            </div>
+                          </button>
+                        ))}
+                      </div>
+                      <p className="text-sm text-gray-600 mt-3">
+                        Selected: {quizData.goals.length} / 3 maximum
+                      </p>
                     </div>
 
                     <div>
@@ -949,16 +880,16 @@ export default function Quiz() {
                   </div>
                 )}
 
-                {/* Step 5: Social Media Links */}
-                {currentStep === 5 && (
+                {/* Step 4: Social Media Links */}
+                {currentStep === 4 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        Connect Your Profiles 🔗
+                        Boost Your Analysis 🔥
                       </h2>
                       <p className="text-gray-600">
-                        Optional but recommended for better personalized
-                        analysis
+                        Share your social profiles for a more personalized
+                        creator strategy
                       </p>
                     </div>
 
@@ -1078,10 +1009,11 @@ export default function Quiz() {
 
                   <div className="flex-1"></div>
 
-                  {currentStep < 5 ? (
+                  {currentStep < 4 ? (
                     <button
                       onClick={handleNext}
-                      className="flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black px-8 py-4 rounded-xl font-bold hover:shadow-lg hover:scale-105 transition-all duration-300"
+                      disabled={!canProceed()}
+                      className="flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black px-8 py-4 rounded-xl font-bold hover:shadow-lg hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       {t.buttons.next}
                       <ArrowRight className="w-5 h-5" />
@@ -1089,11 +1021,7 @@ export default function Quiz() {
                   ) : (
                     <button
                       onClick={handleSubmit}
-                      disabled={
-                        quizData.biggestChallenge.length < 3 ||
-                        quizData.goals.length < 3
-                      }
-                      className="flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black px-8 py-4 rounded-xl font-bold hover:shadow-lg hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black px-8 py-4 rounded-xl font-bold hover:shadow-lg hover:scale-105 transition-all duration-300"
                     >
                       <Sparkles className="w-5 h-5" />
                       {t.buttons.submit}
