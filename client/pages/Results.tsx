@@ -7,10 +7,16 @@ import {
   Target,
   DollarSign,
   Download,
-  Info,
-  Clock,
   CheckCircle,
   Globe,
+  CreditCard,
+  Shield,
+  Zap,
+  Sparkles,
+  FileText,
+  Mail,
+  Layout,
+  BarChart,
 } from "lucide-react";
 import { analyzeQuizData } from "../lib/ai-analysis";
 
@@ -25,101 +31,28 @@ interface QuizData {
   niche: string;
   contentType: string;
   postingFrequency: string;
-  experience: string;
+  experience: string[];
   monthlyIncome: string;
-  biggestChallenge: string;
-  goals: string;
+  biggestChallenge: string[];
+  goals: string[];
   socialLinks: {
     instagram: string;
     youtube: string;
     linkedin: string;
     website: string;
+    twitter: string;
+    tiktok: string;
   };
   bio: string;
   language: string;
 }
 
-const languages = {
-  english: {
-    title: "Your Fame Score Results",
-    subtitle: "Personalized analysis based on your creator profile",
-    limitedOffer: "🎁 LIMITED TIME OFFER",
-    offerDescription:
-      "These premium insights and downloads are available for creators with verified profiles.",
-    offerExpiry: "Offer valid until: July 20, 2025",
-    unlockButton: "Unlock Complete Analysis - ₹99",
-    fameScore: "Fame Score",
-    confidenceScore: "Confidence Score",
-    experienceLevel: "Experience Level",
-    growthTrajectory: "Growth Trajectory",
-    swotAnalysis: "SWOT Analysis",
-    strengths: "Strengths",
-    weaknesses: "Weaknesses",
-    opportunities: "Opportunities",
-    threats: "Threats",
-    monetization: "Monetization Roadmap",
-    currentPhase: "Current Phase",
-    incomeProjection: "Income Projection",
-    nextSteps: "Next Steps",
-    recommendations: "Personalized Recommendations",
-    contentStrategy: "Content Strategy",
-    downloads: "🎁 Your Downloads Are Ready!",
-    downloadItems: [
-      "Personalized Media Kit PDF",
-      "Custom Creator Bio Templates",
-      "Brand Outreach Templates",
-      "Professional Pricing Template",
-      "Live Profile Page",
-      "AI Growth Strategy",
-    ],
-  },
-  hindi: {
-    title: "आपके फेम स्कोर परिणाम",
-    subtitle: "आपकी क्रिएटर प्रोफाइल के आधार पर व्यक्तिगत विश्लेषण",
-    limitedOffer: "🎁 सीमित समय का ऑफर",
-    offerDescription:
-      "ये प्रीमियम अंतर्दृष्टि और डाउनलोड वेरिफाइड प्रोफाइल वाले क्रिएटर्स के लिए उपलब्ध हैं।",
-    offerExpiry: "ऑफर की अवधि: 20 जुलाई, 2025 तक",
-    unlockButton: "पूर्ण विश्लेषण अनलॉक करें - ₹99",
-    fameScore: "फेम स्कोर",
-    confidenceScore: "कॉन्फिडेंस स्कोर",
-    experienceLevel: "अनुभव स्तर",
-    growthTrajectory: "ग्रोथ ट्रैजेक्टरी",
-    swotAnalysis: "SWOT विश्लेषण",
-    strengths: "शक्तियां",
-    weaknesses: "कमजोरियां",
-    opportunities: "��वसर",
-    threats: "खतरे",
-    monetization: "मॉनेटाइज़ेशन रोडमैप",
-    currentPhase: "वर्तमान चरण",
-    incomeProjection: "आय अनुमान",
-    nextSteps: "अगले कदम",
-    recommendations: "व्यक्तिगत सुझाव",
-    contentStrategy: "कंटेंट रणनीति",
-    downloads: "🎁 आपके डाउनलोड तैयार हैं!",
-    downloadItems: [
-      "व्यक्तिगत मीडिया किट PDF",
-      "कस्टम क्रिएटर बायो टेम्प्लेट",
-      "ब्रांड आउटरीच टेम्प्लेट",
-      "प्रोफेशनल रेट कार्ड",
-      "लाइव प्रोफाइल पेज",
-      "AI ग्रोथ स्ट्रैटेजी",
-    ],
-  },
-};
-
 export default function Results() {
   const [quizData, setQuizData] = useState<QuizData | null>(null);
   const [analysis, setAnalysis] = useState<any>(null);
   const [language, setLanguage] = useState<"english" | "hindi">("english");
-  const [showTooltip, setShowTooltip] = useState<string | null>(null);
-  const [timeLeft, setTimeLeft] = useState({
-    days: 5,
-    hours: 23,
-    minutes: 59,
-  });
-
-  const t = languages[language];
+  const [isDownloading, setIsDownloading] = useState<string | null>(null);
+  const [showUpgrade, setShowUpgrade] = useState(false);
 
   useEffect(() => {
     // Load quiz data from localStorage
@@ -131,59 +64,229 @@ export default function Results() {
       const analysisResult = analyzeQuizData(data);
       setAnalysis(analysisResult);
     }
-
-    // Countdown timer
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1 };
-        } else if (prev.hours > 0) {
-          return { ...prev, hours: prev.hours - 1, minutes: 59 };
-        } else if (prev.days > 0) {
-          return { ...prev, days: prev.days - 1, hours: 23, minutes: 59 };
-        }
-        return prev;
-      });
-    }, 60000); // Update every minute
-
-    return () => clearInterval(timer);
   }, []);
+
+  const handleFreeDownload = async (type: string) => {
+    if (!quizData) return;
+
+    setIsDownloading(type);
+
+    // Generate actual download content
+    const content = generateDownloadContent(type, quizData, analysis);
+
+    // Create and download file
+    const blob = new Blob([content], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${type}-${quizData.name.replace(/\s+/g, "-")}.txt`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+
+    setTimeout(() => {
+      setIsDownloading(null);
+      setShowUpgrade(true);
+    }, 2000);
+  };
+
+  const generateDownloadContent = (
+    type: string,
+    data: QuizData,
+    analysis: any,
+  ) => {
+    const timestamp = new Date().toLocaleDateString();
+
+    switch (type) {
+      case "fame-score":
+        return `
+FAMECHASE.COM - PERSONALIZED FAME SCORE REPORT
+Generated on: ${timestamp}
+Creator: ${data.name}
+
+=== YOUR FAME SCORE ===
+Score: ${analysis.fameScore}/100
+Confidence Level: ${analysis.confidenceScore}%
+
+Experience Level: ${analysis.experienceLevel}
+
+=== GROWTH TRAJECTORY ===
+${analysis.growthTrajectory}
+
+=== STRENGTHS ===
+${analysis.swotAnalysis.strengths.map((s: string, i: number) => `${i + 1}. ${s}`).join("\n")}
+
+=== OPPORTUNITIES ===
+${analysis.swotAnalysis.opportunities.map((o: string, i: number) => `${i + 1}. ${o}`).join("\n")}
+
+=== PERSONALIZED RECOMMENDATIONS ===
+${analysis.personalizedRecommendations.map((r: string, i: number) => `${i + 1}. ${r}`).join("\n")}
+
+=== INCOME PROJECTION ===
+Current: ${analysis.monetizationRoadmap.incomeProjection.current}
+3-Month: ${analysis.monetizationRoadmap.incomeProjection.threeMonth}
+6-Month: ${analysis.monetizationRoadmap.incomeProjection.sixMonth}
+
+=== CONTENT STRATEGY ===
+Posting: ${analysis.contentStrategy.posting}
+Best Times: ${analysis.contentStrategy.bestTimes}
+Content Types: ${analysis.contentStrategy.contentTypes.join(", ")}
+
+---
+This report was generated by FameChase.com
+For premium tools and advanced analytics, upgrade to Pro!
+        `;
+
+      case "media-kit":
+        return `
+PROFESSIONAL MEDIA KIT TEMPLATE
+Creator: ${data.name}
+Generated by FameChase.com on ${timestamp}
+
+=== CREATOR PROFILE ===
+Name: ${data.name}
+Age: ${data.age}
+Location: ${data.city}
+Niche: ${data.niche}
+Primary Platform: ${data.primaryPlatform}
+
+=== AUDIENCE OVERVIEW ===
+Followers: ${data.followerCount}
+Platforms: ${[data.primaryPlatform, ...data.secondaryPlatforms].join(", ")}
+Content Type: ${data.contentType}
+Posting Frequency: ${data.postingFrequency}
+
+=== BIO ===
+${data.bio || "A passionate content creator dedicated to sharing valuable insights and connecting with my audience."}
+
+=== COLLABORATION RATES ===
+Instagram Post: ₹${Math.floor(Math.random() * 10000) + 5000}
+Instagram Story: ₹${Math.floor(Math.random() * 5000) + 2500}
+YouTube Video: ₹${Math.floor(Math.random() * 25000) + 15000}
+Blog Post: ₹${Math.floor(Math.random() * 15000) + 8000}
+
+=== CONTACT INFORMATION ===
+Email: ${data.email}
+Instagram: ${data.socialLinks.instagram || "Not provided"}
+YouTube: ${data.socialLinks.youtube || "Not provided"}
+Website: ${data.socialLinks.website || "Not provided"}
+
+=== PREVIOUS COLLABORATIONS ===
+[Add your brand collaboration details here]
+
+=== TESTIMONIALS ===
+[Add client testimonials here]
+
+---
+This media kit was generated by FameChase.com
+Upgrade to Pro for professional PDF design and advanced features!
+        `;
+
+      case "growth-strategy":
+        return `
+3-MONTH CREATOR GROWTH STRATEGY
+Personalized for: ${data.name}
+Generated by FameChase.com on ${timestamp}
+
+=== MONTH 1: FOUNDATION ===
+Week 1-2: Content Audit & Optimization
+- Analyze your top-performing content
+- Identify your unique voice and style
+- Create content pillars based on your niche: ${data.niche}
+
+Week 3-4: Consistency Building
+- Establish ${data.postingFrequency} posting schedule
+- Create content calendar for next month
+- Engage with your community daily
+
+=== MONTH 2: GROWTH ===
+Week 5-6: Audience Expansion
+- Collaborate with creators in ${data.niche}
+- Use trending hashtags and topics
+- Cross-promote on ${data.secondaryPlatforms.join(" and ")}
+
+Week 7-8: Engagement Optimization
+- Respond to comments within 2 hours
+- Create interactive content (polls, Q&As)
+- Share behind-the-scenes content
+
+=== MONTH 3: MONETIZATION ===
+Week 9-10: Revenue Preparation
+- Create media kit and rate cards
+- Research brands in your niche
+- Build email list for direct marketing
+
+Week 11-12: Brand Outreach
+- Contact 10 brands per week
+- Offer value-first collaborations
+- Track and follow up on proposals
+
+=== DAILY HABITS ===
+- Post at optimal times for your audience
+- Engage with 20 accounts in your niche daily
+- Share stories to maintain visibility
+- Monitor analytics weekly
+
+=== CONTENT IDEAS FOR ${data.niche} ===
+1. Behind-the-scenes content
+2. Tips and tutorials
+3. Day-in-the-life videos
+4. Product reviews and recommendations
+5. Trend participation with your unique twist
+
+=== MONETIZATION GOALS ===
+Month 1: Focus on growth (Target: +20% followers)
+Month 2: First paid collaboration
+Month 3: ₹10,000+ monthly income
+
+---
+This strategy was created by FameChase.com
+Upgrade to Pro for detailed weekly action plans and templates!
+        `;
+
+      default:
+        return `FameChase.com Creator Resource for ${data.name}`;
+    }
+  };
+
+  const handleUpgrade = () => {
+    // Open payment link in new tab
+    window.open(
+      "https://rzp.io/l/famechase-pro-99",
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
 
   if (!quizData || !analysis) {
     return (
-      <div className="min-h-screen bg-fame-darker flex items-center justify-center">
+      <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 border-4 border-electric-blue border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-white">Analyzing your creator profile...</p>
+          <div className="w-20 h-20 bg-gradient-to-r from-neon-green to-electric-blue rounded-full flex items-center justify-center mx-auto mb-6 animate-spin">
+            <Sparkles className="w-10 h-10 text-white" />
+          </div>
+          <p className="text-gray-900 text-xl">
+            Analyzing your creator profile...
+          </p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-fame-darker">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="relative z-10 px-4 py-6">
+      <header className="px-4 py-6 bg-white border-b border-gray-100 sticky top-0 backdrop-blur-sm z-10">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-xl font-bold text-white">
+          <Link to="/" className="text-2xl font-bold text-gray-900">
             FameChase<span className="text-neon-green">.com</span>
           </Link>
 
           <div className="flex items-center gap-4">
-            <select
-              value={language}
-              onChange={(e) =>
-                setLanguage(e.target.value as "english" | "hindi")
-              }
-              className="bg-fame-dark border border-gray-600 text-white px-3 py-1 rounded-lg text-sm"
-            >
-              <option value="english">English</option>
-              <option value="hindi">हिंदी</option>
-            </select>
-
             <Link
               to="/"
-              className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
+              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors font-medium"
             >
               <ArrowLeft className="w-4 h-4" />
               Back to Home
@@ -192,374 +295,335 @@ export default function Results() {
         </div>
       </header>
 
-      {/* Limited Time Offer Banner */}
-      <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-4">
+      {/* Success Banner */}
+      <div className="bg-gradient-to-r from-neon-green/10 via-electric-blue/10 to-soft-violet/10 py-8">
         <div className="container mx-auto px-4 text-center">
-          <div className="font-bold text-lg mb-2">{t.limitedOffer}</div>
-          <div className="text-sm opacity-90 mb-2">{t.offerDescription}</div>
-          <div className="flex justify-center items-center gap-4 text-sm">
-            <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
-              <span>
-                {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m left
-              </span>
-            </div>
-            <div>{t.offerExpiry}</div>
+          <div className="inline-flex items-center bg-neon-green/20 border border-neon-green/30 rounded-full px-6 py-3 mb-4">
+            <CheckCircle className="w-5 h-5 text-neon-green mr-2" />
+            <span className="text-neon-green font-semibold">
+              🎉 Your Creator Kit is Ready!
+            </span>
           </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+            Hello {quizData.name}!
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Your personalized Fame Score and growth strategy are ready for
+            download
+          </p>
         </div>
       </div>
 
-      <main className="relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-fame-darker via-fame-dark to-fame-darker"></div>
+      <main className="container mx-auto px-4 py-12">
+        <div className="max-w-6xl mx-auto">
+          {/* Fame Score Display */}
+          <div className="bg-gradient-to-br from-white to-gray-50 rounded-3xl p-8 md:p-12 shadow-xl border-2 border-gray-100 mb-12">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <Star className="w-12 h-12 text-yellow-400" />
+                <h2 className="text-4xl font-bold text-gray-900">
+                  Your Fame Score
+                </h2>
+              </div>
 
-        <div className="relative z-10 container mx-auto px-4 py-12">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              {t.title}
-            </h1>
-            <p className="text-xl text-gray-300 mb-6">{t.subtitle}</p>
-            <div className="text-neon-green font-semibold">
-              Hello {quizData.name}! Here's your personalized analysis.
-            </div>
-          </div>
-
-          <div className="max-w-6xl mx-auto grid lg:grid-cols-3 gap-8">
-            {/* Left Column - Core Metrics */}
-            <div className="lg:col-span-2 space-y-8">
-              {/* Fame Score Card */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-8">
-                <div className="flex items-center justify-between mb-6">
-                  <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-                    <Star className="w-8 h-8 text-yellow-400" />
-                    {t.fameScore}
-                  </h2>
-                  <div className="text-right">
-                    <div className="text-4xl font-bold text-neon-green">
-                      {analysis.fameScore}
-                      <span className="text-xl text-gray-400">/100</span>
-                    </div>
-                  </div>
+              <div className="relative">
+                <div className="text-8xl font-bold text-transparent bg-gradient-to-r from-neon-green to-electric-blue bg-clip-text mb-4">
+                  {analysis.fameScore}
+                  <span className="text-4xl text-gray-400">/100</span>
                 </div>
 
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="flex items-center gap-2">
-                    <span className="text-gray-300">{t.confidenceScore}:</span>
-                    <span className="font-semibold text-white">
-                      {analysis.confidenceScore}%
-                    </span>
-                    <div className="relative">
-                      <Info
-                        className="w-4 h-4 text-gray-400 cursor-help"
-                        onMouseEnter={() => setShowTooltip("confidence")}
-                        onMouseLeave={() => setShowTooltip(null)}
-                      />
-                      {showTooltip === "confidence" && (
-                        <div className="absolute bottom-6 left-0 bg-gray-900 text-white text-xs p-2 rounded-lg w-64 z-10">
-                          {analysis.confidenceExplanation}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="w-full bg-gray-700 rounded-full h-3 mb-6">
+                <div className="w-full bg-gray-200 rounded-full h-6 mb-6 max-w-md mx-auto">
                   <div
-                    className="bg-gradient-to-r from-electric-blue to-neon-green h-3 rounded-full transition-all duration-1000"
+                    className="bg-gradient-to-r from-neon-green to-electric-blue h-6 rounded-full transition-all duration-1000"
                     style={{ width: `${analysis.fameScore}%` }}
                   ></div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      {t.experienceLevel}
-                    </h3>
-                    <p className="text-gray-300 text-sm">
-                      {analysis.experienceLevel}
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      {t.currentPhase}
-                    </h3>
-                    <p className="text-gray-300 text-sm">
-                      {analysis.monetizationRoadmap.currentPhase}
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Growth Trajectory */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white flex items-center gap-3 mb-6">
-                  <TrendingUp className="w-8 h-8 text-neon-green" />
-                  {t.growthTrajectory}
-                </h2>
-                <p className="text-gray-300 leading-relaxed">
-                  {analysis.growthTrajectory}
+                <p className="text-xl text-gray-600">
+                  {analysis.experienceLevel}
                 </p>
-              </div>
-
-              {/* Income Projection */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white flex items-center gap-3 mb-6">
-                  <DollarSign className="w-8 h-8 text-electric-blue" />
-                  {t.incomeProjection}
-                </h2>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="text-gray-400 text-sm mb-2">Current</div>
-                    <div className="text-2xl font-bold text-white">
-                      {analysis.monetizationRoadmap.incomeProjection.current}
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-gray-400 text-sm mb-2">3 Months</div>
-                    <div className="text-2xl font-bold text-neon-green">
-                      {analysis.monetizationRoadmap.incomeProjection.threeMonth}
-                    </div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-gray-400 text-sm mb-2">6 Months</div>
-                    <div className="text-2xl font-bold text-electric-blue">
-                      {analysis.monetizationRoadmap.incomeProjection.sixMonth}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* SWOT Analysis */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white flex items-center gap-3 mb-6">
-                  <Target className="w-8 h-8 text-soft-violet" />
-                  {t.swotAnalysis}
-                </h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <h3 className="text-lg font-semibold text-neon-green mb-3">
-                      ✅ {t.strengths}
-                    </h3>
-                    <ul className="space-y-2">
-                      {analysis.swotAnalysis.strengths.map(
-                        (item: string, index: number) => (
-                          <li
-                            key={index}
-                            className="text-gray-300 text-sm flex items-start gap-2"
-                          >
-                            <CheckCircle className="w-4 h-4 text-neon-green mt-0.5 flex-shrink-0" />
-                            {item}
-                          </li>
-                        ),
-                      )}
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-yellow-400 mb-3">
-                      ⚠️ {t.weaknesses}
-                    </h3>
-                    <ul className="space-y-2">
-                      {analysis.swotAnalysis.weaknesses.map(
-                        (item: string, index: number) => (
-                          <li
-                            key={index}
-                            className="text-gray-300 text-sm flex items-start gap-2"
-                          >
-                            <div className="w-4 h-4 border-2 border-yellow-400 rounded-full mt-0.5 flex-shrink-0"></div>
-                            {item}
-                          </li>
-                        ),
-                      )}
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-electric-blue mb-3">
-                      🚀 {t.opportunities}
-                    </h3>
-                    <ul className="space-y-2">
-                      {analysis.swotAnalysis.opportunities.map(
-                        (item: string, index: number) => (
-                          <li
-                            key={index}
-                            className="text-gray-300 text-sm flex items-start gap-2"
-                          >
-                            <div className="w-4 h-4 bg-electric-blue rounded-full mt-0.5 flex-shrink-0"></div>
-                            {item}
-                          </li>
-                        ),
-                      )}
-                    </ul>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-red-400 mb-3">
-                      ⚡ {t.threats}
-                    </h3>
-                    <ul className="space-y-2">
-                      {analysis.swotAnalysis.threats.map(
-                        (item: string, index: number) => (
-                          <li
-                            key={index}
-                            className="text-gray-300 text-sm flex items-start gap-2"
-                          >
-                            <div className="w-4 h-4 border-2 border-red-400 rounded-full mt-0.5 flex-shrink-0"></div>
-                            {item}
-                          </li>
-                        ),
-                      )}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Personalized Recommendations */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-white mb-6">
-                  {t.recommendations}
-                </h2>
-                <div className="space-y-4">
-                  {analysis.personalizedRecommendations.map(
-                    (rec: string, index: number) => (
-                      <div
-                        key={index}
-                        className="flex items-start gap-3 p-4 bg-fame-darker rounded-lg"
-                      >
-                        <div className="w-6 h-6 bg-neon-green text-black rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">
-                          {index + 1}
-                        </div>
-                        <p className="text-gray-300">{rec}</p>
-                      </div>
-                    ),
-                  )}
-                </div>
               </div>
             </div>
 
-            {/* Right Column - Downloads & CTA */}
-            <div className="space-y-8">
-              {/* Downloads Section */}
-              <div className="bg-fame-dark border border-neon-green rounded-2xl p-6">
-                <h3 className="text-xl font-bold text-white mb-4">
-                  {t.downloads}
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border">
+                <TrendingUp className="w-12 h-12 text-neon-green mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Growth Potential
                 </h3>
-                <div className="space-y-3 mb-6">
-                  {t.downloadItems.map((item, index) => (
-                    <div
-                      key={index}
-                      className="flex items-center gap-3 p-3 bg-fame-darker rounded-lg opacity-50"
-                    >
-                      <Download className="w-5 h-5 text-gray-500" />
-                      <span className="text-gray-400 text-sm">{item}</span>
-                    </div>
-                  ))}
+                <p className="text-gray-600">
+                  High trajectory for income growth
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-6 shadow-lg border">
+                <Target className="w-12 h-12 text-electric-blue mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Market Position
+                </h3>
+                <p className="text-gray-600">
+                  Strong position in {quizData.niche}
+                </p>
+              </div>
+
+              <div className="bg-white rounded-2xl p-6 shadow-lg border">
+                <DollarSign className="w-12 h-12 text-soft-violet mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Income Projection
+                </h3>
+                <p className="text-gray-600">
+                  {analysis.monetizationRoadmap.incomeProjection.sixMonth}/month
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Free Downloads Section */}
+          <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            {/* Free Download 1 */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-neon-green/10 to-green-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <FileText className="w-8 h-8 text-neon-green" />
                 </div>
-                <button className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-4 rounded-lg text-lg hover:opacity-90 transition-opacity">
-                  {t.unlockButton}
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Fame Score Report
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Complete analysis with strengths, opportunities, and
+                  personalized recommendations
+                </p>
+              </div>
+
+              <button
+                onClick={() => handleFreeDownload("fame-score")}
+                disabled={isDownloading === "fame-score"}
+                className="w-full bg-gradient-to-r from-neon-green to-green-400 text-black font-bold py-4 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                {isDownloading === "fame-score" ? (
+                  <Sparkles className="w-5 h-5 animate-spin" />
+                ) : (
+                  <Download className="w-5 h-5" />
+                )}
+                {isDownloading === "fame-score"
+                  ? "Generating..."
+                  : "Download Free"}
+              </button>
+            </div>
+
+            {/* Free Download 2 */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-electric-blue/10 to-blue-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Layout className="w-8 h-8 text-electric-blue" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Media Kit Template
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  Professional media kit with your stats, bio, and collaboration
+                  rates
+                </p>
+              </div>
+
+              <button
+                onClick={() => handleFreeDownload("media-kit")}
+                disabled={isDownloading === "media-kit"}
+                className="w-full bg-gradient-to-r from-electric-blue to-blue-400 text-white font-bold py-4 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                {isDownloading === "media-kit" ? (
+                  <Sparkles className="w-5 h-5 animate-spin" />
+                ) : (
+                  <Download className="w-5 h-5" />
+                )}
+                {isDownloading === "media-kit"
+                  ? "Generating..."
+                  : "Download Free"}
+              </button>
+            </div>
+
+            {/* Free Download 3 */}
+            <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100">
+              <div className="text-center mb-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-soft-violet/10 to-purple-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <BarChart className="w-8 h-8 text-soft-violet" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  Growth Strategy
+                </h3>
+                <p className="text-gray-600 mb-6">
+                  3-month action plan with content ideas and monetization steps
+                </p>
+              </div>
+
+              <button
+                onClick={() => handleFreeDownload("growth-strategy")}
+                disabled={isDownloading === "growth-strategy"}
+                className="w-full bg-gradient-to-r from-soft-violet to-purple-400 text-white font-bold py-4 rounded-xl hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                {isDownloading === "growth-strategy" ? (
+                  <Sparkles className="w-5 h-5 animate-spin" />
+                ) : (
+                  <Download className="w-5 h-5" />
+                )}
+                {isDownloading === "growth-strategy"
+                  ? "Generating..."
+                  : "Download Free"}
+              </button>
+            </div>
+          </div>
+
+          {/* Upgrade CTA */}
+          {showUpgrade && (
+            <div className="bg-gradient-to-br from-neon-green/5 to-electric-blue/5 rounded-3xl p-8 md:p-12 border-2 border-neon-green/20 mb-12">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center bg-gradient-to-r from-neon-green to-electric-blue text-white rounded-full px-6 py-3 mb-6">
+                  <Zap className="w-5 h-5 mr-2" />
+                  <span className="font-bold">UPGRADE TO PRO</span>
+                </div>
+
+                <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                  Unlock Your Complete Creator Business Kit
+                </h2>
+                <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                  Get everything you need to turn your content into a profitable
+                  business
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div className="bg-white rounded-xl p-6 shadow-lg border text-center">
+                  <Mail className="w-10 h-10 text-neon-green mx-auto mb-3" />
+                  <h4 className="font-bold text-gray-900 mb-2">
+                    30+ Email Templates
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Professional outreach templates for brand collaborations
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border text-center">
+                  <Globe className="w-10 h-10 text-electric-blue mx-auto mb-3" />
+                  <h4 className="font-bold text-gray-900 mb-2">
+                    Live Profile Page
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Professional landing page showcasing your work
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border text-center">
+                  <BarChart className="w-10 h-10 text-soft-violet mx-auto mb-3" />
+                  <h4 className="font-bold text-gray-900 mb-2">
+                    Analytics Dashboard
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Track your growth and optimize performance
+                  </p>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 shadow-lg border text-center">
+                  <Shield className="w-10 h-10 text-green-500 mx-auto mb-3" />
+                  <h4 className="font-bold text-gray-900 mb-2">
+                    Priority Support
+                  </h4>
+                  <p className="text-gray-600 text-sm">
+                    Direct access to our creator success team
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <div className="mb-6">
+                  <span className="text-5xl font-bold text-gray-900">₹99</span>
+                  <span className="text-xl text-gray-600 ml-2">
+                    one-time payment
+                  </span>
+                </div>
+
+                <button
+                  onClick={handleUpgrade}
+                  className="inline-flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-6 px-12 rounded-full text-xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                >
+                  <CreditCard className="w-6 h-6" />
+                  Upgrade to Pro - ₹99
+                  <ArrowRight className="w-6 h-6" />
                 </button>
-              </div>
 
-              {/* Content Strategy */}
-              <div className="bg-fame-dark border border-gray-800 rounded-2xl p-6">
-                <h3 className="text-xl font-bold text-white mb-4">
-                  {t.contentStrategy}
+                <p className="text-gray-600 mt-4">
+                  ✓ Secure Payment ✓ Instant Access ✓ 30-Day Money Back
+                  Guarantee
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Analysis Preview */}
+          <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-gray-100">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Your Personalized Insights
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <CheckCircle className="w-6 h-6 text-neon-green" />
+                  Your Strengths
                 </h3>
-                <div className="space-y-4">
-                  <div>
-                    <div className="text-sm text-gray-400 mb-1">
-                      Posting Frequency
-                    </div>
-                    <div className="text-white">
-                      {analysis.contentStrategy.posting}
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-400 mb-1">
-                      Content Mix
-                    </div>
-                    <div className="space-y-1">
-                      {analysis.contentStrategy.contentTypes.map(
-                        (type: string, index: number) => (
-                          <div key={index} className="text-white text-sm">
-                            • {type}
-                          </div>
-                        ),
-                      )}
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-sm text-gray-400 mb-1">
-                      Best Posting Times
-                    </div>
-                    <div className="text-white">
-                      {analysis.contentStrategy.bestTimes}
-                    </div>
-                  </div>
-                </div>
+                <ul className="space-y-3">
+                  {analysis.swotAnalysis.strengths
+                    .slice(0, 3)
+                    .map((strength: string, index: number) => (
+                      <li
+                        key={index}
+                        className="text-gray-600 flex items-start gap-2"
+                      >
+                        <CheckCircle className="w-4 h-4 text-neon-green mt-0.5 flex-shrink-0" />
+                        {strength}
+                      </li>
+                    ))}
+                </ul>
               </div>
 
-              {/* Social Links */}
-              {Object.values(quizData.socialLinks).some((link) => link) && (
-                <div className="bg-fame-dark border border-gray-800 rounded-2xl p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    Your Profiles
-                  </h3>
-                  <div className="space-y-3">
-                    {quizData.socialLinks.instagram && (
-                      <a
-                        href={quizData.socialLinks.instagram}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-pink-400 hover:text-pink-300 transition-colors"
+              <div>
+                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                  <TrendingUp className="w-6 h-6 text-electric-blue" />
+                  Growth Opportunities
+                </h3>
+                <ul className="space-y-3">
+                  {analysis.swotAnalysis.opportunities
+                    .slice(0, 3)
+                    .map((opportunity: string, index: number) => (
+                      <li
+                        key={index}
+                        className="text-gray-600 flex items-start gap-2"
                       >
-                        <div className="w-8 h-8 bg-pink-500 rounded-lg flex items-center justify-center">
-                          📷
-                        </div>
-                        Instagram
-                      </a>
-                    )}
-                    {quizData.socialLinks.youtube && (
-                      <a
-                        href={quizData.socialLinks.youtube}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-red-400 hover:text-red-300 transition-colors"
-                      >
-                        <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center">
-                          ▶️
-                        </div>
-                        YouTube
-                      </a>
-                    )}
-                    {quizData.socialLinks.linkedin && (
-                      <a
-                        href={quizData.socialLinks.linkedin}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-blue-400 hover:text-blue-300 transition-colors"
-                      >
-                        <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-                          💼
-                        </div>
-                        LinkedIn
-                      </a>
-                    )}
-                    {quizData.socialLinks.website && (
-                      <a
-                        href={quizData.socialLinks.website}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-gray-400 hover:text-gray-300 transition-colors"
-                      >
-                        <Globe className="w-8 h-8" />
-                        Website
-                      </a>
-                    )}
-                  </div>
-                </div>
-              )}
+                        <div className="w-4 h-4 bg-electric-blue rounded-full mt-0.5 flex-shrink-0"></div>
+                        {opportunity}
+                      </li>
+                    ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-gray-50 py-12 border-t border-gray-200 mt-16">
+        <div className="container mx-auto px-4 text-center">
+          <div className="text-2xl font-bold text-gray-900 mb-4">
+            FameChase<span className="text-neon-green">.com</span>
+          </div>
+          <p className="text-gray-600 mb-6">
+            Empowering creators to build profitable businesses
+          </p>
+          <p className="text-gray-500 text-sm">
+            © 2025 FameChase.com. All rights reserved. | Built for creators, by
+            creators.
+          </p>
+        </div>
+      </footer>
     </div>
   );
 }
