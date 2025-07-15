@@ -660,7 +660,11 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
   // Higher confidence with more data
   if (socialLinksCount >= 2) confidenceScore += 15;
   if (data.bio && data.bio.length > 100) confidenceScore += 10;
-  if (data.experience !== "Just started (0-6 months)") confidenceScore += 10;
+  if (
+    data.experience.length > 0 &&
+    !data.experience.includes("Just started (0-6 months)")
+  )
+    confidenceScore += 10;
 
   // Lower confidence for unclear data
   if (data.niche === "Other") confidenceScore -= 15;
