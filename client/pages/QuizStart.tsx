@@ -22,7 +22,7 @@ export default function QuizStart() {
 
       {/* Main Content */}
       <main className="relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-fame-darker via-fame-dark to-fame-darker"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white"></div>
 
         <div className="relative z-10 container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center">
