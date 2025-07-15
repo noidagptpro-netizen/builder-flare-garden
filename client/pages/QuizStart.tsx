@@ -36,12 +36,12 @@ export default function QuizStart() {
             </div>
 
             {/* Title */}
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-4xl md:text-6xl font-bold text-garden-dark mb-6">
               Ready to Discover Your{" "}
               <span className="gradient-text">Fame Score</span>?
             </h1>
 
-            <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
               Our AI-powered quiz analyzes your content strategy, audience, and
               growth potential to give you personalized insights.
             </p>
