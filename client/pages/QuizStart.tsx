@@ -102,10 +102,10 @@ export default function QuizStart() {
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 bg-fame-darker py-8 border-t border-gray-800">
+      <footer className="relative z-10 bg-white py-8 border-t border-gray-200">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400 text-sm">
-            © 2024 FameChase.com. All rights reserved.
+          <p className="text-gray-600 text-sm">
+            © 2025 FameChase.com. All rights reserved.
           </p>
         </div>
       </footer>
