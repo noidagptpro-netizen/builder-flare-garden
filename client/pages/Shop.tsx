@@ -303,9 +303,14 @@ export default function Shop() {
                 <p className="text-gray-600 mb-4 text-sm">
                   {product.description}
                 </p>
-                <button className="w-full bg-gray-100 text-garden-dark py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                <a
+                  href="https://e7a22213a4e3477583ae6730113431ab-6064e56fbfd24606b13adf123.projects.builder.codes/shop"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full bg-gray-100 text-garden-dark py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors block text-center"
+                >
                   Download Free
-                </button>
+                </a>
               </div>
             ))}
           </div>
