@@ -277,6 +277,8 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
   const followerNum = getFollowerCount(data.followerCount);
   const incomeNum = getIncomeAmount(data.monthlyIncome);
   const age = parseInt(data.age) || 25;
+  const currentYear = new Date().getFullYear();
+  const currentMonth = new Date().toLocaleString("default", { month: "long" });
 
   // STRENGTHS - More engaging and specific
   if (getFollowerScore(data.followerCount) >= 65) {
