@@ -229,7 +229,7 @@ const languages = {
       biggestChallenge: "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौती क्या है?",
       goals: "अगले 6 महीनों के लिए आपका मुख्य लक्ष्य क्या है?",
       socialLinks:
-        "अपने सोशल मीडिया प्रोफाइल जोड़ें (वैकल्पिक लेकिन बेहतर विश्लेषण के लिए अन��शंसित)",
+        "अपने सोशल मीडिया प्रोफाइल जोड़ें (वैकल्पिक लेकिन बेहतर विश्लेषण के लिए अनुशंसित)",
       bio: "अपने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
     },
     options: {
@@ -266,7 +266,7 @@ const languages = {
       ],
       contentTypes: [
         "फोटो और कैरोसेल",
-        "छोटे वीड���यो/रील्स",
+        "छोटे वीडियो/रील्स",
         "लंबे वीडियो",
         "लाइव स्ट्रीम",
         "स्टोरीज़",
@@ -319,7 +319,7 @@ const languages = {
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
         "अपनी niche में go-to एक्सपर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
-        "10K सब्सक्राइबर्स की email लिस्ट",
+        "10K सब्सक्राइबर्स क��� email लिस्ट",
         "इंडस्ट्री इवेंट्स/पॉडकास्ट्स में बोलना",
         "पैसिव इनकम स्ट्रीम्स बनाना",
         "9-5 job छोड़कर फुल-टाइम जाना",
@@ -428,7 +428,7 @@ export default function Quiz() {
               onChange={(e) =>
                 setLanguage(e.target.value as "english" | "hindi")
               }
-              className="bg-fame-dark border border-gray-600 text-white px-3 py-1 rounded-lg text-sm"
+              className="bg-white border border-gray-300 text-garden-dark px-3 py-1 rounded-lg text-sm"
             >
               <option value="english">English</option>
               <option value="hindi">हिंदी</option>
