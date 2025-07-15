@@ -356,16 +356,29 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
     );
   }
 
-  if (data.biggestChallenge === "Growing followers") {
-    weaknesses.push(
-      `📊 Growth plateau detected! Your current strategy needs optimization - 67% of creators break through with content format changes.`,
-    );
-  }
+  // Handle multiple challenges
+  if (data.biggestChallenge.length > 0) {
+    const challengeTexts = {
+      engagement:
+        "📊 Engagement challenges are solvable! Focus on interactive content and community building.",
+      voice:
+        "🎯 Finding your unique voice takes time. Authenticity beats perfection every time.",
+      algorithm:
+        "⚡ Algorithm changes are part of the game. Diversify your content strategy.",
+      monetization:
+        "💰 Monetization gaps are common. Your audience size suggests untapped potential.",
+      burnout:
+        "🔋 Creator burnout is real. Systematic content planning can restore your energy.",
+    };
 
-  if (data.biggestChallenge === "Content ideas") {
-    weaknesses.push(
-      `🧠 Content fatigue is real! 89% of successful creators use content frameworks and idea banks to stay consistent.`,
-    );
+    data.biggestChallenge.slice(0, 2).forEach((challenge) => {
+      for (const [key, text] of Object.entries(challengeTexts)) {
+        if (challenge.toLowerCase().includes(key)) {
+          weaknesses.push(text);
+          break;
+        }
+      }
+    });
   }
 
   if (data.biggestChallenge === "Monetization") {
