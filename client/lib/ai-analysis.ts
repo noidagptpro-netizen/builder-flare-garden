@@ -185,7 +185,7 @@ const getIncomeAmount = (income: string): number => {
 };
 
 const getExperienceLevelDescription = (
-  experience: string,
+  experience: string[],
   fameScore: number,
 ): string => {
   const experienceMap: { [key: string]: string } = {
