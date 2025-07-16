@@ -1,0 +1,1565 @@
+// Product Management System
+export interface ProductConfig {
+  id: string;
+  name: string;
+  price: number;
+  originalPrice: number;
+  description: string;
+  features: string[];
+  isEnabled: boolean;
+  category: "growth-kit" | "course" | "masterclass" | "bundle";
+  downloads: ProductDownload[];
+}
+
+export interface ProductDownload {
+  id: string;
+  name: string;
+  type: "pdf" | "template" | "guide" | "video" | "audio" | "zip";
+  language: "english" | "hindi" | "both";
+  content: string;
+  fileName: string;
+}
+
+// Product Configuration
+export const productConfigs: ProductConfig[] = [
+  {
+    id: "complete-growth-kit",
+    name: "Complete Creator Growth Kit",
+    price: 99,
+    originalPrice: 199,
+    description:
+      "Everything you need to grow from 0 to 10K followers and start monetizing",
+    isEnabled: true,
+    category: "growth-kit",
+    features: [
+      "Personalized Media Kit PDF",
+      "30+ Email Templates for Brand Outreach",
+      "Professional Pricing Calculator",
+      "Content Calendar Template (3 months)",
+      "Growth Strategy Workbook",
+      "Hashtag Research Guide",
+      "Rate Card Templates",
+      "Contract Templates",
+    ],
+    downloads: [
+      {
+        id: "media-kit-template",
+        name: "Professional Media Kit Template",
+        type: "template",
+        language: "both",
+        content: generateMediaKitContent,
+        fileName: "Professional_Media_Kit_Template",
+      },
+      {
+        id: "email-templates",
+        name: "30+ Brand Outreach Email Templates",
+        type: "template",
+        language: "both",
+        content: generateEmailTemplatesContent,
+        fileName: "Brand_Outreach_Email_Templates",
+      },
+      {
+        id: "pricing-calculator",
+        name: "Professional Pricing Calculator",
+        type: "template",
+        language: "both",
+        content: generatePricingCalculatorContent,
+        fileName: "Creator_Pricing_Calculator",
+      },
+      {
+        id: "content-calendar",
+        name: "Content Calendar Template (3 months)",
+        type: "template",
+        language: "both",
+        content: generateContentCalendarContent,
+        fileName: "Content_Calendar_3_Months",
+      },
+      {
+        id: "growth-strategy",
+        name: "Growth Strategy Workbook",
+        type: "guide",
+        language: "both",
+        content: generateGrowthStrategyContent,
+        fileName: "Creator_Growth_Strategy_Workbook",
+      },
+      {
+        id: "hashtag-guide",
+        name: "Hashtag Research Guide",
+        type: "guide",
+        language: "both",
+        content: generateHashtagGuideContent,
+        fileName: "Hashtag_Research_Master_Guide",
+      },
+      {
+        id: "rate-cards",
+        name: "Rate Card Templates",
+        type: "template",
+        language: "both",
+        content: generateRateCardContent,
+        fileName: "Professional_Rate_Card_Templates",
+      },
+      {
+        id: "contracts",
+        name: "Contract Templates",
+        type: "template",
+        language: "both",
+        content: generateContractContent,
+        fileName: "Creator_Contract_Templates",
+      },
+    ],
+  },
+  {
+    id: "reels-mastery",
+    name: "Instagram Reels Mastery Course",
+    price: 197,
+    originalPrice: 397,
+    description:
+      "Learn the viral formula that gets millions of views consistently",
+    isEnabled: true,
+    category: "course",
+    features: [
+      "4-hour video training",
+      "50+ Viral Reel Ideas",
+      "Editing Templates & Transitions",
+      "Music & Sound Selection Guide",
+      "Algorithm Optimization Secrets",
+      "Case Studies from 1M+ creators",
+    ],
+    downloads: [
+      {
+        id: "viral-reel-ideas",
+        name: "50+ Viral Reel Ideas",
+        type: "guide",
+        language: "both",
+        content: generateViralReelIdeasContent,
+        fileName: "50_Viral_Reel_Ideas_Guide",
+      },
+      {
+        id: "editing-templates",
+        name: "Editing Templates & Transitions",
+        type: "template",
+        language: "both",
+        content: generateEditingTemplatesContent,
+        fileName: "Reel_Editing_Templates_Pack",
+      },
+      {
+        id: "music-guide",
+        name: "Music & Sound Selection Guide",
+        type: "guide",
+        language: "both",
+        content: generateMusicGuideContent,
+        fileName: "Reel_Music_Selection_Guide",
+      },
+      {
+        id: "algorithm-secrets",
+        name: "Algorithm Optimization Secrets",
+        type: "guide",
+        language: "both",
+        content: generateAlgorithmSecretsContent,
+        fileName: "Instagram_Algorithm_Secrets",
+      },
+      {
+        id: "case-studies",
+        name: "Case Studies from 1M+ Creators",
+        type: "guide",
+        language: "both",
+        content: generateCaseStudiesContent,
+        fileName: "Viral_Creator_Case_Studies",
+      },
+    ],
+  },
+  {
+    id: "brand-masterclass",
+    name: "Brand Collaboration Masterclass",
+    price: 149,
+    originalPrice: 299,
+    description: "Get paid partnerships with top brands - step by step system",
+    isEnabled: true,
+    category: "masterclass",
+    features: [
+      "Brand Outreach Email Scripts",
+      "Media Kit Templates (10 designs)",
+      "Negotiation Tactics & Rate Cards",
+      "Contract Templates",
+      "50+ Brand Contact Database",
+      "Pitch Deck Templates",
+    ],
+    downloads: [
+      {
+        id: "brand-outreach-scripts",
+        name: "Brand Outreach Email Scripts",
+        type: "template",
+        language: "both",
+        content: generateBrandOutreachScriptsContent,
+        fileName: "Brand_Outreach_Email_Scripts",
+      },
+      {
+        id: "media-kit-designs",
+        name: "Media Kit Templates (10 designs)",
+        type: "template",
+        language: "both",
+        content: generateMediaKitDesignsContent,
+        fileName: "Media_Kit_Template_Collection",
+      },
+      {
+        id: "negotiation-tactics",
+        name: "Negotiation Tactics & Rate Cards",
+        type: "guide",
+        language: "both",
+        content: generateNegotiationTacticsContent,
+        fileName: "Brand_Negotiation_Tactics_Guide",
+      },
+      {
+        id: "brand-contracts",
+        name: "Contract Templates",
+        type: "template",
+        language: "both",
+        content: generateBrandContractContent,
+        fileName: "Brand_Partnership_Contracts",
+      },
+      {
+        id: "brand-database",
+        name: "50+ Brand Contact Database",
+        type: "template",
+        language: "both",
+        content: generateBrandDatabaseContent,
+        fileName: "Brand_Contact_Database_50plus",
+      },
+      {
+        id: "pitch-decks",
+        name: "Pitch Deck Templates",
+        type: "template",
+        language: "both",
+        content: generatePitchDeckContent,
+        fileName: "Brand_Pitch_Deck_Templates",
+      },
+    ],
+  },
+  {
+    id: "complete-bundle",
+    name: "Complete Creator Bundle",
+    price: 297,
+    originalPrice: 997,
+    description:
+      "Get ALL premium products for 70% OFF - Save ₹700+ and become a creator success story",
+    isEnabled: true,
+    category: "bundle",
+    features: [
+      "Complete Creator Growth Kit",
+      "Instagram Reels Mastery Course",
+      "Brand Collaboration Masterclass",
+      "Bonus: 1-on-1 Strategy Call",
+    ],
+    downloads: [], // Bundle includes all downloads from other products
+  },
+];
+
+// Content Generation Functions
+function generateMediaKitContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  const userName = userData?.name || "Creator Name";
+  const userEmail = userData?.email || "creator@email.com";
+  const userNiche = userData?.niche || "Content Creator";
+  const userPlatform = userData?.primaryPlatform || "Instagram";
+  const userFollowers = userData?.followerCount || "10K+";
+
+  if (language === "hindi") {
+    return `📱 प्रोफेशनल मीडिया किट टेम्प्लेट
+
+👤 क्रिएटर की जानकारी:
+नाम: ${userName}
+ईमेल: ${userEmail}
+निच: ${userNiche}
+प्राथमिक प्लेटफॉर्म: ${userPlatform}
+फॉलोअर्स: ${userFollowers}
+
+📊 परफॉर्मेंस मेट्रिक्स:
+• औसत पहुंच: [आपकी पहुंच दर्ज करें]
+• एंगेजमेंट रेट: [आपका एंगे���मेंट रेट]
+• मासिक इंप्रेशन्स: [आपके मासिक इंप्रेशन्स]
+• ऑडियंस डेमोग्राफिक्स: [आपके ऑडियंस की जानकारी]
+
+💰 सुझावित दरें:
+📸 पोस्ट कोलैबोरेशन: ₹5,000 - ₹25,000
+📱 स्टोरी प्रमोशन: ₹2,000 - ₹8,000
+🎥 रील्स कंटेंट: ₹8,000 - ₹35,000
+📹 IGTV/लॉन्ग फॉर्म: ₹10,000 - ₹45,000
+🎯 कैंपेन पैकेज: ₹15,000 - ₹75,000
+
+🏆 पिछले कोलैबोरेशन:
+• [ब्रांड नाम 1] - [कोलैबोरेशन का प्रकार]
+• [ब्रांड नाम 2] - [कोलैबोरेशन का प्रकार]
+• [ब्रांड नाम 3] - [कोलैबोरेशन का प्रकार]
+
+🎯 टारगेट ऑडियंस:
+• आयु समूह: [आपके फॉलोअर्स की आयु]
+• लिंग: [मुख्य लिंग वितरण]
+• स्थान: [मुख्य भौगोलिक स्थान]
+• रुचियां: [आपके ऑडियंस की रुचियां]
+
+📈 क्यों मेरे साथ कोलैबोरेट करें:
+• प्रामाणिक कंटेंट और ब्रांड एलाइनमेंट
+• उच्च एंगेजमेंट दरें और ऑडियंस ट्रस्ट
+• प्रोफेशनल कंटेंट डिलीवरी और टाइमलाइन
+• क्रिएटिव स्ट्रैटेजी और ब्रांड स्टोरीटेलिंग
+
+📞 संपर्क जानकारी:
+ईमेल: ${userEmail}
+फोन: [आपका फोन नंबर]
+वेबसाइट: [आपकी वेबसाइट]
+सोशल मीडिया: [आपके सभी सोशल प्लेटफॉर्म]
+
+🤝 कोलैबोरेशन टर्म्स:
+• उपयोग अधिकार: [स्पेसिफाई करें]
+• एक्सक्लूसिविटी: [यदि कोई हो]
+• कंटेंट ओनरशिप: [स्पेसिफाई करें]
+• पेमेंट टर्म्स: 50% एडवांस, 50% डिलीवरी पर
+
+💼 मीडिया किट में शामिल:
+✅ हाई-रेज़���ल्यूशन प्रोफाइल फोटोज़
+✅ कंटेंट सैंपल्स और केस स्टडी
+✅ ऑडियंस डेमोग्राफिक्स रिपोर्ट
+✅ परफॉर्मेंस मेट्रिक्स और एनालिटिक्स
+
+📋 टेम्प्लेट कस्टमाइज़ेशन गाइड:
+1. अपनी पर्सनल जानकारी भरें
+2. रियल परफॉर्मेंस मेट्रिक्स अपडेट करें
+3. अपने बेस्ट कंटेंट सैंपल्स जोड़ें
+4. ब्रांड-स्पेसिफिक कस्टमाइज़ेशन करें
+5. प्रोफेशनल डिज़ाइन में कन्वर्ट करें
+
+🎨 डिज़ाइन टिप्स:
+• क्लीन और प्रोफेशनल लेआउट
+• ब्रांड कलर्स का उपयोग
+• हाई-क्वालिटी इमेज और ग्राफिक्स
+• रीडेबल फॉन्ट्स और क्लियर हेडिंग्स
+• कॉन्सिस्टेंट ब्रांडिंग एलिमेंट्स`;
+  }
+
+  return `📱 PROFESSIONAL MEDIA KIT TEMPLATE
+
+👤 CREATOR INFORMATION:
+Name: ${userName}
+Email: ${userEmail}
+Niche: ${userNiche}
+Primary Platform: ${userPlatform}
+Followers: ${userFollowers}
+
+📊 PERFORMANCE METRICS:
+• Average Reach: [Enter your reach rate]
+• Engagement Rate: [Your engagement rate]
+• Monthly Impressions: [Your monthly impressions]
+• Audience Demographics: [Your audience information]
+
+💰 SUGGESTED RATES:
+📸 Post Collaboration: ₹5,000 - ₹25,000
+📱 Story Promotion: ₹2,000 - ₹8,000
+🎥 Reels Content: ₹8,000 - ₹35,000
+📹 IGTV/Long Form: ₹10,000 - ₹45,000
+🎯 Campaign Package: ₹15,000 - ₹75,000
+
+🏆 PREVIOUS COLLABORATIONS:
+• [Brand Name 1] - [Collaboration Type]
+• [Brand Name 2] - [Collaboration Type]
+• [Brand Name 3] - [Collaboration Type]
+
+🎯 TARGET AUDIENCE:
+• Age Group: [Your followers' age]
+• Gender: [Main gender distribution]
+• Location: [Primary geographic location]
+• Interests: [Your audience interests]
+
+📈 WHY COLLABORATE WITH ME:
+• Authentic content and brand alignment
+• High engagement rates and audience trust
+• Professional content delivery and timeline
+• Creative strategy and brand storytelling
+
+📞 CONTACT INFORMATION:
+Email: ${userEmail}
+Phone: [Your phone number]
+Website: [Your website]
+Social Media: [All your social platforms]
+
+🤝 COLLABORATION TERMS:
+• Usage Rights: [Specify]
+• Exclusivity: [If any]
+• Content Ownership: [Specify]
+• Payment Terms: 50% advance, 50% on delivery
+
+💼 MEDIA KIT INCLUDES:
+✅ High-resolution profile photos
+✅ Content samples and case studies
+✅ Audience demographics report
+✅ Performance metrics and analytics
+
+📋 TEMPLATE CUSTOMIZATION GUIDE:
+1. Fill in your personal information
+2. Update real performance metrics
+3. Add your best content samples
+4. Brand-specific customization
+5. Convert to professional design
+
+🎨 DESIGN TIPS:
+• Clean and professional layout
+• Use brand colors
+• High-quality images and graphics
+• Readable fonts and clear headings
+• Consistent branding elements`;
+}
+
+function generateEmailTemplatesContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  const userName = userData?.name || "Creator Name";
+  const userNiche = userData?.niche || "Content Creator";
+  const userPlatform = userData?.primaryPlatform || "Instagram";
+  const userFollowers = userData?.followerCount || "10K+";
+
+  if (language === "hindi") {
+    return `📧 30+ ब्रांड आउटरीच ईमेल टेम्प्लेट्स
+
+🎯 टेम्प्ले��� 1: प्रारंभिक संपर्क (कोल्ड आउटरीच)
+विषय: ${userNiche} क्रिएटर ${userName} - कोलैबोरेशन का प्रस्��ाव
+
+प्रिय [ब्रांड नाम] टीम,
+
+मैं ${userName} हूं, ${userNiche} में एक पैशनेट कंटेंट क्रिएटर हूं जिसके ${userPlatform} पर ${userFollowers} engaged followers हैं।
+
+मुझे आपके ब्रांड के साथ कोलैबोरेट करने में बहुत रुचि है क्योंकि:
+• आपके प्रोडक्ट्स मेरे ऑडियंस के साथ perfectly align करते हैं
+• मेरे followers को ${userNiche} में genuine interest है
+• मैं authentic और engaging कंटेंट बनाने में स्पेशलाइज़ करता हूं
+
+📊 मेरे key metrics:
+• फॉलोअर्स: ${userFollowers}
+• एंगेजमेंट रेट: [आपका rate]
+• मासिक रीच: [आपकी reach]
+• ऑडियंस demographics: [मुख्य डेमोग्राफिक्स]
+
+क्या आप एक quick call schedule कर सकते हैं collaboration possibilities discuss करने के लिए?
+
+Best regards,
+${userName}
+[आपका contact information]
+
+---
+
+🔥 टेम्प्लेट 2: फॉलो-अप ईमेल
+विषय: Quick follow-up - ${userName} collaboration proposal
+
+Hi [Contact Name],
+
+मैंने पिछले सप्ताह आपको collaboration के बारे में email भेजा था। मुझे लगता है कि हम एक amazing partnership create कर सकते हैं!
+
+Recently मैंने [competitor brand] के साथ work किया और उस post को [specific results] मिले।
+
+क्या हम इस week एक quick 15-minute call schedule कर सकते हैं?
+
+Looking forward,
+${userName}
+
+---
+
+💼 टेम्प्लेट 3: रेट कार्ड प्रेजेंटेशन
+विषय: ${userName} - Collaboration rates & packages
+
+Dear [Brand Name],
+
+आपकी interest के लिए धन्यवाद! यहां मेरे collaboration packages हैं:
+
+📸 सिंगल पोस्ट: ₹[आपकी rate]
+• 1 feed post with your product
+• 24-hour story promotion
+• Professional photography
+• Caption in my authentic voice
+
+📱 स्टोरी पैकेज: ₹[आपकी rate]
+• 3-5 story slides
+• Swipe-up link (if available)
+• Behind-the-scenes content
+• Authentic product experience
+
+🎥 रील्स कंटेंट: ₹[आपकी rate]
+• High-quality reel creation
+• Trending music/sounds
+• Creative transitions
+• Higher engagement guarantee
+
+🎯 कैंपेन पैकेज: ₹[आपकी rate]
+• Multiple touchpoints
+• Feed + Stories + Reels
+• Extended collaboration period
+• Detailed analytics report
+
+सभी packages include करते हैं:
+✅ Professional content creation
+✅ Timely delivery
+✅ Usage rights discussion
+✅ Performance metrics report
+
+Best,
+${userName}
+
+---
+
+🤝 टेम्प्लेट 4: नेगोसिएशन/काउंटर ऑफर
+विषय: Re: Collaboration proposal - Let's find a win-win
+
+Hi [Contact Name],
+
+आपके proposal के लिए thank you! मैं definitely interested हूं।
+
+Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूंगा because:
+
+• मेरी audience का [specific demographic] match करता है आपके target से
+• मेरे recent collaborations में [specific results] मिले हैं
+• मैं additional value add कर स���ता हूं like [extra service]
+
+मैं flexible हूं और एक mutually beneficial deal बनाना चाहता हूं।
+
+Best regards,
+${userName}
+
+---
+
+📈 टेम्प्लेट 5: परफॉर्मेंस रिपोर्ट
+विषय: ${userName} x [Brand] - Campaign Performance Report
+
+Dear [Brand Team],
+
+हमारे recent collaboration के results share करना चाहता हूं:
+
+📊 PERFORMANCE METRICS:
+• Post Reach: [number] impressions
+• Engagement Rate: [percentage]
+• Story Views: [number]
+• Website Clicks: [number]
+• Comments: [number with sentiment]
+
+🎯 AUDIENCE FEEDBACK:
+• [Positive feedback examples]
+• [Questions about product]
+• [User-generated content]
+
+📈 IMPACT:
+• Brand awareness increase
+• Direct sales attribution
+• Community engagement
+
+मुझे future collaborations में interest है और आपके products को authentically promote करना पसंद है।
+
+Thank you for trusting me!
+${userName}
+
+---
+
+💝 टेम्प्लेट 6: लॉन्ग-टर्म पार्टनरशिप प्रपोज़ल
+विषय: Long-term Partnership Proposal - ${userName} x [Brand]
+
+Dear [Decision Maker],
+
+हमारे successful collaboration के बाद, मैं एक long-term partnership propose करना चाहूंगा।
+
+🤝 PROPOSED PARTNERSHIP:
+• Monthly content creation
+• Product launches coverage
+• Event participation
+• Brand ambassadorship
+
+💰 PROPOSED STRUCTURE:
+• Retainer fee: ₹[amount]/month
+• Performance bonuses
+• Exclusive collaboration terms
+• Additional deliverables pricing
+
+📈 BENEFITS FOR YOUR BRAND:
+• Consistent brand presence
+• Authentic audience connection
+• Better content planning
+• Cost-effective marketing
+
+क्या आप इस opportunity को explore करने में interested हैं?
+
+Best,
+${userName}
+
+[इसी तरह से 24 और templates continue करें different scenarios के लिए...]`;
+  }
+
+  return `📧 30+ BRAND OUTREACH EMAIL TEMPLATES
+
+🎯 TEMPLATE 1: Initial Cold Outreach
+Subject: ${userNiche} Creator ${userName} - Collaboration Proposal
+
+Dear [Brand Name] Team,
+
+I'm ${userName}, a passionate content creator in ${userNiche} with ${userFollowers} engaged followers on ${userPlatform}.
+
+I'd love to collaborate with your brand because:
+• Your products align perfectly with my audience
+• My followers have genuine interest in ${userNiche}
+• I specialize in creating authentic and engaging content
+
+📊 My key metrics:
+• Followers: ${userFollowers}
+• Engagement Rate: [Your rate]
+• Monthly Reach: [Your reach]
+• Audience Demographics: [Main demographics]
+
+Would you be available for a quick call to discuss collaboration possibilities?
+
+Best regards,
+${userName}
+[Your contact information]
+
+---
+
+🔥 TEMPLATE 2: Follow-up Email
+Subject: Quick follow-up - ${userName} collaboration proposal
+
+Hi [Contact Name],
+
+I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!
+
+Recently I worked with [competitor brand] and that post received [specific results].
+
+Could we schedule a quick 15-minute call this week?
+
+Looking forward,
+${userName}
+
+---
+
+💼 TEMPLATE 3: Rate Card Presentation
+Subject: ${userName} - Collaboration rates & packages
+
+Dear [Brand Name],
+
+Thank you for your interest! Here are my collaboration packages:
+
+📸 Single Post: ₹[Your rate]
+• 1 feed post with your product
+• 24-hour story promotion
+• Professional photography
+• Caption in my authentic voice
+
+📱 Story Package: ₹[Your rate]
+• 3-5 story slides
+• Swipe-up link (if available)
+• Behind-the-scenes content
+• Authentic product experience
+
+🎥 Reels Content: ₹[Your rate]
+• High-quality reel creation
+• Trending music/sounds
+• Creative transitions
+• Higher engagement guarantee
+
+🎯 Campaign Package: ₹[Your rate]
+• Multiple touchpoints
+• Feed + Stories + Reels
+• Extended collaboration period
+• Detailed analytics report
+
+All packages include:
+✅ Professional content creation
+✅ Timely delivery
+✅ Usage rights discussion
+✅ Performance metrics report
+
+Best,
+${userName}
+
+---
+
+🤝 TEMPLATE 4: Negotiation/Counter Offer
+Subject: Re: Collaboration proposal - Let's find a win-win
+
+Hi [Contact Name],
+
+Thank you for your proposal! I'm definitely interested.
+
+Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:
+
+• My audience demographic matches your target perfectly
+• My recent collaborations achieved [specific results]
+• I can add additional value like [extra service]
+
+I'm flexible and want to create a mutually beneficial deal.
+
+Best regards,
+${userName}
+
+---
+
+📈 TEMPLATE 5: Performance Report
+Subject: ${userName} x [Brand] - Campaign Performance Report
+
+Dear [Brand Team],
+
+I wanted to share the results from our recent collaboration:
+
+📊 PERFORMANCE METRICS:
+• Post Reach: [number] impressions
+• Engagement Rate: [percentage]
+• Story Views: [number]
+• Website Clicks: [number]
+• Comments: [number with sentiment]
+
+🎯 AUDIENCE FEEDBACK:
+• [Positive feedback examples]
+• [Questions about product]
+• [User-generated content]
+
+📈 IMPACT:
+• Brand awareness increase
+• Direct sales attribution
+• Community engagement
+
+I'm interested in future collaborations and love authentically promoting your products.
+
+Thank you for trusting me!
+${userName}
+
+---
+
+💝 TEMPLATE 6: Long-term Partnership Proposal
+Subject: Long-term Partnership Proposal - ${userName} x [Brand]
+
+Dear [Decision Maker],
+
+Following our successful collaboration, I'd like to propose a long-term partnership.
+
+🤝 PROPOSED PARTNERSHIP:
+• Monthly content creation
+• Product launches coverage
+• Event participation
+• Brand ambassadorship
+
+💰 PROPOSED STRUCTURE:
+• Retainer fee: ₹[amount]/month
+• Performance bonuses
+• Exclusive collaboration terms
+• Additional deliverables pricing
+
+📈 BENEFITS FOR YOUR BRAND:
+• Consistent brand presence
+• Authentic audience connection
+• Better content planning
+• Cost-effective marketing
+
+Would you be interested in exploring this opportunity?
+
+Best,
+${userName}
+
+[Continue with 24 more templates for different scenarios...]`;
+}
+
+function generatePricingCalculatorContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  const userFollowers = userData?.followerCount || "10K+";
+  const userNiche = userData?.niche || "Content Creator";
+
+  if (language === "hindi") {
+    return `💰 प्रोफेशनल प्राइसिंग कैलकुलेटर
+
+📊 आपकी current stats:
+• फॉलोअर्स: ${userFollowers}
+• निच: ${userNiche}
+
+🧮 PRICING CALCULATION FORMULA:
+
+1️⃣ BASE RATE CALCULATION:
+फॉलोअर्स per 1K = [आपके followers ÷ 1000]
+Base rate per 1K = ₹100-500 (niche के आधार पर)
+Minimum post rate = Followers per 1K × Base rate
+
+2️⃣ NICHE MULTIPLIERS:
+• Fashion & Beauty: 1.2x
+• Technology & AI: 1.5x
+• Finance & Investing: 1.8x
+• Gaming & Esports: 1.3x
+• Food & Cooking: 1.1x
+• Education: 1.4x
+• Lifestyle: 1.0x (base)
+
+3️⃣ ENGAGEMENT MULTIPLIERS:
+• 1-2% engagement: 0.8x
+• 2-4% engagement: 1.0x (standard)
+• 4-6% engagement: 1.3x
+• 6%+ engagement: 1.5x
+
+4️⃣ CONTENT TYPE PRICING:
+📸 Static Post: Base rate
+📱 Story (per slide): Base rate × 0.3
+🎥 Reels: Base rate × 1.5
+📹 IGTV/Long form: Base rate × 1.8
+🎯 Carousel: Base rate × 1.2
+
+5️⃣ ADDITIONAL FACTORS:
+• Professional photography: +20%
+• Video editing required: +30%
+• Multiple revisions: +15%
+• Rush delivery (< 48hrs): +25%
+• Exclusive content: +40%
+• Usage rights (1 year): +50%
+
+📋 SAMPLE CALCULATION:
+मान लेते हैं आपके पास हैं:
+• 10K followers
+• Fashion niche
+• 4% engagement rate
+
+Base calculation:
+• Followers per 1K: 10
+• Base rate: ₹200 per 1K
+• Basic rate: 10 × ₹200 = ₹2,000
+
+With multipliers:
+• Niche multiplier (Fashion): 1.2x = ₹2,400
+• Engagement multiplier (4%): 1.3x = ₹3,120
+
+Final rates:
+📸 Static Post: ₹3,120
+📱 Story package (5 slides): ₹4,680
+🎥 Reels: ₹4,680
+📹 IGTV: ₹5,616
+
+💡 PRO TIPS:
+1. हमेशा minimum rates set करें
+2. Package deals offer करें better value के लिए
+3. Long-term partnerships के लिए discounts
+4. Seasonal pricing adjustments
+5. Performance bonuses include करें
+
+📈 RATE PROGRESSION GUIDE:
+• 1K-5K followers: ₹1,000-3,000 per post
+• 5K-10K followers: ₹3,000-8,000 per post
+• 10K-50K followers: ₹8,000-25,000 per post
+• 50K-100K followers: ₹25,000-75,000 per post
+• 100K+ followers: ₹75,000+ per post
+
+🎯 NEGOTIATION STRATEGIES:
+• अपनी unique value proposition highlight करें
+• Past performance metrics share करें
+• Competitor rates research करें
+• Value-added services offer करें
+• Flexible payment terms suggest करें
+
+📊 TRACKING TEMPLATE:
+Date: [Date]
+Brand: [Brand Name]
+Content Type: [Type]
+Quoted Rate: ₹[Amount]
+Final Rate: ₹[Amount]
+Delivery: [Date]
+Performance: [Metrics]
+
+🔄 RATE REVIEW SCHEDULE:
+• Monthly: Performance review
+• Quarterly: Rate adjustment
+• Bi-annually: Market comparison
+• Annually: Complete rate overhaul`;
+  }
+
+  return `💰 PROFESSIONAL PRICING CALCULATOR
+
+📊 Your current stats:
+• Followers: ${userFollowers}
+• Niche: ${userNiche}
+
+🧮 PRICING CALCULATION FORMULA:
+
+1️⃣ BASE RATE CALCULATION:
+Followers per 1K = [Your followers ÷ 1000]
+Base rate per 1K = ₹100-500 (based on niche)
+Minimum post rate = Followers per 1K × Base rate
+
+2️⃣ NICHE MULTIPLIERS:
+• Fashion & Beauty: 1.2x
+• Technology & AI: 1.5x
+• Finance & Investing: 1.8x
+• Gaming & Esports: 1.3x
+• Food & Cooking: 1.1x
+• Education: 1.4x
+• Lifestyle: 1.0x (base)
+
+3️⃣ ENGAGEMENT MULTIPLIERS:
+• 1-2% engagement: 0.8x
+• 2-4% engagement: 1.0x (standard)
+• 4-6% engagement: 1.3x
+• 6%+ engagement: 1.5x
+
+4️⃣ CONTENT TYPE PRICING:
+📸 Static Post: Base rate
+📱 Story (per slide): Base rate × 0.3
+🎥 Reels: Base rate × 1.5
+📹 IGTV/Long form: Base rate × 1.8
+🎯 Carousel: Base rate × 1.2
+
+5️⃣ ADDITIONAL FACTORS:
+• Professional photography: +20%
+• Video editing required: +30%
+• Multiple revisions: +15%
+• Rush delivery (< 48hrs): +25%
+• Exclusive content: +40%
+• Usage rights (1 year): +50%
+
+📋 SAMPLE CALCULATION:
+Let's say you have:
+• 10K followers
+• Fashion niche
+• 4% engagement rate
+
+Base calculation:
+• Followers per 1K: 10
+• Base rate: ₹200 per 1K
+• Basic rate: 10 × ₹200 = ₹2,000
+
+With multipliers:
+• Niche multiplier (Fashion): 1.2x = ₹2,400
+• Engagement multiplier (4%): 1.3x = ₹3,120
+
+Final rates:
+📸 Static Post: ₹3,120
+📱 Story package (5 slides): ₹4,680
+🎥 Reels: ₹4,680
+📹 IGTV: ₹5,616
+
+💡 PRO TIPS:
+1. Always set minimum rates
+2. Offer package deals for better value
+3. Provide discounts for long-term partnerships
+4. Adjust pricing seasonally
+5. Include performance bonuses
+
+📈 RATE PROGRESSION GUIDE:
+• 1K-5K followers: ₹1,000-3,000 per post
+• 5K-10K followers: ₹3,000-8,000 per post
+• 10K-50K followers: ₹8,000-25,000 per post
+• 50K-100K followers: ₹25,000-75,000 per post
+• 100K+ followers: ₹75,000+ per post
+
+🎯 NEGOTIATION STRATEGIES:
+• Highlight your unique value proposition
+• Share past performance metrics
+• Research competitor rates
+• Offer value-added services
+• Suggest flexible payment terms
+
+📊 TRACKING TEMPLATE:
+Date: [Date]
+Brand: [Brand Name]
+Content Type: [Type]
+Quoted Rate: ₹[Amount]
+Final Rate: ₹[Amount]
+Delivery: [Date]
+Performance: [Metrics]
+
+🔄 RATE REVIEW SCHEDULE:
+• Monthly: Performance review
+• Quarterly: Rate adjustment
+• Bi-annually: Market comparison
+• Annually: Complete rate overhaul`;
+}
+
+function generateContentCalendarContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  const userNiche = userData?.niche || "Content Creator";
+  const userPlatform = userData?.primaryPlatform || "Instagram";
+
+  if (language === "hindi") {
+    return `📅 3-महीने कंटेंट कैलेंडर टेम्प्लेट
+
+🎯 ${userNiche} के लिए ${userPlatform} कंटेंट प्लान
+
+📋 MONTH 1: FOUNDATION & GROWTH
+
+WEEK 1 - BRAND INTRODUCTION
+Monday: Personal introduction post
+Tuesday: Behind-the-scenes reel
+Wednesday: Niche expertise showcase
+Thursday: Q&A story series
+Friday: Collaboration announcement
+Saturday: Weekend lifestyle content
+Sunday: Inspiration/motivation post
+
+WEEK 2 - VALUE CREATION
+Monday: Educational carousel
+Tuesday: Tutorial reel
+Wednesday: Industry insights post
+Thursday: User-generated content feature
+Friday: Product/service spotlight
+Saturday: Personal story share
+Sunday: Community appreciation
+
+WEEK 3 - ENGAGEMENT FOCUS
+Monday: Poll/question story
+Tuesday: Trending audio reel
+Wednesday: Collaboration content
+Thursday: Expert interview/quote
+Friday: Before/after showcase
+Saturday: Fun/entertainment content
+Sunday: Weekly recap post
+
+WEEK 4 - MONETIZATION PREP
+Monday: Skills demonstration
+Tuesday: Process/workflow share
+Wednesday: Results/achievements
+Thursday: Client testimonial
+Friday: Special offer announcement
+Saturday: Lifestyle integration
+Sunday: Month-end reflection
+
+📋 MONTH 2: OPTIMIZATION & EXPANSION
+
+WEEK 5 - AUDIENCE RESEARCH
+Monday: Audience feedback post
+Tuesday: Popular content recreation
+Wednesday: Niche trend analysis
+Thursday: Competitor inspiration
+Friday: Community spotlight
+Saturday: Personal challenge
+Sunday: Industry news commentary
+
+WEEK 6 - CONTENT DIVERSIFICATION
+Monday: New format experiment
+Tuesday: Cross-platform content
+Wednesday: Collaboration series
+Thursday: Educational thread
+Friday: Live session announcement
+Saturday: Behind-the-scenes
+Sunday: Personal milestone
+
+WEEK 7 - BRAND PARTNERSHIPS
+Monday: Partnership announcement
+Tuesday: Product review/unboxing
+Wednesday: Brand story integration
+Thursday: Authentic usage showcase
+Friday: Results/feedback share
+Saturday: Community engagement
+Sunday: Partnership recap
+
+WEEK 8 - COMMUNITY BUILDING
+Monday: Community challenge launch
+Tuesday: User submission feature
+Wednesday: Expert advice series
+Thursday: Interactive content
+Friday: Community spotlight
+Saturday: Fun group activity
+Sunday: Challenge wrap-up
+
+📋 MONTH 3: SCALING & MONETIZATION
+
+WEEK 9 - AUTHORITY BUILDING
+Monday: Industry insights share
+Tuesday: Expert tips compilation
+Wednesday: Case study presentation
+Thursday: Problem-solving content
+Friday: Innovation showcase
+Saturday: Personal brand evolution
+Sunday: Thought leadership
+
+WEEK 10 - PRODUCT LAUNCH PREP
+Monday: Product/service tease
+Tuesday: Behind-the-scenes creation
+Wednesday: Value proposition
+Thursday: Early access announcement
+Friday: Community exclusive
+Saturday: Personal story
+Sunday: Anticipation building
+
+WEEK 11 - LAUNCH WEEK
+Monday: Official launch announcement
+Tuesday: Product demonstration
+Wednesday: Customer testimonials
+Thursday: Limited time offer
+Friday: Live launch event
+Saturday: Community celebration
+Sunday: Launch recap & gratitude
+
+WEEK 12 - OPTIMIZATION & PLANNING
+Monday: Performance analysis
+Tuesday: Community feedback
+Wednesday: Improvement announcements
+Thursday: Next month preview
+Friday: Appreciation content
+Saturday: Personal celebration
+Sunday: Quarter reflection
+
+🎨 CONTENT TYPES BREAKDOWN:
+📸 Static Posts (30%): Educational carousels, quotes, announcements
+🎥 Reels (40%): Tutorials, behind-the-scenes, trending content
+📱 Stories (20%): Daily updates, polls, quick tips
+📹 IGTV/Long-form (10%): Deep dives, interviews, detailed tutorials
+
+📊 CONTENT PILLARS:
+1. Education (40%): Tips, tutorials, industry insights
+2. Personal (25%): Behind-the-scenes, personal stories
+3. Entertainment (20%): Fun content, trends, challenges
+4. Promotion (15%): Products, services, collaborations
+
+⏰ POSTING SCHEDULE:
+• Best times: 7-9 AM, 12-2 PM, 7-9 PM IST
+• Monday-Friday: 1-2 posts
+• Weekends: 1 post
+• Stories: 3-5 slides daily
+
+📱 PLATFORM-SPECIFIC ADAPTATIONS:
+Instagram: Visual-first, stories, reels
+YouTube: Long-form, educational, entertaining
+LinkedIn: Professional, industry insights
+Twitter: Quick updates, news, engagement
+
+🔄 CONTENT RECYCLING STRATEGY:
+• Repurpose top posts into different formats
+• Create carousel from popular reel
+• Turn IGTV into multiple short clips
+• Use quotes from videos as static posts
+
+📈 PERFORMANCE TRACKING:
+• Weekly engagement rates
+• Monthly follower growth
+• Content type performance
+• Best posting times
+• Audience demographics changes
+
+💡 CONTENT IDEAS BANK:
+📚 Educational:
+- Industry trends analysis
+- Step-by-step tutorials
+- Myth-busting content
+- Tool recommendations
+- Skill development tips
+
+🎭 Entertainment:
+- Day-in-the-life vlogs
+- Trending challenges
+- Behind-the-scenes
+- Q&A sessions
+- Fun facts/trivia
+
+🤝 Community:
+- User-generated content
+- Community spotlights
+- Collaboration announcements
+- Challenge participation
+- Audience appreciation
+
+📊 MONTHLY THEMES:
+Month 1: Foundation Building
+Month 2: Growth Acceleration
+Month 3: Monetization Focus
+
+🎯 GOALS TRACKING:
+• Follower growth target: [Your goal]
+• Engagement rate goal: [Your target]
+• Reach improvement: [Your target]
+• Brand collaboration: [Number goal]
+
+📝 CONTENT APPROVAL WORKFLOW:
+1. Content ideation
+2. Draft creation
+3. Visual design
+4. Caption writing
+5. Hashtag research
+6. Final review
+7. Scheduling
+8. Performance monitoring`;
+  }
+
+  return `📅 3-MONTH CONTENT CALENDAR TEMPLATE
+
+🎯 ${userNiche} Content Plan for ${userPlatform}
+
+📋 MONTH 1: FOUNDATION & GROWTH
+
+WEEK 1 - BRAND INTRODUCTION
+Monday: Personal introduction post
+Tuesday: Behind-the-scenes reel
+Wednesday: Niche expertise showcase
+Thursday: Q&A story series
+Friday: Collaboration announcement
+Saturday: Weekend lifestyle content
+Sunday: Inspiration/motivation post
+
+WEEK 2 - VALUE CREATION
+Monday: Educational carousel
+Tuesday: Tutorial reel
+Wednesday: Industry insights post
+Thursday: User-generated content feature
+Friday: Product/service spotlight
+Saturday: Personal story share
+Sunday: Community appreciation
+
+WEEK 3 - ENGAGEMENT FOCUS
+Monday: Poll/question story
+Tuesday: Trending audio reel
+Wednesday: Collaboration content
+Thursday: Expert interview/quote
+Friday: Before/after showcase
+Saturday: Fun/entertainment content
+Sunday: Weekly recap post
+
+WEEK 4 - MONETIZATION PREP
+Monday: Skills demonstration
+Tuesday: Process/workflow share
+Wednesday: Results/achievements
+Thursday: Client testimonial
+Friday: Special offer announcement
+Saturday: Lifestyle integration
+Sunday: Month-end reflection
+
+📋 MONTH 2: OPTIMIZATION & EXPANSION
+
+WEEK 5 - AUDIENCE RESEARCH
+Monday: Audience feedback post
+Tuesday: Popular content recreation
+Wednesday: Niche trend analysis
+Thursday: Competitor inspiration
+Friday: Community spotlight
+Saturday: Personal challenge
+Sunday: Industry news commentary
+
+WEEK 6 - CONTENT DIVERSIFICATION
+Monday: New format experiment
+Tuesday: Cross-platform content
+Wednesday: Collaboration series
+Thursday: Educational thread
+Friday: Live session announcement
+Saturday: Behind-the-scenes
+Sunday: Personal milestone
+
+WEEK 7 - BRAND PARTNERSHIPS
+Monday: Partnership announcement
+Tuesday: Product review/unboxing
+Wednesday: Brand story integration
+Thursday: Authentic usage showcase
+Friday: Results/feedback share
+Saturday: Community engagement
+Sunday: Partnership recap
+
+WEEK 8 - COMMUNITY BUILDING
+Monday: Community challenge launch
+Tuesday: User submission feature
+Wednesday: Expert advice series
+Thursday: Interactive content
+Friday: Community spotlight
+Saturday: Fun group activity
+Sunday: Challenge wrap-up
+
+📋 MONTH 3: SCALING & MONETIZATION
+
+WEEK 9 - AUTHORITY BUILDING
+Monday: Industry insights share
+Tuesday: Expert tips compilation
+Wednesday: Case study presentation
+Thursday: Problem-solving content
+Friday: Innovation showcase
+Saturday: Personal brand evolution
+Sunday: Thought leadership
+
+WEEK 10 - PRODUCT LAUNCH PREP
+Monday: Product/service tease
+Tuesday: Behind-the-scenes creation
+Wednesday: Value proposition
+Thursday: Early access announcement
+Friday: Community exclusive
+Saturday: Personal story
+Sunday: Anticipation building
+
+WEEK 11 - LAUNCH WEEK
+Monday: Official launch announcement
+Tuesday: Product demonstration
+Wednesday: Customer testimonials
+Thursday: Limited time offer
+Friday: Live launch event
+Saturday: Community celebration
+Sunday: Launch recap & gratitude
+
+WEEK 12 - OPTIMIZATION & PLANNING
+Monday: Performance analysis
+Tuesday: Community feedback
+Wednesday: Improvement announcements
+Thursday: Next month preview
+Friday: Appreciation content
+Saturday: Personal celebration
+Sunday: Quarter reflection
+
+🎨 CONTENT TYPES BREAKDOWN:
+📸 Static Posts (30%): Educational carousels, quotes, announcements
+🎥 Reels (40%): Tutorials, behind-the-scenes, trending content
+📱 Stories (20%): Daily updates, polls, quick tips
+📹 IGTV/Long-form (10%): Deep dives, interviews, detailed tutorials
+
+📊 CONTENT PILLARS:
+1. Education (40%): Tips, tutorials, industry insights
+2. Personal (25%): Behind-the-scenes, personal stories
+3. Entertainment (20%): Fun content, trends, challenges
+4. Promotion (15%): Products, services, collaborations
+
+⏰ POSTING SCHEDULE:
+• Best times: 7-9 AM, 12-2 PM, 7-9 PM IST
+• Monday-Friday: 1-2 posts
+• Weekends: 1 post
+• Stories: 3-5 slides daily
+
+📱 PLATFORM-SPECIFIC ADAPTATIONS:
+Instagram: Visual-first, stories, reels
+YouTube: Long-form, educational, entertaining
+LinkedIn: Professional, industry insights
+Twitter: Quick updates, news, engagement
+
+🔄 CONTENT RECYCLING STRATEGY:
+• Repurpose top posts into different formats
+• Create carousel from popular reel
+• Turn IGTV into multiple short clips
+• Use quotes from videos as static posts
+
+📈 PERFORMANCE TRACKING:
+• Weekly engagement rates
+• Monthly follower growth
+• Content type performance
+• Best posting times
+• Audience demographics changes
+
+💡 CONTENT IDEAS BANK:
+📚 Educational:
+- Industry trends analysis
+- Step-by-step tutorials
+- Myth-busting content
+- Tool recommendations
+- Skill development tips
+
+🎭 Entertainment:
+- Day-in-the-life vlogs
+- Trending challenges
+- Behind-the-scenes
+- Q&A sessions
+- Fun facts/trivia
+
+🤝 Community:
+- User-generated content
+- Community spotlights
+- Collaboration announcements
+- Challenge participation
+- Audience appreciation
+
+📊 MONTHLY THEMES:
+Month 1: Foundation Building
+Month 2: Growth Acceleration
+Month 3: Monetization Focus
+
+🎯 GOALS TRACKING:
+• Follower growth target: [Your goal]
+• Engagement rate goal: [Your target]
+• Reach improvement: [Your target]
+• Brand collaboration: [Number goal]
+
+📝 CONTENT APPROVAL WORKFLOW:
+1. Content ideation
+2. Draft creation
+3. Visual design
+4. Caption writing
+5. Hashtag research
+6. Final review
+7. Scheduling
+8. Performance monitoring`;
+}
+
+// Additional content generation functions for other products...
+function generateGrowthStrategyContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "विकास रणनीति वर्कबुक..."
+    : "Growth Strategy Workbook...";
+}
+
+function generateHashtagGuideContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "हैशटैग रिसर्च गाइड..."
+    : "Hashtag Research Guide...";
+}
+
+function generateRateCardContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "रेट कार्ड टेम्प्लेट्स..."
+    : "Rate Card Templates...";
+}
+
+function generateContractContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "कॉन्ट्रैक्ट टेम्प्लेट्स..."
+    : "Contract Templates...";
+}
+
+function generateViralReelIdeasContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "50+ वायरल रील आइडियाज..."
+    : "50+ Viral Reel Ideas...";
+}
+
+function generateEditingTemplatesContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "एडिटिंग टेम्प्लेट्स..."
+    : "Editing Templates...";
+}
+
+function generateMusicGuideContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "म्यूजिक सेलेक्शन गाइड..."
+    : "Music Selection Guide...";
+}
+
+function generateAlgorithmSecretsContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "एल्गोरिदम सीक्रेट्स..."
+    : "Algorithm Secrets...";
+}
+
+function generateCaseStudiesContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi" ? "केस स्टडीज..." : "Case Studies...";
+}
+
+function generateBrandOutreachScriptsContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "ब्रांड आउटरीच स्क्रिप्ट्स..."
+    : "Brand Outreach Scripts...";
+}
+
+function generateMediaKitDesignsContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "मीडिया किट डिजाइन्स..."
+    : "Media Kit Designs...";
+}
+
+function generateNegotiationTacticsContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "नेगोसिएशन टैक्टिक्स..."
+    : "Negotiation Tactics...";
+}
+
+function generateBrandContractContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "ब्रांड कॉन्ट्रैक्ट्स..."
+    : "Brand Contracts...";
+}
+
+function generateBrandDatabaseContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi" ? "ब्रांड डेटाबेस..." : "Brand Database...";
+}
+
+function generatePitchDeckContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  return language === "hindi"
+    ? "पिच डेक टेम्प्लेट्स..."
+    : "Pitch Deck Templates...";
+}
+
+// Product Management Functions
+export function getProductConfig(productId: string): ProductConfig | undefined {
+  return productConfigs.find((config) => config.id === productId);
+}
+
+export function getAllProducts(): ProductConfig[] {
+  return productConfigs.filter((config) => config.isEnabled);
+}
+
+export function toggleProductAvailability(
+  productId: string,
+  isEnabled: boolean,
+): void {
+  const productIndex = productConfigs.findIndex(
+    (config) => config.id === productId,
+  );
+  if (productIndex !== -1) {
+    productConfigs[productIndex].isEnabled = isEnabled;
+  }
+}
+
+export function generateProductDownload(
+  productId: string,
+  downloadId: string,
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  const product = getProductConfig(productId);
+  if (!product) return "";
+
+  const download = product.downloads.find((d) => d.id === downloadId);
+  if (!download) return "";
+
+  if (typeof download.content === "function") {
+    return download.content(language, userData);
+  }
+
+  return download.content;
+}
+
+export function downloadFile(
+  content: string,
+  fileName: string,
+  language: "english" | "hindi",
+): void {
+  const blob = new Blob([content], { type: "text/plain;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `${fileName}_${language}.txt`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
