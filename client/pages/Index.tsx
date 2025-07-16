@@ -60,7 +60,7 @@ export default function Index() {
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Transform Your Passion Into
+            Transform Your Content Into
             <br />
             <span className="bg-gradient-to-r from-neon-green to-electric-blue bg-clip-text text-transparent">
               ₹50K+ Monthly Income
