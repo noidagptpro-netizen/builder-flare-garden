@@ -301,7 +301,7 @@ function generateMediaKitContent(
 🏆 पिछले कोलैबोरेशन:
 • [ब्रांड नाम 1] - [कोलैबोरेशन का प्रकार]
 • [ब्रांड नाम 2] - [कोलैबोरेशन का प्रकार]
-• [ब्रांड नाम 3] - [कोलैबोरेशन का प्रकार]
+• [ब्रांड ���ाम 3] - [कोलैबोरेशन का प्रकार]
 
 🎯 टारगेट ऑडियंस:
 • आयु समूह: [आपके फॉलोअर्स की आयु]
@@ -319,10 +319,10 @@ function generateMediaKitContent(
 ईमेल: ${userEmail}
 फोन: [आपका फोन नंबर]
 वेबसाइट: [आपकी वेबसाइट]
-सोशल मीडिया: [आपके सभी सोशल प्ल���टफॉर्म]
+सोशल मीडिया: [आपके सभी सोशल प्लेटफॉर्म]
 
 🤝 कोलैबोरेशन टर्म्स:
-• उपयोग अधिकार: [स्पेसिफाई करें]
+• उपयो�� अधिकार: [स्पेसिफाई करें]
 • एक्सक्लूसिविटी: [यदि कोई हो]
 • कंटेंट ओनरशिप: [स्पेसिफाई करें]
 • पेमेंट टर्म्स: 50% एडवांस, 50% डिलीवरी पर
@@ -444,7 +444,7 @@ function generateEmailTemplatesContent(
 मुझे आपके ब्रांड के साथ कोलैबोरेट करने में बहुत रुचि है क्योंकि:
 • आपके प्रोडक्ट्स मेरे ऑडियंस के साथ perfectly align करते हैं
 • मेरे followers को ${userNiche} में genuine interest है
-• मैं authentic और engaging क��टेंट बनाने में स्पेशलाइज़ करता हूं
+• मैं authentic और engaging कंटेंट बनाने में स्पेशलाइज़ करता हूं
 
 📊 मेरे key metrics:
 • फॉलोअर्स: ${userFollowers}
@@ -469,14 +469,14 @@ Hi [Contact Name],
 
 Recently मैंने [competitor brand] के साथ work किया और उस post को [specific results] मिले।
 
-क्या हम इस week एक quick 15-minute call schedule कर सकते हैं?
+क्या हम इस week एक quick 15-minute call schedule ��र सकते हैं?
 
 Looking forward,
 ${userName}
 
 ---
 
-💼 टेम्प्ले�� 3: रेट कार्ड प्रेजेंटेशन
+💼 टेम्प्लेट 3: रेट कार्ड प्रेजेंटेशन
 विषय: ${userName} - Collaboration rates & packages
 
 Dear [Brand Name],
@@ -518,7 +518,7 @@ ${userName}
 
 ---
 
-🤝 टेम्प्लेट 4: नेगोसिएशन/काउंटर ऑफर
+🤝 टेम���प्लेट 4: नेगोसिएशन/काउंटर ऑफर
 विषय: Re: Collaboration proposal - Let's find a win-win
 
 Hi [Contact Name],
@@ -594,12 +594,12 @@ Dear [Decision Maker],
 • Better content planning
 • Cost-effective marketing
 
-क्या आप इस opportunity को explore करने में interested हैं?
+क्या आप इ��� opportunity को explore करने में interested हैं?
 
 Best,
 ${userName}
 
-[��सी तरह से 24 और templates continue करें different scenarios के लिए...]`;
+[इसी तरह से 24 और templates continue करें different scenarios के लिए...]`;
   }
 
   return `📧 30+ BRAND OUTREACH EMAIL TEMPLATES
@@ -795,7 +795,7 @@ Minimum post rate = Followers per 1K × Base rate
 
 2️⃣ NICHE MULTIPLIERS:
 • Fashion & Beauty: 1.2x
-��� Technology & AI: 1.5x
+• Technology & AI: 1.5x
 • Finance & Investing: 1.8x
 • Gaming & Esports: 1.3x
 • Food & Cooking: 1.1x
@@ -895,7 +895,7 @@ Base rate per 1K = ₹100-500 (based on niche)
 Minimum post rate = Followers per 1K × Base rate
 
 2️⃣ NICHE MULTIPLIERS:
-• Fashion & Beauty: 1.2x
+�� Fashion & Beauty: 1.2x
 • Technology & AI: 1.5x
 • Finance & Investing: 1.8x
 • Gaming & Esports: 1.3x
@@ -1191,7 +1191,7 @@ Month 3: Monetization Focus
 
   return `📅 3-MONTH CONTENT CALENDAR TEMPLATE
 
-🎯 ${userNiche} Content Plan for ${userPlatform}
+��� ${userNiche} Content Plan for ${userPlatform}
 
 📋 MONTH 1: FOUNDATION & GROWTH
 
@@ -1518,6 +1518,181 @@ function generatePitchDeckContent(
   return language === "hindi"
     ? "पिच डेक टेम्प्लेट्स..."
     : "Pitch Deck Templates...";
+}
+
+function generatePremiumToolsContent(
+  language: "english" | "hindi",
+  userData?: any,
+): string {
+  const userNiche = userData?.niche || "Content Creator";
+
+  if (language === "hindi") {
+    return `🛠️ प्रीमियम क्रिएटर टूल्स गाइड
+
+${userNiche} क्रिएटर्स के लिए आवश्यक फ्री और पेड टूल्स
+
+📈 एनालिटिक्स टूल्स:
+• Instagram Insights (FREE) - बिल्ट-इन एनालिटिक्स
+• Google Analytics (FREE) - वेबसाइट ट्रैफिक ट्रैकिंग
+• Hootsuite Insights ($49/month) - क्रॉस-प्लेटफॉर्म एनालिटिक्स
+• Sprout Social ($89/month) - अड्वांस रिपोर्टिंग
+
+🎨 कंटेंट क्रिएशन टूल्स:
+• Canva (FREE/Pro $12.99/month) - ग्राफिक डिजाइन
+• Adobe Creative Suite ($20.99/month) - प्रोफेशनल एडिटिंग
+• CapCut (FREE) - मोबाइल वीडियो एडिटिंग
+• Figma (FREE/Pro $12/month) - UI/UX डिजाइन
+• Unsplash (FREE) - हाई-क्वालिटी स्टॉक फोटोस
+
+🗺️ कंटेंट प्लानिंग टूल्स:
+• Notion (FREE/Pro $8/month) - कंटेंट प्लानिंग
+• Trello (FREE/Pro $5/month) - प्रोजेक्ट मैनेजमेंट
+• Airtable (FREE/Pro $20/month) - कंटेंट कैलेंडर
+• Google Calendar (FREE) - सिम्पल स्केड्यूलिंग
+
+📱 सोशल मीडिया मैनेजमेंट:
+• Buffer (FREE/Pro $15/month) - पोस्ट स्केड्यूलिंग
+• Later (FREE/Pro $18/month) - विजुअल कंटेंट प्लानिंग
+• Hootsuite (FREE/Pro $49/month) - मल्टी-प्लेटफॉर्म मैनेजमेंट
+• Creator Studio (FREE) - Facebook/Instagram नेटिव टूल
+
+🚀 SEO और हैशटैग टूल्स:
+• Hashtagify (FREE/Pro $29/month) - हैशटैग रिसर्च
+• Display Purposes (FREE) - Instagram हैशटैग
+• All Hashtag (FREE) - हैशटैग जेनरेटर
+• TubeBuddy (FREE/Pro $7.20/month) - YouTube SEO
+
+📧 ईमेल मार्केटिंग:
+• Mailchimp (FREE/Pro $10/month) - ईमेल ऑटोमेशन
+• ConvertKit ($29/month) - क्रिएटर-फोकस्ड प्लेटफॉर्म
+• Flodesk ($38/month) - ब्यूटीफुल ऐमल न्यूजलेटर
+
+💵 मुद्रीकरण टूल्स:
+• PayPal (FREE) - पेमेंट प्रोसेसिंग
+• Razorpay (भारतीय पेमेंट) - बिजनेस पेमेंट
+• Gumroad (8.5% + 30¢) - डिजिटल प्रोडक्ट सेल्स
+• Teachable ($39/month) - ऑनलाइन कोर्स
+
+🔍 एफिलिएट मार्केटिंग:
+• Amazon Associates (FREE) - आमक आमजन एफिलिएट
+• Commission Junction (FREE) - मल्टी-ब्रांड नेटवर्क
+• ShareASale (FREE) - ब्रांड पार्टनरशिप
+
+✏️ प्रोडक्टिविटी टूल्स:
+• Toggl (FREE/Pro $9/month) - टाइम ट्रैकिंग
+• RescueTime (FREE/Pro $12/month) - प्रोडक्टिविटी एनालिसिस
+• Forest App (₹250) - फोकस और कॉन्संट्रेशन
+
+🌟 मार्केट रिसर्च टूल्स:
+• Google Trends (FREE) - ट्रेंड एनालिसिस
+• BuzzSumo ($99/month) - कंटेंट रिसर्च
+• AnswerThePublic (FREE/Pro $99/month) - कीवर्ड रिसर्च
+
+📦 अल्-��न-वन प्लेटफॉर्म:
+• CreatorSpace (₹2000/month) - भारतीय क्रिएटर प्लेटफॉर्म
+• Koo Creator Studio (FREE) - भारतीय सोशल मीडिया
+• ShareChat Creator Program (FREE) - रीजनल कंटेंट
+
+📝 बैकअप और सिक्योरिटी:
+• Google Drive (FREE/Paid) - क्लाउड स्टोरेज
+• Dropbox (FREE/Pro $9.99) - फाइल शेयरिंग
+• LastPass ($3/month) - पासवर्ड मैनेजर
+
+🛠️ प्रो टिप्स:
+1. फ्री टूल्स से शुरू करें
+2. एक बार में सिर्फ 1-2 पेड टूल्स आजमाएं
+3. अपने बजट और जरूरतों के हिसाब से चुनें
+4. महीने में एक बार टूल्स की समीक्षा करें
+5. ROI के लिए टूल्स के परफॉर्मेंस को ट्रैक करें
+
+💰 बजट प्लानिंग:
+• नए क्रिएटर: ₹0-2000/month
+• ग्रोइंग क्रिएटर: ₹2000-8000/month
+• प्रोफेशनल क्रिएटर: ₹8000-25000/month`;
+  }
+
+  return `🛠️ PREMIUM CREATOR TOOLS GUIDE
+
+Essential FREE and PAID tools for ${userNiche} creators
+
+📈 ANALYTICS TOOLS:
+• Instagram Insights (FREE) - Built-in analytics
+• Google Analytics (FREE) - Website traffic tracking
+• Hootsuite Insights ($49/month) - Cross-platform analytics
+• Sprout Social ($89/month) - Advanced reporting
+
+🎨 CONTENT CREATION TOOLS:
+• Canva (FREE/Pro $12.99/month) - Graphic design
+• Adobe Creative Suite ($20.99/month) - Professional editing
+• CapCut (FREE) - Mobile video editing
+• Figma (FREE/Pro $12/month) - UI/UX design
+• Unsplash (FREE) - High-quality stock photos
+
+🗺️ CONTENT PLANNING TOOLS:
+• Notion (FREE/Pro $8/month) - Content planning
+• Trello (FREE/Pro $5/month) - Project management
+• Airtable (FREE/Pro $20/month) - Content calendar
+• Google Calendar (FREE) - Simple scheduling
+
+📱 SOCIAL MEDIA MANAGEMENT:
+• Buffer (FREE/Pro $15/month) - Post scheduling
+• Later (FREE/Pro $18/month) - Visual content planning
+• Hootsuite (FREE/Pro $49/month) - Multi-platform management
+• Creator Studio (FREE) - Facebook/Instagram native tool
+
+🚀 SEO & HASHTAG TOOLS:
+• Hashtagify (FREE/Pro $29/month) - Hashtag research
+• Display Purposes (FREE) - Instagram hashtags
+• All Hashtag (FREE) - Hashtag generator
+• TubeBuddy (FREE/Pro $7.20/month) - YouTube SEO
+
+📧 EMAIL MARKETING:
+• Mailchimp (FREE/Pro $10/month) - Email automation
+• ConvertKit ($29/month) - Creator-focused platform
+• Flodesk ($38/month) - Beautiful email newsletters
+
+💵 MONETIZATION TOOLS:
+• PayPal (FREE) - Payment processing
+• Razorpay (Indian payments) - Business payments
+• Gumroad (8.5% + 30¢) - Digital product sales
+• Teachable ($39/month) - Online courses
+
+🔍 AFFILIATE MARKETING:
+• Amazon Associates (FREE) - Amazon affiliate
+• Commission Junction (FREE) - Multi-brand network
+• ShareASale (FREE) - Brand partnerships
+
+✏️ PRODUCTIVITY TOOLS:
+• Toggl (FREE/Pro $9/month) - Time tracking
+• RescueTime (FREE/Pro $12/month) - Productivity analysis
+• Forest App (₹250) - Focus and concentration
+
+🌟 MARKET RESEARCH TOOLS:
+• Google Trends (FREE) - Trend analysis
+• BuzzSumo ($99/month) - Content research
+• AnswerThePublic (FREE/Pro $99/month) - Keyword research
+
+📦 ALL-IN-ONE PLATFORMS:
+• CreatorSpace (₹2000/month) - Indian creator platform
+• Koo Creator Studio (FREE) - Indian social media
+• ShareChat Creator Program (FREE) - Regional content
+
+📝 BACKUP & SECURITY:
+• Google Drive (FREE/Paid) - Cloud storage
+• Dropbox (FREE/Pro $9.99) - File sharing
+• LastPass ($3/month) - Password manager
+
+🛠️ PRO TIPS:
+1. Start with free tools first
+2. Only try 1-2 paid tools at a time
+3. Choose based on your budget and needs
+4. Review tools monthly
+5. Track tool performance for ROI
+
+💰 BUDGET PLANNING:
+• New creators: $0-25/month
+• Growing creators: $25-100/month
+• Professional creators: $100-400/month`;
 }
 
 // Product Management Functions
