@@ -666,22 +666,122 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
 const generateMarketInsights = (data: QuizData, fameScore: number) => {
   const insights = [];
   const followerNum = getFollowerCount(data.followerCount);
+  const currentMonth = new Date().getMonth();
+  const currentYear = new Date().getFullYear();
 
-  // Market size insights based on niche
+  // Market size insights based on niche with seasonal trends
   const nicheMarketData = {
-    "Fashion & Beauty": "₹1.2 lakh crore market, growing 25% annually",
-    "Technology & AI": "₹4.2 lakh crore IT market, highest CPM rates",
-    "Personal Finance & Investing":
-      "₹50,000 crore fintech market, premium audience",
-    "Fitness & Health": "₹35,000 crore wellness market, post-COVID boom",
-    "Education & Learning":
-      "₹1.8 lakh crore edtech market, highest conversion rates",
-    "Food & Cooking": "₹55,000 crore food market, highest engagement rates",
+    "Fashion & Beauty": {
+      market: "₹1.2 lakh crore market, growing 25% annually",
+      cpm: "₹8-25 per 1K views",
+      bestMonths: [9, 10, 11], // Oct-Dec (festival season)
+      avgDeal: "₹15,000-75,000",
+    },
+    "Technology & AI": {
+      market: "₹4.2 lakh crore IT market, highest CPM rates",
+      cpm: "₹20-50 per 1K views",
+      bestMonths: [0, 1, 8], // Jan-Feb, Sep (budget cycles)
+      avgDeal: "₹25,000-1,50,000",
+    },
+    "Personal Finance & Investing": {
+      market: "₹50,000 crore fintech market, premium audience",
+      cpm: "₹25-60 per 1K views",
+      bestMonths: [0, 3, 6], // Jan, Apr, July (tax/financial planning)
+      avgDeal: "₹30,000-2,00,000",
+    },
+    "Fitness & Health": {
+      market: "₹35,000 crore wellness market, post-COVID boom",
+      cpm: "₹12-35 per 1K views",
+      bestMonths: [0, 1, 5, 6], // Jan-Feb, Jun-July (New Year, Summer)
+      avgDeal: "₹18,000-85,000",
+    },
+    "Education & Learning": {
+      market: "₹1.8 lakh crore edtech market, highest conversion rates",
+      cpm: "₹15-40 per 1K views",
+      bestMonths: [3, 4, 5, 6], // Apr-July (exam season)
+      avgDeal: "₹20,000-1,20,000",
+    },
+    "Food & Cooking": {
+      market: "₹55,000 crore food market, highest engagement rates",
+      cpm: "₹10-30 per 1K views",
+      bestMonths: [9, 10, 11], // Oct-Dec (festival cooking)
+      avgDeal: "₹12,000-60,000",
+    },
+    "Gaming & Esports": {
+      market: "₹12,000 crore gaming market, rapidly expanding",
+      cpm: "₹18-45 per 1K views",
+      bestMonths: [7, 8, 11], // Aug-Sep, Dec (gaming launches)
+      avgDeal: "₹20,000-1,00,000",
+    },
+    "Music & Dance": {
+      market: "₹18,000 crore entertainment market",
+      cpm: "₹8-25 per 1K views",
+      bestMonths: [9, 10, 11], // Festival season
+      avgDeal: "₹10,000-50,000",
+    },
   };
 
-  if (nicheMarketData[data.niche as keyof typeof nicheMarketData]) {
+  const nicheData = nicheMarketData[data.niche as keyof typeof nicheMarketData];
+  if (nicheData) {
     insights.push(
-      `Your ${data.niche} niche represents a ${nicheMarketData[data.niche as keyof typeof nicheMarketData]} in India.`,
+      `🎯 Market Opportunity: Your ${data.niche} niche represents a ${nicheData.market} in India.`,
+    );
+    insights.push(
+      `💰 Revenue Potential: Average brand deals range ${nicheData.avgDeal} with CPM rates of ${nicheData.cpm}.`,
+    );
+
+    // Seasonal insights
+    if (nicheData.bestMonths.includes(currentMonth)) {
+      insights.push(
+        `📈 Perfect Timing: This is peak season for ${data.niche} brand partnerships! Reach out to brands now.`,
+      );
+    } else {
+      const nextPeakMonth =
+        nicheData.bestMonths.find((month) => month > currentMonth) ||
+        nicheData.bestMonths[0];
+      const monthNames = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      insights.push(
+        `⏰ Upcoming Peak: Start preparing for ${monthNames[nextPeakMonth]} - your niche's peak season for brand deals.`,
+      );
+    }
+  }
+
+  // Platform-specific insights
+  if (data.primaryPlatform === "Instagram" && followerNum >= 10000) {
+    insights.push(
+      `📸 Instagram Opportunity: With ${data.followerCount} followers, you qualify for Instagram Creator Fund and paid partnerships.`,
+    );
+  } else if (data.primaryPlatform === "YouTube" && followerNum >= 1000) {
+    insights.push(
+      `🎥 YouTube Monetization: Your subscriber count qualifies for YouTube Partner Program and brand integrations.`,
+    );
+  }
+
+  // City-based opportunities
+  if (data.city && data.city.toLowerCase().includes("mumbai")) {
+    insights.push(
+      `🏙️ Mumbai Advantage: Access to 60% of India's media & entertainment industry for offline collaborations.`,
+    );
+  } else if (data.city && data.city.toLowerCase().includes("delhi")) {
+    insights.push(
+      `🏛️ Delhi Opportunity: Political capital offers unique government and corporate partnership opportunities.`,
+    );
+  } else if (data.city && data.city.toLowerCase().includes("bangalore")) {
+    insights.push(
+      `💻 Bangalore Edge: Tech hub provides access to startup and IT company collaborations.`,
     );
   }
 
