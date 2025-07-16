@@ -271,7 +271,7 @@ const languages = {
         "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क्या हैं? (अधिकतम 3 चुनें)",
       goals:
         "अगले 6 महीनों के लिए आपके मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
-      socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
+      socialLinks: "अपनी सोशल उपस्थिति ��ाझा करें (वैकल्पिक)",
       bio: "अपने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
     },
     options: {
@@ -298,12 +298,12 @@ const languages = {
         "टेक्नोलॉजी और AI",
         "खाना और खाना बनाना",
         "यात्रा और एडवेंचर",
-        "फ��टनेस और ���्वास्थ्य",
+        "फ��टनेस और स्वास्थ्य",
         "व्यक्तिगत वित्त और निवेश",
         "मनोरंजन और कॉमेडी",
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
-        "कला और डिज़ाइन",
+        "कल�� और डिज़ाइन",
         "गेमिंग और एस्पोर्ट्स",
         "संगीत और नृत्य",
         "शिक्षा और सीखना",
@@ -333,7 +333,7 @@ const languages = {
         "अनियमित",
       ],
       experiences: [
-        "अभी शुरू किया (0-6 महीने)",
+        "अभी शुरू कि���ा (0-6 महीने)",
         "शुरुआती (6 महीने - 1 साल)",
         "बढ़ रहे हैं (1-2 साल)",
         "अनुभवी (2-3 साल)",
@@ -353,7 +353,7 @@ const languages = {
         "अपनी यूनीक आवाज़/स्टाइल खोजना",
         "एल्गोरिदम बदलाव से पहुंच में कमी",
         "ऑथेंटिसिटी और ब्रांड अपील का संतुलन",
-        "बड़े क्रिएटर्स से कॉम्पिटिश���",
+        "बड़े क्रिएटर्स से कॉम्पिटिशन",
         "फॉलोअर्स को पेइंग कस्टमर बनाना",
         "नेगेटिव कमेंट्स/ट्रोल्स से निपटना",
         "बर्नआउट और कंटेंट थकान",
@@ -370,7 +370,7 @@ const languages = {
         "अपनी niche में go-to एक्सपर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइबर्स की email लिस्ट",
-        "इंडस्ट्री ���वेंट��स/पॉडकास्ट्स में बोलना",
+        "इंडस्ट्री ���वेंट्स/पॉडकास्ट्स में बोलना",
         "पैसिव इनकम स्ट्रीम्स बनाना",
         "9-5 job छोड़कर फुल-टाइम जाना",
         "नए प्लेटफॉर्म्स/फॉर्मेट्स में expand करना",
@@ -396,7 +396,7 @@ const languages = {
       },
       growthGuide: {
         title: "90-दिन की ग्रोथ स्ट्रैटेजी गाइड",
-        description: "अपने फॉलोइंग बढ़ाने के लिए स्टेप-बाई-स्टेप रोडमैप",
+        description: "अपने फॉलोइंग बढ़ाने के लिए स्टेप-बाई-स्टेप र���डमैप",
       },
       downloadFree: "मुफ्त डाउनलोड करें",
     },
@@ -530,10 +530,10 @@ ${language === "hindi" ? "ईमेल:" : "Email:"} ${quizData.email || "[your@
 ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
 - Instagram: ${quizData.socialLinks.instagram || "[Your Instagram]"}
 - YouTube: ${quizData.socialLinks.youtube || "[Your YouTube]"}`;
-    } else if (type === "emailTemplates") {
-      content = `${language === "hindi" ? "ब्रांड आउटरीच ईमेल टेम्प्लेट्स" : "BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
+        } else if (type === "emailTemplates") {
+      content = `${language === "hindi" ? "6+ ब्रांड आउटरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
-${language === "hindi" ? "टेम्प्लेट 1: प्रारंभिक संपर्क" : "TEMPLATE 1: INITIAL OUTREACH"}
+${language === "hindi" ? "टेम्प्लेट 1: प्रारंभिक संपर्क (कोल्ड आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
 
 ${language === "hindi" ? "प्रिय [ब्रांड नाम] टीम," : "Dear [Brand Name] Team,"}
@@ -553,7 +553,133 @@ ${language === "hindi" ? "- पोस्टिंग आवृत्ति:" : "
 ${language === "hindi" ? "क्या आप सहयोग के अवसरों पर चर्चा करने के लिए समय निकाल सकते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
 ${language === "hindi" ? "धन्यवाद," : "Best regards,"}
-${userName}`;
+${userName}
+
+---
+
+${language === "hindi" ? "टेम्प्लेट 2: फॉलो-अप ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
+
+${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
+
+${language === "hindi" ? "मैंने पिछले सप्ताह आपको collaboration के बारे में email भेजा था। मुझे लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
+
+${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और उस post को [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
+
+${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule कर सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
+
+${language === "hindi" ? "Looking forward," : "Looking forward,"}
+${userName}
+
+---
+
+${language === "hindi" ? "टेम्प्लेट 3: रेट कार्ड प्रेजेंटेशन" : "TEMPLATE 3: RATE CARD PRESENTATION"}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} - Collaboration rates & packages` : `${userName} - Collaboration rates & packages`}
+
+${language === "hindi" ? "Dear [Brand Name]," : "Dear [Brand Name],"}
+
+${language === "hindi" ? "आपकी interest के लिए धन्यवाद! यहां मेरे collaboration packages हैं:" : "Thank you for your interest! Here are my collaboration packages:"}
+
+${language === "hindi" ? "📸 सिंगल पोस्ट: ₹[आपकी rate]" : "📸 Single Post: ₹[Your rate]"}
+${language === "hindi" ? "• 1 feed post with your product" : "• 1 feed post with your product"}
+${language === "hindi" ? "• 24-hour story promotion" : "• 24-hour story promotion"}
+${language === "hindi" ? "• Professional photography" : "• Professional photography"}
+
+${language === "hindi" ? "📱 स्टोरी पैकेज: ₹[आपकी rate]" : "📱 Story Package: ₹[Your rate]"}
+${language === "hindi" ? "• 3-5 story slides" : "• 3-5 story slides"}
+${language === "hindi" ? "• Behind-the-scenes content" : "• Behind-the-scenes content"}
+
+${language === "hindi" ? "🎥 रील्स कंटेंट: ₹[आपकी rate]" : "🎥 Reels Content: ₹[Your rate]"}
+${language === "hindi" ? "• High-quality reel creation" : "• High-quality reel creation"}
+${language === "hindi" ? "• Trending music/sounds" : "• Trending music/sounds"}
+
+${language === "hindi" ? "Best," : "Best,"}
+${userName}
+
+---
+
+${language === "hindi" ? "टेम्प्लेट 4: नेगोसिएशन/काउंटर ऑफर" : "TEMPLATE 4: NEGOTIATION/COUNTER OFFER"}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? "Re: Collaboration proposal - Let's find a win-win" : "Re: Collaboration proposal - Let's find a win-win"}
+
+${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
+
+${language === "hindi" ? "आपके proposal के लिए thank you! मैं definitely interested हूं।" : "Thank you for your proposal! I'm definitely interested."}
+
+${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूंगा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
+
+${language === "hindi" ? "• मेरी audience का [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
+${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
+${language === "hindi" ? "• मैं additional value add कर सकता हूं like [extra service]" : "• I can add additional value like [extra service]"}
+
+${language === "hindi" ? "मैं flexible हूं और एक mutually beneficial deal बनाना चाहता हूं।" : "I'm flexible and want to create a mutually beneficial deal."}
+
+${language === "hindi" ? "Best regards," : "Best regards,"}
+${userName}
+
+---
+
+${language === "hindi" ? "टेम्प्लेट 5: परफॉर्मेंस रिपोर्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} x [Brand] - Campaign Performance Report` : `${userName} x [Brand] - Campaign Performance Report`}
+
+${language === "hindi" ? "Dear [Brand Team]," : "Dear [Brand Team],"}
+
+${language === "hindi" ? "हमारे recent collaboration के results share करना चाहता हूं:" : "I wanted to share the results from our recent collaboration:"}
+
+${language === "hindi" ? "📊 PERFORMANCE METRICS:" : "📊 PERFORMANCE METRICS:"}
+${language === "hindi" ? "• Post Reach: [number] impressions" : "• Post Reach: [number] impressions"}
+${language === "hindi" ? "• Engagement Rate: [percentage]" : "• Engagement Rate: [percentage]"}
+${language === "hindi" ? "• Story Views: [number]" : "• Story Views: [number]"}
+${language === "hindi" ? "• Website Clicks: [number]" : "• Website Clicks: [number]"}
+
+${language === "hindi" ? "🎯 AUDIENCE FEEDBACK:" : "🎯 AUDIENCE FEEDBACK:"}
+${language === "hindi" ? "• [Positive feedback examples]" : "• [Positive feedback examples]"}
+${language === "hindi" ? "• [Questions about product]" : "• [Questions about product]"}
+
+${language === "hindi" ? "मुझे future collaborations में interest है और आपके products को authentically promote करना पसंद है।" : "I'm interested in future collaborations and love authentically promoting your products."}
+
+${language === "hindi" ? "Thank you for trusting me!" : "Thank you for trusting me!"}
+${userName}
+
+---
+
+${language === "hindi" ? "टेम्प्लेट 6: लॉन्ग-टर्म पार्टनरशिप प्रपोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `Long-term Partnership Proposal - ${userName} x [Brand]` : `Long-term Partnership Proposal - ${userName} x [Brand]`}
+
+${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
+
+${language === "hindi" ? "हमारे successful collaboration के बाद, मैं एक long-term partnership propose करना चाहूंगा।" : "Following our successful collaboration, I'd like to propose a long-term partnership."}
+
+${language === "hindi" ? "🤝 PROPOSED PARTNERSHIP:" : "🤝 PROPOSED PARTNERSHIP:"}
+${language === "hindi" ? "• Monthly content creation" : "• Monthly content creation"}
+${language === "hindi" ? "• Product launches coverage" : "• Product launches coverage"}
+${language === "hindi" ? "• Event participation" : "• Event participation"}
+${language === "hindi" ? "• Brand ambassadorship" : "• Brand ambassadorship"}
+
+${language === "hindi" ? "💰 PROPOSED STRUCTURE:" : "💰 PROPOSED STRUCTURE:"}
+${language === "hindi" ? "• Retainer fee: ₹[amount]/month" : "• Retainer fee: ₹[amount]/month"}
+${language === "hindi" ? "• Performance bonuses" : "• Performance bonuses"}
+${language === "hindi" ? "• Exclusive collaboration terms" : "• Exclusive collaboration terms"}
+
+${language === "hindi" ? "📈 BENEFITS FOR YOUR BRAND:" : "📈 BENEFITS FOR YOUR BRAND:"}
+${language === "hindi" ? "• Consistent brand presence" : "• Consistent brand presence"}
+${language === "hindi" ? "• Authentic audience connection" : "• Authentic audience connection"}
+${language === "hindi" ? "• Better content planning" : "• Better content planning"}
+${language === "hindi" ? "• Cost-effective marketing" : "• Cost-effective marketing"}
+
+${language === "hindi" ? "क्या आप इस opportunity को explore करने में interested हैं?" : "Would you be interested in exploring this opportunity?"}
+
+${language === "hindi" ? "Best," : "Best,"}
+${userName}
+
+---
+
+${language === "hindi" ? "बोनस टिप्स:" : "BONUS TIPS:"}
+${language === "hindi" ? "• हमेशा personalize करें emails" : "• Always personalize your emails"}
+${language === "hindi" ? "• Subject lines को catchy रखें" : "• Keep subject lines catchy"}
+${language === "hindi" ? "• Follow-up करना न भूलें" : "• Don't forget to follow up"}
+${language === "hindi" ? "• Professional tone maintain करें" : "• Maintain a professional tone"}
+${language === "hindi" ? "• Results और metrics share करें" : "• Share results and metrics"}
+${language === "hindi" ? "• Grateful और humble रहें" : "• Be grateful and humble"}";
     } else if (type === "growthStrategy") {
       content = `${language === "hindi" ? "90-दिन की ग्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
 
@@ -579,7 +705,7 @@ ${language === "hindi" ? "- ट्रेंडिंग टॉपिक्स �
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू करें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "दिन 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
-${language === "hindi" ? "- मीडिया किट तैयार करे��" : "- Prepare media kit"}
+${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
 ${language === "hindi" ? "- ब्रांड्स से संपर्क शुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
 
@@ -861,14 +987,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.primaryPlatform}
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                                            <div className="grid grid-cols-2 gap-2">
                         {t.options.platforms.map((platform) => (
                           <button
                             key={platform}
                             onClick={() =>
                               updateQuizData("primaryPlatform", platform)
                             }
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.primaryPlatform === platform
                                 ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -884,14 +1010,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.followerCount}
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                                            <div className="grid grid-cols-2 gap-2">
                         {t.options.followerRanges.map((range) => (
                           <button
                             key={range}
                             onClick={() =>
                               updateQuizData("followerCount", range)
                             }
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.followerCount === range
                                 ? "bg-gradient-to-r from-electric-blue/10 to-soft-violet/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -907,12 +1033,12 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.secondaryPlatforms}
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                                            <div className="grid grid-cols-2 gap-2">
                         {t.options.platforms.map((platform) => (
                           <button
                             key={platform}
                             onClick={() => toggleSecondaryPlatform(platform)}
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.secondaryPlatforms.includes(platform)
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -942,12 +1068,12 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.niche}
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                                            <div className="grid grid-cols-2 gap-2">
                         {t.options.niches.map((niche) => (
                           <button
                             key={niche}
                             onClick={() => updateQuizData("niche", niche)}
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.niche === niche
                                 ? "bg-gradient-to-r from-soft-violet/10 to-neon-green/10 border-soft-violet text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -977,12 +1103,12 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.contentType}
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                                            <div className="grid grid-cols-2 gap-2">
                         {t.options.contentTypes.map((type) => (
                           <button
                             key={type}
                             onClick={() => updateQuizData("contentType", type)}
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.contentType === type
                                 ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1012,14 +1138,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.postingFrequency}
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                                            <div className="grid grid-cols-2 gap-2">
                         {t.options.frequencies.map((freq) => (
                           <button
                             key={freq}
                             onClick={() =>
                               updateQuizData("postingFrequency", freq)
                             }
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.postingFrequency === freq
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1077,14 +1203,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.monthlyIncome}
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                                            <div className="grid grid-cols-2 gap-2">
                         {t.options.incomes.map((income) => (
                           <button
                             key={income}
                             onClick={() =>
                               updateQuizData("monthlyIncome", income)
                             }
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.monthlyIncome === income
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1225,7 +1351,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center">
                           <Instagram className="w-4 h-4 text-white" />
