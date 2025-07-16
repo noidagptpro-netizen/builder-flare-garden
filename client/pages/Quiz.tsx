@@ -861,14 +861,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.primaryPlatform}
                       </label>
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.platforms.map((platform) => (
                           <button
                             key={platform}
                             onClick={() =>
                               updateQuizData("primaryPlatform", platform)
                             }
-                            className={`p-3 rounded-xl border-2 text-sm font-semibold transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.primaryPlatform === platform
                                 ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -884,14 +884,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.followerCount}
                       </label>
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.followerRanges.map((range) => (
                           <button
                             key={range}
                             onClick={() =>
                               updateQuizData("followerCount", range)
                             }
-                            className={`p-3 rounded-xl border-2 text-sm font-semibold transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.followerCount === range
                                 ? "bg-gradient-to-r from-electric-blue/10 to-soft-violet/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -907,12 +907,12 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.secondaryPlatforms}
                       </label>
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.platforms.map((platform) => (
                           <button
                             key={platform}
                             onClick={() => toggleSecondaryPlatform(platform)}
-                            className={`p-3 rounded-xl border-2 text-sm font-semibold transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.secondaryPlatforms.includes(platform)
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -942,12 +942,12 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.niche}
                       </label>
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.niches.map((niche) => (
                           <button
                             key={niche}
                             onClick={() => updateQuizData("niche", niche)}
-                            className={`p-3 rounded-xl border-2 text-sm font-semibold transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.niche === niche
                                 ? "bg-gradient-to-r from-soft-violet/10 to-neon-green/10 border-soft-violet text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -977,12 +977,12 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.contentType}
                       </label>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.contentTypes.map((type) => (
                           <button
                             key={type}
                             onClick={() => updateQuizData("contentType", type)}
-                            className={`p-4 rounded-xl border-2 text-base font-semibold transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.contentType === type
                                 ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1012,14 +1012,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.postingFrequency}
                       </label>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.frequencies.map((freq) => (
                           <button
                             key={freq}
                             onClick={() =>
                               updateQuizData("postingFrequency", freq)
                             }
-                            className={`p-4 rounded-xl border-2 text-base font-semibold transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.postingFrequency === freq
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1077,14 +1077,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.monthlyIncome}
                       </label>
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.incomes.map((income) => (
                           <button
                             key={income}
                             onClick={() =>
                               updateQuizData("monthlyIncome", income)
                             }
-                            className={`p-3 rounded-xl border-2 text-sm font-semibold transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.monthlyIncome === income
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
