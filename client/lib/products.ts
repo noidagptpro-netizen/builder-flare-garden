@@ -106,6 +106,14 @@ export const productConfigs: ProductConfig[] = [
         content: generateContractContent,
         fileName: "Creator_Contract_Templates",
       },
+      {
+        id: "premium-tools",
+        name: "Premium Tools Guide",
+        type: "guide",
+        language: "both",
+        content: generatePremiumToolsContent,
+        fileName: "Premium_Creator_Tools_Guide",
+      },
     ],
   },
   {
@@ -311,7 +319,7 @@ function generateMediaKitContent(
 ईमेल: ${userEmail}
 फोन: [आपका फोन नंबर]
 वेबसाइट: [आपकी वेबसाइट]
-सोशल मीडिया: [आपके सभी सोशल प्लेटफॉर्म]
+सोशल मीडिया: [आपके सभी सोशल प्ल���टफॉर्म]
 
 🤝 कोलैबोरेशन टर्म्स:
 • उपयोग अधिकार: [स्पेसिफाई करें]
@@ -436,7 +444,7 @@ function generateEmailTemplatesContent(
 मुझे आपके ब्रांड के साथ कोलैबोरेट करने में बहुत रुचि है क्योंकि:
 • आपके प्रोडक्ट्स मेरे ऑडियंस के साथ perfectly align करते हैं
 • मेरे followers को ${userNiche} में genuine interest है
-• मैं authentic और engaging कंटेंट बनाने में स्पेशलाइज़ करता हूं
+• मैं authentic और engaging क��टेंट बनाने में स्पेशलाइज़ करता हूं
 
 📊 मेरे key metrics:
 • फॉलोअर्स: ${userFollowers}
@@ -468,7 +476,7 @@ ${userName}
 
 ---
 
-💼 टेम्प्लेट 3: रेट कार्ड प्रेजेंटेशन
+💼 टेम्प्ले�� 3: रेट कार्ड प्रेजेंटेशन
 विषय: ${userName} - Collaboration rates & packages
 
 Dear [Brand Name],
@@ -591,7 +599,7 @@ Dear [Decision Maker],
 Best,
 ${userName}
 
-[इसी तरह से 24 और templates continue करें different scenarios के लिए...]`;
+[��सी तरह से 24 और templates continue करें different scenarios के लिए...]`;
   }
 
   return `📧 30+ BRAND OUTREACH EMAIL TEMPLATES
@@ -787,7 +795,7 @@ Minimum post rate = Followers per 1K × Base rate
 
 2️⃣ NICHE MULTIPLIERS:
 • Fashion & Beauty: 1.2x
-• Technology & AI: 1.5x
+��� Technology & AI: 1.5x
 • Finance & Investing: 1.8x
 • Gaming & Esports: 1.3x
 • Food & Cooking: 1.1x
