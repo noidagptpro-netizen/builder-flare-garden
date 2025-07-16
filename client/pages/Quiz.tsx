@@ -265,7 +265,7 @@ const languages = {
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
-        "आप कितने समय से कंटें��� बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
+        "आप क��तने समय से कंटें��� बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       biggestChallenge:
         "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क्या हैं? (अधिकतम 3 चुनें)",
@@ -311,7 +311,7 @@ const languages = {
         "प्रेरणा और स्व-सहायता",
         "पेरेंटिंग और परिवार",
         "DIY और शिल्प",
-        "आध्यात्म और माइंडफुलनेस",
+        "आध्यात्म और माइंडफ���लनेस",
         "अन्य",
       ],
       contentTypes: [
@@ -383,7 +383,7 @@ const languages = {
       submit: "मेरा क्रिएटर विश्लेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संसाधन",
+      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मु��्त क्रिएटर संसाधन",
       subtitle:
         "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली टूल्स को डाउनलोड ���रे��",
       mediaKit: {
@@ -531,7 +531,7 @@ ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
 - Instagram: ${quizData.socialLinks.instagram || "[Your Instagram]"}
 - YouTube: ${quizData.socialLinks.youtube || "[Your YouTube]"}`;
         } else if (type === "emailTemplates") {
-      content = `${language === "hindi" ? "6+ ब्रांड आउटरीच ईमेल टेम्प्��ेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
+      content = `${language === "hindi" ? "6+ ब्रांड आउटरीच ईमेल टेम्प्��ेट्��" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
 ${language === "hindi" ? "टेम्प्लेट 1: प्रारंभिक संपर्क (कोल्ड आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
@@ -541,7 +541,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड नाम] टी�
 ${language === "hindi" ? `मैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअर्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ब्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
-${language === "hindi" ? "- आपके उत्पाद मेरे ���र्शकों के साथ पूरी तरह मेल खाते ह���ं" : "- Your products align perfectly with my audience"}
+${language === "hindi" ? "- आपके उत्पाद मेरे �����र्शकों के साथ पूरी तरह मेल खाते ह���ं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
@@ -673,15 +673,15 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "बोनस टिप्स:" : "BONUS TIPS:"}
+${language === "hindi" ? "ब���नस टिप्स:" : "BONUS TIPS:"}
 ${language === "hindi" ? "• हमेशा personalize करें emails" : "• Always personalize your emails"}
 ${language === "hindi" ? "• Subject lines को catchy रखें" : "• Keep subject lines catchy"}
 ${language === "hindi" ? "• Follow-up करना न भूले��" : "• Don't forget to follow up"}
 ${language === "hindi" ? "• Professional tone maintain करें" : "• Maintain a professional tone"}
 ${language === "hindi" ? "• Results और metrics share करें" : "• Share results and metrics"}
 ${language === "hindi" ? "• Grateful और humble रहें" : "• Be grateful and humble"}";
-    } else if (type === "growthStrategy") {
-                                          content = (language === "hindi" ? "90-दिन की ग्रोथ रणनीति" : "90-DAY GROWTH STRATEGY") + " - " + userName + "\n\n" +
+        } else if (type === "growthStrategy") {
+      content = `${language === "hindi" ? "90-दिन की ग्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "वर्तमान स्थिति:" : "Current Status:"} ${quizData.followerCount} on ${quizData.primaryPlatform}
@@ -690,7 +690,7 @@ ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:
 
 ${language === "hindi" ? "दिन 1-30: बुनियाद मजबूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्ताह 1:" : "Week 1:"}
-${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर���तमान आवृत्ति बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
+${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्तमान आवृत्ति बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
 ${language === "hindi" ? `- ${quizData.niche} पर 10 कंटेंट आइडिया तैयार करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्स)" : "- Research hashtags (30 hashtag mix)"}
 
@@ -707,12 +707,12 @@ ${language === "hindi" ? "- अन्य क्रिएटर्स के स�
 ${language === "hindi" ? "दिन 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
 ${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
 ${language === "hindi" ? "- ब्रांड्स से संपर्क शुरू करें" : "- Start reaching out to brands"}
-${language === "hindi" ? "- ईमेल लिस���ट बनाना शुरू करें" : "- Start building email list"}
+${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
 
 ${language === "hindi" ? "अपेक्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
 ${language === "hindi" ? "- फॉलोअर ग्रोथ: 40-80%" : "- Follower Growth: 40-80%"}
 ${language === "hindi" ? "- एंगेजमेंट में सुधार: 50-100%" : "- Engagement Improvement: 50-100%"}
-        "Expected Results (90 days): Follower Growth 40-80%, Engagement Improvement 50-100%, Brand Inquiries 3-8";
+${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Brand Inquiries: 3-8"}`;
     }
 
     const blob = new Blob([content], { type: "text/plain" });
