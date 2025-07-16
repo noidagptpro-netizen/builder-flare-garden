@@ -65,7 +65,7 @@ ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} [Your Count
 ${language === "hindi" ? "सांख्यिकी और दरें:" : "STATISTICS & RATES:"}
 ${language === "hindi" ? "औसत व्यूज:" : "Average Views:"} [Your Stats]
 ${language === "hindi" ? "एंगेजमेंट रेट:" : "Engagement Rate:"} [Your Rate]
-${language === "hindi" ? "पोस्ट दरे��:" : "Post Rates:"} ₹5,000 - ₹25,000
+${language === "hindi" ? "पोस्ट दरें:" : "Post Rates:"} ₹5,000 - ₹25,000
 ${language === "hindi" ? "स्टोरी दरें:" : "Story Rates:"} ₹2,000 - ₹8,000
 ${language === "hindi" ? "रील दरें:" : "Reel Rates:"} ₹8,000 - ₹35,000
 
@@ -92,7 +92,7 @@ ${language === "hindi" ? "- आपके उत्पाद मेरे दर�
 ${language === "hindi" ? "- मेरे दर्शक [संबंधित विषय] में रुचि रखते हैं" : "- My audience is interested in [Relevant Topic]"}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
-${language === "hindi" ? "सां���्यिकी:" : "Statistics:"}
+${language === "hindi" ? "सांख्यिकी:" : "Statistics:"}
 ${language === "hindi" ? "- फॉलोअर्स:" : "- Followers:"} [Your Count]
 ${language === "hindi" ? "- औसत एंगेजमेंट:" : "- Average Engagement:"} [Your Rate]
 ${language === "hindi" ? "- मासिक रीच:" : "- Monthly Reach:"} [Your Reach]
@@ -120,7 +120,7 @@ ${language === "hindi" ? "क्या हम इस सप्ताह 15-म�
 ${language === "hindi" ? "धन्यवाद," : "Thank you,"}
 [${language === "hindi" ? "आपका नाम" : "Your Name"}]`;
     } else if (type === "growthStrategy") {
-      content = `${language === "hindi" ? "3-महीने की ग्रोथ रणनीति" : "3-MONTH GROWTH STRATEGY"} - ${userName}
+      content = `${language === "hindi" ? "3-महीने ��ी ग्रोथ रणनीति" : "3-MONTH GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "महीना 1: बुनियाद मजबूत करना" : "MONTH 1: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्ताह 1-2:" : "Week 1-2:"}
@@ -197,9 +197,9 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 2-5 
       downloads: "डाउनलोड",
       rating: "रेटिंग",
       securePayment: "सुरक्षित भुगतान",
-      instantDownload: "तुरंत डाउनल��ड",
+      instantDownload: "तुरंत डाउनलोड",
       moneyBack: "पैसे वापसी की गारंटी",
-      buyNow: "अभी खरीदें",
+      buyNow: "अभी खरीद���ं",
       downloadFree: "फ्री डाउनलोड करें",
       bundleOffer: "सीमित समय बंडल ऑफर 🔥",
       save: "बचाएं",
@@ -220,6 +220,13 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 2-5 
               FameChase<span className="text-neon-green">.com</span>
             </Link>
             <div className="flex items-center gap-4">
+              <Link
+                to="/"
+                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                <Home className="w-4 h-4" />
+                Back to Home
+              </Link>
               <select
                 value={language}
                 onChange={(e) =>
@@ -364,7 +371,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 2-5 
                   </h3>
                   <p className="text-gray-600 mb-4">
                     {language === "hindi"
-                      ? "0 से 10K फॉलोअर्स तक बढ़ने और मुद्रीकरण शुरू करने के ल���ए आपको चाहिए सब कुछ"
+                      ? "0 से 10K फॉलोअर्स तक बढ़ने और मुद्रीकरण शुरू करने के लिए आपको चाहिए सब कुछ"
                       : "Everything you need to grow from 0 to 10K followers and start monetizing"}
                   </p>
                   <div className="flex items-center gap-4 mb-4">
@@ -407,7 +414,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 2-5 
                     <li className="flex items-center gap-2">
                       <CheckCircle className="w-4 h-4 text-green-500" />
                       {language === "hindi"
-                        ? "कंटेंट कै���ेंडर टेम्प्लेट (3 महीने)"
+                        ? "कंटेंट कैलेंडर टेम्प्लेट (3 महीने)"
                         : "Content Calendar Template (3 months)"}
                     </li>
                     <li className="flex items-center gap-2">
