@@ -298,7 +298,7 @@ const languages = {
         "टेक्नोलॉजी और AI",
         "खाना और खाना बनाना",
         "यात्रा और एडवेंचर",
-        "फ��टनेस और स्वास्थ्य",
+        "फ��टनेस और ���्वास्थ्य",
         "व्यक्तिगत वित्त और निवेश",
         "मनोरंजन और कॉमेडी",
         "उद्यमिता और व्यापार",
@@ -353,7 +353,7 @@ const languages = {
         "अपनी यूनीक आवाज़/स्टाइल खोजना",
         "एल्गोरिदम बदलाव से पहुंच में कमी",
         "ऑथेंटिसिटी और ब्रांड अपील का संतुलन",
-        "बड़े क्रिएटर्स से कॉम्पिटिशन",
+        "बड़े क्रिएटर्स से कॉम्पिटिश���",
         "फॉलोअर्स को पेइंग कस्टमर बनाना",
         "नेगेटिव कमेंट्स/ट्रोल्स से निपटना",
         "बर्नआउट और कंटेंट थकान",
@@ -370,7 +370,7 @@ const languages = {
         "अपनी niche में go-to एक्सपर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइबर्स की email लिस्ट",
-        "इंडस्ट्री ���वेंट्स/पॉडकास्ट्स में बोलना",
+        "इंडस्ट्री ���वेंट��स/पॉडकास्ट्स में बोलना",
         "पैसिव इनकम स्ट्रीम्स बनाना",
         "9-5 job छोड़कर फुल-टाइम जाना",
         "नए प्लेटफॉर्म्स/फॉर्मेट्स में expand करना",
@@ -579,7 +579,7 @@ ${language === "hindi" ? "- ट्रेंडिंग टॉपिक्स �
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू करें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "दिन 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
-${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
+${language === "hindi" ? "- मीडिया किट तैयार करे��" : "- Prepare media kit"}
 ${language === "hindi" ? "- ब्रांड्स से संपर्क शुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
 
@@ -1225,10 +1225,10 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                       </p>
                     </div>
 
-                    <div className="space-y-6">
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center">
-                          <Instagram className="w-6 h-6 text-white" />
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center">
+                          <Instagram className="w-4 h-4 text-white" />
                         </div>
                         <input
                           type="url"
@@ -1236,14 +1236,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                           onChange={(e) =>
                             updateSocialLink("instagram", e.target.value)
                           }
-                          placeholder="https://instagram.com/yourusername"
-                          className="flex-1 bg-white border-2 border-gray-200 text-gray-900 px-4 py-3 rounded-xl focus:border-electric-blue focus:outline-none transition-colors"
+                          placeholder="@username"
+                          className="flex-1 bg-white border-2 border-gray-200 text-gray-900 px-3 py-2 rounded-lg focus:border-electric-blue focus:outline-none transition-colors text-sm"
                         />
                       </div>
 
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-red-500 rounded-xl flex items-center justify-center">
-                          <Youtube className="w-6 h-6 text-white" />
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center">
+                          <Youtube className="w-4 h-4 text-white" />
                         </div>
                         <input
                           type="url"
@@ -1251,14 +1251,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                           onChange={(e) =>
                             updateSocialLink("youtube", e.target.value)
                           }
-                          placeholder="https://youtube.com/@yourchannel"
-                          className="flex-1 bg-white border-2 border-gray-200 text-gray-900 px-4 py-3 rounded-xl focus:border-electric-blue focus:outline-none transition-colors"
+                          placeholder="@channel"
+                          className="flex-1 bg-white border-2 border-gray-200 text-gray-900 px-3 py-2 rounded-lg focus:border-electric-blue focus:outline-none transition-colors text-sm"
                         />
                       </div>
 
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center">
-                          <Linkedin className="w-6 h-6 text-white" />
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+                          <Linkedin className="w-4 h-4 text-white" />
                         </div>
                         <input
                           type="url"
@@ -1266,14 +1266,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                           onChange={(e) =>
                             updateSocialLink("linkedin", e.target.value)
                           }
-                          placeholder="https://linkedin.com/in/yourname"
-                          className="flex-1 bg-white border-2 border-gray-200 text-gray-900 px-4 py-3 rounded-xl focus:border-electric-blue focus:outline-none transition-colors"
+                          placeholder="/in/username"
+                          className="flex-1 bg-white border-2 border-gray-200 text-gray-900 px-3 py-2 rounded-lg focus:border-electric-blue focus:outline-none transition-colors text-sm"
                         />
                       </div>
 
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-blue-400 rounded-xl flex items-center justify-center">
-                          <Twitter className="w-6 h-6 text-white" />
+                      <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 bg-blue-400 rounded-lg flex items-center justify-center">
+                          <Twitter className="w-4 h-4 text-white" />
                         </div>
                         <input
                           type="url"
@@ -1281,14 +1281,14 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                           onChange={(e) =>
                             updateSocialLink("twitter", e.target.value)
                           }
-                          placeholder="https://twitter.com/yourusername"
-                          className="flex-1 bg-white border-2 border-gray-200 text-gray-900 px-4 py-3 rounded-xl focus:border-electric-blue focus:outline-none transition-colors"
+                          placeholder="@username"
+                          className="flex-1 bg-white border-2 border-gray-200 text-gray-900 px-3 py-2 rounded-lg focus:border-electric-blue focus:outline-none transition-colors text-sm"
                         />
                       </div>
 
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 bg-gray-600 rounded-xl flex items-center justify-center">
-                          <Globe className="w-6 h-6 text-white" />
+                      <div className="flex items-center gap-3 md:col-span-2">
+                        <div className="w-8 h-8 bg-gray-600 rounded-lg flex items-center justify-center">
+                          <Globe className="w-4 h-4 text-white" />
                         </div>
                         <input
                           type="url"
@@ -1296,8 +1296,8 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                           onChange={(e) =>
                             updateSocialLink("website", e.target.value)
                           }
-                          placeholder="https://yourwebsite.com"
-                          className="flex-1 bg-white border-2 border-gray-200 text-gray-900 px-4 py-3 rounded-xl focus:border-electric-blue focus:outline-none transition-colors"
+                          placeholder="yourwebsite.com"
+                          className="flex-1 bg-white border-2 border-gray-200 text-gray-900 px-3 py-2 rounded-lg focus:border-electric-blue focus:outline-none transition-colors text-sm"
                         />
                       </div>
                     </div>
