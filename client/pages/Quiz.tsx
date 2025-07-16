@@ -260,7 +260,7 @@ const languages = {
       primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
-        "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (सभी लागू का चयन करें)",
+        "आप और कौन से प्लेटफॉर्म का उपय���ग करते हैं? (सभी लागू का चयन करें)",
       niche: "आपका कंटेंट किस विषय पर है?",
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
@@ -272,7 +272,7 @@ const languages = {
       goals:
         "अगले 6 महीनों के लिए आपके मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
       socialLinks: "अपनी सोशल उपस्थिति ��ाझा करें (वैकल्पिक)",
-      bio: "अपने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
+      bio: "��पने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
     },
     options: {
       platforms: [
@@ -304,7 +304,7 @@ const languages = {
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
         "कल�� और डिज़ाइन",
-        "गेमिंग और एस्पोर्ट्स",
+        "गेमि���ग और एस्पोर्ट्स",
         "संगीत और नृत्य",
         "शिक्षा और सीखना",
         "खेल और एथलेटिक्स",
@@ -334,7 +334,7 @@ const languages = {
       ],
       experiences: [
         "अभी शुरू कि���ा (0-6 महीने)",
-        "शुरुआती (6 महीने - 1 साल)",
+        "श���रुआती (6 महीने - 1 साल)",
         "बढ़ रहे हैं (1-2 साल)",
         "अनुभवी (2-3 साल)",
         "विशेषज्ञ (3+ साल)",
@@ -357,7 +357,7 @@ const languages = {
         "फॉलोअर्स को पेइंग कस्टमर बनाना",
         "नेगेटिव कमेंट्स/ट्रोल्स से निपटना",
         "बर्नआउट और कंटेंट थकान",
-        "एनालिटिक्स और मेट्रिक्स समझना",
+        "एनालिटिक्स और मेट्रिक्स स���झना",
         "सच्ची कम्युनिटी बनाना",
         "ट्रेंड्स के साथ रिलेवेंट रहना",
         "कई प्लेटफॉर्म को efficiently मैनेज करना",
@@ -530,8 +530,8 @@ ${language === "hindi" ? "ईमेल:" : "Email:"} ${quizData.email || "[your@
 ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
 - Instagram: ${quizData.socialLinks.instagram || "[Your Instagram]"}
 - YouTube: ${quizData.socialLinks.youtube || "[Your YouTube]"}`;
-        } else if (type === "emailTemplates") {
-      content = `${language === "hindi" ? "6+ ब्रांड आउटरीच ईमेल टेम्प्��ेट्��" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
+    } else if (type === "emailTemplates") {
+      content = `${language === "hindi" ? "6+ ब्रांड आउटरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
 ${language === "hindi" ? "टेम्प्लेट 1: प्रारंभिक संपर्क (कोल्ड आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
@@ -541,14 +541,14 @@ ${language === "hindi" ? "प्रिय [ब्रांड नाम] टी�
 ${language === "hindi" ? `मैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअर्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ब्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
-${language === "hindi" ? "- आपके उत्पाद मेरे �����र्शकों के साथ पूरी तरह मेल खाते ह���ं" : "- Your products align perfectly with my audience"}
+${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
 ${language === "hindi" ? "सांख्यिकी:" : "Statistics:"}
 ${language === "hindi" ? "- फॉलोअर्स:" : "- Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
-${language === "hindi" ? "- पोस्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
+${language === "hindi" ? "- प��स्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
 ${language === "hindi" ? "क्या आप सहयोग के अवसरों पर चर्चा करने के लिए समय निकाल सकते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
@@ -557,8 +557,8 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 2: फॉल��-अप ��मेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
-${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉ���ो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
+${language === "hindi" ? "टेम्प्लेट 2: फॉलो-अप ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
@@ -605,7 +605,7 @@ ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
 ${language === "hindi" ? "आपके proposal के लिए thank you! मैं definitely interested हूं।" : "Thank you for your proposal! I'm definitely interested."}
 
-${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust क��� सकते हैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
+${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूंगा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
 ${language === "hindi" ? "• मेरी audience का [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
@@ -642,7 +642,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 6: लॉन्ग-टर्म पा���्टनरशिप प्रपोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
+${language === "hindi" ? "टेम्प्लेट 6: लॉन्ग-टर्म पार्टनरशिप प्रपोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `Long-term Partnership Proposal - ${userName} x [Brand]` : `Long-term Partnership Proposal - ${userName} x [Brand]`}
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
@@ -673,14 +673,14 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "ब���नस टिप्स:" : "BONUS TIPS:"}
+${language === "hindi" ? "बोनस टिप्स:" : "BONUS TIPS:"}
 ${language === "hindi" ? "• हमेशा personalize करें emails" : "• Always personalize your emails"}
 ${language === "hindi" ? "• Subject lines को catchy रखें" : "• Keep subject lines catchy"}
-${language === "hindi" ? "• Follow-up करना न भूले��" : "• Don't forget to follow up"}
+${language === "hindi" ? "• Follow-up करना न भूलें" : "• Don't forget to follow up"}
 ${language === "hindi" ? "• Professional tone maintain करें" : "• Maintain a professional tone"}
 ${language === "hindi" ? "• Results और metrics share करें" : "• Share results and metrics"}
-${language === "hindi" ? "• Grateful और humble रहें" : "• Be grateful and humble"}";
-        } else if (type === "growthStrategy") {
+${language === "hindi" ? "• Grateful और humble रहें" : "• Be grateful and humble"}`;
+    } else if (type === "growthStrategy") {
       content = `${language === "hindi" ? "90-दिन की ग्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
@@ -764,7 +764,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
               <CheckCircle className="w-10 h-10 text-white" />
             </div>
 
-                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t.freeResources.title}
             </h1>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -937,7 +937,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
-                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t.title}
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
@@ -975,7 +975,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                 {currentStep === 1 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Your Main Platform 📱
                       </h2>
                       <p className="text-gray-600">
@@ -987,14 +987,14 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.primaryPlatform}
                       </label>
-                                            <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.platforms.map((platform) => (
                           <button
                             key={platform}
                             onClick={() =>
                               updateQuizData("primaryPlatform", platform)
                             }
-                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.primaryPlatform === platform
                                 ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1010,14 +1010,14 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.followerCount}
                       </label>
-                                            <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.followerRanges.map((range) => (
                           <button
                             key={range}
                             onClick={() =>
                               updateQuizData("followerCount", range)
                             }
-                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.followerCount === range
                                 ? "bg-gradient-to-r from-electric-blue/10 to-soft-violet/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1033,12 +1033,12 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.secondaryPlatforms}
                       </label>
-                                            <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.platforms.map((platform) => (
                           <button
                             key={platform}
                             onClick={() => toggleSecondaryPlatform(platform)}
-                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.secondaryPlatforms.includes(platform)
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1056,7 +1056,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                 {currentStep === 2 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Your Content Niche 🎯
                       </h2>
                       <p className="text-gray-600">
@@ -1068,12 +1068,12 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.niche}
                       </label>
-                                            <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.niches.map((niche) => (
                           <button
                             key={niche}
                             onClick={() => updateQuizData("niche", niche)}
-                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.niche === niche
                                 ? "bg-gradient-to-r from-soft-violet/10 to-neon-green/10 border-soft-violet text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1091,7 +1091,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                 {currentStep === 3 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Content Format 🎬
                       </h2>
                       <p className="text-gray-600">
@@ -1103,12 +1103,12 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.contentType}
                       </label>
-                                            <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.contentTypes.map((type) => (
                           <button
                             key={type}
                             onClick={() => updateQuizData("contentType", type)}
-                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.contentType === type
                                 ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1126,7 +1126,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                 {currentStep === 4 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Posting Schedule ⏰
                       </h2>
                       <p className="text-gray-600">
@@ -1138,14 +1138,14 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.postingFrequency}
                       </label>
-                                            <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.frequencies.map((freq) => (
                           <button
                             key={freq}
                             onClick={() =>
                               updateQuizData("postingFrequency", freq)
                             }
-                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.postingFrequency === freq
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1163,7 +1163,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                 {currentStep === 5 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Your Creator Journey 🚀
                       </h2>
                       <p className="text-gray-600">
@@ -1203,14 +1203,14 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.monthlyIncome}
                       </label>
-                                            <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 gap-2">
                         {t.options.incomes.map((income) => (
                           <button
                             key={income}
                             onClick={() =>
                               updateQuizData("monthlyIncome", income)
                             }
-                                                        className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
                               quizData.monthlyIncome === income
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1228,7 +1228,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                 {currentStep === 6 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Your Challenges 🎯
                       </h2>
                       <p className="text-gray-600">
@@ -1288,7 +1288,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                 {currentStep === 7 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Your Goals 🎯
                       </h2>
                       <p className="text-gray-600">
@@ -1343,7 +1343,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                 {currentStep === 8 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Social Profiles 🔗
                       </h2>
                       <p className="text-gray-600">
@@ -1351,7 +1351,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                       </p>
                     </div>
 
-                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 bg-gradient-to-r from-pink-500 to-purple-500 rounded-lg flex items-center justify-center">
                           <Instagram className="w-4 h-4 text-white" />
