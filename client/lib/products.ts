@@ -274,7 +274,7 @@ function generateMediaKitContent(
   const userFollowers = userData?.followerCount || "10K+";
 
   if (language === "hindi") {
-    return `📱 प्रोफेशनल मीडिया किट टेम्प्लेट
+    return `📱 प्रोफेशनल मीडिया किट टेम्प्��ेट
 
 👤 क्रिएटर की जानकारी:
 नाम: ${userName}
@@ -283,7 +283,7 @@ function generateMediaKitContent(
 प्राथमिक प्लेटफॉर्म: ${userPlatform}
 फॉलोअर्स: ${userFollowers}
 
-📊 परफ��र्मेंस मेट्रिक्स:
+📊 परफॉर्मेंस मेट्रिक्स:
 • औसत पहुंच: [आपकी पहुंच दर्ज करें]
 • एंगेजमेंट रेट: [आपका एंगे���मेंट रेट]
 • मासिक इंप्रेशन्स: [आपके मासिक इंप्रेशन्स]
@@ -299,7 +299,7 @@ function generateMediaKitContent(
 📧 न्यूज़लेटर मेंशन: ₹200 - ₹1,000
 
 🏆 पिछले कोलैबोरेशन:
-• [ब्रांड नाम 1] - [कोलैबोरेशन का प्रकार]
+• [���्रांड नाम 1] - [कोलैबोरेशन का प्रकार]
 • [ब्रांड नाम 2] - [कोलैबोरेशन का प्रकार]
 • [ब्रांड नाम 3] - [कोलैबोरेशन का प्रकार]
 
@@ -337,11 +337,11 @@ function generateMediaKitContent(
 1. अपनी पर्सनल जानकारी भरें
 2. रियल परफॉर्मेंस मेट्रिक्स अपडेट करें
 3. अपने बेस्ट कंटेंट सैंपल्स जोड़ें
-4. ब्रांड-स्पेसिफिक कस्टमाइज़ेशन करें
+4. ब्��ांड-स्पेसिफिक कस्टमाइज़ेशन करें
 5. प्रोफेशनल डिज़ाइन में कन्वर्ट करें
 
 🎨 डिज़ाइन टिप्स:
-• क्लीन और प्रोफे���नल लेआउट
+• क्लीन और प्रोफेशनल लेआउट
 • ब्रांड कलर्स का उपयोग
 • हाई-क्वालिटी इमेज और ग्राफिक्स
 • रीडेबल फॉन्ट्स और क्लियर हेडिंग्स
@@ -441,7 +441,7 @@ function generateEmailTemplatesContent(
 
 मैं ${userName} हूं, ${userNiche} में एक पैशनेट कंटेंट क्रिएटर ��ूं जिसके ${userPlatform} पर ${userFollowers} engaged followers हैं।
 
-मुझे आपके ब्रांड के साथ कोलैबोरेट करने में बहुत रुचि है क्योंकि:
+मुझे आपके ब्रांड के साथ कोलैबोरेट करने में ���हुत रुचि है क्योंकि:
 • आपके प्रोडक्ट्स मेरे ऑडियंस के साथ perfectly align करते हैं
 • मेरे followers को ${userNiche} में genuine interest है
 • मैं authentic और engaging कंटेंट बनाने में स्पेशलाइज़ करता हूं
@@ -518,7 +518,7 @@ ${userName}
 
 ---
 
-🤝 टेम्प्लेट 4: नेगोसिएशन/काउंट��� ऑफर
+🤝 टेम्प्लेट 4: नेगोसिएशन/काउंटर ऑफर
 विषय: Re: Collaboration proposal - Let's find a win-win
 
 Hi [Contact Name],
@@ -594,7 +594,7 @@ Dear [Decision Maker],
 • Better content planning
 • Cost-effective marketing
 
-क्या आप इस opportunity को explore करने में interested ���ैं?
+क्या आप इस opportunity को explore करने मे��� interested हैं?
 
 Best,
 ${userName}
@@ -804,7 +804,7 @@ Minimum post rate = Followers per 1K × Base rate
 
 3️⃣ ENGAGEMENT MULTIPLIERS:
 • 1-2% engagement: 0.8x
-��� 2-4% engagement: 1.0x (standard)
+• 2-4% engagement: 1.0x (standard)
 • 4-6% engagement: 1.3x
 • 6%+ engagement: 1.5x
 
@@ -1411,7 +1411,7 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 • निच: ${userNiche}
 • लक्ष्य: ${userGoals}
 
-📅 30-60-90 दिन की योजना:
+��� 30-60-90 दिन की योजना:
 
 🔥 पहले 30 दिन - बुनियाद तैयार करना:
 • दैनिक पोस्टिंग शेड्यूल बनाएं
@@ -1427,11 +1427,11 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 • इंफ्लुएंसर्स और अन्य क्रिएटर्स के साथ कोलैबोरेशन
 • लाइव वीडियो और Q&A सेशन शुरू करें
 • विरल रील्स और ट्रेंड्स पर फोकस करें
-• एनालिटिक्स को ट्रैक करें और ऑप्टिमाइज करें
+• एनालिटिक्स को ट्��ैक करें और ऑप्टिमाइज करें
 • हैशटैग और कीवर्ड स्ट्रैटेजी रिफाइन करें
 • आगे की योजना और वीडियो सीरीज बनाएं
 
-���� तीसरे 30 दिन - मुद्रीकरण और मार्केटिंग:
+💰 तीसरे 30 दिन - मुद्रीकरण और मार्केटिंग:
 • मीडिया किट और पोर्टफोलियो बनाएं
 • ब्रांड्स से संपर्क शुरू करें (मुख्य भारतीय ब्रांड्स)
 • एफिलिएट मार्केटिंग शुरू करें
@@ -1442,11 +1442,11 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 
 🛠️ इम्प्लीमेंटेशन चेकलिस्ट:
 ✅ दैनिक पोस्टिंग (least 5 days/week)
-✅ साप्ताहिक एनालिटिक्स रिव्यू
+✅ साप्ताहिक एनालिट���क्स रिव्यू
 ✅ मासिक कंटेंट प्लानिंग
 ✅ इंडस्ट्री नेटवर्किंग और कोलैबोरेशन
 ✅ ब्रांड और मार्केटिंग आउटरीच
-�� कम्युनिटी एंगेजमेंट और रेस्पॉन्स
+✅ कम्युनिटी एंगेजमेंट और रेस्पॉन्स
 
 📉 मेट्रिक्स ट्रैकिंग:
 • फॉलोअर ग्रोथ रेट: ____%
@@ -1541,9 +1541,222 @@ function generateHashtagGuideContent(
   language: "english" | "hindi",
   userData?: any,
 ): string {
-  return language === "hindi"
-    ? "हैशटैग रिसर्च गाइड..."
-    : "Hashtag Research Guide...";
+  const userNiche = userData?.niche || "Content Creator";
+  const userPlatform = userData?.primaryPlatform || "Instagram";
+
+  if (language === "hindi") {
+    return `#️⃣ हैशटैग रिसर्च मास्���र गाइड
+
+${userNiche} क्रिएटर्स के लिए ${userPlatform} हैशटैग रणनीति
+
+🔍 हैशटैग की बुनियादी बातें:
+• हैशटैग व्यूज को बढ़ाते हैं (30x तक बढ़ सकते हैं)
+• वे आपके कंटेंट को टार्गेट ऑडियंस तक पहुंचाते हैं
+• वे कम्युनिटी बिल्डिंग में मदद करते हैं
+• इनसे आपकी ब्रांड विजिबिलिटी बढ़ती है
+
+📊 हैशटैग के प्रकार:
+
+1️⃣ ब्रॉड हैशटैग (10M+ posts)
+• #love #instagood #photooftheday #fashion
+• #beautiful #follow #picoftheday #india
+• बहुत ज्यादा competition, कम visibility
+
+2️⃣ मिड-लेवल हैशटैग (1M-10M posts)
+• #mumbai #delhi #bangalore #fitness
+• #foodie #travel #lifestyle #bollywood
+• अच्छा balance और reach
+
+3️⃣ निच हैशटैग (100K-1M posts)
+• #{userNiche.toLowerCase().replace(' ', '')} #contentcreator
+• #indianinfluencer #delhifoodie #mumbaifashion
+• टार्गेट ऑ��ियंस के लिए perfect
+
+4️⃣ माइक्रो हैशटैग (10K-100K posts)
+• #mumbaifoodblogger #delhifashionista
+• #bangaloretechie #puneinfluencer
+• कम competition, बेहतर engagement
+
+5️⃣ ब्रांडेड हैशटैग (Under 10K)
+• #yourname #yourbrand #yourcampaign
+• कम competition, बेहतर tracking
+
+🎨 ${userNiche} के लिए टॉप हैशटैग:
+
+🔥 मेइन निच हैशटैग:
+• #{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}
+• #indian{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}
+• #{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}india
+• #{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}blogger
+• #{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}influencer
+
+🌏 लोकेशन-बेस्ड हैशटैग:
+• #mumbai #delhi #bangalore #pune #kolkata
+• #mumbaiinfluencer #delhiinfluencer
+• #southindia #northindia #westindia
+• #indiagram #incredibleindia
+
+🚀 रिसर्च टूल्स (फ्री):
+• Display Purposes - Instagram hashtag suggestions
+• All Hashtag - Hashtag generator
+• Hashtagify - Hashtag popularity tracking
+• Instagram Search - Related hashtags
+• Competitor Analysis - आपके competitors क्या use करते हैं
+
+📈 परफेक्ट हैशटैग मिक्स (30 हैशटैग):
+• 5 ब्रॉड ��ैशटैग (high competition)
+• 10 मिड-ल���वल हैशटैग (moderate competition)
+• 10 निच हैशटैग (low competition)
+• 3 माइक्रो हैशटैग (very targeted)
+• 2 ब्रांडेड हैशटैग (your brand)
+
+📝 हैशटैग स्ट्रैटेजी:
+
+✅ पोस्ट के पहले comment में hashtags रखें
+✅ अपनी stories में भी hashtags use करें
+✅ मासिक hashtag performance review करें
+✅ ट्रेंडिंग hashtags पर नजर रखें
+✅ Branded hashtags बनाएं और promote करें
+
+📅 सीजनल और त्योहार हैशटैग:
+• #diwali #holi #eid #christmas #dussehra
+• #monsoon #summer #winter #newYear
+• #valentinesday #mothersday #fathersday
+• #independence #republic #gandhijayanti
+
+🔥 हॉट ट्रेंडिंग हैशटैग (2024):
+• #reels #trending #viral #explore
+• #aitools #digitalindia #startupindia
+• #sustainability #mentalhealth #fitness
+• #workfromhome #digitalmarketing
+
+⚠️ हैशटैग की गलतियां:
+❌ Shadow banned hashtags use न करें
+❌ हर पोस्ट में वही hashtags use न करें
+❌ Over-saturation (बहुत ज्यादा competitive hashtags)
+❌ Irrelevant hashtags का use
+❌ 30 hashtag limit को exceed न करें
+
+📉 हैशटैग परफॉर्मेंस ट्रैकिंग:
+• Reach और impressions में वृद्धि
+• Profile visits में बढ़ोतरी
+• Hashtag-specific engagement
+• New followers from hashtags
+• Comments और saves में वृद्धि
+
+🎆 प्रो टिप्स:
+1. हर दिन 2-3 नए hashtags try करें
+2. अपने निच के top influencers को research करें
+3. Local hashtags का power use करें
+4. अपने followers से hashtag suggestions मांगें
+5. Weekly hashtag strategy review करें`;
+  }
+
+  return `#️⃣ HASHTAG RESEARCH MASTER GUIDE
+
+${userPlatform} Hashtag Strategy for ${userNiche} Creators
+
+🔍 HASHTAG FUNDAMENTALS:
+• Hashtags increase views (up to 30x more reach)
+• They help your content reach target audience
+• They aid in community building
+• They improve brand visibility
+
+📊 HASHTAG CATEGORIES:
+
+1️⃣ BROAD HASHTAGS (10M+ posts)
+• #love #instagood #photooftheday #fashion
+• #beautiful #follow #picoftheday #india
+• Very high competition, low visibility
+
+2️⃣ MID-LEVEL HASHTAGS (1M-10M posts)
+• #mumbai #delhi #bangalore #fitness
+• #foodie #travel #lifestyle #bollywood
+• Good balance and reach
+
+3️⃣ NICHE HASHTAGS (100K-1M posts)
+• #{userNiche.toLowerCase().replace(' ', '')} #contentcreator
+• #indianinfluencer #delhifoodie #mumbaifashion
+• Perfect for target audience
+
+4️⃣ MICRO HASHTAGS (10K-100K posts)
+• #mumbaifoodblogger #delhifashionista
+• #bangaloretechie #puneinfluencer
+• Low competition, better engagement
+
+5️⃣ BRANDED HASHTAGS (Under 10K)
+• #yourname #yourbrand #yourcampaign
+• Low competition, better tracking
+
+🎨 TOP HASHTAGS FOR ${userNiche.toUpperCase()}:
+
+🔥 MAIN NICHE HASHTAGS:
+• #{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}
+• #indian{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}
+• #{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}india
+• #{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}blogger
+• #{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}influencer
+
+🌏 LOCATION-BASED HASHTAGS:
+• #mumbai #delhi #bangalore #pune #kolkata
+• #mumbaiinfluencer #delhiinfluencer
+• #southindia #northindia #westindia
+• #indiagram #incredibleindia
+
+🚀 RESEARCH TOOLS (FREE):
+• Display Purposes - Instagram hashtag suggestions
+• All Hashtag - Hashtag generator
+• Hashtagify - Hashtag popularity tracking
+• Instagram Search - Related hashtags
+• Competitor Analysis - What your competitors use
+
+📈 PERFECT HASHTAG MIX (30 hashtags):
+• 5 Broad hashtags (high competition)
+• 10 Mid-level hashtags (moderate competition)
+• 10 Niche hashtags (low competition)
+• 3 Micro hashtags (very targeted)
+• 2 Branded hashtags (your brand)
+
+📝 HASHTAG STRATEGY:
+
+✅ Place hashtags in first comment
+✅ Use hashtags in your stories too
+✅ Monthly hashtag performance review
+✅ Keep eye on trending hashtags
+✅ Create and promote branded hashtags
+
+📅 SEASONAL & FESTIVAL HASHTAGS:
+• #diwali #holi #eid #christmas #dussehra
+• #monsoon #summer #winter #newYear
+• #valentinesday #mothersday #fathersday
+• #independence #republic #gandhijayanti
+
+🔥 HOT TRENDING HASHTAGS (2024):
+• #reels #trending #viral #explore
+• #aitools #digitalindia #startupindia
+• #sustainability #mentalhealth #fitness
+• #workfromhome #digitalmarketing
+
+⚠️ HASHTAG MISTAKES TO AVOID:
+❌ Don't use shadow banned hashtags
+❌ Don't use same hashtags every post
+❌ Avoid over-saturation (too many competitive hashtags)
+❌ Don't use irrelevant hashtags
+❌ Don't exceed 30 hashtag limit
+
+📉 HASHTAG PERFORMANCE TRACKING:
+• Increase in reach and impressions
+• Growth in profile visits
+• Hashtag-specific engagement
+• New followers from hashtags
+• Increase in comments and saves
+
+🎆 PRO TIPS:
+1. Try 2-3 new hashtags daily
+2. Research top influencers in your niche
+3. Use the power of local hashtags
+4. Ask your followers for hashtag suggestions
+5. Review hashtag strategy weekly`;
 }
 
 function generateRateCardContent(
@@ -1668,7 +1881,7 @@ function generatePremiumToolsContent(
   if (language === "hindi") {
     return `🛠️ प्रीमियम क्रिएटर टूल्स गाइड
 
-${userNiche} क्रिएटर्स के लिए आवश्यक फ्री और पेड टूल्स
+${userNiche} क्रिएटर्स के लिए आवश्यक फ्री और पेड टूल���स
 
 📈 एनालिटिक्स टूल्स:
 • Instagram Insights (FREE) - बिल्ट-इन एनालिटिक्स
@@ -1683,7 +1896,7 @@ ${userNiche} क्रिएटर्स के लिए आवश्यक फ
 • Figma (FREE/Pro $12/month) - UI/UX डिजाइन
 • Unsplash (FREE) - हाई-क्वालिटी स्टॉक फोटोस
 
-🗺️ कंटेंट प���लानिंग टूल्स:
+🗺️ कंटेंट प्लानिंग टूल्स:
 • Notion (FREE/Pro $8/month) - कंटेंट प्लानिंग
 • Trello (FREE/Pro $5/month) - प्रोजेक्ट मैनेजमेंट
 • Airtable (FREE/Pro $20/month) - कंटेंट कैलेंडर
@@ -1727,7 +1940,7 @@ ${userNiche} क्रिएटर्स के लिए आवश्यक फ
 • BuzzSumo ($99/month) - कंटेंट रिसर्च
 • AnswerThePublic (FREE/Pro $99/month) - कीवर्ड रिसर्च
 
-📦 अ��्-इन-वन प्लेटफॉर्म:
+📦 अल्-इन-वन प्लेटफॉर्म:
 • CreatorSpace (₹2000/month) - भारतीय क्रिएटर प्लेटफॉर्म
 • Koo Creator Studio (FREE) - भारतीय सोशल मीडिया
 • ShareChat Creator Program (FREE) - रीजनल कंटेंट
@@ -1783,7 +1996,7 @@ Essential FREE and PAID tools for ${userNiche} creators
 • Hashtagify (FREE/Pro $29/month) - Hashtag research
 • Display Purposes (FREE) - Instagram hashtags
 • All Hashtag (FREE) - Hashtag generator
-�� TubeBuddy (FREE/Pro $7.20/month) - YouTube SEO
+• TubeBuddy (FREE/Pro $7.20/month) - YouTube SEO
 
 📧 EMAIL MARKETING:
 • Mailchimp (FREE/Pro $10/month) - Email automation
