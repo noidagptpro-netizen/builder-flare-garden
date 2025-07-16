@@ -632,7 +632,7 @@ export default function Shop() {
                   onChange={(e) =>
                     setCustomerInfo({ ...customerInfo, name: e.target.value })
                   }
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 text-gray-900"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -646,7 +646,7 @@ export default function Shop() {
                   onChange={(e) =>
                     setCustomerInfo({ ...customerInfo, email: e.target.value })
                   }
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 text-gray-900"
                   placeholder="your@email.com"
                 />
               </div>
@@ -660,7 +660,7 @@ export default function Shop() {
                   onChange={(e) =>
                     setCustomerInfo({ ...customerInfo, phone: e.target.value })
                   }
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 text-gray-900"
                   placeholder="+91 9876543210"
                 />
               </div>
@@ -674,7 +674,7 @@ export default function Shop() {
                   onChange={(e) =>
                     setCustomerInfo({ ...customerInfo, city: e.target.value })
                   }
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 text-gray-900"
                   placeholder="Mumbai"
                 />
               </div>
