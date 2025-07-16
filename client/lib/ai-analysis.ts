@@ -777,7 +777,7 @@ const generateMarketInsights = (data: QuizData, fameScore: number) => {
     );
   } else if (data.city && data.city.toLowerCase().includes("delhi")) {
     insights.push(
-      `🏛️ Delhi Opportunity: Political capital offers unique government and corporate partnership opportunities.`,
+      `���️ Delhi Opportunity: Political capital offers unique government and corporate partnership opportunities.`,
     );
   } else if (data.city && data.city.toLowerCase().includes("bangalore")) {
     insights.push(
@@ -790,18 +790,97 @@ const generateMarketInsights = (data: QuizData, fameScore: number) => {
 
 const generateCompetitorAnalysis = (data: QuizData) => {
   const followerNum = getFollowerCount(data.followerCount);
+  const incomeNum = getIncomeAmount(data.monthlyIncome);
 
-  if (followerNum >= 100000) {
-    return "You're in the top 2% of creators in your niche. Focus on maintaining leadership position.";
+  // Advanced competitive positioning
+  let analysis = "";
+  let benchmarks = "";
+  let strategy = "";
+
+  if (followerNum >= 500000) {
+    analysis =
+      "🏆 Elite Creator Status: You're in the top 0.5% of creators globally.";
+    benchmarks =
+      "Benchmark: Average earnings ₹2-10L/month, 50+ brand inquiries monthly.";
+    strategy =
+      "Strategy: Focus on personal brand licensing, product lines, and scaling your business.";
+  } else if (followerNum >= 100000) {
+    analysis = "🌟 Macro-Influencer Tier: Top 2% of creators in your niche.";
+    benchmarks =
+      "Benchmark: Average earnings ₹50K-5L/month, 10-25 brand deals monthly.";
+    strategy =
+      "Strategy: Premium brand partnerships, speaking engagements, and course creation.";
   } else if (followerNum >= 50000) {
-    return "You're in the top 5% of creators. Close to breaking into the elite tier.";
+    analysis =
+      "📈 Rising Star: Top 5% of creators, almost at macro-influencer level.";
+    benchmarks =
+      "Benchmark: Average earnings ₹25-75K/month, 5-15 brand collaborations monthly.";
+    strategy =
+      "Strategy: Consistency to break 100K barrier, diversify revenue streams.";
   } else if (followerNum >= 10000) {
-    return "You're in the top 15% of creators. Strong position for brand partnerships.";
+    analysis =
+      "💪 Micro-Influencer Sweet Spot: Top 15% of creators with high engagement potential.";
+    benchmarks =
+      "Benchmark: Average earnings ₹8-35K/month, 2-8 brand partnerships monthly.";
+    strategy =
+      "Strategy: Optimize for engagement, build email list, create digital products.";
   } else if (followerNum >= 1000) {
-    return "You're ahead of 70% of creators. Focus on reaching the 10K milestone.";
+    analysis = "🚀 Growing Creator: Ahead of 70% of content creators.";
+    benchmarks =
+      "Benchmark: Average earnings ₹1-8K/month, 1-3 brand collaborations monthly.";
+    strategy =
+      "Strategy: Focus on reaching 10K milestone through consistent quality content.";
   } else {
-    return "Starting phase. 95% of creators never reach 1K followers - you can be different.";
+    analysis =
+      "🌱 Foundation Builder: Starting phase with massive growth potential.";
+    benchmarks =
+      "Benchmark: 95% of creators never reach 1K followers - you have the tools to be different.";
+    strategy =
+      "Strategy: Post daily, engage authentically, find your unique voice.";
   }
+
+  // Income efficiency analysis
+  if (incomeNum > 0 && followerNum > 0) {
+    const efficiency = incomeNum / (followerNum / 1000);
+    if (efficiency >= 1000) {
+      strategy +=
+        " 💰 Exceptional monetization - you're earning ₹" +
+        Math.round(efficiency) +
+        " per 1K followers!";
+    } else if (efficiency >= 500) {
+      strategy +=
+        " 💸 Good monetization efficiency at ₹" +
+        Math.round(efficiency) +
+        " per 1K followers.";
+    } else if (efficiency < 200) {
+      strategy +=
+        " ⚡ Monetization opportunity: Your current ₹" +
+        Math.round(efficiency) +
+        " per 1K followers can be 3-5x higher.";
+    }
+  }
+
+  // Niche-specific competitive landscape
+  const nicheCompetition = {
+    "Fashion & Beauty":
+      "High competition but massive market. Stand out with authenticity and unique style.",
+    "Technology & AI":
+      "Moderate competition, high-value audience. Technical expertise gives you an edge.",
+    "Personal Finance & Investing":
+      "Growing competition but premium audience. Trust and credibility are key.",
+    "Gaming & Esports":
+      "Saturated but passionate audience. Consistency and skill showcase matter most.",
+    "Education & Learning":
+      "Moderate competition, highest retention rates. Focus on practical value delivery.",
+  };
+
+  const nicheAdvice =
+    nicheCompetition[data.niche as keyof typeof nicheCompetition];
+  if (nicheAdvice) {
+    strategy += " 🎯 Niche Insight: " + nicheAdvice;
+  }
+
+  return `${analysis}\n\n📊 ${benchmarks}\n\n🎯 ${strategy}`;
 };
 
 const calculateGrowthPotential = (
