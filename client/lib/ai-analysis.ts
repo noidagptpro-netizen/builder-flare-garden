@@ -291,7 +291,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
     );
   } else if (getFollowerScore(data.followerCount) >= 25) {
     strengths.push(
-      `🌱 You're in the sweet spot for rapid growth! ${data.followerCount} followers means you've proven your content resonates.`,
+      `�� You're in the sweet spot for rapid growth! ${data.followerCount} followers means you've proven your content resonates.`,
     );
   }
 
@@ -777,7 +777,7 @@ const generateMarketInsights = (data: QuizData, fameScore: number) => {
     );
   } else if (data.city && data.city.toLowerCase().includes("delhi")) {
     insights.push(
-      `���️ Delhi Opportunity: Political capital offers unique government and corporate partnership opportunities.`,
+      `🏛️ Delhi Opportunity: Political capital offers unique government and corporate partnership opportunities.`,
     );
   } else if (data.city && data.city.toLowerCase().includes("bangalore")) {
     insights.push(
@@ -887,31 +887,161 @@ const calculateGrowthPotential = (
   data: QuizData,
   fameScore: number,
 ): number => {
-  let potential = 50; // Base potential
+  let potential = 45; // Base potential
+  const followerNum = getFollowerCount(data.followerCount);
+  const incomeNum = getIncomeAmount(data.monthlyIncome);
+  const currentMonth = new Date().getMonth();
 
-  // Add points based on various factors
-  if (fameScore >= 70) potential += 30;
-  else if (fameScore >= 50) potential += 20;
-  else if (fameScore >= 30) potential += 10;
+  // Fame score impact (0-25 points)
+  if (fameScore >= 80) potential += 25;
+  else if (fameScore >= 70) potential += 20;
+  else if (fameScore >= 60) potential += 15;
+  else if (fameScore >= 50) potential += 10;
+  else if (fameScore >= 30) potential += 5;
 
+  // Experience multiplier (0-15 points)
   if (
     data.experience.some(
-      (exp) => exp.includes("Expert") || exp.includes("Experienced"),
+      (exp) => exp.includes("Expert") || exp.includes("विशेषज्ञ"),
     )
   ) {
     potential += 15;
+  } else if (
+    data.experience.some(
+      (exp) => exp.includes("Experienced") || exp.includes("अनुभवी"),
+    )
+  ) {
+    potential += 12;
+  } else if (
+    data.experience.some(
+      (exp) => exp.includes("Growing") || exp.includes("बढ़ रहे"),
+    )
+  ) {
+    potential += 8;
   }
 
-  if (data.secondaryPlatforms.length >= 2) potential += 10;
+  // Platform diversification (0-12 points)
+  if (data.secondaryPlatforms.length >= 4) potential += 12;
+  else if (data.secondaryPlatforms.length >= 3) potential += 10;
+  else if (data.secondaryPlatforms.length >= 2) potential += 7;
+  else if (data.secondaryPlatforms.length >= 1) potential += 4;
 
+  // Posting consistency (0-15 points)
   if (
     data.postingFrequency === "Daily" ||
-    data.postingFrequency === "3-4 times a week"
+    data.postingFrequency === "रोज़ाना"
   ) {
     potential += 15;
+  } else if (
+    data.postingFrequency === "3-4 times a week" ||
+    data.postingFrequency === "सप्ताह में 3-4 बार"
+  ) {
+    potential += 12;
+  } else if (
+    data.postingFrequency === "Weekly" ||
+    data.postingFrequency === "साप्ताहिक"
+  ) {
+    potential += 8;
+  } else if (
+    data.postingFrequency === "Irregular" ||
+    data.postingFrequency === "अनियमित"
+  ) {
+    potential -= 5; // Penalty for irregular posting
   }
 
-  return Math.min(potential, 95);
+  // Monetization readiness (0-10 points)
+  if (followerNum >= 10000 && incomeNum < 15000) {
+    potential += 10; // High growth potential if not monetizing properly
+  } else if (followerNum >= 5000 && incomeNum === 0) {
+    potential += 8;
+  } else if (followerNum >= 1000 && incomeNum === 0) {
+    potential += 5;
+  }
+
+  // Niche growth potential (0-8 points)
+  const growingNiches = [
+    "Technology & AI",
+    "टेक्नोलॉजी और AI",
+    "Personal Finance & Investing",
+    "व्यक्तिगत वित्त और निवेश",
+    "Gaming & Esports",
+    "गेमिंग और एस्पोर्ट्स",
+    "Education & Learning",
+    "शिक्षा और सीखना",
+  ];
+  if (growingNiches.includes(data.niche)) {
+    potential += 8;
+  }
+
+  // Content type effectiveness (0-6 points)
+  if (
+    data.contentType === "Short Videos/Reels" ||
+    data.contentType === "छोटे वीडियो/रील्स"
+  ) {
+    potential += 6; // Reels have highest growth potential
+  } else if (
+    data.contentType === "Long-form Videos" ||
+    data.contentType === "लंबे वीडियो"
+  ) {
+    potential += 4;
+  } else if (
+    data.contentType === "Mixed Content" ||
+    data.contentType === "मिश्रित कंटेंट"
+  ) {
+    potential += 3;
+  }
+
+  // Goal alignment bonus (0-5 points)
+  const growthGoals = [
+    "Build authentic community",
+    "Achieve viral content",
+    "Expand into new platforms",
+    "authentic कम्युनिटी बनाना",
+    "वायरल कंटेंट बनाना",
+    "नए प्लेटफॉर्म्स में expand",
+  ];
+  if (data.goals.some((goal) => growthGoals.some((g) => goal.includes(g)))) {
+    potential += 5;
+  }
+
+  // Challenge opportunity bonus (0-5 points)
+  const solvableChallenges = [
+    "Getting consistent views",
+    "Understanding analytics",
+    "Converting followers",
+    "लगातार व्यूज",
+    "एनालिटिक्स",
+    "फॉलोअर्स को पेइंग कस्टमर",
+  ];
+  if (
+    data.biggestChallenge.some((challenge) =>
+      solvableChallenges.some((c) => challenge.includes(c)),
+    )
+  ) {
+    potential += 5; // These challenges are easily solvable with right strategy
+  }
+
+  // Seasonal boost
+  if ([9, 10, 11].includes(currentMonth)) {
+    // Oct-Dec (festival season)
+    potential += 3;
+  }
+
+  // Age factor for certain niches
+  if (data.age) {
+    const age = parseInt(data.age);
+    if (
+      age >= 18 &&
+      age <= 30 &&
+      ["Fashion & Beauty", "Gaming & Esports", "Music & Dance"].includes(
+        data.niche,
+      )
+    ) {
+      potential += 3; // Young creators in visual niches have higher growth potential
+    }
+  }
+
+  return Math.min(Math.max(potential, 15), 95); // Ensure range is 15-95
 };
 
 export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
