@@ -247,7 +247,7 @@ const languages = {
     title: "क्रिएटर सक्सेस क्विज़",
     subtitle: "3 मिनट में अपनी व्यक्तिगत ग्रोथ रणनीति पाएं",
     steps: {
-      1: "प्लेटफॉर्म और फॉलोअर्स",
+      1: "प्ले��फॉर्म और फॉलोअर्स",
       2: "कंटेंट निच",
       3: "कंटेंट प्रकार",
       4: "पोस्टिंग आवृत्ति",
@@ -265,7 +265,7 @@ const languages = {
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
-        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
+        "आप कितने समय से कंटें��� बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       biggestChallenge:
         "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क्या हैं? (अधिकतम 3 चुनें)",
@@ -285,7 +285,7 @@ const languages = {
         "���ेबसाइट/ब्लॉग",
       ],
       followerRanges: [
-        "1K से कम",
+        "1K से ��म",
         "1K - 5K",
         "5K - 10K",
         "10K - 50K",
@@ -349,7 +349,7 @@ const languages = {
         "₹1L+",
       ],
       challenges: [
-        "लगातार व्यूज और एंगेजमेंट पाना",
+        "लगातार ���्यूज और एंगेजमेंट पाना",
         "अपनी यूनीक आवाज़/स्टाइल खोजना",
         "एल्गोरिदम बदलाव से पहुंच में कमी",
         "ऑथेंटिसिटी और ब्रांड अपील का संतुलन",
@@ -365,9 +365,9 @@ const languages = {
       goals: [
         "मासिक आय ₹50K+ तक बढ़ाना",
         "100K+ की authentic कम्��ुनिटी बनाना",
-        "ड्रीम ���्रांड्स के साथ पार्टनरशिप",
+        "ड्रीम ���्रांड्स ���े साथ पार्टनरशिप",
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
-        "अपनी niche मे��� go-to एक्सपर्ट बनना",
+        "अपनी niche मे��� go-to एक्���पर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइबर्स की email लिस्ट",
         "इंडस्ट्री ���वेंट्स/पॉडकास्ट्स में बोलना",
@@ -385,7 +385,7 @@ const languages = {
     freeResources: {
       title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संसाधन",
       subtitle:
-        "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली टूल्स को डाउनलोड ���रें",
+        "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली टूल्स को डाउनलोड ���रे��",
       mediaKit: {
         title: "प्रोफेशनल मीडिया किट टेम्प्लेट",
         description: "आकर्षक मीडिया किट बनाएं जो ब्रांड्स को पसंद आएंगे",
@@ -521,7 +521,7 @@ ${language === "hindi" ? "पोस्टिंग आवृत्ति:" : "Po
 ${language === "hindi" ? "मासिक आय:" : "Monthly Income:"} ${quizData.monthlyIncome}
 
 ${language === "hindi" ? "सुझावित दरें (आपकी ऑडियंस के आधार पर):" : "SUGGESTED RATES (Based on your audience):"}
-${language === "hindi" ? "प���स्ट दरें:" : "Post Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "2,000-5,000" : quizData.followerCount.includes("1K - 5K") ? "5,000-12,000" : "15,000-50,000"}
+${language === "hindi" ? "प�����्ट दरें:" : "Post Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "2,000-5,000" : quizData.followerCount.includes("1K - 5K") ? "5,000-12,000" : "15,000-50,000"}
 ${language === "hindi" ? "स्टोरी दरें:" : "Story Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-3,000" : quizData.followerCount.includes("1K - 5K") ? "3,000-8,000" : "8,000-25,000"}
 ${language === "hindi" ? "��ील दरें:" : "Reel Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "3,000-8,000" : quizData.followerCount.includes("1K - 5K") ? "8,000-20,000" : "25,000-75,000"}
 
@@ -557,7 +557,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 2: फॉलो-अप ��मेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
+${language === "hindi" ? "टेम्प्लेट 2: फॉल��-अप ��मेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
@@ -605,7 +605,7 @@ ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
 ${language === "hindi" ? "आपके proposal के लिए thank you! मैं definitely interested हूं।" : "Thank you for your proposal! I'm definitely interested."}
 
-${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust क��� सकते हैं? मैं ₹[your counter] suggest करूंगा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
+${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust क��� सकते हैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
 ${language === "hindi" ? "• मेरी audience का [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
@@ -642,7 +642,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 6: लॉन्ग-टर्म पार्टनरशिप प्रपोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
+${language === "hindi" ? "टेम्प्लेट 6: लॉन्ग-टर्म पा���्टनरशिप प्रपोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `Long-term Partnership Proposal - ${userName} x [Brand]` : `Long-term Partnership Proposal - ${userName} x [Brand]`}
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
@@ -676,7 +676,7 @@ ${userName}
 ${language === "hindi" ? "बोनस टिप्स:" : "BONUS TIPS:"}
 ${language === "hindi" ? "• हमेशा personalize करें emails" : "• Always personalize your emails"}
 ${language === "hindi" ? "• Subject lines को catchy रखें" : "• Keep subject lines catchy"}
-${language === "hindi" ? "• Follow-up करना न भूलें" : "• Don't forget to follow up"}
+${language === "hindi" ? "• Follow-up करना न भूले��" : "• Don't forget to follow up"}
 ${language === "hindi" ? "• Professional tone maintain करें" : "• Maintain a professional tone"}
 ${language === "hindi" ? "• Results और metrics share करें" : "• Share results and metrics"}
 ${language === "hindi" ? "• Grateful और humble रहें" : "• Be grateful and humble"}";
@@ -707,7 +707,7 @@ ${language === "hindi" ? "- अन्य क्रिएटर्स के स�
 ${language === "hindi" ? "दिन 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
 ${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
 ${language === "hindi" ? "- ब्रांड्स से संपर्क शुरू करें" : "- Start reaching out to brands"}
-${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
+${language === "hindi" ? "- ईमेल लिस���ट बनाना शुरू करें" : "- Start building email list"}
 
 ${language === "hindi" ? "अपेक्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
 ${language === "hindi" ? "- फॉलोअर ग्रोथ: 40-80%" : "- Follower Growth: 40-80%"}
@@ -764,7 +764,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
               <CheckCircle className="w-10 h-10 text-white" />
             </div>
 
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t.freeResources.title}
             </h1>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
@@ -937,7 +937,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
       <main className="container mx-auto px-4 py-12">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t.title}
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
@@ -975,7 +975,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                 {currentStep === 1 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Your Main Platform 📱
                       </h2>
                       <p className="text-gray-600">
@@ -1056,7 +1056,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                 {currentStep === 2 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Your Content Niche 🎯
                       </h2>
                       <p className="text-gray-600">
@@ -1091,7 +1091,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                 {currentStep === 3 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Content Format 🎬
                       </h2>
                       <p className="text-gray-600">
@@ -1126,7 +1126,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                 {currentStep === 4 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Posting Schedule ⏰
                       </h2>
                       <p className="text-gray-600">
@@ -1163,7 +1163,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                 {currentStep === 5 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Your Creator Journey 🚀
                       </h2>
                       <p className="text-gray-600">
@@ -1228,7 +1228,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                 {currentStep === 6 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Your Challenges 🎯
                       </h2>
                       <p className="text-gray-600">
@@ -1288,7 +1288,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                 {currentStep === 7 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Your Goals 🎯
                       </h2>
                       <p className="text-gray-600">
@@ -1343,7 +1343,7 @@ ${language === "hindi" ? "- ब्रांड इंक्वायरी: 3-8"
                 {currentStep === 8 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                    <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Social Profiles 🔗
                       </h2>
                       <p className="text-gray-600">
