@@ -135,7 +135,7 @@ const languages = {
     incomeProjection: "आय क्षमता",
     unlock: "अपना संपूर्ण क्रिएटर टूलकिट अनलॉक करें",
     unlockSubtitle:
-      "अपनी व्यक्तिगत फेम स्कोर रिपोर्ट, प्रोफेशनल मीडिया किट टेम्प्लेट, और ग्रोथ स्ट्रैटेजी + हमारे संपूर्ण प्रीमियम क्रिएटर टूल्स तक पहुंच प्राप्त करें।",
+      "अपनी व्यक्तिगत फेम स्कोर रिपोर्ट, प्��ोफेशनल मीडिया किट टेम्प्लेट, और ग्रोथ स्ट्रैटेजी + हमारे संपूर्ण प्रीमियम क्रिएटर टूल्स तक पहुंच प्राप्त करें।",
     paymentForm: "अप���ी जानकारी पूरी करें",
     fullName: "पूरा नाम",
     emailAddress: "ईमेल पता",
@@ -144,7 +144,7 @@ const languages = {
     age: "उम्र",
     paySecure: "₹99 भुगतान करें - सुरक्षित भुगतान",
     processing: "प्रसंस्करण...",
-    whatYouGet: "भुग���ान के बाद आपको मिलेगा:",
+    whatYouGet: "भुगतान के बाद आपको मिलेगा:",
     fameScoreReport: "फेम स्कोर रिपोर्ट",
     mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
@@ -282,7 +282,7 @@ export default function Results() {
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "फेम स्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
-${language === "hindi" ? "विका��� क्षमता:" : "Growth Potential:"} ${analysis.growthPotential}%
+${language === "hindi" ? "विकास क्षमता:" : "Growth Potential:"} ${analysis.growthPotential}%
 ${language === "hindi" ? "आय प्रक्षेपण:" : "Income Projection:"} ${analysis.incomeProjection}
 
 ${language === "hindi" ? "प्रोफाइल सारांश:" : "PROFILE SUMMARY:"}
@@ -306,7 +306,7 @@ ${analysis.suggestions.map((s: string, i: number) => `${i + 1}. ${s}`).join("\n"
 ${language === "hindi" ? "अगले कदम:" : "NEXT STEPS:"}
 ${language === "hindi" ? "1. अपनी कंटेंट रणनीति को अनुकूलित करें" : "1. Optimize your content strategy"}
 ${language === "hindi" ? "2. ब्रांड पार्टनरशिप के लिए तैयार हो जाएं" : "2. Prepare for brand partnerships"}
-${language === "hindi" ? "3. अपने एंगेजमेंट मेट्रिक्स को बेहतर बनाएं" : "3. Improve your engagement metrics"}
+${language === "hindi" ? "3. अपने एंगेज��ेंट मेट्रिक्स को बेहतर बनाएं" : "3. Improve your engagement metrics"}
 
 ${language === "hindi" ? "जेनरेट किया गया:" : "Generated:"} ${new Date().toLocaleDateString()}`;
     } else if (type === "mediaKit") {
@@ -350,7 +350,7 @@ ${language === "hindi" ? "मुख्य चुनौतियां:" : "Main 
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 3).join(", ")}
 ${language === "hindi" ? "वर्तमान आय:" : "Current Income:"} ${quizData.monthlyIncome}
 
-${language === "hindi" ? "30-दिन की कार्य योजना:" : "30-DAY ACTION PLAN:"}
+${language === "hindi" ? "30-दि�� की कार्य योजना:" : "30-DAY ACTION PLAN:"}
 ${language === "hindi" ? "सप्ताह 1-2:" : "Week 1-2:"}
 ${analysis.suggestions
   .slice(0, 2)
@@ -365,7 +365,7 @@ ${analysis.suggestions
 
 ${language === "hindi" ? "60-दिन की रणनीति:" : "60-DAY STRATEGY:"}
 ${language === "hindi" ? "- कंटेंट कैलेंडर का अनुकूलन" : "- Content calendar optimization"}
-${language === "hindi" ? "- ब्रांड आउटरीच शुरू क���ना" : "- Begin brand outreach"}
+${language === "hindi" ? "- ब्रांड आउटरीच शुरू करना" : "- Begin brand outreach"}
 ${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में सुधार" : "- Improve engagement metrics"}
 ${language === "hindi" ? "- नेटवर्किंग और सहयोग" : "- Networking and collaborations"}
 
@@ -458,7 +458,7 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
             </h1>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
               {language === "hindi"
-                ? "आपका संपूर्ण क्रिएटर टूलकिट तैयार है। अपनी व्यक्तिगत फाइलें डाउनलोड करे��।"
+                ? "आपका संपूर्ण क्रिएटर टूलकिट तैयार है। अपनी व्यक्तिगत फाइलें डाउनलोड करें।"
                 : "Your complete Creator Toolkit is ready. Download your personalized files."}
             </p>
 
@@ -1025,7 +1025,7 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
                               city: e.target.value,
                             })
                           }
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                          className="w-full px-3 py-2 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 text-gray-900 bg-white"
                           placeholder="Mumbai"
                         />
                       </div>
