@@ -142,9 +142,9 @@ const languages = {
     phoneNumber: "फोन नंबर",
     city: "शहर",
     age: "उम्र",
-    paySecure: "₹99 भुगतान करें - सुरक्षि��� भुगतान",
+    paySecure: "₹99 भुगतान करें - सुरक्षित भुगतान",
     processing: "प्रसंस्करण...",
-    whatYouGet: "भुगतान के बाद आपको मिलेगा:",
+    whatYouGet: "भुगतान के बाद आपको म��लेगा:",
     fameScoreReport: "फेम स्कोर रिपोर्ट",
     mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
@@ -224,8 +224,9 @@ export default function Results() {
       errors.email = "Please enter a valid email address";
     }
 
-    if (!validateIndianPhone(personalInfo.phone)) {
-      errors.phone = "Please enter a valid Indian phone number (+91)";
+    if (!validateWorldwidePhone(personalInfo.phone)) {
+      errors.phone =
+        "Please enter a valid phone number with country code (e.g., +91 9876543210)";
     }
 
     if (!validateAge(personalInfo.age)) {
@@ -288,7 +289,7 @@ export default function Results() {
     const userName = personalInfo.name || quizData.name || "Creator";
 
     if (type === "fameScore") {
-      content = `${language === "hindi" ? "फेम स्कोर रिपो���्ट" : "FAME SCORE REPORT"} - ${userName}
+      content = `${language === "hindi" ? "फेम स्कोर रिपोर्ट" : "FAME SCORE REPORT"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
@@ -321,9 +322,9 @@ ${language === "hindi" ? "3. अपने एंगेज��ेंट मे�
 
 ${language === "hindi" ? "जेनरेट किया गया:" : "Generated:"} ${new Date().toLocaleDateString()}`;
     } else if (type === "mediaKit") {
-      content = `${language === "hindi" ? "प्रोफेशनल मीड��या किट" : "PROFESSIONAL MEDIA KIT"} - ${userName}
+      content = `${language === "hindi" ? "प्रोफेशनल मीडिया किट" : "PROFESSIONAL MEDIA KIT"} - ${userName}
 
-${language === "hindi" ? "व्यक्तिगत जानकारी:" : "PERSONAL INFORMATION:"}
+${language === "hindi" ? "व्यक्ति��त जानकारी:" : "PERSONAL INFORMATION:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "ईमेल:" : "Email:"} ${personalInfo.email}
 ${language === "hindi" ? "फोन:" : "Phone:"} ${personalInfo.phone}
@@ -337,7 +338,7 @@ ${language === "hindi" ? "कंटेंट प्रकार:" : "Content Typ
 
 ${language === "hindi" ? "प्रदर्शन मेट्रिक्स:" : "PERFORMANCE METRICS:"}
 ${language === "hindi" ? "फ���म स्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
-${language === "hindi" ? "एंगेजमे���ट रेट:" : "Engagement Rate:"} ${language === "hindi" ? "उच्च गुणवत्ता" : "High Quality"}
+${language === "hindi" ? "एंगेजमेंट रेट:" : "Engagement Rate:"} ${language === "hindi" ? "उच्च गुणवत्ता" : "High Quality"}
 ${language === "hindi" ? "मासिक रीच:" : "Monthly Reach:"} ${language === "hindi" ? "व्यापक दर्शक" : "Wide Audience"}
 
 ${language === "hindi" ? "सुझावित दरें (भारतीय बाजार आधारित):" : "SUGGESTED RATES (Indian Market Based):"}
@@ -382,7 +383,7 @@ ${language === "hindi" ? "- ब्रांड आउटरीच शुरू �
 ${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में सुधार" : "- Improve engagement metrics"}
 ${language === "hindi" ? "- नेटवर्किंग और सहयोग" : "- Networking and collaborations"}
 
-${language === "hindi" ? "90-दिन के लक्ष��य:" : "90-DAY GOALS:"}
+${language === "hindi" ? "90-दिन के लक्ष्य:" : "90-DAY GOALS:"}
 ${language === "hindi" ? "- फॉलोअर वृद्धि:" : "- Follower Growth:"} 30-50%
 ${language === "hindi" ? "- एंगेजमेंट वृद्धि:" : "- Engagement Increase:"} 40-80%
 ${language === "hindi" ? "- आय लक्ष्य:" : "- Income Target:"} ${analysis.incomeProjection}
