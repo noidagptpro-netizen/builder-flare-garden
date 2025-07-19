@@ -114,7 +114,7 @@ const languages = {
         "What are your biggest challenges as a creator? (Select max 3)",
       goals: "What are your main goals for the next 6 months? (Select max 3)",
       socialLinks: "Share Your Social Presence (Optional)",
-      bio: "Tell us about yourself and your content (optional)",
+      bio: "Anything more about yourself and your content (optional)",
     },
     options: {
       platforms: [
@@ -258,11 +258,11 @@ const languages = {
     },
     questions: {
       primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
-      followerCount: "आपक�� प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
+      followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपय���ग करते हैं? (सभी लागू का चयन करें)",
       niche: "आपका कंटेंट किस विषय पर है?",
-      contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
+      contentType: "आप किस प्���कार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
         "आप क��तने समय से कंटें��� बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
@@ -337,7 +337,7 @@ const languages = {
         "श���रुआती (6 महीने - 1 साल)",
         "बढ़ रहे हैं (1-2 साल)",
         "अनुभवी (2-3 साल)",
-        "विशेषज्ञ (3+ साल)",
+        "विशेषज्ञ (3+ स���ल)",
       ],
       incomes: [
         "₹0 (अभी तक कोई आय नहीं)",
@@ -360,7 +360,7 @@ const languages = {
         "एनालिटिक्स और मेट्रिक्स स���झना",
         "सच्ची कम्युनिटी बनाना",
         "ट्रेंड्स के साथ रिलेवेंट रहना",
-        "कई प्लेटफॉर्म को efficiently मैनेज करना",
+        "कई ���्लेटफॉर्म को efficiently मैनेज करना",
       ],
       goals: [
         "मासिक आय ₹50K+ तक बढ़ाना",
@@ -383,7 +383,7 @@ const languages = {
       submit: "मेरा क्रिएटर विश्लेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मु��्त क्रिएटर संसाधन",
+      title: "🎉 क्विज़ प��रा! यहाँ हैं आपके मु��्त क्रिएटर संसाधन",
       subtitle:
         "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली टूल्स को डाउनलोड ���रे��",
       mediaKit: {
@@ -392,7 +392,7 @@ const languages = {
       },
       emailTemplates: {
         title: "ब्रांड आउटरीच ईमेल टेम्प्लेट्स",
-        description: "ब्रांड पार्टनरशिप के लिए 30+ सिद���ध ईमेल टेम्प्लेट्स",
+        description: "ब्रांड पार्टनरशिप के लिए 30+ सिद्ध ईमेल टेम्प्लेट्स",
       },
       growthGuide: {
         title: "90-दिन की ग्रोथ स्ट्रैटेजी गाइड",
@@ -540,7 +540,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड नाम] टी�
 
 ${language === "hindi" ? `मैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअर्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
-${language === "hindi" ? "मुझे आपके ब्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
+${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
@@ -550,7 +550,7 @@ ${language === "hindi" ? "- फॉलोअर्स:" : "- Followers:"} ${quizD
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "- प��स्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
-${language === "hindi" ? "क्या आप सहयोग के अवसरों पर चर्चा करने के लिए समय निकाल सकते हैं?" : "Would you be available to discuss collaboration opportunities?"}
+${language === "hindi" ? "क्या आप सहयोग के अवसरों पर चर��चा करने के लिए समय निकाल सकते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
 ${language === "hindi" ? "धन्यवाद," : "Best regards,"}
 ${userName}
@@ -562,7 +562,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "मैंने पिछले सप्ताह आपको collaboration के बारे में email भे���ा था। मुझे लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
+${language === "hindi" ? "मैंने पिछले सप्ताह आपको collaboration के बारे में email भेजा था। मुझे लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और उस post को [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
@@ -578,7 +578,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Dear [Brand Name]," : "Dear [Brand Name],"}
 
-${language === "hindi" ? "आपकी interest के लिए धन्यवाद! यहां ���ेरे collaboration packages हैं:" : "Thank you for your interest! Here are my collaboration packages:"}
+${language === "hindi" ? "आपकी interest के लिए धन्यवाद! यहां मेरे collaboration packages हैं:" : "Thank you for your interest! Here are my collaboration packages:"}
 
 ${language === "hindi" ? "📸 सिंगल पोस्ट: ₹[आपकी rate]" : "📸 Single Post: ₹[Your rate]"}
 ${language === "hindi" ? "• 1 feed post with your product" : "• 1 feed post with your product"}
@@ -598,12 +598,12 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 4: न���गोसिएशन/काउंटर ऑफर" : "TEMPLATE 4: NEGOTIATION/COUNTER OFFER"}
+${language === "hindi" ? "टेम्प्लेट 4: नेगोसिएशन/काउंटर ऑफर" : "TEMPLATE 4: NEGOTIATION/COUNTER OFFER"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? "Re: Collaboration proposal - Let's find a win-win" : "Re: Collaboration proposal - Let's find a win-win"}
 
 ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "आपके proposal के लिए thank you! मैं definitely interested हूं।" : "Thank you for your proposal! I'm definitely interested."}
+${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested हूं।" : "Thank you for your proposal! I'm definitely interested."}
 
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूंगा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
@@ -635,7 +635,7 @@ ${language === "hindi" ? "🎯 AUDIENCE FEEDBACK:" : "🎯 AUDIENCE FEEDBACK:"}
 ${language === "hindi" ? "• [Positive feedback examples]" : "• [Positive feedback examples]"}
 ${language === "hindi" ? "• [Questions about product]" : "• [Questions about product]"}
 
-${language === "hindi" ? "मुझे future collaborations में interest है और आपके products को authentically promote करना पसंद है।" : "I'm interested in future collaborations and love authentically promoting your products."}
+${language === "hindi" ? "मुझे future collaborations में interest है और आपके products को authentically promote करना पसंद ह���।" : "I'm interested in future collaborations and love authentically promoting your products."}
 
 ${language === "hindi" ? "Thank you for trusting me!" : "Thank you for trusting me!"}
 ${userName}
@@ -856,7 +856,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
               </h2>
               <p className="text-gray-600 mb-6">
                 {language === "hindi"
-                  ? "व���यक्तिगत SWOT विश्लेषण, विकास रणनीति, और प्रीमियम टूल्स के साथ अपनी क्रिएटर यात्रा को तेज़ी से आगे बढ़ाएं।"
+                  ? "व्यक्तिगत SWOT विश्लेषण, विकास रणनीति, और प्रीमियम टूल्स के साथ अपनी क्रिएटर यात्रा को तेज़ी से आगे बढ़ाएं।"
                   : "Get personalized SWOT analysis, growth strategy, and premium tools to accelerate your creator journey."}
               </p>
               <button
