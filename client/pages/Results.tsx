@@ -119,7 +119,7 @@ const languages = {
   },
   hindi: {
     title: "आपका क्रिएटर विश्लेष���",
-    subtitle: "आपकी क्रिएटर यात्रा के लिए संपूर्ण व्यक्तिगत अंतर्दृष्टि",
+    subtitle: "आपकी क्रिएटर यात्रा के लिए संपूर्ण व्यक्��िगत अंतर्दृष्टि",
     profileSynopsis: "प्रोफाइल सिनॉप्सिस",
     creatorProfile: "क्रिएटर प्रोफाइल",
     currentStatus: "वर्तमान स्थिति",
@@ -135,7 +135,7 @@ const languages = {
     incomeProjection: "आय क्षमता",
     unlock: "अपना संपूर्ण क्रिएटर टूलकिट अनलॉक करें",
     unlockSubtitle:
-      "अपनी व्यक्तिगत फेम स्कोर रिपोर्ट, प्��ोफेशनल मीडिया किट टेम्प्लेट, और ग्रोथ स्ट्रैटेज�� + हमारे संपूर्ण प्रीमियम क्रिएटर टूल्स तक पहुंच प्राप्त करें।",
+      "अपनी व्यक्तिगत फेम स्कोर रिपोर्ट, प्��ोफेशनल मीडिया किट टेम्प्लेट, और ग्रोथ स्ट्रैटेज�� + हमारे संपूर्ण प्रीमियम क्रिएटर टूल्स तक पहुंच प्राप्त ��रें।",
     paymentForm: "अप���ी जानकारी पूरी करें",
     fullName: "पूरा नाम",
     emailAddress: "ईमेल पता",
@@ -144,7 +144,7 @@ const languages = {
     age: "उम्र",
     paySecure: "₹99 भुगतान करें - सुरक्षित भुगतान",
     processing: "प्रसंस्करण...",
-    whatYouGet: "भुगतान के बाद आपको म��लेगा:",
+    whatYouGet: "भुगतान के बाद आपको मिलेगा:",
     fameScoreReport: "फेम स्कोर रिपोर्ट",
     mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
@@ -288,6 +288,16 @@ export default function Results() {
     let content = "";
     const userName = personalInfo.name || quizData.name || "Creator";
 
+    // Add font size indicator for 3X larger display
+    const fontSizeIndicator = `
+=== DISPLAY INSTRUCTIONS ===
+Recommended Font Size: 24pt (3X larger than standard)
+For best readability, increase font size in your PDF viewer or word processor.
+Optimal zoom: 150-200% for comfortable reading.
+==============================
+
+`;
+
     if (type === "fameScore") {
       content = `${language === "hindi" ? "फेम स्कोर रिपोर्ट" : "FAME SCORE REPORT"} - ${userName}
 
@@ -324,7 +334,7 @@ ${language === "hindi" ? "जेनरेट किया गया:" : "Generat
     } else if (type === "mediaKit") {
       content = `${language === "hindi" ? "प्रोफेशनल मीडिया किट" : "PROFESSIONAL MEDIA KIT"} - ${userName}
 
-${language === "hindi" ? "व्यक्ति��त जानकारी:" : "PERSONAL INFORMATION:"}
+${language === "hindi" ? "व्यक्तिगत जानकारी:" : "PERSONAL INFORMATION:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "ईमेल:" : "Email:"} ${personalInfo.email}
 ${language === "hindi" ? "फोन:" : "Phone:"} ${personalInfo.phone}
@@ -332,7 +342,7 @@ ${language === "hindi" ? "शहर:" : "City:"} ${personalInfo.city}
 
 ${language === "hindi" ? "सोशल मीडिया प्रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
 ${language === "hindi" ? "प्राथमिक प्लेटफॉर्म:" : "Primary Platform:"} ${quizData.primaryPlatform}
-${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
+${language === "hindi" ? "फॉलोअर्���:" : "Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "कंटेंट निच:" : "Content Niche:"} ${quizData.niche}
 ${language === "hindi" ? "कंटेंट प्रकार:" : "Content Type:"} ${quizData.contentType}
 
@@ -389,7 +399,7 @@ ${language === "hindi" ? "- एंगेजमेंट वृद्धि:" : "
 ${language === "hindi" ? "- आय लक्ष्य:" : "- Income Target:"} ${analysis.incomeProjection}
 ${language === "hindi" ? "- ब्रांड पार्टनरशिप:" : "- Brand Partnerships:"} 2-5 ${language === "hindi" ? "सह��ोग" : "collaborations"}
 
-${language === "hindi" ? "मुख्य सफलता संकेतक (KPIs):" : "KEY SUCCESS INDICATORS (KPIs):"}
+${language === "hindi" ? "���ुख्य सफलता संकेतक (KPIs):" : "KEY SUCCESS INDICATORS (KPIs):"}
 ${language === "hindi" ? "- दैनिक एंगेजमेंट रेट" : "- Daily engagement rate"}
 ${language === "hindi" ? "- साप्ताहिक नए फॉलोअर्स" : "- Weekly new followers"}
 ${language === "hindi" ? "- मासिक ब्रांड इंक्वायरी" : "- Monthly brand inquiries"}
