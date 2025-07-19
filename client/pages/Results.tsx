@@ -145,7 +145,7 @@ const languages = {
     paySecure: "₹99 भुगतान करें - सुरक्षित भुगतान",
     processing: "प्रसंस्करण...",
     whatYouGet: "भुगतान के बाद आपको मिलेगा:",
-    fameScoreReport: "फेम स्कोर रिपोर्ट",
+    fameScoreReport: "फ��म स्कोर रिपोर्ट",
     mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
     premiumTools: "प्रीमियम टूल्स",
@@ -163,7 +163,7 @@ const languages = {
     followers: "फॉलोअर्स:",
     monthlyIncome: "मासिक आय:",
     experienceLevel: "अनुभव स्तर:",
-    activePlatforms: "सक्रिय प्लेटफॉर्म:",
+    activePlatforms: "सक्रिय प्ले���फॉर्म:",
     competitorAnalysis: "प्रतियोगी विश्लेषण",
     marketInsights: "बाजार अंतर्दृष्टि",
   },
@@ -183,8 +183,52 @@ export default function Results() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [language, setLanguage] = useState<"english" | "hindi">("english");
   const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
 
   const t = languages[language];
+
+  // Validation functions
+  const validateEmail = (email: string): boolean => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validateIndianPhone = (phone: string): boolean => {
+    const phoneRegex = /^(\+91|91)?[6-9]\d{9}$/;
+    return phoneRegex.test(phone.replace(/\s+/g, ""));
+  };
+
+  const validateAge = (age: string): boolean => {
+    const ageNum = parseInt(age);
+    return !isNaN(ageNum) && ageNum >= 13 && ageNum <= 80;
+  };
+
+  const validateName = (name: string): boolean => {
+    return name.trim().length >= 2;
+  };
+
+  const validateForm = () => {
+    const errors: { [key: string]: string } = {};
+
+    if (!validateName(personalInfo.name)) {
+      errors.name = "Name is required (minimum 2 characters)";
+    }
+
+    if (!validateEmail(personalInfo.email)) {
+      errors.email = "Please enter a valid email address";
+    }
+
+    if (!validateIndianPhone(personalInfo.phone)) {
+      errors.phone = "Please enter a valid Indian phone number (+91)";
+    }
+
+    if (!validateAge(personalInfo.age)) {
+      errors.age = "Age must be between 13 and 80";
+    }
+
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   useEffect(() => {
     const storedData = localStorage.getItem("fameChaseQuizData");
@@ -287,7 +331,7 @@ ${language === "hindi" ? "मासिक रीच:" : "Monthly Reach:"} ${lang
 
 ${language === "hindi" ? "सुझावित दरें:" : "SUGGESTED RATES:"}
 ${language === "hindi" ? "पोस्ट दरें:" : "Post Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "3,000-8,000" : quizData.followerCount.includes("1K - 5K") ? "8,000-15,000" : "15,000-50,000"}
-${language === "hindi" ? "स्टोरी दरें:" : "Story Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,500-4,000" : quizData.followerCount.includes("1K - 5K") ? "4,000-8,000" : "8,000-25,000"}
+${language === "hindi" ? "स्टोरी द���ें:" : "Story Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,500-4,000" : quizData.followerCount.includes("1K - 5K") ? "4,000-8,000" : "8,000-25,000"}
 ${language === "hindi" ? "रील दरें:" : "Reel Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "5,000-12,000" : quizData.followerCount.includes("1K - 5K") ? "12,000-25,000" : "25,000-75,000"}
 
 ${language === "hindi" ? "विशेषताएं:" : "SPECIALTIES:"}
