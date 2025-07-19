@@ -431,9 +431,9 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
     );
   }
 
-  if (age >= 22 && age <= 32 && incomeNum === 0 && followerNum >= 5000) {
+  if (incomeNum === 0 && followerNum >= 5000) {
     strengths.push(
-      `💎 MONETIZATION GOLDMINE: ${age} years old, ${data.followerCount} followers, ₹0 income = MASSIVE untapped potential! You're sitting on ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly.`,
+      `💎 MONETIZATION GOLDMINE: ${data.followerCount} followers with ₹0 current income = MASSIVE untapped potential! You're sitting on ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly opportunity.`,
     );
   }
 
@@ -1390,7 +1390,7 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
   }
 
   const formatIncome = (amount: number) => {
-    if (amount >= 100000) return `₹${Math.round(amount / 1000)}K`;
+    if (amount >= 100000) return `��${Math.round(amount / 1000)}K`;
     if (amount >= 1000) return `₹${Math.round(amount / 1000)}K`;
     return `₹${amount}`;
   };
