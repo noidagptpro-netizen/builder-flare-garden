@@ -261,7 +261,7 @@ const languages = {
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपय���ग करते हैं? (सभी ला��ू का चयन करें)",
-      niche: "आपका कंटेंट किस विषय पर है?",
+      niche: "आप��ा कंटेंट किस विषय पर है?",
       contentType: "आप किस प्���कार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
@@ -305,7 +305,7 @@ const languages = {
         "जीवनशैली और कल्याण",
         "कल�� और डिज़ाइन",
         "गेमि���ग और ���स्पोर्ट्स",
-        "संगीत और नृत्य",
+        "संगी��� और नृत्य",
         "शिक्षा और सीखना",
         "खेल और एथलेटिक्स",
         "प्रेरणा और स्व-सहायता",
@@ -321,7 +321,7 @@ const languages = {
         "लाइव स्ट्रीम",
         "स्टोरीज़",
         "लिखित पोस्ट",
-        "पॉडकास���ट",
+        "पॉडकास्ट",
         "मिश्रित कंटेंट",
       ],
       frequencies: [
@@ -368,7 +368,7 @@ const languages = {
         "ड्रीम ���्रांड्स ���े साथ पार्टनरशिप",
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
         "अपनी niche मे��� go-to एक्���पर्ट बनना",
-        "लगातार वायरल कंट���ंट बनाना",
+        "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइबर्�� की email लिस्ट",
         "इंडस्ट्री ���वेंट्स/पॉडकास्ट्स में बोलना",
         "पैसिव इनकम स्ट्रीम्स बनाना",
@@ -379,7 +379,7 @@ const languages = {
     },
     buttons: {
       next: "अगला कदम",
-      back: "पिछला",
+      back: "प��छला",
       submit: "मेरा क्रिएटर विश्लेषण पाएं",
     },
     freeResources: {
@@ -396,7 +396,7 @@ const languages = {
       },
       growthGuide: {
         title: "90-दिन की ग्रोथ स्ट्रैटेजी गाइड",
-        description: "अपने फॉलोइंग बढ़ाने के लिए ���्टेप-बाई-स्टेप र���डमैप",
+        description: "अपने फॉलोइंग बढ़ाने के ल���ए ���्टेप-बाई-स्टेप र���डमैप",
       },
       downloadFree: "मुफ्त डाउनलोड करें",
     },
@@ -525,7 +525,9 @@ Optimal zoom: 150-200% for comfortable reading.
 `;
 
     if (type === "mediaKit") {
-      content = `${language === "hindi" ? "मीडिया किट" : "MEDIA KIT"} - ${userName}
+      content =
+        fontSizeIndicator +
+        `${language === "hindi" ? "मीडिया किट" : "MEDIA KIT"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत जानकारी:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
@@ -568,7 +570,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] �
 
 ${language === "hindi" ? `मैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ��्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
-${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
+${language === "hindi" ? "मुझे आपक�� ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
@@ -590,7 +592,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के ��ारे में email भेजा था। मुझे लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
+${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे में email भेजा था। मुझे लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और उस post को [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
@@ -626,14 +628,14 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "���ेम्प्लेट 4: नेगोसिएशन/काउंटर ऑफर" : "TEMPLATE 4: NEGOTIATION/COUNTER OFFER"}
+${language === "hindi" ? "टेम्प्लेट 4: नेगोसिएशन/काउंटर ऑफर" : "TEMPLATE 4: NEGOTIATION/COUNTER OFFER"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? "Re: Collaboration proposal - Let's find a win-win" : "Re: Collaboration proposal - Let's find a win-win"}
 
 ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested हूं।" : "Thank you for your proposal! I'm definitely interested."}
+${language === "hindi" ? "आपके proposal के लि�� thank you! म��ं definitely interested हूं।" : "Thank you for your proposal! I'm definitely interested."}
 
-${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूंगा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
+${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust क��� सकते हैं? मैं ₹[your counter] suggest करूंगा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
 ${language === "hindi" ? "• मेरी audience का [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
