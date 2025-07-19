@@ -1319,14 +1319,26 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
   const competitorAnalysis = generateCompetitorAnalysis(data);
   const growthPotential = calculateGrowthPotential(data, fameScore);
 
+  // Calculate proprietary advanced metrics
+  const famePotentialIndex = calculateFamePotentialIndex(data);
+  const monetizationReadinessIndex = calculateMonetizationReadinessIndex(
+    data,
+    fameScore,
+  );
+  const advancedMarketInsights = generateMarketInsights(data);
+
   return {
     fameScore,
     confidenceScore,
     confidenceExplanation,
+    // Proprietary FameChase Metrics - Competitive Advantage
+    famePotentialIndex: Math.round(famePotentialIndex),
+    monetizationReadinessIndex: Math.round(monetizationReadinessIndex),
     experienceLevel: getExperienceLevelDescription(data.experience, fameScore),
     growthTrajectory: getGrowthTrajectory(data, fameScore),
     swotAnalysis: generateSWOTAnalysis(data, fameScore),
     marketInsights,
+    advancedMarketInsights,
     competitorAnalysis,
     growthPotential,
     incomeProjection: formatIncome(sixMonthProjection),
