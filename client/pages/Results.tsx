@@ -118,7 +118,7 @@ const languages = {
     marketInsights: "Market Insights",
   },
   hindi: {
-    title: "आपका क्रिएटर विश्लेषण",
+    title: "आपका क्रिएटर विश्लेष���",
     subtitle: "आपकी क्रिएटर यात्रा के लिए संपूर्ण व्यक्तिगत अंतर्दृष्टि",
     profileSynopsis: "प्रोफाइल सिनॉप्सिस",
     creatorProfile: "क्रिएटर प्रोफाइल",
@@ -153,7 +153,7 @@ const languages = {
     instantDownload: "तुरंत डाउनलोड",
     moneyBack: "पैसे वापसी की गारंटी",
     backToQuiz: "क्विज़ पर वापस जाएं",
-    basedOnEngagement: "एंगेजमेंट क्षमता के आधार पर",
+    basedOnEngagement: "एंगेजमेंट क्षमता के ��धार पर",
     nextSixMonths: "अगले 6 महीने का प्रक्षेपण",
     monthlyTarget: "मासिक प्राप्त करन�� योग्य लक्ष्य",
     primaryPlatform: "प्राथमिक प्लेटफॉर्म:",
@@ -311,7 +311,7 @@ ${analysis.suggestions.map((s: string, i: number) => `${i + 1}. ${s}`).join("\n"
 ${language === "hindi" ? "अगले कदम:" : "NEXT STEPS:"}
 ${language === "hindi" ? "1. अपनी कंटेंट रणनीति को अनुकूलित करें" : "1. Optimize your content strategy"}
 ${language === "hindi" ? "2. ब्रांड पार्टनरशिप के लिए तैयार हो जाएं" : "2. Prepare for brand partnerships"}
-${language === "hindi" ? "3. अपने एंगेज��ेंट मेट्रिक्स को बेहतर बनाएं" : "3. Improve your engagement metrics"}
+${language === "hindi" ? "3. अपने एंगेज��ेंट मेट्रिक्स को ब���हतर बनाएं" : "3. Improve your engagement metrics"}
 
 ${language === "hindi" ? "जेनरेट किया गया:" : "Generated:"} ${new Date().toLocaleDateString()}`;
     } else if (type === "mediaKit") {
@@ -330,14 +330,16 @@ ${language === "hindi" ? "कंटेंट निच:" : "Content Niche:"} ${q
 ${language === "hindi" ? "कंटेंट प्रकार:" : "Content Type:"} ${quizData.contentType}
 
 ${language === "hindi" ? "प्रदर्शन मेट्रिक्स:" : "PERFORMANCE METRICS:"}
-${language === "hindi" ? "फेम स्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
+${language === "hindi" ? "फ���म स्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
 ${language === "hindi" ? "एंगेजमेंट रेट:" : "Engagement Rate:"} ${language === "hindi" ? "उच्च गुणवत्ता" : "High Quality"}
 ${language === "hindi" ? "मासिक रीच:" : "Monthly Reach:"} ${language === "hindi" ? "व्यापक दर्शक" : "Wide Audience"}
 
-${language === "hindi" ? "सुझावित दरें:" : "SUGGESTED RATES:"}
-${language === "hindi" ? "पोस्ट दरें:" : "Post Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "3,000-8,000" : quizData.followerCount.includes("1K - 5K") ? "8,000-15,000" : "15,000-50,000"}
-${language === "hindi" ? "स्टोरी दरें:" : "Story Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,500-4,000" : quizData.followerCount.includes("1K - 5K") ? "4,000-8,000" : "8,000-25,000"}
-${language === "hindi" ? "रील दरें:" : "Reel Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "5,000-12,000" : quizData.followerCount.includes("1K - 5K") ? "12,000-25,000" : "25,000-75,000"}
+${language === "hindi" ? "सुझावित दरें (भारतीय बाजार आधारित):" : "SUGGESTED RATES (Indian Market Based):"}
+${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-3,000"}
+${language === "hindi" ? "Instagram रील:" : "Instagram Reel:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
+${language === "hindi" ? "Instagram स्टोरी:" : "Instagram Story:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-300" : quizData.followerCount.includes("1K - 5K") ? "300-500" : "500-1,500"}
+${language === "hindi" ? "YouTube शॉर्ट:" : "YouTube Short:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
+${language === "hindi" ? "YouTube वीडियो मेंशन:" : "YouTube Video Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-2,000" : quizData.followerCount.includes("1K - 5K") ? "2,000-3,000" : "3,000-8,000"}
 
 ${language === "hindi" ? "विशेषताएं:" : "SPECIALTIES:"}
 - ${analysis.suggestions.slice(0, 3).join("\n- ")}
@@ -350,7 +352,7 @@ ${language === "hindi" ? "वेबसाइट:" : "Website:"} ${quizData.socia
       content = `${language === "hindi" ? "व्यक्तिगत विकास रणनीति" : "PERSONALIZED GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "वर्तमान स्थिति विश्लेषण:" : "CURRENT SITUATION ANALYSIS:"}
-${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
+${language === "hindi" ? "फॉलो���र्स:" : "Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "मुख्य चुनौतियां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 3).join(", ")}
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 3).join(", ")}
 ${language === "hindi" ? "वर्तमान आय:" : "Current Income:"} ${quizData.monthlyIncome}
