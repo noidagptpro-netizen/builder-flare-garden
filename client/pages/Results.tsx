@@ -143,9 +143,9 @@ const languages = {
     city: "शहर",
     age: "उम्र",
     paySecure: "₹99 भुगतान करें - सुरक्षित भुगतान",
-    processing: "प्रसंस्���रण...",
+    processing: "प्रसंस्करण...",
     whatYouGet: "भुगतान के बाद आपको मिलेगा:",
-    fameScoreReport: "फेम स्कोर रिपोर्ट",
+    fameScoreReport: "फेम स���कोर रिपोर्ट",
     mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
     premiumTools: "प्रीमियम टूल्स",
@@ -161,9 +161,9 @@ const languages = {
     contentType: "कंटेंट प्रकार:",
     postingFrequency: "पोस्टिंग आवृत्ति:",
     followers: "फॉलोअर्स:",
-    monthlyIncome: "म��सिक आय:",
+    monthlyIncome: "मासिक आय:",
     experienceLevel: "अनुभव स्तर:",
-    activePlatforms: "सक्रिय प्लेटफॉर्म:",
+    activePlatforms: "सक्रिय प्लेटफॉ���्म:",
     competitorAnalysis: "प्रतियोगी विश्लेषण",
     marketInsights: "बाजार अंतर्दृष्टि",
   },
@@ -300,7 +300,7 @@ ${analysis.swotAnalysis.weaknesses.map((w: string, i: number) => `${i + 1}. ${w}
 ${language === "hindi" ? "अवसर:" : "OPPORTUNITIES:"}
 ${analysis.swotAnalysis.opportunities.map((o: string, i: number) => `${i + 1}. ${o}`).join("\n")}
 
-${language === "hindi" ? "मुख्य स���झाव:" : "KEY RECOMMENDATIONS:"}
+${language === "hindi" ? "मुख्य सुझाव:" : "KEY RECOMMENDATIONS:"}
 ${analysis.suggestions.map((s: string, i: number) => `${i + 1}. ${s}`).join("\n")}
 
 ${language === "hindi" ? "अगले कदम:" : "NEXT STEPS:"}
@@ -318,7 +318,7 @@ ${language === "hindi" ? "ईमेल:" : "Email:"} ${personalInfo.email}
 ${language === "hindi" ? "फोन:" : "Phone:"} ${personalInfo.phone}
 ${language === "hindi" ? "शहर:" : "City:"} ${personalInfo.city}
 
-${language === "hindi" ? "सोशल मीडिया प��रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
+${language === "hindi" ? "सोशल मीडिया प्रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
 ${language === "hindi" ? "प्राथमिक प्लेटफॉर्म:" : "Primary Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "कंटेंट निच:" : "Content Niche:"} ${quizData.niche}
@@ -344,7 +344,7 @@ ${language === "hindi" ? "वेबसाइट:" : "Website:"} ${quizData.socia
     } else if (type === "growthStrategy") {
       content = `${language === "hindi" ? "व्यक्तिगत विकास रणनीति" : "PERSONALIZED GROWTH STRATEGY"} - ${userName}
 
-${language === "hindi" ? "वर्तमान स��थिति विश्लेषण:" : "CURRENT SITUATION ANALYSIS:"}
+${language === "hindi" ? "वर्तमान स्थिति विश्लेषण:" : "CURRENT SITUATION ANALYSIS:"}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "मुख्य चुनौतियां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 3).join(", ")}
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 3).join(", ")}
@@ -365,7 +365,7 @@ ${analysis.suggestions
 
 ${language === "hindi" ? "60-दिन की रणनीति:" : "60-DAY STRATEGY:"}
 ${language === "hindi" ? "- कंटेंट कैलेंडर का अनुकूलन" : "- Content calendar optimization"}
-${language === "hindi" ? "- ब्र��ंड आउटरीच शुरू करना" : "- Begin brand outreach"}
+${language === "hindi" ? "- ब्रांड आउटरीच शुरू करना" : "- Begin brand outreach"}
 ${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में सुधार" : "- Improve engagement metrics"}
 ${language === "hindi" ? "- नेटवर्किंग और सहयोग" : "- Networking and collaborations"}
 
@@ -458,7 +458,7 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
             </h1>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
               {language === "hindi"
-                ? "आपका संपूर्ण क्रिएटर टूलकिट तैयार है। अपनी व्यक्तिगत फा��लें डाउनलोड करें।"
+                ? "आपका संपूर्ण क्रिएटर टूलकिट तैयार है। अपनी व्यक्तिगत फाइलें डाउनलोड करें।"
                 : "Your complete Creator Toolkit is ready. Download your personalized files."}
             </p>
 
@@ -929,15 +929,27 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
                       <input
                         type="email"
                         value={personalInfo.email}
-                        onChange={(e) =>
+                        onChange={(e) => {
                           setPersonalInfo({
                             ...personalInfo,
                             email: e.target.value,
-                          })
-                        }
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                          });
+                          if (formErrors.email) {
+                            setFormErrors({ ...formErrors, email: "" });
+                          }
+                        }}
+                        className={`w-full px-3 py-2 border-2 rounded-lg focus:outline-none text-gray-900 bg-white ${
+                          formErrors.email
+                            ? "border-red-500 focus:border-red-500"
+                            : "border-gray-300 focus:border-blue-500"
+                        }`}
                         placeholder="your@email.com"
                       />
+                      {formErrors.email && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {formErrors.email}
+                        </p>
+                      )}
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
