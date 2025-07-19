@@ -135,7 +135,7 @@ const languages = {
     incomeProjection: "आय क्षमता",
     unlock: "अपना संपूर्ण क्रिएटर टूलकिट अनलॉक करें",
     unlockSubtitle:
-      "अपनी व्यक्तिगत फेम स्कोर रिपोर्ट, प्��ोफेशनल मीडिया किट टेम्प्लेट, और ग्रोथ स्ट्रैटेजी + हमारे संपूर्ण प्रीमियम क्रिएटर टूल्स तक पहुंच प्राप्त करें।",
+      "अपनी व्यक्तिगत फेम स्कोर रिपोर्ट, प्��ोफेशनल मीडिया किट टेम्प्लेट, और ग्रोथ स्ट्रैटेज�� + हमारे संपूर्ण प्रीमियम क्रिएटर टूल्स तक पहुंच प्राप्त करें।",
     paymentForm: "अप���ी जानकारी पूरी करें",
     fullName: "पूरा नाम",
     emailAddress: "ईमेल पता",
@@ -251,6 +251,11 @@ export default function Results() {
   }, []);
 
   const handlePayment = async () => {
+    // Validate form before proceeding
+    if (!validateForm()) {
+      return;
+    }
+
     setIsSubmitting(true);
 
     // Save personal info
@@ -350,7 +355,7 @@ ${language === "hindi" ? "मुख्य चुनौतियां:" : "Main 
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 3).join(", ")}
 ${language === "hindi" ? "वर्तमान आय:" : "Current Income:"} ${quizData.monthlyIncome}
 
-${language === "hindi" ? "30-दि�� की कार्य योजना:" : "30-DAY ACTION PLAN:"}
+${language === "hindi" ? "30-दि�� की कार्य ���ोजना:" : "30-DAY ACTION PLAN:"}
 ${language === "hindi" ? "सप्ताह 1-2:" : "Week 1-2:"}
 ${analysis.suggestions
   .slice(0, 2)
