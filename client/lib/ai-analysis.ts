@@ -396,24 +396,45 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
     }
   }
 
+  // SOPHISTICATED USER-SPECIFIC NICHE ANALYSIS
   if (data.niche !== "Other" && data.niche) {
     const nicheInsights = {
-      "Fashion & Beauty":
-        "💄 Fashion & beauty is a ₹50,000+ crore market in India with endless brand partnership opportunities!",
-      Technology:
-        "💻 Tech content has the highest CPM rates and attracts premium brand partnerships!",
-      Education:
-        "📚 Education content builds the most loyal audiences and has incredible course-selling potential!",
-      "Business & Finance":
-        "💼 B2B content creators earn 3x more per follower than lifestyle creators!",
-      "Fitness & Health":
-        "💪 Health & fitness has exploded post-COVID with massive supplement & equipment brand opportunities!",
-      "Food & Cooking":
-        "🍳 Food content gets the highest engagement rates and restaurant partnerships pay incredibly well!",
+      "Fashion & Beauty": `💄 FASHION GOLDMINE: You're in a ₹1.2L crore market growing 25% annually! With ${data.followerCount}, you can charge ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 1.5)} per post. Fashion creators get 40% more brand deals.`,
+      Technology: `💻 TECH AUTHORITY ADVANTAGE: Tech = ₹25-50 per 1K views (vs ₹8-15 for lifestyle)! Your ${data.followerCount} in tech could generate ₹${Math.round(followerNum * 1.2)}-₹${Math.round(followerNum * 2.5)} monthly from reviews alone.`,
+      Education: `📚 EDUCATION EMPIRE POTENTIAL: Ed-tech is ₹2.8L crore growing 40% YoY! Your knowledge in ${data.niche} + course creation = ₹${Math.round(followerNum * 2)}-₹${Math.round(followerNum * 5)} monthly potential.`,
+      "Business & Finance": `💼 FINANCE CREATOR PREMIUM: B2B creators earn 3x more per follower! Your expertise + ${data.followerCount} = ₹${Math.round(followerNum * 1.8)}-₹${Math.round(followerNum * 3.2)} monthly from fintech partnerships.`,
+      "Fitness & Health": `💪 FITNESS BOOM POSITIONING: Post-COVID fitness market exploded! Health creators with ${data.followerCount} average ₹${Math.round(followerNum * 1.1)}-₹${Math.round(followerNum * 2.0)} monthly from supplement brands.`,
+      "Food & Cooking": `🍳 FOOD CONTENT SUPREMACY: Food gets highest engagement (8-15% vs 2-4% average)! Your ${data.followerCount} + food = ₹${Math.round(followerNum * 0.9)}-₹${Math.round(followerNum * 1.8)} from restaurant partnerships.`,
     };
     if (nicheInsights[data.niche as keyof typeof nicheInsights]) {
       strengths.push(nicheInsights[data.niche as keyof typeof nicheInsights]);
     }
+  }
+
+  // PERSONAL COMBINATION STRENGTHS
+  if (
+    data.niche === "Technology" &&
+    data.primaryPlatform === "YouTube" &&
+    followerNum >= 10000
+  ) {
+    strengths.push(
+      `🎯 TECH YOUTUBE DOMINATION: Perfect combo! Tech + YouTube = long-form authority content. You can charge ₹${Math.round(followerNum * 2.5)}-₹${Math.round(followerNum * 4)} per sponsored video.`,
+    );
+  }
+
+  if (
+    data.goals?.includes("brand partnerships") &&
+    data.postingFrequency === "Daily"
+  ) {
+    strengths.push(
+      `🤝 BRAND-READY MACHINE: Daily posting + brand goals = Algorithm loves you! Consistent creators get 60% more brand inquiries. You're partnership-ready.`,
+    );
+  }
+
+  if (age >= 22 && age <= 32 && incomeNum === 0 && followerNum >= 5000) {
+    strengths.push(
+      `💎 MONETIZATION GOLDMINE: ${age} years old, ${data.followerCount} followers, ₹0 income = MASSIVE untapped potential! You're sitting on ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly.`,
+    );
   }
 
   // WEAKNESSES - Constructive and actionable
@@ -734,7 +755,7 @@ const generateMarketInsights = (data: QuizData, fameScore: number) => {
       market: "₹1.2 lakh crore market, growing 25% annually",
       cpm: "₹8-25 per 1K views",
       bestMonths: [9, 10, 11], // Oct-Dec (festival season)
-      avgDeal: "₹15,000-75,000",
+      avgDeal: "��15,000-75,000",
     },
     "Technology & AI": {
       market: "₹4.2 lakh crore IT market, highest CPM rates",
@@ -1026,7 +1047,7 @@ const calculateGrowthPotential = (
     "Gaming & Esports",
     "गेमिंग और एस्पोर्ट्स",
     "Education & Learning",
-    "शिक्षा और सीखना",
+    "शिक्षा ���र सीखना",
   ];
   if (growingNiches.includes(data.niche)) {
     potential += 8;
@@ -1068,7 +1089,7 @@ const calculateGrowthPotential = (
     "Getting consistent views",
     "Understanding analytics",
     "Converting followers",
-    "लगातार व्यूज",
+    "ल���ातार व्यूज",
     "एनालिटिक्स",
     "फॉलोअर्स को पेइंग कस्टमर",
   ];
