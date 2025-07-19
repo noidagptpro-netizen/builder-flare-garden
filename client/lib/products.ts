@@ -286,11 +286,11 @@ function generateMediaKitContent(
 📊 परफॉर्मेंस मेट्रिक्स:
 • औसत पहुंच: [आपकी पहुंच दर्ज करें]
 • एंगेजमेंट रेट: [आपका एंगे���मेंट रेट]
-• मासिक इंप्रेशन्स: [आपके मासिक इंप्रेशन���स]
+• मासिक इंप्रेशन्स: [आपके मासिक इंप्रेशन्स]
 • ऑडियंस डेमोग्राफिक्स: [आपके ऑडियंस की जानकारी]
 
 💰 सुझावित दरें (आपके ऑडियंस के आधार पर):
-📸 पोस्ट दरें: ₹200 - ₹1,000
+📸 पो��्ट दरें: ₹200 - ₹1,000
 📱 स्टोरी दरें: ₹100 - ₹500
 🎥 रील दरें: ₹500 - ₹2,000
 📹 यूट्यूब शॉर्ट: ₹500 - ₹2,000
@@ -311,7 +311,7 @@ function generateMediaKitContent(
 
 📈 क्यों मेरे साथ कोलैबोरेट करें:
 • प्रामाणिक कंटेंट और ब्रांड एलाइनमेंट
-• उच्च एंगेजमे���ट दरें और ऑडियंस ट्रस्ट
+• उच्च एंगे��मे���ट दरें और ऑडियंस ट्रस्ट
 • प्रोफेशनल कंटेंट डिलीवरी और टाइमलाइन
 • क्रिएटिव स्ट्रैटेजी और ब्रांड स्टोरीटेलिंग
 
@@ -328,10 +328,10 @@ function generateMediaKitContent(
 • पेमेंट टर्म्स: 50% एडवांस, 50% डिलीवरी पर
 
 💼 मीडिया किट में शामिल:
-✅ हाई-र���ज़���ल्यूशन प्रोफाइल फोटोज़
+✅ हाई-रेज़���ल्यूशन प्रोफाइल फोटोज़
 ✅ कंटेंट सैंपल्स और केस स्टडी
 ✅ ऑडियंस डेमोग्राफिक्स रिपोर्ट
-✅ परफॉर्मेंस मेट्रिक्स और एनालिटिक्स
+✅ प���फॉर्मेंस मेट्रिक्स और एनालिटिक्स
 
 📋 टेम्प्लेट कस्टमाइज़ेशन गाइड:
 1. अपनी पर्सनल जानकारी भरें
@@ -432,7 +432,7 @@ function generateEmailTemplatesContent(
   const userFollowers = userData?.followerCount || "10K+";
 
   if (language === "hindi") {
-    return `📧 30+ ब्रांड आउटर��च ईमेल टेम्प्लेट्स
+    return `📧 30+ ब्रांड आउटरीच ईमेल टेम्प्लेट्स
 
 🎯 टेम्प्ले��� 1: प्रारंभिक संपर्क (कोल्ड आउटरीच)
 विषय: ${userNiche} क्रिएटर ${userName} - कोलैबोरेशन का प्रस्��ाव
@@ -450,7 +450,7 @@ function generateEmailTemplatesContent(
 • फॉलोअर्स: ${userFollowers}
 • एंगेजमेंट रेट: [आपका rate]
 • मासिक रीच: [आपकी reach]
-• ऑडिय���स demographics: [मुख्य डेमोग्राफिक्स]
+• ऑडियंस demographics: [मुख्य डेमोग्राफिक्स]
 
 क्या आप एक quick call schedule कर सकते हैं collaboration possibilities discuss करने के लिए?
 
@@ -465,7 +465,7 @@ ${userName}
 
 Hi [Contact Name],
 
-मैंने पिछले सप��ताह आपको collaboration के बारे में email भेजा था। मुझे लगता है कि हम एक amazing partnership create कर सकते हैं!
+मैंने पिछले सप��ताह आ���को collaboration के बारे में email भेजा था। मुझे लगता है कि हम एक amazing partnership create कर सकते हैं!
 
 Recently मैंने [competitor brand] के साथ work किया और उस post को [specific results] मिले।
 
@@ -525,7 +525,7 @@ Hi [Contact Name],
 
 आपके proposal के लिए thank you! मैं definitely interested हूं।
 
-Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ��[your counter] suggest करूंगा because:
+Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूंगा because:
 
 • मेरी audience का [specific demographic] match करता है आपके target से
 • मेरे recent collaborations में [specific results] मिले हैं
@@ -538,7 +538,7 @@ ${userName}
 
 ---
 
-���� टेम्प्लेट 5: परफॉर्मेंस रिपोर्ट
+������ टेम्प्लेट 5: परफॉर्मेंस रिपोर्ट
 विषय: ${userName} x [Brand] - Campaign Performance Report
 
 Dear [Brand Team],
@@ -562,7 +562,7 @@ Dear [Brand Team],
 • Direct sales attribution
 • Community engagement
 
-मुझे future collaborations में interest है और आपके products को authentically promote करन��� पसंद है।
+मुझे future collaborations में interest है और आपके products को authentically promote करना पसंद है।
 
 Thank you for trusting me!
 ${userName}
@@ -824,7 +824,7 @@ Minimum post rate = Followers per 1K × Base rate
 • Usage rights (1 year): +50%
 
 📋 SAMPLE CALCULATION:
-मान लेते हैं आपके पास हैं:
+मान लेते हैं आपके ��ास हैं:
 • 10K followers
 • Fashion niche
 • 4% engagement rate
@@ -859,7 +859,7 @@ Final rates:
 • 100K+ followers: ₹50,000+ per post
 
 🎯 NEGOTIATION STRATEGIES:
-• अपनी unique value proposition highlight ��रें
+• अपनी unique value proposition highlight करें
 • Past performance metrics share करें
 • Competitor rates research करें
 • Value-added services offer करें
@@ -1422,7 +1422,7 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 • अपने बेस्ट पोस्ट्स को एनालाइज करें
 • भारतीय अवसरों और ट्रेंड्स पर रिसर्च करें
 
-📈 दूसरे 30 दिन - विकास और ऑप्टिमाइजेशन:
+📈 दूसरे 30 दिन - विकास और ऑप्ट���माइजेशन:
 • A/B टेस्ट शुरू करें (posting times, hashtags)
 • इंफ्लुएंसर्स और अन्य क्रिएटर्स के साथ कोलैबोरेशन
 • लाइव वीडियो और Q&A सेशन शुरू करें
@@ -1433,10 +1433,10 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 
 💰 तीसरे 30 दिन - मुद्रीकरण और मार्केटिंग:
 • मीडिया किट और पोर्टफोलियो बनाएं
-• ब्रांड्स से संपर्क शुरू करें (���ुख्य भारतीय ब्रां���्स)
+• ब्रांड्स से संपर्क शुरू करें (���ुख्य भारतीय ब्रांड्स)
 • एफिलिएट मार्केटिंग शुरू करें
 • अपने प्रोडक्ट्स/सर्विस लॉन्च करें
-• ईमेल लिस्ट और न्यूजलेटर शुरू करें
+• ईमेल लिस्ट और न्यूजले���र शुरू करें
 • मेम्बरशिप/कोर्स बिजनेस मॉडल को एक्सप्लोर करें
 • कम्युनिटी बिल्डिंग और एंगेजमेंट स्ट्रैटेजी
 
@@ -1452,13 +1452,13 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 • फॉलोअर ग्रोथ रेट: ____%
 • एंगेजमेंट रेट: ____%
 • मास���क रीच: ____
-• वेबसा��ट विजिटर्स: ____
+• वेबसाइट विजिटर्स: ____
 • ब्रांड इंक्वायरी: ____
 • मासिक आय: ₹____
 
 🎆 अपेक्षित परिणाम (90 दिन):
 • फॉलोअर ग्रोथ: 50-150%
-• एंगेजमेंट में वृद्धि: 100-300%
+• ���ंगेजमेंट में वृद्धि: 100-300%
 • ब्रांड पार्टनरशिप: 2-5 नई डील्स
 • मासिक आय में वृद्धि: ₹5K-25K
 
@@ -1483,7 +1483,7 @@ Comprehensive Growth Guide for ${userNiche} Creators
 
 🔥 FIRST 30 DAYS - FOUNDATION BUILDING:
 • Establish daily posting schedule
-��� Define your brand identity
+• Define your brand identity
 • Create 30-day content calendar
 • Understand your target audience
 • 10 strategies to boost engagement
@@ -1519,10 +1519,10 @@ Comprehensive Growth Guide for ${userNiche} Creators
 📉 METRICS TRACKING:
 • Follower growth rate: ____%
 • Engagement rate: ____%
-• Monthly reach: ____
+��� Monthly reach: ____
 • Website visitors: ____
 • Brand inquiries: ____
-• Monthly income: ���____
+• Monthly income: ₹____
 
 🎆 EXPECTED RESULTS (90 days):
 • Follower growth: 50-150%
@@ -1552,8 +1552,8 @@ ${userNiche} क्रिएटर्स के लिए ${userPlatform} है
 🔍 हैशटैग की बुनियादी बातें:
 • हैशटैग व्यूज को बढ़ाते हैं (30x तक बढ़ सकते हैं)
 • वे आपके कंटेंट को टार्गेट ऑडियंस तक पहुंचाते हैं
-• वे कम्युनिटी बिल्डिंग में मदद करते हैं
-• इनसे आपक�� ब्रांड विजिबिलिटी बढ़ती है
+• वे कम्युनिट��� बिल्डिंग में मदद करते हैं
+• इनसे आपकी ब्रांड विजिबिलिटी बढ़ती है
 
 📊 हैशटैग के प्रकार:
 
@@ -1577,13 +1577,13 @@ ${userNiche} क्रिएटर्स के लिए ${userPlatform} है
 • #bangaloretechie #puneinfluencer
 • कम competition, बेहतर engagement
 
-5️⃣ ब���रांडेड हैशटैग (Under 10K)
+5️⃣ ब्रांडेड हैशटैग (Under 10K)
 • #yourname #yourbrand #yourcampaign
 • कम competition, बेहतर tracking
 
 🎨 ${userNiche} के लिए टॉप हैशटैग:
 
-🔥 मेइन निच हैशटैग:
+🔥 मेइन निच है���टैग:
 • #{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}
 • #indian{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}
 • #{userNiche.toLowerCase().replace(' ', '').replace('&', 'and')}india
@@ -1676,7 +1676,7 @@ ${userPlatform} Hashtag Strategy for ${userNiche} Creators
 
 3️⃣ NICHE HASHTAGS (100K-1M posts)
 • #{userNiche.toLowerCase().replace(' ', '')} #contentcreator
-• #indianinfluencer #delhifoodie #mumbaifashion
+�� #indianinfluencer #delhifoodie #mumbaifashion
 • Perfect for target audience
 
 4️⃣ MICRO HASHTAGS (10K-100K posts)
@@ -1851,7 +1851,7 @@ ${userPlatform} | ${userFollowers} Followers
 🎆 बेसिक कैम्पेन पैकेज: ₹${rates.campaign}
 • 1 Instagram फीड पोस्ट
 • 3-4 इंस्टाग्राम स्टोरीज
-• 1 इंस्टाग्राम री���
+• 1 इंस्टाग्���ाम री���
 • बिहाइंड-द-सीन content
 • वीकली एनालिटिक्स रिपोर्ट
 
@@ -1872,12 +1872,12 @@ ${userPlatform} | ${userFollowers} Followers
 • विडेो एडिटिंग: +35%
 • ग्राफिक डिजाइन: +25%
 
-📋 टर्म्स औ�� कंडीशन्स:
+📋 टर्म्स और कंडीशन्स:
 
 💳 पेमेंट टर्म्स:
 • 50% एडवांस पेमेंट
 • 50% कंटेंट डिलीवरी पर
-• Bank transfer/UPI/PayPal स्वीकार किया जाता है
+• Bank transfer/UPI/PayPal स्वीकार किया जात��� है
 • आगे 7 दिन के लिए invoice भेजा जाएगा
 
 ⏱️ डिलीवरी टाइमलाइन:
@@ -1897,7 +1897,7 @@ ${userPlatform} | ${userFollowers} Followers
 • 48 hours में: 50% रिफंड
 • कंटेंट स्टार्ट के बाद: नो रिफंड
 
-📞 सं��र्क जानकारी:
+📞 संपर्क जानकारी:
 • Email: [your-email@domain.com]
 • WhatsApp: [+91-XXXXXXXXXX]
 • Instagram DM: @${userName.toLowerCase().replace(" ", ".")}
@@ -2029,13 +2029,13 @@ function generateViralReelIdeasContent(
   const userPlatform = userData?.primaryPlatform || "Instagram";
 
   if (language === "hindi") {
-    return `🎬 50+ वायरल रील आइड���याज गाइड
+    return `🎬 50+ वायरल रील आइडियाज गाइड
 
 ${userNiche} क्रिएटर्स के लिए प्रमाणित वायरल कंटेंट फॉर्मूला
 
 🔥 TRENDING रील आइडियाज:
 
-1. "3 सीक्रेट्स जो मैंने [अपना निच] में सीखे"
+1. "3 सीक्रेट��स जो मैंने [अपना निच] में सीखे"
 2. "क्या आप जानते हैं [निच] के बारे में ये बात?"
 3. "मेरी सबसे बड़ी गलती [निच] में"
 4. "[निच] में सफल होने के 5 आसान तरीके"
@@ -2047,10 +2047,10 @@ ${userNiche} क्रिएटर्स के लिए प्रमाणि�
 10. "एक दिन मेरे साथ [निच] की दुनिया में"
 
 📱 HOOK फॉर्मूला (पहले 3 सेकंड):
-✅ "यह वीडियो देखना ज़रूरी है अ��र आप..."
+✅ "यह वीडियो देखना ज़रूरी है अगर आप..."
 ✅ "मैं शर्त लगाता हूं कि आप नहीं जानते..."
 ✅ "इससे पहले कि मैं [result] पाता, मैं..."
-✅ "अगर मैं आपसे कहूं कि..."
+✅ "अगर मैं आपसे क��ूं कि..."
 ✅ "यहां क्या गलत है?"
 
 🎭 रील कैटेगरीज:
@@ -2066,7 +2066,7 @@ ${userNiche} क्रिएटर्स के लिए प्रमाणि�
 18. "[निच] में मेरी टॉप 3 टिप्स"
 19. "क्या करें और क्या न करें [निच] में"
 20. "[निच] के बारे में तथ्य जो आप नहीं जानते"
-21. "[निच] में सफलता के लिए रोड��ैप"
+21. "[निच] में सफलता के लिए रोडमैप"
 22. "मैं कैसे [चैलेंज] को साल्व करता हूं"
 23. "[निच] में कॉमन मिस्टेक्स"
 24. "[निच] टूल्स - फ्री vs पेड"
@@ -2089,7 +2089,7 @@ ${userNiche} क्रिएटर्स के लिए प्रमाणि�
 39. "दोस्त vs मैं [निच] में"
 40. "पेरेंट्स vs मेरा [निच] पैशन"
 41. "[निच] करते समय मूड्स"
-42. "[निच] के बारे में पेरेंट्स की रिएक्शन"
+42. "[निच] के बारे में पेरेंट्स ���ी रिएक्शन"
 43. "[निच] वाले के पास कैसे टाइम मैनेज होता है"
 44. "[निच] वाले रात को क्या करते हैं"
 45. "[निच] वाले की शॉपिंग"
@@ -2275,7 +2275,7 @@ ${userNiche} क्रिएटर्स के लिए वायरल एड
 • Mirror reflection - angle change
 • Door open/close - location switch
 
-⚡ स्पीड ट्रांजिशन:
+⚡ स्पीड ट्रा��जिशन:
 • Fast zoom in/out
 • Quick spin (360°)
 • Speed up + slow down
@@ -2284,7 +2284,7 @@ ${userNiche} क्रिएटर्स के लिए वायरल एड
 🎵 बीट ड्रॉप ट्रांजिशन:
 • Music beat पर कट करें
 • Rhythm match करें
-• Beat के साथ text animate करें
+• Beat के ��ाथ text animate करें
 • Sound effects add करें
 
 🎨 विजुअल इफेक्ट्स:
@@ -2405,7 +2405,7 @@ ${userNiche} क्रिएटर्स के लिए वायरल एड
 • Consistent branding elements
 • Mobile-first editing approach
 
-📊 परफॉ��्मेंस मेट्रिक्स:
+📊 परफॉर्मेंस मेट्रिक्स:
 • Completion rate (aim for 70%+)
 • Engagement rate (3%+)
 • Share rate (1%+)
@@ -2592,9 +2592,477 @@ function generateMusicGuideContent(
   language: "english" | "hindi",
   userData?: any,
 ): string {
-  return language === "hindi"
-    ? "म्यूजिक सेलेक्शन गाइड..."
-    : "Music Selection Guide...";
+  const userNiche = userData?.niche || "Content Creator";
+
+  if (language === "hindi") {
+    return `🎵 म्यूजिक & साउंड सेलेक्शन मास्टर गाइड
+
+${userNiche} क्रिएटर्स के लिए वायरल ऑडियो स्ट्रैटेजी
+
+🎧 VIRAL म्यूजिक कैटेगरीज:
+
+🔥 ट्रेंडिंग बॉलीवुड हिट्स (2024):
+• "Animal" Movie Songs
+• "Pathaan" Background Music
+• "Jawan" Theme Music
+• "12th Fail" Emotional Tracks
+• "Rocky Aur Rani" Party Songs
+• "Adipurush" Epic Music
+• "Mission Majnu" Tension Music
+• "Tu Jhoothi Main Makkaar" Romantic
+• "Bhediya" Horror-Comedy Music
+• "Brahmastra" Fantasy Music
+
+🎶 इंस्ट्रूमेंटल & बैकग्राउंड:
+• Lofi Hip Hop beats
+• Epic orchestral music
+• Upbeat electronic music
+• Motivational piano music
+• Chill ambient sounds
+• Dramatic tension music
+• Success/achievement music
+• Emotional string music
+• Tech/futuristic beats
+• Nature/meditation sounds
+
+🗣️ पॉपुलर डायलॉग्स (यू��� करने योग्य):
+• "Pushpa" - "Main jhukega nahi"
+• "KGF" - "Violence, Speed, Momentum"
+• "Bahubali" - "Jai Mahishmati"
+• "Dangal" - "Mhari choriyaan choro se kam hain ke?"
+• "3 Idiots" - "All is well"
+• "Zindagi Na Milegi Dobara" quotes
+• "Queen" - Inspirational dialogues
+• "Pink" - "No means no"
+• "Taare Zameen Par" - emotional quotes
+• "Chak De India" - motivational lines
+
+🎵 म्यूजिक सोर्सेज (कॉपीराइट फ्री):
+
+🆓 फ्री म्यूजिक लाइब्रेरी:
+1. YouTube Audio Library
+   - 1000+ copyright-free tracks
+   - Genre-wise categorized
+   - Mood-based selection
+
+2. Facebook Sound Collection
+   - Instagram integrated
+   - Popular trending sounds
+   - Regular updates
+
+3. Epidemic Sound (Free Trial)
+   - High-quality tracks
+   - Professional music
+   - 30-day free trial
+
+4. Pixabay Music
+   - Free for commercial use
+   - No attribution required
+   - High-quality audio
+
+5. Freesound.org
+   - Sound effects library
+   - Community contributed
+   - Creative Commons licensed
+
+💰 प्रीमियम म्यूजिक प्लेटफॉर्म:
+1. Epidemic Sound (₹1500/month)
+2. Artlist (₹2000/month)
+3. Musicbed (₹2500/month)
+4. AudioJungle (Per track ₹500-2000)
+5. Splice (₹1200/month)
+
+🎯 निच-स्पेसिफिक म्यूजिक सेलेक्शन:
+
+💻 टेक/बिजनेस कंटेंट:
+• Electronic/Synth music
+• Corporate inspiring music
+• Tech startup vibes
+• Futuristic sounds
+• Minimal techno beats
+
+👗 फैशन/ब्यूटी:
+• Trendy pop music
+• Upbeat dance tracks
+• Chic and stylish beats
+• Fashion week music
+• Glamorous orchestral
+
+🍳 फूड कंटेंट:
+• Cooking show music
+• Upbeat kitchen vibes
+• Satisfying ASMR sounds
+• Restaurant ambiance
+• Celebration music
+
+💪 फिटनेस/हेल्थ:
+• High-energy workout music
+• Motivational beats
+• Gym music
+• Meditation sounds
+• Success/achievement music
+
+📚 एजुकेशन/लर्निंग:
+• Inspiring piano music
+• Concentration music
+• Study-friendly beats
+• Achievement celebration
+• Thoughtful ambient music
+
+🎨 म्यूजिक सेलेक्शन टिप्स:
+
+⏱️ टाइमिंग मैटर्स:
+• 15-30 सेकंड रील्स के लिए upbeat music
+• 1-3 मिनट videos के लिए varied tempo
+• Background music volume: 20-30%
+• Voiceover के साथ subtle music
+
+🔊 ऑडियो क्वालिटी:
+• 44.1 kHz sample rate
+• 16-bit minimum depth
+• MP3 320kbps या WAV format
+• Noise-free recordings
+• Consistent volume levels
+
+🎼 बीट मैचिंग:
+• Video cuts को beat के साथ sync करें
+• Transitions पर beat drops use करें
+• Text animations को rhythm के साथ
+• Visual effects music के साथ coordinate
+
+📱 प्लेटफॉर्म-स्पेसिफिक चॉइसेज:
+
+📺 Instagram Reels:
+• Trending Instagram sounds priority
+• 15-30 सेकंड clips
+• High-energy, catchy music
+• Popular Bollywood remixes
+• Viral sound effects
+
+🎬 YouTube Shorts:
+• Original music preferred
+• Longer format flexibility
+• Epic/cinematic music works
+• Educational content: softer music
+• Gaming content: electronic beats
+
+💼 LinkedIn:
+• Professional, inspiring music
+• Corporate-friendly tracks
+• Motivational instrumentals
+• Success/achievement themes
+• Avoid heavy beats
+
+🎪 मूड-बेस्ड म्यूजिक चॉइस:
+
+😊 हैप्पी/पॉजिटिव:
+• Major key music
+• Upbeat tempo (120-140 BPM)
+• Bright instruments (guitar, piano)
+• Cheerful melodies
+
+😢 इमोशनल/सेंटिमेंटल:
+• Minor key music
+• Slower tempo (60-80 BPM)
+• Strings, piano
+• Soft, gentle melodies
+
+⚡ एनर्जेटिक/मोटिवेशनल:
+• Fast tempo (140+ BPM)
+• Drums, bass heavy
+• Electronic elements
+• Building/crescendo structure
+
+🧘 कैल्म/रिलैक्सिंग:
+• Slow tempo (60-80 BPM)
+• Ambient sounds
+• Nature sounds
+• Minimal instruments
+
+🔧 ऑडियो एडिटिंग टूल्स:
+
+📱 मोबाइल ऐप्स:
+1. CapCut (बेस्ट फ्री)
+2. InShot (user-friendly)
+3. Splice (iOS)
+4. Adobe Audition Mobile
+5. GarageBand (iOS)
+
+💻 डेस्कटॉप सॉफ्टवेयर:
+1. Adobe Audition (प्रोफेशनल)
+2. Audacity (फ्री)
+3. GarageBand (Mac)
+4. FL Studio (music production)
+5. Logic Pro (Mac - प्रोफेशनल)
+
+🎵 साउंड इफेक्ट्स लाइब्रेरी:
+• Whoosh sounds (transitions)
+• Pop/click sounds (reveals)
+• Success chimes (achievements)
+• Error/fail sounds (mistakes)
+• Applause (celebrations)
+• Notification sounds (alerts)
+• Nature sounds (backgrounds)
+• ASMR sounds (satisfaction)
+
+📊 म्यूजिक प���फॉर्मेंस ट्रैकिंग:
+• Completion rates with different music
+• Engagement rates per music type
+• Share rates for various sounds
+• Comments mentioning music
+• Viral potential of specific tracks
+
+🚨 कॉपीराइट अवेयरनेस:
+• Always check licensing
+• Credit original artists when required
+• Use platform-provided music libraries
+• Avoid copyrighted songs for commercial use
+• Keep records of music licenses
+
+🏆 वायरल साउंड स्ट्रैटेजी:
+1. Monitor trending sounds daily
+2. Jump on trends early
+3. Create original audio content
+4. Mix trending + original audio
+5. Collaborate with musicians
+6. Remix popular tracks legally
+7. Use local/regional popular music
+8. Seasonal/festival-themed music`;
+  }
+
+  return `🎵 MUSIC & SOUND SELECTION MASTER GUIDE
+
+Viral Audio Strategy for ${userNiche} Creators
+
+🎧 VIRAL MUSIC CATEGORIES:
+
+🔥 Trending Bollywood Hits (2024):
+• "Animal" Movie Songs
+• "Pathaan" Background Music
+• "Jawan" Theme Music
+• "12th Fail" Emotional Tracks
+• "Rocky Aur Rani" Party Songs
+• "Adipurush" Epic Music
+• "Mission Majnu" Tension Music
+• "Tu Jhoothi Main Makkaar" Romantic
+• "Bhediya" Horror-Comedy Music
+• "Brahmastra" Fantasy Music
+
+🎶 Instrumental & Background:
+• Lofi Hip Hop beats
+• Epic orchestral music
+• Upbeat electronic music
+• Motivational piano music
+• Chill ambient sounds
+• Dramatic tension music
+• Success/achievement music
+• Emotional string music
+• Tech/futuristic beats
+• Nature/meditation sounds
+
+🗣️ Popular Dialogues (Usable):
+• "Pushpa" - "Main jhukega nahi"
+• "KGF" - "Violence, Speed, Momentum"
+• "Bahubali" - "Jai Mahishmati"
+• "Dangal" - "Mhari choriyaan choro se kam hain ke?"
+• "3 Idiots" - "All is well"
+• "Zindagi Na Milegi Dobara" quotes
+• "Queen" - Inspirational dialogues
+• "Pink" - "No means no"
+• "Taare Zameen Par" - emotional quotes
+• "Chak De India" - motivational lines
+
+🎵 MUSIC SOURCES (Copyright Free):
+
+🆓 Free Music Libraries:
+1. YouTube Audio Library
+   - 1000+ copyright-free tracks
+   - Genre-wise categorized
+   - Mood-based selection
+
+2. Facebook Sound Collection
+   - Instagram integrated
+   - Popular trending sounds
+   - Regular updates
+
+3. Epidemic Sound (Free Trial)
+   - High-quality tracks
+   - Professional music
+   - 30-day free trial
+
+4. Pixabay Music
+   - Free for commercial use
+   - No attribution required
+   - High-quality audio
+
+5. Freesound.org
+   - Sound effects library
+   - Community contributed
+   - Creative Commons licensed
+
+💰 Premium Music Platforms:
+1. Epidemic Sound (₹1500/month)
+2. Artlist (₹2000/month)
+3. Musicbed (₹2500/month)
+4. AudioJungle (Per track ₹500-2000)
+5. Splice (₹1200/month)
+
+🎯 NICHE-SPECIFIC MUSIC SELECTION:
+
+💻 Tech/Business Content:
+• Electronic/Synth music
+• Corporate inspiring music
+• Tech startup vibes
+• Futuristic sounds
+• Minimal techno beats
+
+👗 Fashion/Beauty:
+• Trendy pop music
+• Upbeat dance tracks
+• Chic and stylish beats
+• Fashion week music
+• Glamorous orchestral
+
+🍳 Food Content:
+• Cooking show music
+• Upbeat kitchen vibes
+• Satisfying ASMR sounds
+• Restaurant ambiance
+• Celebration music
+
+💪 Fitness/Health:
+• High-energy workout music
+• Motivational beats
+• Gym music
+• Meditation sounds
+• Success/achievement music
+
+📚 Education/Learning:
+• Inspiring piano music
+• Concentration music
+• Study-friendly beats
+• Achievement celebration
+• Thoughtful ambient music
+
+🎨 MUSIC SELECTION TIPS:
+
+⏱️ Timing Matters:
+• 15-30 second reels need upbeat music
+• 1-3 minute videos need varied tempo
+• Background music volume: 20-30%
+• Subtle music with voiceover
+
+🔊 Audio Quality:
+• 44.1 kHz sample rate
+• 16-bit minimum depth
+• MP3 320kbps or WAV format
+• Noise-free recordings
+• Consistent volume levels
+
+🎼 Beat Matching:
+• Sync video cuts with beat
+• Use beat drops for transitions
+• Text animations with rhythm
+• Coordinate visual effects with music
+
+📱 PLATFORM-SPECIFIC CHOICES:
+
+📺 Instagram Reels:
+• Trending Instagram sounds priority
+• 15-30 second clips
+• High-energy, catchy music
+• Popular Bollywood remixes
+• Viral sound effects
+
+🎬 YouTube Shorts:
+• Original music preferred
+• Longer format flexibility
+• Epic/cinematic music works
+• Educational content: softer music
+• Gaming content: electronic beats
+
+💼 LinkedIn:
+• Professional, inspiring music
+• Corporate-friendly tracks
+• Motivational instrumentals
+• Success/achievement themes
+• Avoid heavy beats
+
+🎪 MOOD-BASED MUSIC CHOICE:
+
+😊 Happy/Positive:
+• Major key music
+• Upbeat tempo (120-140 BPM)
+• Bright instruments (guitar, piano)
+• Cheerful melodies
+
+😢 Emotional/Sentimental:
+• Minor key music
+• Slower tempo (60-80 BPM)
+• Strings, piano
+• Soft, gentle melodies
+
+⚡ Energetic/Motivational:
+• Fast tempo (140+ BPM)
+• Drums, bass heavy
+• Electronic elements
+• Building/crescendo structure
+
+🧘 Calm/Relaxing:
+• Slow tempo (60-80 BPM)
+• Ambient sounds
+• Nature sounds
+• Minimal instruments
+
+🔧 AUDIO EDITING TOOLS:
+
+📱 Mobile Apps:
+1. CapCut (best free)
+2. InShot (user-friendly)
+3. Splice (iOS)
+4. Adobe Audition Mobile
+5. GarageBand (iOS)
+
+💻 Desktop Software:
+1. Adobe Audition (professional)
+2. Audacity (free)
+3. GarageBand (Mac)
+4. FL Studio (music production)
+5. Logic Pro (Mac - professional)
+
+🎵 SOUND EFFECTS LIBRARY:
+• Whoosh sounds (transitions)
+• Pop/click sounds (reveals)
+• Success chimes (achievements)
+• Error/fail sounds (mistakes)
+• Applause (celebrations)
+• Notification sounds (alerts)
+• Nature sounds (backgrounds)
+• ASMR sounds (satisfaction)
+
+📊 MUSIC PERFORMANCE TRACKING:
+• Completion rates with different music
+• Engagement rates per music type
+• Share rates for various sounds
+• Comments mentioning music
+• Viral potential of specific tracks
+
+🚨 COPYRIGHT AWARENESS:
+• Always check licensing
+• Credit original artists when required
+• Use platform-provided music libraries
+• Avoid copyrighted songs for commercial use
+• Keep records of music licenses
+
+🏆 VIRAL SOUND STRATEGY:
+1. Monitor trending sounds daily
+2. Jump on trends early
+3. Create original audio content
+4. Mix trending + original audio
+5. Collaborate with musicians
+6. Remix popular tracks legally
+7. Use local/regional popular music
+8. Seasonal/festival-themed music`;
 }
 
 function generateAlgorithmSecretsContent(
@@ -2631,7 +3099,7 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 • ब्राइट lighting और साफ बैकग्राउंड
 • प्रोफेशनल editing विथ smooth transitions
 
-3️⃣ ऑडियो स्ट्रैटेज���:
+3️⃣ ऑडियो स्ट्रैटेजी:
 • ट्रेंडिंग म्यूजिक का इस्तेमाल करें
 • वोकल्स और beat drops के साथ sync करें
 • जम म्यूजिक से timing match करें
@@ -2651,7 +3119,7 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 
 📊 एनालिटिक्स और मेट्रिक्स ट्रैकिंग:
 
-🔥 की मेट्रिक्स पर फ���कस करें:
+🔥 की मेट्रिक्स पर फोकस करें:
 • वियू रेट (70%+ target करें)
 • एवरेज वियू ड्यूरेशन (complete views)
 • रीच और इम्प्रेशन्स ग्रोथ
@@ -2677,7 +3145,7 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 🕰️ वायरल timing और momentum:
 • पहले घंटे में high engagement = बेहतर reach
 • कमेंट्स पर जल्दी reply करें
-• गोल्��न आवर (first 2 hours) में एक्टिव रहें
+• गोल्डन आवर (first 2 hours) में एक्टिव रहें
 • Cross-promotion से initial boost लें
 
 🔄 कंटेंट रिपरपाजिंग और adaptation:
@@ -2769,7 +3237,7 @@ Algorithm Mastery Guide for ${userNiche} Creators
 ⚡ Shadow Ban Avoidance:
 • Avoid repetitive hashtags
 • Don't upload too much content at once
-• Avoid bot-like activities
+�� Avoid bot-like activities
 • Focus on original content
 
 🕰️ Viral Timing & Momentum:
@@ -2811,7 +3279,7 @@ function generateCaseStudiesContent(
 
 ${userNiche} क्रिएटर्स के लिए 10+ कामयाब केस स्टडीज
 
-🔥 केस स्टडी #1: @bhuvan_bam (BB Ki Vines)
+🔥 केस स��टडी #1: @bhuvan_bam (BB Ki Vines)
 
 📈 सफलता के आंकडे:
 • 19M+ यूट्यूब सब्सक्राइबर्स
@@ -2823,7 +3291,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 • Relatable Indian characters (टितु मामा, बनचोद, मिखाल)
 • अपने आप से दर लगने वाले conversations
 • हिंदी-इंग्लिश mix (Indian audience के लिए perfect)
-• कम बजट में हाई क्वा��िटी production
+• कम बजट में हाई क्वालिटी production
 
 ⚡ रीप्लिकेट करने योग्य तकनीकें:
 • Multiple characters in single video
@@ -2839,7 +3307,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 • 6.8M+ यूट्यूब सब्सक्राइबर्स
 • 6.5M+ इंस्टाग्राम फॉलोअर्स
 • Netflix series lead role
-• Multiple brand endorsements (₹1-2 करोड+ सालाना)
+• Multiple brand endorsements (₹1-2 करोड+ साल���ना)
 
 🎆 क्या किया ठीक:
 • लड़कियों के रील प्रोब्लम्स address किए
@@ -2858,7 +3326,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 🔥 केस स्टडी #3: @carryminati (Ajey Nagar)
 
 📈 सफलता के आंकडे:
-• 35M+ यूट्���ूब सब्सक्राइबर्स
+• 35M+ यूट्यूब सब्सक्राइबर्स
 • 12M+ इंस्टाग्राम फॉलोअर्स
 • Most subscribed individual creator in India
 • अनुमानित आय: ₹8-12 करोड+ सालाना
@@ -2960,7 +3428,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 5. Audience feedback actively collect और implement करें
 
 🎆 याद रखें:
-“सफलता रातोंरात नहीं आती। ये सभी creators ने वर्षों की मेह���त, लगन और निरंतर सीखने के बाद यह मुकाम हासिल किया है।”`;
+“सफलता रातोंरात नहीं आती। ये सभी creators ने वर्षों की मेहनत, लगन और निरंतर सीखने के बाद यह मुकाम हासिल किया है।”`;
   }
 
   return `🏆 VIRAL CREATOR CASE STUDIES
@@ -3106,7 +3574,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 • Personal connect with audience
 • Encourage user-generated content
 
-���� YOUR ${userNiche.toUpperCase()} ACTION PLAN:
+📝 YOUR ${userNiche.toUpperCase()} ACTION PLAN:
 
 ✅ THINGS TO DO:
 1. Identify top 10 creators in your niche
@@ -3185,7 +3653,7 @@ ${userNiche} क्रिएटर्स के लिए आवश्यक फ
 📈 एनालिटिक्स टूल्स:
 • Instagram Insights (FREE) - बिल्ट-इन एनालिटिक्स
 • Google Analytics (FREE) - वेबसाइट ट्रैफिक ट्रैकिंग
-• Hootsuite Insights ($49/month) - क्रॉस-प्���ेटफॉर्म एनालिटिक्स
+• Hootsuite Insights ($49/month) - क्रॉस-प्लेटफॉर्म एनालिटिक्स
 • Sprout Social ($89/month) - अड्वांस रिपोर्टिंग
 
 🎨 कंटेंट क्रिएशन टूल्स:
@@ -3204,7 +3672,7 @@ ${userNiche} क्रिएटर्स के लिए आवश्यक फ
 📱 सोशल मीडिया मैनेजमेंट:
 • Buffer (FREE/Pro $15/month) - पोस्ट स्केड्यूलिंग
 • Later (FREE/Pro $18/month) - विजुअल कंटेंट प्लानिंग
-• Hootsuite (FREE/Pro $49/month) - मल्टी-प्लेटफॉ��्म मैनेजमेंट
+• Hootsuite (FREE/Pro $49/month) - मल्टी-प्लेटफॉर्म मैनेजमेंट
 • Creator Studio (FREE) - Facebook/Instagram नेटिव टूल
 
 🚀 SEO और हैशटैग टूल्स:
@@ -3227,7 +3695,7 @@ ${userNiche} क्रिएटर्स के लिए आवश्यक फ
 🔍 एफिलिएट मार्केटिंग:
 • Amazon Associates (FREE) - आमक आमजन एफिलिएट
 • Commission Junction (FREE) - मल्टी-ब्रांड नेटवर्क
-�� ShareASale (FREE) - ब्रांड पार्टनरशिप
+• ShareASale (FREE) - ब्रांड पार्टनरशिप
 
 ✏️ प्रोडक्टिविटी टूल्स:
 • Toggl (FREE/Pro $9/month) - टाइम ट्रैकिंग
@@ -3239,7 +3707,7 @@ ${userNiche} क्रिएटर्स के लिए आवश्यक फ
 • BuzzSumo ($99/month) - कंटेंट रिसर्च
 • AnswerThePublic (FREE/Pro $99/month) - कीवर्ड रिसर्च
 
-📦 अल्-इन-वन प्लेटफॉर्म:
+���� अल्-इन-वन प्लेटफॉर्म:
 • CreatorSpace (₹2000/month) - भारतीय क्रिएटर प्लेटफॉर्म
 • Koo Creator Studio (FREE) - भारतीय सोशल मीडिया
 • ShareChat Creator Program (FREE) - रीजनल कंटेंट
