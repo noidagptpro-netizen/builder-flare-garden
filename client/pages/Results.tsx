@@ -142,7 +142,7 @@ const languages = {
     phoneNumber: "फोन नंबर",
     city: "शहर",
     age: "उम्र",
-    paySecure: "₹99 भुगतान करें - सुरक्षित भुगतान",
+    paySecure: "₹99 भुगतान करें - सुरक्षि��� भुगतान",
     processing: "प्रसंस्करण...",
     whatYouGet: "भुगतान के बाद आपको मिलेगा:",
     fameScoreReport: "फेम स्कोर रिपोर्ट",
@@ -193,9 +193,15 @@ export default function Results() {
     return emailRegex.test(email);
   };
 
-  const validateIndianPhone = (phone: string): boolean => {
-    const phoneRegex = /^(\+91|91)?[6-9]\d{9}$/;
-    return phoneRegex.test(phone.replace(/\s+/g, ""));
+  const validateWorldwidePhone = (phone: string): boolean => {
+    // Accept worldwide phone numbers with country codes
+    const phoneRegex =
+      /^(\+\d{1,3}[-.\s]?)?\(?\d{1,4}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
+    return (
+      phoneRegex.test(phone.replace(/\s+/g, "")) &&
+      phone.length >= 7 &&
+      phone.length <= 18
+    );
   };
 
   const validateAge = (age: string): boolean => {
@@ -282,7 +288,7 @@ export default function Results() {
     const userName = personalInfo.name || quizData.name || "Creator";
 
     if (type === "fameScore") {
-      content = `${language === "hindi" ? "फेम स्कोर रिपोर्ट" : "FAME SCORE REPORT"} - ${userName}
+      content = `${language === "hindi" ? "फेम स्कोर रिपो���्ट" : "FAME SCORE REPORT"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
@@ -315,7 +321,7 @@ ${language === "hindi" ? "3. अपने एंगेज��ेंट मे�
 
 ${language === "hindi" ? "जेनरेट किया गया:" : "Generated:"} ${new Date().toLocaleDateString()}`;
     } else if (type === "mediaKit") {
-      content = `${language === "hindi" ? "प्रोफेशनल मीडिया किट" : "PROFESSIONAL MEDIA KIT"} - ${userName}
+      content = `${language === "hindi" ? "प्रोफेशनल मीड��या किट" : "PROFESSIONAL MEDIA KIT"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत जानकारी:" : "PERSONAL INFORMATION:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
@@ -331,7 +337,7 @@ ${language === "hindi" ? "कंटेंट प्रकार:" : "Content Typ
 
 ${language === "hindi" ? "प्रदर्शन मेट्रिक्स:" : "PERFORMANCE METRICS:"}
 ${language === "hindi" ? "फ���म स्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
-${language === "hindi" ? "एंगेजमेंट रेट:" : "Engagement Rate:"} ${language === "hindi" ? "उच्च गुणवत्ता" : "High Quality"}
+${language === "hindi" ? "एंगेजमे���ट रेट:" : "Engagement Rate:"} ${language === "hindi" ? "उच्च गुणवत्ता" : "High Quality"}
 ${language === "hindi" ? "मासिक रीच:" : "Monthly Reach:"} ${language === "hindi" ? "व्यापक दर्शक" : "Wide Audience"}
 
 ${language === "hindi" ? "सुझावित दरें (भारतीय बाजार आधारित):" : "SUGGESTED RATES (Indian Market Based):"}
@@ -376,7 +382,7 @@ ${language === "hindi" ? "- ब्रांड आउटरीच शुरू �
 ${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में सुधार" : "- Improve engagement metrics"}
 ${language === "hindi" ? "- नेटवर्किंग और सहयोग" : "- Networking and collaborations"}
 
-${language === "hindi" ? "90-दिन के लक्ष्य:" : "90-DAY GOALS:"}
+${language === "hindi" ? "90-दिन के लक्ष��य:" : "90-DAY GOALS:"}
 ${language === "hindi" ? "- फॉलोअर वृद्धि:" : "- Follower Growth:"} 30-50%
 ${language === "hindi" ? "- एंगेजमेंट वृद्धि:" : "- Engagement Increase:"} 40-80%
 ${language === "hindi" ? "- आय लक्ष्य:" : "- Income Target:"} ${analysis.incomeProjection}
