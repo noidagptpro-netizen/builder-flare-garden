@@ -144,9 +144,9 @@ const languages = {
     age: "उम्र",
     paySecure: "₹99 भुगतान करें - सुरक्षित भुगतान",
     processing: "प्रसंस्करण...",
-    whatYouGet: "भुगतान के बाद आपको मिलेगा:",
+    whatYouGet: "भुग���ान के बाद आपको मिलेगा:",
     fameScoreReport: "फेम स्कोर रिपोर्ट",
-    mediaKitTemplate: "मीड��या किट टेम्प्लेट",
+    mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
     premiumTools: "प्रीमियम टूल्स",
     securePayment: "सुरक्षित भुगतान",
@@ -164,7 +164,7 @@ const languages = {
     monthlyIncome: "मासिक आय:",
     experienceLevel: "अनुभव स्तर:",
     activePlatforms: "सक्रिय प्लेटफॉर्म:",
-    competitorAnalysis: "प्रतियोगी व��श्लेषण",
+    competitorAnalysis: "प्रतियोगी विश्लेषण",
     marketInsights: "बाजार अंतर्दृष्टि",
   },
 };
@@ -282,7 +282,7 @@ export default function Results() {
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "फेम स्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
-${language === "hindi" ? "विकास क्षमता:" : "Growth Potential:"} ${analysis.growthPotential}%
+${language === "hindi" ? "विका��� क्षमता:" : "Growth Potential:"} ${analysis.growthPotential}%
 ${language === "hindi" ? "आय प्रक्षेपण:" : "Income Projection:"} ${analysis.incomeProjection}
 
 ${language === "hindi" ? "प्रोफाइल सारांश:" : "PROFILE SUMMARY:"}
@@ -318,7 +318,7 @@ ${language === "hindi" ? "ईमेल:" : "Email:"} ${personalInfo.email}
 ${language === "hindi" ? "फोन:" : "Phone:"} ${personalInfo.phone}
 ${language === "hindi" ? "शहर:" : "City:"} ${personalInfo.city}
 
-${language === "hindi" ? "सोशल मीडिया प्रो���ाइल:" : "SOCIAL MEDIA PROFILES:"}
+${language === "hindi" ? "सोशल मीडिया प्रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
 ${language === "hindi" ? "प्राथमिक प्लेटफॉर्म:" : "Primary Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "कंटेंट निच:" : "Content Niche:"} ${quizData.niche}
@@ -346,7 +346,7 @@ ${language === "hindi" ? "वेबसाइट:" : "Website:"} ${quizData.socia
 
 ${language === "hindi" ? "वर्तमान स्थिति विश्लेषण:" : "CURRENT SITUATION ANALYSIS:"}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
-${language === "hindi" ? "मु��्य चुनौतियां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 3).join(", ")}
+${language === "hindi" ? "मुख्य चुनौतियां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 3).join(", ")}
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 3).join(", ")}
 ${language === "hindi" ? "वर्तमान आय:" : "Current Income:"} ${quizData.monthlyIncome}
 
@@ -365,7 +365,7 @@ ${analysis.suggestions
 
 ${language === "hindi" ? "60-दिन की रणनीति:" : "60-DAY STRATEGY:"}
 ${language === "hindi" ? "- कंटेंट कैलेंडर का अनुकूलन" : "- Content calendar optimization"}
-${language === "hindi" ? "- ब्रांड आउटरीच शुरू करना" : "- Begin brand outreach"}
+${language === "hindi" ? "- ब्रांड आउटरीच शुरू क���ना" : "- Begin brand outreach"}
 ${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में सुधार" : "- Improve engagement metrics"}
 ${language === "hindi" ? "- नेटवर्किंग और सहयोग" : "- Networking and collaborations"}
 
@@ -379,7 +379,7 @@ ${language === "hindi" ? "मुख्य सफलता संकेतक (KP
 ${language === "hindi" ? "- दैनिक एंगेजमेंट रेट" : "- Daily engagement rate"}
 ${language === "hindi" ? "- साप्ताहिक नए फॉलोअर्स" : "- Weekly new followers"}
 ${language === "hindi" ? "- मासिक ब्रांड इंक्वायरी" : "- Monthly brand inquiries"}
-${language === "hindi" ? "- कंटेंट पहुंच औ��� छाप" : "- Content reach and impressions"}
+${language === "hindi" ? "- कंटेंट पहुंच और छाप" : "- Content reach and impressions"}
 
 ${language === "hindi" ? "अनुशंसित उपकरण:" : "RECOMMENDED TOOLS:"}
 ${language === "hindi" ? "- कंटेंट शेड्यूलिंग: Later या Buffer" : "- Content Scheduling: Later or Buffer"}
@@ -458,7 +458,7 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
             </h1>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
               {language === "hindi"
-                ? "आपका संपूर्ण क्रिएटर टूलकिट तैयार है। अपनी व्यक्तिगत फाइलें डाउनलोड करें।"
+                ? "आपका संपूर्ण क्रिएटर टूलकिट तैयार है। अपनी व्यक्तिगत फाइलें डाउनलोड करे��।"
                 : "Your complete Creator Toolkit is ready. Download your personalized files."}
             </p>
 
@@ -988,15 +988,29 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
                         <input
                           type="number"
                           value={personalInfo.age}
-                          onChange={(e) =>
+                          onChange={(e) => {
                             setPersonalInfo({
                               ...personalInfo,
                               age: e.target.value,
-                            })
-                          }
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                            });
+                            if (formErrors.age) {
+                              setFormErrors({ ...formErrors, age: "" });
+                            }
+                          }}
+                          className={`w-full px-3 py-2 border-2 rounded-lg focus:outline-none text-gray-900 bg-white ${
+                            formErrors.age
+                              ? "border-red-500 focus:border-red-500"
+                              : "border-gray-300 focus:border-blue-500"
+                          }`}
                           placeholder="25"
+                          min="13"
+                          max="80"
                         />
+                        {formErrors.age && (
+                          <p className="text-red-500 text-sm mt-1">
+                            {formErrors.age}
+                          </p>
+                        )}
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">
