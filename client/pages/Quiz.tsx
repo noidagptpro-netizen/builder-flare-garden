@@ -270,7 +270,7 @@ const languages = {
       biggestChallenge:
         "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क्या हैं? (अधिकतम 3 चुनें)",
       goals:
-        "अगले 6 महीनों के लिए आपके मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
+        "अ��ले 6 महीनों के लिए आपके मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
       socialLinks: "अपनी सोशल उपस्थिति ��ाझा करें (वैकल्पिक)",
       bio: "अपने और अपने कंटेंट के बारे में कुछ और बताएं (वैकल्पिक)",
     },
@@ -299,7 +299,7 @@ const languages = {
         "खाना और खाना बनाना",
         "यात्रा और एडवेंचर",
         "फ��टनेस और स्वास्थ्य",
-        "व्यक्तिगत वित्त और निवेश",
+        "व्यक्त��गत वित्त और निवेश",
         "मनोरंजन और कॉमेडी",
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
@@ -370,7 +370,7 @@ const languages = {
         "अपनी niche मे��� go-to एक्���पर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइबर्�� की email लिस्ट",
-        "इंडस्ट्री ���वेंट्स/पॉडकास्ट्स में बोलना",
+        "इंडस्ट्र��� ���वेंट्स/पॉडकास्ट्स में बोलना",
         "पैसिव इनकम स्ट्रीम्स बनाना",
         "9-5 job छोड़कर फुल-टाइम जाना",
         "नए प्लेटफॉर्म्स/फॉर्मेट्स में expand करना",
@@ -460,6 +460,10 @@ export default function Quiz() {
   const handleNext = () => {
     if (currentStep < totalSteps && canProceed()) {
       setCurrentStep(currentStep + 1);
+      // Auto-scroll to top of the page when moving to next question
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
     } else if (currentStep === totalSteps) {
       setShowFreeResources(true);
     }
@@ -509,7 +513,7 @@ export default function Quiz() {
     if (type === "mediaKit") {
       content = `${language === "hindi" ? "मीडिया किट" : "MEDIA KIT"} - ${userName}
 
-${language === "hindi" ? "व्यक्तिगत जानकारी:" : "PERSONAL INFO:"}
+${language === "hindi" ? "व्यक्तिगत जा��कारी:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
 ${language === "hindi" ? "प्लेटफॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
@@ -522,7 +526,7 @@ ${language === "hindi" ? "मासिक आय:" : "Monthly Income:"} ${quizDa
 
 ${language === "hindi" ? "सुझावित दरें (आपकी ऑडियंस के आधार पर):" : "SUGGESTED RATES (Based on your audience):"}
 ${language === "hindi" ? "प�����्ट दरें:" : "Post Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "2,000-5,000" : quizData.followerCount.includes("1K - 5K") ? "5,000-12,000" : "15,000-50,000"}
-${language === "hindi" ? "स्टोरी दरें:" : "Story Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-3,000" : quizData.followerCount.includes("1K - 5K") ? "3,000-8,000" : "8,000-25,000"}
+${language === "hindi" ? "स्टोरी दर��ं:" : "Story Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-3,000" : quizData.followerCount.includes("1K - 5K") ? "3,000-8,000" : "8,000-25,000"}
 ${language === "hindi" ? "��ील दरें:" : "Reel Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "3,000-8,000" : quizData.followerCount.includes("1K - 5K") ? "8,000-20,000" : "25,000-75,000"}
 
 ${language === "hindi" ? "संपर्क:" : "CONTACT:"}
@@ -607,7 +611,7 @@ ${language === "hindi" ? "आपके proposal के लिए thank you! म�
 
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूंगा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
-${language === "hindi" ? "• मेरी audience का [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
+${language === "hindi" ? "• मेरी audience का [specific demographic] match करता है आ��के target से" : "• My audience demographic matches your target perfectly"}
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "• मैं additional value add कर सकता हूं like [extra service]" : "• I can add additional value like [extra service]"}
 
@@ -976,7 +980,7 @@ ${language === "hindi" ? "- ब्रांड पूछताछ: 3-8" : "- Bra
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                        Your Main Platform 📱
+                        Your Main Platform ���
                       </h2>
                       <p className="text-gray-600">
                         Where do you create and share your content?
