@@ -678,7 +678,7 @@ const generateMarketInsights = (data: QuizData, fameScore: number) => {
       avgDeal: "₹15,000-75,000",
     },
     "Technology & AI": {
-      market: "₹4.2 lakh crore IT market, highest CPM rates",
+      market: "��4.2 lakh crore IT market, highest CPM rates",
       cpm: "₹20-50 per 1K views",
       bestMonths: [0, 1, 8], // Jan-Feb, Sep (budget cycles)
       avgDeal: "₹25,000-1,50,000",
@@ -967,7 +967,7 @@ const calculateGrowthPotential = (
     "Gaming & Esports",
     "गेमिंग और एस्पोर्ट्स",
     "Education & Learning",
-    "शिक्षा और सीखना",
+    "शिक्षा और सीखन��",
   ];
   if (growingNiches.includes(data.niche)) {
     potential += 8;
@@ -1009,7 +1009,7 @@ const calculateGrowthPotential = (
     "Getting consistent views",
     "Understanding analytics",
     "Converting followers",
-    "लगातार व्यूज",
+    "लगातार व��यूज",
     "एनालिटिक्स",
     "फॉलोअर्स को पेइंग कस्टमर",
   ];
@@ -1145,7 +1145,7 @@ const calculateMonetizationReadinessIndex = (
 };
 
 // Advanced Market Intelligence Engine
-const generateMarketInsights = (data: QuizData): any => {
+const generateAdvancedMarketInsights = (data: QuizData): any => {
   const insights = {
     competitorAnalysis: generateCompetitorProfile(data),
     trendPredictions: generateTrendPredictions(data),
