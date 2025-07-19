@@ -250,7 +250,7 @@ const languages = {
       1: "प्ले��फॉर्म और फॉलोअर्स",
       2: "कंटेंट निच",
       3: "कंटेंट प्रकार",
-      4: "पोस्टिंग आवृत्ति",
+      4: "पोस्टिंग आवृ���्ति",
       5: "अनुभव और आय",
       6: "सबसे बड़ी चुनौती",
       7: "लक्ष्य",
@@ -266,7 +266,7 @@ const languages = {
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
         "आप क��तने समय से कंटें��� बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
-      monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
+      monthlyIncome: "क��टेंट से आपकी वर्तमान मासिक आय क्या है?",
       biggestChallenge:
         "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क्या हैं? (अधिकतम 3 चुनें)",
       goals:
@@ -316,7 +316,7 @@ const languages = {
       ],
       contentTypes: [
         "फोटो और कैरोसेल",
-        "छोटे वीडियो/रील्स",
+        "छोटे वीडियो/र���ल्स",
         "लंबे वीडियो",
         "लाइव स्ट्रीम",
         "स्टोरीज़",
@@ -352,7 +352,7 @@ const languages = {
         "लगातार ���्यूज और एंगेजमेंट पाना",
         "अपनी यूनीक आवाज़/स्टाइल खोजना",
         "एल्गोरिदम बदलाव से पहुंच में कमी",
-        "ऑथेंटिसिटी और ब्रांड अपील का संतुलन",
+        "ऑथेंटिसिटी औ��� ब्रांड अपील का संतुलन",
         "बड़े क्रिएटर्स से कॉम्पिटिशन",
         "फॉलोअर्स को पेइंग कस्टमर बनाना",
         "नेगेटिव कमेंट्स/ट्रोल्स से निपटना",
@@ -368,7 +368,7 @@ const languages = {
         "ड्रीम ���्रांड्स ���े साथ पार्टनरशिप",
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
         "अपनी niche मे��� go-to एक्���पर्ट बनना",
-        "लगातार वायरल कंटेंट बनाना",
+        "लगातार वा���रल कंटेंट बनाना",
         "10K सब्सक्राइबर्�� की email लिस्ट",
         "इंडस्ट्री ���वेंट्स/पॉडकास्ट्स में बोलना",
         "पैसिव इनकम स्ट्रीम्स बनाना",
@@ -387,7 +387,7 @@ const languages = {
       subtitle:
         "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली टूल्स को डाउनलोड ���रे��",
       mediaKit: {
-        title: "प्रोफेशनल मीडिया किट टेम्प्लेट",
+        title: "प्रोफे��नल मीडिया किट टेम्प्लेट",
         description: "आकर��षक मीडिया किट बनाएं जो ब्रांड्स को पसंद आएंगे",
       },
       emailTemplates: {
@@ -526,12 +526,22 @@ ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.
 ${language === "hindi" ? "सांख्यिकी और दरें:" : "STATISTICS & RATES:"}
 ${language === "hindi" ? "कंटेंट प्रकार:" : "Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "पोस्टिंग आवृत्ति:" : "Posting Frequency:"} ${quizData.postingFrequency}
-${language === "hindi" ? "मासिक आय:" : "Monthly Income:"} ${quizData.monthlyIncome}
+${language === "hindi" ? "मासि�� आय:" : "Monthly Income:"} ${quizData.monthlyIncome}
 
-${language === "hindi" ? "सुझावित दरें (आपकी ऑडियंस के आधार पर):" : "SUGGESTED RATES (Based on your audience):"}
-${language === "hindi" ? "प�����्ट दरें:" : "Post Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "2,000-5,000" : quizData.followerCount.includes("1K - 5K") ? "5,000-12,000" : "15,000-50,000"}
-${language === "hindi" ? "स्टोरी दरें:" : "Story Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-3,000" : quizData.followerCount.includes("1K - 5K") ? "3,000-8,000" : "8,000-25,000"}
-${language === "hindi" ? "��ील दरें:" : "Reel Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "3,000-8,000" : quizData.followerCount.includes("1K - 5K") ? "8,000-20,000" : "25,000-75,000"}
+${language === "hindi" ? "सुझावित दरें (भारतीय बाजार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
+
+${language === "hindi" ? "📱 प्लेटफॉर्म दरें:" : "📱 PLATFORM RATES:"}
+${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-3,000"}
+${language === "hindi" ? "Instagram Reel:" : "Instagram Reel:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
+${language === "hindi" ? "Instagram Story:" : "Instagram Story:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-300" : quizData.followerCount.includes("1K - 5K") ? "300-500" : "500-1,500"}
+${language === "hindi" ? "YouTube शॉर्ट:" : "YouTube Short:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
+${language === "hindi" ? "YouTube वीडियो मेंशन:" : "YouTube Video Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-2,000" : quizData.followerCount.includes("1K - 5K") ? "2,000-3,000" : "3,000-8,000"}
+${language === "hindi" ? "Twitter पोस्ट:" : "Twitter Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-200" : quizData.followerCount.includes("1K - 5K") ? "200-400" : "400-1,000"}
+${language === "hindi" ? "Newsletter मेंशन:" : "Newsletter Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-2,500"}
+
+${language === "hindi" ? "📦 पैकेज दरें:" : "📦 PACKAGE RATES:"}
+${language === "hindi" ? "• बेसिक पैकेज (1 पोस्ट + 2 स्टोरी):" : "• Basic Package (1 Post + 2 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "400-800" : quizData.followerCount.includes("1K - 5K") ? "800-1,500" : "1,500-4,000"}
+${language === "hindi" ? "• प्रीमियम पैकेज (2 पोस्ट + 1 रील + 3 स्टोरी):" : "• Premium Package (2 Posts + 1 Reel + 3 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,200-2,500" : quizData.followerCount.includes("1K - 5K") ? "2,500-4,500" : "4,500-12,000"}
 
 ${language === "hindi" ? "संपर्क:" : "CONTACT:"}
 ${language === "hindi" ? "ईमेल:" : "Email:"} ${quizData.email || "[your@email.com]"}
@@ -570,7 +580,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे में email भेजा था। मुझे लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
+${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे में email भेजा था। मुझे लगता है कि हम ए��� amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और उस post को [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
@@ -639,7 +649,7 @@ ${language === "hindi" ? "• Engagement Rate: [percentage]" : "• Engagement R
 ${language === "hindi" ? "• Story Views: [number]" : "• Story Views: [number]"}
 ${language === "hindi" ? "• Website Clicks: [number]" : "• Website Clicks: [number]"}
 
-${language === "hindi" ? "🎯 AUDIENCE FEEDBACK:" : "🎯 AUDIENCE FEEDBACK:"}
+${language === "hindi" ? "🎯 AUDIENCE FEEDBACK:" : "���� AUDIENCE FEEDBACK:"}
 ${language === "hindi" ? "• [Positive feedback examples]" : "• [Positive feedback examples]"}
 ${language === "hindi" ? "• [Questions about product]" : "• [Questions about product]"}
 
@@ -709,7 +719,7 @@ ${language === "hindi" ? "- एनालिटिक्स ट्रैक क�
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
 ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करें (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफिक कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
-${language === "hindi" ? "- ट्रेंडिंग टॉपिक्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
+${language === "hindi" ? "- ट्रेंडिंग टॉपिक्स पर कंटेंट ब���ाएं" : "- Create content on trending topics"}
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू करें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "दिन 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
