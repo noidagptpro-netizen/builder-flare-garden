@@ -145,7 +145,7 @@ const languages = {
     paySecure: "₹99 भुगतान करें - सुरक्षित भुगतान",
     processing: "प्रसंस्करण...",
     whatYouGet: "भुगतान के बाद आपको मिलेगा:",
-    fameScoreReport: "फेम स���कोर रिपोर्ट",
+    fameScoreReport: "फेम स्कोर रिपोर्ट",
     mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
     premiumTools: "प्रीमियम टूल्स",
@@ -163,7 +163,7 @@ const languages = {
     followers: "फॉलोअर्स:",
     monthlyIncome: "मासिक आय:",
     experienceLevel: "अनुभव स्तर:",
-    activePlatforms: "सक्रिय प्लेटफॉ���्म:",
+    activePlatforms: "सक्रिय प्लेटफॉर्म:",
     competitorAnalysis: "प्रतियोगी विश्लेषण",
     marketInsights: "बाजार अंतर्दृष्टि",
   },
@@ -332,7 +332,7 @@ ${language === "hindi" ? "मासिक रीच:" : "Monthly Reach:"} ${lang
 ${language === "hindi" ? "सुझावित दरें:" : "SUGGESTED RATES:"}
 ${language === "hindi" ? "पोस्ट दरें:" : "Post Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "3,000-8,000" : quizData.followerCount.includes("1K - 5K") ? "8,000-15,000" : "15,000-50,000"}
 ${language === "hindi" ? "स्टोरी दरें:" : "Story Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,500-4,000" : quizData.followerCount.includes("1K - 5K") ? "4,000-8,000" : "8,000-25,000"}
-${language === "hindi" ? "रील दरें:" : "Reel Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "5,000-12,000" : quizData.followerCount.includes("1K - 5K") ? "12,000-25,000" : "25,000-75,000"}
+${language === "hindi" ? "री�� दरें:" : "Reel Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "5,000-12,000" : quizData.followerCount.includes("1K - 5K") ? "12,000-25,000" : "25,000-75,000"}
 
 ${language === "hindi" ? "विशेषताएं:" : "SPECIALTIES:"}
 - ${analysis.suggestions.slice(0, 3).join("\n- ")}
@@ -511,7 +511,7 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
                   className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all"
                 >
                   <Download className="w-4 h-4 inline mr-2" />
-                  {language === "hindi" ? "डाउनलोड करें" : "Download"}
+                  {language === "hindi" ? "��ाउनलोड करें" : "Download"}
                 </button>
               </div>
 
@@ -958,13 +958,20 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
                       <input
                         type="tel"
                         value={personalInfo.phone}
-                        onChange={(e) =>
+                        onChange={(e) => {
                           setPersonalInfo({
                             ...personalInfo,
                             phone: e.target.value,
-                          })
-                        }
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                          });
+                          if (formErrors.phone) {
+                            setFormErrors({ ...formErrors, phone: "" });
+                          }
+                        }}
+                        className={`w-full px-3 py-2 border-2 rounded-lg focus:outline-none text-gray-900 bg-white ${
+                          formErrors.phone
+                            ? "border-red-500 focus:border-red-500"
+                            : "border-gray-300 focus:border-blue-500"
+                        }`}
                         placeholder="+91 9876543210"
                       />
                     </div>
