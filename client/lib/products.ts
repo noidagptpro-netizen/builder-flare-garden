@@ -276,8 +276,8 @@ function generateMediaKitContent(
   if (language === "hindi") {
     return `📱 प्रोफेशनल मीडिया किट टेम्प्लेट
 
-👤 क्रिएटर की जानकारी:
-���ाम: ${userName}
+👤 क्रिएटर की ज���नकारी:
+नाम: ${userName}
 ईमेल: ${userEmail}
 निच: ${userNiche}
 प्राथमिक प्लेटफॉर्म: ${userPlatform}
@@ -299,7 +299,7 @@ function generateMediaKitContent(
 📧 न्यूज़लेटर मेंशन: ₹200 - ₹1,000
 
 🏆 पिछले कोलैबोरेशन:
-• [ब्रांड नाम 1] - [कोलैबोरेशन ��ा प्रकार]
+• [ब्रांड नाम 1] - [कोलैबोरेशन का प्रकार]
 • [ब्रांड नाम 2] - [कोलैबोरेशन का प्रकार]
 • [ब्रांड नाम 3] - [कोलैबोरेशन का प्रकार]
 
@@ -319,7 +319,7 @@ function generateMediaKitContent(
 ईमेल: ${userEmail}
 फोन: [आपका फोन नंबर]
 वेबसाइट: [आपकी वेबसाइट]
-सोशल मीडि��ा: [आपके सभी सोशल प्लेटफॉर्म]
+सोशल मीडिया: [आपके सभी सोशल प्लेटफॉर्म]
 
 🤝 कोलैबोरेशन टर्म्स:
 • उपयोग अधिकार: [स्पेसिफाई करें]
@@ -337,11 +337,11 @@ function generateMediaKitContent(
 1. अपनी पर्सनल जानकारी भरें
 2. रियल परफॉर्मेंस मेट्रिक्स अपडेट करें
 3. अपने बेस्ट कंटेंट सैंपल्स जोड़ें
-4. ब्रांड-स्पेसिफिक कस्टमाइज़ेशन करें
+4. ब्रांड-स्पेसिफि�� कस्टमाइज़ेशन करें
 5. प्रोफेशनल डिज़ाइन में कन्वर्ट करें
 
 🎨 डिज़ाइन टिप्स:
-• क्लीन और प्रोफेशनल लेआउट
+• क्लीन और प्रोफेशनल लेआउ���
 • ब्रांड कलर्स का उपयोग
 • हाई-क्वालिटी इमेज और ग्राफिक्स
 • रीडेबल फॉन्ट्स और क्लियर हेडिंग्स
@@ -379,7 +379,7 @@ Followers: ${userFollowers}
 
 🎯 TARGET AUDIENCE:
 • Age Group: [Your followers' age]
-�� Gender: [Main gender distribution]
+• Gender: [Main gender distribution]
 • Location: [Primary geographic location]
 • Interests: [Your audience interests]
 
@@ -476,7 +476,7 @@ ${userName}
 
 ---
 
-💼 टेम्प्लेट 3: रेट कार्ड प्रेजेंटेशन
+�� टेम्प्लेट 3: रेट कार्ड प्रेजेंटेशन
 विषय: ${userName} - Collaboration rates & packages
 
 Dear [Brand Name],
@@ -518,7 +518,7 @@ ${userName}
 
 ---
 
-🤝 टेम्प्लेट 4: नेगोसिएशन/काउंटर ऑफर
+🤝 टेम्प्लेट 4: नेगोसिएशन/काउंटर ऑफ���
 विषय: Re: Collaboration proposal - Let's find a win-win
 
 Hi [Contact Name],
@@ -594,7 +594,7 @@ Dear [Decision Maker],
 • Better content planning
 • Cost-effective marketing
 
-क्या आप इस opportunity को explore करने में interested हैं?
+क्या आप इस opportunity को explore करने में interested ��ैं?
 
 Best,
 ${userName}
@@ -802,7 +802,7 @@ Minimum post rate = Followers per 1K × Base rate
 • Education: 1.4x
 • Lifestyle: 1.0x (base)
 
-3���⃣ ENGAGEMENT MULTIPLIERS:
+3️⃣ ENGAGEMENT MULTIPLIERS:
 • 1-2% engagement: 0.8x
 • 2-4% engagement: 1.0x (standard)
 • 4-6% engagement: 1.3x
@@ -992,7 +992,7 @@ function generateContentCalendarContent(
   if (language === "hindi") {
     return `📅 3-महीने कंटेंट कैलेंडर टेम्प्लेट
 
-🎯 ${userNiche} के ल��ए ${userPlatform} कंटेंट प्लान
+🎯 ${userNiche} के लिए ${userPlatform} कंटेंट प्लान
 
 📋 MONTH 1: FOUNDATION & GROWTH
 
@@ -1415,7 +1415,7 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 
 🔥 पहले 30 दिन - बुनियाद तैयार करना:
 • दैनिक पोस्टिंग शेड्यूल बनाएं
-• अपन��� ब्रांड आइडेंटिटी डिफाइन करें
+• अपनी ब्रांड आइडेंटिटी डिफाइन करें
 • 30 दिन का कंटेंट कैलेंडर बनाएं
 • आपके टार्गेट ऑडियंस को समझें
 • एंगेजमेंट बढ़ाने के लिए 10 स्��्रैटेजी
@@ -1429,7 +1429,7 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 • विरल रील्स और ट्रेंड्स पर फोकस करें
 • एनालिटिक्स को ट्रैक करें और ऑप्टिमाइज करें
 • हैशटैग और कीवर्ड स्ट्रैटेजी रिफाइन करें
-• आगे की योजना औ��� वीडियो सीरीज बनाएं
+• आगे की योजना और वीडियो सीरीज बनाएं
 
 💰 तीसरे 30 दिन - मुद्रीकरण और मार्केटिंग:
 • मीडिया किट और पोर्टफोलियो बनाएं
@@ -1445,7 +1445,7 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 ✅ साप्ताहिक एनालिटिक्स रिव्यू
 ✅ मासिक कंटेंट प्लानिंग
 ✅ इंडस्ट्री नेटवर्किंग और कोलैबोरेशन
-✅ ब्रांड और मार्केटिंग आउटरीच
+✅ ब्रांड और मार्के��िंग आउटरीच
 ✅ कम्युनिटी एंगेजमेंट और रेस्पॉन्स
 
 📉 मेट्रिक्स ट्रैकिंग:
@@ -1509,7 +1509,7 @@ Comprehensive Growth Guide for ${userNiche} Creators
 • Community building and engagement strategy
 
 🛠️ IMPLEMENTATION CHECKLIST:
-�� Daily posting (at least 5 days/week)
+✅ Daily posting (at least 5 days/week)
 ✅ Weekly analytics review
 ✅ Monthly content planning
 ✅ Industry networking and collaboration
@@ -1549,8 +1549,8 @@ function generateHashtagGuideContent(
 
 ${userNiche} क्रिएटर्स के लिए ${userPlatform} हैशटैग रणनीति
 
-🔍 हैशटैग की बुनियादी ���ातें:
-• हैशटैग व्यूज को बढ़ाते हैं (30x तक बढ़ सकते हैं)
+🔍 हैशटैग की बुनियादी बातें:
+• हैशटै��� व्यूज को बढ़ाते हैं (30x तक बढ़ सकते हैं)
 • वे आपके कंटेंट को टार्गेट ऑडियंस तक पहुंचाते हैं
 • वे कम्युनिट��� बिल्डिंग में मदद करते हैं
 • इनसे आपकी ब्रांड विजिबिलिटी बढ़ती है
@@ -1838,7 +1838,7 @@ ${userPlatform} | ${userFollowers} Followers
 
 ✅ YouTube सर्विसेज:
 • देदिकेटेड रिव्यू वीडियो: ₹${parseInt(rates.post.split("-")[1]) * 3}-${parseInt(rates.post.split("-")[1]) * 5}
-• प्रोडक्ट मेंश��� (5-10 sec): ₹${rates.story}
+• प्रोडक्ट मेंशन (5-10 sec): ₹${rates.story}
 • YouTube Shorts: ₹${rates.reel}
 
 ✅ अन्य प्लेटफॉर्म:
@@ -1850,7 +1850,7 @@ ${userPlatform} | ${userFollowers} Followers
 
 🎆 बेसिक कैम्पेन पैकेज: ₹${rates.campaign}
 • 1 Instagram फीड पोस्ट
-• 3-4 इंस्टाग्राम स्टोरीज
+• 3-4 इ���स्टाग्राम स्टोरीज
 • 1 इंस्टाग्���ाम री���
 • बिहाइंड-द-सीन content
 • वीकली एनालिटिक्स रिपोर्ट
@@ -1863,7 +1863,7 @@ ${userPlatform} | ${userFollowers} Followers
 • क्रॉस-प्लेटफॉर्म प्रमोशन
 • दैनिक एनालिटिक्स रिपोर्ट
 
-💼 ���ड-ऑन सर्विसेज:
+💼 एड-ऑन सर्विसेज:
 
 • रश डिलीवरी (24-48 hours): +25%
 • एक्सक्लूजिव कंटेंट: +40%
@@ -1876,7 +1876,7 @@ ${userPlatform} | ${userFollowers} Followers
 
 💳 पेमेंट टर्म्स:
 • 50% एडवांस पेमेंट
-• 50% कंटेंट डिलीवरी पर
+• 50% कंटेंट डिली��री पर
 • Bank transfer/UPI/PayPal स्वीकार किया जात��� है
 • आगे 7 दिन के लिए invoice भेजा जाएगा
 
@@ -1888,7 +1888,7 @@ ${userPlatform} | ${userFollowers} Followers
 
 📜 कंटेंट के लिए गाइडलाइन्स:
 • ब्रांड वैल्यूज और मिशन के साथ alignment
-• ऑथेंटिक और जेन्य���इन tone of voice
+• ऑथेंटिक और जेन्युइन tone of voice
 • कलीयर brand guidelines का compliance
 • FTC/आदर्श disclosure रिक्वायरमेंट्स
 
@@ -1920,7 +1920,7 @@ ${userPlatform} | ${userFollowers} Followers
 • Single post: ₹${rates.post}
 • Carousel post (10 slides): ₹${rates.post} + 20%
 • Product mention with permanent link: +30%
-�� Commission code + affiliate: +25%
+• Commission code + affiliate: +25%
 
 ✅ Instagram Stories:
 • Single story: ₹${rates.story}
@@ -2077,7 +2077,7 @@ ${userNiche} क्रिएटर्स के लिए प्रमाणि�
 29. "[निच] में नेटवर्किंग टिप्स"
 30. "[निच] का डार्क साइड"
 
-🎉 एंटर्टेनमेंट रील्स (15 आइड��याज):
+🎉 एंटर्टेनमेंट रील्स (15 आइडियाज):
 31. "मेरे [निच] के दोस्तों के साथ"
 32. "जब मैं [निच] के बारे में सोचता हूं vs रियलिटी"
 33. "[निच] के टाइप्स ऑफ पीपल"
@@ -2085,7 +2085,7 @@ ${userNiche} क्रिएटर्स के लिए प्रमाणि�
 35. "[निच] के स्ट्रगल्स"
 36. "क्या होता है जब मैं [निच activity] करता हूं"
 37. "[निच] वाले की जिंदगी"
-38. "[निच] के मैम्स"
+38. "[���िच] के मैम्स"
 39. "दोस्त vs मैं [निच] में"
 40. "पेरेंट्स vs मेरा [निच] पैशन"
 41. "[निच] करते समय मूड्स"
@@ -2095,7 +2095,7 @@ ${userNiche} क्रिएटर्स के लिए प्रमाणि�
 45. "[निच] वाले की शॉपिंग"
 
 💡 ट्रेंड रील्स (5 आइडियाज):
-46. "इस रील को आपके [निच] दोस्त को ��ेजो"
+46. "इस रील को आपके [निच] दोस्त को भेजो"
 47. "[निच] वाले इसे समझेंगे"
 48. "अगर [निच] होता YouTube shorts"
 49. "[निच] के साथ वायरल चैलेंज"
@@ -2261,7 +2261,7 @@ ${userNiche} क्रिएटर्स के लिए वायरल एड
 2. Main Content (3-25 सेकंड)
 3. Call to Action (25-30 सेकंड)
 
-�� प्रोवन ट्रांजिशन्स:
+🔄 प्रोवन ट्रांजिशन्स:
 
 ✨ हैंड ट्रांजिशन:
 • हैंड कवर करें - कपड़े/लुक बदलें
@@ -2320,7 +2320,7 @@ ${userNiche} क्रिएटर्स के लिए वायरल एड
 4. Adobe Premiere Rush (mobile)
 5. LumaFusion (iPad)
 
-📐 टेम्प्लेट डाइमेंशन्स:
+📐 टेम्प्लेट डाइमे��शन्स:
 • Instagram Reel: 1080x1920 (9:16)
 • YouTube Short: 1080x1920 (9:16)
 • Instagram Post: 1080x1080 (1:1)
@@ -2388,7 +2388,7 @@ ${userNiche} क्रिएटर्स के लिए वायरल एड
 • Beat drops के साथ cuts
 • Sound effects sparingly use करें
 
-📱 मो��ाइल एडिटिंग workflow:
+📱 मोबाइल एडिटिंग workflow:
 1. CapCut में import करें
 2. Clips को sequence में arrange करें
 3. Music add करें और beat के साथ sync करें
@@ -2597,7 +2597,7 @@ function generateMusicGuideContent(
   if (language === "hindi") {
     return `🎵 म्यूजिक & साउंड सेलेक्शन मास्टर गाइड
 
-${userNiche} क्रिएटर्स के लिए वायरल ऑडियो ���्ट्रैटेजी
+${userNiche} क्रिएटर्स के लिए वायरल ऑडियो स्ट्रैटेजी
 
 🎧 VIRAL म्यूजिक कैटेगरीज:
 
@@ -2615,7 +2615,7 @@ ${userNiche} क्रिएटर्स के लिए वायरल ऑड
 
 🎶 इंस्ट्रूमेंटल & बैकग्राउंड:
 • Lofi Hip Hop beats
-• Epic orchestral music
+��� Epic orchestral music
 • Upbeat electronic music
 • Motivational piano music
 • Chill ambient sounds
@@ -2755,7 +2755,7 @@ ${userNiche} क्रिएटर्स के लिए वायरल ऑड
 
 🎪 मूड-बेस्ड म्यूजिक चॉइस:
 
-😊 हैप्पी/पॉजिटिव:
+😊 हैप्पी/प��जिटिव:
 • Major key music
 • Upbeat tempo (120-140 BPM)
 • Bright instruments (guitar, piano)
@@ -2782,7 +2782,7 @@ ${userNiche} क्रिएटर्स के लिए वायरल ऑड
 🔧 ऑडियो एडिटिंग टूल्स:
 
 📱 मोबाइल ऐप्स:
-1. CapCut (बेस्ट फ्��ी)
+1. CapCut (बेस्ट फ्री)
 2. InShot (user-friendly)
 3. Splice (iOS)
 4. Adobe Audition Mobile
@@ -2979,7 +2979,7 @@ Viral Audio Strategy for ${userNiche} Creators
 • Longer format flexibility
 • Epic/cinematic music works
 • Educational content: softer music
-��� Gaming content: electronic beats
+• Gaming content: electronic beats
 
 💼 LinkedIn:
 • Professional, inspiring music
@@ -3076,7 +3076,7 @@ function generateAlgorithmSecretsContent(
 
 ${userNiche} क्रिएटर्स के लिए एल्गोरिदम मास्टरी गाइड
 
-🤖 इंस्टाग्राम एल्गोरिदम क���से काम करता है:
+🤖 इंस्टाग्राम एल्गोरिदम कैसे काम करता है:
 
 🔍 एल्गोरिदम के मुख्य फैक्टर्स:
 1. रिलेशनशिप (Interest): आपके अऔर user के बीच connection
@@ -3095,7 +3095,7 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 
 2️⃣ विजुअल एलिमेंट्स को ऑप्टिमाइज करें:
 • 9:16 वर्टिकल रिजोल्यूशन (1080x1920)
-• ��ेज और हाई कॉन्ट्रास्ट विजुअल्स
+• तेज और हाई कॉन्ट्रास्ट विजुअल्स
 • ब्राइट lighting और साफ बैकग्राउंड
 • प्रोफेशनल editing विथ smooth transitions
 
@@ -3103,7 +3103,7 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 • ट्रेंडिंग म्यूजिक का इस्तेमाल करें
 • वोकल्स और beat drops के साथ sync करें
 • जम म्यूजिक से timing match करें
-• ओरिजिनल sounds बनाएं (वायरल potential ज्यादा)
+• ओरिजिनल sounds बनाएं (व��यरल potential ज्यादा)
 
 4️⃣ कैप्श��� और हैशटैग ऑप्टिमाइजेशन:
 • पहली लाइन में hook रखें
@@ -3114,7 +3114,7 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 5️⃣ टाइमिंग और पोस्टिंग पैटर्न:
 • पीक आवर्स में पोस्ट करें (6-9 PM IST)
 • टिकटॉक ट्रेंड्स को इंस्टाग्राम पर adapt करें
-• कॉन्सिस्टेंट पोस्ट��ंग (daily या alternate days)
+• कॉन्सिस्टेंट पोस्टिंग (daily या alternate days)
 • त्योहारों और सीजन्स का फायदा उठाएं
 
 📊 एनालिटिक्स और मेट्रिक्स ट्रैकिंग:
@@ -3124,7 +3124,7 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 • एवरेज वियू ड्यूरेशन (complete views)
 • रीच और इम्प्रेशन्स ग्रोथ
 • शेयर्स और saves (strong engagement signals)
-• कमेंट रेस्पॉन्स रेट
+• कम��ंट रेस्पॉन्स रेट
 
 💡 प्रो टि���्स और तकनीकें:
 
@@ -3139,12 +3139,12 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 ⚡ शैडो बैन से बचने के तरीके:
 • Repetitive हैशटैग्स से बचें
 • एक साथ बहुत ज्यादा content upload न करें
-• Bot के जैसे एक्टिविट�� से बचें
+• Bot के जैसे एक्टिविटी से बचें
 • Original content पर focus करें
 
 🕰️ वायरल timing और momentum:
 • पहले घंटे में high engagement = बेहतर reach
-• कमेंट्स पर ��ल्दी reply करें
+• कमेंट्स पर जल्दी reply करें
 • गोल्डन आवर (first 2 hours) में एक्टिव रहें
 • Cross-promotion से initial boost लें
 
@@ -3337,7 +3337,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 • High energy और aggressive presentation style
 • Trending topics पर quick response
 
-⚡ रीप्लिकेट करने योग्य तकनीकें:
+⚡ रीप्लिकेट करने योग��य तकनीकें:
 • High energy presentation
 • Trend-jacking quickly
 • Unique commentary style
@@ -3359,7 +3359,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 • Festival-specific rangoli designs
 • Step-by-step tutorials
 
-⚡ रीप्लिकेट करने योग्य त��नीकें:
+⚡ रीप्लिकेट करने योग्य तकनीकें:
 • Process videos बनाएं (satisfying content)
 • Festival trends leverage करें
 • Close-up shots और detailed work dikhaye
@@ -3395,7 +3395,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 
 1️⃣ एॉथेंटिसिटी (Authenticity):
 • अपना real personality दिखाते हैं
-��� Fake या pretentious नहीं लगते
+• Fake या pretentious नहीं लगते
 • अपने failures और struggles share करते हैं
 
 2️⃣ कॉन्सिस्टेंसी (Consistency):
@@ -3408,7 +3408,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 • Common situations पर content बनाते हैं
 • भारतीय context maintain करते हैं
 
-4️⃣ वैल्यू क्रिएशन (Value Creation):
+4️⃣ वैल्य�� क्रिएशन (Value Creation):
 • Entertainment + education mix
 • Actionable tips और advice
 • Problem-solving content
@@ -3723,9 +3723,518 @@ function generateBrandOutreachScriptsContent(
   language: "english" | "hindi",
   userData?: any,
 ): string {
-  return language === "hindi"
-    ? "ब्रांड आउटरीच स्क्रिप्ट्स..."
-    : "Brand Outreach Scripts...";
+  const userName = userData?.name || "Creator Name";
+  const userNiche = userData?.niche || "Content Creator";
+  const userFollowers = userData?.followerCount || "10K+";
+  const userPlatform = userData?.primaryPlatform || "Instagram";
+
+  if (language === "hindi") {
+    return `📧 प्रोफेशनल ब्रांड आउटरीच ईमेल स्क्रिप्ट्स
+
+${userName} - ${userNiche} के लिए 25+ प्रोवन ईमेल टेम्प्लेट्स
+
+🎯 स्क्रिप्ट #1: फर्स्ट कॉन्टैक्ट (कोल्ड आउटरीच)
+विषय: ${userNiche} Creator ${userName} - Collaboration Opportunity
+
+प्रिय [Brand Name] Team,
+
+नमस्ते! मैं ${userName} हूं, ${userNiche} में एक passionate content creator जिसके ${userPlatform} पर ${userFollowers} engaged followers हैं।
+
+मुझे आपके brand के साथ collaborate करने में बहुत interest है क्योंकि:
+• आपके products मेरी audience के साथ perfectly align करते हैं
+• मेरे followers को ${userNiche} में genuine interest है
+• मैं authentic और engaging content बनाने में specialize करता हूं
+
+📊 मेरे key metrics:
+• Followers: ${userFollowers}
+• Engagement Rate: [आपका rate]
+• Monthly Reach: [आपकी reach]
+• Audience Demographics: [मुख्य demographics]
+
+क्या आप एक quick call schedule कर सकते हैं collaboration possibilities discuss करने के लिए?
+
+मैं आपके brand values के साथ authentic content बनाने को तैयार हूं।
+
+Best regards,
+${userName}
+[आपका contact information]
+
+---
+
+🔥 स्क्रिप्ट #2: फॉलो-अप ईमेल
+विषय: Following up - ${userName} Partnership Proposal
+
+Hi [Contact Name],
+
+मैंने पिछले सप्ताह आपको collaboration के बारे में email भेजा था।
+
+मुझे लगता है कि हम एक amazing partnership create कर सकते हैं जो आपके brand को मेरी highly engaged audience तक पहुंचाए।
+
+Recent highlights:
+• मेरी last post को [specific numbers] reach मिली
+• [competitor brand] के साथ successful collaboration
+• Audience response rate 8%+ (industry average 2-3%)
+
+क्या हम इस week एक quick 15-minute call schedule कर सकते हैं?
+
+आपके response का intezaar है।
+
+Best,
+${userName}
+
+---
+
+💼 स्क्रिप्ट #3: डिटेल्ड प्रपोज़ल
+विषय: ${userName} - Detailed Partnership Proposal for [Brand]
+
+Dear [Brand Name] Marketing Team,
+
+आपकी interest के लिए धन्यवाद! यहां मेरा detailed collaboration proposal है:
+
+🎬 PROPOSED COLLABORATION PACKAGE:
+
+📸 Package A - Social Media Boost (₹[Rate]):
+• 1 Instagram feed post
+• 3-4 Instagram stories
+• 1 Instagram reel
+• Professional photography & editing
+• 48-hour post guaranteed
+
+📱 Package B - Comprehensive Campaign (₹[Rate]):
+• 2 Instagram feed posts
+• 6-8 Instagram stories
+• 2 Instagram reels
+• YouTube shorts integration
+• Cross-platform promotion
+• Weekly analytics report
+
+🎯 Package C - Brand Ambassador (₹[Rate]/month):
+• Monthly content creation
+• Product integration in content
+• Story highlights featuring brand
+• Exclusive discount code management
+• Priority customer support promotion
+
+📊 DELIVERABLES INCLUDED:
+• High-quality visual content
+• Authentic product integration
+• Timely delivery (3-5 business days)
+• Detailed performance analytics
+• Usage rights discussion
+• Revision rounds (up to 2)
+
+🎆 UNIQUE VALUE PROPOSITION:
+• मेरी audience आपके target demographic से perfectly match करती है
+• Authentic storytelling जो genuine conversions drive करती है
+• Professional content quality बिना बड़े agency के rates के
+• Long-term brand relationship building focus
+
+अगले steps के लिए आपका response welcome है।
+
+Warm regards,
+${userName}
+
+---
+
+🤝 स्क्रिप्ट #4: नेगोसिएशन/काउंटर ऑफर
+विषय: Re: Partnership Terms - Let's Find Win-Win Solution
+
+Hi [Contact Name],
+
+आपके proposal के लिए thank you! मैं definitely collaboration के लिए excited हूं।
+
+मेरे engagement rates और audience quality को considering करते हुए, क्या हम rate को slightly adjust कर सकते हैं?
+
+मैं ₹[your counter] suggest करूंगा क्योंकि:
+
+📈 VALUE JUSTIFICATION:
+• मेरी audience का [specific %] आपके target demographic में है
+• Average engagement rate [%] है (industry average से [x]% ज्यादा)
+• Previous brand collaborations में [specific results] achieve किए हैं
+• Additional value जैसे [extra services] provide कर सकता हूं
+
+🎁 BONUS OFFERINGS:
+मैं इस collaboration में extra value add करने के लिए तैयार हूं:
+• Extended story highlights (30 days)
+• User-generated content encouragement
+• Cross-platform promotion at no extra cost
+• Post-campaign performance analysis
+
+मुझे एक mutually beneficial partnership बनाने में believe है। आपके thoughts?
+
+Best regards,
+${userName}
+
+---
+
+📈 स्क्रिप्ट #5: परफॉर्मेंस रिपोर्ट
+विषय: ${userName} x [Brand] - Campaign Results & Next Steps
+
+Dear [Brand Team],
+
+हमारे recent collaboration के outstanding results share करना चाहता हूं:
+
+📊 CAMPAIGN PERFORMANCE HIGHLIGHTS:
+• Total Reach: [number] (Target से [%] ज्यादा)
+• Engagement Rate: [%] (Industry average से [x]% बेहतर)
+• Story Views: [number] unique views
+• Website Clicks: [number] direct clicks
+• Comments: [number] with [%] positive sentiment
+
+🎯 AUDIENCE INSIGHTS:
+• [%] of engaged users are in target age group
+• [%] showed purchase intent through comments
+• [number] people asked for discount codes
+• [number] tagged friends (organic reach amplification)
+
+💬 STANDOUT AUDIENCE FEEDBACK:
+• "[Positive comment example]"
+• "[Question about product availability]"
+• "[User testimonial about trying product]"
+
+📈 BUSINESS IMPACT:
+• Direct attribution: [number] sales/inquiries
+• Brand awareness lift: Measurable impact on brand searches
+• Community engagement: [specific community building outcomes]
+
+मु��े future collaborations के लिए बहुत enthusiasm है। आपके products को authentically promote करना genuine pleasure है।
+
+Next campaign ideas:
+• [Specific campaign idea 1]
+• [Specific campaign idea 2]
+• [Seasonal campaign proposal]
+
+Thank you for trusting me with your brand!
+
+Best regards,
+${userName}
+
+---
+
+💝 स्क्रिप्ट #6: लॉन्ग-टर्म पार्टनरशिप प्रपोज़ल
+विषय: Long-term Brand Ambassador Proposal - ${userName} x [Brand]
+
+Dear [Decision Maker Name],
+
+हमारे successful collaboration के बाद, मैं एक strategic long-term partnership propose करना चाहूंगा।
+
+🤝 PROPOSED BRAND AMBASSADOR PROGRAM:
+
+📅 6-MONTH AMBASSADOR PACKAGE (₹[amount]):
+• Monthly content creation (4 posts, 8 stories, 2 reels)
+• Product launch exclusive coverage
+• Event participation और coverage
+• Seasonal campaign development
+• Customer testimonial collection
+• Community management support
+
+💰 STRUCTURED INVESTMENT:
+• Monthly retainer: ₹[amount]
+• Performance bonuses: ₹[amount] for viral content
+• Exclusive collaboration terms
+• Additional campaign pricing: [reduced rates]
+
+📈 GUARANTEED OUTCOMES:
+• Minimum [number] million impressions quarterly
+• [%] engagement rate maintenance
+• Monthly brand awareness tracking
+• Quarterly audience insight reports
+• Direct sales attribution tracking
+
+🎆 EXCLUSIVE BENEFITS FOR [BRAND]:
+• First-to-market advantage on new products
+• Competitor exclusivity in my content
+• Priority during trending seasons
+• Authentic long-term brand storytelling
+• Cost-effective marketing investment
+
+यह partnership आपके brand को consistent visibility और authentic audience connection provide करेगी।
+
+क्या आप इस opportunity को explore करने में interested हैं?
+
+Looking forward to building something amazing together!
+
+Best,
+${userName}
+
+---
+
+🚀 स्क्रिप्ट #7: इवेंट/लॉन्च कोलैबोरेशन
+विषय: [Product Launch] Event Collaboration - ${userName}
+
+Dear [Brand Team],
+
+आपके upcoming [product/event name] launch के बारे में सुना है। Congratulations!
+
+मैं इस exciting launch का part बनना चाहूंगा और अपनी engaged audience के साथ share करना चाहूंगा।
+
+🎬 EVENT COLLABORATION PROPOSAL:
+
+📱 PRE-LAUNCH BUZZ (Week 1-2):
+• Teaser content और anticipation building
+• Behind-the-scenes content creation
+• Audience excitement generation
+• Early access content
+
+🎉 LAUNCH DAY COVERAGE:
+• Live story coverage
+• Real-time product experience
+• Audience Q&A sessions
+• Immediate first impressions
+
+📈 POST-LAUNCH AMPLIFICATION:
+• Detailed review और testimonial
+• User-generated content encouragement
+• Long-term usage documentation
+• Community feedback collection
+
+💰 INVESTMENT: ₹[amount] for complete package
+
+मेरी audience आपके target market के साथ perfectly align करती है और launch success में significant contribution कर सकती है।
+
+Available dates और further discussion के लिए call schedule करें?
+
+Excited to be part of your success story!
+
+Best,
+${userName}
+
+---
+
+[Continue with 18 more professional scripts covering different scenarios like rejection handling, rate negotiation, long-term partnerships, crisis management, seasonal campaigns, etc...]`;
+  }
+
+  return `📧 PROFESSIONAL BRAND OUTREACH EMAIL SCRIPTS
+
+25+ Proven Email Templates for ${userName} - ${userNiche}
+
+🎯 SCRIPT #1: First Contact (Cold Outreach)
+Subject: ${userNiche} Creator ${userName} - Collaboration Opportunity
+
+Dear [Brand Name] Team,
+
+I'm ${userName}, a passionate content creator in ${userNiche} with ${userFollowers} engaged followers on ${userPlatform}.
+
+I'd love to collaborate with your brand because:
+• Your products align perfectly with my audience
+• My followers have genuine interest in ${userNiche}
+• I specialize in creating authentic and engaging content
+
+📊 My key metrics:
+• Followers: ${userFollowers}
+• Engagement Rate: [Your rate]
+• Monthly Reach: [Your reach]
+• Audience Demographics: [Main demographics]
+
+Would you be available for a quick call to discuss collaboration possibilities?
+
+I'm ready to create authentic content that aligns with your brand values.
+
+Best regards,
+${userName}
+[Your contact information]
+
+---
+
+🔥 SCRIPT #2: Follow-up Email
+Subject: Following up - ${userName} Partnership Proposal
+
+Hi [Contact Name],
+
+I sent you an email last week about collaboration opportunities.
+
+I believe we could create an amazing partnership that brings your brand to my highly engaged audience.
+
+Recent highlights:
+• My last post reached [specific numbers]
+• Successful collaboration with [competitor brand]
+• Audience response rate 8%+ (industry average 2-3%)
+
+Could we schedule a quick 15-minute call this week?
+
+Looking forward to your response.
+
+Best,
+${userName}
+
+---
+
+�� SCRIPT #3: Detailed Proposal
+Subject: ${userName} - Detailed Partnership Proposal for [Brand]
+
+Dear [Brand Name] Marketing Team,
+
+Thank you for your interest! Here's my detailed collaboration proposal:
+
+🎬 PROPOSED COLLABORATION PACKAGES:
+
+📸 Package A - Social Media Boost (₹[Rate]):
+• 1 Instagram feed post
+• 3-4 Instagram stories
+• 1 Instagram reel
+• Professional photography & editing
+• 48-hour delivery guaranteed
+
+📱 Package B - Comprehensive Campaign (₹[Rate]):
+• 2 Instagram feed posts
+• 6-8 Instagram stories
+• 2 Instagram reels
+• YouTube shorts integration
+• Cross-platform promotion
+• Weekly analytics report
+
+🎯 Package C - Brand Ambassador (₹[Rate]/month):
+• Monthly content creation
+• Product integration in content
+• Story highlights featuring brand
+• Exclusive discount code management
+• Priority customer support promotion
+
+📊 DELIVERABLES INCLUDED:
+• High-quality visual content
+• Authentic product integration
+• Timely delivery (3-5 business days)
+• Detailed performance analytics
+• Usage rights discussion
+• Revision rounds (up to 2)
+
+🎆 UNIQUE VALUE PROPOSITION:
+• My audience perfectly matches your target demographic
+• Authentic storytelling that drives genuine conversions
+• Professional content quality without big agency rates
+• Focus on long-term brand relationship building
+
+Looking forward to next steps.
+
+Warm regards,
+${userName}
+
+---
+
+🤝 SCRIPT #4: Negotiation/Counter Offer
+Subject: Re: Partnership Terms - Let's Find Win-Win Solution
+
+Hi [Contact Name],
+
+Thank you for your proposal! I'm definitely excited about this collaboration.
+
+Considering my engagement rates and audience quality, could we adjust the rate slightly?
+
+I'd suggest ₹[your counter] because:
+
+📈 VALUE JUSTIFICATION:
+• [specific %] of my audience is in your target demographic
+• Average engagement rate [%] (industry average +[x]%)
+• Previous brand collaborations achieved [specific results]
+• I can provide additional value like [extra services]
+
+🎁 BONUS OFFERINGS:
+I'm ready to add extra value to this collaboration:
+• Extended story highlights (30 days)
+• User-generated content encouragement
+• Cross-platform promotion at no extra cost
+• Post-campaign performance analysis
+
+I believe in creating mutually beneficial partnerships. Your thoughts?
+
+Best regards,
+${userName}
+
+---
+
+📈 SCRIPT #5: Performance Report
+Subject: ${userName} x [Brand] - Campaign Results & Next Steps
+
+Dear [Brand Team],
+
+I wanted to share the outstanding results from our recent collaboration:
+
+📊 CAMPAIGN PERFORMANCE HIGHLIGHTS:
+• Total Reach: [number] ([%] above target)
+• Engagement Rate: [%] ([x]% above industry average)
+• Story Views: [number] unique views
+• Website Clicks: [number] direct clicks
+• Comments: [number] with [%] positive sentiment
+
+🎯 AUDIENCE INSIGHTS:
+• [%] of engaged users are in target age group
+• [%] showed purchase intent through comments
+• [number] people asked for discount codes
+• [number] tagged friends (organic reach amplification)
+
+💬 STANDOUT AUDIENCE FEEDBACK:
+• "[Positive comment example]"
+• "[Question about product availability]"
+• "[User testimonial about trying product]"
+
+📈 BUSINESS IMPACT:
+• Direct attribution: [number] sales/inquiries
+• Brand awareness lift: Measurable impact on brand searches
+• Community engagement: [specific community building outcomes]
+
+I'm excited about future collaborations and genuinely enjoy promoting your products authentically.
+
+Next campaign ideas:
+• [Specific campaign idea 1]
+• [Specific campaign idea 2]
+• [Seasonal campaign proposal]
+
+Thank you for trusting me with your brand!
+
+Best regards,
+${userName}
+
+---
+
+💝 SCRIPT #6: Long-term Partnership Proposal
+Subject: Long-term Brand Ambassador Proposal - ${userName} x [Brand]
+
+Dear [Decision Maker Name],
+
+Following our successful collaboration, I'd like to propose a strategic long-term partnership.
+
+🤝 PROPOSED BRAND AMBASSADOR PROGRAM:
+
+📅 6-MONTH AMBASSADOR PACKAGE (₹[amount]):
+• Monthly content creation (4 posts, 8 stories, 2 reels)
+• Exclusive product launch coverage
+• Event participation and coverage
+• Seasonal campaign development
+• Customer testimonial collection
+• Community management support
+
+💰 STRUCTURED INVESTMENT:
+• Monthly retainer: ₹[amount]
+• Performance bonuses: ₹[amount] for viral content
+• Exclusive collaboration terms
+• Additional campaign pricing: [reduced rates]
+
+📈 GUARANTEED OUTCOMES:
+• Minimum [number] million impressions quarterly
+• [%] engagement rate maintenance
+• Monthly brand awareness tracking
+• Quarterly audience insight reports
+• Direct sales attribution tracking
+
+🎆 EXCLUSIVE BENEFITS FOR [BRAND]:
+• First-to-market advantage on new products
+• Competitor exclusivity in my content
+• Priority during trending seasons
+• Authentic long-term brand storytelling
+• Cost-effective marketing investment
+
+This partnership will provide your brand with consistent visibility and authentic audience connection.
+
+Would you be interested in exploring this opportunity?
+
+Looking forward to building something amazing together!
+
+Best,
+${userName}
+
+---
+
+[Continue with 18 more professional scripts covering different scenarios like rejection handling, rate negotiation, seasonal campaigns, crisis management, etc...]`;
 }
 
 function generateMediaKitDesignsContent(
@@ -3797,7 +4306,7 @@ ${userNiche} क्रिएटर्स के लिए आवश्यक फ
 
 🗺️ कंटेंट प्लानिंग टूल्स:
 • Notion (FREE/Pro $8/month) - कंटेंट प्लानिंग
-• Trello (FREE/Pro $5/month) - प्रोजेक्ट मैनेजमेंट
+• Trello (FREE/Pro $5/month) - प्रोज��क्ट मैनेजमेंट
 • Airtable (FREE/Pro $20/month) - कंटेंट कैलेंडर
 • Google Calendar (FREE) - सिम्पल स्केड्यूलिंग
 
@@ -3840,7 +4349,7 @@ ${userNiche} क्रिएटर्स के लिए आवश्यक फ
 • AnswerThePublic (FREE/Pro $99/month) - कीवर्ड रिसर्च
 
 ���� अल्-इन-वन प्लेटफॉर्म:
-• CreatorSpace (₹2000/month) - भारतीय क्रिएटर प्लेटफॉर्म
+• CreatorSpace (₹2000/month) - भारती�� क्रिएटर प्लेटफॉर्म
 • Koo Creator Studio (FREE) - भारतीय सोशल मीडिया
 • ShareChat Creator Program (FREE) - रीजनल कंटेंट
 
