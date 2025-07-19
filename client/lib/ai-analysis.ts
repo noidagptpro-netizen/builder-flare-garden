@@ -179,7 +179,7 @@ const getIncomeAmount = (income: string): number => {
     "₹15K-30K": 22500,
     "₹30K-50K": 40000,
     "₹50K-1L": 75000,
-    "₹1L+": 150000,
+    "��1L+": 150000,
   };
   return incomeMap[income] || 0;
 };
@@ -402,7 +402,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
       "Fashion & Beauty": `💄 FASHION GOLDMINE: You're in a ₹1.2L crore market growing 25% annually! With ${data.followerCount}, you can charge ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 1.5)} per post. Fashion creators get 40% more brand deals.`,
       Technology: `💻 TECH AUTHORITY ADVANTAGE: Tech = ₹25-50 per 1K views (vs ₹8-15 for lifestyle)! Your ${data.followerCount} in tech could generate ₹${Math.round(followerNum * 1.2)}-₹${Math.round(followerNum * 2.5)} monthly from reviews alone.`,
       Education: `📚 EDUCATION EMPIRE POTENTIAL: Ed-tech is ₹2.8L crore growing 40% YoY! Your knowledge in ${data.niche} + course creation = ₹${Math.round(followerNum * 2)}-₹${Math.round(followerNum * 5)} monthly potential.`,
-      "Business & Finance": `💼 FINANCE CREATOR PREMIUM: B2B creators earn 3x more per follower! Your expertise + ${data.followerCount} = ₹${Math.round(followerNum * 1.8)}-₹${Math.round(followerNum * 3.2)} monthly from fintech partnerships.`,
+      "Business & Finance": `���� FINANCE CREATOR PREMIUM: B2B creators earn 3x more per follower! Your expertise + ${data.followerCount} = ₹${Math.round(followerNum * 1.8)}-₹${Math.round(followerNum * 3.2)} monthly from fintech partnerships.`,
       "Fitness & Health": `💪 FITNESS BOOM POSITIONING: Post-COVID fitness market exploded! Health creators with ${data.followerCount} average ₹${Math.round(followerNum * 1.1)}-₹${Math.round(followerNum * 2.0)} monthly from supplement brands.`,
       "Food & Cooking": `🍳 FOOD CONTENT SUPREMACY: Food gets highest engagement (8-15% vs 2-4% average)! Your ${data.followerCount} + food = ₹${Math.round(followerNum * 0.9)}-₹${Math.round(followerNum * 1.8)} from restaurant partnerships.`,
     };
@@ -1015,7 +1015,7 @@ const calculateGrowthPotential = (
     potential += 15;
   } else if (
     data.postingFrequency === "3-4 times a week" ||
-    data.postingFrequency === "सप्ताह में 3-4 बार"
+    data.postingFrequency === "सप्ताह ��ें 3-4 बार"
   ) {
     potential += 12;
   } else if (
@@ -1108,18 +1108,22 @@ const calculateGrowthPotential = (
     potential += 3;
   }
 
-  // Age factor for certain niches
-  if (data.age) {
-    const age = parseInt(data.age);
-    if (
-      age >= 18 &&
-      age <= 30 &&
-      ["Fashion & Beauty", "Gaming & Esports", "Music & Dance"].includes(
-        data.niche,
-      )
-    ) {
-      potential += 3; // Young creators in visual niches have higher growth potential
-    }
+  // Content type advantage for certain niches
+  if (
+    data.contentType === "Short Videos/Reels" &&
+    ["Fashion & Beauty", "Gaming & Esports", "Music & Dance"].includes(
+      data.niche,
+    )
+  ) {
+    potential += 5; // Visual content creators in visual niches have higher growth potential
+  }
+
+  // Multi-platform presence bonus
+  if (
+    data.secondaryPlatforms.length >= 2 &&
+    data.primaryPlatform === "Instagram"
+  ) {
+    potential += 4; // Cross-platform creators have better growth potential
   }
 
   return Math.min(Math.max(potential, 15), 95); // Ensure range is 15-95
