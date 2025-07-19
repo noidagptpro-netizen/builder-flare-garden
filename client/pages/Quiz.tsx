@@ -260,7 +260,7 @@ const languages = {
       primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
-        "आप और कौन से प्लेटफॉर्म का उपय���ग करते हैं? (सभी लागू का चयन करें)",
+        "आप और कौन से प्लेटफॉर्म का उपय���ग करते हैं? (सभी ला��ू का चयन करें)",
       niche: "आपका कंटेंट किस विषय पर है?",
       contentType: "आप किस प्���कार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
@@ -272,7 +272,7 @@ const languages = {
       goals:
         "अगले 6 महीनों के लिए आपके मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
       socialLinks: "अपनी सोशल उपस्थिति ��ाझा करें (वैकल्पिक)",
-      bio: "��पने और अपने कंटेंट के बारे में बताएं (वैकल्पिक)",
+      bio: "अपने और अपने कंटेंट के बारे में कुछ और बताएं (वैकल्पिक)",
     },
     options: {
       platforms: [
@@ -304,7 +304,7 @@ const languages = {
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
         "कल�� और डिज़ाइन",
-        "गेमि���ग और एस्पोर्ट्स",
+        "गेमि���ग और ���स्पोर्ट्स",
         "संगीत और नृत्य",
         "शिक्षा और सीखना",
         "खेल और एथलेटिक्स",
@@ -538,7 +538,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "प्रिय [ब्रांड नाम] टीम," : "Dear [Brand Name] Team,"}
 
-${language === "hindi" ? `मैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअर्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
+${language === "hindi" ? `मैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ��्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
@@ -611,7 +611,7 @@ ${language === "hindi" ? "• मेरी audience का [specific demographic
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "• मैं additional value add कर सकता हूं like [extra service]" : "• I can add additional value like [extra service]"}
 
-${language === "hindi" ? "मैं flexible हूं और एक mutually beneficial deal बनाना चाहता हूं।" : "I'm flexible and want to create a mutually beneficial deal."}
+${language === "hindi" ? "मैं flexible हूं और ए�� mutually beneficial deal बनाना चाहता हूं।" : "I'm flexible and want to create a mutually beneficial deal."}
 
 ${language === "hindi" ? "Best regards," : "Best regards,"}
 ${userName}
@@ -650,7 +650,7 @@ ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
 ${language === "hindi" ? "हमारे successful collaboration के बाद, मैं एक long-term partnership propose करना चाहूंगा।" : "Following our successful collaboration, I'd like to propose a long-term partnership."}
 
 ${language === "hindi" ? "🤝 PROPOSED PARTNERSHIP:" : "🤝 PROPOSED PARTNERSHIP:"}
-${language === "hindi" ? "• Monthly content creation" : "• Monthly content creation"}
+${language === "hindi" ? "��� Monthly content creation" : "• Monthly content creation"}
 ${language === "hindi" ? "• Product launches coverage" : "• Product launches coverage"}
 ${language === "hindi" ? "• Event participation" : "• Event participation"}
 ${language === "hindi" ? "• Brand ambassadorship" : "• Brand ambassadorship"}
