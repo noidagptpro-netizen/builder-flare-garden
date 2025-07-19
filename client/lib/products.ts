@@ -287,7 +287,7 @@ function generateMediaKitContent(
 • औसत पहुंच: [आपकी पहुंच दर्ज करें]
 • एंगेजमेंट रेट: [आपका एंगे���मेंट रेट]
 • मासिक इंप्रेशन्स: [आपके मासिक इंप्रेशन्स]
-• ऑ���ियंस डेमोग्राफिक्स: [आपके ऑडियंस की जानकारी]
+• ऑडियंस डेमोग्राफिक्स: [आपके ऑडियंस की जानकारी]
 
 💰 सुझावित दरें (आपके ऑडियंस के आधार पर):
 📸 पोस्ट दरें: ₹200 - ₹1,000
@@ -328,7 +328,7 @@ function generateMediaKitContent(
 • पेमेंट टर्म्स: 50% एडवांस, 50% डिलीवरी पर
 
 💼 मीडिया किट में शामिल:
-✅ हाई-रेज़����ल्यूशन प्रोफाइल फोटोज़
+✅ हाई-रेज़���ल्यूशन प्रोफाइल फोटोज़
 ✅ कंटेंट सैंपल्स और केस स्टडी
 ✅ ऑडियंस डेमोग्राफिक्स रिपोर्ट
 ✅ परफॉर्मेंस मेट्रिक्स और एनालिटिक्स
@@ -345,7 +345,7 @@ function generateMediaKitContent(
 • ब्रांड कलर्स का उपयोग
 • हाई-क्वालिटी इमेज और ग्राफिक्स
 • रीडेबल फॉन्ट्स और क्लियर हेडिंग्स
-• कॉन्सिस्टेंट ब्रांडिंग एलिमेंट���स`;
+• कॉन्सिस्टेंट ब्रांडिंग एलिमेंट्स`;
   }
 
   return `📱 PROFESSIONAL MEDIA KIT TEMPLATE
@@ -435,7 +435,7 @@ function generateEmailTemplatesContent(
     return `📧 30+ ब्रांड आउटरीच ईमेल टेम्प्लेट्स
 
 🎯 टेम्प्ले��� 1: प्रारंभिक संपर्क (कोल्ड आउटरीच)
-विषय: ${userNiche} क्र���एटर ${userName} - कोलैबोरेशन का प्रस्��ाव
+विषय: ${userNiche} क्रिएटर ${userName} - कोलैबोरेशन का प्रस्��ाव
 
 प्रिय [ब्रांड नाम] टीम,
 
@@ -452,7 +452,7 @@ function generateEmailTemplatesContent(
 • मासिक रीच: [आपकी reach]
 • ऑडियंस demographics: [मुख्य डेमोग्राफिक्स]
 
-क्या आप एक quick call schedule कर सकते हैं collaboration possibilities discuss करने के ल��ए?
+क्या आप एक quick call schedule कर सकते हैं collaboration possibilities discuss करने के लिए?
 
 Best regards,
 ${userName}
@@ -663,7 +663,7 @@ Thank you for your interest! Here are my collaboration packages:
 • 3-5 story slides
 • Swipe-up link (if available)
 • Behind-the-scenes content
-��� Authentic product experience
+• Authentic product experience
 
 🎥 Reels Content: ₹[Your rate]
 • High-quality reel creation
@@ -815,7 +815,7 @@ Minimum post rate = Followers per 1K × Base rate
 📹 IGTV/Long form: Base rate × 1.8
 🎯 Carousel: Base rate × 1.2
 
-5️�� ADDITIONAL FACTORS:
+5️⃣ ADDITIONAL FACTORS:
 • Professional photography: +20%
 • Video editing required: +30%
 • Multiple revisions: +15%
@@ -849,7 +849,7 @@ Final rates:
 2. Package deals offer करें better value के लिए
 3. Long-term partnerships के लिए discounts
 4. Seasonal pricing adjustments
-5. Performance bonuses include ���रें
+5. Performance bonuses include करें
 
 📈 RATE PROGRESSION GUIDE (REALISTIC INDIAN MARKET):
 • 1K-5K followers: ₹200-1,000 per post
@@ -992,7 +992,7 @@ function generateContentCalendarContent(
   if (language === "hindi") {
     return `📅 3-महीने कंटेंट कैलेंडर टेम्प्लेट
 
-🎯 ${userNiche} ���े लिए ${userPlatform} कंटेंट प्लान
+🎯 ${userNiche} के लिए ${userPlatform} कंटेंट प्लान
 
 📋 MONTH 1: FOUNDATION & GROWTH
 
@@ -1411,11 +1411,11 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 • निच: ${userNiche}
 • लक्ष्य: ${userGoals}
 
-📅 30-60-90 दि��� की योजना:
+📅 30-60-90 दिन की योजना:
 
 🔥 पहले 30 दिन - बुनियाद तैयार करना:
 • दैनिक पोस्टिंग शेड्यूल बनाएं
-• अपनी ब्रांड ��इडेंटिटी डिफाइन करें
+• अपनी ब्रांड आइडेंटिटी डिफाइन करें
 • 30 दिन का कंटेंट कैलेंडर बनाएं
 • आपके टार्गेट ऑडियंस को समझें
 • एंगेजमेंट बढ़ाने के लिए 10 स्��्रैटेजी
@@ -1429,7 +1429,7 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 • विरल रील्स और ट्रेंड्स पर फोकस करें
 • एनालिटिक्स को ट्रैक करें और ऑप्टिमाइज करें
 • हैशटैग और कीवर्ड स्ट्रैटेजी रिफाइन करें
-• आगे की योजना और वीडियो ��ीरीज बनाएं
+• आगे की योजना और वीडियो सीरीज बनाएं
 
 💰 तीसरे 30 दिन - मुद्रीकरण और मार्केटिंग:
 • मीडिया किट और पोर्टफोलियो बनाएं
@@ -1445,7 +1445,7 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 ✅ साप्ताहिक एनालिटिक्स रिव्यू
 ✅ मासिक कंटेंट प्लानिंग
 ✅ इंडस्ट्री नेटवर्किंग और कोलैबोरेशन
-✅ ब्रांड और मार्���ेटिंग आउटरीच
+✅ ब्रांड और मार्केटिंग आउटरीच
 ✅ कम्युनिटी एंगेजमेंट और रेस्पॉन्स
 
 📉 मेट्रिक्स ट्रैकिंग:
@@ -1550,7 +1550,7 @@ function generateHashtagGuideContent(
 ${userNiche} क्रिएटर्स के लिए ${userPlatform} हैशटैग रणनीति
 
 🔍 हैशटैग की बुनियादी बातें:
-• हैशटैग ��्यूज को बढ़ाते हैं (30x तक बढ़ सकते हैं)
+• हैशटैग व्यूज को बढ़ाते हैं (30x तक बढ़ सकते हैं)
 • वे आपके कंटेंट को टार्गेट ऑडियंस तक पहुंचाते हैं
 • वे कम्युनिटी बिल्डिंग में मदद करते हैं
 • इनसे आपकी ब्रांड विजिबिलिटी बढ़ती है
@@ -1633,7 +1633,7 @@ ${userNiche} क्रिएटर्स के लिए ${userPlatform} है
 ⚠️ हैशटैग की गलतियां:
 ❌ Shadow banned hashtags use न करें
 ❌ हर पोस्ट में वही hashtags use न करें
-�� Over-saturation (बहुत ज्यादा competitive hashtags)
+❌ Over-saturation (बहुत ज्यादा competitive hashtags)
 ❌ Irrelevant hashtags का use
 ❌ 30 hashtag limit को exceed न करें
 
@@ -1826,7 +1826,7 @@ ${userPlatform} | ${userFollowers} Followers
 ✅ इंस्टाग्राम रील्स:
 • सिंगल रील: ₹${rates.reel}
 • ट्रेंडिंग ऑडियो/म्यूजिक के साथ: +25%
-• ��रिजिनल कोरियो��्राफी: +40%
+• ऑरिजिनल कोरियो��्राफी: +40%
 • ब्रांड चैलेंज/कॉन्टेस्ट: +30%
 
 ✅ IGTV/लॉन्ग फॉर्म वीडियो:
@@ -1850,7 +1850,7 @@ ${userPlatform} | ${userFollowers} Followers
 
 🎆 बेसिक कैम्पेन पैकेज: ₹${rates.campaign}
 • 1 Instagram फीड पोस्ट
-• 3-4 इंस्टाग्राम स्टोरी���
+• 3-4 इंस्टाग्राम स्टोरीज
 • 1 इंस्टाग्राम री���
 • बिहाइंड-द-सीन content
 • वीकली एनालिटिक्स रिपोर्ट
@@ -1877,7 +1877,7 @@ ${userPlatform} | ${userFollowers} Followers
 💳 पेमेंट टर्म्स:
 • 50% एडवांस पेमेंट
 • 50% कंटेंट डिलीवरी पर
-• Bank transfer/UPI/PayPal स्व���कार किया जाता है
+• Bank transfer/UPI/PayPal स्वीकार किया जाता है
 • आगे 7 दिन के लिए invoice भेजा जाएगा
 
 ⏱️ डिलीवरी टाइमलाइन:
@@ -2012,1056 +2012,12 @@ ${userPlatform} | ${userFollowers} Followers
 I'm excited to work with your brand and help achieve your goals!`;
 }
 
-function generateViralReelIdeasContent(
-  language: "english" | "hindi",
-  userData?: any,
-): string {
-  const userNiche = userData?.niche || "Content Creator";
-  const userPlatform = userData?.primaryPlatform || "Instagram";
-
-  if (language === "hindi") {
-    return `🎬 50+ वायरल रील आइडियाज गाइड
-
-${userNiche} क्रिएटर्स के लिए प्रमाणित वायरल कंटेंट फॉर्मूला
-
-🔥 TRENDING रील आइडियाज:
-
-1. "3 सीक्रेट्स जो मैंने [अपना निच] में सीखे"
-2. "क्या आप जानते हैं [निच] के बारे में ये बात?"
-3. "मेरी सबसे बड़ी गलती [निच] में"
-4. "[निच] में सफल होने के 5 आसान तरीके"
-5. "इससे पहले vs अब - मेरी [निच] जर्नी"
-6. "24 घंटे में मैंने क्या सीखा [निच] के बारे में"
-7. "[निच] के बारे में मिथ्स जो गलत हैं"
-8. "मैं कैसे [निच] में एक्सपर्ट बना"
-9. "[निच] करते समय ये गलतियां मत करना"
-10. "एक दिन मेरे साथ [निच] की दुनिया में"
-
-📱 HOOK फॉर्मूला (पहले 3 सेकंड):
-✅ "यह वीडियो देखना ज़रूरी है अगर आप..."
-✅ "मैं शर्त लगाता हूं कि आप नहीं जानते..."
-✅ "इससे पहले कि मैं [result] पाता, मैं..."
-✅ "अगर मैं आपसे कहूं कि..."
-✅ "यहां क्या गलत है?"
-
-🎭 रील कैटेगरीज:
-
-📚 एजुकेशनल रील्स (20 आइडियाज):
-11. "[निच] में बिगिनर vs प्रो"
-12. "5 मिनट में [निच] सिखाना"
-13. "[निच] के बारे में कॉमन सवाल"
-14. "[निच] में सबसे जरूरी टूल्स"
-15. "[निच] की हिस्ट्री - 60 सेकंड में"
-16. "[निच] में पैसा कमाने के तरीके"
-17. "मैं कैसे [स्पेसिफिक रिजल्ट] पाया"
-18. "[निच] में मेरी टॉप 3 टिप्स"
-19. "क्या करें और क्या न करें [निच] में"
-20. "[निच] के बारे में तथ्य जो आप नहीं जानते"
-21. "[निच] में सक्सेस के लिए रोडमैप"
-22. "मैं कैसे [चैलेंज] को साल्व करता हूं"
-23. "[निच] में कॉमन मिस्टेक्स"
-24. "[निच] टूल्स - फ्री vs पेड"
-25. "[निच] में क���ियर के ऑप्शन्स"
-26. "[निच] की फ्यूचर"
-27. "[निच] में AI का रोल"
-28. "घर बैठे कैसे [निच] सीखें"
-29. "[निच] में नेटवर्किंग टिप्स"
-30. "[निच] का डार्क साइड"
-
-🎉 एंटर्टेनमेंट रील्स (15 आइडियाज):
-31. "मेरे [निच] के दोस्तों के साथ"
-32. "जब मैं [निच] के बारे में सोचता हूं vs रियलिटी"
-33. "[निच] के टाइप्स ऑफ पीपल"
-34. "मेरी [निच] जर्नी - कॉमेडी वर्जन"
-35. "[निच] के स्ट्रगल्स"
-36. "क्या होता है जब मैं [निच activity] करता हूं"
-37. "[निच] वाले की जिंदगी"
-38. "[निच] के मैम्स"
-39. "दोस्त vs मैं [निच] में"
-40. "पेरेंट्स vs मेरा [निच] पैशन"
-41. "[निच] करते समय मूड्स"
-42. "[निच] के बारे में पेरेंट्स की रिएक्श���"
-43. "[निच] वाले के पास कैसे टाइम मैनेज होता है"
-44. "[निच] वाले रात को क्या करते हैं"
-45. "[निच] वाले की शॉपिंग"
-
-💡 ट्रेंड रील्स (5 आइडियाज):
-46. "इस रील को आपके [निच] दोस्त को भेजो"
-47. "[निच] वाले इसे समझेंगे"
-48. "अगर [निच] होता YouTube shorts"
-49. "[निच] के साथ वायरल चैलेंज"
-50. "AI + [निच] = Future"
-
-🎵 बेस्ट ऑडियो/म्यूजिक:
-• Original audio (अपनी आवाज)
-• Trending bollywood songs
-• Viral sounds से Instagram
-• Comedy dialogues
-• Motivational quotes audio
-• Fast-paced beats
-• Emotional background music
-
-⚡ वायरल होने के लिए फॉर्मूला:
-Hook (0-3s) + Value/Entertainment (3-20s) + Call to Action (20-30s)
-
-🎬 प्रोडक्शन टिप्स:
-✅ वर्टिकल फॉर्मेट (9:16)
-✅ अच्छी लाइटिंग
-✅ क्लियर ऑडियो
-✅ आई कांटेक्ट
-✅ फ्रेम में फेस क्लियर दिखे
-✅ फ्रिकेंट कट्स/ट्रांजिशन
-✅ On-screen text
-✅ कैप्शन में hook continue करें
-
-📈 रील्स एनालिटिक्स ट्रैक करें:
-• पहले 3 सेकंड का रिटेंशन रेट
-• कंप्लीशन रेट
-• शेयर्स और saves
-• कमेंट्स और likes का ratio
-
-🏆 सक्सेस मेट्रिक्स:
-• 1000+ व्यूज = Good
-• 5000+ व्यूज = Great
-• 10000+ व्यूज = Viral Potential
-• 50000+ व्यूज = Viral Hit";
-  }
-
-  return `🎬 50+ VIRAL REEL IDEAS GUIDE
-
-Proven Viral Content Formula for ${userNiche} Creators
-
-🔥 TRENDING REEL IDEAS:
-
-1. "3 Secrets I learned in [your niche]"
-2. "Did you know this about [niche]?"
-3. "My biggest mistake in [niche]"
-4. "5 easy ways to succeed in [niche]"
-5. "Before vs Now - My [niche] journey"
-6. "What I learned in 24 hours about [niche]"
-7. "Myths about [niche] that are wrong"
-8. "How I became an expert in [niche]"
-9. "Don't make these mistakes in [niche]"
-10. "A day with me in the [niche] world"
-
-📱 HOOK FORMULAS (First 3 seconds):
-✅ "You need to watch this if you..."
-✅ "I bet you didn't know..."
-✅ "Before I got [result], I..."
-✅ "What if I told you..."
-✅ "What's wrong here?"
-
-🎭 REEL CATEGORIES:
-
-📚 Educational Reels (20 Ideas):
-11. "Beginner vs Pro in [niche]"
-12. "Teaching [niche] in 5 minutes"
-13. "Common questions about [niche]"
-14. "Most important tools for [niche]"
-15. "History of [niche] in 60 seconds"
-16. "Ways to make money in [niche]"
-17. "How I achieved [specific result]"
-18. "My top 3 tips for [niche]"
-19. "Do's and Don'ts in [niche]"
-20. "Facts about [niche] you don't know"
-21. "Roadmap to success in [niche]"
-22. "How I solve [challenge]"
-23. "Common mistakes in [niche]"
-24. "[Niche] tools - Free vs Paid"
-25. "Career options in [niche]"
-26. "Future of [niche]"
-27. "Role of AI in [niche]"
-28. "Learn [niche] from home"
-29. "Networking tips for [niche]"
-30. "Dark side of [niche]"
-
-🎉 Entertainment Reels (15 Ideas):
-31. "With my [niche] friends"
-32. "When I think about [niche] vs Reality"
-33. "Types of people in [niche]"
-34. "My [niche] journey - Comedy version"
-35. "Struggles of [niche]"
-36. "What happens when I do [niche activity]"
-37. "Life of a [niche] person"
-38. "[Niche] memes"
-39. "Friends vs Me in [niche]"
-40. "Parents vs My [niche] passion"
-41. "Moods while doing [niche]"
-42. "Parents' reaction to [niche]"
-43. "How [niche] people manage time"
-44. "What [niche] people do at night"
-45. "Shopping of [niche] people"
-
-💡 Trend Reels (5 Ideas):
-46. "Send this reel to your [niche] friend"
-47. "[Niche] people will understand"
-48. "If [niche] was YouTube shorts"
-49. "Viral challenge with [niche]"
-50. "AI + [niche] = Future"
-
-🎵 BEST AUDIO/MUSIC:
-• Original audio (your voice)
-• Trending Bollywood songs
-• Viral sounds from Instagram
-• Comedy dialogues
-• Motivational quotes audio
-• Fast-paced beats
-• Emotional background music
-
-⚡ FORMULA FOR GOING VIRAL:
-Hook (0-3s) + Value/Entertainment (3-20s) + Call to Action (20-30s)
-
-🎬 PRODUCTION TIPS:
-✅ Vertical format (9:16)
-✅ Good lighting
-✅ Clear audio
-✅ Eye contact
-✅ Face clearly visible in frame
-✅ Frequent cuts/transitions
-✅ On-screen text
-✅ Continue hook in caption
-
-📈 TRACK REEL ANALYTICS:
-• First 3 seconds retention rate
-• Completion rate
-• Shares and saves
-• Comments and likes ratio
-
-🏆 SUCCESS METRICS:
-• 1000+ views = Good
-• 5000+ views = Great
-• 10000+ views = Viral Potential
-• 50000+ views = Viral Hit";
-}
-
-function generateEditingTemplatesContent(
-  language: "english" | "hindi",
-  userData?: any,
-): string {
-  const userNiche = userData?.niche || "Content Creator";
-
-  if (language === "hindi") {
-    return `🎞️ प्रोफेशनल एडिटिंग टेम��प्लेट्स & ट्रांजिशन गाइड
-
-${userNiche} क्रिएटर्स के लिए वायरल एडिटिंग तकनीकें
-
-🎬 एडिटिंग टेम्प्लेट्स:
-
-📱 BASIC रील एडिटिंग फॉर्मेट:
-1. Intro Hook (0-3 सेकंड)
-2. Main Content (3-25 सेकंड)
-3. Call to Action (25-30 सेकंड)
-
-🔄 प्रोवन ट्रांजिशन्स:
-
-✨ हैंड ट्रांजिशन:
-• हैंड कवर करें - कपड़े/लुक बदलें
-• उंगली स्नैप - टेक्स्ट/ग्राफिक add करें
-• हैंड swipe - सीन चेंज करें
-• Palm push - नई लोकेशन में
-
-📸 ऑब्जेक्ट ट्रांजिशन:
-• Phone cover - नया शॉट reveal
-• Book close/open - टाइम जंप
-• Mirror reflection - angle change
-• Door open/close - location switch
-
-⚡ स्पीड ट्रांजिशन:
-• Fast zoom in/out
-• Quick spin (360°)
-• Speed up + slow down
-• Jump cut sequences
-
-🎵 बीट ड्रॉप ट्रांजिशन:
-• Music beat पर कट करें
-• Rhythm match करें
-• Beat के साथ text animate करें
-• Sound effects add करें
-
-🎨 विजुअल इफेक्ट्स:
-
-📊 टेक्स्ट एनीमेशन:
-• Typewriter effect
-• Fade in/out
-• Slide from sides
-• Bounce animation
-• Glow effects
-• Shadow text
-
-🌈 कलर ग्रेडिंग प्रीसेट्स:
-• Warm & Cozy (Instagram)
-• Bright & Vibrant (Reels)
-• Moody & Dark (YouTube)
-• Clean & Professional (LinkedIn)
-• Vintage & Film (Aesthetic)
-
-⚙️ एडिटिंग टूल्स (रैंकिंग):
-
-🏆 बेस्ट फ्री ऐप्स:
-1. CapCut (सबसे popular)
-2. InShot (user-friendly)
-3. Kinemaster (advanced)
-4. Splice (iOS)
-5. PowerDirector (Android)
-
-💎 प्रीमियम ऐप्स:
-1. Adobe Premiere Pro (desktop)
-2. Final Cut Pro (Mac)
-3. DaVinci Resolve (free+paid)
-4. Adobe Premiere Rush (mobile)
-5. LumaFusion (iPad)
-
-📐 टेम्प्लेट डाइमेंशन्स:
-• Instagram Reel: 1080x1920 (9:16)
-• YouTube Short: 1080x1920 (9:16)
-• Instagram Post: 1080x1080 (1:1)
-• Instagram Story: 1080x1920 (9:16)
-• YouTube Thumbnail: 1280x720 (16:9)
-
-🎭 कंटेंट टाइप टेम्प्लेट्स:
-
-💡 एजुकेशनल रील टेम्प्लेट:
-[0-3s]: Hook question
-[3-8s]: Point 1 with visual
-[8-13s]: Point 2 with visual
-[13-18s]: Point 3 with visual
-[18-25s]: Summary/conclusion
-[25-30s]: CTA (follow, comment)
-
-🎬 ट्यूटोरियल टेम्प्लेट:
-[0-3s]: "How to [topic]"
-[3-10s]: Step 1 demonstration
-[10-17s]: Step 2 demonstration
-[17-24s]: Step 3 demonstration
-[24-30s]: Final result + CTA
-
-📊 बिफोर/आफ्टर टेम्प्लेट:
-[0-3s]: "Watch this transformation"
-[3-8s]: Before state
-[8-13s]: Process/transition
-[13-20s]: After state
-[20-25s]: Explanation
-[25-30s]: CTA
-
-🎯 लिस्ट टेम्प्लेट:
-[0-3s]: "5 ways to [topic]"
-[3-8s]: Way 1 (2 seconds each)
-[8-13s]: Way 2
-[13-18s]: Way 3
-[18-23s]: Way 4
-[23-28s]: Way 5
-[28-30s]: CTA
-
-🔧 एडवांस्ड ट्रिक्स:
-
-⏰ टाइमिंग टिप्स:
-• Beat के साथ cuts align करें
-• 2-3 सेकंड per scene (max)
-• Fast cuts for engagement
-• Slow motion for emphasis
-
-🎨 कलर कोर्डिनेशन:
-• Consistent color palette
-• Contrast for readability
-• Brand colors integration
-• Mood-based coloring
-
-📝 टेक्स्ट बेस��ट प्रैक्टिसेज:
-• Font size: 60+ (mobile readable)
-• High contrast backgrounds
-• Readable fonts (Arial, Helvetica)
-• 2-3 lines maximum
-• Keywords में highlight करें
-
-🎵 साउंड टिप्स:
-• Original audio में clarity हो
-• Background music volume: 20-30%
-• Beat drops के साथ cuts
-• Sound effects sparingly use करें
-
-📱 मोबाइल एडिटिंग workflow:
-1. CapCut में import करें
-2. Clips को sequence में arrange करें
-3. Music add करें और beat के साथ sync करें
-4. Transitions add करें
-5. Text overlays add करें
-6. Color grading apply करें
-7. Final review और export करें
-
-🚀 वायरल एडिटिंग हैक्स:
-• First 3 seconds में visual hook
-• Every 2-3 seconds में कुछ नया
-• Text animations for retention
-• Trending transitions use करें
-• Consistent branding elements
-• Mobile-first editing approach
-
-📊 परफॉर्मेंस मेट्रिक्स:
-• Completion rate (aim for 70%+)
-• Engagement rate (3%+)
-• Share rate (1%+)
-• Save rate (2%+)
-
-🎯 A/B टेस्ट करें:
-• Different transitions
-• Various music choices
-• Multiple hooks
-• Different color grades
-• Various text styles";
-  }
-
-  return `🎞️ PROFESSIONAL EDITING TEMPLATES & TRANSITIONS GUIDE
-
-Viral Editing Techniques for ${userNiche} Creators
-
-🎬 EDITING TEMPLATES:
-
-📱 BASIC REEL EDITING FORMAT:
-1. Intro Hook (0-3 seconds)
-2. Main Content (3-25 seconds)
-3. Call to Action (25-30 seconds)
-
-🔄 PROVEN TRANSITIONS:
-
-✨ Hand Transitions:
-• Hand cover - change outfit/look
-• Finger snap - add text/graphics
-• Hand swipe - scene change
-• Palm push - new location
-
-📸 Object Transitions:
-• Phone cover - reveal new shot
-• Book close/open - time jump
-• Mirror reflection - angle change
-• Door open/close - location switch
-
-⚡ Speed Transitions:
-• Fast zoom in/out
-• Quick spin (360°)
-• Speed up + slow down
-• Jump cut sequences
-
-🎵 Beat Drop Transitions:
-• Cut on music beat
-• Match rhythm
-• Animate text with beat
-• Add sound effects
-
-🎨 VISUAL EFFECTS:
-
-📊 Text Animations:
-• Typewriter effect
-• Fade in/out
-• Slide from sides
-• Bounce animation
-• Glow effects
-• Shadow text
-
-🌈 Color Grading Presets:
-• Warm & Cozy (Instagram)
-• Bright & Vibrant (Reels)
-• Moody & Dark (YouTube)
-• Clean & Professional (LinkedIn)
-• Vintage & Film (Aesthetic)
-
-⚙️ EDITING TOOLS (Ranked):
-
-🏆 Best Free Apps:
-1. CapCut (most popular)
-2. InShot (user-friendly)
-3. Kinemaster (advanced)
-4. Splice (iOS)
-5. PowerDirector (Android)
-
-💎 Premium Apps:
-1. Adobe Premiere Pro (desktop)
-2. Final Cut Pro (Mac)
-3. DaVinci Resolve (free+paid)
-4. Adobe Premiere Rush (mobile)
-5. LumaFusion (iPad)
-
-📐 Template Dimensions:
-• Instagram Reel: 1080x1920 (9:16)
-• YouTube Short: 1080x1920 (9:16)
-• Instagram Post: 1080x1080 (1:1)
-• Instagram Story: 1080x1920 (9:16)
-• YouTube Thumbnail: 1280x720 (16:9)
-
-🎭 CONTENT TYPE TEMPLATES:
-
-💡 Educational Reel Template:
-[0-3s]: Hook question
-[3-8s]: Point 1 with visual
-[8-13s]: Point 2 with visual
-[13-18s]: Point 3 with visual
-[18-25s]: Summary/conclusion
-[25-30s]: CTA (follow, comment)
-
-🎬 Tutorial Template:
-[0-3s]: "How to [topic]"
-[3-10s]: Step 1 demonstration
-[10-17s]: Step 2 demonstration
-[17-24s]: Step 3 demonstration
-[24-30s]: Final result + CTA
-
-📊 Before/After Template:
-[0-3s]: "Watch this transformation"
-[3-8s]: Before state
-[8-13s]: Process/transition
-[13-20s]: After state
-[20-25s]: Explanation
-[25-30s]: CTA
-
-🎯 List Template:
-[0-3s]: "5 ways to [topic]"
-[3-8s]: Way 1 (2 seconds each)
-[8-13s]: Way 2
-[13-18s]: Way 3
-[18-23s]: Way 4
-[23-28s]: Way 5
-[28-30s]: CTA
-
-🔧 ADVANCED TRICKS:
-
-⏰ Timing Tips:
-• Align cuts with beat
-• 2-3 seconds per scene (max)
-• Fast cuts for engagement
-• Slow motion for emphasis
-
-🎨 Color Coordination:
-• Consistent color palette
-• Contrast for readability
-• Brand colors integration
-• Mood-based coloring
-
-📝 Text Best Practices:
-• Font size: 60+ (mobile readable)
-• High contrast backgrounds
-• Readable fonts (Arial, Helvetica)
-• 2-3 lines maximum
-• Highlight keywords
-
-🎵 Sound Tips:
-• Clear original audio
-• Background music volume: 20-30%
-• Cut with beat drops
-• Use sound effects sparingly
-
-📱 Mobile Editing Workflow:
-1. Import to CapCut
-2. Arrange clips in sequence
-3. Add music and sync with beat
-4. Add transitions
-5. Add text overlays
-6. Apply color grading
-7. Final review and export
-
-🚀 VIRAL EDITING HACKS:
-• Visual hook in first 3 seconds
-• Something new every 2-3 seconds
-• Text animations for retention
-• Use trending transitions
-• Consistent branding elements
-• Mobile-first editing approach
-
-📊 Performance Metrics:
-• Completion rate (aim for 70%+)
-• Engagement rate (3%+)
-• Share rate (1%+)
-• Save rate (2%+)
-
-🎯 A/B Test:
-• Different transitions
-• Various music choices
-• Multiple hooks
-• Different color grades
-��� Various text styles";
-}
-
-function generateMusicGuideContent(
-  language: "english" | "hindi",
-  userData?: any,
-): string {
-  const userNiche = userData?.niche || "Content Creator";
-
-  if (language === "hindi") {
-    return `🎵 म्यूजिक & साउंड सेलेक्शन मास्टर गाइड
-
-${userNiche} क्रिएटर्स के लिए वायरल ऑडियो स्ट्रैटेजी
-
-🎧 VIRAL म्यूजिक कैटेगरीज:
-
-🔥 ट्रेंडिंग बॉलीवुड हिट्स (2024):
-• "Animal" Movie Songs
-• "Pathaan" Background Music
-• "Jawan" Theme Music
-• "12th Fail" Emotional Tracks
-• "Rocky Aur Rani" Party Songs
-• "Adipurush" Epic Music
-• "Mission Majnu" Tension Music
-• "Tu Jhoothi Main Makkaar" Romantic
-• "Bhediya" Horror-Comedy Music
-• "Brahmastra" Fantasy Music
-
-🎶 इंस्ट्रूमेंटल & बैकग्राउंड:
-• Lofi Hip Hop beats
-• Epic orchestral music
-• Upbeat electronic music
-• Motivational piano music
-• Chill ambient sounds
-• Dramatic tension music
-• Success/achievement music
-• Emotional string music
-• Tech/futuristic beats
-• Nature/meditation sounds
-
-🗣️ पॉपुलर डायलॉग्स (यूज करने योग्य):
-• "Pushpa" - "Main jhukega nahi"
-• "KGF" - "Violence, Speed, Momentum"
-• "Bahubali" - "Jai Mahishmati"
-• "Dangal" - "Mhari choriyaan choro se kam hain ke?"
-• "3 Idiots" - "All is well"
-• "Zindagi Na Milegi Dobara" quotes
-• "Queen" - Inspirational dialogues
-• "Pink" - "No means no"
-• "Taare Zameen Par" - emotional quotes
-• "Chak De India" - motivational lines
-
-🎵 म्यूजिक सोर्सेज (कॉपीराइट फ्री):
-
-🆓 फ्री म्यूजिक लाइब्रेरी:
-1. YouTube Audio Library
-   - 1000+ copyright-free tracks
-   - Genre-wise categorized
-   - Mood-based selection
-
-2. Facebook Sound Collection
-   - Instagram integrated
-   - Popular trending sounds
-   - Regular updates
-
-3. Epidemic Sound (Free Trial)
-   - High-quality tracks
-   - Professional music
-   - 30-day free trial
-
-4. Pixabay Music
-   - Free for commercial use
-   - No attribution required
-   - High-quality audio
-
-5. Freesound.org
-   - Sound effects library
-   - Community contributed
-   - Creative Commons licensed
-
-💰 प्रीमियम म्यूजिक प्लेटफॉर्म:
-1. Epidemic Sound (₹1500/month)
-2. Artlist (₹2000/month)
-3. Musicbed (₹2500/month)
-4. AudioJungle (Per track ₹500-2000)
-5. Splice (₹1200/month)
-
-🎯 निच-स्पेसिफिक म्यूजिक सेलेक्शन:
-
-💻 टेक/बिजनेस कंटेंट:
-• Electronic/Synth music
-• Corporate inspiring music
-• Tech startup vibes
-• Futuristic sounds
-• Minimal techno beats
-
-👗 फैशन/ब्यूटी:
-• Trendy pop music
-• Upbeat dance tracks
-• Chic and stylish beats
-• Fashion week music
-• Glamorous orchestral
-
-🍳 फूड कंटेंट:
-• Cooking show music
-• Upbeat kitchen vibes
-• Satisfying ASMR sounds
-• Restaurant ambiance
-• Celebration music
-
-💪 फिटनेस/हेल्थ:
-• High-energy workout music
-• Motivational beats
-• Gym music
-• Meditation sounds
-• Success/achievement music
-
-📚 एजुकेशन/लर्निंग:
-• Inspiring piano music
-• Concentration music
-• Study-friendly beats
-• Achievement celebration
-• Thoughtful ambient music
-
-🎨 म्यूजिक सेलेक्शन टिप्स:
-
-⏱️ टाइमिंग मैटर्स:
-• 15-30 सेकंड रील्स के लिए upbeat music
-• 1-3 मिनट videos के लिए varied tempo
-• Background music volume: 20-30%
-• Voiceover के साथ subtle music
-
-🔊 ऑडियो क्वालिटी:
-• 44.1 kHz sample rate
-• 16-bit minimum depth
-• MP3 320kbps या WAV format
-• Noise-free recordings
-• Consistent volume levels
-
-🎼 बीट मैचिंग:
-• Video cuts को beat के साथ sync करें
-• Transitions पर beat drops use करें
-• Text animations को rhythm के साथ
-• Visual effects music के साथ coordinate
-
-📱 प्लेटफॉर्म-स्पेसिफिक चॉइसेज:
-
-📺 Instagram Reels:
-• Trending Instagram sounds priority
-• 15-30 सेकंड clips
-• High-energy, catchy music
-• Popular Bollywood remixes
-• Viral sound effects
-
-🎬 YouTube Shorts:
-• Original music preferred
-• Longer format flexibility
-• Epic/cinematic music works
-• Educational content: softer music
-• Gaming content: electronic beats
-
-💼 LinkedIn:
-• Professional, inspiring music
-• Corporate-friendly tracks
-• Motivational instrumentals
-• Success/achievement themes
-• Avoid heavy beats
-
-🎪 मूड-बेस्ड म्यूजिक चॉइस:
-
-😊 हैप्पी/पॉजिटिव:
-• Major key music
-• Upbeat tempo (120-140 BPM)
-• Bright instruments (guitar, piano)
-• Cheerful melodies
-
-😢 इमोशनल/सेंटिमेंटल:
-• Minor key music
-• Slower tempo (60-80 BPM)
-• Strings, piano
-• Soft, gentle melodies
-
-⚡ एनर्जेटिक/मोटिवेशनल:
-• Fast tempo (140+ BPM)
-• Drums, bass heavy
-• Electronic elements
-• Building/crescendo structure
-
-🧘 कैल्म/रिलैक्सिंग:
-• Slow tempo (60-80 BPM)
-• Ambient sounds
-• Nature sounds
-• Minimal instruments
-
-🔧 ऑडियो एडिटिंग टूल्स:
-
-📱 मोबाइल ऐप्स:
-1. CapCut (बेस्ट फ्री)
-2. InShot (user-friendly)
-3. Splice (iOS)
-4. Adobe Audition Mobile
-5. GarageBand (iOS)
-
-💻 डेस्कटॉप सॉफ्टवेयर:
-1. Adobe Audition (प्रोफेशनल)
-2. Audacity (फ्री)
-3. GarageBand (Mac)
-4. FL Studio (music production)
-5. Logic Pro (Mac - प्रोफेशनल)
-
-🎵 साउंड इफेक्ट्स लाइब्रेरी:
-• Whoosh sounds (transitions)
-• Pop/click sounds (reveals)
-• Success chimes (achievements)
-• Error/fail sounds (mistakes)
-• Applause (celebrations)
-• Notification sounds (alerts)
-• Nature sounds (backgrounds)
-• ASMR sounds (satisfaction)
-
-📊 म्यूजिक परफॉर्मेंस ट्रैकिंग:
-• Completion rates with different music
-• Engagement rates per music type
-• Share rates for various sounds
-• Comments mentioning music
-• Viral potential of specific tracks
-
-🚨 कॉपीराइट अवेयरनेस:
-• Always check licensing
-• Credit original artists when required
-• Use platform-provided music libraries
-• Avoid copyrighted songs for commercial use
-• Keep records of music licenses
-
-🏆 वायरल साउंड स्ट्रैटेजी:
-1. Monitor trending sounds daily
-2. Jump on trends early
-3. Create original audio content
-4. Mix trending + original audio
-5. Collaborate with musicians
-6. Remix popular tracks legally
-7. Use local/regional popular music
-8. Seasonal/festival-themed music";
-  }
-
-  return `🎵 MUSIC & SOUND SELECTION MASTER GUIDE
-
-Viral Audio Strategy for ${userNiche} Creators
-
-🎧 VIRAL MUSIC CATEGORIES:
-
-🔥 Trending Bollywood Hits (2024):
-• "Animal" Movie Songs
-• "Pathaan" Background Music
-• "Jawan" Theme Music
-• "12th Fail" Emotional Tracks
-• "Rocky Aur Rani" Party Songs
-• "Adipurush" Epic Music
-• "Mission Majnu" Tension Music
-• "Tu Jhoothi Main Makkaar" Romantic
-• "Bhediya" Horror-Comedy Music
-• "Brahmastra" Fantasy Music
-
-🎶 Instrumental & Background:
-• Lofi Hip Hop beats
-• Epic orchestral music
-• Upbeat electronic music
-• Motivational piano music
-• Chill ambient sounds
-• Dramatic tension music
-• Success/achievement music
-• Emotional string music
-• Tech/futuristic beats
-• Nature/meditation sounds
-
-🗣️ Popular Dialogues (Usable):
-• "Pushpa" - "Main jhukega nahi"
-• "KGF" - "Violence, Speed, Momentum"
-• "Bahubali" - "Jai Mahishmati"
-• "Dangal" - "Mhari choriyaan choro se kam hain ke?"
-• "3 Idiots" - "All is well"
-• "Zindagi Na Milegi Dobara" quotes
-• "Queen" - Inspirational dialogues
-• "Pink" - "No means no"
-• "Taare Zameen Par" - emotional quotes
-• "Chak De India" - motivational lines
-
-🎵 MUSIC SOURCES (Copyright Free):
-
-🆓 Free Music Libraries:
-1. YouTube Audio Library
-   - 1000+ copyright-free tracks
-   - Genre-wise categorized
-   - Mood-based selection
-
-2. Facebook Sound Collection
-   - Instagram integrated
-   - Popular trending sounds
-   - Regular updates
-
-3. Epidemic Sound (Free Trial)
-   - High-quality tracks
-   - Professional music
-   - 30-day free trial
-
-4. Pixabay Music
-   - Free for commercial use
-   - No attribution required
-   - High-quality audio
-
-5. Freesound.org
-   - Sound effects library
-   - Community contributed
-   - Creative Commons licensed
-
-💰 Premium Music Platforms:
-1. Epidemic Sound (₹1500/month)
-2. Artlist (₹2000/month)
-3. Musicbed (₹2500/month)
-4. AudioJungle (Per track ₹500-2000)
-5. Splice (₹1200/month)
-
-🎯 NICHE-SPECIFIC MUSIC SELECTION:
-
-💻 Tech/Business Content:
-• Electronic/Synth music
-• Corporate inspiring music
-• Tech startup vibes
-• Futuristic sounds
-• Minimal techno beats
-
-👗 Fashion/Beauty:
-• Trendy pop music
-• Upbeat dance tracks
-• Chic and stylish beats
-• Fashion week music
-• Glamorous orchestral
-
-🍳 Food Content:
-• Cooking show music
-• Upbeat kitchen vibes
-• Satisfying ASMR sounds
-• Restaurant ambiance
-• Celebration music
-
-💪 Fitness/Health:
-• High-energy workout music
-• Motivational beats
-• Gym music
-• Meditation sounds
-• Success/achievement music
-
-📚 Education/Learning:
-• Inspiring piano music
-• Concentration music
-• Study-friendly beats
-• Achievement celebration
-• Thoughtful ambient music
-
-🎨 MUSIC SELECTION TIPS:
-
-⏱️ Timing Matters:
-• 15-30 second reels need upbeat music
-• 1-3 minute videos need varied tempo
-• Background music volume: 20-30%
-• Subtle music with voiceover
-
-🔊 Audio Quality:
-• 44.1 kHz sample rate
-• 16-bit minimum depth
-• MP3 320kbps or WAV format
-• Noise-free recordings
-• Consistent volume levels
-
-🎼 Beat Matching:
-• Sync video cuts with beat
-• Use beat drops for transitions
-• Text animations with rhythm
-• Coordinate visual effects with music
-
-📱 PLATFORM-SPECIFIC CHOICES:
-
-📺 Instagram Reels:
-• Trending Instagram sounds priority
-• 15-30 second clips
-• High-energy, catchy music
-• Popular Bollywood remixes
-• Viral sound effects
-
-🎬 YouTube Shorts:
-• Original music preferred
-• Longer format flexibility
-• Epic/cinematic music works
-• Educational content: softer music
-• Gaming content: electronic beats
-
-💼 LinkedIn:
-• Professional, inspiring music
-• Corporate-friendly tracks
-• Motivational instrumentals
-• Success/achievement themes
-• Avoid heavy beats
-
-🎪 MOOD-BASED MUSIC CHOICE:
-
-😊 Happy/Positive:
-• Major key music
-• Upbeat tempo (120-140 BPM)
-• Bright instruments (guitar, piano)
-• Cheerful melodies
-
-😢 Emotional/Sentimental:
-• Minor key music
-• Slower tempo (60-80 BPM)
-• Strings, piano
-• Soft, gentle melodies
-
-⚡ Energetic/Motivational:
-• Fast tempo (140+ BPM)
-• Drums, bass heavy
-• Electronic elements
-• Building/crescendo structure
-
-🧘 Calm/Relaxing:
-• Slow tempo (60-80 BPM)
-• Ambient sounds
-• Nature sounds
-• Minimal instruments
-
-🔧 AUDIO EDITING TOOLS:
-
-📱 Mobile Apps:
-1. CapCut (best free)
-2. InShot (user-friendly)
-3. Splice (iOS)
-4. Adobe Audition Mobile
-5. GarageBand (iOS)
-
-💻 Desktop Software:
-1. Adobe Audition (professional)
-2. Audacity (free)
-3. GarageBand (Mac)
-4. FL Studio (music production)
-5. Logic Pro (Mac - professional)
-
-🎵 SOUND EFFECTS LIBRARY:
-• Whoosh sounds (transitions)
-• Pop/click sounds (reveals)
-• Success chimes (achievements)
-• Error/fail sounds (mistakes)
-• Applause (celebrations)
-• Notification sounds (alerts)
-• Nature sounds (backgrounds)
-• ASMR sounds (satisfaction)
-
-📊 MUSIC PERFORMANCE TRACKING:
-• Completion rates with different music
-• Engagement rates per music type
-• Share rates for various sounds
-• Comments mentioning music
-• Viral potential of specific tracks
-
-🚨 COPYRIGHT AWARENESS:
-• Always check licensing
-• Credit original artists when required
-• Use platform-provided music libraries
-• Avoid copyrighted songs for commercial use
-• Keep records of music licenses
-
-🏆 VIRAL SOUND STRATEGY:
-1. Monitor trending sounds daily
-2. Jump on trends early
-3. Create original audio content
-4. Mix trending + original audio
-5. Collaborate with musicians
-6. Remix popular tracks legally
-7. Use local/regional popular music
-8. Seasonal/festival-themed music";
-}
-
 function generateContractContent(
   language: "english" | "hindi",
   userData?: any,
 ): string {
   return language === "hindi"
-    ? "���ॉन्ट्रैक्ट टेम्प्लेट्स..."
+    ? "कॉन्ट्रैक्ट टेम्प्लेट्स..."
     : "Contract Templates...";
 }
 
@@ -3190,10 +2146,10 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 ❌ मिसिंग captions/subtitles
 
 🎆 फाइनल pro tips:
-1. हर रील में आपकी personality shine करनी च��हिए
+1. हर रील में आपकी personality shine करनी चाहिए
 2. आपके अॡुेंस के प्रोब्लम्स solve करें
 3. नीच-स्पेसिफिक वाल्यू दें
-4. Authentic और genuine र��ें
+4. Authentic और genuine रहें
 5. कम्युनिटी के साथ एक्टिवली engage करें`;
   }
 
@@ -3316,7 +2272,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 
 🎆 क्या किया ठीक:
 • Relatable Indian characters (टितु मामा, बनचोद, मिखाल)
-• अपने आप से दर लगने वा��े conversations
+• अपने आप से दर लगने वाले conversations
 • हिंदी-इंग्लिश mix (Indian audience के लिए perfect)
 • कम बजट में हाई क्वालिटी production
 
@@ -3384,7 +2340,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 • Satisfying rangoli-making process videos
 • Time-lapse के साथ soothing music
 • Festival-specific rangoli designs
-��� Step-by-step tutorials
+• Step-by-step tutorials
 
 ⚡ रीप्लिकेट करने योग्य तकनीकें:
 • Process videos बनाएं (satisfying content)
@@ -3587,7 +2543,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 • Brand voice and style consistency
 
 3️⃣ RELATABILITY:
-��� Understand audience problems
+• Understand audience problems
 • Create content on common situations
 • Maintain Indian context
 
@@ -3675,11 +2631,11 @@ function generatePremiumToolsContent(
   if (language === "hindi") {
     return `🛠️ प्रीमियम क्रिएटर टूल्स गाइड
 
-${userNiche} क्रिएटर्स के लिए ���वश्यक फ्री और पेड टूल्स
+${userNiche} क्रिएटर्स के लिए आवश्यक फ्री और पेड टूल्स
 
 📈 एनालिटिक्स टूल्स:
 • Instagram Insights (FREE) - बिल्ट-इन एनालिटिक्स
-• Google Analytics (FREE) - वेबसाइट ट्���ैफिक ट्रैकिंग
+• Google Analytics (FREE) - वेबसाइट ट्रैफिक ट्रैकिंग
 • Hootsuite Insights ($49/month) - क्रॉस-प्लेटफॉर्म एनालिटिक्स
 • Sprout Social ($89/month) - अड्वांस रिपोर्टिंग
 
@@ -3698,7 +2654,7 @@ ${userNiche} क्रिएटर्स के लिए ���वश्य�
 
 📱 सोशल मीडिया मैनेजमेंट:
 • Buffer (FREE/Pro $15/month) - पोस्ट स्केड्यूलिंग
-• Later (FREE/Pro $18/month) - विजुअल कंटे��ट प्लानिंग
+• Later (FREE/Pro $18/month) - विजुअल कंटेंट प्लानिंग
 • Hootsuite (FREE/Pro $49/month) - मल्टी-प्लेटफॉर्म मैनेजमेंट
 • Creator Studio (FREE) - Facebook/Instagram नेटिव टूल
 
