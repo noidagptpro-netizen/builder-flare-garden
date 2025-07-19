@@ -495,11 +495,12 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
     );
   }
 
-  // OPPORTUNITIES - Exciting and specific to their situation
+  // OPPORTUNITIES - Exciting and specific to their actual situation
 
-  if (age >= 18 && age <= 35) {
+  // Remove fake age-based insights. Focus on real data instead.
+  if (followerNum >= 1000 && incomeNum === 0) {
     opportunities.push(
-      `🎯 Perfect demographic sweet spot! ${age}-year-olds are the #1 target for brand partnerships. You're in the goldilocks zone!`,
+      `💰 Untapped monetization goldmine! With ${data.followerCount} followers, you're sitting on ₹${Math.round(followerNum * 0.5)}-₹${Math.round(followerNum * 2)}K monthly potential that's currently unexplored.`,
     );
   }
 
