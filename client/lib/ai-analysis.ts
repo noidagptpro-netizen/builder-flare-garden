@@ -280,6 +280,65 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
   const currentYear = new Date().getFullYear();
   const currentMonth = new Date().toLocaleString("default", { month: "long" });
 
+  // Advanced user-specific analysis based on their exact profile
+  const isHighFollower = followerNum >= 50000;
+  const isMidFollower = followerNum >= 10000 && followerNum < 50000;
+  const isNewCreator = followerNum < 1000;
+
+  // Niche-specific market intelligence
+  const nicheInsights = {
+    "Fashion & Beauty": {
+      marketSize: "₹1.2L crore",
+      growth: "25% YoY",
+      competition: "High",
+      seasonality: "Festival-driven",
+      avgCPM: "₹15-30",
+      topBrands: ["Nykaa", "Myntra", "Lakme"],
+    },
+    Technology: {
+      marketSize: "₹4.5L crore",
+      growth: "35% YoY",
+      competition: "Medium",
+      seasonality: "Launch-cycles",
+      avgCPM: "₹25-50",
+      topBrands: ["OnePlus", "Xiaomi", "Amazon"],
+    },
+    Education: {
+      marketSize: "₹2.8L crore",
+      growth: "40% YoY",
+      competition: "Medium",
+      seasonality: "Academic-calendar",
+      avgCPM: "₹20-35",
+      topBrands: ["BYJU'S", "Unacademy", "Vedantu"],
+    },
+  }[data.niche] || {
+    marketSize: "₹50K crore",
+    growth: "20% YoY",
+    competition: "Medium",
+    seasonality: "Consistent",
+    avgCPM: "₹10-25",
+    topBrands: ["Leading brands"],
+  };
+
+  // Personal challenge-based insights
+  const challengeSpecificInsights = {};
+  data.biggestChallenge?.forEach((challenge) => {
+    if (challenge.includes("engagement")) {
+      challengeSpecificInsights["engagement"] = {
+        impact: "High",
+        solution: "Interactive content strategy",
+        timeline: "4-6 weeks",
+      };
+    }
+    if (challenge.includes("monetization")) {
+      challengeSpecificInsights["monetization"] = {
+        impact: "Critical",
+        solution: "Revenue diversification plan",
+        timeline: "2-3 months",
+      };
+    }
+  });
+
   // STRENGTHS - More engaging and specific
   if (getFollowerScore(data.followerCount) >= 65) {
     strengths.push(
@@ -370,7 +429,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
       engagement:
         "📊 Engagement challenges are solvable! Focus on interactive content and community building.",
       voice:
-        "🎯 Finding your unique voice takes time. Authenticity beats perfection every time.",
+        "�� Finding your unique voice takes time. Authenticity beats perfection every time.",
       algorithm:
         "⚡ Algorithm changes are part of the game. Diversify your content strategy.",
       monetization:
@@ -762,7 +821,7 @@ const generateMarketInsights = (data: QuizData, fameScore: number) => {
   // Platform-specific insights
   if (data.primaryPlatform === "Instagram" && followerNum >= 10000) {
     insights.push(
-      `📸 Instagram Opportunity: With ${data.followerCount} followers, you qualify for Instagram Creator Fund and paid partnerships.`,
+      `��� Instagram Opportunity: With ${data.followerCount} followers, you qualify for Instagram Creator Fund and paid partnerships.`,
     );
   } else if (data.primaryPlatform === "YouTube" && followerNum >= 1000) {
     insights.push(
@@ -773,7 +832,7 @@ const generateMarketInsights = (data: QuizData, fameScore: number) => {
   // City-based opportunities
   if (data.city && data.city.toLowerCase().includes("mumbai")) {
     insights.push(
-      `���️ Mumbai Advantage: Access to 60% of India's media & entertainment industry for offline collaborations.`,
+      `🏙️ Mumbai Advantage: Access to 60% of India's media & entertainment industry for offline collaborations.`,
     );
   } else if (data.city && data.city.toLowerCase().includes("delhi")) {
     insights.push(
@@ -996,7 +1055,7 @@ const calculateGrowthPotential = (
     "Build authentic community",
     "Achieve viral content",
     "Expand into new platforms",
-    "authentic कम्युनिटी बनान��",
+    "authentic कम्युनिटी बनाना",
     "वायरल कंटेंट बनाना",
     "नए प्लेटफॉर्म्स में expand",
   ];
