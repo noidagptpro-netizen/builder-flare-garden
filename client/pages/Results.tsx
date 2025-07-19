@@ -146,7 +146,7 @@ const languages = {
     processing: "प्रसंस्करण...",
     whatYouGet: "भुगतान के बाद आपको मिलेगा:",
     fameScoreReport: "फेम स्कोर रिपोर्ट",
-    mediaKitTemplate: "मीडिया किट टेम्प्लेट",
+    mediaKitTemplate: "मीड��या किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
     premiumTools: "प्रीमियम टूल्स",
     securePayment: "सुरक्षित भुगतान",
@@ -164,7 +164,7 @@ const languages = {
     monthlyIncome: "मासिक आय:",
     experienceLevel: "अनुभव स्तर:",
     activePlatforms: "सक्रिय प्लेटफॉर्म:",
-    competitorAnalysis: "प्रतियोगी विश्लेषण",
+    competitorAnalysis: "प्रतियोगी व��श्लेषण",
     marketInsights: "बाजार अंतर्दृष्टि",
   },
 };
@@ -318,7 +318,7 @@ ${language === "hindi" ? "ईमेल:" : "Email:"} ${personalInfo.email}
 ${language === "hindi" ? "फोन:" : "Phone:"} ${personalInfo.phone}
 ${language === "hindi" ? "शहर:" : "City:"} ${personalInfo.city}
 
-${language === "hindi" ? "सोशल मीडिया प्रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
+${language === "hindi" ? "सोशल मीडिया प्रो���ाइल:" : "SOCIAL MEDIA PROFILES:"}
 ${language === "hindi" ? "प्राथमिक प्लेटफॉर्म:" : "Primary Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "कंटेंट निच:" : "Content Niche:"} ${quizData.niche}
@@ -332,7 +332,7 @@ ${language === "hindi" ? "मासिक रीच:" : "Monthly Reach:"} ${lang
 ${language === "hindi" ? "सुझावित दरें:" : "SUGGESTED RATES:"}
 ${language === "hindi" ? "पोस्ट दरें:" : "Post Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "3,000-8,000" : quizData.followerCount.includes("1K - 5K") ? "8,000-15,000" : "15,000-50,000"}
 ${language === "hindi" ? "स्टोरी दरें:" : "Story Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,500-4,000" : quizData.followerCount.includes("1K - 5K") ? "4,000-8,000" : "8,000-25,000"}
-${language === "hindi" ? "री�� दरें:" : "Reel Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "5,000-12,000" : quizData.followerCount.includes("1K - 5K") ? "12,000-25,000" : "25,000-75,000"}
+${language === "hindi" ? "रील दरें:" : "Reel Rates:"} ₹${quizData.followerCount.includes("Less than 1K") ? "5,000-12,000" : quizData.followerCount.includes("1K - 5K") ? "12,000-25,000" : "25,000-75,000"}
 
 ${language === "hindi" ? "विशेषताएं:" : "SPECIALTIES:"}
 - ${analysis.suggestions.slice(0, 3).join("\n- ")}
@@ -346,7 +346,7 @@ ${language === "hindi" ? "वेबसाइट:" : "Website:"} ${quizData.socia
 
 ${language === "hindi" ? "वर्तमान स्थिति विश्लेषण:" : "CURRENT SITUATION ANALYSIS:"}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
-${language === "hindi" ? "मुख्य चुनौतियां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 3).join(", ")}
+${language === "hindi" ? "मु��्य चुनौतियां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 3).join(", ")}
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 3).join(", ")}
 ${language === "hindi" ? "वर्तमान आय:" : "Current Income:"} ${quizData.monthlyIncome}
 
@@ -379,7 +379,7 @@ ${language === "hindi" ? "मुख्य सफलता संकेतक (KP
 ${language === "hindi" ? "- दैनिक एंगेजमेंट रेट" : "- Daily engagement rate"}
 ${language === "hindi" ? "- साप्ताहिक नए फॉलोअर्स" : "- Weekly new followers"}
 ${language === "hindi" ? "- मासिक ब्रांड इंक्वायरी" : "- Monthly brand inquiries"}
-${language === "hindi" ? "- कंटेंट पहुंच और छाप" : "- Content reach and impressions"}
+${language === "hindi" ? "- कंटेंट पहुंच औ��� छाप" : "- Content reach and impressions"}
 
 ${language === "hindi" ? "अनुशंसित उपकरण:" : "RECOMMENDED TOOLS:"}
 ${language === "hindi" ? "- कंटेंट शेड्यूलिंग: Later या Buffer" : "- Content Scheduling: Later or Buffer"}
@@ -511,7 +511,7 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
                   className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all"
                 >
                   <Download className="w-4 h-4 inline mr-2" />
-                  {language === "hindi" ? "��ाउनलोड करें" : "Download"}
+                  {language === "hindi" ? "डाउनलोड करें" : "Download"}
                 </button>
               </div>
 
@@ -974,6 +974,11 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
                         }`}
                         placeholder="+91 9876543210"
                       />
+                      {formErrors.phone && (
+                        <p className="text-red-500 text-sm mt-1">
+                          {formErrors.phone}
+                        </p>
+                      )}
                     </div>
                     <div className="grid grid-cols-2 gap-4">
                       <div>
