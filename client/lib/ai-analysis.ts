@@ -678,7 +678,7 @@ const generateMarketInsights = (data: QuizData, fameScore: number) => {
       avgDeal: "₹15,000-75,000",
     },
     "Technology & AI": {
-      market: "��4.2 lakh crore IT market, highest CPM rates",
+      market: "₹4.2 lakh crore IT market, highest CPM rates",
       cpm: "₹20-50 per 1K views",
       bestMonths: [0, 1, 8], // Jan-Feb, Sep (budget cycles)
       avgDeal: "₹25,000-1,50,000",
@@ -773,7 +773,7 @@ const generateMarketInsights = (data: QuizData, fameScore: number) => {
   // City-based opportunities
   if (data.city && data.city.toLowerCase().includes("mumbai")) {
     insights.push(
-      `🏙️ Mumbai Advantage: Access to 60% of India's media & entertainment industry for offline collaborations.`,
+      `���️ Mumbai Advantage: Access to 60% of India's media & entertainment industry for offline collaborations.`,
     );
   } else if (data.city && data.city.toLowerCase().includes("delhi")) {
     insights.push(
@@ -967,7 +967,7 @@ const calculateGrowthPotential = (
     "Gaming & Esports",
     "गेमिंग और एस्पोर्ट्स",
     "Education & Learning",
-    "शिक्षा और सीखन��",
+    "शिक्षा और सीखना",
   ];
   if (growingNiches.includes(data.niche)) {
     potential += 8;
@@ -996,7 +996,7 @@ const calculateGrowthPotential = (
     "Build authentic community",
     "Achieve viral content",
     "Expand into new platforms",
-    "authentic कम्युनिटी बनाना",
+    "authentic कम्युनिटी बनान��",
     "वायरल कंटेंट बनाना",
     "नए प्लेटफॉर्म्स में expand",
   ];
@@ -1009,7 +1009,7 @@ const calculateGrowthPotential = (
     "Getting consistent views",
     "Understanding analytics",
     "Converting followers",
-    "लगातार व��यूज",
+    "लगातार व्यूज",
     "एनालिटिक्स",
     "फॉलोअर्स को पेइंग कस्टमर",
   ];
@@ -1325,7 +1325,7 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
     data,
     fameScore,
   );
-  const advancedMarketInsights = generateMarketInsights(data);
+  const advancedMarketInsights = generateAdvancedMarketInsights(data);
 
   return {
     fameScore,
