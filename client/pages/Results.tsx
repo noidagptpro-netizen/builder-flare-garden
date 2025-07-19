@@ -144,7 +144,7 @@ const languages = {
     age: "उम्र",
     paySecure: "₹99 भुगतान करें - सुरक्षित भुगतान",
     processing: "प्रसंस्करण...",
-    whatYouGet: "भुगतान के बाद आपक��� मिलेगा:",
+    whatYouGet: "भुगतान के बाद आपको मिलेगा:",
     fameScoreReport: "फेम स्कोर रिपोर्ट",
     mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
@@ -156,7 +156,7 @@ const languages = {
     basedOnEngagement: "एंगेजमेंट क्षमता के ��धार पर",
     nextSixMonths: "अगले 6 महीने का प्रक्षेपण",
     monthlyTarget: "मासिक प्राप्त करन�� योग्य लक्ष्य",
-    primaryPlatform: "प्राथमिक प्लेटफॉर्म:",
+    primaryPlatform: "प्राथमिक प��लेटफॉर्म:",
     contentNiche: "कंटेंट निच:",
     contentType: "कंटेंट प्रकार:",
     postingFrequency: "पोस्टिंग आवृत्ति:",
@@ -330,7 +330,7 @@ ${analysis.suggestions.map((s: string, i: number) => `${i + 1}. ${s}`).join("\n"
 ${language === "hindi" ? "अगले कदम:" : "NEXT STEPS:"}
 ${language === "hindi" ? "1. अपनी कंटेंट रणनीति को अनुकूलित करें" : "1. Optimize your content strategy"}
 ${language === "hindi" ? "2. ब्रांड पार्टनरशिप के लिए तैयार हो जाएं" : "2. Prepare for brand partnerships"}
-${language === "hindi" ? "3. अपने एंगेज��ेंट मेट्रिक्स को ब���हतर बनाएं" : "3. Improve your engagement metrics"}
+${language === "hindi" ? "3. अपने एंग���ज��ेंट मेट्रिक्स को ब���हतर बनाएं" : "3. Improve your engagement metrics"}
 
 ${language === "hindi" ? "जेनरेट किया गया:" : "Generated:"} ${new Date().toLocaleDateString()}`;
     } else if (type === "mediaKit") {
@@ -368,7 +368,7 @@ ${language === "hindi" ? "ईमेल:" : "Email:"} ${personalInfo.email}
 ${language === "hindi" ? "फोन:" : "Phone:"} ${personalInfo.phone}
 ${language === "hindi" ? "वेबसाइट:" : "Website:"} ${quizData.socialLinks.website || "Available upon request"}`;
     } else if (type === "growthStrategy") {
-      content = `${language === "hindi" ? "व्यक्तिगत विकास रणनीति" : "PERSONALIZED GROWTH STRATEGY"} - ${userName}
+      content = `${language === "hindi" ? "व्यक्त���गत विकास रणनीति" : "PERSONALIZED GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "वर्तमान स्थिति विश्लेषण:" : "CURRENT SITUATION ANALYSIS:"}
 ${language === "hindi" ? "फॉलो���र्स:" : "Followers:"} ${quizData.followerCount}
@@ -392,7 +392,7 @@ ${analysis.suggestions
 ${language === "hindi" ? "60-दिन की रणनीति:" : "60-DAY STRATEGY:"}
 ${language === "hindi" ? "- कंटेंट कैलेंडर का अनुकूलन" : "- Content calendar optimization"}
 ${language === "hindi" ? "- ब्रांड आउटरीच शुरू करना" : "- Begin brand outreach"}
-${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स ���ें सुधार" : "- Improve engagement metrics"}
+${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में सुधार" : "- Improve engagement metrics"}
 ${language === "hindi" ? "- नेटवर्किंग और सहयोग" : "- Networking and collaborations"}
 
 ${language === "hindi" ? "90-दिन के लक्ष्य:" : "90-DAY GOALS:"}
@@ -568,16 +568,90 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
               </div>
             </div>
 
+            {/* EXCLUSIVE PREMIUM CONTENT SECTION */}
+            <div className="bg-gradient-to-r from-purple-50 to-blue-50 border-2 border-purple-200 rounded-2xl p-8 mb-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                  🎉 PREMIUM EXCLUSIVE
+                </div>
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                {language === "hindi"
+                  ? "प्रीमियम एक्सक्लूसिव टूल्स - केवल आपके लिए!"
+                  : "Premium Exclusive Tools - Just for You!"}
+              </h2>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="bg-white rounded-xl p-6 border border-purple-200">
+                  <h3 className="font-bold text-lg mb-2 text-purple-700">
+                    {language === "hindi"
+                      ? "🧮 मोनेटाइज़ेशन कैलकुलेटर"
+                      : "🧮 Monetization Calculator"}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    {language === "hindi"
+                      ? "अपनी फॉलोअर काउंट के आधार पर रियल-टाइम earnings पोटेंशियल कैलकुलेट करें"
+                      : "Calculate real-time earnings potential based on your follower count & niche"}
+                  </p>
+                  <button
+                    onClick={() =>
+                      generateDownload(
+                        "monetizationCalculator",
+                        `${personalInfo.name}_Monetization_Calculator_${language}.txt`,
+                      )
+                    }
+                    className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors"
+                  >
+                    <Download className="w-4 h-4 inline mr-2" />
+                    {language === "hindi" ? "डाउनलोड करें" : "Download"}
+                  </button>
+                </div>
+
+                <div className="bg-white rounded-xl p-6 border border-purple-200">
+                  <h3 className="font-bold text-lg mb-2 text-purple-700">
+                    {language === "hindi"
+                      ? "📊 एडवांस्ड एनालिटिक्स ट्रैकर"
+                      : "📊 Advanced Analytics Tracker"}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">
+                    {language === "hindi"
+                      ? "प्रोफेशनल एनालिटिक्स ट्रैकिंग स्प्रेडशीट - ROI, एंगेजमेंट, ग्रोथ मेट्रिक्स"
+                      : "Professional analytics tracking spreadsheet - ROI, engagement, growth metrics"}
+                  </p>
+                  <button
+                    onClick={() =>
+                      generateDownload(
+                        "analyticsTracker",
+                        `${personalInfo.name}_Analytics_Tracker_${language}.txt`,
+                      )
+                    }
+                    className="bg-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-purple-700 transition-colors"
+                  >
+                    <Download className="w-4 h-4 inline mr-2" />
+                    {language === "hindi" ? "डाउनलोड करें" : "Download"}
+                  </button>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-4">
+                <p className="text-amber-800 font-medium text-center">
+                  {language === "hindi"
+                    ? "🎯 यह कंटेंट केवल प्रीमियम यूज़र्स के लिए है - FREE यूज़र्स को यह नहीं मिलता!"
+                    : "🎯 This content is exclusively for premium users - FREE users don't get this!"}
+                </p>
+              </div>
+            </div>
+
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "अधिक टूल्स चाहिए?"
-                  : "Want More Tools?"}
+                  ? "और भी प्रीमियम टूल्स चाहिए?"
+                  : "Want Even More Premium Tools?"}
               </h2>
               <p className="text-gray-600 mb-6">
                 {language === "hindi"
-                  ? "हमारे प्रीमियम क्रिएटर टूल्स के साथ अपनी क्रिएटर यात्रा को तेज़ी से आगे बढ़ाएं।"
-                  : "Accelerate your creator journey with our premium creator tools."}
+                  ? "हमारे एडवांस्ड प्रीमिय��� कोर्सेज के साथ अपनी क्रिएटर यात्रा को तेज़ी से आगे बढ़ाएं।"
+                  : "Accelerate your creator journey with our advanced premium courses."}
               </p>
               <Link
                 to="/shop"
