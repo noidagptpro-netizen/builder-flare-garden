@@ -283,7 +283,7 @@ function generateMediaKitContent(
 प्राथमिक प्लेटफॉर्म: ${userPlatform}
 फॉलोअर्स: ${userFollowers}
 
-📊 परफॉर्मेंस मेट्रिक्स:
+📊 परफॉर्मेंस मेट���रिक्स:
 • औसत पहुंच: [आपकी पहुंच दर्ज करें]
 • एंगेजमेंट रेट: [आपका एंगे���मेंट रेट]
 • मासिक इंप्रेशन्स: [आपके मासिक इंप्रेशन्स]
@@ -303,7 +303,7 @@ function generateMediaKitContent(
 • [ब्रांड नाम 2] - [कोलैबोरेशन का प्रकार]
 • [ब्रांड नाम 3] - [कोलैबोरेशन का प्रकार]
 
-🎯 टारगेट ऑडियंस:
+🎯 टार��ेट ऑडियंस:
 • आयु समूह: [आपके फॉलोअर्स की आयु]
 • लिंग: [मुख्य लिंग वितरण]
 • स्थान: [मुख्य भौगोलिक स्थान]
@@ -325,7 +325,7 @@ function generateMediaKitContent(
 • उपयोग अधिकार: [स्पेसिफाई करें]
 • एक्सक्लूसिविटी: [यदि कोई हो]
 • कंटेंट ओनरशिप: [स्पेसिफाई करें]
-• पेमेंट टर्म्स: 50% एडवांस, 50% डिलीवरी पर
+• पेमेंट टर्म्स: 50% एडवा��स, 50% डिलीवरी पर
 
 💼 मीडिया किट में शामिल:
 ✅ हाई-रेज़���ल्यूशन प्रोफाइल फोटोज़
@@ -1134,7 +1134,7 @@ Twitter: Quick updates, news, engagement
 
 🔄 CONTENT RECYCLING STRATEGY:
 • Repurpose top posts into different formats
-• Create carousel from popular reel
+�� Create carousel from popular reel
 • Turn IGTV into multiple short clips
 • Use quotes from videos as static posts
 
@@ -1426,7 +1426,7 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 • A/B टेस्ट शुरू करें (posting times, hashtags)
 • इंफ्लुएंसर्स और अन्य क्रिएटर्स के साथ कोलैबोरेशन
 • लाइव वीडियो और Q&A सेशन शुरू करें
-• विरल रील्स और ट्रेंड्स पर फोकस करें
+• व��रल रील्स और ट्रेंड्स पर फोकस करें
 • एनालिटिक्स को ट्रैक करें और ऑप्टिमाइज करें
 • हैशटैग और कीवर्ड स्ट्रैटेजी रिफाइन करें
 • आगे की योजना और वीडियो सीरीज बनाएं
@@ -1440,7 +1440,7 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 • मेम्बरशिप/कोर्स बिजनेस मॉडल को एक्सप्लोर करें
 • कम्युनिटी बिल्डिंग और एंगेजमेंट स्ट्रैटेजी
 
-🛠️ इम्प्लीमेंटेशन चेकलिस्ट:
+🛠️ इम्प्लीमेंट��शन चेकलिस्ट:
 ✅ दैनिक पोस्टिंग (least 5 days/week)
 ✅ साप्ताहिक एनालिटिक्स रिव्यू
 ✅ मासिक कंटेंट प्लानिंग
@@ -1463,7 +1463,7 @@ ${userNiche} क्रिएटर्स के लिए विस्तृत 
 • मासिक आय में वृद्धि: ₹5K-25K
 
 📝 ध्यान देने योग्य बातें:
-• भारतीय मार्केट के लिए कंटेंट लोकलाइज करें
+• भारतीय मार��केट के लिए कंटेंट लोकलाइज करें
 • रीजनल भाषाओं और कल्चर को incorporate करें
 • भारतीय त्योहारों और सीजन का फायदा उठाएं
 • लोकल SEO और हैशटैग स्ट्रैटेजी पर फोकस करें`;
@@ -1567,7 +1567,7 @@ ${userNiche} क्रिएटर्स के लिए ${userPlatform} है
 • #foodie #travel #lifestyle #bollywood
 • अच्छा balance और reach
 
-3️⃣ निच हैशटैग (100K-1M posts)
+3️⃣ नि�� हैशटैग (100K-1M posts)
 • #{userNiche.toLowerCase().replace(' ', '')} #contentcreator
 • #indianinfluencer #delhifoodie #mumbaifashion
 • टार्गेट ऑडियंस के लिए perfect
@@ -1739,7 +1739,7 @@ ${userPlatform} Hashtag Strategy for ${userNiche} Creators
 
 ⚠️ HASHTAG MISTAKES TO AVOID:
 ❌ Don't use shadow banned hashtags
-❌ Don't use same hashtags every post
+�� Don't use same hashtags every post
 ❌ Avoid over-saturation (too many competitive hashtags)
 ❌ Don't use irrelevant hashtags
 ❌ Don't exceed 30 hashtag limit
@@ -1892,7 +1892,7 @@ ${userPlatform} | ${userFollowers} Followers
 • कलीयर brand guidelines का compliance
 • FTC/आदर्श disclosure रिक्वायरमेंट्स
 
-🚨 कैंसिलेशन पॉलिसी:
+🚨 कैंसिलेशन पॉल���सी:
 • 24 hours में कैंसिलेशन: 100% रिफंड
 • 48 hours में: 50% रिफंड
 • कंटेंट स्टार्ट के बाद: नो रिफंड
@@ -2017,7 +2017,7 @@ function generateContractContent(
   userData?: any,
 ): string {
   return language === "hindi"
-    ? "कॉन्ट्रैक्ट टेम्प्लेट्स..."
+    ? "कॉन���ट्रैक्ट टेम्प्लेट्स..."
     : "Contract Templates...";
 }
 
@@ -2079,7 +2079,7 @@ ${userNiche} क्रिएटर्स के लिए प्रमाणि�
 
 🎉 एंटर्टेनमेंट रील्स (15 आइडियाज):
 31. "मेरे [निच] के दोस्तों के साथ"
-32. "जब मैं [निच] के बारे में सोचता हूं vs रियलिटी"
+32. "जब मैं [निच] के बारे में सोचता हूं vs रियलि���ी"
 33. "[निच] के टाइप्स ऑफ पीपल"
 34. "मेरी [निच] जर्नी - कॉमेडी वर्जन"
 35. "[निच] के स्ट्रगल्स"
@@ -2391,7 +2391,7 @@ ${userNiche} क्रिएटर्स के लिए वायरल एड
 📱 मोबाइल एडिटिंग workflow:
 1. CapCut में import करें
 2. Clips को sequence में arrange करें
-3. Music add करें और beat के साथ sync करें
+3. Music add करें और beat के सा�� sync करें
 4. Transitions add करें
 5. Text overlays add करें
 6. Color grading apply करें
@@ -2789,7 +2789,7 @@ ${userNiche} क्रिएटर्स के लिए वायरल ऑड
 5. GarageBand (iOS)
 
 💻 डेस्कटॉप सॉफ्टवेयर:
-1. Adobe Audition (प्रोफेशनल)
+1. Adobe Audition (प्���ोफेशनल)
 2. Audacity (फ्री)
 3. GarageBand (Mac)
 4. FL Studio (music production)
@@ -2986,7 +2986,7 @@ Viral Audio Strategy for ${userNiche} Creators
 • Corporate-friendly tracks
 • Motivational instrumentals
 • Success/achievement themes
-• Avoid heavy beats
+��� Avoid heavy beats
 
 🎪 MOOD-BASED MUSIC CHOICE:
 
@@ -3079,7 +3079,7 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 🤖 इंस्टाग्राम एल्गोरिदम कैसे काम करता है:
 
 🔍 एल्गोरिदम के मुख्य फैक्टर्स:
-1. रिलेशनशिप (Interest): आपके अऔर user के बीच connection
+1. रिलेशनशिप (Interest): आपके अ���र user के बीच connection
 2. रीसेंसी (Recency): कंटेंट कितना नया है
 3. एंगेजमेंट (Engagement): लाइक्स, कमेंट्स, शेयर्स
 4. यूजर एक्टिविटी: कितनी बार ऐप खोलते हैं
@@ -3097,7 +3097,7 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 • 9:16 वर्टिकल रिजोल्यूशन (1080x1920)
 • तेज और हाई कॉन्ट्रास्ट विजुअल्स
 • ब्राइट lighting और साफ बैकग्राउंड
-• प्रोफेशनल editing विथ smooth transitions
+• प्रोफ���शनल editing विथ smooth transitions
 
 3️⃣ ऑडियो स्ट्रैटेजी:
 • ट्रेंडिंग म्यूजिक का इस्तेमाल करें
@@ -3117,11 +3117,11 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 • कॉन्सिस्टेंट पोस्टिंग (daily या alternate days)
 • त्योहारों और सीजन्स का फायदा उठाएं
 
-📊 एनालिटिक्स और मेट्रिक्स ट्रैकिंग:
+📊 एनालिटिक्स और ���ेट्रिक्स ट्रैकिंग:
 
 🔥 की मेट्रिक्स पर फोकस करें:
 • वियू रेट (70%+ target करें)
-• एवरेज वियू ड्यूरेशन (complete views)
+• एवरेज वियू ड्यूरे���न (complete views)
 • रीच और इम्प्रेशन्स ग्रोथ
 • शेयर्स और saves (strong engagement signals)
 • कम��ंट रेस्पॉन्स रेट
@@ -3146,7 +3146,7 @@ ${userNiche} क्रिएटर्स के लिए एल्गोरि�
 • पहले घंटे में high engagement = बेहतर reach
 • कमेंट्स पर जल्दी reply करें
 • गोल्डन आवर (first 2 hours) में एक्टिव रहें
-• Cross-promotion से initial boost लें
+• Cross-promotion से initial boost ले���
 
 🔄 कंटेंट रिपरपाजिंग और adaptation:
 • टिकटॉक viral content को adapt करें
@@ -3327,7 +3327,7 @@ ${userNiche} क्रिएटर्स के लिए 10+ कामयाब
 
 📈 सफलता के आंकडे:
 • 35M+ यूट्यूब सब्सक्राइबर्स
-• 12M+ इंस्टाग्राम फॉलोअर्स
+• 12M+ इंस्टाग्राम फॉलोअ��्स
 • Most subscribed individual creator in India
 • अनुमानित आय: ₹8-12 करोड+ सालाना
 
@@ -4241,9 +4241,682 @@ function generateMediaKitDesignsContent(
   language: "english" | "hindi",
   userData?: any,
 ): string {
-  return language === "hindi"
-    ? "मीडिया किट डिजाइन्स..."
-    : "Media Kit Designs...";
+  const userName = userData?.name || "Creator Name";
+  const userNiche = userData?.niche || "Content Creator";
+  const userPlatform = userData?.primaryPlatform || "Instagram";
+  const userFollowers = userData?.followerCount || "10K+";
+
+  if (language === "hindi") {
+    return `📱 10 प्रोफेशनल मीडिया किट डिजाइन टेम्प्लेट्स
+
+${userName} - ${userNiche} के लिए स्टाइलिश मीडिया किट कलेक्शन
+
+🎨 DESIGN TEMPLATE #1: MINIMALIST ELEGANCE
+═══════════════════════════════════════
+
+${userName.toUpperCase()}
+${userNiche} Creator | ${userPlatform} | ${userFollowers} Followers
+
+📊 KEY METRICS:
+• Engagement Rate: [आपका rate]%
+• Monthly Reach: [आपकी reach]
+• Average Impressions: [आपके impressions]
+• Audience Demographics: [demographics]
+
+💰 COLLABORATION RATES:
+📸 Instagram Post: ₹[rate]
+📱 Instagram Story: ₹[rate]
+🎥 Instagram Reel: ₹[rate]
+📹 YouTube Integration: ₹[rate]
+
+📧 Contact: ${userName.toLowerCase().replace(" ", ".")}@gmail.com
+🌐 Website: [आपकी website]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #2: BOLD & COLORFUL
+═══════════════════════════════════════
+
+🌟 ${userName.toUpperCase()} 🌟
+${userNiche} Expert & Content Creator
+
+📈 PERFORMANCE HIGHLIGHTS:
+✅ ${userFollowers} Highly Engaged Followers
+✅ [%] Above Industry Average Engagement
+✅ [number]+ Successful Brand Collaborations
+✅ [number] Million+ Content Views
+
+🎯 AUDIENCE INSIGHTS:
+Age: [primary age group]
+Gender: [main gender split]
+Location: [main locations]
+Interests: [audience interests]
+
+💼 SERVICES OFFERED:
+🔥 Sponsored Content Creation
+🔥 Product Reviews & Unboxing
+🔥 Brand Story Integration
+🔥 Event Coverage & Live Posts
+🔥 Long-term Brand Partnerships
+
+📱 Get in touch: [contact info]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #3: PROFESSIONAL CORPORATE
+═══════════════════════════════════════
+
+MEDIA KIT | ${userName}
+${userNiche} Content Creator & Brand Partner
+
+CREATOR PROFILE:
+Name: ${userName}
+Niche: ${userNiche}
+Primary Platform: ${userPlatform}
+Follower Count: ${userFollowers}
+Content Language: Hindi/English
+
+ENGAGEMENT ANALYTICS:
+• Average Likes: [number]
+• Average Comments: [number]
+• Average Shares: [number]
+• Story Completion Rate: [%]
+• Reel Completion Rate: [%]
+
+BRAND COLLABORATION HISTORY:
+• [Brand 1] - [collaboration type]
+• [Brand 2] - [collaboration type]
+• [Brand 3] - [collaboration type]
+
+PRICING STRUCTURE:
+Standard Post: ₹[amount]
+Premium Package: ₹[amount]
+Campaign Series: ₹[amount]
+
+CONTACT INFORMATION:
+Email: [email]
+Phone: [phone]
+Manager: [if applicable]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #4: CREATIVE ARTISTIC
+═══════════════════════════════════════
+
+✨ ${userName} ✨
+🎨 Creative ${userNiche} Storyteller 🎨
+
+🌈 MY CREATIVE UNIVERSE:
+Followers: ${userFollowers} amazing humans
+Platform: ${userPlatform} (primary)
+Content Style: [your content style]
+Posting Schedule: [your schedule]
+
+🎭 CONTENT PILLARS:
+40% Educational Content
+30% Behind-the-Scenes
+20% Product Integration
+10% Personal Stories
+
+🚀 WHY BRANDS LOVE WORKING WITH ME:
+• Authentic storytelling approach
+• High engagement rates
+• Professional content quality
+• Timely delivery guaranteed
+• Long-term relationship focus
+
+💫 COLLABORATION OPTIONS:
+⭐ Single Post Integration
+⭐ Story Takeover
+⭐ Reel Creation
+⭐ Multi-post Campaign
+⭐ Brand Ambassador Program
+
+💌 Let's create magic together!
+Contact: [your email]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #5: DATA-DRIVEN ANALYTICS
+═══════════════════════════════════════
+
+📊 ${userName} - PERFORMANCE ANALYTICS
+
+🎯 CREATOR OVERVIEW:
+Platform: ${userPlatform}
+Niche: ${userNiche}
+Followers: ${userFollowers}
+Content Format: [primary format]
+
+📈 GROWTH METRICS (Last 90 Days):
+• Follower Growth: [%] increase
+• Engagement Growth: [%] increase
+• Reach Growth: [%] increase
+• New Audience: [number] followers
+
+🔍 AUDIENCE BREAKDOWN:
+Age Groups:
+• 18-24: [%]
+• 25-34: [%]
+• 35-44: [%]
+• 45+: [%]
+
+Geographic Distribution:
+• Mumbai: [%]
+• Delhi: [%]
+• Bangalore: [%]
+• Other Metros: [%]
+• Tier-2 Cities: [%]
+
+💰 ROI PERFORMANCE:
+• Average CTR: [%]
+• Conversion Rate: [%]
+• Brand Recall: [%]
+• Purchase Intent: [%]
+
+📋 CAMPAIGN CASE STUDIES:
+Case Study 1: [Brand] - [results]
+Case Study 2: [Brand] - [results]
+Case Study 3: [Brand] - [results]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #6: LIFESTYLE INFLUENCER
+═══════════════════════════════════════
+
+🌸 ${userName} 🌸
+Lifestyle & ${userNiche} Creator
+
+✨ ABOUT ME:
+I'm a passionate ${userNiche} creator who loves sharing authentic experiences with my ${userFollowers} followers. My content focuses on [your focus areas] and I believe in creating genuine connections with my audience.
+
+🏠 MY CONTENT WORLD:
+Daily Life Documentation
+Product Reviews & Recommendations
+Tips & Tutorials
+Behind-the-Scenes Moments
+Community Engagement
+
+👥 MY AMAZING COMMUNITY:
+Followers: ${userFollowers}
+Avg. Engagement: [%]
+Community: Highly engaged and loyal
+Demographics: [description]
+
+🤝 COLLABORATION STYLE:
+I work with brands that align with my values and genuinely benefit my audience. My content integration is natural, authentic, and creates meaningful connections between brands and my community.
+
+💝 PARTNERSHIP PACKAGES:
+🌟 Authentic Review Package
+🌟 Lifestyle Integration Package
+🌟 Story Takeover Package
+🌟 Long-term Ambassador Program
+
+📞 Let's Connect:
+Email: [email]
+Instagram: @${userName.toLowerCase()}
+Website: [website]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #7: TECH/BUSINESS PROFESSIONAL
+═══════════════════════════════════════
+
+${userName.toUpperCase()}
+${userNiche} Expert | Business Content Creator
+
+🏢 PROFESSIONAL PROFILE:
+Platform: ${userPlatform}
+Specialization: ${userNiche}
+Audience Size: ${userFollowers}
+Content Focus: [your focus]
+
+💼 EXPERTISE AREAS:
+• [Skill 1]
+• [Skill 2]
+• [Skill 3]
+• [Skill 4]
+
+📊 BUSINESS METRICS:
+• LinkedIn Engagement: [rate]
+• Industry Reach: [number]
+• B2B Connections: [number]
+• Thought Leadership Score: [score]
+
+🎯 TARGET AUDIENCE:
+• Professionals in [industry]
+• Business decision makers
+• [Target demographic]
+• [Geographic focus]
+
+💡 CONTENT STRATEGY:
+Educational Content: 50%
+Industry Insights: 30%
+Product Reviews: 15%
+Personal Brand: 5%
+
+🤝 B2B COLLABORATION OPTIONS:
+• Webinar Partnerships
+• Product Demonstrations
+• Case Study Development
+• Thought Leadership Content
+• Industry Event Coverage
+
+📧 Business Inquiries: [email]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #8: ENTERTAINMENT & FUN
+═══════════════════════════════════════
+
+🎉 ${userName} 🎉
+Your Favorite ${userNiche} Entertainment Creator!
+
+🎭 ENTERTAINMENT STATS:
+Followers: ${userFollowers} entertainment lovers
+Platform: ${userPlatform}
+Content Vibe: Fun, Engaging, Authentic
+Posting Style: [your style]
+
+🎪 CONTENT CATEGORIES:
+🔥 Viral Challenges
+🔥 Comedy Skits
+🔥 Trending Audio
+🔥 Behind-the-Scenes Fun
+🔥 Audience Interactions
+
+🎨 CREATIVE PROCESS:
+Trend Research ➜ Content Planning ➜ Creative Execution ➜ Community Engagement ➜ Performance Analysis
+
+🌟 AUDIENCE LOVE:
+• Comments: [average per post]
+• Shares: [average per post]
+• Saves: [average per post]
+• Story Replies: [average per story]
+
+🎯 BRAND FIT:
+Perfect for brands wanting to:
+• Reach young, engaged audience
+• Create viral moment
+• Build brand awareness
+• Drive traffic and conversions
+
+🎪 COLLABORATION MAGIC:
+✨ Creative Brand Challenges
+✨ Product Integration Skits
+✨ Sponsored Entertainment Content
+✨ Brand Personality Showcases
+
+🎭 Ready to go viral together?
+Contact: [email] | [phone]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #9: EDUCATIONAL EXPERT
+═══════════════════════════════════════
+
+📚 ${userName} - Educational Creator
+
+🎓 TEACHING CREDENTIALS:
+Subject Expert: ${userNiche}
+Teaching Experience: [years]
+Student Community: ${userFollowers}
+Platform: ${userPlatform}
+
+📈 EDUCATIONAL IMPACT:
+• Students Helped: [number]+
+• Course Completion Rate: [%]
+• Student Success Stories: [number]
+• Knowledge Retention: [%]
+
+📖 CONTENT CURRICULUM:
+Basic Concepts: 30%
+Advanced Tutorials: 25%
+Practical Applications: 25%
+Q&A Sessions: 15%
+Industry Updates: 5%
+
+🏆 ACHIEVEMENTS:
+• [Achievement 1]
+• [Achievement 2]
+• [Achievement 3]
+• [Achievement 4]
+
+👨‍🎓 STUDENT DEMOGRAPHICS:
+Age: [primary age range]
+Education: [education level]
+Location: [geographic spread]
+Learning Goals: [common goals]
+
+🎯 BRAND EDUCATION OPPORTUNITIES:
+• Educational Content Sponsorship
+• Product Tutorial Integration
+• Course Material Development
+• Educational Event Partnerships
+• Skill Development Programs
+
+📚 Educational Partnerships:
+Email: [email]
+LinkedIn: [profile]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #10: LUXURY & PREMIUM
+═══════════════════════════════════════
+
+✨ ${userName.toUpperCase()} ✨
+Premium ${userNiche} Lifestyle Curator
+
+💎 PREMIUM PROFILE:
+Platform: ${userPlatform}
+Niche: Luxury ${userNiche}
+Audience: ${userFollowers} affluent followers
+Content Grade: Premium Quality
+
+🏆 LUXURY CREDENTIALS:
+• High-end brand collaborations
+• Premium product expertise
+• Luxury lifestyle authority
+• Exclusive event access
+
+💰 PREMIUM AUDIENCE METRICS:
+• Average Income: [income bracket]
+• Luxury Purchase Intent: [%]
+• Brand Loyalty: [%]
+• Premium Product Affinity: [%]
+
+🌟 EXCLUSIVE SERVICES:
+• Luxury Product Showcases
+• Premium Experience Documentation
+• High-end Event Coverage
+• Exclusive Access Content
+• VIP Community Engagement
+
+💎 LUXURY PARTNERSHIPS:
+• Premium Brand Ambassadorships
+• Exclusive Product Launches
+• Luxury Event Partnerships
+• High-end Lifestyle Integration
+• Elite Community Access
+
+🥂 PREMIUM RATES:
+Starting Investment: ₹[premium rate]
+Exclusive Packages: ₹[exclusive rate]
+Luxury Campaigns: ₹[luxury rate]
+
+✨ For Luxury Brand Partnerships:
+Email: [email]
+Portfolio: [website]
+Manager: [manager contact]
+
+═══════════════════════════════════════
+
+💡 CUSTOMIZATION GUIDE:
+
+1. Choose template that matches your brand personality
+2. Replace all [bracketed] information with your actual data
+3. Add your real metrics and achievements
+4. Include high-quality photos/graphics
+5. Match colors to your brand aesthetic
+6. Export in high-resolution PDF format
+7. Update quarterly with new metrics
+
+🎨 DESIGN TOOLS RECOMMENDED:
+• Canva Pro (templates available)
+• Adobe Creative Suite
+• Figma (collaborative design)
+• PowerPoint (professional layouts)
+
+🔧 TECHNICAL SPECIFICATIONS:
+• Format: PDF (print-ready)
+• Resolution: 300 DPI minimum
+• Size: A4 or Letter
+• Color Mode: RGB (digital) or CMYK (print)
+• Font Size: 3X larger than standard (24pt minimum)
+
+📈 PERFORMANCE TRACKING:
+Track which media kit design gets the best response rate from brands and optimize accordingly.`;
+  }
+
+  return `📱 10 PROFESSIONAL MEDIA KIT DESIGN TEMPLATES
+
+Stylish Media Kit Collection for ${userName} - ${userNiche}
+
+🎨 DESIGN TEMPLATE #1: MINIMALIST ELEGANCE
+═══════════════════════════════════════
+
+${userName.toUpperCase()}
+${userNiche} Creator | ${userPlatform} | ${userFollowers} Followers
+
+📊 KEY METRICS:
+• Engagement Rate: [Your rate]%
+• Monthly Reach: [Your reach]
+• Average Impressions: [Your impressions]
+• Audience Demographics: [Demographics]
+
+💰 COLLABORATION RATES:
+📸 Instagram Post: ₹[Rate]
+📱 Instagram Story: ₹[Rate]
+🎥 Instagram Reel: ₹[Rate]
+📹 YouTube Integration: ₹[Rate]
+
+📧 Contact: ${userName.toLowerCase().replace(" ", ".")}@gmail.com
+🌐 Website: [Your website]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #2: BOLD & COLORFUL
+═══════════════════════════════════════
+
+🌟 ${userName.toUpperCase()} 🌟
+${userNiche} Expert & Content Creator
+
+📈 PERFORMANCE HIGHLIGHTS:
+✅ ${userFollowers} Highly Engaged Followers
+✅ [%] Above Industry Average Engagement
+✅ [Number]+ Successful Brand Collaborations
+✅ [Number] Million+ Content Views
+
+🎯 AUDIENCE INSIGHTS:
+Age: [Primary age group]
+Gender: [Main gender split]
+Location: [Main locations]
+Interests: [Audience interests]
+
+💼 SERVICES OFFERED:
+🔥 Sponsored Content Creation
+🔥 Product Reviews & Unboxing
+🔥 Brand Story Integration
+🔥 Event Coverage & Live Posts
+🔥 Long-term Brand Partnerships
+
+📱 Get in touch: [Contact info]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #3: PROFESSIONAL CORPORATE
+═══════════════════════════════════════
+
+MEDIA KIT | ${userName}
+${userNiche} Content Creator & Brand Partner
+
+CREATOR PROFILE:
+Name: ${userName}
+Niche: ${userNiche}
+Primary Platform: ${userPlatform}
+Follower Count: ${userFollowers}
+Content Language: Hindi/English
+
+ENGAGEMENT ANALYTICS:
+• Average Likes: [Number]
+• Average Comments: [Number]
+• Average Shares: [Number]
+• Story Completion Rate: [%]
+• Reel Completion Rate: [%]
+
+BRAND COLLABORATION HISTORY:
+• [Brand 1] - [Collaboration type]
+• [Brand 2] - [Collaboration type]
+• [Brand 3] - [Collaboration type]
+
+PRICING STRUCTURE:
+Standard Post: ₹[Amount]
+Premium Package: ₹[Amount]
+Campaign Series: ₹[Amount]
+
+CONTACT INFORMATION:
+Email: [Email]
+Phone: [Phone]
+Manager: [If applicable]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #4: CREATIVE ARTISTIC
+═══════════════════════════════════════
+
+✨ ${userName} ✨
+🎨 Creative ${userNiche} Storyteller 🎨
+
+🌈 MY CREATIVE UNIVERSE:
+Followers: ${userFollowers} amazing humans
+Platform: ${userPlatform} (primary)
+Content Style: [Your content style]
+Posting Schedule: [Your schedule]
+
+🎭 CONTENT PILLARS:
+40% Educational Content
+30% Behind-the-Scenes
+20% Product Integration
+10% Personal Stories
+
+🚀 WHY BRANDS LOVE WORKING WITH ME:
+• Authentic storytelling approach
+• High engagement rates
+• Professional content quality
+• Timely delivery guaranteed
+• Long-term relationship focus
+
+💫 COLLABORATION OPTIONS:
+⭐ Single Post Integration
+⭐ Story Takeover
+⭐ Reel Creation
+⭐ Multi-post Campaign
+⭐ Brand Ambassador Program
+
+💌 Let's create magic together!
+Contact: [Your email]
+
+══════════════════════════════════��════
+
+🎨 DESIGN TEMPLATE #5: DATA-DRIVEN ANALYTICS
+═══════════════════════════════════════
+
+📊 ${userName} - PERFORMANCE ANALYTICS
+
+🎯 CREATOR OVERVIEW:
+Platform: ${userPlatform}
+Niche: ${userNiche}
+Followers: ${userFollowers}
+Content Format: [Primary format]
+
+📈 GROWTH METRICS (Last 90 Days):
+• Follower Growth: [%] increase
+• Engagement Growth: [%] increase
+• Reach Growth: [%] increase
+• New Audience: [Number] followers
+
+🔍 AUDIENCE BREAKDOWN:
+Age Groups:
+• 18-24: [%]
+• 25-34: [%]
+• 35-44: [%]
+• 45+: [%]
+
+Geographic Distribution:
+• Mumbai: [%]
+• Delhi: [%]
+• Bangalore: [%]
+• Other Metros: [%]
+• Tier-2 Cities: [%]
+
+💰 ROI PERFORMANCE:
+• Average CTR: [%]
+• Conversion Rate: [%]
+• Brand Recall: [%]
+• Purchase Intent: [%]
+
+📋 CAMPAIGN CASE STUDIES:
+Case Study 1: [Brand] - [Results]
+Case Study 2: [Brand] - [Results]
+Case Study 3: [Brand] - [Results]
+
+═══════════════════════════════════════
+
+🎨 DESIGN TEMPLATE #6: LIFESTYLE INFLUENCER
+═══════════════════════════════════════
+
+🌸 ${userName} ��
+Lifestyle & ${userNiche} Creator
+
+✨ ABOUT ME:
+I'm a passionate ${userNiche} creator who loves sharing authentic experiences with my ${userFollowers} followers. My content focuses on [your focus areas] and I believe in creating genuine connections with my audience.
+
+🏠 MY CONTENT WORLD:
+Daily Life Documentation
+Product Reviews & Recommendations
+Tips & Tutorials
+Behind-the-Scenes Moments
+Community Engagement
+
+👥 MY AMAZING COMMUNITY:
+Followers: ${userFollowers}
+Avg. Engagement: [%]
+Community: Highly engaged and loyal
+Demographics: [Description]
+
+🤝 COLLABORATION STYLE:
+I work with brands that align with my values and genuinely benefit my audience. My content integration is natural, authentic, and creates meaningful connections between brands and my community.
+
+💝 PARTNERSHIP PACKAGES:
+🌟 Authentic Review Package
+🌟 Lifestyle Integration Package
+🌟 Story Takeover Package
+🌟 Long-term Ambassador Program
+
+📞 Let's Connect:
+Email: [Email]
+Instagram: @${userName.toLowerCase()}
+Website: [Website]
+
+═══════════════════════════════════════
+
+[Continue with Templates 7-10...]
+
+💡 CUSTOMIZATION GUIDE:
+
+1. Choose template that matches your brand personality
+2. Replace all [bracketed] information with your actual data
+3. Add your real metrics and achievements
+4. Include high-quality photos/graphics
+5. Match colors to your brand aesthetic
+6. Export in high-resolution PDF format
+7. Update quarterly with new metrics
+
+🎨 DESIGN TOOLS RECOMMENDED:
+• Canva Pro (templates available)
+• Adobe Creative Suite
+• Figma (collaborative design)
+• PowerPoint (professional layouts)
+
+🔧 TECHNICAL SPECIFICATIONS:
+• Format: PDF (print-ready)
+• Resolution: 300 DPI minimum
+• Size: A4 or Letter
+• Color Mode: RGB (digital) or CMYK (print)
+• Font Size: 3X larger than standard (24pt minimum)
+
+📈 PERFORMANCE TRACKING:
+Track which media kit design gets the best response rate from brands and optimize accordingly.`;
 }
 
 function generateNegotiationTacticsContent(
@@ -4317,7 +4990,7 @@ ${userNiche} क्रिएटर्स के लिए आवश्यक फ
 • Creator Studio (FREE) - Facebook/Instagram नेटिव टूल
 
 🚀 SEO और हैशटैग टूल्स:
-• Hashtagify (FREE/Pro $29/month) - हैशटैग रिसर्च
+• Hashtagify (FREE/Pro $29/month) - हैशटै�� रिसर्च
 • Display Purposes (FREE) - Instagram हैशटैग
 • All Hashtag (FREE) - हैशटैग जेनरेटर
 • TubeBuddy (FREE/Pro $7.20/month) - YouTube SEO
@@ -4361,7 +5034,7 @@ ${userNiche} क्रिएटर्स के लिए आवश्यक फ
 🛠️ प्रो टिप्स:
 1. फ्री टूल्स से शुरू करें
 2. एक बार में सिर्फ 1-2 पेड टूल्स आजमाएं
-3. अपने बजट और जरूरतों के हिसाब से चुनें
+3. अपने बजट और जरूरतों के ���िसाब से चुनें
 4. महीने में एक बार टूल्स की समीक्षा करें
 5. ROI के लिए टूल्स के परफॉर्मेंस को ट्रैक करें
 
