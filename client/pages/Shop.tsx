@@ -920,7 +920,7 @@ export default function Shop() {
       )}
 
       {/* Sticky FOMO Banner for Mobile */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-3 z-40 md:hidden">
+      <div className="fixed bottom-4 right-4 md:hidden z-40">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Zap className="w-4 h-4 animate-pulse" />
