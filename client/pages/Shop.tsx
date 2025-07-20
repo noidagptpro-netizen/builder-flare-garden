@@ -62,6 +62,8 @@ export default function Shop() {
   const [showQuizRequiredPopup, setShowQuizRequiredPopup] = useState(false);
   const [promoCode, setPromoCode] = useState("");
   const [appliedDiscount, setAppliedDiscount] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(86400); // 24 hours in seconds
+  const [recentPurchases, setRecentPurchases] = useState<string[]>([]);
   const [customerInfo, setCustomerInfo] = useState<CustomerInfo>({
     name: "",
     email: "",
@@ -212,7 +214,7 @@ export default function Shop() {
     },
     hindi: {
       title: "क्रिएटर टूल्स और संसाधन",
-      subtitle: "आपकी क्रिएटर यात्रा को तेज़ करने के लिए प्रोफ���शनल टूल्स",
+      subtitle: "आपकी क्रिएटर यात्रा को तेज़ करने के लिए प्र��फेशनल टूल्स",
       freeResources: "फ्री क्रिएटर संस���धन",
       premiumTools: "प्रीमियम क्रिएटर टूल्स",
       adminPanel: "एडमिन पैनल",
@@ -233,7 +235,7 @@ export default function Shop() {
       bundleOffer: "सीमित समय बंडल ऑफर 🔥",
       save: "बचाएं",
       getBundle: "कम्प्लीट बंडल पाएं",
-      validFor: "ऑफर केवल अगले 24 घंटे के लिए वैध",
+      validFor: "ऑफर केवल अगले 24 घंटे के लिए वै���",
       paymentForm: "अपनी जानकारी पूरी करें",
       fullName: "पूरा नाम",
       emailAddress: "ईमेल पता",
