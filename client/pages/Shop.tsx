@@ -282,7 +282,7 @@ export default function Shop() {
       instantDownload: "तुरंत डाउनलोड",
       moneyBack: "प��से वापसी की गारंटी",
       buyNow: "अभी खरीदें",
-      downloadFree: "फ्री डाउनलोड करें",
+      downloadFree: "फ्री डाउ��लोड करें",
       bundleOffer: "सीमित समय बंडल ऑफर 🔥",
       save: "बचाएं",
       getBundle: "कम्प्लीट बंडल पाएं",
@@ -561,6 +561,51 @@ export default function Shop() {
         </div>
       )}
 
+      {/* FOMO Countdown Banner */}
+      <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white py-3">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center gap-4 text-center">
+            <div className="flex items-center gap-2">
+              <Clock className="w-5 h-5 animate-pulse" />
+              <span className="font-bold">
+                {language === "hindi"
+                  ? "⚡ सीमित समय ऑफर! बचे हैं केवल:"
+                  : "⚡ Limited Time Offer! Only:"}
+              </span>
+            </div>
+            <div className="bg-black bg-opacity-20 px-3 py-1 rounded-lg font-mono text-xl font-bold">
+              {formatTimeLeft()}
+            </div>
+            <span className="text-sm">
+              {language === "hindi"
+                ? "50% तक छूट खत्म होने से पहले!"
+                : "Before 50% discounts expire!"}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Recent Purchases Ticker */}
+      {recentPurchases.length > 0 && (
+        <div className="bg-green-50 border-b border-green-200 py-2">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center justify-center gap-2 text-green-800 text-sm">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span>
+                🔥 <strong>{recentPurchases[0]}</strong>{" "}
+                {language === "hindi" ? "ने अभी-अभी खरीदा!" : "just purchased!"}
+                {recentPurchases.length > 1 && (
+                  <span className="ml-2 text-green-600">
+                    +{recentPurchases.length - 1}{" "}
+                    {language === "hindi" ? "और लोगों ने भी" : "others too"}
+                  </span>
+                )}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
@@ -748,7 +793,7 @@ export default function Shop() {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-4">
               {language === "hindi"
-                ? "❌ पहले अपनी प्रोफाइल बनाएं!"
+                ? "❌ पहले अपनी प्रोफा��ल बनाएं!"
                 : "❌ Complete Your Profile First!"}
             </h3>
             <p className="text-gray-600 mb-6">
