@@ -367,7 +367,7 @@ const languages = {
         "100K+ की authentic कम्��ु��िटी बनाना",
         "ड्रीम ���्रांड्स ���े साथ पार्टनरशिप",
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
-        "अपनी niche मे��� go-to एक्���पर्ट बनना",
+        "अपनी niche मे���� go-to एक्���पर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइबर्�� की email लिस्ट",
         "इंडस्ट्री ���वेंट्स/पॉडकास्ट्स में बोलना",
@@ -388,7 +388,7 @@ const languages = {
         "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली टूल्स को डाउनलोड ���रे��",
       mediaKit: {
         title: "प्रोफेशनल मीडिया किट टेम्प्लेट",
-        description: "आकर��षक मीडिया किट बनाएं जो ब्रांड्स को पसंद आएंगे",
+        description: "आकर����षक मीडिया किट बनाएं जो ब्रांड्स को पसंद आएंगे",
       },
       emailTemplates: {
         title: "ब्रांड आउटरीच ईमेल टेम्प्लेट्स",
@@ -410,6 +410,7 @@ export default function Quiz() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [showFreeResources, setShowFreeResources] = useState(false);
   const navigate = useNavigate();
+  const quizContentRef = useRef<HTMLDivElement>(null);
 
   const t = languages[language];
   const totalSteps = 8;
@@ -535,7 +536,7 @@ ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
 ${language === "hindi" ? "प्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
 
-${language === "hindi" ? "सांख्यिकी और दरें:" : "STATISTICS & RATES:"}
+${language === "hindi" ? "सांख्यिकी और दर��ं:" : "STATISTICS & RATES:"}
 ${language === "hindi" ? "कंटेंट प्रकार:" : "Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "पोस्टिंग आवृत्ति:" : "Posting Frequency:"} ${quizData.postingFrequency}
 ${language === "hindi" ? "मासिक आय:" : "Monthly Income:"} ${quizData.monthlyIncome}
