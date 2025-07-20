@@ -131,7 +131,7 @@ const languages = {
     keySuggestions: "मुख्य सुझाव",
     creatorVitalStats: "आपके क्रिएटर महत्वपूर्ण आंकड़े",
     fameScore: "फेम स्कोर",
-    growthPotential: "विकास क्षमता",
+    growthPotential: "विकास क���षमता",
     incomeProjection: "आय क्षमता",
     unlock: "अपना संपूर्ण क्रिएटर टूलकिट अनलॉक करें",
     unlockSubtitle:
@@ -145,7 +145,7 @@ const languages = {
     paySecure: "₹99 भुगतान क��ें - सुरक्षित भुगतान",
     processing: "प्रसंस्करण...",
     whatYouGet: "भुगतान के बाद आपको मिलेगा:",
-    fameScoreReport: "फे�� स्कोर रिपोर्���",
+    fameScoreReport: "फेम स्कोर रिपोर्���",
     mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
     premiumTools: "प्रीमियम टूल्स",
@@ -163,9 +163,9 @@ const languages = {
     followers: "फॉलोअर्���:",
     monthlyIncome: "मासिक आय:",
     experienceLevel: "अनुभव स्तर:",
-    activePlatforms: "सक्रि�� प्लेटफॉर्म:",
+    activePlatforms: "सक्रिय प्लेटफॉर्म:",
     competitorAnalysis: "प्रति���ोगी विश्लेषण",
-    marketInsights: "बाजार अंतर्दृष्टि",
+    marketInsights: "��ाजार अंतर्दृष्टि",
   },
 };
 
@@ -392,8 +392,8 @@ ${analysis.suggestions
 ${language === "hindi" ? "60-दिन की रणनीति:" : "60-DAY STRATEGY:"}
 ${language === "hindi" ? "- कंटेंट कैले���डर का अनुकूलन" : "- Content calendar optimization"}
 ${language === "hindi" ? "- ब्रांड आउटरीच शुरू करना" : "- Begin brand outreach"}
-${language === "hindi" ? "- एंगेज��ेंट मेट्रिक्स में स���धार" : "- Improve engagement metrics"}
-${language === "hindi" ? "- नेटवर्किंग और सहयोग" : "- Networking and collaborations"}
+${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में स���धार" : "- Improve engagement metrics"}
+${language === "hindi" ? "- नेट���र्किंग और सहयोग" : "- Networking and collaborations"}
 
 ${language === "hindi" ? "90-दिन के लक्ष्य:" : "90-DAY GOALS:"}
 ${language === "hindi" ? "- फॉलोअर वृद्धि:" : "- Follower Growth:"} 30-50%
@@ -481,7 +481,7 @@ ${language === "hindi" ? "📈 साप्ताहिक समीक्षा
 □ ${language === "hindi" ? "हैशटैग परफॉर्���ेंस ट्रैक करें" : "Track hashtag performance"}
 □ ${language === "hindi" ? "प्रतियोगी एनालिसिस करें" : "Conduct competitor analysis"}
 
-${language === "hindi" ? "🎯 मासिक ROI कैलकुलेशन:" : "🎯 MONTHLY ROI CALCULATION:"}
+${language === "hindi" ? "🎯 मासिक ROI कैलकुल���शन:" : "🎯 MONTHLY ROI CALCULATION:"}
 ${language === "hindi" ? "कुल आय:" : "Total Income:"} ₹[Enter monthly earnings]
 ${language === "hindi" ? "कुल खर्च:" : "Total Expenses:"} ₹[Tools, equipment, etc.]
 ${language === "hindi" ? "नेट प्रॉफिट:" : "Net Profit:"} ₹[Income - Expenses]
@@ -669,7 +669,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     {language === "hindi"
-                      ? "जानें कि आप हर महीने कितना कमा सकते हैं। टॉप क्रिएटर्स के डेटा पर आधारित 95% सटीक कैलकुलेशन।"
+                      ? "जानें कि आप हर महीने क���तना कमा सकते हैं। टॉप क्रिएटर्स के डेटा पर आधारित 95% सटीक कैलकुलेशन।"
                       : "Calculate real-time earnings potential based on your follower count & niche"}
                   </p>
                   <button
@@ -1266,7 +1266,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
                   <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
                     <Layout className="w-4 h-4 text-green-600" />
                   </div>
-                  <div className="text-xs">{t.mediaKitTemplate}</div>
+                  <div className="text-sm">{t.mediaKitTemplate}</div>
                 </div>
                 <div className="text-center">
                   <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
