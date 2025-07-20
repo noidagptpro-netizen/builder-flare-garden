@@ -111,6 +111,57 @@ export default function Shop() {
     }
   }, []);
 
+  // Countdown timer effect
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 86400)); // Reset after 24 hours
+    }, 1000);
+    return () => clearInterval(timer);
+  }, []);
+
+  // Simulate recent purchases for FOMO
+  useEffect(() => {
+    const names = [
+      "Rahul from Mumbai",
+      "Priya from Delhi",
+      "Arjun from Bangalore",
+      "Sneha from Pune",
+      "Vikash from Hyderabad",
+      "Anita from Chennai",
+      "Rohit from Kolkata",
+      "Kavya from Ahmedabad",
+      "Amit from Jaipur",
+    ];
+
+    const addRecentPurchase = () => {
+      const randomName = names[Math.floor(Math.random() * names.length)];
+      setRecentPurchases((prev) => [randomName, ...prev.slice(0, 4)]); // Keep last 5
+    };
+
+    // Add initial purchases
+    addRecentPurchase();
+
+    // Add new purchase every 15-30 seconds
+    const interval = setInterval(
+      () => {
+        if (Math.random() > 0.3) {
+          // 70% chance
+          addRecentPurchase();
+        }
+      },
+      Math.random() * 15000 + 15000,
+    );
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const formatTimeLeft = () => {
+    const hours = Math.floor(timeLeft / 3600);
+    const minutes = Math.floor((timeLeft % 3600) / 60);
+    const seconds = timeLeft % 60;
+    return `${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
+  };
+
   const checkQuizCompletion = () => {
     const storedQuizData = localStorage.getItem("fameChaseQuizData");
     if (!storedQuizData) {
@@ -214,13 +265,13 @@ export default function Shop() {
     },
     hindi: {
       title: "क्रिएटर टूल्स और संसाधन",
-      subtitle: "आपकी क्रिएटर यात्रा को तेज़ करने के लिए प्र��फेशनल टूल्स",
+      subtitle: "आपकी क्रिएटर यात्रा को तेज़ करने के लिए प्रोफेशनल टूल्स",
       freeResources: "फ्री क्रिएटर संस���धन",
       premiumTools: "प्रीमियम क्रिएटर टूल्स",
       adminPanel: "एडमिन पैनल",
       toggleProduct: "प्रोडक्ट टॉगल",
       enabled: "सक्षम",
-      disabled: "निष्क्रिय",
+      disabled: "निष्क��रिय",
       bestseller: "बेस्टसेलर",
       trending: "ट्रेंडिंग",
       limited: "सीमित समय",
@@ -235,7 +286,7 @@ export default function Shop() {
       bundleOffer: "सीमित समय बंडल ऑफर 🔥",
       save: "बचाएं",
       getBundle: "कम्प्लीट बंडल पाएं",
-      validFor: "ऑफर केवल अगले 24 घंटे के लिए वै���",
+      validFor: "ऑफर केवल अगले 24 घंटे के लिए वैध",
       paymentForm: "अपनी जानकारी पूरी करें",
       fullName: "पूरा नाम",
       emailAddress: "ईमेल पता",
@@ -570,7 +621,7 @@ export default function Shop() {
                           ? "कम्प्लीट क्रिएटर ग्रोथ किट"
                           : language === "hindi" &&
                               product.id === "reels-mastery"
-                            ? "इंस्टाग्राम रील्स मास्टरी कोर्स"
+                            ? "इ��स्टाग्राम रील्स मास्टरी कोर्स"
                             : language === "hindi" &&
                                 product.id === "brand-masterclass"
                               ? "ब्रांड कोलैबोरेशन मास्टरक्लास"
