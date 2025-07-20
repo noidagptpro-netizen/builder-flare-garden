@@ -145,7 +145,7 @@ const languages = {
     paySecure: "₹99 भुगतान क��ें - सुरक्षित भुगतान",
     processing: "प्रसंस्करण...",
     whatYouGet: "भुगतान के बाद आपको मिलेगा:",
-    fameScoreReport: "फेम स्कोर रिपोर्���",
+    fameScoreReport: "फे�� स्कोर रिपोर्���",
     mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
     premiumTools: "प्रीमियम टूल्स",
@@ -163,7 +163,7 @@ const languages = {
     followers: "फॉलोअर्���:",
     monthlyIncome: "मासिक आय:",
     experienceLevel: "अनुभव स्तर:",
-    activePlatforms: "सक्रिय प्लेटफॉर्म:",
+    activePlatforms: "सक्रि�� प्लेटफॉर्म:",
     competitorAnalysis: "प्रति���ोगी विश्लेषण",
     marketInsights: "बाजार अंतर्दृष्टि",
   },
@@ -392,7 +392,7 @@ ${analysis.suggestions
 ${language === "hindi" ? "60-दिन की रणनीति:" : "60-DAY STRATEGY:"}
 ${language === "hindi" ? "- कंटेंट कैले���डर का अनुकूलन" : "- Content calendar optimization"}
 ${language === "hindi" ? "- ब्रांड आउटरीच शुरू करना" : "- Begin brand outreach"}
-${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में स���धार" : "- Improve engagement metrics"}
+${language === "hindi" ? "- एंगेज��ेंट मेट्रिक्स में स���धार" : "- Improve engagement metrics"}
 ${language === "hindi" ? "- नेटवर्किंग और सहयोग" : "- Networking and collaborations"}
 
 ${language === "hindi" ? "90-दिन के लक्ष्य:" : "90-DAY GOALS:"}
@@ -1260,7 +1260,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
                   <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-2">
                     <FileText className="w-4 h-4 text-blue-600" />
                   </div>
-                  <div className="text-xs">{t.fameScoreReport}</div>
+                  <div className="text-sm">{t.fameScoreReport}</div>
                 </div>
                 <div className="text-center">
                   <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
