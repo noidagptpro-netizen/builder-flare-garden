@@ -276,7 +276,7 @@ export default function Shop() {
       trending: "ट्रेंडिंग",
       limited: "सीमित समय",
       offerEnds: "ऑफर समाप्त होता है",
-      downloads: "डाउनलोड",
+      downloads: "ड��उनलोड",
       rating: "रेटिंग",
       securePayment: "सुरक्षित भुगतान",
       instantDownload: "तुरंत डाउनलोड",
@@ -297,7 +297,7 @@ export default function Shop() {
       downloadYourProducts: "अपने प्रोडक्ट्स डाउनलोड करें",
       purchaseSuccess: "खरीदारी सफल! 🎉",
       thanksForPurchase:
-        "आपकी खरीदारी के लिए धन्यवाद! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार हैं।",
+        "आपकी खरीदारी के ���िए धन्यवाद! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार हैं।",
       backToShop: "शॉप पर वापस जाएं",
     },
   };
@@ -676,7 +676,7 @@ export default function Shop() {
                               ? "ब्रांड कोलैबोरेशन मास्टरक्लास"
                               : language === "hindi" &&
                                   product.id === "complete-bundle"
-                                ? "कम्प्लीट क्र���एटर बंडल"
+                                ? "कम्प्लीट ���्र���एटर बंडल"
                                 : product.name}
                       </h3>
                       <p className="text-gray-600 mb-4">
@@ -1016,6 +1016,27 @@ export default function Shop() {
           </div>
         </div>
       )}
+
+      {/* Sticky FOMO Banner for Mobile */}
+      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-3 z-40 md:hidden">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Zap className="w-4 h-4 animate-pulse" />
+            <div className="text-sm font-bold">
+              {language === "hindi" ? "⏰ सीमित समय!" : "⏰ Limited Time!"}
+            </div>
+          </div>
+          <div className="text-xs font-mono bg-black bg-opacity-20 px-2 py-1 rounded">
+            {formatTimeLeft()}
+          </div>
+          <Link
+            to="/quiz"
+            className="bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-bold hover:bg-gray-100 transition-colors"
+          >
+            {language === "hindi" ? "शुरू करें" : "Start Now"}
+          </Link>
+        </div>
+      </div>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-8">
