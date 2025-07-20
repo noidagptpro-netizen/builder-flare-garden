@@ -212,7 +212,7 @@ export default function Shop() {
     },
     hindi: {
       title: "क्रिएटर टूल्स और संसाधन",
-      subtitle: "आपकी क्रिएटर यात्रा को तेज़ करने के लिए प्रोफेशनल टूल्स",
+      subtitle: "आपकी क्रिएटर यात्रा को तेज़ करने के लिए प्रोफ���शनल टूल्स",
       freeResources: "फ्री क्रिएटर संस���धन",
       premiumTools: "प्रीमियम क्रिएटर टूल्स",
       adminPanel: "एडमिन पैनल",
@@ -629,6 +629,12 @@ export default function Shop() {
                               ₹{product.originalPrice}
                             </div>
                           )}
+                          <div className="text-sm text-blue-600 font-medium mt-2">
+                            💰{" "}
+                            {language === "hindi"
+                              ? "प्रोमो कोड से और भी छूट पाएं!"
+                              : "Get extra discount with promo codes!"}
+                          </div>
                           <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-4">
                             {Math.round(
                               ((product.originalPrice - product.price) /
