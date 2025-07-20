@@ -274,7 +274,7 @@ export default function Shop() {
       downloadYourProducts: "अपने प्रोडक्ट्स डाउनलोड करें",
       purchaseSuccess: "खरीदारी सफल! 🎉",
       thanksForPurchase:
-        "आपकी खरीदारी के ���िए धन्यवा���! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार हैं।",
+        "आपकी खरीदारी के ���िए धन्यवा���! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार ���ैं।",
       backToShop: "शॉप पर वापस जाएं",
     },
   };
@@ -476,13 +476,7 @@ export default function Shop() {
                 <Home className="w-4 h-4" />
                 Back to Home
               </Link>
-              <button
-                onClick={() => setShowAdminPanel(!showAdminPanel)}
-                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                <Settings className="w-4 h-4" />
-                {currentLang.adminPanel}
-              </button>
+
               <select
                 value={language}
                 onChange={(e) =>
