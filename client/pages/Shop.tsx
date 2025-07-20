@@ -538,7 +538,7 @@ export default function Shop() {
                               ? "ब्रांड कोलैबोरेशन मास्टरक्लास"
                               : language === "hindi" &&
                                   product.id === "complete-bundle"
-                                ? "कम्प्लीट क्रिएटर बंडल"
+                                ? "कम्प्लीट क्र���एटर बंडल"
                                 : product.name}
                       </h3>
                       <p className="text-gray-600 mb-4">
@@ -643,6 +643,43 @@ export default function Shop() {
           </div>
         </section>
       </main>
+
+      {/* Quiz Required Popup */}
+      {showQuizRequiredPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-2xl p-8 max-w-md mx-auto text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+              <Target className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              {language === "hindi"
+                ? "❌ पहले अपनी प्रोफाइल बनाएं!"
+                : "❌ Complete Your Profile First!"}
+            </h3>
+            <p className="text-gray-600 mb-6">
+              {language === "hindi"
+                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी होगी। यह केवल 2 मिनट में हो जाएगा!"
+                : "Before purchasing premium tools, you need to complete your creator profile. It takes only 2 minutes!"}
+            </p>
+            <div className="space-y-3">
+              <Link
+                to="/quiz"
+                className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all inline-block"
+              >
+                {language === "hindi"
+                  ? "🎯 अभी प्रोफाइल बनाएं"
+                  : "🎯 Create Profile Now"}
+              </Link>
+              <button
+                onClick={() => setShowQuizRequiredPopup(false)}
+                className="w-full bg-gray-100 text-gray-700 py-3 px-6 rounded-xl font-semibold hover:bg-gray-200 transition-colors"
+              >
+                {language === "hindi" ? "बाद में" : "Later"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Payment Modal */}
       {showPaymentForm && (
