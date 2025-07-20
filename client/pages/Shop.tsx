@@ -640,9 +640,13 @@ export default function Shop() {
                           : "bg-gradient-to-br from-yellow-50 to-orange-50 border-yellow-200"
                   }`}
                 >
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-4 right-4 space-y-2">
+                    {/* FOMO Urgency Badges */}
+                    <div className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
+                      ⚡ {language === "hindi" ? "केवल आज!" : "TODAY ONLY!"}
+                    </div>
                     {product.category === "growth-kit" && (
-                      <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                      <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                         {currentLang.bestseller}
                       </div>
                     )}
