@@ -138,6 +138,40 @@ export default function Shop() {
     setShowPaymentForm(productId);
   };
 
+  const validatePromoCode = (code: string) => {
+    const validCodes = {
+      CREATOR20: 20,
+      LAUNCH50: 50,
+      FIRST25: 25,
+      SAVE30: 30,
+      WELCOME15: 15,
+      SPECIAL40: 40,
+    };
+
+    const upperCode = code.toUpperCase();
+    if (validCodes[upperCode]) {
+      setAppliedDiscount(validCodes[upperCode]);
+      return true;
+    }
+    setAppliedDiscount(0);
+    return false;
+  };
+
+  const applyPromoCode = () => {
+    if (validatePromoCode(promoCode)) {
+      // Code is valid, discount already applied
+    } else {
+      alert(language === "hindi" ? "अमान्य प्रोमो कोड" : "Invalid promo code");
+    }
+  };
+
+  const calculateDiscountedPrice = (originalPrice: number) => {
+    if (appliedDiscount > 0) {
+      return Math.round(originalPrice * (1 - appliedDiscount / 100));
+    }
+    return originalPrice;
+  };
+
   const t = {
     english: {
       title: "Creator Tools & Resources",
@@ -193,13 +227,13 @@ export default function Shop() {
       rating: "रेटिंग",
       securePayment: "सुरक्षित भुगतान",
       instantDownload: "तुरंत डाउनलोड",
-      moneyBack: "पैसे वापसी की गारंटी",
+      moneyBack: "प��से वापसी की गारंटी",
       buyNow: "अभी खरीदें",
       downloadFree: "फ्री डाउनलोड करें",
       bundleOffer: "सीमित समय बंडल ऑफर 🔥",
       save: "बचाएं",
       getBundle: "कम्प्लीट बंडल पाएं",
-      validFor: "ऑफर केवल अगले 24 ���ंटे के लिए वैध",
+      validFor: "ऑफर केवल अगले 24 घंटे के लिए वैध",
       paymentForm: "अपनी जानकारी पूरी करें",
       fullName: "पूरा नाम",
       emailAddress: "ईमेल पता",
