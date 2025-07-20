@@ -107,6 +107,35 @@ export default function Shop() {
     }
   }, []);
 
+  const checkQuizCompletion = () => {
+    const storedQuizData = localStorage.getItem("fameChaseQuizData");
+    if (!storedQuizData) {
+      return false;
+    }
+
+    try {
+      const data = JSON.parse(storedQuizData);
+      // Check if quiz is completed by verifying essential fields exist
+      return !!(
+        data.name &&
+        data.niche &&
+        data.primaryPlatform &&
+        data.followerCount &&
+        data.goals
+      );
+    } catch {
+      return false;
+    }
+  };
+
+  const handleBuyClick = (productId: string) => {
+    if (!checkQuizCompletion()) {
+      setShowQuizRequiredPopup(true);
+      return;
+    }
+    setShowPaymentForm(productId);
+  };
+
   const t = {
     english: {
       title: "Creator Tools & Resources",
