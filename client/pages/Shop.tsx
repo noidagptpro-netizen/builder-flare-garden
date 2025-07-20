@@ -612,7 +612,7 @@ export default function Shop() {
                             </button>
                           ) : (
                             <button
-                              onClick={() => setShowPaymentForm(product.id)}
+                              onClick={() => handleBuyClick(product.id)}
                               className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all mb-4"
                             >
                               {currentLang.buyNow} - ₹{product.price}
