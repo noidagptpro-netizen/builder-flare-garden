@@ -248,7 +248,7 @@ const languages = {
     subtitle: "3 मिनट में अपनी व्यक्तिगत ग्रोथ रणन��ति पाएं",
     steps: {
       1: "प्ले��फॉर्म और फॉलोअर्स",
-      2: "कंटेंट निच",
+      2: "कंटेंट नि���",
       3: "कंटेंट प्रकार",
       4: "पोस्टिंग आवृत्ति",
       5: "अनुभव और आय",
@@ -265,7 +265,7 @@ const languages = {
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
-        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
+        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका ��पने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       biggestChallenge:
         "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क्या हैं? (अधिकतम 3 चुनें)",
@@ -349,7 +349,7 @@ const languages = {
         "₹1L+",
       ],
       challenges: [
-        "लगातार ���्यूज और एंगेजमेंट पाना",
+        "लगातार �����्यूज और एंगेजमेंट पाना",
         "अपनी यूनीक आवाज़/स्टाइल खोजना",
         "एल्गोरिदम बदलाव से पहुंच में कमी",
         "ऑथेंटिसिटी और ब्रांड अपील का संतुलन",
@@ -383,9 +383,9 @@ const languages = {
       submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ प��रा! यहा�� हैं आपके मु��्त क्रिएटर संसाधन",
+      title: "🎉 क्विज़ प��रा! यहा�� हैं आ��के मु��्त क्रिएटर संसाधन",
       subtitle:
-        "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली टूल्स को डाउनलोड ���रे��",
+        "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली ट���ल्स को डाउनलोड ���रे��",
       mediaKit: {
         title: "प्रोफेशनल मीडिया किट टेम्प्लेट",
         description: "आकर����षक मीडिया किट बनाएं जो ब्रांड्स को पसंद आएंगे",
@@ -540,7 +540,7 @@ Optimal zoom: 150-200% for comfortable reading.
         fontSizeIndicator +
         `${language === "hindi" ? "मीडिया किट" : "MEDIA KIT"} - ${userName}
 
-${language === "hindi" ? "व्यक्तिगत जानकारी:" : "PERSONAL INFO:"}
+${language === "hindi" ? "व्यक्ति���त जानकारी:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
 ${language === "hindi" ? "प्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
@@ -593,7 +593,7 @@ ${language === "hindi" ? "- फॉ���ोअर्स:" : "- Followers:"} $
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "- प��स्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
-${language === "hindi" ? "क्या आप सहयोग के अवसरों पर चर��चा करने के लिए समय निकाल सकते हैं?" : "Would you be available to discuss collaboration opportunities?"}
+${language === "hindi" ? "क्या आप सहयोग के अवसरों पर चर��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
 ${language === "hindi" ? "धन्यवाद," : "Best regards,"}
 ${userName}
@@ -646,7 +646,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested हूं।" : "Thank you for your proposal! I'm definitely interested."}
+${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
 
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूंगा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
@@ -730,7 +730,7 @@ ${language === "hindi" ? "• Grateful और humble रहें" : "• Be gra
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "वर्तमान स्थिति:" : "Current Status:"} ${quizData.followerCount} on ${quizData.primaryPlatform}
-${language === "hindi" ? "मुख्य चुनौतियां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 2).join(", ")}
+${language === "hindi" ? "मुख्य चुनौति���ां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 2).join(", ")}
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 2).join(", ")}
 
 ${language === "hindi" ? "दिन 1-30: बुनियाद मजबूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
@@ -749,7 +749,7 @@ ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "री
 ${language === "hindi" ? "- ट्रेंडिंग टॉपिक्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
-${language === "hindi" ? "दिन 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
+${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
 ${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
 ${language === "hindi" ? "- ब्रांड्स से संपर्क शुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
@@ -777,7 +777,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
         {/* Header */}
         <header className="relative z-10 px-4 py-6 bg-white border-b border-gray-100 sticky top-0 backdrop-blur-sm">
           <div className="container mx-auto flex justify-between items-center">
-            <Link to="/" className="text-2xl font-bold text-gray-900">
+            <Link to="/" className="text-lg font-bold text-gray-900">
               FameChase<span className="text-neon-green">.com</span>
             </Link>
 
@@ -894,7 +894,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
             </div>
 
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              <h2 className="text-lg font-bold text-gray-900 mb-4">
                 {language === "hindi"
                   ? "अपना पूरा विश्लेषण चाहते हैं?"
                   : "Want Your Complete Analysis?"}
@@ -906,7 +906,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
               </p>
               <button
                 onClick={handleSubmit}
-                className="bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-4 px-8 rounded-xl text-2xl hover:shadow-lg hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-4 px-8 rounded-xl text-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
               >
                 <Sparkles className="w-5 h-5 inline mr-2" />
                 {t.buttons.submit}
@@ -923,7 +923,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
       {/* Header */}
       <header className="relative z-10 px-4 py-6 bg-white border-b border-gray-100 sticky top-0 backdrop-blur-sm">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-2xl font-bold text-gray-900">
+          <Link to="/" className="text-lg font-bold text-gray-900">
             FameChase<span className="text-neon-green">.com</span>
           </Link>
 
@@ -1004,7 +1004,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 <div className="w-20 h-20 bg-gradient-to-r from-neon-green to-electric-blue rounded-full flex items-center justify-center mx-auto mb-6 animate-spin">
                   <Sparkles className="w-10 h-10 text-white" />
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                <h2 className="text-lg font-bold text-gray-900 mb-4">
                   Generating Your Creator Analysis...
                 </h2>
                 <p className="text-gray-600">
@@ -1020,16 +1020,16 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 {currentStep === 1 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-lg font-bold text-gray-900 mb-4">
                         Your Main Platform 📱
                       </h2>
-                      <p className="text-2xl text-gray-600">
+                      <p className="text-lg text-gray-600">
                         Where do you create and share your content?
                       </p>
                     </div>
 
                     <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-2xl">
+                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.primaryPlatform}
                       </label>
                       <div className="grid grid-cols-2 gap-2">
@@ -1052,7 +1052,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     </div>
 
                     <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-2xl">
+                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.followerCount}
                       </label>
                       <div className="grid grid-cols-2 gap-2">
@@ -1075,7 +1075,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     </div>
 
                     <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-2xl">
+                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.secondaryPlatforms}
                       </label>
                       <div className="grid grid-cols-2 gap-2">
@@ -1101,7 +1101,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 {currentStep === 2 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-lg font-bold text-gray-900 mb-4">
                         Your Content Niche 🎯
                       </h2>
                       <p className="text-gray-600">
@@ -1110,7 +1110,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     </div>
 
                     <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-2xl">
+                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.niche}
                       </label>
                       <div className="grid grid-cols-2 gap-2">
@@ -1136,7 +1136,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 {currentStep === 3 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-lg font-bold text-gray-900 mb-4">
                         Content Format 🎬
                       </h2>
                       <p className="text-gray-600">
@@ -1145,7 +1145,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     </div>
 
                     <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-2xl">
+                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.contentType}
                       </label>
                       <div className="grid grid-cols-2 gap-2">
@@ -1171,7 +1171,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 {currentStep === 4 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-lg font-bold text-gray-900 mb-4">
                         Posting Schedule ⏰
                       </h2>
                       <p className="text-gray-600">
@@ -1180,7 +1180,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     </div>
 
                     <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-2xl">
+                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.postingFrequency}
                       </label>
                       <div className="grid grid-cols-2 gap-2">
@@ -1208,7 +1208,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 {currentStep === 5 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-lg font-bold text-gray-900 mb-4">
                         Your Creator Journey 🚀
                       </h2>
                       <p className="text-gray-600">
@@ -1217,7 +1217,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     </div>
 
                     <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-2xl">
+                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.experience}
                       </label>
                       <div className="grid grid-cols-1 gap-3">
@@ -1245,7 +1245,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     </div>
 
                     <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-2xl">
+                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.monthlyIncome}
                       </label>
                       <div className="grid grid-cols-2 gap-2">
@@ -1273,7 +1273,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 {currentStep === 6 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-lg font-bold text-gray-900 mb-4">
                         Your Challenges 🎯
                       </h2>
                       <p className="text-gray-600">
@@ -1333,7 +1333,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 {currentStep === 7 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-lg font-bold text-gray-900 mb-4">
                         Your Goals 🎯
                       </h2>
                       <p className="text-gray-600">
@@ -1388,7 +1388,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 {currentStep === 8 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-lg font-bold text-gray-900 mb-4">
                         Social Profiles 🔗
                       </h2>
                       <p className="text-gray-600">
@@ -1474,7 +1474,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     </div>
 
                     <div>
-                      <label className="block text-gray-900 font-semibold mb-3 text-2xl">
+                      <label className="block text-gray-900 font-semibold mb-3 text-lg">
                         {t.questions.bio}
                       </label>
                       <textarea
@@ -1482,7 +1482,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         onChange={(e) => updateQuizData("bio", e.target.value)}
                         rows={4}
                         placeholder="Tell us about your content style, your audience, what makes you unique..."
-                        className="w-full bg-white border-2 border-gray-200 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none resize-none text-2xl"
+                        className="w-full bg-white border-2 border-gray-200 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none resize-none text-lg"
                       />
                     </div>
                   </div>
