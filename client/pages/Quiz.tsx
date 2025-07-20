@@ -245,7 +245,7 @@ const languages = {
   },
   hindi: {
     title: "क्रिएटर सक्सेस क्विज़",
-    subtitle: "3 मिनट में अपनी व्यक्तिगत ग्रोथ रणनीति पाएं",
+    subtitle: "3 मिनट में अपनी व्यक्तिगत ग्रोथ रणन��ति पाएं",
     steps: {
       1: "प्ले��फॉर्म और फॉलोअर्स",
       2: "कंटेंट निच",
@@ -282,7 +282,7 @@ const languages = {
         "टिकटॉक",
         "ट्विटर",
         "फेसबुक",
-        "वेबसाइट/ब्लॉग",
+        "वेबस��इट/ब्लॉग",
       ],
       followerRanges: [
         "1K से कम",
@@ -363,7 +363,7 @@ const languages = {
         "कई ���्लेटफॉर्म को efficiently मैनेज करना",
       ],
       goals: [
-        "मासिक आय ₹50K+ तक बढ़ाना",
+        "मासि��� आय ₹50K+ तक बढ़ाना",
         "100K+ की authentic कम्��ु��िटी बनाना",
         "ड्रीम ���्रांड्स ���े साथ पार्टनरशिप",
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
@@ -380,7 +380,7 @@ const languages = {
     buttons: {
       next: "अगला कदम",
       back: "पिछला",
-      submit: "मेरा क्रिएटर विश्लेषण पाएं",
+      submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
     freeResources: {
       title: "🎉 क्विज़ प��रा! यहा�� हैं आपके मु��्त क्रिएटर संसाधन",
@@ -661,7 +661,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 5: परफॉर्मेंस रिपोर्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
+${language === "hindi" ? "टेम्प्लेट 5: परफॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} x [Brand] - Campaign Performance Report` : `${userName} x [Brand] - Campaign Performance Report`}
 
 ${language === "hindi" ? "Dear [Brand Team]," : "Dear [Brand Team],"}
@@ -739,7 +739,7 @@ ${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपन
 ${language === "hindi" ? `- ${quizData.niche} पर 10 कंटेंट आ���डिया तैयार करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्स)" : "- Research hashtags (30 hashtag mix)"}
 
-${language === "hindi" ? "सप्ताह 2-4:" : "Week 2-4:"}
+${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटेंट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
 ${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोकस करें" : "- Focus on community engagement"}
 ${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शुरू करें" : "- Start tracking analytics"}
@@ -747,7 +747,7 @@ ${language === "hindi" ? "- एनालिटिक्स ट्रैक क�
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
 ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करें (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफिक कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
 ${language === "hindi" ? "- ट्रेंडिंग टॉपिक्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
-${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू करें" : "- Start collaborations with other creators"}
+${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "दिन 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
 ${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
@@ -1039,7 +1039,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             onClick={() =>
                               updateQuizData("primaryPlatform", platform)
                             }
-                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
+                            className={`p-3 rounded-lg border-2 text-sm font-medium transition-all duration-300 ${
                               quizData.primaryPlatform === platform
                                 ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1062,7 +1062,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             onClick={() =>
                               updateQuizData("followerCount", range)
                             }
-                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
+                            className={`p-3 rounded-lg border-2 text-sm font-medium transition-all duration-300 ${
                               quizData.followerCount === range
                                 ? "bg-gradient-to-r from-electric-blue/10 to-soft-violet/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1083,7 +1083,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                           <button
                             key={platform}
                             onClick={() => toggleSecondaryPlatform(platform)}
-                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
+                            className={`p-3 rounded-lg border-2 text-sm font-medium transition-all duration-300 ${
                               quizData.secondaryPlatforms.includes(platform)
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1118,7 +1118,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                           <button
                             key={niche}
                             onClick={() => updateQuizData("niche", niche)}
-                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
+                            className={`p-3 rounded-lg border-2 text-sm font-medium transition-all duration-300 ${
                               quizData.niche === niche
                                 ? "bg-gradient-to-r from-soft-violet/10 to-neon-green/10 border-soft-violet text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1153,7 +1153,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                           <button
                             key={type}
                             onClick={() => updateQuizData("contentType", type)}
-                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
+                            className={`p-3 rounded-lg border-2 text-sm font-medium transition-all duration-300 ${
                               quizData.contentType === type
                                 ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1190,7 +1190,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             onClick={() =>
                               updateQuizData("postingFrequency", freq)
                             }
-                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
+                            className={`p-3 rounded-lg border-2 text-sm font-medium transition-all duration-300 ${
                               quizData.postingFrequency === freq
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1255,7 +1255,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             onClick={() =>
                               updateQuizData("monthlyIncome", income)
                             }
-                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
+                            className={`p-3 rounded-lg border-2 text-sm font-medium transition-all duration-300 ${
                               quizData.monthlyIncome === income
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
