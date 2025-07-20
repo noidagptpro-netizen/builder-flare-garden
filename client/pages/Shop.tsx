@@ -252,7 +252,7 @@ export default function Shop() {
       bestseller: "बेस्टसेलर",
       trending: "ट्रेंडिंग",
       limited: "सीमि�� समय",
-      offerEnds: "ऑफर समाप्त होता है",
+      offerEnds: "ऑफर समाप���त होता है",
       downloads: "ड��उ���लोड",
       rating: "रेटिंग",
       securePayment: "सुरक्षित भुगतान",
@@ -575,7 +575,7 @@ export default function Shop() {
                           ? "कम्प्लीट क्रिएटर ग्रोथ किट"
                           : language === "hindi" &&
                               product.id === "reels-mastery"
-                            ? "����स्टाग्राम रील्स मास्टरी कोर्स"
+                            ? "इ��स्टाग्राम रील्स मास्टरी कोर्स"
                             : language === "hindi" &&
                                 product.id === "brand-masterclass"
                               ? "ब्रांड कोलैबोरेशन मास्टरक्लास"
@@ -602,15 +602,6 @@ export default function Shop() {
                           </div>
                         )}
                       </div>
-
-                      {product.id === "complete-growth-kit" && (
-                        <div className="bg-red-100 border border-red-200 rounded-lg p-3 mb-4">
-                          <div className="flex items-center gap-2 text-red-700 font-semibold">
-                            <Clock className="w-4 h-4" />
-                            {currentLang.offerEnds} {formatTimeLeft()}
-                          </div>
-                        </div>
-                      )}
 
                       <ul className="space-y-2 text-gray-700 mb-6">
                         {product.features.map((feature, index) => (
@@ -721,7 +712,7 @@ export default function Shop() {
             </h3>
             <p className="text-gray-600 mb-6">
               {language === "hindi"
-                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी होगी। यह केवल 2 मिनट में हो जाएगा!"
+                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी ���ोगी। यह केवल 2 मिनट में हो जाएगा!"
                 : "Before purchasing premium tools, you need to complete your creator profile. It takes only 2 minutes!"}
             </p>
             <div className="space-y-3">
