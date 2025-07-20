@@ -73,24 +73,6 @@ export default function Shop() {
   const [showAdminPanel, setShowAdminPanel] = useState(false);
   const [quizData, setQuizData] = useState<any>(null);
 
-  // Countdown timer
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev.seconds > 0) {
-          return { ...prev, seconds: prev.seconds - 1 };
-        } else if (prev.minutes > 0) {
-          return { ...prev, minutes: prev.minutes - 1, seconds: 59 };
-        } else if (prev.hours > 0) {
-          return { hours: prev.hours - 1, minutes: 59, seconds: 59 };
-        }
-        return prev;
-      });
-    }, 1000);
-
-    return () => clearInterval(timer);
-  }, []);
-
   // Load products and purchased items
   useEffect(() => {
     setProducts(getAllProducts());
@@ -269,9 +251,9 @@ export default function Shop() {
       disabled: "निष्क��रिय",
       bestseller: "बेस्टसेलर",
       trending: "ट्रेंडिंग",
-      limited: "सीमित समय",
+      limited: "सीमि�� समय",
       offerEnds: "ऑफर समाप्त होता है",
-      downloads: "ड����नलोड",
+      downloads: "ड��उनलोड",
       rating: "रेटिंग",
       securePayment: "सुरक्षित भुगतान",
       instantDownload: "तुरंत डाउनलोड",
@@ -292,7 +274,7 @@ export default function Shop() {
       downloadYourProducts: "अपने प्रोडक्ट्स डाउनलोड करें",
       purchaseSuccess: "खरीदारी सफल! 🎉",
       thanksForPurchase:
-        "आपकी खरीदारी के �����िए धन्यवाद! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार हैं।",
+        "आपकी खरीदारी के ���िए धन्यवाद! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार हैं।",
       backToShop: "शॉप पर वापस जाएं",
     },
   };
@@ -671,7 +653,7 @@ export default function Shop() {
                               ? "ब्रांड कोलैबोरेशन मास्टरक्लास"
                               : language === "hindi" &&
                                   product.id === "complete-bundle"
-                                ? "कम्प्ली�� ���्र���एटर बंडल"
+                                ? "कम्प्लीट ���्र���एटर बंडल"
                                 : product.name}
                       </h3>
                       <p className="text-gray-600 mb-4">
