@@ -344,9 +344,9 @@ ${language === "hindi" ? "शहर:" : "City:"} ${personalInfo.city}
 
 ${language === "hindi" ? "सोशल मीडिया प्रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
 ${language === "hindi" ? "प्राथमिक प्लेटफॉर्म:" : "Primary Platform:"} ${quizData.primaryPlatform}
-${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
+${language === "hindi" ? "फॉलो��र्स:" : "Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "कंटेंट न���च:" : "Content Niche:"} ${quizData.niche}
-${language === "hindi" ? "कंटेंट प्रकार:" : "Content Type:"} ${quizData.contentType}
+${language === "hindi" ? "कंटे���ट प्रकार:" : "Content Type:"} ${quizData.contentType}
 
 ${language === "hindi" ? "प्रदर्शन मेट्रिक्स:" : "PERFORMANCE METRICS:"}
 ${language === "hindi" ? "फ���म स्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
@@ -356,7 +356,7 @@ ${language === "hindi" ? "मासिक रीच:" : "Monthly Reach:"} ${lang
 ${language === "hindi" ? "सुझावित दरें (भारतीय बाजार आधारित):" : "SUGGESTED RATES (Indian Market Based):"}
 ${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-3,000"}
 ${language === "hindi" ? "Instagram रील:" : "Instagram Reel:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
-${language === "hindi" ? "Instagram स्टोरी:" : "Instagram Story:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-300" : quizData.followerCount.includes("1K - 5K") ? "300-500" : "500-1,500"}
+${language === "hindi" ? "Instagram स्टो���ी:" : "Instagram Story:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-300" : quizData.followerCount.includes("1K - 5K") ? "300-500" : "500-1,500"}
 ${language === "hindi" ? "YouTube शॉर्ट:" : "YouTube Short:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "YouTube वीडियो मेंशन:" : "YouTube Video Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-2,000" : quizData.followerCount.includes("1K - 5K") ? "2,000-3,000" : "3,000-8,000"}
 
@@ -585,7 +585,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
                   className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all"
                 >
                   <Download className="w-4 h-4 inline mr-2" />
-                  {language === "hindi" ? "डाउनलोड करें" : "Download"}
+                  {language === "hindi" ? "डाउनलोड क��ें" : "Download"}
                 </button>
               </div>
 
@@ -656,7 +656,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
               </h2>
               <p className="text-gray-600 mb-6">
                 {language === "hindi"
-                  ? "साबित किए गए टूल्स जो टॉप क्रिएटर्स अपनी आय 5X बढ़ाने के लिए इस्तेमाल करते हैं। यह सब कुछ बिल्कुल फ्री है!"
+                  ? "साबित किए गए टूल्स जो टॉप क्रिएटर्स अपनी ���य 5X बढ़ाने के लिए इस्तेमाल करते हैं। यह सब कुछ बिल्कुल फ्री है!"
                   : "Proven tools that top creators use to 5X their income. Get everything absolutely free after completing your quiz!"}
               </p>
 
@@ -669,7 +669,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     {language === "hindi"
-                      ? "अपनी फॉलोअर काउंट के आधार पर रियल-टाइम earnings पोटेंशि���ल कैलकुलेट करें"
+                      ? "जानें कि आप हर महीने कितना कमा सकते हैं। टॉप क्रिएटर्स के डेटा पर आधारित 95% सटीक कैलकुलेशन।"
                       : "Calculate real-time earnings potential based on your follower count & niche"}
                   </p>
                   <button
@@ -694,7 +694,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     {language === "hindi"
-                      ? "प्रोफेशनल एनालिटिक्स ट्रैकिंग स्प्रेडशीट - ROI, एंगेजमेंट, ग्रोथ मेट्रिक्स"
+                      ? "प्रोफेशनल एनालिटिक्स ट्रैकिंग स्प्रेडशीट - ROI, एं���ेजमेंट, ग्रोथ मेट्रिक्स"
                       : "Professional analytics tracking spreadsheet - ROI, engagement, growth metrics"}
                   </p>
                   <button
