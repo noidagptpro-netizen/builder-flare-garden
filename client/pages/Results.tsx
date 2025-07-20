@@ -160,7 +160,7 @@ const languages = {
     contentNiche: "कंटेंट निच:",
     contentType: "कंटेंट प्रकार:",
     postingFrequency: "पोस्टिंग आवृत्ति:",
-    followers: "फॉलोअर्स:",
+    followers: "फॉलोअर्���:",
     monthlyIncome: "मासिक आय:",
     experienceLevel: "अनुभव स्तर:",
     activePlatforms: "सक्रिय प्लेटफॉर्म:",
@@ -312,7 +312,7 @@ ${language === "hindi" ? "आय प्रक्षेपण:" : "Income Project
 ${language === "hindi" ? "प्रोफाइल सारांश:" : "PROFILE SUMMARY:"}
 ${language === "hindi" ? "प्लेटफॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
-${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
+${language === "hindi" ? "फॉलोअर्��:" : "Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "मासिक आय:" : "Monthly Income:"} ${quizData.monthlyIncome}
 
 ${language === "hindi" ? "मजबूत��:" : "STRENGTHS:"}
@@ -345,7 +345,7 @@ ${language === "hindi" ? "शहर:" : "City:"} ${personalInfo.city}
 ${language === "hindi" ? "सोशल मीडिया प्रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
 ${language === "hindi" ? "प्राथमिक प्लेटफॉर्म:" : "Primary Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
-${language === "hindi" ? "कंटेंट निच:" : "Content Niche:"} ${quizData.niche}
+${language === "hindi" ? "कंटेंट न���च:" : "Content Niche:"} ${quizData.niche}
 ${language === "hindi" ? "कंटेंट प्रकार:" : "Content Type:"} ${quizData.contentType}
 
 ${language === "hindi" ? "प्रदर्शन मेट्रिक्स:" : "PERFORMANCE METRICS:"}
@@ -370,7 +370,7 @@ ${language === "hindi" ? "वेबसाइट:" : "Website:"} ${quizData.socia
     } else if (type === "growthStrategy") {
       content = `${language === "hindi" ? "व्यक्त���गत विकास रणनीति" : "PERSONALIZED GROWTH STRATEGY"} - ${userName}
 
-${language === "hindi" ? "वर्तमान स्थिति विश्लेषण:" : "CURRENT SITUATION ANALYSIS:"}
+${language === "hindi" ? "वर्तमान ���्थिति विश्लेषण:" : "CURRENT SITUATION ANALYSIS:"}
 ${language === "hindi" ? "फॉलो���र्स:" : "Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "मुख्य चुनौत��यां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 3).join(", ")}
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 3).join(", ")}
@@ -403,7 +403,7 @@ ${language === "hindi" ? "- ब्रांड पार्टनरशिप:" 
 
 ${language === "hindi" ? "मुख्य सफलता संकेतक (KPIs):" : "KEY SUCCESS INDICATORS (KPIs):"}
 ${language === "hindi" ? "- दैनिक एंगेजमेंट रेट" : "- Daily engagement rate"}
-${language === "hindi" ? "- साप्ताहिक नए फॉलोअर्स" : "- Weekly new followers"}
+${language === "hindi" ? "- साप्ताहिक नए फॉलो���र्स" : "- Weekly new followers"}
 ${language === "hindi" ? "- मासिक ब्रांड इंक्वायरी" : "- Monthly brand inquiries"}
 ${language === "hindi" ? "- कंटेंट पहुंच और छाप" : "- Content reach and impressions"}
 
@@ -478,7 +478,7 @@ ${language === "hindi" ? "📈 साप्ताहिक समीक्षा
 □ ${language === "hindi" ? "टॉप परफॉर्मिंग कंटेंट एनालाइज़ करें" : "Analyze top performing content"}
 □ ${language === "hindi" ? "एंगेजमेंट ट्रेंड्स की समीक्षा करें" : "Review engagement trends"}
 □ ${language === "hindi" ? "फॉलोअर ग्रोथ पैटर्न देखें" : "Check follower growth patterns"}
-□ ${language === "hindi" ? "हैशटैग परफॉर्मेंस ट्रैक करें" : "Track hashtag performance"}
+□ ${language === "hindi" ? "हैशटैग परफॉर्���ेंस ट्रैक करें" : "Track hashtag performance"}
 □ ${language === "hindi" ? "प्रतियोगी एनालिसिस करें" : "Conduct competitor analysis"}
 
 ${language === "hindi" ? "🎯 मासिक ROI कैलकुलेशन:" : "🎯 MONTHLY ROI CALCULATION:"}
@@ -664,8 +664,8 @@ ROI: [Net Profit / Total Investment × 100]%`;
                 <div className="bg-white rounded-xl p-6 border border-purple-200">
                   <h3 className="font-bold text-lg mb-2 text-purple-700">
                     {language === "hindi"
-                      ? "🧮 मोनेटाइज़ेशन कैलकुलेटर"
-                      : "🧮 Monetization Calculator"}
+                      ? "🧮 AI-पावर्ड मोनेटाइज़ेशन कैलकुलेटर"
+                      : "🧮 AI-Powered Monetization Calculator"}
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     {language === "hindi"
