@@ -506,7 +506,7 @@ export default function Shop() {
             </div>
             <p className="text-sm opacity-90">
               {language === "hindi"
-                ? "5000+ क्रिएटर्स ��ा भरोसा • सफलता गारंटी • तुरंत डाउनलोड"
+                ? "5000+ क्रिएटर्स का भरोसा • सफलता गारंटी • तुरंत डाउनलोड"
                 : "Trusted by 5000+ creators • Success guaranteed • Instant download"}
             </p>
           </div>
@@ -621,20 +621,20 @@ export default function Shop() {
                         ))}
                       </ul>
 
-                      {/* Stock Scarcity Messages */}
-                      <div className="bg-orange-50 border border-orange-200 rounded-lg p-3 mb-4">
-                        <div className="flex items-center gap-2 text-orange-700 text-sm">
-                          <Users className="w-4 h-4" />
+                      {/* Value Guarantee */}
+                      <div className="bg-green-50 border border-green-200 rounded-lg p-3 mb-4">
+                        <div className="flex items-center gap-2 text-green-700 text-sm">
+                          <Shield className="w-4 h-4" />
                           <span className="font-semibold">
                             {language === "hindi"
-                              ? `🔥 केवल ${Math.floor(Math.random() * 15) + 5} स्पॉट्स बचे हैं!`
-                              : `🔥 Only ${Math.floor(Math.random() * 15) + 5} spots left!`}
+                              ? "100% संतुष्टि गारंटी"
+                              : "100% Satisfaction Guarantee"}
                           </span>
                         </div>
-                        <div className="text-orange-600 text-xs mt-1">
+                        <div className="text-green-600 text-xs mt-1">
                           {language === "hindi"
-                            ? "142 लोग इसे अभी देख रहे हैं"
-                            : "142 people viewing this right now"}
+                            ? "तुरंत डाउनलोड • 30 दिन मनी-बैक गारंटी"
+                            : "Instant download • 30-day money-back guarantee"}
                         </div>
                       </div>
                     </div>
