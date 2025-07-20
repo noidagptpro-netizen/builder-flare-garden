@@ -59,6 +59,7 @@ export default function Shop() {
   const [language, setLanguage] = useState<"english" | "hindi">("english");
   const [products, setProducts] = useState<ProductConfig[]>([]);
   const [showPaymentForm, setShowPaymentForm] = useState<string | null>(null);
+  const [showQuizRequiredPopup, setShowQuizRequiredPopup] = useState(false);
   const [customerInfo, setCustomerInfo] = useState<CustomerInfo>({
     name: "",
     email: "",
