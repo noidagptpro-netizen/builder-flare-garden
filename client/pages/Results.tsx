@@ -145,7 +145,7 @@ const languages = {
     paySecure: "₹99 भुगतान करें - सुरक्षित भुगतान",
     processing: "प्रसंस्करण...",
     whatYouGet: "भुगतान के बाद आपको मिलेगा:",
-    fameScoreReport: "फेम स्कोर रिपोर्ट",
+    fameScoreReport: "फेम स्कोर रिपोर्���",
     mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्ट्रैटेजी",
     premiumTools: "प्रीमियम टूल्स",
@@ -315,7 +315,7 @@ ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "मासिक आय:" : "Monthly Income:"} ${quizData.monthlyIncome}
 
-${language === "hindi" ? "मजबूती:" : "STRENGTHS:"}
+${language === "hindi" ? "मजबूत��:" : "STRENGTHS:"}
 ${analysis.swotAnalysis.strengths.map((s: string, i: number) => `${i + 1}. ${s}`).join("\n")}
 
 ${language === "hindi" ? "सु��ार के क्षेत्र:" : "AREAS FOR IMPROVEMENT:"}
@@ -334,7 +334,7 @@ ${language === "hindi" ? "3. अपने एंग���ज��ेंट �
 
 ${language === "hindi" ? "जेनरेट किया गया:" : "Generated:"} ${new Date().toLocaleDateString()}`;
     } else if (type === "mediaKit") {
-      content = `${language === "hindi" ? "प्रोफेशनल मीडिया क���ट" : "PROFESSIONAL MEDIA KIT"} - ${userName}
+      content = `${language === "hindi" ? "प्रोफे��नल मीडिया क���ट" : "PROFESSIONAL MEDIA KIT"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत जानकारी:" : "PERSONAL INFORMATION:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
@@ -392,7 +392,7 @@ ${analysis.suggestions
 ${language === "hindi" ? "60-दिन की रणनीति:" : "60-DAY STRATEGY:"}
 ${language === "hindi" ? "- कंटेंट कैलेंडर का अनुकूलन" : "- Content calendar optimization"}
 ${language === "hindi" ? "- ब्रांड आउटरीच शुरू करना" : "- Begin brand outreach"}
-${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में सुधार" : "- Improve engagement metrics"}
+${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में स���धार" : "- Improve engagement metrics"}
 ${language === "hindi" ? "- नेटवर्किंग और सहयोग" : "- Networking and collaborations"}
 
 ${language === "hindi" ? "90-दिन के लक्ष्य:" : "90-DAY GOALS:"}
@@ -426,7 +426,7 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
         fontSizeIndicator +
         `${language === "hindi" ? "प्रीमियम मोनेटाइज़ेशन कैलकुलेटर" : "PREMIUM MONETIZATION CALCULATOR"} - ${userName}
 
-${language === "hindi" ? "🎯 आपकी कमाई की क्षमता (मासिक):" : "🎯 YOUR EARNING POTENTIAL (Monthly):"}
+${language === "hindi" ? "🎯 ��पकी कमाई की क्षमता (मासिक):" : "🎯 YOUR EARNING POTENTIAL (Monthly):"}
 ═══════════════════════════════════════
 
 ${language === "hindi" ? "वर्तमान फॉलोअर्स:" : "Current Followers:"} ${quizData.followerCount}
@@ -651,9 +651,14 @@ ROI: [Net Profit / Total Investment × 100]%`;
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "प्रीमियम एक्सक्लूसिव टूल्स - केवल आपके लिए!"
-                  : "Premium Exclusive Tools - Just for You!"}
+                  ? "💰 मोनेटाइज़ेशन प्रो टूल्स - अभी कमाना शुरू करें!"
+                  : "💰 Monetization Pro Tools - Start Earning Now!"}
               </h2>
+              <p className="text-gray-600 mb-6">
+                {language === "hindi"
+                  ? "साबित किए गए टूल्स जो टॉप क्रिएटर्स अपनी आय 5X बढ़ाने के लिए इस्तेमाल करते हैं। यह सब कुछ बिल्कुल फ्री है!"
+                  : "Proven tools that top creators use to 5X their income. Get everything absolutely free after completing your quiz!"}
+              </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-white rounded-xl p-6 border border-purple-200">
@@ -719,7 +724,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "और भी प्रीमियम टूल्स चाहिए?"
+                  ? "और भी प��रीमियम टूल्स चाहिए?"
                   : "Want Even More Premium Tools?"}
               </h2>
               <p className="text-gray-600 mb-6">
