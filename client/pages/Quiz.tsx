@@ -318,7 +318,7 @@ const languages = {
         "फोटो और कैरोसेल",
         "छोटे वीडियो/रील्स",
         "लंबे वीडियो",
-        "लाइव स्ट्रीम",
+        "लाइव स्ट्��ीम",
         "स्टोरीज़",
         "लिखित पोस्ट",
         "पॉडकास्ट",
@@ -351,7 +351,7 @@ const languages = {
       challenges: [
         "लगातार ���्यूज और एंगेजमेंट पाना",
         "अपनी यूनीक आवाज़/स्टाइल खोजना",
-        "एल्गोरिदम बदलाव से पहुंच में कमी",
+        "एल्गोरिदम ब���लाव से पहुंच में कमी",
         "ऑथेंटिसिटी और ब्रांड अपील का संतुलन",
         "बड़े क्रिएटर्स से कॉम्पिटिशन",
         "फॉलोअर्स को पेइंग कस्टमर बनाना",
@@ -369,7 +369,7 @@ const languages = {
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
         "अपनी niche मे���� go-to एक्���पर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
-        "10K सब्सक्राइबर्�� की email लिस्ट",
+        "10K सब्सक्राइबर्�� की email लि���्ट",
         "इंडस्ट्री ���वेंट्स/पॉडकास्ट्स में बोलना",
         "पैसिव इनकम स्ट्रीम्स बनाना",
         "9-5 job छोड़कर फुल-टाइम जाना",
@@ -461,9 +461,14 @@ export default function Quiz() {
   const handleNext = () => {
     if (currentStep < totalSteps && canProceed()) {
       setCurrentStep(currentStep + 1);
-      // Auto-scroll to top of the page when moving to next question
+      // Auto-scroll to quiz content area (just below header)
       setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        if (quizContentRef.current) {
+          quizContentRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
       }, 100);
     } else if (currentStep === totalSteps) {
       setShowFreeResources(true);
@@ -591,7 +596,7 @@ ${userName}
 ---
 
 ${language === "hindi" ? "टेम्प्लेट 2: फॉलो-अप ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
-${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-���प: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
@@ -622,7 +627,7 @@ ${language === "hindi" ? "📱 स्टोरी पैकेज: ₹[आपक
 ${language === "hindi" ? "• 3-5 story slides" : "• 3-5 story slides"}
 ${language === "hindi" ? "• Behind-the-scenes content" : "• Behind-the-scenes content"}
 
-${language === "hindi" ? "🎥 रील्स कंटेंट: ₹[आपकी rate]" : "🎥 Reels Content: ₹[Your rate]"}
+${language === "hindi" ? "🎥 रील्स कंटेंट: ₹[���पकी rate]" : "🎥 Reels Content: ₹[Your rate]"}
 ${language === "hindi" ? "• High-quality reel creation" : "• High-quality reel creation"}
 ${language === "hindi" ? "• Trending music/sounds" : "• Trending music/sounds"}
 
@@ -710,7 +715,7 @@ ${language === "hindi" ? "बोनस टिप्स:" : "BONUS TIPS:"}
 ${language === "hindi" ? "• हमेशा personalize करें emails" : "• Always personalize your emails"}
 ${language === "hindi" ? "• Subject lines को catchy रखें" : "• Keep subject lines catchy"}
 ${language === "hindi" ? "• Follow-up करना न भूलें" : "• Don't forget to follow up"}
-${language === "hindi" ? "• Professional tone maintain करें" : "• Maintain a professional tone"}
+${language === "hindi" ? "• Professional tone maintain क��ें" : "• Maintain a professional tone"}
 ${language === "hindi" ? "• Results और metrics share करें" : "• Share results and metrics"}
 ${language === "hindi" ? "• Grateful और humble रहें" : "• Be grateful and humble"}`;
     } else if (type === "growthStrategy") {
