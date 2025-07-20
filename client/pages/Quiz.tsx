@@ -245,7 +245,7 @@ const languages = {
   },
   hindi: {
     title: "क्रिएटर सक्सेस क्विज़",
-    subtitle: "3 मिनट में अपनी ���्यक्तिगत ग्रोथ रणनीति पाएं",
+    subtitle: "3 मिनट में अपनी व्यक्तिगत ग्रोथ रणनीति पाएं",
     steps: {
       1: "प्ले��फॉर्म और फॉलोअर्स",
       2: "कंटेंट निच",
@@ -276,7 +276,7 @@ const languages = {
     },
     options: {
       platforms: [
-        "इंस्टाग्राम",
+        "���ंस्टाग्राम",
         "यूट्यूब",
         "लिंक्डइन",
         "टिकटॉक",
@@ -309,7 +309,7 @@ const languages = {
         "शिक्षा और सीखना",
         "खेल और एथलेटिक्स",
         "प्रेरणा और स्व-सहायता",
-        "पेरेंटिंग और परिव��र",
+        "पेरेंटिंग और परिवार",
         "DIY और श���ल्प",
         "आध्यात्म और माइंडफ���ल���ेस",
         "अन्य",
@@ -336,7 +336,7 @@ const languages = {
         "अभी शुरू कि������ (0-6 महीने)",
         "श���रुआती (6 महीने - 1 ���ाल)",
         "बढ़ रहे हैं (1-2 साल)",
-        "अनुभवी (2-3 साल)",
+        "अ���ुभवी (2-3 साल)",
         "विशेषज्ञ (3+ स���ल)",
       ],
       incomes: [
@@ -383,7 +383,7 @@ const languages = {
       submit: "मेरा क्रिएटर विश्लेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ प��रा! यहा�� हैं आपके मु�����त क्रिएटर संसाधन",
+      title: "🎉 क्विज़ प��रा! यहा�� हैं आपके मु��्त क्रिएटर संसाधन",
       subtitle:
         "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली टूल्स को डाउनलोड ���रे��",
       mediaKit: {
@@ -566,7 +566,7 @@ ${language === "hindi" ? "📦 पैकेज दरें:" : "📦 PACKAGE RA
 ${language === "hindi" ? "• बेसिक पैकेज (1 पोस्ट + 2 स्टोरी):" : "• Basic Package (1 Post + 2 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "400-800" : quizData.followerCount.includes("1K - 5K") ? "800-1,500" : "1,500-4,000"}
 ${language === "hindi" ? "• प्रीमियम पैकेज (2 पोस्ट + 1 रील + 3 स���टोरी):" : "• Premium Package (2 Posts + 1 Reel + 3 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,200-2,500" : quizData.followerCount.includes("1K - 5K") ? "2,500-4,500" : "4,500-12,000"}
 
-${language === "hindi" ? "संपर्क:" : "CONTACT:"}
+${language === "hindi" ? "संपर्��:" : "CONTACT:"}
 ${language === "hindi" ? "ईमेल:" : "Email:"} ${quizData.email || "[your@email.com]"}
 ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
 - Instagram: ${quizData.socialLinks.instagram || "[Your Instagram]"}
@@ -661,7 +661,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 5: परफॉर्म���ंस रिपोर्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
+${language === "hindi" ? "टेम्प्लेट 5: परफॉर्मेंस रिपोर्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} x [Brand] - Campaign Performance Report` : `${userName} x [Brand] - Campaign Performance Report`}
 
 ${language === "hindi" ? "Dear [Brand Team]," : "Dear [Brand Team],"}
@@ -739,7 +739,7 @@ ${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपन
 ${language === "hindi" ? `- ${quizData.niche} पर 10 कंटेंट आइडिया तैयार करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्स)" : "- Research hashtags (30 hashtag mix)"}
 
-${language === "hindi" ? "स���्ताह 2-4:" : "Week 2-4:"}
+${language === "hindi" ? "सप्ताह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटेंट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
 ${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोकस करें" : "- Focus on community engagement"}
 ${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शुरू करें" : "- Start tracking analytics"}
@@ -747,7 +747,7 @@ ${language === "hindi" ? "- एनालिटिक्स ट्रैक क�
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
 ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करें (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफिक कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
 ${language === "hindi" ? "- ट्रेंडिंग टॉपिक्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
-${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन श���रू करें" : "- Start collaborations with other creators"}
+${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू करें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "दिन 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
 ${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
@@ -1039,7 +1039,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             onClick={() =>
                               updateQuizData("primaryPlatform", platform)
                             }
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
                               quizData.primaryPlatform === platform
                                 ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1062,7 +1062,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             onClick={() =>
                               updateQuizData("followerCount", range)
                             }
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
                               quizData.followerCount === range
                                 ? "bg-gradient-to-r from-electric-blue/10 to-soft-violet/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1083,7 +1083,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                           <button
                             key={platform}
                             onClick={() => toggleSecondaryPlatform(platform)}
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
                               quizData.secondaryPlatforms.includes(platform)
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1118,7 +1118,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                           <button
                             key={niche}
                             onClick={() => updateQuizData("niche", niche)}
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
                               quizData.niche === niche
                                 ? "bg-gradient-to-r from-soft-violet/10 to-neon-green/10 border-soft-violet text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1153,7 +1153,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                           <button
                             key={type}
                             onClick={() => updateQuizData("contentType", type)}
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
                               quizData.contentType === type
                                 ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1190,7 +1190,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             onClick={() =>
                               updateQuizData("postingFrequency", freq)
                             }
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
                               quizData.postingFrequency === freq
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1255,7 +1255,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             onClick={() =>
                               updateQuizData("monthlyIncome", income)
                             }
-                            className={`p-2 rounded-lg border-2 text-xs font-medium transition-all duration-300 ${
+                            className={`p-4 rounded-lg border-2 text-lg font-medium transition-all duration-300 ${
                               quizData.monthlyIncome === income
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
