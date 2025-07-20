@@ -345,10 +345,10 @@ ${language === "hindi" ? "शहर:" : "City:"} ${personalInfo.city}
 ${language === "hindi" ? "सोशल मीडिया प्रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
 ${language === "hindi" ? "प्राथमिक प्लेटफॉर्म:" : "Primary Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
-${language === "hindi" ? "कंटेंट न���च:" : "Content Niche:"} ${quizData.niche}
+${language === "hindi" ? "��ंटेंट न���च:" : "Content Niche:"} ${quizData.niche}
 ${language === "hindi" ? "कंटेंट प्रकार:" : "Content Type:"} ${quizData.contentType}
 
-${language === "hindi" ? "प्रदर्शन मेट्रिक्��:" : "PERFORMANCE METRICS:"}
+${language === "hindi" ? "प्रदर्शन मेट्रिक्स:" : "PERFORMANCE METRICS:"}
 ${language === "hindi" ? "फ���म स्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
 ${language === "hindi" ? "एंगेजमेंट रेट:" : "Engagement Rate:"} ${language === "hindi" ? "उच्च गुणवत्ता" : "High Quality"}
 ${language === "hindi" ? "मासिक रीच:" : "Monthly Reach:"} ${language === "hindi" ? "व्यापक दर्शक" : "Wide Audience"}
@@ -447,7 +447,7 @@ ${language === "hindi" ? "🎯 ग्रोथ प्रोजेक्शन (�
 ${language === "hindi" ? "3 महीने:" : "3 months:"} ₹${Math.round(monthlyPotential * 1.4).toLocaleString()}
 ${language === "hindi" ? "6 महीने:" : "6 months:"} ₹${Math.round(monthlyPotential * 2.1).toLocaleString()}
 
-${language === "hindi" ? "📈 कैलकुलेशन फॉर्मूला:" : "📈 CALCULATION FORMULA:"}
+${language === "hindi" ? "📈 कैलकुलेशन फ���र्मूला:" : "📈 CALCULATION FORMULA:"}
 Base Rate = Followers × ₹0.8 × Niche Multiplier
 ${language === "hindi" ? "आपका फॉर्मूला:" : "Your Formula:"} ${followerNum} × ₹0.8 × ${nicheMultiplier} = ₹${monthlyPotential}`;
     } else if (type === "analyticsTracker") {
@@ -466,7 +466,7 @@ ${language === "hindi" ? "कंटेंट परफॉर्मेंस:" : 
 
 ${language === "hindi" ? "ऑडियंस ग्रोथ:" : "AUDIENCE GROWTH:"}
 - ${language === "hindi" ? "नए फॉलोअर्स" : "New Followers"}: [Daily count]
-- ${language === "hindi" ? "अनफॉलो ��ेट" : "Unfollow Rate"}: [Daily unfollows]
+- ${language === "hindi" ? "अनफॉलो रेट" : "Unfollow Rate"}: [Daily unfollows]
 - ${language === "hindi" ? "नेट ग्रोथ" : "Net Growth"}: [New - Unfollows]
 
 ${language === "hindi" ? "मोनेटाइज़ेशन ट्रैकिंग:" : "MONETIZATION TRACKING:"}
@@ -558,7 +558,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
             </h1>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
               {language === "hindi"
-                ? "आपका संपूर्ण क्रिएटर टूलकिट तैयार है। अपनी व्यक्तिगत फाइलें डाउनलोड करें।"
+                ? "आपका संपूर्ण क्रिएटर ���ूलकिट तैयार है। अपनी व्यक्तिगत फाइलें डाउनलोड करें।"
                 : "Your complete Creator Toolkit is ready. Download your personalized files."}
             </p>
 
@@ -656,7 +656,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
               </h2>
               <p className="text-gray-600 mb-6">
                 {language === "hindi"
-                  ? "साबित किए गए टूल्स जो टॉप क्रिएटर्स अपनी आय 5X बढ़ाने के लिए इस्तेमाल करते हैं। यह सब कुछ बिल्कुल फ्री ���ै!"
+                  ? "साबित किए गए टूल्स जो टॉप क्रिएटर्स अपनी आय 5X बढ़ाने के लिए इस्तेमाल करते हैं। यह सब कुछ बिल्कुल फ्री है!"
                   : "Proven tools that top creators use to 5X their income. Get everything absolutely free after completing your quiz!"}
               </p>
 
@@ -694,8 +694,8 @@ ROI: [Net Profit / Total Investment × 100]%`;
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     {language === "hindi"
-                      ? "प्रोफेशनल एनालिटिक्स ट्रैकिंग स्प्रेडशीट - ROI, एंगेजमेंट, ग्रोथ मेट्रिक्स"
-                      : "Professional analytics tracking spreadsheet - ROI, engagement, growth metrics"}
+                      ? "वही ट्रैकिंग सिस्टम जो मिलियन-फॉलोअर क्रिएटर्स इस्तेमाल करते हैं। अपनी ROI को 300% तक बढ़ाएं।"
+                      : "The same tracking system used by million-follower creators. Boost your ROI by up to 300%."}
                   </p>
                   <button
                     onClick={() =>
@@ -738,7 +738,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
               >
                 <Zap className="w-5 h-5" />
                 {language === "hindi"
-                  ? "प्रीमियम टूल���स देखें"
+                  ? "प्रीमियम टूल्स देखें"
                   : "Browse Premium Tools"}
                 <ArrowRight className="w-5 h-5" />
               </Link>
