@@ -506,7 +506,7 @@ export default function Shop() {
             </div>
             <p className="text-sm opacity-90">
               {language === "hindi"
-                ? "5000+ क्रिएटर्स का भरोसा • सफलता गारंटी • तुरंत डाउनलोड"
+                ? "5000+ क्रिएटर्स ��ा भरोसा • सफलता गारंटी • तुरंत डाउनलोड"
                 : "Trusted by 5000+ creators • Success guaranteed • Instant download"}
             </p>
           </div>
@@ -548,12 +548,8 @@ export default function Shop() {
                   }`}
                 >
                   <div className="absolute top-4 right-4 space-y-2">
-                    {/* FOMO Urgency Badges */}
-                    <div className="bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-pulse">
-                      ⚡ {language === "hindi" ? "केवल आज!" : "TODAY ONLY!"}
-                    </div>
                     {product.category === "growth-kit" && (
-                      <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                      <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                         {currentLang.bestseller}
                       </div>
                     )}
@@ -563,8 +559,10 @@ export default function Shop() {
                       </div>
                     )}
                     {product.category === "masterclass" && (
-                      <div className="bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold">
-                        {currentLang.limited}
+                      <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                        {language === "hindi"
+                          ? "एक्सपर्ट गाइड"
+                          : "Expert Guide"}
                       </div>
                     )}
                   </div>
