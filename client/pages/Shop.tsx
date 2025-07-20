@@ -51,11 +51,6 @@ interface CustomerInfo {
 }
 
 export default function Shop() {
-  const [timeLeft, setTimeLeft] = useState({
-    hours: 23,
-    minutes: 45,
-    seconds: 32,
-  });
   const [language, setLanguage] = useState<"english" | "hindi">("english");
   const [products, setProducts] = useState<ProductConfig[]>([]);
   const [showPaymentForm, setShowPaymentForm] = useState<string | null>(null);
@@ -276,7 +271,7 @@ export default function Shop() {
       trending: "ट्रेंडिंग",
       limited: "सीमित समय",
       offerEnds: "ऑफर समाप्त होता है",
-      downloads: "ड��उनलोड",
+      downloads: "ड����नलोड",
       rating: "रेटिंग",
       securePayment: "सुरक्षित भुगतान",
       instantDownload: "तुरंत डाउनलोड",
@@ -297,7 +292,7 @@ export default function Shop() {
       downloadYourProducts: "अपने प्रोडक्ट्स डाउनलोड करें",
       purchaseSuccess: "खरीदारी सफल! 🎉",
       thanksForPurchase:
-        "आपकी खरीदारी के ���िए धन्यवाद! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार हैं।",
+        "आपकी खरीदारी के �����िए धन्यवाद! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार हैं।",
       backToShop: "शॉप पर वापस जाएं",
     },
   };
@@ -676,7 +671,7 @@ export default function Shop() {
                               ? "ब्रांड कोलैबोरेशन मास्टरक्लास"
                               : language === "hindi" &&
                                   product.id === "complete-bundle"
-                                ? "कम्प्लीट ���्र���एटर बंडल"
+                                ? "कम्प्ली�� ���्र���एटर बंडल"
                                 : product.name}
                       </h3>
                       <p className="text-gray-600 mb-4">
