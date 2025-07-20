@@ -60,6 +60,8 @@ export default function Shop() {
   const [products, setProducts] = useState<ProductConfig[]>([]);
   const [showPaymentForm, setShowPaymentForm] = useState<string | null>(null);
   const [showQuizRequiredPopup, setShowQuizRequiredPopup] = useState(false);
+  const [promoCode, setPromoCode] = useState("");
+  const [appliedDiscount, setAppliedDiscount] = useState(0);
   const [customerInfo, setCustomerInfo] = useState<CustomerInfo>({
     name: "",
     email: "",
@@ -197,7 +199,7 @@ export default function Shop() {
       bundleOffer: "सीमित समय बंडल ऑफर 🔥",
       save: "बचाएं",
       getBundle: "कम्प्लीट बंडल पाएं",
-      validFor: "ऑफर केवल अगले 24 घंटे के लिए वैध",
+      validFor: "ऑफर केवल अगले 24 ���ंटे के लिए वैध",
       paymentForm: "अपनी जानकारी पूरी करें",
       fullName: "पूरा नाम",
       emailAddress: "ईमेल पता",
