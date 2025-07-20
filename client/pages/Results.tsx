@@ -164,7 +164,7 @@ const languages = {
     monthlyIncome: "मासिक आय:",
     experienceLevel: "अनुभव स्तर:",
     activePlatforms: "सक्रिय प्लेटफॉर्म:",
-    competitorAnalysis: "प्रति���ोगी विश्लेषण",
+    competitorAnalysis: "प���रति���ोगी विश्लेषण",
     marketInsights: "बाजार अंतर्���ृष्टि",
   },
 };
@@ -186,6 +186,11 @@ export default function Results() {
   const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
 
   const t = languages[language];
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Validation functions
   const validateEmail = (email: string): boolean => {
@@ -330,7 +335,7 @@ ${analysis.suggestions.map((s: string, i: number) => `${i + 1}. ${s}`).join("\n"
 ${language === "hindi" ? "अगले कदम:" : "NEXT STEPS:"}
 ${language === "hindi" ? "1. अपनी कंटेंट रणनीति को अनुकूलित करें" : "1. Optimize your content strategy"}
 ${language === "hindi" ? "2. ब्रांड पार्टनरशिप के लिए तैयार हो जाएं" : "2. Prepare for brand partnerships"}
-${language === "hindi" ? "3. अपने एंग���ज��ेंट मेट्रिक्स को ब���हतर बनाएं" : "3. Improve your engagement metrics"}
+${language === "hindi" ? "3. अपने एंग���ज��ेंट मेट्रिक्स को ब�����तर बनाएं" : "3. Improve your engagement metrics"}
 
 ${language === "hindi" ? "जेनरेट किया गया:" : "Generated:"} ${new Date().toLocaleDateString()}`;
     } else if (type === "mediaKit") {
@@ -404,7 +409,7 @@ ${language === "hindi" ? "- ब्रांड पार्टनरशिप:" 
 ${language === "hindi" ? "मुख्य सफलता संकेतक (KPIs):" : "KEY SUCCESS INDICATORS (KPIs):"}
 ${language === "hindi" ? "- दैनिक एंगेजमेंट रेट" : "- Daily engagement rate"}
 ${language === "hindi" ? "- साप्ताहिक नए फॉलो���र्स" : "- Weekly new followers"}
-${language === "hindi" ? "- मासिक ब्रांड इंक्वायरी" : "- Monthly brand inquiries"}
+${language === "hindi" ? "- मासिक ��्रांड इंक्वायरी" : "- Monthly brand inquiries"}
 ${language === "hindi" ? "- कंटेंट पहुंच और छाप" : "- Content reach and impressions"}
 
 ${language === "hindi" ? "अनुशंसित उपकरण:" : "RECOMMENDED TOOLS:"}
@@ -424,7 +429,7 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
 
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "प्रीमियम मोनेटाइज़ेशन कैलकुलेटर" : "PREMIUM MONETIZATION CALCULATOR"} - ${userName}
+        `${language === "hindi" ? "प्रीमियम मोनेटाइज़ेशन ���ैलकुलेटर" : "PREMIUM MONETIZATION CALCULATOR"} - ${userName}
 
 ${language === "hindi" ? "🎯 ��पकी कमाई की क्षमता (मासिक):" : "🎯 YOUR EARNING POTENTIAL (Monthly):"}
 ═══════════════════════════════════════
@@ -439,7 +444,7 @@ ${language === "hindi" ? "औसत:" : "Average:"} ₹${monthlyPotential.toLoca
 ${language === "hindi" ? "अधिकतम:" : "Maximum:"} ₹${Math.round(monthlyPotential * 1.8).toLocaleString()}
 
 ${language === "hindi" ? "📊 प्लेटफॉर्म-वार दरें:" : "📊 PLATFORM-WISE RATES:"}
-${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${Math.round(followerNum * 0.5 * nicheMultiplier)}-₹${Math.round(followerNum * 1.2 * nicheMultiplier)}
+${language === "hindi" ? "Instagram पो��्ट:" : "Instagram Post:"} ₹${Math.round(followerNum * 0.5 * nicheMultiplier)}-₹${Math.round(followerNum * 1.2 * nicheMultiplier)}
 ${language === "hindi" ? "Instagram रील:" : "Instagram Reel:"} ₹${Math.round(followerNum * 0.8 * nicheMultiplier)}-₹${Math.round(followerNum * 2.0 * nicheMultiplier)}
 ${language === "hindi" ? "YouTube वीडियो:" : "YouTube Video:"} ₹${Math.round(followerNum * 1.5 * nicheMultiplier)}-₹${Math.round(followerNum * 3.5 * nicheMultiplier)}
 
@@ -738,7 +743,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
               >
                 <Zap className="w-5 h-5" />
                 {language === "hindi"
-                  ? "प्रीमियम टूल्स देखें"
+                  ? "प्रीमियम टू��्स देखें"
                   : "Browse Premium Tools"}
                 <ArrowRight className="w-5 h-5" />
               </Link>
