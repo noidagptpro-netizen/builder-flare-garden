@@ -12,7 +12,7 @@ import Quiz from "./pages/Quiz";
 
 import Results from "./pages/Results";
 import Shop from "./pages/Shop";
-import Admin from "./pages/Admin";
+
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -32,7 +32,7 @@ const App = () => (
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/results" element={<Results />} />
           <Route path="/shop" element={<Shop />} />
-          <Route path="/admin" element={<Admin />} />
+
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
