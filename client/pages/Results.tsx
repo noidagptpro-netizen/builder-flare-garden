@@ -131,7 +131,7 @@ const languages = {
     keySuggestions: "मुख्य सुझाव",
     creatorVitalStats: "आपके क्रिएटर महत्वपूर्ण आंकड़े",
     fameScore: "फेम स्कोर",
-    growthPotential: "विकास क���षमता",
+    growthPotential: "विकास क्षमता",
     incomeProjection: "आय क्षमता",
     unlock: "अपना संपूर्ण क्रिएटर टूलकिट अनलॉक करें",
     unlockSubtitle:
@@ -165,7 +165,7 @@ const languages = {
     experienceLevel: "अनुभव स्तर:",
     activePlatforms: "सक्रिय प्लेटफॉर्म:",
     competitorAnalysis: "प्रति���ोगी विश्लेषण",
-    marketInsights: "��ाजार अंतर्दृष्टि",
+    marketInsights: "बाजार अं��र्दृष्टि",
   },
 };
 
@@ -349,8 +349,8 @@ ${language === "hindi" ? "��ंटेंट न���च:" : "Content Nic
 ${language === "hindi" ? "कंटेंट प्रका��:" : "Content Type:"} ${quizData.contentType}
 
 ${language === "hindi" ? "प्रदर्शन मेट्रिक्स:" : "PERFORMANCE METRICS:"}
-${language === "hindi" ? "फ���म स्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
-${language === "hindi" ? "एंगेजमेंट रेट:" : "Engagement Rate:"} ${language === "hindi" ? "उच्च गुणवत्ता" : "High Quality"}
+${language === "hindi" ? "������म स्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
+${language === "hindi" ? "एंगेजमेंट रेट:" : "Engagement Rate:"} ${language === "hindi" ? "उच्च गुणवत्त���" : "High Quality"}
 ${language === "hindi" ? "मासिक रीच:" : "Monthly Reach:"} ${language === "hindi" ? "व्यापक दर्शक" : "Wide Audience"}
 
 ${language === "hindi" ? "सुझावित दरें (भारतीय बाजार आधारित):" : "SUGGESTED RATES (Indian Market Based):"}
@@ -393,7 +393,7 @@ ${language === "hindi" ? "60-दिन की रणनीति:" : "60-DAY STR
 ${language === "hindi" ? "- कंटेंट कैले���डर का अनुकूलन" : "- Content calendar optimization"}
 ${language === "hindi" ? "- ब्रांड आउटरीच शुरू करना" : "- Begin brand outreach"}
 ${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में स���धार" : "- Improve engagement metrics"}
-${language === "hindi" ? "- नेट���र्किंग और सहयोग" : "- Networking and collaborations"}
+${language === "hindi" ? "- नेटवर्किंग ���र सहयोग" : "- Networking and collaborations"}
 
 ${language === "hindi" ? "90-दिन के लक्ष्य:" : "90-DAY GOALS:"}
 ${language === "hindi" ? "- फॉलोअर वृद्धि:" : "- Follower Growth:"} 30-50%
@@ -481,7 +481,7 @@ ${language === "hindi" ? "📈 साप्ताहिक समीक्षा
 □ ${language === "hindi" ? "हैशटैग परफॉर्���ेंस ट्रैक करें" : "Track hashtag performance"}
 □ ${language === "hindi" ? "प्रतियोगी एनालिसिस करें" : "Conduct competitor analysis"}
 
-${language === "hindi" ? "🎯 मासिक ROI कैलकुल���शन:" : "🎯 MONTHLY ROI CALCULATION:"}
+${language === "hindi" ? "🎯 मासिक ROI कैलकुलेशन:" : "🎯 MONTHLY ROI CALCULATION:"}
 ${language === "hindi" ? "कुल आय:" : "Total Income:"} ₹[Enter monthly earnings]
 ${language === "hindi" ? "कुल खर्च:" : "Total Expenses:"} ₹[Tools, equipment, etc.]
 ${language === "hindi" ? "नेट प्रॉफिट:" : "Net Profit:"} ₹[Income - Expenses]
@@ -669,7 +669,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     {language === "hindi"
-                      ? "जानें कि आप हर महीने क���तना कमा सकते हैं। टॉप क्रिएटर्स के डेटा पर आधारित 95% सटीक कैलकुलेशन।"
+                      ? "जानें कि आप हर महीने कितना कमा सकते हैं। टॉप क्रिएटर्स के डेटा पर आधारित 95% सटीक कैलकुलेशन।"
                       : "Calculate real-time earnings potential based on your follower count & niche"}
                   </p>
                   <button
@@ -1272,7 +1272,7 @@ ROI: [Net Profit / Total Investment × 100]%`;
                   <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
                     <Target className="w-4 h-4 text-purple-600" />
                   </div>
-                  <div className="text-xs">{t.growthStrategy}</div>
+                  <div className="text-sm">{t.growthStrategy}</div>
                 </div>
                 <div className="text-center">
                   <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-2">
