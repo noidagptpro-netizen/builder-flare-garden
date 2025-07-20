@@ -575,7 +575,7 @@ export default function Shop() {
                           ? "कम्प्लीट क्रिएटर ग्रोथ किट"
                           : language === "hindi" &&
                               product.id === "reels-mastery"
-                            ? "इ��स्टाग्राम रील्स मास्टरी कोर्स"
+                            ? "����स्टाग्राम रील्स मास्टरी कोर्स"
                             : language === "hindi" &&
                                 product.id === "brand-masterclass"
                               ? "ब्रांड कोलैबोरेशन मास्टरक्लास"
@@ -935,7 +935,7 @@ export default function Shop() {
             to="/quiz"
             className="bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-bold hover:bg-gray-100 transition-colors"
           >
-            {language === "hindi" ? "शुर��� करें" : "Start Now"}
+            {language === "hindi" ? "शुरू करें" : "Start Quiz"}
           </Link>
         </div>
       </div>
