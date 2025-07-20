@@ -253,12 +253,12 @@ export default function Shop() {
       trending: "ट्रेंडिंग",
       limited: "सीमि�� समय",
       offerEnds: "ऑफर समाप्त होता है",
-      downloads: "ड��उनलोड",
+      downloads: "ड��उ���लोड",
       rating: "रेटिंग",
       securePayment: "सुरक्षित भुगतान",
       instantDownload: "तुरंत डाउनलोड",
       moneyBack: "प��से वापसी की गारंटी",
-      buyNow: "अभी खर��दें",
+      buyNow: "अभी खरीदें",
       downloadFree: "फ्री डाउ��लोड करें",
       bundleOffer: "सीमित समय बंडल ऑफर 🔥",
       save: "बचाएं",
@@ -492,50 +492,26 @@ export default function Shop() {
         </div>
       </header>
 
-      {/* FOMO Countdown Banner */}
-      <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white py-3">
+      {/* Clean Value Proposition Banner */}
+      <div className="bg-gradient-to-r from-blue-500 to-purple-600 text-white py-4">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-center gap-4 text-center">
-            <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5 animate-pulse" />
-              <span className="font-bold">
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <Award className="w-5 h-5" />
+              <span className="font-semibold">
                 {language === "hindi"
-                  ? "⚡ सीमित समय ऑफर! बचे हैं केवल:"
-                  : "⚡ Limited Time Offer! Only:"}
+                  ? "प्रीमियम क्रिएटर टूल्स"
+                  : "Premium Creator Tools"}
               </span>
             </div>
-            <div className="bg-black bg-opacity-20 px-3 py-1 rounded-lg font-mono text-xl font-bold">
-              {formatTimeLeft()}
-            </div>
-            <span className="text-sm">
+            <p className="text-sm opacity-90">
               {language === "hindi"
-                ? "50% तक छूट खत्म होने से पहले!"
-                : "Before 50% discounts expire!"}
-            </span>
+                ? "5000+ क्रिएटर्स का भरोसा • सफलता गारंटी • तुरंत डाउनलोड"
+                : "Trusted by 5000+ creators • Success guaranteed • Instant download"}
+            </p>
           </div>
         </div>
       </div>
-
-      {/* Recent Purchases Ticker */}
-      {recentPurchases.length > 0 && (
-        <div className="bg-green-50 border-b border-green-200 py-2">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center gap-2 text-green-800 text-sm">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span>
-                🔥 <strong>{recentPurchases[0]}</strong>{" "}
-                {language === "hindi" ? "ने अभी-अभी खरीदा!" : "just purchased!"}
-                {recentPurchases.length > 1 && (
-                  <span className="ml-2 text-green-600">
-                    +{recentPurchases.length - 1}{" "}
-                    {language === "hindi" ? "और लोगों ने भी" : "others too"}
-                  </span>
-                )}
-              </span>
-            </div>
-          </div>
-        </div>
-      )}
 
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
