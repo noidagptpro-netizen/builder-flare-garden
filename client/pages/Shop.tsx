@@ -274,7 +274,7 @@ export default function Shop() {
       downloadYourProducts: "अपने प्रोडक्ट्स डाउनलोड करें",
       purchaseSuccess: "खरीदारी सफल! 🎉",
       thanksForPurchase:
-        "आपकी खरीदारी के ���िए धन्यवाद! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार हैं।",
+        "आपकी खरीदारी के ���िए धन्यवा���! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार हैं।",
       backToShop: "शॉप पर वापस जाएं",
     },
   };
@@ -679,10 +679,7 @@ export default function Shop() {
                         <div className="bg-red-100 border border-red-200 rounded-lg p-3 mb-4">
                           <div className="flex items-center gap-2 text-red-700 font-semibold">
                             <Clock className="w-4 h-4" />
-                            {currentLang.offerEnds}{" "}
-                            {timeLeft.hours.toString().padStart(2, "0")}:
-                            {timeLeft.minutes.toString().padStart(2, "0")}:
-                            {timeLeft.seconds.toString().padStart(2, "0")}
+                            {currentLang.offerEnds} {formatTimeLeft()}
                           </div>
                         </div>
                       )}
@@ -948,7 +945,7 @@ export default function Shop() {
                 )}
                 <div className="flex justify-between items-center font-bold text-lg border-t pt-2 mt-2">
                   <span className="text-gray-900">
-                    {language === "hindi" ? "कुल राशि:" : "Total Amount:"}
+                    {language === "hindi" ? "कुल ��ाशि:" : "Total Amount:"}
                   </span>
                   <span className="text-blue-600">
                     ₹
@@ -1010,7 +1007,7 @@ export default function Shop() {
             to="/quiz"
             className="bg-white text-purple-600 px-3 py-1 rounded-full text-sm font-bold hover:bg-gray-100 transition-colors"
           >
-            {language === "hindi" ? "शुरू करें" : "Start Now"}
+            {language === "hindi" ? "शुर��� करें" : "Start Now"}
           </Link>
         </div>
       </div>
