@@ -258,7 +258,7 @@ export default function Shop() {
       securePayment: "सुरक्षित भुगतान",
       instantDownload: "तुरंत डाउनलोड",
       moneyBack: "प��से वापसी की गारंटी",
-      buyNow: "अभी खरीदें",
+      buyNow: "अभी खर��दें",
       downloadFree: "फ्री डाउ��लोड करें",
       bundleOffer: "सीमित समय बंडल ऑफर 🔥",
       save: "बचाएं",
@@ -491,46 +491,6 @@ export default function Shop() {
           </div>
         </div>
       </header>
-
-      {/* Admin Panel */}
-      {showAdminPanel && (
-        <div className="bg-gray-50 border-b border-gray-200 py-4">
-          <div className="container mx-auto px-4">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">
-              {currentLang.adminPanel} - {currentLang.toggleProduct}
-            </h3>
-            <div className="grid md:grid-cols-4 gap-4">
-              {productConfigs.map((product) => (
-                <div
-                  key={product.id}
-                  className="flex items-center justify-between bg-white p-3 rounded-lg border"
-                >
-                  <span className="text-sm font-medium text-gray-900">
-                    {product.name}
-                  </span>
-                  <button
-                    onClick={() => toggleProduct(product.id)}
-                    className={`flex items-center gap-2 px-3 py-1 rounded-lg text-sm font-medium transition-colors ${
-                      product.isEnabled
-                        ? "bg-green-100 text-green-700"
-                        : "bg-red-100 text-red-700"
-                    }`}
-                  >
-                    {product.isEnabled ? (
-                      <Eye className="w-4 h-4" />
-                    ) : (
-                      <EyeOff className="w-4 h-4" />
-                    )}
-                    {product.isEnabled
-                      ? currentLang.enabled
-                      : currentLang.disabled}
-                  </button>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* FOMO Countdown Banner */}
       <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white py-3">
