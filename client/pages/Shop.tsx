@@ -718,6 +718,23 @@ export default function Shop() {
                           </li>
                         ))}
                       </ul>
+
+                      {/* Stock Scarcity Messages */}
+                      <div className="bg-orange-50 border border-orange-200 rounded-lg p-3 mb-4">
+                        <div className="flex items-center gap-2 text-orange-700 text-sm">
+                          <Users className="w-4 h-4" />
+                          <span className="font-semibold">
+                            {language === "hindi"
+                              ? `🔥 केवल ${Math.floor(Math.random() * 15) + 5} स्पॉट्स बचे हैं!`
+                              : `🔥 Only ${Math.floor(Math.random() * 15) + 5} spots left!`}
+                          </span>
+                        </div>
+                        <div className="text-orange-600 text-xs mt-1">
+                          {language === "hindi"
+                            ? "142 लोग इसे अभी देख रहे हैं"
+                            : "142 people viewing this right now"}
+                        </div>
+                      </div>
                     </div>
 
                     <div className="lg:w-80">
