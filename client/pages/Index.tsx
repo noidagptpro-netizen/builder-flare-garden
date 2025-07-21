@@ -55,7 +55,16 @@ export default function Index() {
           <div className="inline-flex items-center bg-neon-green/10 border border-neon-green/30 rounded-full px-6 py-3 mb-8">
             <span className="text-neon-green text-sm font-semibold">
               🏆 India's #1 Growth platform for&nbsp;
-              <span style={{color: 'inherit', fontFamily: 'inherit', fontSize: 'inherit', fontWeight: 'inherit', letterSpacing: 'inherit', textAlign: 'inherit'}}>
+              <span
+                style={{
+                  color: "inherit",
+                  fontFamily: "inherit",
+                  fontSize: "inherit",
+                  fontWeight: "inherit",
+                  letterSpacing: "inherit",
+                  textAlign: "inherit",
+                }}
+              >
                 Creators & Marketers
               </span>{" "}
               10,000+ Success Stories-
