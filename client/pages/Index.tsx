@@ -67,7 +67,7 @@ export default function Index() {
               >
                 Creators & Marketers
               </span>{" "}
-              10,000+ Success Stories-
+              - 10,000+ Success Stories
             </span>
           </div>
 
