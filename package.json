@@ -1,4 +1,4 @@
-{
+Update{
   "name": "fusion-starter",
   "private": true,
   "type": "module",
@@ -99,3 +99,4 @@
     "vitest": "^3.1.4"
   }
 }
+Test build
