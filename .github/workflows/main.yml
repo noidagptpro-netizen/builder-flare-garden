@@ -3,7 +3,7 @@ name: Build and Deploy to MilesWeb
 on:
   push:
     branches:
-      - main  # or your default branch
+      - main
 
 jobs:
   build-and-deploy:
@@ -19,12 +19,12 @@ jobs:
         node-version: '18'
 
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Build frontend
       run: npm run build:client
 
-    - name: Upload via FTP to MilesWeb
+    - name: Deploy to MilesWeb via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ftp.famechase.com
