@@ -622,7 +622,7 @@ export default function Shop() {
                         </div>
                         <div className="text-green-600 text-xs mt-1">
                           {language === "hindi"
-                            ? "तुरंत डाउनलोड • 30 दिन मनी-बैक गारंटी"
+                            ? "तुरंत डाउनलोड • 30 दिन मन��-बैक गारंटी"
                             : "Instant download • 30-day money-back guarantee"}
                         </div>
                       </div>
@@ -642,7 +642,7 @@ export default function Shop() {
                           <div className="text-sm text-blue-600 font-medium mt-2">
                             💰{" "}
                             {language === "hindi"
-                              ? "प्रोमो कोड से ��र भी छूट पाएं!"
+                              ? "प्रोमो कोड से और भी छूट पाएं!"
                               : "Get extra discount with promo codes!"}
                           </div>
                           <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-4">
@@ -734,7 +734,7 @@ export default function Shop() {
       {showPaymentForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
           <div className="bg-white rounded-2xl p-6 max-w-sm w-full max-h-[90vh] overflow-y-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">
               {currentLang.paymentForm}
             </h3>
             <div className="space-y-4 mb-6">
