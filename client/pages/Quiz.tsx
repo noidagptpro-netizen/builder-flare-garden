@@ -316,7 +316,7 @@ const languages = {
         "फिटनेस और स्वास्थ्य",
         "व्यक्तिगत वित्त और निवेश",
         "मनोरंजन और कॉमेडी",
-        "उद्यमिता और ��्यापार",
+        "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
         "कला और डिज़ाइन",
         "गेमिंग और एस्पोर्ट्स",
@@ -407,9 +407,9 @@ const languages = {
       submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिए���र संसाधन",
+      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संसाधन",
       subtitle:
-        "अपनी क्रिएटर यात्रा शुरू करने के लिए इन शक्तिशाली टूल्स क�� डाउनलोड करें",
+        "अपनी क्रिएटर यात्रा शुरू करने के लिए इन शक्तिशाली टूल्स को डाउनलोड करें",
       mediaKit: {
         title: "प्रोफेशनल मीडिया किट टेम्प्लेट",
         description: "आकर्षक मीडिया किट बनाएं जो ब्रांड्स को पसंद आएंगे",
@@ -430,7 +430,13 @@ const languages = {
 export default function Quiz() {
   const [currentStep, setCurrentStep] = useState(1);
   const [quizData, setQuizData] = useState<QuizData>(initialQuizData);
-  const [language, setLanguage] = useState<"english" | "hindi">("english");
+  const [language, setLanguage] = useState<"english" | "hindi">(() => {
+    // Get language from localStorage or URL params
+    const savedLanguage = localStorage.getItem("famechase-language");
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLanguage = urlParams.get("lang");
+    return (urlLanguage as "english" | "hindi") || (savedLanguage as "english" | "hindi") || "english";
+  });
   const [isGenerating, setIsGenerating] = useState(false);
   const [showFreeResources, setShowFreeResources] = useState(false);
   const navigate = useNavigate();
@@ -612,14 +618,14 @@ ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
-${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
+${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने ��ें विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
 ${language === "hindi" ? "स��ंख्यिकी:" : "Statistics:"}
 ${language === "hindi" ? "- फॉ���ोअर्स:" : "- Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "- प��स्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
-${language === "hindi" ? "क्या आप स���योग के अवसरों ��र ���र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
+${language === "hindi" ? "क्या आप स���योग के अवसरों पर ���र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
 ${language === "hindi" ? "धन्यवाद," : "Best regards,"}
 ${userName}
@@ -667,7 +673,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्���्लेट 4: न��गोसिएशन/काउंटर ऑफर" : "TEMPLATE 4: NEGOTIATION/COUNTER OFFER"}
+${language === "hindi" ? "टेम�����्लेट 4: न��गोसिएशन/काउंटर ऑफर" : "TEMPLATE 4: NEGOTIATION/COUNTER OFFER"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? "Re: Collaboration proposal - Let's find a win-win" : "Re: Collaboration proposal - Let's find a win-win"}
 
 ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
@@ -704,7 +710,7 @@ ${language === "hindi" ? "🎯 AUDIENCE FEEDBACK:" : "🎯 AUDIENCE FEEDBACK:"}
 ${language === "hindi" ? "• [Positive feedback examples]" : "• [Positive feedback examples]"}
 ${language === "hindi" ? "• [Questions about product]" : "• [Questions about product]"}
 
-${language === "hindi" ? "��ुझे future collaborations में interest है और आपके products को authentically promote करना पसंद ह���।" : "I'm interested in future collaborations and love authentically promoting your products."}
+${language === "hindi" ? "मुझे future collaborations में interest है और आपके products को authentically promote करना पसंद ह���।" : "I'm interested in future collaborations and love authentically promoting your products."}
 
 ${language === "hindi" ? "Thank you for trusting me!" : "Thank you for trusting me!"}
 ${userName}
@@ -761,7 +767,7 @@ ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:
 
 ${language === "hindi" ? "दिन 1-30: बुनि���ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्ताह 1:" : "Week 1:"}
-${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्तमान आवृत्ति बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
+${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्तमान आवृत्ति बन��ए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
 ${language === "hindi" ? `- ${quizData.niche} पर 10 कंटेंट आ���डिया तैयार करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्स)" : "- Research hashtags (30 hashtag mix)"}
 
@@ -780,7 +786,7 @@ ${language === "hindi" ? "- मीडिया किट तैयार कर�
 ${language === "hindi" ? "- ब्रां���्स से ���ंपर्क शुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
 
-${language === "hindi" ? "अपेक्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
+${language === "hindi" ? "अप���क्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
 ${language === "hindi" ? "- फॉलोअर ग्रोथ: 40-80%" : "- Follower Growth: 40-80%"}
 ${language === "hindi" ? "- एंगेजमेंट में सुधार: 50-100%" : "- Engagement Improvement: 50-100%"}
 ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8" : "- Brand Inquiries: 3-8"}`;
@@ -922,7 +928,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
               <h2 className="text-lg font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "अपना पूरा विश्लेषण चाहते हैं?"
+                  ? "अपना ���ूरा विश्लेषण चाहते हैं?"
                   : "Want Your Complete Analysis?"}
               </h2>
               <p className="text-gray-600 mb-6">
