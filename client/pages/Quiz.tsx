@@ -388,7 +388,7 @@ const languages = {
       ],
       goals: [
         "मासि��� आय ₹50K+ तक बढ़��ना",
-        "100K+ की authentic कम्��ु��िटी बनाना",
+        "100K+ की authentic कम्��ु��ि��ी बनाना",
         "ड्रीम ���्रांड्स ���े साथ पार्टनरशिप",
         "अपना प्��ोडक्ट/कोर्स लॉन्च करना",
         "अपनी niche मे���� go-to एक्���पर्ट बनना",
@@ -407,7 +407,7 @@ const languages = {
       submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ प��रा! यहा�� हैं आ��के मु��्त क्रिएटर संसाधन",
+      title: "🎉 क्व��ज़ प��रा! यहा�� हैं आ��के मु��्त क्रिएटर संसाधन",
       subtitle:
         "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली ट���ल्स को डाउनल���ड ���रे��",
       mediaKit: {
@@ -422,7 +422,7 @@ const languages = {
         title: "90-दिन की ग्रोथ स���ट्रैटेजी गाइड",
         description: "अपने फ��लोइंग बढ़ाने के लिए ���्टेप-बाई-स्टेप र���डमैप",
       },
-      downloadFree: "मुफ्त डाउनलोड करें",
+      downloadFree: "मुफ्त डाउन��ोड करें",
     },
   },
 };
@@ -592,7 +592,7 @@ ${language === "hindi" ? "📦 पैकेज दरें:" : "📦 PACKAGE RA
 ${language === "hindi" ? "• बेसिक पैक���ज (1 पोस्ट + 2 स्टोरी):" : "• Basic Package (1 Post + 2 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "400-800" : quizData.followerCount.includes("1K - 5K") ? "800-1,500" : "1,500-4,000"}
 ${language === "hindi" ? "• प्रीमियम पैकेज (2 पोस्ट + 1 रील + 3 स���टोरी):" : "• Premium Package (2 Posts + 1 Reel + 3 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,200-2,500" : quizData.followerCount.includes("1K - 5K") ? "2,500-4,500" : "4,500-12,000"}
 
-${language === "hindi" ? "संपर्��:" : "CONTACT:"}
+${language === "hindi" ? "संपर����:" : "CONTACT:"}
 ${language === "hindi" ? "ईमेल:" : "Email:"} ${quizData.email || "[your@email.com]"}
 ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
 - Instagram: ${quizData.socialLinks.instagram || "[Your Instagram]"}
@@ -607,7 +607,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
 
-${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
+${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्र��एटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
@@ -1046,10 +1046,10 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 {currentStep === 1 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
-                      <h2 className="text-lg font-bold text-gray-900 mb-4">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
                         Your Main Platform 📱
                       </h2>
-                      <p className="text-lg text-gray-600">
+                      <p className="text-xl text-gray-600">
                         Where do you create and share your content?
                       </p>
                     </div>
