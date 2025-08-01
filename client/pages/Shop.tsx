@@ -682,10 +682,7 @@ export default function Shop() {
                               <Download className="w-4 h-4" />
                               {currentLang.instantDownload}
                             </div>
-                            <div className="flex items-center justify-center gap-2">
-                              <CheckCircle className="w-4 h-4" />
-                              {currentLang.moneyBack}
-                            </div>
+
                           </div>
                         </div>
                       </div>
@@ -721,7 +718,7 @@ export default function Shop() {
                 className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all inline-block"
               >
                 {language === "hindi"
-                  ? "🎯 अभी प्रोफाइल बनाएं"
+                  ? "🎯 अभ�� प्रोफाइल बनाएं"
                   : "🎯 Create Profile Now"}
               </Link>
               <button
