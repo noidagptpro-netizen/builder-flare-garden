@@ -267,7 +267,7 @@ const languages = {
       5: "अनुभव और आय",
       6: "सबसे बड़ी चुनौती",
       7: "लक्ष्य",
-      8: "��ोशल लिंक्स",
+      8: "��ोशल लिंक्��",
       9: "एंगेजमेंट रेट",
     },
     questions: {
@@ -314,7 +314,7 @@ const languages = {
         "खाना और खाना बनाना",
         "यात्रा और एडवेंचर",
         "फिटनेस और स्वास्थ्य",
-        "व्यक्तिगत वित्त और निवेश",
+        "व्यक्ति���त वित्त और निवेश",
         "मनोरंजन और कॉमेडी",
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
@@ -357,7 +357,7 @@ const languages = {
         "अनियमित",
       ],
       experiences: [
-        "अभी ���ुरू किया (0-6 महीने)",
+        "अभी शुरू किया (0-6 महीने)",
         "शुरुआती (6 महीने - 1 साल)",
         "बढ़ रहे हैं (1-2 साल)",
         "अनुभवी (2-3 साल)",
@@ -383,7 +383,7 @@ const languages = {
         "💔 Monetization & Scaling: Can't convert followers into paying customers",
         "🤝 Monetization & Scaling: Not landing brand collaborations",
         "📊 Monetization & Scaling: Confused by analytics & metrics",
-        "��� Creator Wellness: Burnout & content fatigue",
+        "🥵 Creator Wellness: Burnout & content fatigue",
         "💬 Creator Wellness: Handling trolls/negativity",
         "📱 Creator Wellness: Managing too many platforms at once",
       ],
@@ -629,16 +629,16 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
 
-${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसक�� ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
+${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
-${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
+${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूर��� तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
 ${language === "hindi" ? "स��ंख्यिकी:" : "Statistics:"}
 ${language === "hindi" ? "- फॉ���ोअर्स:" : "- Followers:"} ${quizData.followerCount}
-${language === "hindi" ? "- कंटेंट ���्रकार:" : "- Content Type:"} ${quizData.contentType}
+${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "- प��स्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
 ${language === "hindi" ? "क्या आप स���योग के अवसरों पर ���र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
@@ -653,7 +653,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create कर ���कते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
+${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
@@ -726,7 +726,7 @@ ${language === "hindi" ? "🎯 AUDIENCE FEEDBACK:" : "🎯 AUDIENCE FEEDBACK:"}
 ${language === "hindi" ? "• [Positive feedback examples]" : "• [Positive feedback examples]"}
 ${language === "hindi" ? "• [Questions about product]" : "• [Questions about product]"}
 
-${language === "hindi" ? "मुझे future collaborations में interest है और आपके products को authentically promote करना पसंद ह���।" : "I'm interested in future collaborations and love authentically promoting your products."}
+${language === "hindi" ? "मुझे future collaborations म���ं interest है और आपके products को authentically promote करना पसंद ह���।" : "I'm interested in future collaborations and love authentically promoting your products."}
 
 ${language === "hindi" ? "Thank you for trusting me!" : "Thank you for trusting me!"}
 ${userName}
@@ -783,7 +783,7 @@ ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:
 
 ${language === "hindi" ? "दिन 1-30: बुनि���ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्ताह 1:" : "Week 1:"}
-${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्तमान आवृत्ति बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ा��र दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
+${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्तमान आवृत्ति बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
 ${language === "hindi" ? `- ${quizData.niche} पर 10 कंटेंट आ���डिया तैयार करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्स)" : "- Research hashtags (30 hashtag mix)"}
 
@@ -793,12 +793,12 @@ ${language === "hindi" ? "- कम्युनिटी एंगेजमें
 ${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शु���ू करें" : "- Start tracking analytics"}
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
-${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फ���कस करें (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफिक कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
+${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करें (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफिक कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
 ${language === "hindi" ? "- ट्रेंडिंग टॉपिक्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
-${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
+${language === "hindi" ? "- मीडिया किट तैया�� करें" : "- Prepare media kit"}
 ${language === "hindi" ? "- ब्रां���्स से ���ंपर्क शुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
 
@@ -1408,22 +1408,21 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
 
                 {/* Step 7: Goals */}
                 {currentStep === 7 && (
-                  <div className="space-y-8">
-                    <div className="text-center mb-8">
-                      <h2 className="text-lg font-bold text-gray-900 mb-4">
-                        Your Goals 🎯
+                  <div className="space-y-10">
+                    <div className="text-center mb-12">
+                      <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <TrendingUp className="w-10 h-10 text-white" />
+                      </div>
+                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                        Your 6-Month Goals
                       </h2>
-                      <p className="text-gray-600">
-                        What do you want to achieve in the next 6 months?
-                        (Select max 3)
+                      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                        What do you want to achieve in the next 6 months? Choose up to 3 goals that excite you most!
                       </p>
                     </div>
 
                     <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-xl">
-                        {t.questions.goals}
-                      </label>
-                      <div className="grid grid-cols-2 gap-3">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {t.options.goals.map((goal) => (
                           <button
                             key={goal}
@@ -1434,29 +1433,31 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                               !quizData.goals.includes(goal) &&
                               quizData.goals.length >= 3
                             }
-                            className={`p-4 rounded-xl border-2 text-base font-semibold transition-all duration-300 text-left ${
+                            className={`p-6 rounded-2xl border-2 text-left transition-all duration-300 hover:scale-102 ${
                               !quizData.goals.includes(goal) &&
                               quizData.goals.length >= 3
                                 ? "opacity-50 cursor-not-allowed"
                                 : ""
                             } ${
                               quizData.goals.includes(goal)
-                                ? "bg-gradient-to-r from-green-50 to-blue-50 border-green-400 text-gray-900 shadow-lg"
-                                : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
+                                ? "bg-gradient-to-r from-green-50 to-blue-50 border-green-400 text-gray-900 shadow-xl transform scale-102"
+                                : "bg-white border-gray-200 text-gray-700 hover:border-green-300 hover:shadow-lg"
                             }`}
                           >
-                            <div className="flex items-center gap-3">
+                            <div className="flex items-start gap-4">
                               {quizData.goals.includes(goal) && (
-                                <CheckCircle className="w-5 h-5 text-green-500" />
+                                <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                               )}
-                              <span>{goal}</span>
+                              <span className="text-lg font-medium leading-relaxed">{goal}</span>
                             </div>
                           </button>
                         ))}
                       </div>
-                      <p className="text-sm text-gray-600 mt-3">
-                        Selected: {quizData.goals.length} / 3 maximum
-                      </p>
+                      <div className="bg-green-50 border border-green-200 rounded-xl p-4 mt-6">
+                        <p className="text-center text-green-800 font-medium">
+                          Selected: {quizData.goals.length} / 3 maximum
+                        </p>
+                      </div>
                     </div>
                   </div>
                 )}
