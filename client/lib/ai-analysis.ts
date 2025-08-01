@@ -396,20 +396,53 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
     }
   }
 
-  // SOPHISTICATED USER-SPECIFIC NICHE ANALYSIS
+  // REAL USER-SPECIFIC NICHE ANALYSIS BASED ON ACTUAL QUIZ DATA
   if (data.niche !== "Other" && data.niche) {
     const nicheInsights = {
       "Fashion & Beauty": `💄 FASHION GOLDMINE: You're in a ₹1.2L crore market growing 25% annually! With ${data.followerCount}, you can charge ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 1.5)} per post. Fashion creators get 40% more brand deals.`,
-      Technology: `💻 TECH AUTHORITY ADVANTAGE: Tech = ₹25-50 per 1K views (vs ₹8-15 for lifestyle)! Your ${data.followerCount} in tech could generate ₹${Math.round(followerNum * 1.2)}-₹${Math.round(followerNum * 2.5)} monthly from reviews alone.`,
-      Education: `📚 EDUCATION EMPIRE POTENTIAL: Ed-tech is ₹2.8L crore growing 40% YoY! Your knowledge in ${data.niche} + course creation = ₹${Math.round(followerNum * 2)}-₹${Math.round(followerNum * 5)} monthly potential.`,
-      "Business & Finance": `���� FINANCE CREATOR PREMIUM: B2B creators earn 3x more per follower! Your expertise + ${data.followerCount} = ₹${Math.round(followerNum * 1.8)}-₹${Math.round(followerNum * 3.2)} monthly from fintech partnerships.`,
+      "Technology & AI": `💻 TECH AUTHORITY ADVANTAGE: Tech = ₹25-50 per 1K views (vs ₹8-15 for lifestyle)! Your ${data.followerCount} in tech could generate ₹${Math.round(followerNum * 1.2)}-₹${Math.round(followerNum * 2.5)} monthly from reviews alone.`,
+      "Education & Learning": `📚 EDUCATION EMPIRE POTENTIAL: Ed-tech is ₹2.8L crore growing 40% YoY! Your knowledge in ${data.niche} + course creation = ₹${Math.round(followerNum * 2)}-₹${Math.round(followerNum * 5)} monthly potential.`,
+      "Business & Finance": `💼 FINANCE CREATOR PREMIUM: B2B creators earn 3x more per follower! Your expertise + ${data.followerCount} = ₹${Math.round(followerNum * 1.8)}-₹${Math.round(followerNum * 3.2)} monthly from fintech partnerships.`,
       "Fitness & Health": `💪 FITNESS BOOM POSITIONING: Post-COVID fitness market exploded! Health creators with ${data.followerCount} average ₹${Math.round(followerNum * 1.1)}-₹${Math.round(followerNum * 2.0)} monthly from supplement brands.`,
       "Food & Cooking": `🍳 FOOD CONTENT SUPREMACY: Food gets highest engagement (8-15% vs 2-4% average)! Your ${data.followerCount} + food = ₹${Math.round(followerNum * 0.9)}-₹${Math.round(followerNum * 1.8)} from restaurant partnerships.`,
+      "Personal Finance & Investing": `💰 FINTECH PREMIUM NICHE: Personal finance creators earn 60% higher CPM rates! Your ${data.followerCount} audience + money content = ₹${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3.0)} monthly potential.`,
     };
     if (nicheInsights[data.niche as keyof typeof nicheInsights]) {
       strengths.push(nicheInsights[data.niche as keyof typeof nicheInsights]);
     }
   }
+
+  // REAL CHALLENGE-BASED INSIGHTS (from actual quiz responses)
+  data.biggestChallenge.forEach(challenge => {
+    if (challenge.includes("Low views & inconsistent engagement")) {
+      weaknesses.push("📉 Engagement Challenge: Your low views indicate algorithm or content timing issues. Focus on posting during peak hours (7-9 PM) and using trending hashtags.");
+    }
+    if (challenge.includes("Can't convert followers into paying customers")) {
+      weaknesses.push("💸 Monetization Gap: With your current follower count, you should be earning more. Consider creating clear calls-to-action and valuable lead magnets.");
+    }
+    if (challenge.includes("Algorithm changes killing reach")) {
+      weaknesses.push("⚡ Platform Dependency Risk: Over-reliance on one platform's algorithm is risky. Your current strategy needs diversification across multiple platforms.");
+    }
+    if (challenge.includes("Not landing brand collaborations")) {
+      weaknesses.push("🤝 Brand Partnership Challenge: Your follower count suggests collaboration potential. Focus on creating a professional media kit and targeted outreach.");
+    }
+  });
+
+  // REAL GOAL-BASED OPPORTUNITIES (from actual quiz responses)
+  data.goals.forEach(goal => {
+    if (goal.includes("Earn ₹25K/50K/1L+ per month")) {
+      opportunities.push(`💰 HIGH INCOME POTENTIAL: With ${data.followerCount} followers in ${data.niche}, earning ₹${goal.split('₹')[1]} monthly is achievable through strategic brand partnerships and product sales.`);
+    }
+    if (goal.includes("Get Brand Collaborations")) {
+      opportunities.push(`🤝 BRAND PARTNERSHIP READINESS: Your ${data.followerCount} audience size puts you in the sweet spot for brand collaborations. Start reaching out to 20-30 relevant brands monthly.`);
+    }
+    if (goal.includes("Create Viral Content")) {
+      opportunities.push(`🚀 VIRAL CONTENT STRATEGY: Your ${data.contentType} format has high viral potential. Focus on trending topics in ${data.niche} and post during peak engagement hours.`);
+    }
+    if (goal.includes("Launch my own product/course")) {
+      opportunities.push(`📚 PRODUCT LAUNCH OPPORTUNITY: Your ${data.niche} expertise + ${data.followerCount} audience = perfect product launch potential. Consider digital courses or consulting services.`);
+    }
+  });
 
   // PERSONAL COMBINATION STRENGTHS
   if (
@@ -523,7 +556,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
       data.city.toLowerCase().includes("bangalore"))
   ) {
     opportunities.push(
-      `🏙��� Tier-1 city advantage! ${data.city} has 5x more brand activation events and collaboration opportunities than other cities.`,
+      `🏙️ Tier-1 city advantage! ${data.city} has 5x more brand activation events and collaboration opportunities than other cities.`,
     );
   }
 
@@ -1092,7 +1125,7 @@ const calculateGrowthPotential = (
     "Converting followers",
     "ल���ातार व्यूज",
     "एनालिटिक्स",
-    "फॉलोअर्स को पेइंग क��्टमर",
+    "फॉलोअर्स को पेइंग कस्टमर",
   ];
   if (
     data.biggestChallenge.some((challenge) =>
