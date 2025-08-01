@@ -267,7 +267,7 @@ const languages = {
       5: "अनुभव और आय",
       6: "सबसे बड़ी चुनौती",
       7: "लक्ष्य",
-      8: "सोशल लिंक्स",
+      8: "��ोशल लिंक्स",
       9: "एंगेजमेंट रेट",
     },
     questions: {
@@ -281,7 +281,7 @@ const languages = {
       experience:
         "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया ��ै)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
-      engagementRate: "आपकी औसत एंगेजमेंट रेट क्या है?",
+      engagementRate: "आपक��� औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
         "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क��या हैं? (अधिकतम 3 चुनें)",
       goals:
@@ -607,7 +607,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
 
-${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ��्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
+${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
@@ -649,7 +649,7 @@ ${language === "hindi" ? "Dear [Brand Name]," : "Dear [Brand Name],"}
 
 ${language === "hindi" ? "आपकी interest ��े लिए धन्यवाद! यहां मे��े collaboration packages हैं:" : "Thank you for your interest! Here are my collaboration packages:"}
 
-${language === "hindi" ? "📸 सिंगल पोस्ट: ₹[आपकी rate]" : "📸 Single Post: ₹[Your rate]"}
+${language === "hindi" ? "📸 सिंगल ��ोस्ट: ₹[आपकी rate]" : "📸 Single Post: ₹[Your rate]"}
 ${language === "hindi" ? "• 1 feed post with your product" : "• 1 feed post with your product"}
 ${language === "hindi" ? "• 24-hour story promotion" : "• 24-hour story promotion"}
 ${language === "hindi" ? "• Professional photography" : "• Professional photography"}
@@ -1008,10 +1008,10 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
       <main ref={quizContentRef} className="container mx-auto px-4 py-4">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
               {t.title}
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-2xl md:text-3xl text-gray-600 leading-relaxed">
               {t.subtitle}
             </p>
 
