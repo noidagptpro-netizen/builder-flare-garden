@@ -245,28 +245,30 @@ const languages = {
   },
   hindi: {
     title: "क्रिएटर सक्सेस क्विज़",
-    subtitle: "3 मिनट में अपनी व्यक्तिगत ग्रोथ रणन��ति पाएं",
+    subtitle: "3 मिनट में अपनी व्यक्तिग��� ग्रोथ रणनीति पाएं",
     steps: {
-      1: "प्ले��फॉर्म और फॉलोअर्स",
-      2: "कंटेंट नि���",
+      1: "प्लेटफॉर्म और फॉलोअर्स",
+      2: "कंटेंट निच",
       3: "कंटेंट प्रकार",
       4: "पोस्टिंग आवृत्ति",
       5: "अनुभव और आय",
       6: "सबसे बड़ी चुनौती",
       7: "लक्ष्य",
       8: "सोशल लिंक्स",
+      9: "एंगेजमेंट रेट",
     },
     questions: {
       primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
-        "आप और कौन से प्लेटफॉर्म का उपयो�� करते हैं? (कई विकल्प ���ुनें)",
+        "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
       niche: "आपका कंटेंट किस विषय पर है?",
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
-        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका ��पने अनुभव किया है)",
+        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
+      engagementRate: "आपकी औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
         "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क्या हैं? (अधिकतम 3 चुनें)",
       goals:
@@ -277,7 +279,7 @@ const languages = {
     options: {
       platforms: [
         "���ंस्टाग्राम",
-        "यूट्यूब",
+        "यू���्यूब",
         "लिंक्डइन",
         "टिकटॉक",
         "ट्विटर",
@@ -308,10 +310,10 @@ const languages = {
         "संगीत और नृत्य",
         "शिक्षा और सीखना",
         "खेल और एथलेटिक्स",
-        "प्रेरणा और स्व-सहायता",
+        "���्रेरणा और स्व-सहायता",
         "पेरेंटिंग और परिवार",
         "DIY और श���ल्प",
-        "आध्यात्म और माइंडफ���ल���ेस",
+        "आध्यात्म और माइंडफ����ल���ेस",
         "अन्य",
       ],
       contentTypes: [
@@ -363,7 +365,7 @@ const languages = {
         "कई ���्लेटफॉर्म को efficiently मैनेज करना",
       ],
       goals: [
-        "मासि��� आय ₹50K+ तक बढ़ाना",
+        "मासि��� आय ₹50K+ तक बढ़��ना",
         "100K+ की authentic कम्��ु��िटी बनाना",
         "ड्रीम ���्रांड्स ���े साथ पार्टनरशिप",
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
@@ -593,7 +595,7 @@ ${language === "hindi" ? "- फॉ���ोअर्स:" : "- Followers:"} $
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "- प��स्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
-${language === "hindi" ? "क्या आप सहयोग के अवसरों पर चर��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
+${language === "hindi" ? "क्या आप स���योग के अवसरों पर चर��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
 ${language === "hindi" ? "धन्यवाद," : "Best regards,"}
 ${userName}
@@ -607,7 +609,7 @@ ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [C
 
 ${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा था। मुझे लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
-${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post को [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
+${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
 ${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule कर सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
 
@@ -797,7 +799,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
               >
                 <option value="english">English</option>
-                <option value="hindi">हिंदी</option>
+                <option value="hindi">���िंदी</option>
               </select>
             </div>
           </div>
@@ -901,7 +903,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
               </h2>
               <p className="text-gray-600 mb-6">
                 {language === "hindi"
-                  ? "व्यक्तिगत SWOT विश्लेषण, विका��� रणनीति, और प्र��मियम टूल्स के साथ अपनी क्रिएटर यात्रा को तेज़ी से आगे बढ़ाएं।"
+                  ? "व्यक्तिगत SWOT विश्लेषण, विका��� रणनीति, और प्र��मियम टूल्स के साथ अपनी क्रिएटर यात्���ा को तेज़ी से आगे बढ़ाएं।"
                   : "Get personalized SWOT analysis, growth strategy, and premium tools to accelerate your creator journey."}
               </p>
               <button
