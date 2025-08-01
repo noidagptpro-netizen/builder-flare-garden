@@ -91,6 +91,16 @@ export default function Shop() {
     }
   }, []);
 
+  // Save language preference
+  useEffect(() => {
+    localStorage.setItem("famechase-language", language);
+  }, [language]);
+
+  // Auto-scroll to top when component mounts (for proper navigation)
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   // Countdown timer effect
   useEffect(() => {
     const timer = setInterval(() => {
@@ -256,7 +266,7 @@ export default function Shop() {
       limited: "सीमि�� समय",
       offerEnds: "ऑफर समाप���त होता है",
       downloads: "ड��उ���लोड",
-      rating: "रेट���ंग",
+      rating: "रेटिंग",
       securePayment: "सुरक्षित भुगतान",
       instantDownload: "तुरंत डाउनलोड",
       buyNow: "अभी खरीदें",
@@ -275,7 +285,7 @@ export default function Shop() {
       downloadYourProducts: "अपने प्रोडक्ट्स डाउनलोड करें",
       purchaseSuccess: "खरीदारी सफल! 🎉",
       thanksForPurchase:
-        "आपकी खरीदारी के ���िए धन्यवा���! आपके प्रोडक्ट्स डाउनलोड के लिए ���ैयार ���ैं।",
+        "आपकी खरीदारी के ���िए धन्यवा���! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार ���ैं।",
       backToShop: "शॉप पर वापस जाएं",
     },
   };
@@ -802,7 +812,7 @@ export default function Shop() {
               <div className="border-t pt-4">
                 <label className="block text-sm font-medium text-gray-700 mb-2">
                   {language === "hindi"
-                    ? "प्रोमो कोड (वैकल्पिक)"
+                    ? "प्रोमो कोड (वैकल���पिक)"
                     : "Promo Code (Optional)"}
                 </label>
                 <div className="flex gap-2">
