@@ -268,10 +268,10 @@ const languages = {
       6: "सबसे बड़ी चुनौती",
       7: "लक्ष्य",
       8: "��ोशल लिंक्स",
-      9: "एंगेज��ेंट रेट",
+      9: "एंगेजमेंट रेट",
     },
     questions: {
-      primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
+      primaryPlatform: "आप मुख्यतः किस प्ले���फॉर्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
@@ -311,10 +311,10 @@ const languages = {
       niches: [
         "फैशन और ब्यूटी",
         "टेक्नोलॉजी और AI",
-        "खाना और खाना बनान���",
+        "खाना और खाना बनाना",
         "यात्रा और एडवेंचर",
-        "फिटनेस और स्वास्थ्य",
-        "व्यक्तिगत वित्त और निव��श",
+        "फिटनेस और स्वास्थ��य",
+        "व्यक्तिगत वित्त और निवेश",
         "मनोरंजन और कॉमेडी",
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
@@ -344,7 +344,7 @@ const languages = {
         "लंबे वीडियो",
         "लाइव स्ट्रीम",
         "स्टोरीज़",
-        "लिखित पोस्���",
+        "लिखित पोस्ट",
         "पॉडकास्ट",
         "मिश्रित कंटेंट",
       ],
@@ -379,7 +379,7 @@ const languages = {
         "🧍‍♀️ Growth & Engagement: Competing with bigger creators",
         "🗣️ Brand & Identity: Struggling to find my unique voice/style",
         "🤝 Brand & Identity: Balancing authenticity with brand appeal",
-        "🌱 Brand & Identity: Building a real, connected community",
+        "�� Brand & Identity: Building a real, connected community",
         "💔 Monetization & Scaling: Can't convert followers into paying customers",
         "🤝 Monetization & Scaling: Not landing brand collaborations",
         "📊 Monetization & Scaling: Confused by analytics & metrics",
@@ -407,7 +407,7 @@ const languages = {
       submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संसाधन",
+      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर ���ंसाधन",
       subtitle:
         "अपनी क्रिएटर यात्रा शुरू करने के लिए इन शक्तिशाली टूल्स को डाउनलोड करें",
       mediaKit: {
@@ -632,7 +632,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] �
 ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
-${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते ह���ं" : "- Your products align perfectly with my audience"}
+${language === "hindi" ? "- आपके उत्पाद मेरे दर��शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
@@ -648,8 +648,8 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्��्लेट 2: फॉलो-���प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
-${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
+${language === "hindi" ? "टेम्प्लेट 2: फॉलो-���प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
+${language === "hindi" ? "विष��:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
@@ -664,7 +664,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 3: रेट कार्ड प्रेजेंटेशन" : "TEMPLATE 3: RATE CARD PRESENTATION"}
+${language === "hindi" ? "टेम्प्लेट 3: रेट कार्ड प्रेजेंटे���न" : "TEMPLATE 3: RATE CARD PRESENTATION"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} - Collaboration rates & packages` : `${userName} - Collaboration rates & packages`}
 
 ${language === "hindi" ? "Dear [Brand Name]," : "Dear [Brand Name],"}
@@ -696,7 +696,7 @@ ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
 ${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
 
-${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate क�� slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
+${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
 ${language === "hindi" ? "• मेरी audience क�� [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
@@ -710,7 +710,7 @@ ${userName}
 ---
 
 ${language === "hindi" ? "टेम्प्लेट 5: परफॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
-${language === "hindi" ? "व��षय:" : "Subject:"} ${language === "hindi" ? `${userName} x [Brand] - Campaign Performance Report` : `${userName} x [Brand] - Campaign Performance Report`}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} x [Brand] - Campaign Performance Report` : `${userName} x [Brand] - Campaign Performance Report`}
 
 ${language === "hindi" ? "Dear [Brand Team]," : "Dear [Brand Team],"}
 
@@ -726,7 +726,7 @@ ${language === "hindi" ? "🎯 AUDIENCE FEEDBACK:" : "🎯 AUDIENCE FEEDBACK:"}
 ${language === "hindi" ? "• [Positive feedback examples]" : "• [Positive feedback examples]"}
 ${language === "hindi" ? "• [Questions about product]" : "• [Questions about product]"}
 
-${language === "hindi" ? "मुझे future collaborations में interest है और आ��के products को authentically promote करना पसंद ह���।" : "I'm interested in future collaborations and love authentically promoting your products."}
+${language === "hindi" ? "मुझे future collaborations में interest है और आपके products को authentically promote करना पसंद ह���।" : "I'm interested in future collaborations and love authentically promoting your products."}
 
 ${language === "hindi" ? "Thank you for trusting me!" : "Thank you for trusting me!"}
 ${userName}
@@ -742,7 +742,7 @@ ${language === "hindi" ? "हमा��े successful collaboration के ब
 
 ${language === "hindi" ? "🤝 PROPOSED PARTNERSHIP:" : "🤝 PROPOSED PARTNERSHIP:"}
 ${language === "hindi" ? "��� Monthly content creation" : "• Monthly content creation"}
-${language === "hindi" ? "• Product launches coverage" : "��� Product launches coverage"}
+${language === "hindi" ? "• Product launches coverage" : "• Product launches coverage"}
 ${language === "hindi" ? "• Event participation" : "• Event participation"}
 ${language === "hindi" ? "• Brand ambassadorship" : "• Brand ambassadorship"}
 
@@ -788,8 +788,8 @@ ${language === "hindi" ? `- ${quizData.niche} पर 10 कंटेंट आ�
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्स)" : "- Research hashtags (30 hashtag mix)"}
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
-${language === "hindi" ? "- ��ंटरैक्टिव कंटेंट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
-${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोकस करें" : "- Focus on community engagement"}
+${language === "hindi" ? "- इंटरैक्टिव कंटेंट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
+${language === "hindi" ? "- कम्��ुनिटी एंगेजमेंट फोकस करें" : "- Focus on community engagement"}
 ${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शु���ू करें" : "- Start tracking analytics"}
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
@@ -899,22 +899,31 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 </button>
               </div>
 
-              {/* Email Templates */}
-              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-neon-green transition-colors">
+              {/* Email Templates - FREE VERSION */}
+              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-neon-green transition-colors relative">
+                <div className="absolute top-4 right-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold">
+                  FREE STARTER
+                </div>
                 <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Mail className="w-8 h-8 text-green-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {t.freeResources.emailTemplates.title}
+                  Basic Email Templates (6)
                 </h3>
-                <p className="text-gray-600 mb-6">
-                  {t.freeResources.emailTemplates.description}
+                <p className="text-gray-600 mb-4">
+                  Essential outreach templates to get you started with brand partnerships
                 </p>
+                <div className="text-sm text-gray-500 mb-4">
+                  ✓ 6 basic email templates<br/>
+                  ✓ Follow-up examples<br/>
+                  ✗ No A/B tested versions<br/>
+                  ✗ No industry-specific templates
+                </div>
                 <button
                   onClick={() =>
                     generateDownload(
                       "emailTemplates",
-                      `Brand_Outreach_Templates_${language}.txt`,
+                      `Basic_Email_Templates_${language}.txt`,
                     )
                   }
                   className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all"
