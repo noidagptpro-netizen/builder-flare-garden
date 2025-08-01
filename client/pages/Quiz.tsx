@@ -271,7 +271,7 @@ const languages = {
       9: "एंगेजमेंट रेट",
     },
     questions: {
-      primaryPlatform: "आप मुख्यतः किस प्ले���फॉर्म पर कंटेंट बनाते हैं?",
+      primaryPlatform: "आप मुख्यतः किस प्लेटफॉ��्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
@@ -313,7 +313,7 @@ const languages = {
         "टेक्नोलॉजी और AI",
         "खाना और खाना बनाना",
         "यात्रा और एडवेंचर",
-        "फिटनेस और स्वास्थ��य",
+        "फिटनेस और स्वास्थ्य",
         "व्यक्तिगत वित्त और निवेश",
         "मनोरंजन और कॉमेडी",
         "उद्यमिता और व्यापार",
@@ -349,7 +349,7 @@ const languages = {
         "मिश्रित कंटेंट",
       ],
       frequencies: [
-        "रोज़ाना",
+        "���ोज़ाना",
         "सप्ताह में 3-4 बार",
         "साप्ताहिक",
         "महीने में 2-3 बार",
@@ -379,7 +379,7 @@ const languages = {
         "🧍‍♀️ Growth & Engagement: Competing with bigger creators",
         "🗣️ Brand & Identity: Struggling to find my unique voice/style",
         "🤝 Brand & Identity: Balancing authenticity with brand appeal",
-        "�� Brand & Identity: Building a real, connected community",
+        "🌱 Brand & Identity: Building a real, connected community",
         "💔 Monetization & Scaling: Can't convert followers into paying customers",
         "🤝 Monetization & Scaling: Not landing brand collaborations",
         "📊 Monetization & Scaling: Confused by analytics & metrics",
@@ -407,7 +407,7 @@ const languages = {
       submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर ���ंसाधन",
+      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संस��धन",
       subtitle:
         "अपनी क्रिएटर यात्रा शुरू करने के लिए इन शक्तिशाली टूल्स को डाउनलोड करें",
       mediaKit: {
@@ -591,7 +591,7 @@ Optimal zoom: 150-200% for comfortable reading.
 ${language === "hindi" ? "व्यक्ति���त जानकारी:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
-${language === "hindi" ? "प्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
+${language === "hindi" ? "प्��े���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "����ॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
 
 ${language === "hindi" ? "सांख्यिकी और दर��ं:" : "STATISTICS & RATES:"}
@@ -632,7 +632,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] �
 ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
-${language === "hindi" ? "- आपके उत्पाद मेरे दर��शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
+${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
@@ -649,7 +649,7 @@ ${userName}
 ---
 
 ${language === "hindi" ? "टेम्प्लेट 2: फॉलो-���प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
-${language === "hindi" ? "विष��:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
@@ -664,7 +664,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 3: रेट कार्ड प्रेजेंटे���न" : "TEMPLATE 3: RATE CARD PRESENTATION"}
+${language === "hindi" ? "टेम्प्लेट 3: रेट कार्ड प्रेजेंटेशन" : "TEMPLATE 3: RATE CARD PRESENTATION"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} - Collaboration rates & packages` : `${userName} - Collaboration rates & packages`}
 
 ${language === "hindi" ? "Dear [Brand Name]," : "Dear [Brand Name],"}
@@ -789,7 +789,7 @@ ${language === "hindi" ? "- हैशटैग रिसर्च करें (
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटेंट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
-${language === "hindi" ? "- कम्��ुनिटी एंगेजमेंट फोकस करें" : "- Focus on community engagement"}
+${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोकस करें" : "- Focus on community engagement"}
 ${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शु���ू करें" : "- Start tracking analytics"}
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
@@ -933,22 +933,31 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 </button>
               </div>
 
-              {/* Growth Strategy */}
-              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-neon-green transition-colors">
+              {/* Growth Strategy - FREE VERSION */}
+              <div className="bg-white border-2 border-gray-200 rounded-2xl p-8 hover:border-neon-green transition-colors relative">
+                <div className="absolute top-4 right-4 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold">
+                  FREE STARTER
+                </div>
                 <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                   <Target className="w-8 h-8 text-purple-600" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
-                  {t.freeResources.growthGuide.title}
+                  Basic Growth Guide (30-Day)
                 </h3>
-                <p className="text-gray-600 mb-6">
-                  {t.freeResources.growthGuide.description}
+                <p className="text-gray-600 mb-4">
+                  Simple 30-day action plan to get you started on your growth journey
                 </p>
+                <div className="text-sm text-gray-500 mb-4">
+                  ✓ 30-day basic plan<br/>
+                  ✓ General growth tips<br/>
+                  ✗ No personalized strategy<br/>
+                  ✗ No platform-specific tactics
+                </div>
                 <button
                   onClick={() =>
                     generateDownload(
                       "growthStrategy",
-                      `90_Day_Growth_Strategy_${language}.txt`,
+                      `Basic_Growth_Guide_${language}.txt`,
                     )
                   }
                   className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all"
