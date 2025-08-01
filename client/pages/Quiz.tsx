@@ -271,7 +271,7 @@ const languages = {
       9: "एंगेजमेंट रेट",
     },
     questions: {
-      primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
+      primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म प��� कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्ल��टफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
@@ -409,7 +409,7 @@ const languages = {
     freeResources: {
       title: "🎉 क्विज़ प��रा! यहा�� हैं आ��के मु��्त क्रिएटर संसाधन",
       subtitle:
-        "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली ट���ल्स को डाउनलोड ���रे��",
+        "अपनी क्रिएटर यात्रा शुरू करने के लिए इ�� शक्तिशाली ट���ल्स को डाउनल���ड ���रे��",
       mediaKit: {
         title: "प्रोफेशनल मीडिया किट टेम्प्लेट",
         description: "आकर����षक मीडिया किट बनाएं जो ब्रांड्स को पसंद आएंगे",
@@ -477,6 +477,8 @@ export default function Quiz() {
         return quizData.goals.length > 0;
       case 8:
         return true; // Optional step
+      case 9:
+        return quizData.engagementRate; // Engagement rate step
       default:
         return false;
     }
@@ -584,7 +586,7 @@ ${language === "hindi" ? "Instagram Story:" : "Instagram Story:"} ₹${quizData.
 ${language === "hindi" ? "YouTube शॉर्ट:" : "YouTube Short:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "YouTube वीडियो मेंशन:" : "YouTube Video Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-2,000" : quizData.followerCount.includes("1K - 5K") ? "2,000-3,000" : "3,000-8,000"}
 ${language === "hindi" ? "Twitter पोस्ट:" : "Twitter Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-200" : quizData.followerCount.includes("1K - 5K") ? "200-400" : "400-1,000"}
-${language === "hindi" ? "Newsletter मेंशन:" : "Newsletter Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-2,500"}
+${language === "hindi" ? "Newsletter मेंश��:" : "Newsletter Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-2,500"}
 
 ${language === "hindi" ? "📦 पैकेज दरें:" : "📦 PACKAGE RATES:"}
 ${language === "hindi" ? "• बेसिक पैक���ज (1 पोस्ट + 2 स्टोरी):" : "• Basic Package (1 Post + 2 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "400-800" : quizData.followerCount.includes("1K - 5K") ? "800-1,500" : "1,500-4,000"}
@@ -617,7 +619,7 @@ ${language === "hindi" ? "- फॉ���ोअर्स:" : "- Followers:"} $
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "- प��स्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
-${language === "hindi" ? "क्या आप स���योग के अवसरों पर चर��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
+${language === "hindi" ? "क्या आप स���योग के अवसरों पर ���र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
 ${language === "hindi" ? "धन्यवाद," : "Best regards,"}
 ${userName}
@@ -652,7 +654,7 @@ ${language === "hindi" ? "• 1 feed post with your product" : "• 1 feed post 
 ${language === "hindi" ? "• 24-hour story promotion" : "• 24-hour story promotion"}
 ${language === "hindi" ? "• Professional photography" : "• Professional photography"}
 
-${language === "hindi" ? "📱 स्ट���री पैकेज: ₹[आपकी rate]" : "📱 Story Package: ₹[Your rate]"}
+${language === "hindi" ? "📱 स्ट���री पैक���ज: ₹[आपकी rate]" : "📱 Story Package: ��[Your rate]"}
 ${language === "hindi" ? "• 3-5 story slides" : "• 3-5 story slides"}
 ${language === "hindi" ? "• Behind-the-scenes content" : "• Behind-the-scenes content"}
 
