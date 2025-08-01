@@ -260,8 +260,8 @@ const languages = {
     title: "क्रिएटर सक्सेस क्विज़",
     subtitle: "3 मिनट में अपनी व्यक्तिगत ग्रोथ रणनीति पाएं",
     steps: {
-      1: "प्लेटफॉर्म और फॉलोअर्स",
-      2: "कंट��ंट निच",
+      1: "प्लेटफॉर्म और फॉलो���र्स",
+      2: "कंटेंट निच",
       3: "कंटेंट प्रकार",
       4: "पोस्टिंग आवृत्ति",
       5: "अनुभव और आय",
@@ -279,7 +279,7 @@ const languages = {
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
-        "आप कितने समय से कंटेंट बना रहे है���? (सभी स्तर चुनें जिनका आपने अनुभव किया ��ै)",
+        "आप कितने समय से कं��ेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया ��ै)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       engagementRate: "आपक��� औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
@@ -364,7 +364,7 @@ const languages = {
         "विशेषज्ञ (3+ स���ल)",
       ],
       incomes: [
-        "₹0 (अभी ���क कोई आय नहीं)",
+        "₹0 (अभी ��क कोई आय नहीं)",
         "₹1-5K",
         "₹5K-15K",
         "₹15K-30K",
@@ -373,18 +373,19 @@ const languages = {
         "₹1L+",
       ],
       challenges: [
-        "लगातार �����्यूज और एंगेजमेंट पाना",
-        "अपनी यूनीक आवाज़/स्टा��ल खोजना",
-        "एल्गोरिदम बदलाव से पहुंच में कमी",
-        "ऑथेंटिसिटी और ब्रांड अपील का सं���ुलन",
-        "बड़े क्���िएटर्स से कॉम्पिटिशन",
-        "फॉलोअर्स को पेइंग कस्टमर बनाना",
-        "नेगेटिव कमेंट्स/ट्रोल्स से निपटना",
-        "बर्न���उट और कंटेंट थकान",
-        "एनालिटिक्�� और मेट्रिक्स स����झना",
-        "स���्ची कम्युनिटी बनाना",
-        "ट्रेंड्स के साथ रिलेवेंट रहना",
-        "कई ���्लेटफ��र्म ���ो efficiently मैनेज करना",
+        "🔄 Growth & Engagement: Low views & inconsistent engagement",
+        "🧠 Growth & Engagement: Staying relevant with fast-moving trends",
+        "🔁 Growth & Engagement: Algorithm changes killing reach",
+        "🧍‍♀️ Growth & Engagement: Competing with bigger creators",
+        "🗣️ Brand & Identity: Struggling to find my unique voice/style",
+        "🤝 Brand & Identity: Balancing authenticity with brand appeal",
+        "🌱 Brand & Identity: Building a real, connected community",
+        "💔 Monetization & Scaling: Can't convert followers into paying customers",
+        "🤝 Monetization & Scaling: Not landing brand collaborations",
+        "📊 Monetization & Scaling: Confused by analytics & metrics",
+        "🥵 Creator Wellness: Burnout & content fatigue",
+        "💬 Creator Wellness: Handling trolls/negativity",
+        "📱 Creator Wellness: Managing too many platforms at once",
       ],
       goals: [
         "मासि��� आय ₹50K+ तक बढ़��ना",
@@ -577,7 +578,7 @@ ${language === "hindi" ? "कंटेंट प्रकार:" : "Content Typ
 ${language === "hindi" ? "पोस्टिंग आवृत्ति:" : "Posting Frequency:"} ${quizData.postingFrequency}
 ${language === "hindi" ? "मासिक आ��:" : "Monthly Income:"} ${quizData.monthlyIncome}
 
-${language === "hindi" ? "सुझावित ���रें (भारतीय बाजार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
+${language === "hindi" ? "सुझावित दरें (भारतीय बाजार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
 
 ${language === "hindi" ? "📱 प्लेटफॉर्म दरें:" : "��� PLATFORM RATES:"}
 ${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-3,000"}
@@ -607,7 +608,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
 
-${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटे���ट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
+${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ����्स ��ैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
@@ -631,7 +632,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा था। मु���े लगता है क��� हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
+${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
@@ -672,7 +673,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
+${language === "hindi" ? "���पके proposal के लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
 
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
@@ -772,7 +773,7 @@ ${language === "hindi" ? "- एनालिटिक्स ट्रैक क�
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
 ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करें (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफिक कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
-${language === "hindi" ? "- ट्रेंडिंग टॉपिक्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
+${language === "hindi" ? "- ट्रेंडिंग टॉपिक��स पर कंटेंट बनाएं" : "- Create content on trending topics"}
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
@@ -782,7 +783,7 @@ ${language === "hindi" ? "- ईमेल लिस्ट बनाना शु�
 
 ${language === "hindi" ? "अपेक्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
 ${language === "hindi" ? "- फॉलोअर ग्रोथ: 40-80%" : "- Follower Growth: 40-80%"}
-${language === "hindi" ? "- ए���गेजमेंट में सुधार: 50-100%" : "- Engagement Improvement: 50-100%"}
+${language === "hindi" ? "- एंगेजमेंट में सुधार: 50-100%" : "- Engagement Improvement: 50-100%"}
 ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8" : "- Brand Inquiries: 3-8"}`;
     }
 
