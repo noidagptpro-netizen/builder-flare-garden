@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   ArrowRight,
   Users,
@@ -8,11 +9,408 @@ import {
   TrendingUp,
   Target,
   DollarSign,
+  Globe,
+  Mail,
+  Shield,
+  FileText,
+  Phone,
+  MapPin,
+  Clock,
+  X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import ExpandableFooter from "../components/ExpandableFooter";
+
+interface Language {
+  code: "english" | "hindi";
+  name: string;
+}
+
+const languages: Language[] = [
+  { code: "english", name: "English" },
+  { code: "hindi", name: "हिंदी" },
+];
+
+const translations = {
+  english: {
+    header: {
+      takeQuiz: "Take Quiz",
+      shop: "Shop",
+      getStartedFree: "Get Started Free",
+    },
+    hero: {
+      badge: "🏆 India's #1 Growth platform for Creators & Marketers - 10,000+ Success Stories",
+      title: "Transform Your Content Into",
+      titleHighlight: "₹50K+ Monthly Income",
+      subtitle: "Get your personalized Creator Growth Kit, Professional Media Kit, and AI-powered strategy in just 3 minutes.",
+      proofPoints: ["100% Free Analysis", "Instant Download", "Real Business Tools"],
+      ctaPrimary: "Start Your Creator Quiz Now",
+      ctaSecondary: "Browse Creator Tools",
+      stats: {
+        creators: "10,000+",
+        creatorsLabel: "Creators Helped",
+        successRate: "98%",
+        successRateLabel: "Success Rate",
+        rating: "4.9/5",
+        ratingLabel: "Rating",
+      },
+    },
+    whatYouGet: {
+      title: "What You Get Instantly",
+      subtitle: "Complete your quiz and get immediate access to professional tools worth ₹10,000+ absolutely free",
+      deliverables: {
+        fameScore: {
+          title: "Personalized Fame Score",
+          description: "AI-powered analysis of your content, audience, and growth potential with actionable insights.",
+          badge: "✓ Instant PDF Report",
+        },
+        mediaKit: {
+          title: "Professional Media Kit",
+          description: "Custom-designed media kit template with your stats, audience demographics, and rate cards.",
+          badge: "✓ Editable Template",
+        },
+        growthStrategy: {
+          title: "Growth Strategy Plan",
+          description: "3-month action plan with content ideas, posting schedule, and monetization roadmap.",
+          badge: "✓ Step-by-step Guide",
+        },
+      },
+      premiumUpgrade: {
+        badge: "🚀 UPGRADE TO PRO",
+        title: "Complete Creator Business Kit - ₹497",
+        subtitle: "Everything you need to turn your content into a profitable business",
+        features: ["30+ Email Templates", "Live Profile Page", "Analytics Dashboard", "Priority Support"],
+        cta: "Start Free Quiz & Unlock Pro",
+      },
+    },
+    howItWorks: {
+      title: "How It Works",
+      subtitle: "From unknown creator to income earner in 3 simple steps",
+      steps: [
+        {
+          number: "1",
+          title: "📝 Complete Quiz (3 mins)",
+          description: "Answer questions about your content, audience, goals, and current challenges. Our AI analyzes everything.",
+        },
+        {
+          number: "2",
+          title: "🔍 Get Instant Analysis",
+          description: "Receive your Fame Score, personalized growth strategy, and professional tools immediately.",
+        },
+        {
+          number: "3",
+          title: "💰 Start Earning Today",
+          description: "Use your media kit and outreach templates to land your first paid collaboration within 30 days.",
+        },
+      ],
+      cta: "Start Your Creator Journey Now",
+      ctaSubtext: "Join 10,000+ creators who've transformed their passion into profit",
+    },
+    successStories: {
+      title: "Creator Success Stories",
+      subtitle: "Real creators, real results, real income growth",
+      stories: [
+        {
+          name: "Ananya Sharma",
+          role: "Beauty Creator",
+          avatar: "A",
+          testimonial: "Using the professional media kit template, I secured my first brand collaboration within 2 weeks. The pricing guide helped me negotiate ₹35K for a single post.",
+          result: "+₹35K first brand deal",
+        },
+        {
+          name: "Vikash Malhotra",
+          role: "Tech Reviewer",
+          avatar: "V",
+          testimonial: "The growth strategy helped me understand my audience better. I optimized my content using the insights and grew from 5K to 25K followers in 4 months.",
+          result: "+20K followers in 4 months",
+        },
+        {
+          name: "Meera Singh",
+          role: "Lifestyle Blogger",
+          avatar: "M",
+          testimonial: "The email templates were game-changers. I used them to reach out to 50 brands and got responses from 12. Now I have consistent monthly collaborations.",
+          result: "+12 active brand partnerships",
+        },
+      ],
+    },
+    finalCta: {
+      title: "Ready to Turn Your Content Into Consistent Income?",
+      subtitle: "Join thousands of creators who've built successful businesses using our proven framework",
+      cta: "Get Your Free Creator Kit Now",
+      benefits: ["✓ 100% Free Forever", "✓ Instant Access", "✓ No Credit Card Required"],
+    },
+    footer: {
+      description: "Empowering creators to build profitable businesses",
+      links: ["Take Quiz", "Shop", "Results"],
+      copyright: "© 2025 FameChase.com. All rights reserved. | Built for creators, by creators.",
+      legal: {
+        about: "About FameChase",
+        contact: "Contact Us",
+        privacy: "Privacy Policy",
+        terms: "Terms & Conditions",
+      },
+    },
+  },
+  hindi: {
+    header: {
+      takeQuiz: "क्विज़ लें",
+      shop: "खरीदारी",
+      getStartedFree: "मुफ़्त शुरुआत करें",
+    },
+    hero: {
+      badge: "🏆 भारत का #1 क्रिएटर्स और मार्केटर्स के लिए ग्रोथ प्लेटफॉर्म - 10,000+ सफलता की कहानियां",
+      title: "अपने कंटेंट को बदलें",
+      titleHighlight: "₹50K+ मासिक आय में",
+      subtitle: "केवल 3 मिनट में अपना व्यक्तिगत क्रिएटर ग्रोथ किट, प्रोफेशनल मीडिया किट, और AI-powered रणनीति प्राप्त करें।",
+      proofPoints: ["100% मुफ्त विश्लेषण", "तुरंत डाउनलोड", "असली बिजनेस टूल्स"],
+      ctaPrimary: "अपना क्रिएटर क्विज़ अभी शुरू करें",
+      ctaSecondary: "क्रिएटर टूल्स देखें",
+      stats: {
+        creators: "10,000+",
+        creatorsLabel: "क्रिएटर्स की मदद की",
+        successRate: "98%",
+        successRateLabel: "सफलता दर",
+        rating: "4.9/5",
+        ratingLabel: "रेटिंग",
+      },
+    },
+    whatYouGet: {
+      title: "आपको तुरंत मिलता है",
+      subtitle: "अपना क्विज़ पूरा करें और ₹10,000+ मूल्य के प्रोफेशनल टूल्स तक बिल्कुल मुफ्त तुरंत पहुंच प्राप्त करें",
+      deliverables: {
+        fameScore: {
+          title: "व्यक्तिगत फेम स्कोर",
+          description: "आपके कंटेंट, ऑडियंस, और विकास क्षमता का AI-powered विश्लेषण जिसमें कार्यशील सुझाव हैं।",
+          badge: "✓ तुरंत PDF रिपोर्ट",
+        },
+        mediaKit: {
+          title: "प्रोफेशनल मीडिया किट",
+          description: "आपके आंकड़ों, ऑडियंस डेमोग्राफिक्स, और दर कार्ड के साथ कस्टम-डिज़ाइन मीडिया किट टेम्प्लेट।",
+          badge: "✓ संपादन योग्य टेम्प्लेट",
+        },
+        growthStrategy: {
+          title: "विकास रणनीति योजना",
+          description: "कंटेंट आइडिया, पोस्टिंग शेड्यूल, और मुद्रीकरण रोडमैप के साथ 3-महीने की कार्य योजना।",
+          badge: "✓ चरणबद्ध गाइड",
+        },
+      },
+      premiumUpgrade: {
+        badge: "🚀 प्रो में अपग्रेड करें",
+        title: "कम्प्लीट क्रिएटर बिजनेस किट - ₹497",
+        subtitle: "अपने कंटेंट को लाभदायक व्यवसाय में बदलने के लिए आवश्यक सब कुछ",
+        features: ["30+ ईमेल टेम्प्लेट्स", "लाइव प्रोफाइल पेज", "एनालिटिक्स डैशबोर्ड", "प्राथमिकता सहायता"],
+        cta: "मुफ्त क्विज़ शुरू करें और प्रो अनलॉक करें",
+      },
+    },
+    howItWorks: {
+      title: "यह कैसे काम करता है",
+      subtitle: "अज्ञात क्रिएटर से आय कमाने वाले तक केवल 3 सरल चरणों ���ें",
+      steps: [
+        {
+          number: "1",
+          title: "📝 क्विज़ पूरा करें (3 मिनट)",
+          description: "अपने कंटेंट, ऑडियंस, लक्ष्यों, और वर्तमान चुनौतियों के बारे में प्रश्नों के उत्तर दें। हमारा AI सब कुछ विश्लेषित करता है।",
+        },
+        {
+          number: "2",
+          title: "🔍 तुरंत विश्लेषण प्राप्त करें",
+          description: "अपना फेम स्कोर, व्यक्तिगत विकास रणनीति, और प्रोफेशनल टूल्स तुरंत प्राप्त करें।",
+        },
+        {
+          number: "3",
+          title: "💰 आज ही कमाना शुरू करें",
+          description: "30 दिनों के भीतर अपना पहला पेड कोलैबोरेशन लैंड करने के लिए अपनी मीडिया किट और आउटरीच टेम्प्लेट्स का उपयोग करें।",
+        },
+      ],
+      cta: "अपनी क्रिएटर यात्रा अभी शुरू करें",
+      ctaSubtext: "10,000+ क्रिएटर्स से जुड़ें जिन्होंने अपने जुनून को लाभ में बदला है",
+    },
+    successStories: {
+      title: "क्रिएटर सफलता की कहानियां",
+      subtitle: "असली क्रिएटर्स, असली परिणाम, असली आय वृद्धि",
+      stories: [
+        {
+          name: "अनन्या शर्मा",
+          role: "ब्यूटी क्रिएटर",
+          avatar: "अ",
+          testimonial: "प्रोफेशनल मीडिया किट टेम्प्लेट का उपयोग करके, मैंने 2 सप्ताह के भीतर अपना पहला ब्रांड कोलैबोरेशन सुरक्षित किया। प्राइसिंग गाइड ने मुझे एक पोस्ट के लिए ₹35K नेगोसिएट करने में मदद की।",
+          result: "+₹35K पहला ब्रांड डील",
+        },
+        {
+          name: "विकाश मल्होत्रा",
+          role: "टेक रिव्यूअर",
+          avatar: "वि",
+          testimonial: "ग्रोथ स्ट्रैटेजी ने मुझे अपने ऑडियंस को बेहतर समझने में मदद की। मैंने इनसाइट्स का उपयोग करके अपने कंटेंट को ऑप्टिमाइज़ किया और 4 महीने में 5K से 25K फॉलोअर्स तक बढ़ा।",
+          result: "+20K फॉलोअर्स 4 महीने में",
+        },
+        {
+          name: "मीरा सिंह",
+          role: "लाइफस्टाइल ब्लॉगर",
+          avatar: "मी",
+          testimonial: "ईमेल टेम्प्लेट्स गेम-चेंजर थे। मैंने उनका उपयोग करके 50 ब्रांड्स तक पहुंचने के लिए किया और 12 से रिस्पॉन्स मिला। अब मेरे पास निरंतर मासिक कोलैबोरेशन हैं।",
+          result: "+12 सक्रिय ब्रांड पार्टनरशिप",
+        },
+      ],
+    },
+    finalCta: {
+      title: "अपने कंटेंट को निरंतर आय में बदलने के लिए तैयार हैं?",
+      subtitle: "हजारों क्रिएटर्स से जुड़ें जिन्होंने हमारे सिद्ध फ्रेमवर्क का उपयोग करके सफल व्यवसाय बनाए हैं",
+      cta: "अपना मुफ्त क्रिएटर किट अभी प्राप्त करें",
+      benefits: ["✓ 100% हमेशा के लिए मुफ्त", "✓ तुरंत पहुंच", "✓ कोई क्रेडिट कार्ड आवश्यक नहीं"],
+    },
+    footer: {
+      description: "क्रिएटर्स को लाभदायक व्यवसाय बनाने में सशक्त बनाना",
+      links: ["क्विज़ लें", "खरीदारी", "परिणाम"],
+      copyright: "© 2025 FameChase.com. सभी अधिकार सुरक्षित। | क्रिएटर्स के लिए, क्रिएटर्स द्वारा निर्��ित।",
+      legal: {
+        about: "FameChase के बारे में",
+        contact: "संपर्क करें",
+        privacy: "गोपनीयता नीति",
+        terms: "नियम और शर्तें",
+      },
+    },
+  },
+};
+
+const legalContent = {
+  english: {
+    about: {
+      title: "📄 About FameChase",
+      content: `FameChase helps aspiring influencers and creators unlock their growth potential. Whether you're just starting out or looking to turn your audience into income, we provide personalized insights, tools, and digital products to accelerate your journey.
+
+With AI-powered reports, custom growth strategies, and creator kits designed for Indian and global platforms, we make it easier to grow, brand, and monetize your content—step by step.
+
+Our mission is to make influencer success accessible, strategic, and profitable for creators of all levels.`,
+    },
+    contact: {
+      title: "📬 Contact Us",
+      content: `Have a question, feedback, or partnership inquiry? We're here to help!
+
+📧 Email us at: mail@famechase.com`,
+    },
+    privacy: {
+      title: "🔒 Privacy Policy",
+      content: `Effective Date: July 9, 2025
+
+At FameChase, your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our website and services.
+
+1. What We Collect:
+• Personal details (name, email) via forms or purchases
+• Quiz responses to generate personalized results
+• Device and usage data (via cookies or analytics tools)
+
+2. How We Use It:
+• To provide personalized growth plans
+• To deliver downloadable content
+• To improve our services and user experience
+• To communicate updates and offers
+
+3. Your Data Is Safe:
+We never sell or share your data with third parties. All information is stored securely and used only for service delivery and improvement.
+
+You can request deletion or correction of your data at any time by emailing mail@famechase.com.`,
+    },
+    terms: {
+      title: "📜 Terms & Conditions (T&C)",
+      content: `Effective Date: July 9, 2025
+
+By using FameChase.com, you agree to the following terms:
+
+1. Use of Service:
+Our services and digital downloads are for personal, non-commercial use. You may not redistribute, resell, or republish them.
+
+2. Payments & Refunds:
+All purchases are final. Since our products are digital and delivered instantly, we do not offer refunds.
+
+3. Intellectual Property:
+All content, designs, and tools provided are the intellectual property of FameChase. Unauthorized use is prohibited.
+
+4. Service Availability:
+We reserve the right to modify or discontinue services (free or paid) at any time.
+
+5. Contact:
+For any questions, email us at mail@famechase.com`,
+    },
+  },
+  hindi: {
+    about: {
+      title: "📄 FameChase के बारे में",
+      content: `FameChase इच्छुक इन्फ्लुएंसर्स और क्रिएटर्स को उनकी विकास क्षमता को अनलॉक करने में मदद करता है। चाहे आप अभी शुरुआत कर रहे हों या अपने ऑडियंस को आय में बदलना चाह रहे हों, हम आपकी यात्रा को तेज़ करने के लिए व्यक्तिगत अंतर्दृष्टि, टूल्स, और डिजिटल उत्पाद प्रदान करते हैं।
+
+AI-powered रिपोर्ट्स, कस्टम ग्रोथ स्ट्रैटेजीज़, और भारतीय और वैश्विक प्लेटफॉर्म के लिए डिज़ाइन किए गए क्रिएटर किट्स के साथ, हम आपके कंटेंट को बढ़ने, ब्रांड करने, और मुद्रीकरण करने को आसान बनाते हैं—चरणबद्ध तरीके से।
+
+हमारा मिशन सभी स्तरों के क्रिएटर्स के लिए इन्फ्लुएंसर सफलता को सुलभ, रणनीतिक, और लाभदायक बनाना है।`,
+    },
+    contact: {
+      title: "📬 संपर्क करें",
+      content: `कोई प्रश्न, फीडबैक, या पार्टनरशिप पूछताछ है? हम मदद के लिए यहाँ हैं!
+
+📧 हमें ईमेल करें: mail@famechase.com`,
+    },
+    privacy: {
+      title: "🔒 गोपनीयता नीति",
+      content: `प्रभावी तिथि: 9 जुलाई, 2025
+
+FameChase में, आपकी गोपनीयता हमारे लिए महत्वपूर्ण है। यह गोपनीयता नीति बताती है कि जब आप हमारी वेबसाइट और सेवाओं का उपयोग करते हैं तो हम आपकी जानकारी कैसे एकत्र, उपयोग, और सुरक्षित करते हैं।
+
+1. हम क्या एकत्र करते हैं:
+• फॉर्म या खरीदारी के माध्यम से व्यक्तिगत विवरण (नाम, ईमेल)
+• व्यक्तिगत परिणाम उत्पन्न करने के लिए क्विज़ प्रतिक्रियाएं
+• डिवाइस और उपयोग डेटा (कुकीज़ या एनालिटिक्स टूल्स के माध्यम से)
+
+2. हम इसका उपयोग कैसे करते हैं:
+• व्यक्तिगत विकास योजनाएं प्रदान करने के लिए
+• डाउनलोड योग्य सामग्री वितरित करने के लिए
+• हमारी सेवाओं और उपयोगकर्ता अनुभव को बेहतर बनाने के लिए
+• अपडेट्स और ऑफर्स संवाद करने के लिए
+
+3. आपका डेटा सुरक्षित है:
+हम कभी भी आपका डेटा तीसरे पक्ष को नहीं बेचते या साझा नहीं करते। सभी जानकारी सुरक्षित रूप से संग्रहीत की जाती है और केवल सेवा वितरण और सुधार के लिए उपयोग की जाती है।
+
+आप mail@famechase.com पर ईमेल करके किसी भी समय अपने डेटा को हटाने या सुधारने का अनुरोध कर सकते हैं।`,
+    },
+    terms: {
+      title: "📜 नियम और शर्तें (T&C)",
+      content: `प्रभावी तिथि: 9 जुलाई, 2025
+
+FameChase.com का उपयोग करके, आप निम्नलिखित शर्तों से सहमत हैं:
+
+1. सेवा का उपयोग:
+हमारी सेवाएं और डिजिटल डाउनलोड व्यक्तिगत, गैर-व्यावसायिक उपयोग के लिए हैं। आप उन्हें पुनर्वितरित, पुनर्विक्रय, या पुनर्प्रकाशित नहीं कर सकते।
+
+2. भुगतान और रिफंड:
+सभी खरीदारी अंतिम हैं। चूंकि हमारे उत्पाद डिजिटल हैं और तुरंत वितरित किए जाते हैं, हम रि���ंड की पेशकश नहीं करते।
+
+3. बौद्धिक संपदा:
+प्रदान की गई सभी सामग्री, डिज़ाइन, और टूल्स FameChase की बौद्धिक संपदा हैं। अनधिकृत उपयोग निषिद्ध है।
+
+4. सेवा उपलब्धता:
+हम किसी भी समय सेवाओं (मुफ्त या पेड) को संशोधित या बंद करने का अधिकार सुरक्षित रखते हैं।
+
+5. संपर्क:
+किसी भी प्रश्न के लिए, हमें mail@famechase.com पर ईमेल करें`,
+    },
+  },
+};
 
 export default function Index() {
+  const [language, setLanguage] = useState<"english" | "hindi">("english");
+  const [showLegalModal, setShowLegalModal] = useState<string | null>(null);
+
+  const t = translations[language];
+  const legal = legalContent[language];
+
+  const handleLanguageChange = (newLanguage: "english" | "hindi") => {
+    setLanguage(newLanguage);
+  };
+
+  const openLegalModal = (type: string) => {
+    setShowLegalModal(type);
+  };
+
+  const closeLegalModal = () => {
+    setShowLegalModal(null);
+  };
+
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
@@ -26,23 +424,51 @@ export default function Index() {
               to="/quiz"
               className="text-gray-600 hover:text-gray-900 font-medium"
             >
-              Take Quiz
+              {t.header.takeQuiz}
             </Link>
             <Link
               to="/shop"
               className="text-gray-600 hover:text-gray-900 font-medium"
             >
-              Shop
+              {t.header.shop}
             </Link>
             <Link
               to="/quiz"
               className="bg-neon-green text-black px-6 py-2 rounded-full font-semibold hover:bg-green-400 transition-colors"
             >
-              Get Started Free
+              {t.header.getStartedFree}
             </Link>
+            {/* Language Selector */}
+            <div className="relative">
+              <select
+                value={language}
+                onChange={(e) => handleLanguageChange(e.target.value as "english" | "hindi")}
+                className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium focus:outline-none focus:ring-2 focus:ring-neon-green"
+              >
+                <option value="english">English</option>
+                <option value="hindi">हिंदी</option>
+              </select>
+            </div>
           </nav>
         </div>
       </header>
+
+      {/* Limited Time Offer Strip */}
+      <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-3">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="flex items-center justify-center gap-2 text-sm font-semibold">
+              <Clock className="w-4 h-4 animate-pulse" />
+              <span>
+                {language === "hindi" 
+                  ? "🔥 सीमित समय ऑफर - 70% छूट! केवल आज तक वैध! 🔥"
+                  : "🔥 Limited Time Offer - 70% OFF! Valid only today! 🔥"
+                }
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Hero Section */}
       <main className="relative overflow-hidden">
@@ -54,62 +480,32 @@ export default function Index() {
           {/* Badge */}
           <div className="inline-flex items-center bg-neon-green/10 border border-neon-green/30 rounded-full px-6 py-3 mb-8">
             <span className="text-neon-green text-sm font-semibold">
-              🏆 India's #1 Growth platform for&nbsp;
-              <span
-                style={{
-                  color: "inherit",
-                  fontFamily: "inherit",
-                  fontSize: "inherit",
-                  fontWeight: "inherit",
-                  letterSpacing: "inherit",
-                  textAlign: "inherit",
-                }}
-              >
-                Creators & Marketers
-              </span>{" "}
-              - 10,000+ Success Stories
+              {t.hero.badge}
             </span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-            Transform Your Content Into
+            {t.hero.title}
             <br />
             <span className="bg-gradient-to-r from-neon-green to-electric-blue bg-clip-text text-transparent">
-              ₹50K+ Monthly Income
+              {t.hero.titleHighlight}
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Get your personalized Creator Growth Kit, Professional Media Kit,
-            and AI-powered strategy
-            <span className="font-semibold text-gray-900">
-              {" "}
-              in just 3 minutes.
-            </span>
+            {t.hero.subtitle}
           </p>
 
           {/* Proof Points */}
           <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <div className="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full shadow-sm border">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700 font-medium">
-                100% Free Analysis
-              </span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full shadow-sm border">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700 font-medium">
-                Instant Download
-              </span>
-            </div>
-            <div className="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full shadow-sm border">
-              <CheckCircle className="w-5 h-5 text-green-500" />
-              <span className="text-gray-700 font-medium">
-                Real Business Tools
-              </span>
-            </div>
+            {t.hero.proofPoints.map((point, index) => (
+              <div key={index} className="flex items-center gap-2 bg-white/80 px-4 py-2 rounded-full shadow-sm border">
+                <CheckCircle className="w-5 h-5 text-green-500" />
+                <span className="text-gray-700 font-medium">{point}</span>
+              </div>
+            ))}
           </div>
 
           {/* CTA Buttons */}
@@ -118,7 +514,7 @@ export default function Index() {
               to="/quiz"
               className="bg-gradient-to-r from-neon-green to-green-400 text-black font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-3"
             >
-              <span>Start Your Creator Quiz Now</span>
+              <span>{t.hero.ctaPrimary}</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
 
@@ -126,7 +522,7 @@ export default function Index() {
               to="/shop"
               className="bg-white border-2 border-electric-blue text-electric-blue font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 hover:bg-electric-blue hover:text-white hover:shadow-lg"
             >
-              Browse Creator Tools
+              {t.hero.ctaSecondary}
             </Link>
           </div>
 
@@ -134,19 +530,19 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="text-center">
               <div className="text-3xl font-bold text-gray-900 mb-2">
-                10,000+
+                {t.hero.stats.creators}
               </div>
-              <div className="text-gray-600">Creators Helped</div>
+              <div className="text-gray-600">{t.hero.stats.creatorsLabel}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 mb-2">98%</div>
-              <div className="text-gray-600">Success Rate</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">{t.hero.stats.successRate}</div>
+              <div className="text-gray-600">{t.hero.stats.successRateLabel}</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-gray-900 mb-2">4.9/5</div>
+              <div className="text-3xl font-bold text-gray-900 mb-2">{t.hero.stats.rating}</div>
               <div className="text-gray-600 flex items-center justify-center gap-1">
                 <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                Rating
+                {t.hero.stats.ratingLabel}
               </div>
             </div>
           </div>
@@ -158,11 +554,10 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              What You Get <span className="text-neon-green">Instantly</span>
+              {t.whatYouGet.title.split(' ').slice(0, -1).join(' ')} <span className="text-neon-green">{t.whatYouGet.title.split(' ').slice(-1)}</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Complete your quiz and get immediate access to professional tools
-              worth ₹10,000+ absolutely free
+              {t.whatYouGet.subtitle}
             </p>
           </div>
 
@@ -173,14 +568,13 @@ export default function Index() {
                 <Target className="w-8 h-8 text-neon-green" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Personalized Fame Score
+                {t.whatYouGet.deliverables.fameScore.title}
               </h3>
               <p className="text-gray-600 mb-6">
-                AI-powered analysis of your content, audience, and growth
-                potential with actionable insights.
+                {t.whatYouGet.deliverables.fameScore.description}
               </p>
               <div className="text-neon-green font-semibold">
-                ✓ Instant PDF Report
+                {t.whatYouGet.deliverables.fameScore.badge}
               </div>
             </div>
 
@@ -190,14 +584,13 @@ export default function Index() {
                 <Download className="w-8 h-8 text-electric-blue" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Professional Media Kit
+                {t.whatYouGet.deliverables.mediaKit.title}
               </h3>
               <p className="text-gray-600 mb-6">
-                Custom-designed media kit template with your stats, audience
-                demographics, and rate cards.
+                {t.whatYouGet.deliverables.mediaKit.description}
               </p>
               <div className="text-electric-blue font-semibold">
-                ✓ Editable Template
+                {t.whatYouGet.deliverables.mediaKit.badge}
               </div>
             </div>
 
@@ -207,14 +600,13 @@ export default function Index() {
                 <TrendingUp className="w-8 h-8 text-soft-violet" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Growth Strategy Plan
+                {t.whatYouGet.deliverables.growthStrategy.title}
               </h3>
               <p className="text-gray-600 mb-6">
-                3-month action plan with content ideas, posting schedule, and
-                monetization roadmap.
+                {t.whatYouGet.deliverables.growthStrategy.description}
               </p>
               <div className="text-soft-violet font-semibold">
-                ✓ Step-by-step Guide
+                {t.whatYouGet.deliverables.growthStrategy.badge}
               </div>
             </div>
 
@@ -223,49 +615,25 @@ export default function Index() {
               <div className="text-center mb-6">
                 <div className="inline-flex items-center bg-neon-green/10 border border-neon-green/30 rounded-full px-6 py-2 mb-4">
                   <span className="text-neon-green text-sm font-semibold">
-                    🚀 UPGRADE TO PRO
+                    {t.whatYouGet.premiumUpgrade.badge}
                   </span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Complete Creator Business Kit - ₹99
+                  {t.whatYouGet.premiumUpgrade.title}
                 </h3>
                 <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-                  Everything you need to turn your content into a profitable
-                  business
+                  {t.whatYouGet.premiumUpgrade.subtitle}
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-lg font-semibold text-gray-900">
-                    30+ Email Templates
+                {t.whatYouGet.premiumUpgrade.features.map((feature, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-lg font-semibold text-gray-900">
+                      {feature}
+                    </div>
                   </div>
-                  <div className="text-gray-600 text-sm">
-                    For brand outreach
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-lg font-semibold text-gray-900">
-                    Live Profile Page
-                  </div>
-                  <div className="text-gray-600 text-sm">
-                    Professional landing page
-                  </div>
-                </div>
-                <div className="text-center">
-                  <div className="text-lg font-semibold text-gray-900">
-                    Analytics Dashboard
-                  </div>
-                  <div className="text-gray-600 text-sm">Track your growth</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-lg font-semibold text-gray-900">
-                    Priority Support
-                  </div>
-                  <div className="text-gray-600 text-sm">
-                    Direct access to experts
-                  </div>
-                </div>
+                ))}
               </div>
 
               <div className="text-center">
@@ -273,7 +641,7 @@ export default function Index() {
                   to="/quiz"
                   className="inline-flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-4 px-8 rounded-full text-lg hover:shadow-lg transition-all duration-300"
                 >
-                  Start Free Quiz & Unlock Pro
+                  {t.whatYouGet.premiumUpgrade.cta}
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
@@ -287,70 +655,35 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              How It <span className="text-neon-green">Works</span>
+              {t.howItWorks.title.split(' ').slice(0, -1).join(' ')} <span className="text-neon-green">{t.howItWorks.title.split(' ').slice(-1)}</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From unknown creator to income earner in 3 simple steps
+              {t.howItWorks.subtitle}
             </p>
           </div>
 
           <div className="max-w-5xl mx-auto">
             <div className="grid md:grid-cols-3 gap-8">
-              {/* Step 1 */}
-              <div className="text-center">
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-r from-neon-green to-green-400 rounded-full flex items-center justify-center text-black font-bold text-2xl mx-auto shadow-lg">
-                    1
+              {t.howItWorks.steps.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="relative mb-8">
+                    <div className="w-20 h-20 bg-gradient-to-r from-neon-green to-green-400 rounded-full flex items-center justify-center text-black font-bold text-2xl mx-auto shadow-lg">
+                      {step.number}
+                    </div>
+                    {index < t.howItWorks.steps.length - 1 && (
+                      <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-full h-0.5 bg-gradient-to-r from-neon-green to-electric-blue hidden md:block md:w-32 md:left-full"></div>
+                    )}
                   </div>
-                  <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-full h-0.5 bg-gradient-to-r from-neon-green to-electric-blue hidden md:block md:w-32 md:left-full"></div>
-                </div>
-                <div className="bg-white rounded-2xl p-6 shadow-lg border">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    📝 Complete Quiz (3 mins)
-                  </h3>
-                  <p className="text-gray-600">
-                    Answer questions about your content, audience, goals, and
-                    current challenges. Our AI analyzes everything.
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 2 */}
-              <div className="text-center">
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-r from-electric-blue to-blue-400 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto shadow-lg">
-                    2
-                  </div>
-                  <div className="absolute top-10 left-1/2 transform -translate-x-1/2 w-full h-0.5 bg-gradient-to-r from-electric-blue to-soft-violet hidden md:block md:w-32 md:left-full"></div>
-                </div>
-                <div className="bg-white rounded-2xl p-6 shadow-lg border">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    🔍 Get Instant Analysis
-                  </h3>
-                  <p className="text-gray-600">
-                    Receive your Fame Score, personalized growth strategy, and
-                    professional tools immediately.
-                  </p>
-                </div>
-              </div>
-
-              {/* Step 3 */}
-              <div className="text-center">
-                <div className="relative mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-r from-soft-violet to-purple-400 rounded-full flex items-center justify-center text-white font-bold text-2xl mx-auto shadow-lg">
-                    3
+                  <div className="bg-white rounded-2xl p-6 shadow-lg border">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
-                <div className="bg-white rounded-2xl p-6 shadow-lg border">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
-                    💰 Start Earning Today
-                  </h3>
-                  <p className="text-gray-600">
-                    Use your media kit and outreach templates to land your first
-                    paid collaboration within 30 days.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
 
@@ -360,11 +693,11 @@ export default function Index() {
               to="/quiz"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-4 px-12 rounded-full text-xl shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
-              Start Your Creator Journey Now
+              {t.howItWorks.cta}
               <ArrowRight className="w-6 h-6" />
             </Link>
             <p className="text-gray-500 mt-4">
-              Join 10,000+ creators who've transformed their passion into profit
+              {t.howItWorks.ctaSubtext}
             </p>
           </div>
         </div>
@@ -375,76 +708,33 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-              Creator <span className="text-neon-green">Success Stories</span>
+              {t.successStories.title.split(' ').slice(0, -2).join(' ')} <span className="text-neon-green">{t.successStories.title.split(' ').slice(-2).join(' ')}</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Real creators, real results, real income growth
+              {t.successStories.subtitle}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {/* Success Story 1 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-red-400 rounded-full flex items-center justify-center text-white font-bold">
-                  A
+            {t.successStories.stories.map((story, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-gradient-to-r from-pink-400 to-red-400 rounded-full flex items-center justify-center text-white font-bold">
+                    {story.avatar}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-gray-900">{story.name}</div>
+                    <div className="text-gray-600 text-sm">{story.role}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Ananya K.</div>
-                  <div className="text-gray-600 text-sm">Beauty Creator</div>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                "Using the professional media kit template, I secured my first
-                brand collaboration within 2 weeks. The pricing guide helped me
-                negotiate ₹35K for a single post."
-              </p>
-              <div className="text-neon-green font-semibold">
-                +₹35K first brand deal
-              </div>
-            </div>
-
-            {/* Success Story 2 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full flex items-center justify-center text-white font-bold">
-                  V
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Vikash M.</div>
-                  <div className="text-gray-600 text-sm">Tech Reviewer</div>
+                <p className="text-gray-600 mb-4">
+                  "{story.testimonial}"
+                </p>
+                <div className="text-neon-green font-semibold">
+                  {story.result}
                 </div>
               </div>
-              <p className="text-gray-600 mb-4">
-                "The growth strategy helped me understand my audience better. I
-                optimized my content using the insights and grew from 5K to 25K
-                followers in 4 months."
-              </p>
-              <div className="text-electric-blue font-semibold">
-                +20K followers in 4 months
-              </div>
-            </div>
-
-            {/* Success Story 3 */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg border">
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center text-white font-bold">
-                  M
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Meera S.</div>
-                  <div className="text-gray-600 text-sm">Lifestyle Blogger</div>
-                </div>
-              </div>
-              <p className="text-gray-600 mb-4">
-                "The email templates were game-changers. I used them to reach
-                out to 50 brands and got responses from 12. Now I have
-                consistent monthly collaborations."
-              </p>
-              <div className="text-soft-violet font-semibold">
-                +12 active brand partnerships
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -453,15 +743,14 @@ export default function Index() {
       <section className="py-20 bg-gradient-to-r from-neon-green/10 via-electric-blue/10 to-soft-violet/10">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-            Ready to Turn Your Content Into
+            {t.finalCta.title.split('Consistent')[0]}
             <br />
             <span className="bg-gradient-to-r from-neon-green to-electric-blue bg-clip-text text-transparent">
               Consistent Income?
             </span>
           </h2>
           <p className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
-            Join thousands of creators who've built successful businesses using
-            our proven framework
+            {t.finalCta.subtitle}
           </p>
 
           <div className="mb-8">
@@ -469,44 +758,97 @@ export default function Index() {
               to="/quiz"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-6 px-12 rounded-full text-2xl shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
             >
-              Get Your Free Creator Kit Now
+              {t.finalCta.cta}
               <ArrowRight className="w-8 h-8" />
             </Link>
           </div>
 
           <div className="text-gray-600">
-            ✓ 100% Free Forever &nbsp;&nbsp;&nbsp; ✓ Instant Access
-            &nbsp;&nbsp;&nbsp; ✓ No Credit Card Required
+            {t.finalCta.benefits.join(" • ")}
           </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-white py-12 border-t border-gray-200">
-        <div className="container mx-auto px-4 text-center">
-          <div className="text-2xl font-bold text-gray-900 mb-4">
-            FameChase<span className="text-neon-green">.com</span>
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-8">
+            <div className="text-2xl font-bold text-gray-900 mb-4">
+              FameChase<span className="text-neon-green">.com</span>
+            </div>
+            <p className="text-gray-600 mb-6">
+              {t.footer.description}
+            </p>
+            
+            {/* Navigation Links */}
+            <div className="flex justify-center gap-8 mb-6">
+              <Link to="/quiz" className="text-gray-600 hover:text-gray-900">
+                {t.footer.links[0]}
+              </Link>
+              <Link to="/shop" className="text-gray-600 hover:text-gray-900">
+                {t.footer.links[1]}
+              </Link>
+              <Link to="/results" className="text-gray-600 hover:text-gray-900">
+                {t.footer.links[2]}
+              </Link>
+            </div>
+
+            {/* Legal Links */}
+            <div className="flex justify-center gap-6 mb-6 text-sm">
+              <button
+                onClick={() => openLegalModal('about')}
+                className="text-gray-500 hover:text-gray-700 underline"
+              >
+                {t.footer.legal.about}
+              </button>
+              <button
+                onClick={() => openLegalModal('contact')}
+                className="text-gray-500 hover:text-gray-700 underline"
+              >
+                {t.footer.legal.contact}
+              </button>
+              <button
+                onClick={() => openLegalModal('privacy')}
+                className="text-gray-500 hover:text-gray-700 underline"
+              >
+                {t.footer.legal.privacy}
+              </button>
+              <button
+                onClick={() => openLegalModal('terms')}
+                className="text-gray-500 hover:text-gray-700 underline"
+              >
+                {t.footer.legal.terms}
+              </button>
+            </div>
+
+            <p className="text-gray-500 text-sm">
+              {t.footer.copyright}
+            </p>
           </div>
-          <p className="text-gray-600 mb-6">
-            Empowering creators to build profitable businesses
-          </p>
-          <div className="flex justify-center gap-8 mb-6">
-            <Link to="/quiz" className="text-gray-600 hover:text-gray-900">
-              Take Quiz
-            </Link>
-            <Link to="/shop" className="text-gray-600 hover:text-gray-900">
-              Shop
-            </Link>
-            <Link to="/results" className="text-gray-600 hover:text-gray-900">
-              Results
-            </Link>
-          </div>
-          <p className="text-gray-500 text-sm">
-            © 2025 FameChase.com. All rights reserved. | Built for creators, by
-            creators.
-          </p>
         </div>
       </footer>
+
+      {/* Legal Modal */}
+      {showLegalModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+          <div className="bg-white rounded-2xl p-8 max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-2xl font-bold text-gray-900">
+                {legal[showLegalModal as keyof typeof legal]?.title}
+              </h3>
+              <button
+                onClick={closeLegalModal}
+                className="text-gray-500 hover:text-gray-700"
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            <div className="text-gray-600 whitespace-pre-line text-sm leading-relaxed">
+              {legal[showLegalModal as keyof typeof legal]?.content}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
