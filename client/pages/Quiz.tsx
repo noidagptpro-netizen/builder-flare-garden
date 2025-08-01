@@ -220,6 +220,15 @@ const languages = {
         "Expand into new platforms/formats",
         "Mentor other creators in my space",
       ],
+      engagementRates: [
+        "Less than 1%",
+        "1-3%",
+        "3-5%",
+        "5-8%",
+        "8-12%",
+        "More than 12%",
+        "I don't know",
+      ],
     },
     buttons: {
       next: "Next Step",
@@ -272,7 +281,7 @@ const languages = {
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       engagementRate: "आपकी औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
-        "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क्या हैं? (अधिकतम 3 चुनें)",
+        "एक क्रिएटर के रूप में आपकी सबसे बड़ी चुनौतियां क��या हैं? (अधिकतम 3 चुनें)",
       goals:
         "अगले 6 महीनो��� के लिए आपके मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
       socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
@@ -363,7 +372,7 @@ const languages = {
       ],
       challenges: [
         "लगातार �����्यूज और एंगेजमेंट पाना",
-        "अपनी यूनीक आवाज़/स्टाइल खोजना",
+        "अपनी यूनीक आवाज़/स्टा��ल खोजना",
         "एल्गोरिदम बदलाव से पहुंच में कमी",
         "ऑथेंटिसिटी और ब्रांड अपील का संतुलन",
         "बड़े क्रिएटर्स से कॉम्पिटिशन",
@@ -379,7 +388,7 @@ const languages = {
         "मासि��� आय ₹50K+ तक बढ़��ना",
         "100K+ की authentic कम्��ु��िटी बनाना",
         "ड्रीम ���्रांड्स ���े साथ पार्टनरशिप",
-        "अपना प्रोडक्ट/कोर्स लॉन्च करना",
+        "अपना प्��ोडक्ट/कोर्स लॉन्च करना",
         "अपनी niche मे���� go-to एक्���पर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइबर्�� की email लिस्ट",
@@ -587,7 +596,7 @@ ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
     } else if (type === "emailTemplates") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "6+ ब्रांड आउटरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
+        `${language === "hindi" ? "6+ ब्रांड आ���टरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
 ${language === "hindi" ? "टेम्प्लेट 1: प्रारंभिक संपर्क (कोल्ड आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
@@ -641,7 +650,7 @@ ${language === "hindi" ? "• 1 feed post with your product" : "• 1 feed post 
 ${language === "hindi" ? "• 24-hour story promotion" : "• 24-hour story promotion"}
 ${language === "hindi" ? "• Professional photography" : "• Professional photography"}
 
-${language === "hindi" ? "📱 स्टोरी पैकेज: ₹[आपकी rate]" : "📱 Story Package: ₹[Your rate]"}
+${language === "hindi" ? "📱 स्ट���री पैकेज: ₹[आपकी rate]" : "📱 Story Package: ₹[Your rate]"}
 ${language === "hindi" ? "• 3-5 story slides" : "• 3-5 story slides"}
 ${language === "hindi" ? "• Behind-the-scenes content" : "• Behind-the-scenes content"}
 
@@ -661,7 +670,7 @@ ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
 ${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
 
-${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूंगा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
+${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
 ${language === "hindi" ? "• मेरी audience का [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
