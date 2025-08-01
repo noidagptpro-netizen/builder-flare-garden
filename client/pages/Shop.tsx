@@ -51,7 +51,10 @@ interface CustomerInfo {
 }
 
 export default function Shop() {
-  const [language, setLanguage] = useState<"english" | "hindi">("english");
+  const [language, setLanguage] = useState<"english" | "hindi">(() => {
+    const savedLanguage = localStorage.getItem("famechase-language");
+    return (savedLanguage as "english" | "hindi") || "english";
+  });
   const [products, setProducts] = useState<ProductConfig[]>([]);
   const [showPaymentForm, setShowPaymentForm] = useState<string | null>(null);
   const [showQuizRequiredPopup, setShowQuizRequiredPopup] = useState(false);
@@ -253,7 +256,7 @@ export default function Shop() {
       limited: "सीमि�� समय",
       offerEnds: "ऑफर समाप���त होता है",
       downloads: "ड��उ���लोड",
-      rating: "रेटिंग",
+      rating: "रेट���ंग",
       securePayment: "सुरक्षित भुगतान",
       instantDownload: "तुरंत डाउनलोड",
       buyNow: "अभी खरीदें",
@@ -272,7 +275,7 @@ export default function Shop() {
       downloadYourProducts: "अपने प्रोडक्ट्स डाउनलोड करें",
       purchaseSuccess: "खरीदारी सफल! 🎉",
       thanksForPurchase:
-        "आपकी खरीदारी के ���िए धन्यवा���! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार ���ैं।",
+        "आपकी खरीदारी के ���िए धन्यवा���! आपके प्रोडक्ट्स डाउनलोड के लिए ���ैयार ���ैं।",
       backToShop: "शॉप पर वापस जाएं",
     },
   };
