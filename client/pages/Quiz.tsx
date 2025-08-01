@@ -279,7 +279,7 @@ const languages = {
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
-        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
+        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया ��ै)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       engagementRate: "आपकी औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
@@ -631,7 +631,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा था। मुझे लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
+${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
@@ -680,7 +680,7 @@ ${language === "hindi" ? "• मेरी audience का [specific demographic
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "• मैं additional value add कर सकता हूं like [extra service]" : "• I can add additional value like [extra service]"}
 
-${language === "hindi" ? "��ैं flexible हूं औ��� ���� mutually beneficial deal बनाना चाहता हूं।" : "I'm flexible and want to create a mutually beneficial deal."}
+${language === "hindi" ? "��ैं flexible ह��ं औ��� ���� mutually beneficial deal बनाना चाहता हूं।" : "I'm flexible and want to create a mutually beneficial deal."}
 
 ${language === "hindi" ? "Best regards," : "Best regards,"}
 ${userName}
@@ -716,7 +716,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
 
-${language === "hindi" ? "हमा��े successful collaboration के बा���, ���ैं एक long-term partnership propose करना चाहूंगा।" : "Following our successful collaboration, I'd like to propose a long-term partnership."}
+${language === "hindi" ? "हमा��े successful collaboration के बा����, ���ैं एक long-term partnership propose करना चाहूंगा।" : "Following our successful collaboration, I'd like to propose a long-term partnership."}
 
 ${language === "hindi" ? "🤝 PROPOSED PARTNERSHIP:" : "🤝 PROPOSED PARTNERSHIP:"}
 ${language === "hindi" ? "��� Monthly content creation" : "• Monthly content creation"}
@@ -1510,6 +1510,41 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         placeholder="Tell us about your content style, your audience, what makes you unique..."
                         className="w-full bg-white border-2 border-gray-200 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none resize-none text-lg"
                       />
+                    </div>
+                  </div>
+                )}
+
+                {/* Step 9: Engagement Rate */}
+                {currentStep === 9 && (
+                  <div className="space-y-8">
+                    <div className="text-center mb-8">
+                      <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                        Engagement Analytics 📊
+                      </h2>
+                      <p className="text-gray-600 text-lg">
+                        Understanding your engagement helps us provide better monetization recommendations
+                      </p>
+                    </div>
+
+                    <div>
+                      <label className="block text-gray-900 font-semibold mb-4 text-xl">
+                        {t.questions.engagementRate}
+                      </label>
+                      <div className="grid grid-cols-2 gap-3">
+                        {t.options.engagementRates.map((rate) => (
+                          <button
+                            key={rate}
+                            onClick={() => updateQuizData("engagementRate", rate)}
+                            className={`p-4 rounded-xl border-2 text-lg font-semibold transition-all duration-300 ${
+                              quizData.engagementRate === rate
+                                ? "bg-gradient-to-r from-blue-50 to-green-50 border-blue-400 text-gray-900 shadow-lg"
+                                : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
+                            }`}
+                          >
+                            {rate}
+                          </button>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 )}
