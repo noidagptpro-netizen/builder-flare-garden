@@ -523,7 +523,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
       data.city.toLowerCase().includes("bangalore"))
   ) {
     opportunities.push(
-      `🏙️ Tier-1 city advantage! ${data.city} has 5x more brand activation events and collaboration opportunities than other cities.`,
+      `🏙��� Tier-1 city advantage! ${data.city} has 5x more brand activation events and collaboration opportunities than other cities.`,
     );
   }
 
@@ -1020,7 +1020,7 @@ const calculateGrowthPotential = (
     potential += 12;
   } else if (
     data.postingFrequency === "Weekly" ||
-    data.postingFrequency === "साप्ताहिक"
+    data.postingFrequency === "स��प्ताहिक"
   ) {
     potential += 8;
   } else if (
@@ -1092,7 +1092,7 @@ const calculateGrowthPotential = (
     "Converting followers",
     "ल���ातार व्यूज",
     "एनालिटिक्स",
-    "फॉलोअर्स को पेइंग कस्टमर",
+    "फॉलोअर्स को पेइंग क��्टमर",
   ];
   if (
     data.biggestChallenge.some((challenge) =>
@@ -1334,6 +1334,25 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
     link.trim(),
   ).length;
   fameScore += socialLinksCount * 2;
+
+  // Real challenge-based scoring adjustments
+  if (data.biggestChallenge.some(c => c.includes("Low views & inconsistent engagement"))) {
+    fameScore -= 5; // Engagement issues reduce score
+  }
+  if (data.biggestChallenge.some(c => c.includes("Algorithm changes killing reach"))) {
+    fameScore -= 3; // Algorithm dependency
+  }
+  if (data.biggestChallenge.some(c => c.includes("Can't convert followers into paying customers"))) {
+    fameScore -= 4; // Monetization issues
+  }
+
+  // Goals-based scoring boosts
+  if (data.goals.some(g => g.includes("Build Personal Brand"))) {
+    fameScore += 3; // Brand building focus
+  }
+  if (data.goals.some(g => g.includes("Post More Consistently"))) {
+    fameScore += 2; // Consistency awareness
+  }
 
   // Additional bonus for platform diversity
   const platformDiversity = new Set([
