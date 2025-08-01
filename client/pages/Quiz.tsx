@@ -271,7 +271,7 @@ const languages = {
       9: "एंगेजमेंट रेट",
     },
     questions: {
-      primaryPlatform: "आप मुख्यतः किस प्लेटफॉ��्म पर कंटेंट बनाते हैं?",
+      primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बना��े हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
@@ -314,7 +314,7 @@ const languages = {
         "खाना और खाना बनाना",
         "यात्रा और एडवेंचर",
         "फिटनेस और स्वास्थ्य",
-        "व्यक्तिगत वित्त और निवेश",
+        "व्यक्तिगत वि��्त और निवेश",
         "मनोरंजन और कॉमेडी",
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
@@ -349,8 +349,8 @@ const languages = {
         "मिश्रित कंटेंट",
       ],
       frequencies: [
-        "���ोज़ाना",
-        "सप्ताह में 3-4 बार",
+        "रोज़ाना",
+        "सप्���ाह में 3-4 बार",
         "साप्ताहिक",
         "महीने में 2-3 बार",
         "मासिक",
@@ -407,7 +407,7 @@ const languages = {
       submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संस��धन",
+      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संसाधन",
       subtitle:
         "अपनी क्रिएटर यात्रा शुरू करने के लिए इन शक्तिशाली टूल्स को डाउनलोड करें",
       mediaKit: {
@@ -591,7 +591,7 @@ Optimal zoom: 150-200% for comfortable reading.
 ${language === "hindi" ? "व्यक्ति���त जानकारी:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
-${language === "hindi" ? "प्��े���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
+${language === "hindi" ? "प्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "����ॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
 
 ${language === "hindi" ? "सांख्यिकी और दर��ं:" : "STATISTICS & RATES:"}
@@ -611,7 +611,7 @@ ${language === "hindi" ? "Twitter पोस्ट:" : "Twitter Post:"} ₹${quiz
 ${language === "hindi" ? "Newsletter मेंश��:" : "Newsletter Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-2,500"}
 
 ${language === "hindi" ? "📦 पैकेज दरें:" : "📦 PACKAGE RATES:"}
-${language === "hindi" ? "• बेसिक पैक���ज (1 पोस्ट + 2 स्टो���ी):" : "• Basic Package (1 Post + 2 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "400-800" : quizData.followerCount.includes("1K - 5K") ? "800-1,500" : "1,500-4,000"}
+${language === "hindi" ? "• ब��सिक पैक���ज (1 पोस्ट + 2 स्टो���ी):" : "• Basic Package (1 Post + 2 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "400-800" : quizData.followerCount.includes("1K - 5K") ? "800-1,500" : "1,500-4,000"}
 ${language === "hindi" ? "• प्रीमियम पैकेज (2 पोस्ट + 1 रील + 3 स���टोरी):" : "• Premium Package (2 Posts + 1 Reel + 3 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,200-2,500" : quizData.followerCount.includes("1K - 5K") ? "2,500-4,500" : "4,500-12,000"}
 
 ${language === "hindi" ? "संपर्��:" : "CONTACT:"}
@@ -632,7 +632,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] �
 ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
-${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह मेल खाते हैं" : "- Your products align perfectly with my audience"}
+${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
@@ -746,7 +746,7 @@ ${language === "hindi" ? "• Product launches coverage" : "• Product launches
 ${language === "hindi" ? "• Event participation" : "• Event participation"}
 ${language === "hindi" ? "• Brand ambassadorship" : "• Brand ambassadorship"}
 
-${language === "hindi" ? "💰 PROPOSED STRUCTURE:" : "💰 PROPOSED STRUCTURE:"}
+${language === "hindi" ? "���� PROPOSED STRUCTURE:" : "💰 PROPOSED STRUCTURE:"}
 ${language === "hindi" ? "• Retainer fee: ₹[amount]/month" : "• Retainer fee: ₹[amount]/month"}
 ${language === "hindi" ? "• Performance bonuses" : "• Performance bonuses"}
 ${language === "hindi" ? "• Exclusive collaboration terms" : "• Exclusive collaboration terms"}
@@ -789,7 +789,7 @@ ${language === "hindi" ? "- हैशटैग रिसर्च करें (
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटेंट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
-${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोकस करें" : "- Focus on community engagement"}
+${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोक��� करें" : "- Focus on community engagement"}
 ${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शु���ू करें" : "- Start tracking analytics"}
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
@@ -965,6 +965,51 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   <Download className="w-4 h-4 inline mr-2" />
                   {t.freeResources.downloadFree}
                 </button>
+              </div>
+            </div>
+
+            {/* Comparison Section */}
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 rounded-2xl p-8 mb-8">
+              <h3 className="text-2xl font-bold text-center text-gray-900 mb-6">
+                Want the Complete Professional Toolkit?
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
+                  <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">FREE</span>
+                    Basic Starter Kit
+                  </h4>
+                  <ul className="space-y-2 text-gray-600">
+                    <li>✓ Basic templates</li>
+                    <li>✓ 6 email templates</li>
+                    <li>✓ 30-day growth plan</li>
+                    <li>✗ No personalization</li>
+                    <li>✗ No advanced strategies</li>
+                    <li>✗ No professional design</li>
+                  </ul>
+                </div>
+                <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300">
+                  <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">PRO ₹99</span>
+                    Complete Creator Toolkit
+                  </h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li>✓ Personalized based on YOUR quiz</li>
+                    <li>✓ 30+ proven email templates</li>
+                    <li>✓ 90-day detailed strategy</li>
+                    <li>✓ Professional media kit design</li>
+                    <li>✓ Real monetization calculator</li>
+                    <li>✓ Advanced analytics tracker</li>
+                    <li>✓ Platform-specific tactics</li>
+                    <li>✓ Industry-specific content</li>
+                  </ul>
+                  <button
+                    onClick={handleSubmit}
+                    className="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all"
+                  >
+                    Upgrade to Pro Analysis
+                  </button>
+                </div>
               </div>
             </div>
 
