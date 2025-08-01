@@ -318,7 +318,7 @@ const languages = {
         "मनोरंजन और कॉमेडी",
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
-        "कला और ���िज़ाइन",
+        "कला और डिज़ाइन",
         "गेमिंग और एस्पोर्ट्स",
         "संगीत और नृत्य",
         "शिक्षा और सीखना",
@@ -340,7 +340,7 @@ const languages = {
       ],
       contentTypes: [
         "फोटो और कैरोसेल",
-        "छोटे वीडियो/रील्स",
+        "छोट��� वीडियो/रील्स",
         "लंबे वीडियो",
         "लाइव स्ट्रीम",
         "स्टोरीज़",
@@ -351,7 +351,7 @@ const languages = {
       frequencies: [
         "रोज़ाना",
         "सप्ताह में 3-4 बार",
-        "��ाप्ताहिक",
+        "साप्ताहिक",
         "महीने में 2-3 बार",
         "मासिक",
         "अनियमित",
@@ -409,7 +409,7 @@ const languages = {
     freeResources: {
       title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संसाधन",
       subtitle:
-        "अपनी क्रिएटर यात्रा शु���ू करने के लिए इन शक्तिशाली टूल्स को डाउनलोड करें",
+        "अपनी क्रिएटर यात्रा शुरू करने के लिए इन शक्तिशाली टूल्स को डाउनलोड करें",
       mediaKit: {
         title: "प्रोफेशनल मीडिया किट टेम्प्लेट",
         description: "आकर्षक मीडिया किट बनाएं जो ब्रांड्स को पसंद आएंगे",
@@ -649,7 +649,7 @@ ${userName}
 ---
 
 ${language === "hindi" ? "टेम्प्लेट 2: फॉलो-���प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
-${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोर���शन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
@@ -657,7 +657,7 @@ ${language === "hindi" ? "मैंने पिछले सप्ताह आ
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
-${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule कर सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
+${language === "hindi" ? "क्या हम इ��� week एक quick 15-minute call schedule कर सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
 
 ${language === "hindi" ? "Looking forward," : "Looking forward,"}
 ${userName}
@@ -699,7 +699,7 @@ ${language === "hindi" ? "आपके proposal के लिए thank you! म�
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
 ${language === "hindi" ? "• मेरी audience क�� [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
-${language === "hindi" ? "• ���ेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
+${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "• मैं additional value add कर सकता हूं like [extra service]" : "• I can add additional value like [extra service]"}
 
 ${language === "hindi" ? "��ैं flexible ह��ं औ��� ���� mutually beneficial deal बनाना चाहता हूं।" : "I'm flexible and want to create a mutually beneficial deal."}
@@ -709,7 +709,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 5: परफॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
+${language === "hindi" ? "��ेम्प्लेट 5: परफॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} x [Brand] - Campaign Performance Report` : `${userName} x [Brand] - Campaign Performance Report`}
 
 ${language === "hindi" ? "Dear [Brand Team]," : "Dear [Brand Team],"}
@@ -1002,26 +1002,52 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
       </header>
 
       {/* Progress Bar */}
-      <div className="bg-gray-50 py-6">
+      <div className="bg-gradient-to-r from-blue-50 to-green-50 py-8">
         <div className="container mx-auto px-4">
-          <div className="flex justify-center mb-4">
-            <div className="flex space-x-2">
-              {Array.from({ length: totalSteps }, (_, i) => i + 1).map(
-                (step) => (
-                  <div
-                    key={step}
-                    className={`w-8 h-3 rounded-full transition-all duration-500 ${
-                      step <= currentStep
-                        ? "bg-gradient-to-r from-neon-green to-electric-blue"
-                        : "bg-gray-300"
-                    }`}
-                  />
-                ),
-              )}
+          {/* Progress percentage */}
+          <div className="text-center mb-6">
+            <div className="text-3xl font-bold text-gray-900 mb-2">
+              {Math.round((currentStep / totalSteps) * 100)}% Complete
+            </div>
+            <div className="text-gray-600">
+              Step {currentStep} of {totalSteps}
             </div>
           </div>
-          <div className="text-center text-gray-700 font-medium">
-            {t.steps[currentStep as keyof typeof t.steps]}
+
+          {/* Enhanced Progress Bar */}
+          <div className="max-w-4xl mx-auto mb-6">
+            <div className="relative">
+              <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-gradient-to-r from-neon-green to-electric-blue transition-all duration-700 ease-out"
+                  style={{ width: `${(currentStep / totalSteps) * 100}%` }}
+                ></div>
+              </div>
+              {/* Step indicators */}
+              <div className="flex justify-between mt-4">
+                {Array.from({ length: totalSteps }, (_, i) => i + 1).map((step) => (
+                  <div key={step} className="flex flex-col items-center">
+                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-500 ${
+                      step <= currentStep
+                        ? "bg-gradient-to-r from-neon-green to-electric-blue text-white shadow-lg"
+                        : "bg-gray-300 text-gray-600"
+                    }`}>
+                      {step}
+                    </div>
+                    <div className="text-xs text-gray-600 mt-2 text-center hidden md:block">
+                      {t.steps[step as keyof typeof t.steps]}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Current step title */}
+          <div className="text-center">
+            <h2 className="text-2xl font-bold text-gray-900">
+              {t.steps[currentStep as keyof typeof t.steps]}
+            </h2>
           </div>
         </div>
       </div>
