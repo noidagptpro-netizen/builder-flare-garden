@@ -129,7 +129,7 @@ const languages = {
     opportunities: "अवसर",
     threats: "खतरे",
     keySuggestions: "मुख्य स��झाव",
-    creatorVitalStats: "आपके क्रिएटर महत्वपूर्ण आंकड़े",
+    creatorVitalStats: "आपके क्रिएटर महत्वपूर��ण आंकड़े",
     fameScore: "फेम स्कोर",
     growthPotential: "विकास क्षमता",
     incomeProjection: "आय क्षमता",
@@ -144,7 +144,7 @@ const languages = {
     age: "उम्र",
     paySecure: "₹99 भुगतान क��ें - सुरक्षित भुगतान",
     processing: "प्रसंस्करण...",
-    whatYouGet: "भुगतान के बाद आपको मिल���गा:",
+    whatYouGet: "भुगतान के बाद आपको मिलेगा:",
     fameScoreReport: "फेम स्कोर रिपोर्���",
     mediaKitTemplate: "मीडिया किट टेम्प्लेट",
     growthStrategy: "ग्रोथ स्��्रैटेजी",
@@ -163,7 +163,7 @@ const languages = {
     followers: "फॉलोअर्���:",
     monthlyIncome: "मासिक आय:",
     experienceLevel: "अनुभव स्तर:",
-    activePlatforms: "सक्रिय प्लेटफॉर्म:",
+    activePlatforms: "सक्रिय प��लेटफॉर्म:",
     competitorAnalysis: "प���रति���ोगी विश����लेषण",
     marketInsights: "बाजार अंतर्���ृष्टि",
   },
@@ -327,8 +327,8 @@ Optimal zoom: 150-200% for comfortable reading.
         `${language === "hindi" ? "फेम स्कोर रिपोर्ट" : "FAME SCORE REPORT"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
-${language === "hindi" ? "ना��:" : "Name:"} ${userName}
-${language === "hindi" ? "फेम स्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
+${language === "hindi" ? "नाम:" : "Name:"} ${userName}
+${language === "hindi" ? "फेम ��्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
 ${language === "hindi" ? "विकास क्षमता:" : "Growth Potential:"} ${analysis.growthPotential}%
 ${language === "hindi" ? "आय प्रक��षेपण:" : "Income Projection:"} ${analysis.incomeProjection}
 
@@ -363,7 +363,7 @@ ${language === "hindi" ? "व्यक्तिगत जानकारी:" : 
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "ईमेल:" : "Email:"} ${personalInfo.email}
 ${language === "hindi" ? "फोन:" : "Phone:"} ${personalInfo.phone}
-${language === "hindi" ? "शहर:" : "City:"} ${personalInfo.city}
+${language === "hindi" ? "शह���:" : "City:"} ${personalInfo.city}
 
 ${language === "hindi" ? "सोशल मीडिया प्रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
 ${language === "hindi" ? "प्राथमिक प्लेटफॉर्म:" : "Primary Platform:"} ${quizData.primaryPlatform}
@@ -376,7 +376,7 @@ ${language === "hindi" ? "फ���म स्क���र:" : "Fame Score:
 ${language === "hindi" ? "एंगेजमेंट रेट:" : "Engagement Rate:"} ${language === "hindi" ? "उच्च ���ुणवत्ता" : "High Quality"}
 ${language === "hindi" ? "मासिक रीच:" : "Monthly Reach:"} ${language === "hindi" ? "व्यापक दर्शक" : "Wide Audience"}
 
-${language === "hindi" ? "सुझाव���त दरें (भारतीय बाजार आधारित):" : "SUGGESTED RATES (Indian Market Based):"}
+${language === "hindi" ? "सुझावित दरें (भारतीय बाजार आधारि��):" : "SUGGESTED RATES (Indian Market Based):"}
 ${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-3,000"}
 ${language === "hindi" ? "Instagram रील:" : "Instagram Reel:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "Instagram स्टोरी:" : "Instagram Story:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-300" : quizData.followerCount.includes("1K - 5K") ? "300-500" : "500-1,500"}
@@ -399,7 +399,7 @@ ${language === "hindi" ? "मुख्य चुनौत��यां:" : "Ma
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 3).join(", ")}
 ${language === "hindi" ? "वर्तमान आय:" : "Current Income:"} ${quizData.monthlyIncome}
 
-${language === "hindi" ? "30-द���� की कार्य ���ोजना:" : "30-DAY ACTION PLAN:"}
+${language === "hindi" ? "30-द���� की ��ार्य ���ोजना:" : "30-DAY ACTION PLAN:"}
 ${language === "hindi" ? "सप्ताह 1-2:" : "Week 1-2:"}
 ${analysis.suggestions
   .slice(0, 2)
@@ -420,7 +420,7 @@ ${language === "hindi" ? "- नेटवर्किंग और ��हय�
 
 ${language === "hindi" ? "90-दिन के लक्ष्य:" : "90-DAY GOALS:"}
 ${language === "hindi" ? "- फॉलोअर वृद्धि:" : "- Follower Growth:"} 30-50%
-${language === "hindi" ? "- एंगेजमेंट वृद्धि:" : "- Engagement Increase:"} 40-80%
+${language === "hindi" ? "- एंगे��मेंट वृद्धि:" : "- Engagement Increase:"} 40-80%
 ${language === "hindi" ? "- आय लक्ष्य:" : "- Income Target:"} ${analysis.incomeProjection}
 ${language === "hindi" ? "- ब्रांड पार्टनरशिप:" : "- Brand Partnerships:"} 2-5 ${language === "hindi" ? "सह��ोग" : "collaborations"}
 
@@ -505,9 +505,9 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
         `${language === "hindi" ? "🚀 AI-पावर्ड प्रो मोनेटाइ��़ेशन कैलकुलेटर" : "🚀 AI-POWERED PRO MONETIZATION CALCULATOR"} - ${userName}
 
 ${language === "hindi" ? "📊 रियल-टाइम मार्केट एनालिसिस रिपोर्ट" : "📊 REAL-TIME MARKET ANALYSIS REPORT"}
-═════════════════════════════════════════���═════════
+═══════════════════════════════════════════════════
 
-${language === "hindi" ? "👤 आपकी प्रोफाइल:" : "👤 YOUR PROFILE:"}
+${language === "hindi" ? "👤 आ��की प्रोफाइल:" : "👤 YOUR PROFILE:"}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount} (${followerNum.toLocaleString()} actual)
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
 ${language === "hindi" ? "प्लेटफॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
@@ -549,9 +549,9 @@ ${language === "hindi" ? "🔥 प्रो टिप्स:" : "🔥 PRO TIPS:"
 2. ${language === "hindi" ? "स्टोरी रेट्स को अलग से चार्ज करें (+40% प्रीमियम)" : "Always charge story rates separately (+40% premium)"}
 3. ${language === "hindi" ? "लॉन्ग-टर्म कैंपेन्स के लिए 25% डिस्काउंट ऑफर करें" : "Offer 25% package discount for 3+ month campaigns"}
 
-${language === "hindi" ? "🎯 आपका कस्टम रेट कार्ड (तुरंत इस्तेमाल कर��ं):" : "🎯 YOUR CUSTOM RATE CARD (Use Immediately):"}
+${language === "hindi" ? "🎯 आपका कस्टम रेट कार्ड (तुरंत इस्तेमाल करें):" : "🎯 YOUR CUSTOM RATE CARD (Use Immediately):"}
 ═══════════════════════════════════════════════════
-${language === "hindi" ? "बेसिक प���केज:" : "Basic Package:"} ₹${Math.round(followerNum * 0.012 * niche.multiplier).toLocaleString()}
+${language === "hindi" ? "बेसिक पैकेज:" : "Basic Package:"} ₹${Math.round(followerNum * 0.012 * niche.multiplier).toLocaleString()}
 ${language === "hindi" ? "स्टैंडर्ड पैकेज:" : "Standard Package:"} ₹${Math.round(followerNum * 0.025 * niche.multiplier).toLocaleString()}
 ${language === "hindi" ? "प्रीमियम पैकेज:" : "Premium Package:"} ₹${Math.round(followerNum * 0.045 * niche.multiplier).toLocaleString()}
 
@@ -581,7 +581,7 @@ ${language === "hindi" ? "📊 करंट स्टेट्स (" : "📊 CUR
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche} (${targetEngagementRate}% target engagement)
 ${language === "hindi" ? "प्लेटफॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
-${language === "hindi" ? "करंट फॉल��अर्स:" : "Current Followers:"} ${currentFollowers.toLocaleString()}
+${language === "hindi" ? "करंट फॉलोअर्स:" : "Current Followers:"} ${currentFollowers.toLocaleString()}
 ${language === "hindi" ? "टारगेट फॉलोअर्स (30 दिन):" : "Target Followers (30 days):"} ${projectedFollowers.toLocaleString()}
 ${language === "hindi" ? "एस्टिमेटेड रीच:" : "Estimated Reach:"} ${estimatedReach.toLocaleString()}/post
 
@@ -603,7 +603,7 @@ ${language === "hindi" ? "⚡ एडवांस्ड एंगेजमें�
 • ${language === "hindi" ? "एंगेजमेंट रेट" : "Engagement Rate"} = (Likes + Comments + Shares + Saves) ÷ Reach × 100
 • ${language === "hindi" ? "टारगेट:" : "Target:"} ${targetEngagementRate}% (आपके niche के लिए optimal)
 • ${language === "hindi" ? "सेव रेट" : "Save Rate"} = Saves ÷ Reach × 100 (टारगेट: 2-4%)
-• ${language === "hindi" ? "कमेंट रेट" : "Comment Rate"} = Comments ÷ Reach × 100 (टारगेट: 0.5-1.5%)
+• ${language === "hindi" ? "कमे��ट रेट" : "Comment Rate"} = Comments ÷ Reach × 100 (टारगेट: 0.5-1.5%)
 
 ${language === "hindi" ? "💰 मोनेटाइज़ेशन ट्रैकर (रियल वैल्यू):" : "💰 MONETIZATION TRACKER (Real Value):"}
 ┌─────────────────────────────────────────────┐
@@ -624,7 +624,7 @@ ${language === "hindi" ? "📊 साप्ताहिक ग्रोथ म�
 
 ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस स्कोरकार्ड:" : "🎯 CONTENT PERFORMANCE SCORECARD:"}
 ┌─────────────────────────────────────────────┐
-│ ${language === "hindi" ? "कंटेंट टाइप" : "Content Type"}: ________________    │
+│ ${language === "hindi" ? "कं���ेंट टाइप" : "Content Type"}: ________________    │
 │ ${language === "hindi" ? "पोस्ट टाइम" : "Post Time"}: ___:___ (बेस्ट: 7-9 PM)   │
 │ ${language === "hindi" ? "हैशटैग्स यूज्ड" : "Hashtags Used"}: _____ (बेस्ट: 8-12)  │
 │ ${language === "hindi" ? "1घंटे में रीच" : "1hr Reach"}: _____ (टारगेट: 15-25%)  │
@@ -660,7 +660,7 @@ ${language === "hindi" ? "⚡ एक्शन आइटम्स (हर हफ�
 □ ${language === "hindi" ? "टॉप 3 परफॉर्मिंग पोस्ट्स को analyze करें और pattern ढूंढें" : "Analyze top 3 performing posts and find patterns"}
 □ ${language === "hindi" ? "Competitor के टॉप पोस्ट्स स्टडी करें (कम से कम 5)" : "Study competitor top posts (minimum 5)"}
 □ ${language === "hindi" ? "हैशटैग परफॉर्मेंस चेक करें और underperforming को replace करें" : "Check hashtag performance and replace underperforming ones"}
-□ ${language === "hindi" ? "Audience insights देखें - कब ऑनलाइन हैं, demographics" : "Review audience insights - when online, demographics"}
+□ ${language === "hindi" ? "Audience insights द���खें - कब ऑनलाइन हैं, demographics" : "Review audience insights - when online, demographics"}
 □ ${language === "hindi" ? "नए ट्रेंड्स research करें और next week plan करें" : "Research new trends and plan next week content"}
 
 ${language === "hindi" ? "🎯 अगले 30 दिन का टारगेट:" : "🎯 NEXT 30 DAYS TARGET:"}
@@ -854,7 +854,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     {language === "hindi"
-                      ? "जानें कि आप हर महीने कितना कमा सकते हैं। ���ॉप क्रिएटर्स के डेटा पर आधारित 95% सटीक कैलकुलेशन।"
+                      ? "जानें कि आप हर महीने कितना कमा सकते हैं। टॉप क्रिएटर्स के डेटा पर आध��रित 95% सटीक कैलकुलेशन।"
                       : "Calculate real-time earnings potential based on your follower count & niche"}
                   </p>
                   <button
@@ -919,6 +919,12 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
               </p>
               <Link
                 to="/shop"
+                onClick={() => {
+                  // Add a small delay to ensure navigation happens then scroll
+                  setTimeout(() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }, 100);
+                }}
                 className="inline-flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-4 px-8 rounded-xl text-lg hover:shadow-lg hover:scale-105 transition-all duration-300"
               >
                 <Zap className="w-5 h-5" />
