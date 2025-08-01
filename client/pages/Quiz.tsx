@@ -271,7 +271,7 @@ const languages = {
       9: "एंगेजमेंट रेट",
     },
     questions: {
-      primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
+      primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर ��ंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
@@ -314,7 +314,7 @@ const languages = {
         "खाना और खाना बनाना",
         "यात्रा और एडवेंचर",
         "फिटनेस और स्वास्थ्य",
-        "व्यक्तिगत वित्त और निवेश",
+        "व्��क्तिगत वित्त और निवेश",
         "मनोरंजन और कॉमेडी",
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
@@ -340,10 +340,10 @@ const languages = {
       ],
       contentTypes: [
         "फोटो और कैरोसेल",
-        "छोट��� वीडियो/रील्स",
+        "छोटे वीडियो/रील्स",
         "लंबे वीडियो",
         "लाइव स्ट्रीम",
-        "स्टोरीज़",
+        "स्टोरी��़",
         "लिखित पोस्ट",
         "पॉडकास्ट",
         "मिश्रित कंटेंट",
@@ -591,7 +591,7 @@ Optimal zoom: 150-200% for comfortable reading.
 ${language === "hindi" ? "व्यक्ति���त जानकारी:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
-${language === "hindi" ? "प्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
+${language === "hindi" ? "प्ले���फ���र्म:" : "Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "����ॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
 
 ${language === "hindi" ? "सांख्यिकी और दर��ं:" : "STATISTICS & RATES:"}
@@ -657,7 +657,7 @@ ${language === "hindi" ? "मैंने पिछले सप्ताह आ
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
-${language === "hindi" ? "क्या हम इ��� week एक quick 15-minute call schedule कर सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
+${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule कर सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
 
 ${language === "hindi" ? "Looking forward," : "Looking forward,"}
 ${userName}
@@ -680,7 +680,7 @@ ${language === "hindi" ? "📱 स्ट���री पैक���ज: �
 ${language === "hindi" ? "• 3-5 story slides" : "• 3-5 story slides"}
 ${language === "hindi" ? "• Behind-the-scenes content" : "• Behind-the-scenes content"}
 
-${language === "hindi" ? "🎥 रील्स कंटेंट: ₹[आपकी rate]" : "���� Reels Content: ₹[Your rate]"}
+${language === "hindi" ? "🎥 रील्स क��टेंट: ₹[आपकी rate]" : "���� Reels Content: ₹[Your rate]"}
 ${language === "hindi" ? "• High-quality reel creation" : "• High-quality reel creation"}
 ${language === "hindi" ? "• Trending music/sounds" : "• Trending music/sounds"}
 
@@ -709,7 +709,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "��ेम्प्लेट 5: परफॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
+${language === "hindi" ? "टेम्प्लेट 5: परफॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} x [Brand] - Campaign Performance Report` : `${userName} x [Brand] - Campaign Performance Report`}
 
 ${language === "hindi" ? "Dear [Brand Team]," : "Dear [Brand Team],"}
@@ -789,7 +789,7 @@ ${language === "hindi" ? "- हैशटैग रिसर्च करें (
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटेंट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
-${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोकस करें" : "- Focus on community engagement"}
+${language === "hindi" ? "- कम्युनिटी एंग���जमेंट फोकस करें" : "- Focus on community engagement"}
 ${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शु���ू करें" : "- Start tracking analytics"}
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
@@ -798,7 +798,7 @@ ${language === "hindi" ? "- ट्रेंडिंग टॉपिक्स �
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
-${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
+${language === "hindi" ? "- मीडिया क���ट तैयार करें" : "- Prepare media kit"}
 ${language === "hindi" ? "- ब्रां���्स से ���ंपर्क शुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
 
@@ -1071,7 +1071,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
             </div>
           </div>
 
-          <div className="bg-white border-2 border-gray-100 rounded-3xl p-6 md:p-12 shadow-xl">
+          <div className="bg-white border-2 border-gray-100 rounded-3xl p-8 md:p-16 shadow-2xl backdrop-blur-sm">
             {/* Loading State */}
             {isGenerating && (
               <div className="text-center py-12">
