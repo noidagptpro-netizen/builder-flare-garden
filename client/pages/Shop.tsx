@@ -220,7 +220,6 @@ export default function Shop() {
       rating: "Rating",
       securePayment: "Secure payment",
       instantDownload: "Instant download",
-      moneyBack: "Money-back guarantee",
       buyNow: "Buy Now",
       downloadFree: "Download Free",
       bundleOffer: "LIMITED TIME BUNDLE OFFER 🔥",
