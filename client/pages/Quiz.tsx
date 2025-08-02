@@ -262,7 +262,7 @@ const languages = {
     steps: {
       1: "प्लेटफॉर्म और फॉलोअर्स",
       2: "कंटेंट निच",
-      3: "कंट��ंट प्रकार",
+      3: "कंटेंट प्रकार",
       4: "पोस्टिंग आवृत्ति",
       5: "अनुभव और आय",
       6: "सबसे बड़ी चुनौती",
@@ -272,7 +272,7 @@ const languages = {
     },
     questions: {
       primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बना��े हैं?",
-      followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
+      followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कि��ने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
       niche: "आपका कंटेंट किस विषय पर है?",
@@ -316,7 +316,7 @@ const languages = {
         "फिटनेस और स्वास्थ्य",
         "व्यक्तिगत वि��्त और निवेश",
         "मनोरंजन और कॉमेडी",
-        "उद्यमिता और व्यापार",
+        "उद्��मिता और व्यापार",
         "जीवनशैली और कल्याण",
         "कला और डिज़ाइन",
         "गेमिंग और एस्पोर्ट्स",
@@ -409,7 +409,7 @@ const languages = {
     freeResources: {
       title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संसाधन",
       subtitle:
-        "अपनी क्रिएटर यात्रा शुरू करने के लिए इन शक्तिशाली टूल्स को डाउनलोड करें",
+        "अपनी क्रिएटर यात्रा शुरू करने के लिए इन शक्तिशाली टूल्स क�� डाउनलोड करें",
       mediaKit: {
         title: "प्रोफेशनल मीडिया किट टेम्प्लेट",
         description: "आकर्षक मीडिया किट बनाएं जो ब्रांड्स को पसंद आएंगे",
@@ -625,7 +625,7 @@ ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
         `${language === "hindi" ? "6+ ब्रांड आ���टरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
 ${language === "hindi" ? "टेम्प्ल���ट 1: प्रारंभिक संपर्क (कोल्ड आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
-${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड ���ाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
 
@@ -633,8 +633,8 @@ ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} 
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
-${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
-${language === "hindi" ? "- मैं प्रामाणिक कंटे���ट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
+${language === "hindi" ? `- मे��े दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
+${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
 ${language === "hindi" ? "स��ंख्यिकी:" : "Statistics:"}
 ${language === "hindi" ? "- फॉ���ोअर्स:" : "- Followers:"} ${quizData.followerCount}
@@ -653,7 +653,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा ��ा। मु���े लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
+${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
@@ -664,7 +664,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 3: रेट कार्ड प्रेजेंटेशन" : "TEMPLATE 3: RATE CARD PRESENTATION"}
+${language === "hindi" ? "टे��्प्लेट 3: रेट कार्ड प्रेजेंटेशन" : "TEMPLATE 3: RATE CARD PRESENTATION"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} - Collaboration rates & packages` : `${userName} - Collaboration rates & packages`}
 
 ${language === "hindi" ? "Dear [Brand Name]," : "Dear [Brand Name],"}
@@ -699,7 +699,7 @@ ${language === "hindi" ? "आपके proposal के लिए thank you! म�
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
 ${language === "hindi" ? "• मेरी audience क�� [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
-${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "�� My recent collaborations achieved [specific results]"}
+${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "• मैं additional value add कर सकता हूं like [extra service]" : "• I can add additional value like [extra service]"}
 
 ${language === "hindi" ? "��ै��� flexible ह��ं औ��� ���� mutually beneficial deal बनाना चाहता हूं।" : "I'm flexible and want to create a mutually beneficial deal."}
@@ -714,7 +714,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Dear [Brand Team]," : "Dear [Brand Team],"}
 
-${language === "hindi" ? "हमारे recent collaboration के results share करना चाहता हूं:" : "I wanted to share the results from our recent collaboration:"}
+${language === "hindi" ? "हमारे recent collaboration के results share ���रना चाहता हूं:" : "I wanted to share the results from our recent collaboration:"}
 
 ${language === "hindi" ? "📊 PERFORMANCE METRICS:" : "📊 PERFORMANCE METRICS:"}
 ${language === "hindi" ? "• Post Reach: [number] impressions" : "• Post Reach: [number] impressions"}
@@ -783,7 +783,7 @@ ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:
 
 ${language === "hindi" ? "दिन 1-30: बुनि���ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्ताह 1:" : "Week 1:"}
-${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्त��ान आवृत्ति बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
+${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्तमान आवृत्ति बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
 ${language === "hindi" ? `- ${quizData.niche} पर 10 कंटेंट आ���डिया तैयार करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्स)" : "- Research hashtags (30 hashtag mix)"}
 
@@ -1190,7 +1190,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-lg font-bold text-gray-900 mb-4">
-                        Content Format ��
+                        Content Format 🎬
                       </h2>
                       <p className="text-gray-600">
                         What type of content do you primarily create?
