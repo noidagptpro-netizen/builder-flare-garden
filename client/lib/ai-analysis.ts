@@ -1236,60 +1236,117 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
   const followerNum = getFollowerCount(data.followerCount);
   const incomeNum = getIncomeAmount(data.monthlyIncome);
 
-  // High priority recommendations
-  if (followerNum >= 10000 && incomeNum < 30000) {
+  // High priority recommendations based on user profile and existing shop products
+
+  // Complete Creator Growth Kit - For users with audience but low income
+  if (followerNum >= 5000 && incomeNum < 30000) {
     recommendations.push({
-      name: "Complete Growth Kit",
+      name: "Complete Creator Growth Kit",
       reason:
-        "You have the audience size but income potential is untapped. This kit includes rate cards and brand outreach templates to maximize earnings.",
+        `With ${data.followerCount} followers but current income under ₹30K, this kit's media kit templates, brand outreach emails, and pricing calculator will help you unlock your monetization potential immediately.`,
       priority: "high" as const,
     });
   }
 
-  if (!data.bio || data.bio.length < 50) {
+  // Instagram Reels Mastery Course - For users focused on Instagram and engagement challenges
+  if (data.primaryPlatform === "Instagram" &&
+      (data.biggestChallenge.some(challenge => challenge.includes("Low views & inconsistent engagement")) ||
+       data.contentType === "Photos & Carousels" ||
+       data.goals.some(goal => goal.includes("Create Viral Content")))) {
     recommendations.push({
-      name: "Personal Branding Kit",
+      name: "Instagram Reels Mastery Course",
       reason:
-        "Your personal brand needs strengthening. Bio templates and brand positioning guides will help you stand out.",
+        "Your Instagram focus and engagement challenges make this perfect. Learn the viral formula with 50+ reel ideas, editing templates, and algorithm secrets to boost your reach dramatically.",
       priority: "high" as const,
     });
   }
 
-  // Medium priority recommendations
+  // Brand Collaboration Masterclass - For brand partnership challenges
   if (
     data.biggestChallenge.some(
       (challenge) =>
-        challenge.includes("brand") || challenge.includes("collaboration"),
-    )
+        challenge.includes("Not landing brand collaborations") ||
+        challenge.includes("brand") ||
+        challenge.includes("collaboration"),
+    ) ||
+    data.goals.some(goal => goal.includes("Get Brand Collaborations"))
   ) {
     recommendations.push({
-      name: "Brand Outreach Templates",
+      name: "Brand Collaboration Masterclass",
       reason:
-        "Since brand collaborations are your main challenge, these proven email templates will help you land partnerships.",
-      priority: "medium" as const,
+        "Since brand collaborations are your main challenge, this masterclass provides email scripts, media kit templates, negotiation tactics, and a 50+ brand contact database to land partnerships.",
+      priority: "high" as const,
     });
   }
 
-  if (followerNum >= 5000 && followerNum < 50000) {
+  // YouTube Mastery Course - For YouTube creators or those wanting to expand
+  if (data.primaryPlatform === "YouTube" ||
+      data.secondaryPlatforms.includes("YouTube") ||
+      data.goals.some(goal => goal.includes("Expand into new platforms"))) {
     recommendations.push({
-      name: "Professional Media Kit",
+      name: "YouTube Mastery Course",
       reason:
-        "You're in the sweet spot for brand partnerships. A professional media kit will help you command higher rates.",
+        "Your YouTube presence or expansion goals align perfectly with this comprehensive course covering SEO, monetization, thumbnails, and analytics mastery for sustained growth.",
       priority: "medium" as const,
     });
   }
 
-  // Always include based on goals
-  if (data.goals.includes("monetize") || data.goals.includes("brand deals")) {
+  // Facebook Posting Mastery Course - For Facebook users or multi-platform strategy
+  if (data.primaryPlatform === "Facebook" ||
+      data.secondaryPlatforms.includes("Facebook") ||
+      data.biggestChallenge.some(challenge => challenge.includes("Algorithm changes killing reach"))) {
     recommendations.push({
-      name: "Monetization Masterclass",
+      name: "Facebook Posting Mastery Course",
       reason:
-        "Your goal aligns perfectly with advanced monetization strategies and revenue diversification.",
+        "Master Facebook's 2024 algorithm secrets and organic reach strategies. Perfect for diversifying your platform presence and reducing algorithm dependency risk.",
       priority: "medium" as const,
     });
   }
 
-  return recommendations;
+  // Complete Creator Bundle - For serious creators with higher goals
+  if ((followerNum >= 10000 && incomeNum < 50000) ||
+      data.goals.some(goal => goal.includes("Earn ₹25K/50K/1L+ per month")) ||
+      fameScore >= 70) {
+    recommendations.push({
+      name: "Complete Creator Bundle",
+      reason:
+        `Your ${data.followerCount} audience and ambitious income goals make this bundle perfect. Get ALL premium products for 70% OFF - save ₹700+ and access everything needed to scale your creator business.`,
+      priority: "high" as const,
+    });
+  }
+
+  // Prioritize based on specific user challenges and goals
+  if (
+    data.biggestChallenge.some(challenge => challenge.includes("Can't convert followers into paying customers")) &&
+    followerNum >= 1000
+  ) {
+    // Prioritize Complete Creator Growth Kit for conversion issues
+    const existingKit = recommendations.find(r => r.name === "Complete Creator Growth Kit");
+    if (existingKit) {
+      existingKit.priority = "high";
+      existingKit.reason = `Your ${data.followerCount} followers aren't converting to income - this kit's pricing calculator, email templates, and rate cards will help you start monetizing immediately.`;
+    } else {
+      recommendations.push({
+        name: "Complete Creator Growth Kit",
+        reason:
+          `Your follower conversion challenge needs immediate action. This kit provides all monetization tools: pricing calculator, brand outreach templates, and rate cards.`,
+        priority: "high" as const,
+      });
+    }
+  }
+
+  // Always recommend growth kit for new creators
+  if (followerNum < 5000 && !recommendations.some(r => r.name === "Complete Creator Growth Kit")) {
+    recommendations.push({
+      name: "Complete Creator Growth Kit",
+      reason:
+        "Perfect foundation for growing creators. Get essential tools: media kit templates, content calendar, growth strategy workbook, and hashtag guide to accelerate your growth.",
+      priority: "medium" as const,
+    });
+  }
+
+  // Limit recommendations to top 3-4 most relevant
+  return recommendations.slice(0, 4);
 };
 
 const generateMarketInsights = (data: QuizData, fameScore: number) => {
@@ -1625,7 +1682,7 @@ const calculateGrowthPotential = (
     "Build authentic community",
     "Achieve viral content",
     "Expand into new platforms",
-    "authentic कम्युनिटी बनाना",
+    "authentic कम्यु��िटी बनाना",
     "वायरल कंटेंट बनाना",
     "नए प्लेटफॉर्म्स में expand",
   ];
