@@ -625,7 +625,7 @@ ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
         `${language === "hindi" ? "6+ ब्रांड आ���टरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
 ${language === "hindi" ? "टेम्प्ल���ट 1: प्रारंभिक संपर्क (कोल्ड आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
-${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड ���ाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
 
@@ -634,7 +634,7 @@ ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
-${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
+${language === "hindi" ? "- मैं प्रामाणिक कंटे���ट बनाने में विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
 ${language === "hindi" ? "स��ंख्यिकी:" : "Statistics:"}
 ${language === "hindi" ? "- फॉ���ोअर्स:" : "- Followers:"} ${quizData.followerCount}
@@ -653,7 +653,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
+${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा ��ा। मु���े लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
@@ -699,7 +699,7 @@ ${language === "hindi" ? "आपके proposal के लिए thank you! म�
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
 ${language === "hindi" ? "• मेरी audience क�� [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
-${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
+${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "�� My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "• मैं additional value add कर सकता हूं like [extra service]" : "• I can add additional value like [extra service]"}
 
 ${language === "hindi" ? "��ै��� flexible ह��ं औ��� ���� mutually beneficial deal बनाना चाहता हूं।" : "I'm flexible and want to create a mutually beneficial deal."}
@@ -783,7 +783,7 @@ ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:
 
 ${language === "hindi" ? "दिन 1-30: बुनि���ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्ताह 1:" : "Week 1:"}
-${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्तमान आवृत्ति बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
+${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्त��ान आवृत्ति बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
 ${language === "hindi" ? `- ${quizData.niche} पर 10 कंटेंट आ���डिया तैयार करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्स)" : "- Research hashtags (30 hashtag mix)"}
 
@@ -968,50 +968,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
               </div>
             </div>
 
-            {/* Comparison Section */}
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-blue-200 rounded-2xl p-8 mb-8">
-              <h3 className="text-2xl font-bold text-center text-gray-900 mb-6">
-                Want the Complete Professional Toolkit?
-              </h3>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="bg-white rounded-xl p-6 border-2 border-gray-200">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">FREE</span>
-                    Basic Starter Kit
-                  </h4>
-                  <ul className="space-y-2 text-gray-600">
-                    <li>✓ Basic templates</li>
-                    <li>✓ 6 email templates</li>
-                    <li>✓ 30-day growth plan</li>
-                    <li>✗ No personalization</li>
-                    <li>✗ No advanced strategies</li>
-                    <li>✗ No professional design</li>
-                  </ul>
-                </div>
-                <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 border-2 border-purple-300">
-                  <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">PRO ₹99</span>
-                    Complete Creator Toolkit
-                  </h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>✓ Personalized based on YOUR quiz</li>
-                    <li>✓ 30+ proven email templates</li>
-                    <li>✓ 90-day detailed strategy</li>
-                    <li>✓ Professional media kit design</li>
-                    <li>✓ Real monetization calculator</li>
-                    <li>✓ Advanced analytics tracker</li>
-                    <li>✓ Platform-specific tactics</li>
-                    <li>✓ Industry-specific content</li>
-                  </ul>
-                  <button
-                    onClick={handleSubmit}
-                    className="w-full mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all"
-                  >
-                    Upgrade to Pro Analysis
-                  </button>
-                </div>
-              </div>
-            </div>
+
 
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
               <h2 className="text-lg font-bold text-gray-900 mb-4">
@@ -1233,7 +1190,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-lg font-bold text-gray-900 mb-4">
-                        Content Format 🎬
+                        Content Format ��
                       </h2>
                       <p className="text-gray-600">
                         What type of content do you primarily create?
