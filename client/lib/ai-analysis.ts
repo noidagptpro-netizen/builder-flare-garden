@@ -457,7 +457,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
       "Education & Learning": `📚 EDUCATION EMPIRE POTENTIAL: Ed-tech is ₹2.8L crore growing 40% YoY! Your knowledge in ${data.niche} + course creation = ₹${Math.round(followerNum * 2)}-₹${Math.round(followerNum * 5)} monthly potential.`,
       "Business & Finance": `💼 FINANCE CREATOR PREMIUM: B2B creators earn 3x more per follower! Your expertise + ${data.followerCount} = ₹${Math.round(followerNum * 1.8)}-₹${Math.round(followerNum * 3.2)} monthly from fintech partnerships.`,
       "Fitness & Health": `💪 FITNESS BOOM POSITIONING: Post-COVID fitness market exploded! Health creators with ${data.followerCount} average ₹${Math.round(followerNum * 1.1)}-₹${Math.round(followerNum * 2.0)} monthly from supplement brands.`,
-      "Food & Cooking": `🍳 FOOD CONTENT SUPREMACY: Food gets highest engagement (8-15% vs 2-4% average)! Your ${data.followerCount} + food = ₹${Math.round(followerNum * 0.9)}-���${Math.round(followerNum * 1.8)} from restaurant partnerships.`,
+      "Food & Cooking": `🍳 FOOD CONTENT SUPREMACY: Food gets highest engagement (8-15% vs 2-4% average)! Your ${data.followerCount} + food = ₹${Math.round(followerNum * 0.9)}-₹${Math.round(followerNum * 1.8)} from restaurant partnerships.`,
       "Personal Finance & Investing": `💰 FINTECH PREMIUM NICHE: Personal finance creators earn 60% higher CPM rates! Your ${data.followerCount} audience + money content = ₹${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3.0)} monthly potential.`,
     };
     if (nicheInsights[data.niche as keyof typeof nicheInsights]) {
@@ -1735,7 +1735,7 @@ const calculateGrowthPotential = (
     "Build authentic community",
     "Achieve viral content",
     "Expand into new platforms",
-    "authentic कम्यु��िटी बन��ना",
+    "authentic कम्यु��िटी बनाना",
     "वायरल कंटेंट बनाना",
     "नए प्लेटफॉर्म्स में expand",
   ];
@@ -2096,7 +2096,7 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
     // Proprietary FameChase Metrics - Competitive Advantage
     famePotentialIndex: Math.round(famePotentialIndex),
     monetizationReadinessIndex: Math.round(monetizationReadinessIndex),
-    experienceLevel: getExperienceLevelDescription(data.experience, fameScore),
+    experienceLevel: getExperienceLevelDescription(data.experience, fameScore, data),
     growthTrajectory: getGrowthTrajectory(data, fameScore),
     swotAnalysis: generateSWOTAnalysis(data, fameScore),
     marketInsights,
