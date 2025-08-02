@@ -99,7 +99,7 @@ const languages = {
     phoneNumber: "Phone Number",
     city: "City",
     age: "Age",
-    paySecure: "Pay ₹99 - Secure Payment",
+    paySecure: "Pay ���99 - Secure Payment",
     processing: "Processing...",
     whatYouGet: "What you'll get after payment:",
     fameScoreReport: "Fame Score Report",
@@ -127,7 +127,7 @@ const languages = {
   hindi: {
     title: "आपका क्रिएटर विश्लेष���",
     subtitle: "आपकी क्रिएटर यात्रा के लिए संपूर्ण व्यक्तिगत अंतर्दृष्टि",
-    profileSynopsis: "प्रोफाइल स���नॉप्सिस",
+    profileSynopsis: "प्रोफ���इल स���नॉप्सिस",
     creatorProfile: "क्रिएटर प्रोफा��ल",
     currentStatus: "वर्तमान स्थिति",
     swotAnalysis: "SWOT विश्लेषण",
@@ -162,7 +162,7 @@ const languages = {
     backToQuiz: "क्विज़ पर वापस जाएं",
     basedOnEngagement: "एंगेजमेंट क्षमता के ��धार पर",
     nextSixMonths: "अगले 6 महीने का प्रक्षेपण",
-    monthlyTarget: "मासि��� प्राप���त करन�� योग्य लक्ष्य",
+    monthlyTarget: "मासि����� प्राप���त करन�� योग्य लक्ष्य",
     primaryPlatform: "प्र��थमिक प��लेटफॉर्म:",
     contentNiche: "कंटेंट निच:",
     contentType: "कंटेंट प्रकार:",
@@ -345,7 +345,7 @@ export default function Results() {
         `
 
 🏆 ${language === "hindi" ? "फेम स्कोर रिपोर्ट" : "FAME SCORE REPORT"} - ${userName}
-═══════════════════════════════════════════════════════════
+══════════════════════════════════��════════════════════════
 
 
 📊 ${language === "hindi" ? "व्��क्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
@@ -367,7 +367,7 @@ ${language === "hindi" ? "📱 प्लेटफॉर्म:" : "📱 Platform
 
 ${language === "hindi" ? "🎨 निच:" : "🎨 Niche:"} ${quizData.niche}
 
-${language === "hindi" ? "👥 फॉलोअर्��:" : "👥 Followers:"} ${quizData.followerCount}
+${language === "hindi" ? "👥 फॉलोअर्���:" : "👥 Followers:"} ${quizData.followerCount}
 
 ${language === "hindi" ? "💵 मासिक आय:" : "💵 Monthly Income:"} ${quizData.monthlyIncome}
 
@@ -391,7 +391,7 @@ ${analysis.swotAnalysis.opportunities.map((o: string, i: number) => `${i + 1}. $
 
 
 🎯 ${language === "hindi" ? "मुख्य सुझाव:" : "KEY RECOMMENDATIONS:"}
-────────────────────────────────────────────────
+───────────��────────────────────────────────────
 
 ${analysis.suggestions.slice(0, 10).map((s: string, i: number) => `${i + 1}. ${s}\n`).join("\n")}
 
@@ -431,7 +431,7 @@ ${language === "hindi" ? "🏙️ शह���:" : "🏙️ City:"} ${persona
 
 
 📊 ${language === "hindi" ? "सोशल मीडिया प्रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
-────────────────────────────────────────────────
+───���────────────────────────────────────────────
 
 ${language === "hindi" ? "📱 प्राथमिक प्लेटफॉर��म:" : "📱 Primary Platform:"} ${quizData.primaryPlatform}
 
@@ -625,7 +625,7 @@ ${language === "hindi" ? "🔥 प्रो टिप्स:" : "🔥 PRO TIPS:"
 3. ${language === "hindi" ? "लॉन्ग-टर्म कैंपेन्स के लिए 25% डिस्काउंट ऑफर करें" : "Offer 25% package discount for 3+ month campaigns"}
 
 ${language === "hindi" ? "🎯 आपका कस्टम रेट कार्ड (तुरंत इस्तेमाल करें):" : "🎯 YOUR CUSTOM RATE CARD (Use Immediately):"}
-═════════════��═════════════════════════════════════
+════��════════��═════════════════════════════════════
 ${language === "hindi" ? "ब��सिक पैकेज:" : "Basic Package:"} ₹${Math.round(followerNum * 0.012 * niche.multiplier).toLocaleString()}
 ${language === "hindi" ? "���्टैंडर्ड पैकेज:" : "Standard Package:"} ₹${Math.round(followerNum * 0.025 * niche.multiplier).toLocaleString()}
 ${language === "hindi" ? "प्रीमियम पैकेज:" : "Premium Package:"} ₹${Math.round(followerNum * 0.045 * niche.multiplier).toLocaleString()}
@@ -698,7 +698,7 @@ ${language === "hindi" ? "📊 साप्ताहिक ग्रोथ म�
 • ${language === "hindi" ? "सप्ताह" : "Week"} 4: टारगेट ${Math.round(targetGrowthRate / 4 * 1.3)} new followers/day
 
 ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस स्कोरकार्ड:" : "🎯 CONTENT PERFORMANCE SCORECARD:"}
-┌─────────────────────────────────────────────┐
+┌────────────────────────────────────────────��┐
 �� ${language === "hindi" ? "कं���ेंट टाइप" : "Content Type"}: ________________    │
 │ ${language === "hindi" ? "पोस्ट टाइम" : "Post Time"}: ___:___ (बेस्ट: 7-9 PM)   │
 │ ${language === "hindi" ? "हैशटैग्स यूज्ड" : "Hashtags Used"}: _____ (बेस्ट: 8-12)  │
@@ -709,7 +709,7 @@ ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस
 
 ${language === "hindi" ? "🔥 प्रो-लेवल एनालिटिक्स टिप्स:" : "🔥 PRO-LEVEL ANALYTICS TIPS:"}
 1. ${language === "hindi" ? "रीच 50% से कम = Algorithm penalty. तुरंत बेहतर कंटेंट पोस��ट करें" : "Reach below 50% = Algorithm penalty. Post better content immediately"}
-2. ${language === "hindi" ? "सेव रेट 2% से ज्यादा = वायरल potential. इसी तरह का कंटेंट बनाएं" : "Save rate above 2% = Viral potential. Create similar content"}
+2. ${language === "hindi" ? "स��व रेट 2% से ज्यादा = वायरल potential. इसी तरह का कंटेंट बनाएं" : "Save rate above 2% = Viral potential. Create similar content"}
 3. ${language === "hindi" ? "कमेंट्स में रिप्लाई जरूर करें - Engagement बढ़ेगा 40%" : "Always reply to comments - Boosts engagement by 40%"}
 4. ${language === "hindi" ? "पहले 30 मिनट में ज्यादा likes = Algorithm boost" : "High likes in first 30 minutes = Algorithm boost"}
 
@@ -884,7 +884,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                 </h3>
                 <p className="text-gray-600 mb-6">
                   {language === "hindi"
-                    ? "आपकी व्यक्तिगत 90-दिन की विकास रणनीति"
+                    ? "आपकी व्���क्तिगत 90-दिन की विकास रणनीति"
                     : "Your personalized 90-day growth strategy"}
                 </p>
                 <button
@@ -929,7 +929,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     {language === "hindi"
-                      ? "जानें कि आप हर महीने कितना कमा सकते हैं। टॉप क्रिएटर्स के डेटा पर आध��रित 95% सटीक कैलकुलेशन।"
+                      ? "जानें कि आप हर महीने कितना कमा ��कते हैं। टॉप क्रिएटर्स के डेटा पर आध��रित 95% सटीक कैलकुलेशन।"
                       : "Calculate real-time earnings potential based on your follower count & niche"}
                   </p>
                   <button
@@ -1150,6 +1150,91 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
 
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
+          {/* 🎉 SURPRISE CELEBRATION SECTION */}
+          <div className="text-center mb-8 relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-100 via-pink-50 to-yellow-100 opacity-50 animate-pulse"></div>
+            <div className="relative">
+              <div className="flex justify-center items-center gap-2 mb-4">
+                <Trophy className="w-8 h-8 text-yellow-500 animate-bounce" />
+                <Sparkles className="w-6 h-6 text-purple-500 animate-spin" />
+                <Gift className="w-7 h-7 text-pink-500 animate-pulse" />
+                <Rocket className="w-8 h-8 text-blue-500 animate-bounce" style={{ animationDelay: '0.5s' }} />
+                <Heart className="w-6 h-6 text-red-500 animate-pulse" style={{ animationDelay: '1s' }} />
+              </div>
+              <div className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 bg-clip-text text-transparent text-2xl font-bold mb-2">
+                🎉 {language === "hindi" ? "बधाई हो! आपका विश्लेषण तैयार है!" : "Congratulations! Your Analysis is Ready!"} 🎉
+              </div>
+              <div className="text-lg text-gray-700 font-medium">
+                {language === "hindi"
+                  ? "आप अब एक प्रो क्रिएटर बनने के लिए तैयार हैं!"
+                  : "You're now ready to become a Pro Creator!"}
+              </div>
+            </div>
+          </div>
+
+          {/* 🚀 SURPRISE SOCIAL SHARING SECTION */}
+          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 mb-8 border border-blue-200">
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
+                <Share2 className="w-6 h-6 text-blue-600" />
+                {language === "hindi" ? "अपना FameScore शेयर करें!" : "Share Your FameScore!"}
+              </h3>
+              <p className="text-gray-600 mb-4">
+                {language === "hindi"
+                  ? "दोस्तों को दिखाएं कि आप कितने बेहतरीन क्रिएटर हैं!"
+                  : "Show your friends how amazing you are as a creator!"}
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <button
+                  onClick={() => {
+                    const shareText = language === "hindi"
+                      ? `मैंने FameChase.com पर अपना Creator Analysis किया! मेरा Fame Score ${analysis.fameScore}/100 है 🚀 #FameChase #CreatorAnalysis`
+                      : `I just got my Creator Analysis on FameChase.com! My Fame Score is ${analysis.fameScore}/100 🚀 #FameChase #CreatorAnalysis`;
+                    window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}`, '_blank');
+                  }}
+                  className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors"
+                >
+                  <Twitter className="w-4 h-4" />
+                  Twitter
+                </button>
+                <button
+                  onClick={() => {
+                    const shareText = language === "hindi"
+                      ? `मैंने FameChase.com पर अपना Creator Analysis किया! मेरा Fame Score ${analysis.fameScore}/100 है 🚀`
+                      : `I just got my Creator Analysis on FameChase.com! My Fame Score is ${analysis.fameScore}/100 🚀`;
+                    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText + ' - https://famechase.com')}`;
+                    window.open(whatsappUrl, '_blank');
+                  }}
+                  className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
+                </button>
+                <button
+                  onClick={() => {
+                    const shareData = {
+                      title: 'FameChase Creator Analysis',
+                      text: language === "hindi"
+                        ? `मैंने FameChase.com पर अपना Creator Analysis किया! मेरा Fame Score ${analysis.fameScore}/100 है 🚀`
+                        : `I just got my Creator Analysis on FameChase.com! My Fame Score is ${analysis.fameScore}/100 🚀`,
+                      url: 'https://famechase.com'
+                    };
+                    if (navigator.share) {
+                      navigator.share(shareData);
+                    } else {
+                      navigator.clipboard.writeText(shareData.text + ' - ' + shareData.url);
+                      alert(language === "hindi" ? "लिंक कॉपी हो गया!" : "Link copied!");
+                    }
+                  }}
+                  className="flex items-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-lg transition-colors"
+                >
+                  <Share2 className="w-4 h-4" />
+                  {language === "hindi" ? "शेयर करें" : "Share More"}
+                </button>
+              </div>
+            </div>
+          </div>
+
           {/* Header Section */}
           <div className="text-center mb-12">
             <div className="w-20 h-20 bg-gradient-to-r from-neon-green to-electric-blue rounded-full flex items-center justify-center mx-auto mb-6">
@@ -1289,7 +1374,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                           ? "Views बढ़ाने के लिए trending hashtags और peak time posting जरूरी है।"
                           : "To boost views, focus on trending hashtags and optimal posting times.")}
                         {challenge.includes("Algorithm") && (language === "hindi"
-                          ? "Algorithm के साथ बेहतर relationship के लिए engagement rate 5%+ रखें।"
+                          ? "Algorithm के साथ बेहतर relationship के लि��� engagement rate 5%+ रखें।"
                           : "Maintain 5%+ engagement rate for better algorithm relationship.")}
                         {challenge.includes("voice") && (language === "hindi"
                           ? "Unique voice develop करने के लिए अपनी personal story share करें।"
