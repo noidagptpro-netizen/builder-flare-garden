@@ -221,49 +221,72 @@ const getExperienceLevelDescription = (
 const getGrowthTrajectory = (data: QuizData, fameScore: number): string => {
   const followerNum = getFollowerCount(data.followerCount);
   const incomeNum = getIncomeAmount(data.monthlyIncome);
+  const currentMonth = new Date().getMonth();
+  const age = parseInt(data.age) || 25;
+
+  // Calculate specific earning potential based on their exact profile
+  const potentialMonthlyEarning = Math.round(followerNum * 0.8 + (fameScore * 100));
+  const brandDealsPerMonth = followerNum >= 50000 ? "15-25" : followerNum >= 10000 ? "5-12" : followerNum >= 5000 ? "2-6" : "1-3";
+
+  // Calculate growth timeline based on posting frequency
+  const monthsToNextMilestone = data.postingFrequency === "Daily" ? 3 :
+                                data.postingFrequency === "3-4 times a week" ? 4 :
+                                data.postingFrequency === "Weekly" ? 8 : 12;
 
   let trajectory = "";
 
   if (followerNum >= 50000 && incomeNum >= 30000) {
-    trajectory =
-      "Ready for major brand partnerships and premium product launches. Focus on scaling revenue and building business infrastructure.";
+    trajectory = `🚀 SCALE PHASE: You're already earning ₹${incomeNum.toLocaleString()}/month with ${data.followerCount} followers. Target: ₹${Math.round(incomeNum * 1.5).toLocaleString()}/month within 6 months through ${brandDealsPerMonth} monthly brand partnerships. Your ${data.niche} niche + audience size = premium creator rates of ���${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3)} per sponsored post.`;
   } else if (followerNum >= 10000 && incomeNum >= 10000) {
-    trajectory =
-      "Perfect timing to scale monetization through brand collaborations and digital products. Strong foundation for business growth.";
+    trajectory = `💰 MONETIZATION SCALING: Current ₹${incomeNum.toLocaleString()}/month shows strong foundation. Your ${data.followerCount} in ${data.niche} can realistically achieve ₹${potentialMonthlyEarning.toLocaleString()}/month through strategic brand collaborations (${brandDealsPerMonth} deals monthly). Focus on increasing rates by 25% quarterly.`;
+  } else if (followerNum >= 10000 && incomeNum < 10000) {
+    trajectory = `⚡ MASSIVE UNTAPPED POTENTIAL: With ${data.followerCount} followers, you're leaving ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly on the table! Immediate focus: Create media kit, start brand outreach for ${brandDealsPerMonth} monthly collaborations. Your audience size suggests ₹${Math.round(followerNum / 50)}-₹${Math.round(followerNum / 20)} per 1K followers rate.`;
   } else if (followerNum >= 5000) {
-    trajectory =
-      "Approaching monetization readiness. Focus on engagement optimization and building brand relationships for revenue generation.";
+    trajectory = `📈 MONETIZATION READINESS: ${data.followerCount} followers puts you in the sweet spot for brand partnerships. Target: Reach 10K followers in ${monthsToNextMilestone} months with your ${data.postingFrequency.toLowerCase()} posting schedule, then start earning ₹${Math.round(followerNum * 1.2)}-₹${Math.round(followerNum * 2.5)}/month from ${brandDealsPerMonth} brand collaborations.`;
   } else if (followerNum >= 1000) {
-    trajectory =
-      "Building towards monetization threshold. Concentrate on content consistency and audience engagement to reach 10K milestone.";
+    trajectory = `🎯 GROWTH ACCELERATION: Your ${data.followerCount} foundation is solid. With ${data.postingFrequency.toLowerCase()} posting, you can realistically hit 5K followers in ${monthsToNextMilestone} months. Focus on ${data.primaryPlatform} algorithm optimization and cross-platform expansion to ${data.secondaryPlatforms.length > 0 ? 'your existing ' + data.secondaryPlatforms.join(', ') + ' presence' : '2-3 additional platforms'}.`;
   } else {
-    trajectory =
-      "Foundation building phase. Focus on content quality, posting consistency, and authentic audience growth before monetization.";
+    trajectory = `🌱 FOUNDATION BUILDING: From ${data.followerCount} to 1K milestone requires ${monthsToNextMilestone} months of ${data.postingFrequency === "Daily" ? "daily" : "consistent"} posting. Your ${data.niche} niche has strong monetization potential once you hit 1K. Focus: Quality content, hashtag strategy, and engaging with your target audience in ${data.city || 'your city'}.`;
   }
 
-  // Add challenge-specific advice based on multiple selections
+  // Add ultra-specific challenge-based advice with real data
   if (data.biggestChallenge.length > 0) {
-    const topChallenge = data.biggestChallenge[0]; // Focus on the first selected challenge
-    if (topChallenge.includes("engagement")) {
-      trajectory +=
-        " Priority: Improve content engagement through interactive posts and community building.";
-    } else if (
-      topChallenge.includes("voice") ||
-      topChallenge.includes("style")
-    ) {
-      trajectory +=
-        " Priority: Develop unique content style and establish authentic brand voice.";
-    } else if (topChallenge.includes("algorithm")) {
-      trajectory +=
-        " Priority: Optimize content strategy for current platform algorithms and diversify reach.";
-    } else if (
-      topChallenge.includes("monetization") ||
-      topChallenge.includes("customers")
-    ) {
-      trajectory +=
-        " Priority: Develop conversion funnels and audience monetization strategies.";
-    }
+    data.biggestChallenge.slice(0, 2).forEach(challenge => {
+      if (challenge.includes("Low views & inconsistent engagement")) {
+        trajectory += ` 🎯 ENGAGEMENT FIX: Your low engagement can be solved in 4-6 weeks. Post during peak hours (7-9 PM IST), use trending audio within 24 hours, and respond to comments within 1 hour. Target: Increase engagement from current rate to 4-6% through interactive content.`;
+      } else if (challenge.includes("Can't convert followers into paying customers")) {
+        trajectory += ` 💸 CONVERSION OPTIMIZATION: With ${data.followerCount}, you should be converting 2-5% to customers. Add clear CTAs, create lead magnets, and use Instagram Shopping features. Potential: ₹${Math.round(followerNum * 0.02 * 500)}-₹${Math.round(followerNum * 0.05 * 1500)}/month from direct sales.`;
+      } else if (challenge.includes("Algorithm changes killing reach")) {
+        trajectory += ` ⚡ PLATFORM DIVERSIFICATION: Reduce algorithm risk by expanding to ${data.secondaryPlatforms.length === 0 ? '3 platforms' : (3 - data.secondaryPlatforms.length) + ' additional platforms'}. Current single-platform dependency is costing you 40-60% potential reach.`;
+      } else if (challenge.includes("Not landing brand collaborations")) {
+        trajectory += ` 🤝 BRAND OUTREACH SYSTEM: Your ${data.followerCount} qualifies for ₹${Math.round(followerNum * 0.5)}-₹${Math.round(followerNum * 2)} per post rates. Create professional media kit, research 50 relevant brands, send 5 personalized pitches weekly. Target: Land first paid collaboration within 30 days.`;
+      } else if (challenge.includes("Running out of content ideas")) {
+        trajectory += ` 🎨 CONTENT STRATEGY: Your ${data.niche} niche has unlimited content potential. Batch create 15 posts weekly, repurpose content across ${data.secondaryPlatforms.length + 1} platforms, follow trending hashtags. Use the 40-30-20-10 formula: 40% education, 30% entertainment, 20% personal, 10% promotion.`;
+      }
+    });
   }
+
+  // Add goal-specific trajectory with exact numbers
+  if (data.goals.length > 0) {
+    data.goals.slice(0, 2).forEach(goal => {
+      if (goal.includes("Earn ₹25K") || goal.includes("Earn ₹50K") || goal.includes("Earn ₹1L")) {
+        const targetIncome = goal.includes("₹1L") ? 100000 : goal.includes("₹50K") ? 50000 : 25000;
+        const monthsToTarget = Math.ceil(targetIncome / (potentialMonthlyEarning * 0.3));
+        trajectory += ` 💰 INCOME TARGET: Your ₹${(targetIncome/1000)}K monthly goal is achievable in ${monthsToTarget} months. Required: ${Math.ceil(targetIncome / 3000)} brand partnerships monthly at ₹${Math.round(followerNum * 1.2)} average rate.`;
+      } else if (goal.includes("Get Brand Collaborations")) {
+        trajectory += ` 🤝 BRAND PARTNERSHIP ROADMAP: Target ${brandDealsPerMonth} brand collaborations monthly. Your ${data.followerCount} + ${data.niche} niche = ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)} per post rates. Start outreach to ${data.niche === "Fashion & Beauty" ? "Nykaa, Myntra, local fashion brands" : data.niche === "Technology" ? "tech brands, gadget companies, software tools" : "brands in your niche"}.`;
+      }
+    });
+  }
+
+  // Add seasonal timing advice
+  const seasonalBonus = [9, 10, 11].includes(currentMonth)
+    ? " 🎆 FESTIVAL SEASON ADVANTAGE: October-December is peak brand collaboration season. Rates increase 25-40% during festivals. Pitch Diwali/New Year campaigns NOW for maximum earnings."
+    : currentMonth < 3
+    ? " 🎯 Q1 PLANNING SEASON: January-March is budget allocation time. Perfect for securing long-term brand partnerships and higher rates for the year."
+    : " 📅 MID-YEAR OPPORTUNITY: Focus on consistent growth to capitalize on festival season (Oct-Dec) when brand budgets peak.";
+
+  trajectory += seasonalBonus;
 
   return trajectory;
 };
