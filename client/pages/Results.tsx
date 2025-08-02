@@ -135,7 +135,7 @@ const languages = {
     incomeProjection: "आय क्षमता",
     unlock: "अपना संपूर्ण क्रिएटर टूलकिट अनलॉक करे���",
     unlockSubtitle:
-      "अपनी व्यक्तिगत फेम स्कोर रिपोर्ट, प्��ोफेशनल मीडिया किट टेम्प्लेट, और ग्रोथ स्ट्रैटेज�� + हमारे संपूर्ण प्रीमियम क्रिएटर टूल्स तक पहुंच प्राप्त करें।",
+      "अपनी व्यक्तिगत फेम स्कोर रिपोर्ट, प्��ोफ���शनल मीडिया किट टेम्प्लेट, और ग्रोथ स्ट्रैटेज�� + हमारे संपूर्ण प्रीमियम क्रिएटर टूल्स तक पहुंच प्राप्त करें।",
     paymentForm: "अप���ी जानकारी पूरी करें",
     fullName: "पूरा नाम",
     emailAddress: "ईमेल पता",
@@ -151,7 +151,7 @@ const languages = {
     premiumTools: "और भी क्रिएटर टूल्स",
     securePayment: "सुरक्षित भुगतान",
     instantDownload: "तुरंत डाउनलोड",
-    moneyBack: "पैसे वापसी की गारंटी",
+    moneyBack: "पैसे वापसी की गार��टी",
     backToQuiz: "क्विज़ पर वापस जाएं",
     basedOnEngagement: "एंगेजमेंट क्षमता के ��धार पर",
     nextSixMonths: "अगले 6 महीने का प्रक्षेपण",
@@ -366,7 +366,7 @@ ${language === "hindi" ? "फोन:" : "Phone:"} ${personalInfo.phone}
 ${language === "hindi" ? "शह���:" : "City:"} ${personalInfo.city}
 
 ${language === "hindi" ? "सोशल मीडिया प्रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
-${language === "hindi" ? "प्राथमिक प्लेटफॉर्म:" : "Primary Platform:"} ${quizData.primaryPlatform}
+${language === "hindi" ? "प्राथमिक प्लेटफॉर��म:" : "Primary Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "फॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "��ंटेंट न���च:" : "Content Niche:"} ${quizData.niche}
 ${language === "hindi" ? "कंटेंट प्रका��:" : "Content Type:"} ${quizData.contentType}
@@ -388,7 +388,7 @@ ${language === "hindi" ? "विशेषताएं:" : "SPECIALTIES:"}
 
 ${language === "hindi" ? "संपर्क:" : "CONTACT INFORMATION:"}
 ${language === "hindi" ? "ईमेल:" : "Email:"} ${personalInfo.email}
-${language === "hindi" ? "फोन:" : "Phone:"} ${personalInfo.phone}
+${language === "hindi" ? "फ��न:" : "Phone:"} ${personalInfo.phone}
 ${language === "hindi" ? "वेबसाइट:" : "Website:"} ${quizData.socialLinks.website || "Available upon request"}`;
     } else if (type === "growthStrategy") {
       content = `${language === "hindi" ? "व्यक्त���गत विकास रणनीति" : "PERSONALIZED GROWTH STRATEGY"} - ${userName}
@@ -412,7 +412,7 @@ ${analysis.suggestions
   .map((s: string, i: number) => `${i + 3}. ${s}`)
   .join("\n")}
 
-${language === "hindi" ? "60-दिन की रणनीति:" : "60-DAY STRATEGY:"}
+${language === "hindi" ? "60-दिन की रणनीत���:" : "60-DAY STRATEGY:"}
 ${language === "hindi" ? "- कंटेंट कैले���डर का अनुकूलन" : "- Content calendar optimization"}
 ${language === "hindi" ? "- ब्रांड आउटरीच शुरू करना" : "- Begin brand outreach"}
 ${language === "hindi" ? "- एंगेजमेंट मेट्रिक्स में स���धार" : "- Improve engagement metrics"}
@@ -545,7 +545,7 @@ ${language === "hindi" ? "⚡ एक्शनेबल इन���ाइट�
 • ${language === "hindi" ? "बेस्ट पोस्टिंग टाइम्स: 7-9 PM IST (" + niche.avgCPM + "% हाई एंगेजमेंट)" : "Best posting times: 7-9 PM IST (" + niche.avgCPM + "% higher engagement)"}
 
 ${language === "hindi" ? "🔥 प्रो टिप्स:" : "🔥 PRO TIPS:"}
-1. ${language === "hindi" ? "मिनिमम रेट हमेशा ₹" + Math.round(followerNum * 0.008).toLocaleString() + "/पोस्ट रखें" : "Never charge less than ₹" + Math.round(followerNum * 0.008).toLocaleString() + "/post"}
+1. ${language === "hindi" ? "मिनिमम रे�� हमेशा ₹" + Math.round(followerNum * 0.008).toLocaleString() + "/पोस्ट रखें" : "Never charge less than ₹" + Math.round(followerNum * 0.008).toLocaleString() + "/post"}
 2. ${language === "hindi" ? "स्टोरी रेट्स को अलग से चार्ज करें (+40% प्रीमियम)" : "Always charge story rates separately (+40% premium)"}
 3. ${language === "hindi" ? "लॉन्ग-टर्म कैंपेन्स के लिए 25% डिस्काउंट ऑफर करें" : "Offer 25% package discount for 3+ month campaigns"}
 
@@ -617,7 +617,7 @@ ${language === "hindi" ? "💰 मोनेटाइज़ेशन ट्रै
 └─────────────────────────────────────────────┘
 
 ${language === "hindi" ? "📊 साप्ताहिक ग्रोथ मेट्रिक्स:" : "📊 WEEKLY GROWTH METRICS:"}
-• ${language === "hindi" ? "सप्ताह" : "Week"} 1: टारगेट ${Math.round(targetGrowthRate / 4)} new followers/day
+• ${language === "hindi" ? "सप्ताह" : "Week"} 1: टार��ेट ${Math.round(targetGrowthRate / 4)} new followers/day
 • ${language === "hindi" ? "सप्ताह" : "Week"} 2: टारगेट ${Math.round(targetGrowthRate / 4 * 1.1)} new followers/day
 • ${language === "hindi" ? "सप्ताह" : "Week"} 3: टारगेट ${Math.round(targetGrowthRate / 4 * 1.2)} new followers/day
 • ${language === "hindi" ? "सप्ताह" : "Week"} 4: टारगेट ${Math.round(targetGrowthRate / 4 * 1.3)} new followers/day
@@ -654,7 +654,7 @@ ${language === "hindi" ? "📈 मासिक ROI ट्रैकर:" : "📈 
 │                                           │
 │ ${language === "hindi" ? "नेट प्रॉफिट" : "Net Profit"}: ₹_____ - ₹_____ = ₹_____ │
 │ ROI: (_____ ÷ _____) × 100 = _____%      │
-└─────────────────────────────────────────────┘
+└──────────────────────────────────────��──────┘
 
 ${language === "hindi" ? "⚡ एक्शन आइटम्स (हर हफ्ते करें):" : "⚡ ACTION ITEMS (Do Every Week):"}
 □ ${language === "hindi" ? "टॉप 3 परफॉर्मिंग पोस्ट्स को analyze करें और pattern ढूंढें" : "Analyze top 3 performing posts and find patterns"}
@@ -1064,83 +1064,116 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
             </div>
           </div>
 
-          {/* SWOT Analysis */}
-          <div className="bg-white border-2 border-gray-100 rounded-2xl p-8 mb-8 shadow-lg">
+          {/* AI-Powered Creator Analysis */}
+          <div className="bg-gradient-to-br from-purple-50 to-blue-50 border-2 border-purple-200 rounded-2xl p-8 mb-8 shadow-lg">
             <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-              <Target className="w-6 h-6 text-purple-600" />
-              {t.swotAnalysis}
+              <Sparkles className="w-6 h-6 text-purple-600" />
+              {language === "hindi" ? "AI-Powered विश्लेषण - आपके लिए विशेष" : "AI-Powered Creator Analysis - Personalized for You"}
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {/* Strengths */}
-              <div className="bg-green-50 border border-green-200 rounded-xl p-6">
-                <h3 className="font-bold text-green-800 mb-3 flex items-center gap-2">
-                  <CheckCircle className="w-5 h-5" />
-                  {t.strengths}
-                </h3>
-                <ul className="space-y-2 text-green-700">
-                  {analysis.swotAnalysis.strengths.map(
-                    (strength: string, index: number) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                        {strength}
-                      </li>
-                    ),
-                  )}
-                </ul>
-              </div>
 
-              {/* Weaknesses */}
-              <div className="bg-red-50 border border-red-200 rounded-xl p-6">
-                <h3 className="font-bold text-red-800 mb-3 flex items-center gap-2">
-                  <AlertTriangle className="w-5 h-5" />
-                  {t.weaknesses}
-                </h3>
-                <ul className="space-y-2 text-red-700">
-                  {analysis.swotAnalysis.weaknesses.map(
-                    (weakness: string, index: number) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-red-600 rounded-full mt-2 flex-shrink-0"></div>
-                        {weakness}
-                      </li>
-                    ),
-                  )}
-                </ul>
-              </div>
-
-              {/* Opportunities */}
-              <div className="bg-blue-50 border border-blue-200 rounded-xl p-6">
-                <h3 className="font-bold text-blue-800 mb-3 flex items-center gap-2">
+            {/* Personalized Insights */}
+            <div className="grid md:grid-cols-2 gap-6 mb-6">
+              <div className="bg-white rounded-xl p-6 border border-purple-200">
+                <h3 className="font-bold text-purple-800 mb-4 flex items-center gap-2">
                   <TrendingUp className="w-5 h-5" />
-                  {t.opportunities}
+                  {language === "hindi" ? "आपकी मुख्य ताकतें" : "Your Key Strengths"}
                 </h3>
-                <ul className="space-y-2 text-blue-700">
-                  {analysis.swotAnalysis.opportunities.map(
-                    (opportunity: string, index: number) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                        {opportunity}
-                      </li>
-                    ),
-                  )}
-                </ul>
+                <div className="space-y-3">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                    <p className="text-gray-700">
+                      {language === "hindi"
+                        ? `आप ${quizData.niche} में कंटेंट बनाते हैं - यह एक बहुत डिमांडिंग निच है जहाँ ब्रांड्स ${quizData.followerCount.includes("1K") ? "3-5" : quizData.followerCount.includes("10K") ? "10-15" : "20+"} लाख रुपए सालाना खर्च करते हैं।`
+                        : `You create ${quizData.contentType.toLowerCase()} in ${quizData.niche} - a high-demand niche where brands spend ₹${quizData.followerCount.includes("1K") ? "3-5" : quizData.followerCount.includes("10K") ? "10-15" : "20+"} lakhs annually.`}
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+                    <p className="text-gray-700">
+                      {language === "hindi"
+                        ? `आपकी ${quizData.postingFrequency} पोस्टिंग frequency algorithm के लिए बिल्कुल सही है। Consistency ही success की key है।`
+                        : `Your ${quizData.postingFrequency.toLowerCase()} posting frequency is optimal for algorithm growth. Consistency is the key to success.`}
+                    </p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full mt-2"></div>
+                    <p className="text-gray-700">
+                      {language === "hindi"
+                        ? `${quizData.followerCount} followers के साथ आप perfect monetization stage में हैं। अब ब्रांड deals के लिए ready हैं।`
+                        : `With ${quizData.followerCount.toLowerCase()} followers, you're in the perfect monetization stage. Ready for brand collaborations.`}
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              {/* Threats */}
-              <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6">
-                <h3 className="font-bold text-yellow-800 mb-3 flex items-center gap-2">
-                  <Shield className="w-5 h-5" />
-                  {t.threats}
+              <div className="bg-white rounded-xl p-6 border border-orange-200">
+                <h3 className="font-bold text-orange-800 mb-4 flex items-center gap-2">
+                  <Target className="w-5 h-5" />
+                  {language === "hindi" ? "तुरंत सुधार के क्षेत्र" : "Immediate Improvement Areas"}
                 </h3>
-                <ul className="space-y-2 text-yellow-700">
-                  {analysis.swotAnalysis.threats.map(
-                    (threat: string, index: number) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-yellow-600 rounded-full mt-2 flex-shrink-0"></div>
-                        {threat}
-                      </li>
-                    ),
-                  )}
-                </ul>
+                <div className="space-y-3">
+                  {quizData.biggestChallenge.slice(0, 3).map((challenge, index) => (
+                    <div key={index} className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
+                      <p className="text-gray-700">
+                        {challenge.includes("Low views") && (language === "hindi"
+                          ? "Views बढ़ाने के लिए trending hashtags और peak time posting जरूरी है।"
+                          : "To boost views, focus on trending hashtags and optimal posting times.")}
+                        {challenge.includes("Algorithm") && (language === "hindi"
+                          ? "Algorithm के साथ बेहतर relationship के लिए engagement rate 5%+ रखें।"
+                          : "Maintain 5%+ engagement rate for better algorithm relationship.")}
+                        {challenge.includes("voice") && (language === "hindi"
+                          ? "Unique voice develop करने के लिए अपनी personal story share करें।"
+                          : "Develop your unique voice by sharing your personal story and perspective.")}
+                        {!challenge.includes("Low views") && !challenge.includes("Algorithm") && !challenge.includes("voice") && (
+                          language === "hindi"
+                            ? "इस challenge को targeted strategy से आसानी से solve कर सकते हैं।"
+                            : "This challenge can be easily solved with a targeted strategy."
+                        )}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Market Intelligence */}
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 border border-green-200">
+              <h3 className="font-bold text-green-800 mb-4 flex items-center gap-2">
+                <Globe className="w-5 h-5" />
+                {language === "hindi" ? "🚀 Market Intelligence & Opportunities" : "🚀 Market Intelligence & Opportunities"}
+              </h3>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600 mb-1">
+                    {quizData.niche.includes("Tech") ? "1,200+" :
+                     quizData.niche.includes("Fashion") ? "2,500+" :
+                     quizData.niche.includes("Finance") ? "800+" : "1,500+"}
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    {language === "hindi" ? "Active ब्रांड्स आपके niche में" : "Active brands in your niche"}
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600 mb-1">
+                    ₹{quizData.followerCount.includes("Less than 1K") ? "500-2K" :
+                        quizData.followerCount.includes("1K - 5K") ? "2K-8K" :
+                        quizData.followerCount.includes("5K - 10K") ? "5K-15K" : "15K+"}
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    {language === "hindi" ? "Per post earning potential" : "Per post earning potential"}
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600 mb-1">
+                    {Math.round(((quizData.followerCount.includes("1K") ? 3000 :
+                                 quizData.followerCount.includes("5K") ? 7500 :
+                                 quizData.followerCount.includes("10K") ? 25000 : 50000) * 0.4) / 1000)}K
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    {language === "hindi" ? "Monthly reach potential" : "Monthly reach potential"}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
