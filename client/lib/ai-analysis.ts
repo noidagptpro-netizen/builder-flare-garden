@@ -622,97 +622,612 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
 
 const generatePersonalizedRecommendations = (data: QuizData): string[] => {
   const recommendations = [];
+  const followerNum = getFollowerCount(data.followerCount);
+  const incomeNum = getIncomeAmount(data.monthlyIncome);
+  const currentMonth = new Date().getMonth();
+  const currentYear = new Date().getFullYear();
 
-  // Platform-specific recommendations
+  // IMMEDIATE ACTION ITEMS (Top Priority)
+  recommendations.push(
+    "Use trending audio in Reels and post during peak hours (7-9 PM IST)",
+  );
+
+  // Platform-specific strategic recommendations
   if (data.primaryPlatform === "Instagram") {
+    recommendations.push(
+      "Post 3-5 Instagram Reels weekly using trending sounds and hashtags",
+    );
+    recommendations.push(
+      "Create carousel posts with actionable tips (8-10 slides perform best)",
+    );
+    recommendations.push(
+      "Go live twice weekly during peak hours to boost algorithm favorability",
+    );
+    recommendations.push(
+      "Use Instagram Stories polls, questions, and sliders daily for engagement",
+    );
+    recommendations.push(
+      "Post user-generated content and tag customers to build community",
+    );
+    recommendations.push(
+      "Create Instagram Guides to showcase your expertise and increase discovery",
+    );
     if (data.contentType === "Photos & Carousels") {
       recommendations.push(
-        "Add Reels to your content mix - they get 3x more reach than static posts",
+        "Add Reels to your content mix immediately - they get 5x more reach than static posts",
       );
     }
-    recommendations.push(
-      "Use trending audio in Reels and post during peak hours (7-9 PM IST)",
-    );
+    if (followerNum >= 10000) {
+      recommendations.push(
+        "Apply for Instagram Creator Fund and enable shopping features",
+      );
+      recommendations.push(
+        "Create Instagram Shopping posts to monetize your recommendations",
+      );
+    }
   }
 
   if (data.primaryPlatform === "YouTube") {
     recommendations.push(
-      "Create YouTube Shorts alongside long-form content for algorithm boost",
+      "Upload 2-3 YouTube Shorts daily to maximize algorithm reach",
     );
-    recommendations.push("Focus on SEO-optimized titles and thumbnails");
+    recommendations.push(
+      "Create thumbnails with bright colors and clear text for higher CTR",
+    );
+    recommendations.push(
+      "Use YouTube analytics to find your best-performing content topics",
+    );
+    recommendations.push(
+      "Collaborate with other YouTubers in your niche for cross-promotion",
+    );
+    recommendations.push(
+      "Create playlists to increase watch time and session duration",
+    );
+    recommendations.push(
+      "Add cards and end screens to every video to drive more views",
+    );
+    recommendations.push(
+      "Focus on SEO-optimized titles with keywords your audience searches",
+    );
+    if (followerNum >= 1000) {
+      recommendations.push(
+        "Enable YouTube monetization and join the Partner Program",
+      );
+      recommendations.push(
+        "Create members-only content for recurring revenue",
+      );
+    }
   }
 
-  // Niche-specific recommendations
-  if (data.niche === "Fashion & Beauty") {
+  if (data.primaryPlatform === "LinkedIn") {
     recommendations.push(
-      "Partner with local Indian brands for authentic collaborations",
+      "Post thought leadership content 3-4 times weekly with industry insights",
     );
     recommendations.push(
-      "Create seasonal lookbooks and trend prediction content",
+      "Share case studies and behind-the-scenes business content",
+    );
+    recommendations.push(
+      "Comment meaningfully on industry leaders' posts for visibility",
+    );
+    recommendations.push(
+      "Create LinkedIn newsletters to build your professional authority",
+    );
+  }
+
+  if (data.primaryPlatform === "TikTok") {
+    recommendations.push(
+      "Post 1-2 TikToks daily using trending sounds and effects",
+    );
+    recommendations.push(
+      "Jump on viral challenges and trends within 24-48 hours",
+    );
+    recommendations.push(
+      "Create educational TikToks that provide quick value",
+    );
+    recommendations.push(
+      "Use TikTok Creator Fund and live gifts for monetization",
+    );
+  }
+
+  // Niche-specific strategic recommendations (significantly expanded)
+  if (data.niche === "Fashion & Beauty") {
+    recommendations.push(
+      "Partner with 5-10 local Indian beauty brands for authentic collaborations",
+    );
+    recommendations.push(
+      "Create 'Get Ready With Me' content featuring affordable Indian brands",
+    );
+    recommendations.push(
+      "Post outfit transition reels during festival seasons for viral potential",
+    );
+    recommendations.push(
+      "Share makeup tutorials using products under ₹500 for mass appeal",
+    );
+    recommendations.push(
+      "Create seasonal lookbooks targeting Indian weather and occasions",
+    );
+    recommendations.push(
+      "Review and compare beauty products with honest opinions for trust-building",
+    );
+    recommendations.push(
+      "Collaborate with local fashion photographers for premium content",
+    );
+    recommendations.push(
+      "Start a 30-day style challenge to boost engagement and followers",
     );
   }
 
   if (data.niche === "Technology") {
     recommendations.push(
-      "Create tech reviews and tutorials targeting Indian market needs",
+      "Create unboxing videos of latest gadgets trending in India",
     );
     recommendations.push(
-      "Join affiliate programs for tech products and courses",
+      "Make comparison videos between budget vs premium tech products",
+    );
+    recommendations.push(
+      "Share coding tutorials and tech tips for beginners",
+    );
+    recommendations.push(
+      "Review apps and software that solve Indian-specific problems",
+    );
+    recommendations.push(
+      "Join Amazon, Flipkart, and tech brand affiliate programs",
+    );
+    recommendations.push(
+      "Create 'Tech on a Budget' content series for mass Indian audience",
+    );
+    recommendations.push(
+      "Cover latest updates from Indian tech companies and startups",
+    );
+    recommendations.push(
+      "Make predictions about tech trends affecting India",
     );
   }
 
   if (data.niche === "Education") {
     recommendations.push(
-      "Develop course content and digital study materials for monetization",
+      "Create free mini-courses on trending skills like AI, digital marketing",
     );
-    recommendations.push("Create exam prep content for competitive exams");
+    recommendations.push(
+      "Develop paid course content targeting competitive exam preparation",
+    );
+    recommendations.push(
+      "Share study tips and productivity hacks for students",
+    );
+    recommendations.push(
+      "Create downloadable study materials and templates",
+    );
+    recommendations.push(
+      "Offer live doubt-clearing sessions to build community engagement",
+    );
+    recommendations.push(
+      "Partner with online learning platforms for course creation",
+    );
+    recommendations.push(
+      "Make content around career guidance and skill development",
+    );
   }
 
-  // Challenge-specific recommendations
-  if (
-    data.biggestChallenge.some((challenge) => challenge.includes("engagement"))
-  ) {
+  if (data.niche === "Fitness & Health") {
     recommendations.push(
-      "Ask questions in captions and respond to all comments within 2 hours",
+      "Create home workout routines requiring no equipment",
     );
     recommendations.push(
-      "Use polls, quizzes, and interactive stickers in Stories",
+      "Share healthy Indian recipes with calorie counts",
+    );
+    recommendations.push(
+      "Post transformation stories and progress tracking content",
+    );
+    recommendations.push(
+      "Review fitness supplements and equipment available in India",
+    );
+    recommendations.push(
+      "Create workout challenges to boost community engagement",
+    );
+    recommendations.push(
+      "Share mental health and wellness tips for holistic approach",
+    );
+  }
+
+  if (data.niche === "Food & Cooking") {
+    recommendations.push(
+      "Create quick 60-second recipe videos for viral potential",
+    );
+    recommendations.push(
+      "Share regional Indian recipes with modern twists",
+    );
+    recommendations.push(
+      "Review kitchen gadgets and their effectiveness for Indian cooking",
+    );
+    recommendations.push(
+      "Create budget-friendly meal prep content for working professionals",
+    );
+    recommendations.push(
+      "Post restaurant reviews and hidden gems in your city",
+    );
+    recommendations.push(
+      "Start a weekly cooking challenge with your audience",
+    );
+  }
+
+  if (data.niche === "Business & Finance") {
+    recommendations.push(
+      "Create content around Indian stock market tips and analysis",
+    );
+    recommendations.push(
+      "Share business case studies of successful Indian entrepreneurs",
+    );
+    recommendations.push(
+      "Make videos explaining financial concepts in simple Hindi/English",
+    );
+    recommendations.push(
+      "Review investment apps and platforms popular in India",
+    );
+    recommendations.push(
+      "Create tax-saving strategies and financial planning content",
+    );
+    recommendations.push(
+      "Interview successful business owners and share insights",
+    );
+  }
+
+  // Challenge-specific targeted solutions (expanded significantly)
+  if (
+    data.biggestChallenge.some((challenge) => challenge.includes("Low views & inconsistent engagement"))
+  ) {
+    recommendations.push(
+      "Respond to every comment within 1 hour of posting for algorithm boost",
+    );
+    recommendations.push(
+      "Ask specific questions in captions that encourage detailed responses",
+    );
+    recommendations.push(
+      "Create 'engagement pods' with 10-15 creators in your niche",
+    );
+    recommendations.push(
+      "Use Instagram Stories polls, questions, and sliders daily",
+    );
+    recommendations.push(
+      "Post behind-the-scenes content to build personal connection",
+    );
+    recommendations.push(
+      "Go live regularly to increase real-time engagement",
+    );
+    recommendations.push(
+      "Share user-generated content and tag original creators",
+    );
+    recommendations.push(
+      "Create controversial (but respectful) content to spark discussions",
+    );
+  }
+
+  if (
+    data.biggestChallenge.some((challenge) => challenge.includes("Algorithm changes killing reach"))
+  ) {
+    recommendations.push(
+      "Diversify to at least 3 platforms to reduce algorithm dependency",
+    );
+    recommendations.push(
+      "Build an email list of 1000+ subscribers as owned media",
+    );
+    recommendations.push(
+      "Create evergreen content that performs well regardless of algorithm",
+    );
+    recommendations.push(
+      "Join trending conversations and hashtags within 24 hours",
+    );
+    recommendations.push(
+      "Collaborate with other creators for cross-promotion",
+    );
+    recommendations.push(
+      "Focus on building strong community rather than just follower count",
+    );
+  }
+
+  if (
+    data.biggestChallenge.some((challenge) => challenge.includes("Can't convert followers into paying customers"))
+  ) {
+    recommendations.push(
+      "Create a clear content funnel: awareness → consideration → conversion",
+    );
+    recommendations.push(
+      "Add call-to-actions to every post directing to your products/services",
+    );
+    recommendations.push(
+      "Offer exclusive discounts to your social media followers",
+    );
+    recommendations.push(
+      "Create testimonial content from satisfied customers",
+    );
+    recommendations.push(
+      "Use Instagram/Facebook Shopping to make purchasing seamless",
+    );
+    recommendations.push(
+      "Share behind-the-scenes content about your products/services",
+    );
+    recommendations.push(
+      "Create urgency with limited-time offers and flash sales",
+    );
+  }
+
+  if (
+    data.biggestChallenge.some((challenge) => challenge.includes("Not landing brand collaborations"))
+  ) {
+    recommendations.push(
+      "Create a professional media kit with your best metrics and demographics",
+    );
+    recommendations.push(
+      "Reach out to 20 relevant brands weekly with personalized pitches",
+    );
+    recommendations.push(
+      "Mention brands organically in content before pitching for partnerships",
+    );
+    recommendations.push(
+      "Join influencer marketing platforms like Grin, AspireIQ, Klear",
+    );
+    recommendations.push(
+      "Create case studies of successful brand collaborations",
+    );
+    recommendations.push(
+      "Network with brand managers at industry events and online",
     );
   }
 
   if (
     data.biggestChallenge.some(
       (challenge) =>
-        challenge.includes("ideas") || challenge.includes("content"),
+        challenge.includes("Running out of content ideas") || challenge.includes("content"),
     )
   ) {
     recommendations.push(
       "Create content pillars: 40% education, 30% entertainment, 20% inspiration, 10% promotion",
     );
     recommendations.push(
-      "Batch create content weekly and use scheduling tools",
+      "Batch create 10-15 pieces of content every Sunday",
+    );
+    recommendations.push(
+      "Repurpose one piece of content into 5 different formats",
+    );
+    recommendations.push(
+      "Use Google Trends and social listening tools for content ideas",
+    );
+    recommendations.push(
+      "Follow trending hashtags in your niche for inspiration",
+    );
+    recommendations.push(
+      "Ask your audience what they want to see through polls and questions",
+    );
+    recommendations.push(
+      "Create series content like '30 Days of Tips' for consistent posting",
     );
   }
 
-  // Monetization recommendations based on follower count
-  const followerNum = getFollowerCount(data.followerCount);
-  if (followerNum >= 10000) {
+  // Monetization recommendations based on follower count (significantly expanded)
+  if (followerNum >= 50000) {
     recommendations.push(
-      "Reach out to brands in your niche for paid partnerships",
+      "Launch your own digital product or course priced ₹2999-₹9999",
     );
     recommendations.push(
-      "Create a professional media kit with your best metrics",
+      "Negotiate exclusive brand partnerships worth ₹50K-₹2L per month",
     );
-  } else if (followerNum >= 1000) {
+    recommendations.push(
+      "Create a membership community with monthly subscription ₹499-₹999",
+    );
+    recommendations.push(
+      "Start affiliate marketing with high-commission products",
+    );
+    recommendations.push(
+      "Offer consulting services at ₹5000-₹15000 per hour",
+    );
+  } else if (followerNum >= 10000) {
+    recommendations.push(
+      "Reach out to 30 brands monthly in your niche for paid partnerships",
+    );
+    recommendations.push(
+      "Create a professional media kit showcasing your engagement rates",
+    );
+    recommendations.push(
+      "Start selling digital products like templates, ebooks at ₹199-₹999",
+    );
+    recommendations.push(
+      "Join affiliate programs of brands you already use and recommend",
+    );
+    recommendations.push(
+      "Offer 1:1 coaching sessions at ₹1500-₹5000 per session",
+    );
+    recommendations.push(
+      "Create sponsored content packages with clear pricing structure",
+    );
+  } else if (followerNum >= 5000) {
     recommendations.push(
       "Start building email list for future product launches",
     );
     recommendations.push(
-      "Engage with brands through organic mentions before pitching",
+      "Engage with micro-brands for product collaboration opportunities",
+    );
+    recommendations.push(
+      "Create low-cost digital products like checklists at ₹99-₹299",
+    );
+    recommendations.push(
+      "Apply for brand ambassador programs of your favorite brands",
+    );
+  } else if (followerNum >= 1000) {
+    recommendations.push(
+      "Focus on growing to 10K followers before serious monetization",
+    );
+    recommendations.push(
+      "Build authentic relationships with brands through organic mentions",
+    );
+    recommendations.push(
+      "Start collecting email addresses for future newsletter",
+    );
+    recommendations.push(
+      "Create valuable free content to establish expertise",
+    );
+  } else {
+    recommendations.push(
+      "Focus on reaching 1K followers milestone through consistent posting",
+    );
+    recommendations.push(
+      "Engage genuinely with others in your niche to build community",
+    );
+    recommendations.push(
+      "Post daily for at least 90 days to establish presence",
     );
   }
 
-  return recommendations.slice(0, 6); // Return top 6 recommendations
+  // Income-specific recommendations
+  if (incomeNum === 0 && followerNum >= 5000) {
+    recommendations.push(
+      "You're missing ₹10K-₹50K monthly income potential - start monetizing immediately",
+    );
+    recommendations.push(
+      "Create your first paid digital product this month",
+    );
+    recommendations.push(
+      "Apply to 5 affiliate programs relevant to your niche",
+    );
+  }
+
+  // Goal-specific recommendations
+  if (data.goals.some(g => g.includes("Earn ₹25K/50K/1L+ per month"))) {
+    recommendations.push(
+      "Diversify income streams: 40% brand deals, 30% digital products, 20% affiliate, 10% services",
+    );
+    recommendations.push(
+      "Increase your rates by 25% every quarter as your following grows",
+    );
+    recommendations.push(
+      "Track your income monthly and optimize top-performing revenue streams",
+    );
+  }
+
+  if (data.goals.some(g => g.includes("Get Brand Collaborations"))) {
+    recommendations.push(
+      "Create a brand collaboration rate card based on your engagement metrics",
+    );
+    recommendations.push(
+      "Follow and engage with brand social media managers consistently",
+    );
+    recommendations.push(
+      "Tag brands in relevant content without being overly promotional",
+    );
+  }
+
+  if (data.goals.some(g => g.includes("Create Viral Content"))) {
+    recommendations.push(
+      "Study what went viral in your niche in the last 30 days and recreate with your twist",
+    );
+    recommendations.push(
+      "Post during peak hours when your audience is most active",
+    );
+    recommendations.push(
+      "Use trending sounds and hashtags within 24 hours of them trending",
+    );
+  }
+
+  // Multi-platform strategy recommendations
+  if (data.secondaryPlatforms.length === 0) {
+    recommendations.push(
+      "Expand to 2-3 additional platforms to reduce risk and increase reach",
+    );
+    if (data.primaryPlatform === "Instagram") {
+      recommendations.push(
+        "Start a YouTube channel for long-form content and higher ad revenue",
+      );
+      recommendations.push(
+        "Join LinkedIn for professional networking and B2B opportunities",
+      );
+    }
+  }
+
+  // Frequency-specific recommendations
+  if (data.postingFrequency === "Irregular" || data.postingFrequency === "Monthly") {
+    recommendations.push(
+      "Immediately increase posting to daily for next 30 days to boost algorithm favor",
+    );
+    recommendations.push(
+      "Use scheduling tools like Later, Buffer, or Hootsuite for consistency",
+    );
+    recommendations.push(
+      "Batch create content on weekends for the entire week",
+    );
+  }
+
+  // Season-specific recommendations
+  if ([9, 10, 11].includes(currentMonth)) {
+    recommendations.push(
+      "Create festival-themed content for maximum engagement during peak season",
+    );
+    recommendations.push(
+      "Reach out to brands now for Diwali and New Year campaigns",
+    );
+  }
+
+  // City-specific opportunities
+  if (data.city && data.city.toLowerCase().includes("mumbai")) {
+    recommendations.push(
+      "Attend Mumbai creator meetups and industry events for networking",
+    );
+    recommendations.push(
+      "Collaborate with Bollywood-adjacent brands for unique content opportunities",
+    );
+  } else if (data.city && data.city.toLowerCase().includes("delhi")) {
+    recommendations.push(
+      "Leverage Delhi's political and cultural scene for unique content angles",
+    );
+  } else if (data.city && data.city.toLowerCase().includes("bangalore")) {
+    recommendations.push(
+      "Connect with tech startups in Bangalore for collaboration opportunities",
+    );
+  }
+
+  // Content type optimization
+  if (data.contentType === "Photos & Carousels") {
+    recommendations.push(
+      "Add video content immediately - videos get 2-5x more engagement",
+    );
+  }
+  if (data.contentType === "Long-form Videos") {
+    recommendations.push(
+      "Create short-form versions of your long videos for wider reach",
+    );
+  }
+
+  // Advanced growth hacks
+  recommendations.push(
+    "Partner with 3-5 creators in your niche for regular collaboration",
+  );
+  recommendations.push(
+    "Create a content series that runs for 30 days to build anticipation",
+  );
+  recommendations.push(
+    "Use Instagram/TikTok analytics to identify your best-performing content themes",
+  );
+  recommendations.push(
+    "Engage with your audience's content, not just your own posts",
+  );
+  recommendations.push(
+    "Create behind-the-scenes content showing your creation process",
+  );
+  recommendations.push(
+    "Host live Q&A sessions weekly to build stronger community connections",
+  );
+  recommendations.push(
+    "Share your failures and lessons learned for authentic connection",
+  );
+  recommendations.push(
+    "Create polls and ask questions to understand your audience better",
+  );
+  recommendations.push(
+    "Collaborate with local businesses for mutual cross-promotion",
+  );
+  recommendations.push(
+    "Document your creator journey to inspire and educate others",
+  );
+
+  // Return significantly more recommendations (30-50 instead of 6)
+  return recommendations.slice(0, 45); // Return top 45 personalized recommendations
 };
 
 const generateProductRecommendations = (data: QuizData, fameScore: number) => {
@@ -1028,7 +1543,7 @@ const calculateGrowthPotential = (
     potential += 12;
   } else if (
     data.experience.some(
-      (exp) => exp.includes("Growing") || exp.includes("बढ़ रहे"),
+      (exp) => exp.includes("Growing") || exp.includes("���ढ़ रहे"),
     )
   ) {
     potential += 8;
