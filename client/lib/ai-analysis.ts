@@ -187,6 +187,7 @@ const getIncomeAmount = (income: string): number => {
 const getExperienceLevelDescription = (
   experience: string[],
   fameScore: number,
+  data?: QuizData,
 ): string => {
   const primaryExperience = experience[0] || "Just started (0-6 months)";
   const experienceText =
@@ -194,25 +195,54 @@ const getExperienceLevelDescription = (
       ? `Multi-level Experience (${experience.slice(0, 2).join(", ")})`
       : primaryExperience;
 
+  const followerNum = data ? getFollowerCount(data.followerCount) : 1000;
+  const incomeNum = data ? getIncomeAmount(data.monthlyIncome) : 0;
+  const postingConsistency = data?.postingFrequency || "Weekly";
+
+  // Calculate experience efficiency score
+  const experienceEfficiency = fameScore >= 70 ? "excellent" :
+                              fameScore >= 50 ? "solid" :
+                              fameScore >= 30 ? "developing" : "foundational";
+
   const experienceMap: { [key: string]: string } = {
-    "Just started (0-6 months)": `Beginner Creator (${experienceText}) - Building foundation and learning platform dynamics`,
-    "Beginner (6 months - 1 year)": `Early-Stage Creator (${experienceText}) - Developing consistency and finding voice`,
-    "Growing (1-2 years)": `Developing Creator (${experienceText}) - Building engaged audience and refining content strategy`,
-    "Experienced (2-3 years)": `Established Creator (${experienceText}) - Strong content foundation with growth momentum`,
-    "Expert (3+ years)": `Veteran Creator (${experienceText}) - Experienced with proven track record and audience loyalty`,
+    "Just started (0-6 months)": `🌱 BEGINNER CREATOR (${experienceText}) - You're in the learning phase but already showing ${experienceEfficiency} progress. Your ${data?.followerCount || "current audience"} in ${data ? Math.floor(6) : 6} months shows ${followerNum >= 1000 ? "accelerated" : "steady"} growth trajectory. Most creators take 12-18 months to reach your current level.`,
+
+    "Beginner (6 months - 1 year)": `🚀 EARLY-STAGE CREATOR (${experienceText}) - Your 6-12 month journey shows ${experienceEfficiency} foundation building. With ${postingConsistency.toLowerCase()} posting and ${data?.followerCount || "your audience"}, you're ahead of 70% of creators at this stage. Current focus: Scaling to next milestone through content optimization.`,
+
+    "Growing (1-2 years)": `📈 DEVELOPING CREATOR (${experienceText}) - Your 1-2 year experience demonstrates ${experienceEfficiency} audience building skills. ${followerNum >= 10000 ? "Exceptional" : "Strong"} progress with ${data?.followerCount || "your following"} and ${incomeNum > 0 ? `₹${incomeNum.toLocaleString()}/month earnings` : "monetization readiness"}. You're positioned for major growth acceleration.`,
+
+    "Experienced (2-3 years)": `💪 ESTABLISHED CREATOR (${experienceText}) - Your 2-3 year track record shows ${experienceEfficiency} content mastery. ${followerNum >= 50000 ? "Elite" : "Strong"} positioning with ${data?.followerCount || "substantial following"} ${incomeNum >= 30000 ? `and proven ₹${incomeNum.toLocaleString()}/month revenue` : "and monetization potential"}. Ready for brand partnership scaling and product launches.`,
+
+    "Expert (3+ years)": `🏆 VETERAN CREATOR (${experienceText}) - Your 3+ year expertise demonstrates ${experienceEfficiency} creator business acumen. ${followerNum >= 100000 ? "Industry-leading" : "Authority-level"} status with ${data?.followerCount || "substantial influence"} ${incomeNum >= 50000 ? `and ₹${incomeNum.toLocaleString()}/month proving monetization mastery` : "and advanced monetization opportunities"}. Focus: Personal brand expansion and business scaling.`,
   };
 
-  let baseDescription = experienceMap[primaryExperience] || "Creator";
+  let baseDescription = experienceMap[primaryExperience] || `Creator with ${experienceText}`;
 
-  if (fameScore >= 80) {
-    baseDescription += " - High-performing with excellent market positioning";
-  } else if (fameScore >= 60) {
-    baseDescription += " - Strong performance with solid growth potential";
-  } else if (fameScore >= 40) {
-    baseDescription +=
-      " - Moderate success with room for strategic improvement";
+  // Add specific performance analysis based on fame score and data
+  if (fameScore >= 80 && followerNum >= 50000) {
+    baseDescription += ` 🌟 MARKET LEADER: Your combination of experience + ${fameScore} Fame Score + ${data?.followerCount || "substantial following"} puts you in the top 2% of creators. Command premium rates: ₹${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3)} per post.`;
+  } else if (fameScore >= 70 && followerNum >= 10000) {
+    baseDescription += ` ⭐ HIGH PERFORMER: Your ${fameScore} Fame Score with ${data?.followerCount || "strong following"} shows excellent creator-market fit. Target rates: ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)} per collaboration.`;
+  } else if (fameScore >= 50) {
+    baseDescription += ` 📊 SOLID FOUNDATION: Your ${fameScore} Fame Score indicates ${experienceEfficiency} growth trajectory. Focus on scaling to next milestone with current ${postingConsistency.toLowerCase()} consistency.`;
+  } else if (fameScore >= 30) {
+    baseDescription += ` 🎯 GROWTH POTENTIAL: Your ${fameScore} Fame Score shows developing creator skills. Optimize posting frequency (currently ${postingConsistency.toLowerCase()}) and engagement strategy for faster growth.`;
   } else {
-    baseDescription += " - Early stage with significant growth opportunities";
+    baseDescription += ` 🌱 FOUNDATION BUILDING: Your ${fameScore} Fame Score indicates early-stage development. Focus on consistent content creation and audience engagement fundamentals.`;
+  }
+
+  // Add experience-specific insights
+  if (data) {
+    if (incomeNum === 0 && followerNum >= 5000) {
+      baseDescription += ` 💡 MONETIZATION OPPORTUNITY: Despite your experience and ${data.followerCount} followers, you're not monetizing yet. Your experience level suggests you should be earning ₹${Math.round(followerNum * 0.5)}-₹${Math.round(followerNum * 1.5)}/month.`;
+    } else if (incomeNum > 0) {
+      const efficiency = incomeNum / (followerNum / 1000);
+      if (efficiency >= 500) {
+        baseDescription += ` 💰 MONETIZATION EXPERT: Your ₹${efficiency.toFixed(0)} per 1K followers rate is exceptional for your experience level.`;
+      } else if (efficiency < 200) {
+        baseDescription += ` 📈 RATE OPTIMIZATION: Your current ₹${efficiency.toFixed(0)} per 1K followers can be improved to ₹400-800 with your experience level.`;
+      }
+    }
   }
 
   return baseDescription;
@@ -236,7 +266,7 @@ const getGrowthTrajectory = (data: QuizData, fameScore: number): string => {
   let trajectory = "";
 
   if (followerNum >= 50000 && incomeNum >= 30000) {
-    trajectory = `🚀 SCALE PHASE: You're already earning ₹${incomeNum.toLocaleString()}/month with ${data.followerCount} followers. Target: ₹${Math.round(incomeNum * 1.5).toLocaleString()}/month within 6 months through ${brandDealsPerMonth} monthly brand partnerships. Your ${data.niche} niche + audience size = premium creator rates of ���${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3)} per sponsored post.`;
+    trajectory = `🚀 SCALE PHASE: You're already earning ₹${incomeNum.toLocaleString()}/month with ${data.followerCount} followers. Target: ₹${Math.round(incomeNum * 1.5).toLocaleString()}/month within 6 months through ${brandDealsPerMonth} monthly brand partnerships. Your ${data.niche} niche + audience size = premium creator rates of ₹${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3)} per sponsored post.`;
   } else if (followerNum >= 10000 && incomeNum >= 10000) {
     trajectory = `💰 MONETIZATION SCALING: Current ₹${incomeNum.toLocaleString()}/month shows strong foundation. Your ${data.followerCount} in ${data.niche} can realistically achieve ₹${potentialMonthlyEarning.toLocaleString()}/month through strategic brand collaborations (${brandDealsPerMonth} deals monthly). Focus on increasing rates by 25% quarterly.`;
   } else if (followerNum >= 10000 && incomeNum < 10000) {
@@ -427,7 +457,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
       "Education & Learning": `📚 EDUCATION EMPIRE POTENTIAL: Ed-tech is ₹2.8L crore growing 40% YoY! Your knowledge in ${data.niche} + course creation = ₹${Math.round(followerNum * 2)}-₹${Math.round(followerNum * 5)} monthly potential.`,
       "Business & Finance": `💼 FINANCE CREATOR PREMIUM: B2B creators earn 3x more per follower! Your expertise + ${data.followerCount} = ₹${Math.round(followerNum * 1.8)}-₹${Math.round(followerNum * 3.2)} monthly from fintech partnerships.`,
       "Fitness & Health": `💪 FITNESS BOOM POSITIONING: Post-COVID fitness market exploded! Health creators with ${data.followerCount} average ₹${Math.round(followerNum * 1.1)}-₹${Math.round(followerNum * 2.0)} monthly from supplement brands.`,
-      "Food & Cooking": `🍳 FOOD CONTENT SUPREMACY: Food gets highest engagement (8-15% vs 2-4% average)! Your ${data.followerCount} + food = ₹${Math.round(followerNum * 0.9)}-₹${Math.round(followerNum * 1.8)} from restaurant partnerships.`,
+      "Food & Cooking": `🍳 FOOD CONTENT SUPREMACY: Food gets highest engagement (8-15% vs 2-4% average)! Your ${data.followerCount} + food = ₹${Math.round(followerNum * 0.9)}-���${Math.round(followerNum * 1.8)} from restaurant partnerships.`,
       "Personal Finance & Investing": `💰 FINTECH PREMIUM NICHE: Personal finance creators earn 60% higher CPM rates! Your ${data.followerCount} audience + money content = ₹${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3.0)} monthly potential.`,
     };
     if (nicheInsights[data.niche as keyof typeof nicheInsights]) {
@@ -1705,7 +1735,7 @@ const calculateGrowthPotential = (
     "Build authentic community",
     "Achieve viral content",
     "Expand into new platforms",
-    "authentic कम्यु��िटी बनाना",
+    "authentic कम्यु��िटी बन��ना",
     "वायरल कंटेंट बनाना",
     "नए प्लेटफॉर्म्स में expand",
   ];
