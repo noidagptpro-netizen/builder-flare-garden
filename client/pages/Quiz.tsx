@@ -262,7 +262,7 @@ const languages = {
     steps: {
       1: "प्लेटफॉर्म और फॉलोअर्स",
       2: "कंटेंट निच",
-      3: "कंटेंट प्रकार",
+      3: "कंट��ंट प्रकार",
       4: "पोस्टिंग आवृत्ति",
       5: "अनुभव और आय",
       6: "सबसे बड़ी चुनौती",
@@ -279,7 +279,7 @@ const languages = {
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
-        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
+        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुने��� जिनका आपने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       engagementRate: "आपका औसत एंगेजमेंट रेट क्या है? Engagement rate = (likes + comments + shares) / followers",
       biggestChallenge:
@@ -416,7 +416,7 @@ const languages = {
       },
       emailTemplates: {
         title: "ब्रांड आउटरीच ईमेल टेम्प्लेट्स",
-        description: "ब्रांड पार्टनरशिप के लिए 30+ सिद्ध ईमेल टेम्प्लेट्स",
+        description: "��्रांड पार्टनरशिप के लिए 30+ सिद्ध ईमेल टेम्प्लेट्स",
       },
       growthGuide: {
         title: "90-दिन की ग्रोथ स्ट्रैटेजी गाइड",
@@ -702,7 +702,7 @@ ${language === "hindi" ? "• मेरी audience क�� [specific demograp
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "• मैं additional value add कर सकता हूं like [extra service]" : "• I can add additional value like [extra service]"}
 
-${language === "hindi" ? "��ैं flexible ह��ं औ��� ���� mutually beneficial deal बनाना चाहता हूं।" : "I'm flexible and want to create a mutually beneficial deal."}
+${language === "hindi" ? "��ै��� flexible ह��ं औ��� ���� mutually beneficial deal बनाना चाहता हूं।" : "I'm flexible and want to create a mutually beneficial deal."}
 
 ${language === "hindi" ? "Best regards," : "Best regards,"}
 ${userName}
@@ -794,7 +794,7 @@ ${language === "hindi" ? "- एनालिटिक्स ट्रैक क�
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
 ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करें (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफिक कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
-${language === "hindi" ? "- ट्रेंडिंग टॉपिक्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
+${language === "hindi" ? "- ट्रेंडिंग टॉपि��्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
@@ -1021,7 +1021,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
               </h2>
               <p className="text-gray-600 mb-6">
                 {language === "hindi"
-                  ? "व्यक्तिगत SWOT विश्लेषण, विका��� रणनीति, और प्र��मियम टूल्स के साथ अपनी क्रिएटर यात्���ा को तेज़ी से आगे बढ़ाएं।"
+                  ? "व्यक्तिगत SWOT विश्लेषण, विका��� रणनीति, और प्र��मियम टूल्��� के साथ अपनी क्रिएटर यात्���ा को तेज़ी से आगे बढ़ाएं।"
                   : "Get personalized SWOT analysis, growth strategy, and premium tools to accelerate your creator journey."}
               </p>
               <button
@@ -1066,63 +1066,12 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
               <option value="hindi">हिंदी</option>
             </select>
 
-            <div className="text-gray-600 text-sm font-medium">
-              Step {currentStep} of {totalSteps}
-            </div>
+
           </div>
         </div>
       </header>
 
-      {/* Progress Bar */}
-      <div className="bg-gradient-to-r from-blue-50 to-green-50 py-8">
-        <div className="container mx-auto px-4">
-          {/* Progress percentage */}
-          <div className="text-center mb-6">
-            <div className="text-3xl font-bold text-gray-900 mb-2">
-              {Math.round((currentStep / totalSteps) * 100)}% Complete
-            </div>
-            <div className="text-gray-600">
-              Step {currentStep} of {totalSteps}
-            </div>
-          </div>
 
-          {/* Enhanced Progress Bar */}
-          <div className="max-w-4xl mx-auto mb-6">
-            <div className="relative">
-              <div className="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-gradient-to-r from-neon-green to-electric-blue transition-all duration-700 ease-out"
-                  style={{ width: `${(currentStep / totalSteps) * 100}%` }}
-                ></div>
-              </div>
-              {/* Step indicators */}
-              <div className="flex justify-between mt-4">
-                {Array.from({ length: totalSteps }, (_, i) => i + 1).map((step) => (
-                  <div key={step} className="flex flex-col items-center">
-                    <div className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-500 ${
-                      step <= currentStep
-                        ? "bg-gradient-to-r from-neon-green to-electric-blue text-white shadow-lg"
-                        : "bg-gray-300 text-gray-600"
-                    }`}>
-                      {step}
-                    </div>
-                    <div className="text-xs text-gray-600 mt-2 text-center hidden md:block">
-                      {t.steps[step as keyof typeof t.steps]}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Current step title */}
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-gray-900">
-              {t.steps[currentStep as keyof typeof t.steps]}
-            </h2>
-          </div>
-        </div>
-      </div>
 
       {/* Quiz Content */}
       <main ref={quizContentRef} className="container mx-auto px-4 py-4">
@@ -1144,6 +1093,17 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
           </div>
 
           <div className="bg-white border-2 border-gray-100 rounded-3xl p-8 md:p-16 shadow-2xl backdrop-blur-sm">
+            {/* Add language selector in quiz */}
+            <div className="flex justify-end mb-6">
+              <select
+                value={language}
+                onChange={(e) => setLanguage(e.target.value as "english" | "hindi")}
+                className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
+              >
+                <option value="english">English</option>
+                <option value="hindi">हिंदी</option>
+              </select>
+            </div>
             {/* Loading State */}
             {isGenerating && (
               <div className="text-center py-12">
@@ -1181,46 +1141,36 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-xl">
                         {t.questions.primaryPlatform}
                       </label>
-                      <div className="grid grid-cols-2 gap-4">
+                      <select
+                        value={quizData.primaryPlatform}
+                        onChange={(e) => updateQuizData("primaryPlatform", e.target.value)}
+                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                      >
+                        <option value="">Select your primary platform</option>
                         {t.options.platforms.map((platform) => (
-                          <button
-                            key={platform}
-                            onClick={() =>
-                              updateQuizData("primaryPlatform", platform)
-                            }
-                            className={`p-6 rounded-2xl border-2 text-lg font-semibold transition-all duration-300 hover:scale-105 ${
-                              quizData.primaryPlatform === platform
-                                ? "bg-gradient-to-r from-electric-blue/20 to-neon-green/20 border-electric-blue text-gray-900 shadow-xl transform scale-105"
-                                : "bg-white border-gray-200 text-gray-700 hover:border-electric-blue/50 hover:shadow-lg"
-                            }`}
-                          >
+                          <option key={platform} value={platform}>
                             {platform}
-                          </button>
+                          </option>
                         ))}
-                      </div>
+                      </select>
                     </div>
 
                     <div>
                       <label className="block text-gray-900 font-bold mb-6 text-xl">
                         {t.questions.followerCount}
                       </label>
-                      <div className="grid grid-cols-2 gap-3">
+                      <select
+                        value={quizData.followerCount}
+                        onChange={(e) => updateQuizData("followerCount", e.target.value)}
+                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                      >
+                        <option value="">Select your follower count</option>
                         {t.options.followerRanges.map((range) => (
-                          <button
-                            key={range}
-                            onClick={() =>
-                              updateQuizData("followerCount", range)
-                            }
-                            className={`p-4 rounded-xl border-2 text-base font-semibold transition-all duration-300 hover:scale-105 ${
-                              quizData.followerCount === range
-                                ? "bg-gradient-to-r from-electric-blue/20 to-soft-violet/20 border-electric-blue text-gray-900 shadow-xl transform scale-105"
-                                : "bg-white border-gray-200 text-gray-700 hover:border-electric-blue/50 hover:shadow-lg"
-                            }`}
-                          >
+                          <option key={range} value={range}>
                             {range}
-                          </button>
+                          </option>
                         ))}
-                      </div>
+                      </select>
                     </div>
 
                     <div>
@@ -1262,21 +1212,18 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.niche}
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                      <select
+                        value={quizData.niche}
+                        onChange={(e) => updateQuizData("niche", e.target.value)}
+                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-soft-violet focus:outline-none transition-colors text-lg"
+                      >
+                        <option value="">What topics do you create content about?</option>
                         {t.options.niches.map((niche) => (
-                          <button
-                            key={niche}
-                            onClick={() => updateQuizData("niche", niche)}
-                            className={`p-3 rounded-lg border-2 text-sm font-medium transition-all duration-300 ${
-                              quizData.niche === niche
-                                ? "bg-gradient-to-r from-soft-violet/10 to-neon-green/10 border-soft-violet text-gray-900 shadow-lg"
-                                : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
-                            }`}
-                          >
+                          <option key={niche} value={niche}>
                             {niche}
-                          </button>
+                          </option>
                         ))}
-                      </div>
+                      </select>
                     </div>
                   </div>
                 )}
@@ -1297,21 +1244,18 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.contentType}
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                      <select
+                        value={quizData.contentType}
+                        onChange={(e) => updateQuizData("contentType", e.target.value)}
+                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                      >
+                        <option value="">What type of content do you primarily create?</option>
                         {t.options.contentTypes.map((type) => (
-                          <button
-                            key={type}
-                            onClick={() => updateQuizData("contentType", type)}
-                            className={`p-3 rounded-lg border-2 text-sm font-medium transition-all duration-300 ${
-                              quizData.contentType === type
-                                ? "bg-gradient-to-r from-electric-blue/10 to-neon-green/10 border-electric-blue text-gray-900 shadow-lg"
-                                : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
-                            }`}
-                          >
+                          <option key={type} value={type}>
                             {type}
-                          </button>
+                          </option>
                         ))}
-                      </div>
+                      </select>
                     </div>
                   </div>
                 )}
@@ -1332,23 +1276,18 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.postingFrequency}
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                      <select
+                        value={quizData.postingFrequency}
+                        onChange={(e) => updateQuizData("postingFrequency", e.target.value)}
+                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-neon-green focus:outline-none transition-colors text-lg"
+                      >
+                        <option value="">How often do you share new content?</option>
                         {t.options.frequencies.map((freq) => (
-                          <button
-                            key={freq}
-                            onClick={() =>
-                              updateQuizData("postingFrequency", freq)
-                            }
-                            className={`p-3 rounded-lg border-2 text-sm font-medium transition-all duration-300 ${
-                              quizData.postingFrequency === freq
-                                ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
-                                : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
-                            }`}
-                          >
+                          <option key={freq} value={freq}>
                             {freq}
-                          </button>
+                          </option>
                         ))}
-                      </div>
+                      </select>
                     </div>
                   </div>
                 )}
