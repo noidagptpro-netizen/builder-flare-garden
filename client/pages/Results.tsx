@@ -121,7 +121,7 @@ const languages = {
     title: "आपका क्रिएटर विश्लेष���",
     subtitle: "आपकी क्रिएटर यात्रा के लिए संपूर्ण व्यक्तिगत अंतर्दृष्टि",
     profileSynopsis: "प्रोफाइल सिनॉप्सिस",
-    creatorProfile: "क्रिएटर प्रोफाइल",
+    creatorProfile: "क्रिएटर प्रोफा��ल",
     currentStatus: "वर्तमान स्थिति",
     swotAnalysis: "SWOT विश्लेषण",
     strengths: "मजबूती",
@@ -156,7 +156,7 @@ const languages = {
     basedOnEngagement: "एंगेजमेंट क्षमता के ��धार पर",
     nextSixMonths: "अगले 6 महीने का प्रक्षेपण",
     monthlyTarget: "मासि��� प्राप्त करन�� योग्य लक्ष्य",
-    primaryPlatform: "प्राथमिक प��लेटफॉर्म:",
+    primaryPlatform: "प्र��थमिक प��लेटफॉर्म:",
     contentNiche: "कंटेंट निच:",
     contentType: "कंटेंट प्रकार:",
     postingFrequency: "पोस्टिंग आवृत्ति:",
@@ -311,13 +311,24 @@ export default function Results() {
     let content = "";
     const userName = personalInfo.name || quizData.name || "Creator";
 
-    // Add font size indicator for 3X larger display
+    // Add enhanced font size indicator for optimal readability
     const fontSizeIndicator = `
-=== DISPLAY INSTRUCTIONS ===
-Recommended Font Size: 24pt (3X larger than standard)
-For best readability, increase font size in your PDF viewer or word processor.
-Optimal zoom: 150-200% for comfortable reading.
-==============================
+╔══════════════════════════════════════════════════════════╗
+║                 📖 READING INSTRUCTIONS                  ║
+║                                                          ║
+║  🔍 FONT SIZE: SET TO 20-28pt (MINIMUM 18pt)           ║
+║  📊 ZOOM LEVEL: 150-250% in PDF viewer                  ║
+║  📱 MOBILE: Use landscape mode + increase text size     ║
+║  🖥️ DESKTOP: Use Ctrl/Cmd + to zoom in                  ║
+║  📄 PRINTING: Scale to 125-150% for paper readability   ║
+║                                                          ║
+║  ⚡ QUICK SETUP:                                         ║
+║  • Open in Notepad/Word: Format → Font → Size 24pt     ║
+║  • PDF: View → Zoom → Custom → 200%                     ║
+║  • Browser: Ctrl/Cmd + (press 3-5 times)               ║
+║                                                          ║
+║  💡 This content is optimized for LARGE font display!    ║
+╚══════════════════════════════════════════════════════════╝
 
 `;
 
@@ -326,7 +337,7 @@ Optimal zoom: 150-200% for comfortable reading.
         fontSizeIndicator +
         `${language === "hindi" ? "फेम स्कोर रिपोर्ट" : "FAME SCORE REPORT"} - ${userName}
 
-${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
+${language === "hindi" ? "व्��क्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "फेम ��्कोर:" : "Fame Score:"} ${analysis.fameScore}/100
 ${language === "hindi" ? "विकास क्षमता:" : "Growth Potential:"} ${analysis.growthPotential}%
@@ -550,7 +561,7 @@ ${language === "hindi" ? "🔥 प्रो टिप्स:" : "🔥 PRO TIPS:"
 3. ${language === "hindi" ? "लॉन्ग-टर्म कैंपेन्स के लिए 25% डिस्काउंट ऑफर करें" : "Offer 25% package discount for 3+ month campaigns"}
 
 ${language === "hindi" ? "🎯 आपका कस्टम रेट कार्ड (तुरंत इस्तेमाल करें):" : "🎯 YOUR CUSTOM RATE CARD (Use Immediately):"}
-═══════════════════════════════════════════════════
+═════════════��═════════════════════════════════════
 ${language === "hindi" ? "बेसिक पैकेज:" : "Basic Package:"} ₹${Math.round(followerNum * 0.012 * niche.multiplier).toLocaleString()}
 ${language === "hindi" ? "स्टैंडर्ड पैकेज:" : "Standard Package:"} ₹${Math.round(followerNum * 0.025 * niche.multiplier).toLocaleString()}
 ${language === "hindi" ? "प्रीमियम पैकेज:" : "Premium Package:"} ₹${Math.round(followerNum * 0.045 * niche.multiplier).toLocaleString()}
@@ -633,7 +644,7 @@ ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस
 └─────────────────────────────────────────────┘
 
 ${language === "hindi" ? "🔥 प्रो-लेवल एनालिटिक्स टिप्स:" : "🔥 PRO-LEVEL ANALYTICS TIPS:"}
-1. ${language === "hindi" ? "रीच 50% से कम = Algorithm penalty. तुरंत बेहतर कंटेंट पोस्ट करें" : "Reach below 50% = Algorithm penalty. Post better content immediately"}
+1. ${language === "hindi" ? "रीच 50% से कम = Algorithm penalty. तुरंत बेहतर कंटेंट पोस��ट करें" : "Reach below 50% = Algorithm penalty. Post better content immediately"}
 2. ${language === "hindi" ? "सेव रेट 2% से ज्यादा = वायरल potential. इसी तरह का कंटेंट बनाएं" : "Save rate above 2% = Viral potential. Create similar content"}
 3. ${language === "hindi" ? "कमेंट्स में रिप्लाई जरूर करें - Engagement बढ़ेगा 40%" : "Always reply to comments - Boosts engagement by 40%"}
 4. ${language === "hindi" ? "पहले 30 मिनट में ज्यादा likes = Algorithm boost" : "High likes in first 30 minutes = Algorithm boost"}
