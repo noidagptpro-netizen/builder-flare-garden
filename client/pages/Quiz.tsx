@@ -195,18 +195,19 @@ const languages = {
         "₹1L+",
       ],
       challenges: [
-        "Getting consistent views and engagement",
-        "Finding my unique voice/style",
-        "Algorithm changes affecting reach",
-        "Balancing authenticity with brand appeal",
-        "Competing with bigger creators",
-        "Converting followers to paying customers",
-        "Dealing with negative comments/trolls",
-        "Burnout and content fatigue",
-        "Understanding analytics and metrics",
-        "Building genuine community",
-        "Staying relevant with trends",
-        "Managing multiple platforms efficiently",
+        "🔄 Growth & Engagement: Low views & inconsistent engagement",
+        "🧠 Growth & Engagement: Staying relevant with fast-moving trends",
+        "🔁 Growth & Engagement: Algorithm changes killing reach",
+        "🧍‍♀️ Growth & Engagement: Competing with bigger creators",
+        "🗣️ Brand & Identity: Struggling to find my unique voice/style",
+        "🤝 Brand & Identity: Balancing authenticity with brand appeal",
+        "🌱 Brand & Identity: Building a real, connected community",
+        "💔 Monetization & Scaling: Can't convert followers into paying customers",
+        "🤝 Monetization & Scaling: Not landing brand collaborations",
+        "📊 Monetization & Scaling: Confused by analytics & metrics",
+        "🥵 Creator Wellness: Burnout & content fatigue",
+        "💬 Creator Wellness: Handling trolls/negativity",
+        "📱 Creator Wellness: Managing too many platforms at once",
       ],
       goals: [
         "Increase monthly income to ₹50K+",
@@ -258,7 +259,7 @@ const languages = {
   },
   hindi: {
     title: "क्रिएटर सक्सेस क्विज़",
-    subtitle: "3 मिनट में अपनी व्यक्तिगत ग्रोथ रणनीति पाएं",
+    subtitle: "3 मिनट में अपनी व्य��्तिगत ग्रोथ रणनीति पाएं",
     steps: {
       1: "प्लेटफॉर्म और फॉलोअर्स",
       2: "कंटेंट निच",
@@ -277,7 +278,7 @@ const languages = {
         "आप और कौन से प्लेटफॉर्म का उपयो�� करते हैं? (कई विकल्प चुनें)",
       niche: "आपका कंटेंट किस विषय पर है?",
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
-      postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
+      postingFrequency: "आप कितनी ��ार कंटेंट पोस्ट करते हैं?",
       experience:
         "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुने��� जिनका आपने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आप���ी वर्तम���न मासिक आय क्या है?",
@@ -319,7 +320,7 @@ const languages = {
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
         "कला और डिज़ाइन",
-        "गेमिंग और एस्पोर्ट्स",
+        "गेमिंग और ���स्पोर्ट्स",
         "��ंगीत और नृत्य",
         "शिक्षा ���र सीखना",
         "खेल और एथलेटिक्स",
@@ -352,12 +353,12 @@ const languages = {
         "रोज़ाना",
         "सप्���ाह में 3-4 बार",
         "सा���्ताहिक",
-        "महीने में 2-3 बार",
+        "���हीने में 2-3 बार",
         "��ासिक",
         "अनियमित",
       ],
       experiences: [
-        "अभी शुरू किया (0-6 महीने)",
+        "अभी शुरू किया (0-6 महीन��)",
         "शुरुआती (6 महीने - 1 साल)",
         "बढ़ रहे हैं (1-2 साल)",
         "अनुभवी (2-3 साल)",
@@ -388,7 +389,7 @@ const languages = {
         "📱 क्रिएटर कल्याण: एक साथ कई प्लेटफॉर्म मैनेज करना",
       ],
       goals: [
-        "मासिक आय ₹50K+ तक बढ़ाना",
+        "मासिक आय ���50K+ तक बढ़ाना",
         "100K+ का authentic समुदाय बनाना",
         "सपनों के ब्रांड्स के साथ पार्टनरशिप",
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
@@ -449,7 +450,7 @@ const languages = {
         description: "��्रांड पार्टनरशिप के लिए 30+ सिद्ध ईमेल टेम्प्लेट्स",
       },
       growthGuide: {
-        title: "90-दिन की ग्रोथ स्ट्रैटेजी गाइड",
+        title: "90-��िन की ग्रोथ स्ट्रैटेजी गाइड",
         description: "अपने फॉलोइंग बढ़ाने के लिए स्टेप-बाई-स्टेप रोडमैप",
       },
       downloadFree: "मुफ्त डाउनलोड करें",
@@ -732,7 +733,7 @@ ${language === "hindi" ? "• मेरी audience क�� [specific demograp
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "• मैं additional value add कर सकता ह��ं like [extra service]" : "• I can add additional value like [extra service]"}
 
-${language === "hindi" ? "��ै��� flexible ह��ं औ��� ���� mutually beneficial deal बनाना चाहता हूं।" : "I'm flexible and want to create a mutually beneficial deal."}
+${language === "hindi" ? "��ै��� flexible ह��ं औ��� ���� mutually beneficial deal बनाना चाहता हूं���" : "I'm flexible and want to create a mutually beneficial deal."}
 
 ${language === "hindi" ? "Best regards," : "Best regards,"}
 ${userName}
@@ -768,7 +769,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
 
-${language === "hindi" ? "हमा��े successful collaboration के बा����, ���ैं एक long-term partnership propose करना चाहूंगा।" : "Following our successful collaboration, I'd like to propose a long-term partnership."}
+${language === "hindi" ? "हमा��े successful collaboration के बा����, ���ैं एक long-term partnership propose करना चाहूं��ा।" : "Following our successful collaboration, I'd like to propose a long-term partnership."}
 
 ${language === "hindi" ? "🤝 PROPOSED PARTNERSHIP:" : "🤝 PROPOSED PARTNERSHIP:"}
 ${language === "hindi" ? "���� Monthly content creation" : "• Monthly content creation"}
@@ -804,7 +805,7 @@ ${language === "hindi" ? "• Grateful और humble रहें" : "• Be gra
     } else if (type === "growthStrategy") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "90-���िन की ग्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
+        `${language === "hindi" ? "90-���िन ��ी ग्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "वर्तमान स्थिति:" : "Current Status:"} ${quizData.followerCount} on ${quizData.primaryPlatform}
@@ -814,7 +815,7 @@ ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:
 ${language === "hindi" ? "दिन 1-30: बुन������ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्ताह 1:" : "Week 1:"}
 ${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्तमान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
-${language === "hindi" ? `- ${quizData.niche} पर 10 कंटेंट आ���डिया तैयार करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
+${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ���डिया तैयार करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्स)" : "- Research hashtags (30 hashtag mix)"}
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
@@ -1003,7 +1004,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
               <h2 className="text-lg font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "अपना पूरा विश्लेषण चाहते हैं?"
+                  ? "अपना ���ूरा विश्लेषण चाहते हैं?"
                   : "Want Your Complete Analysis?"}
               </h2>
               <p className="text-gray-600 mb-6">
