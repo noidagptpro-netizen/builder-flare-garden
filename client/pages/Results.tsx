@@ -158,7 +158,7 @@ const languages = {
     premiumTools: "और भी क्रिएटर टूल्स",
     securePayment: "सुरक्षित भुगतान",
     instantDownload: "तुरंत ड���उनलोड",
-    moneyBack: "पैसे वापसी की गार��टी",
+    moneyBack: "प���से वापसी की गार��टी",
     backToQuiz: "क्विज़ पर वापस जाएं",
     basedOnEngagement: "एंगेजम���ंट क्षमता के ��धार पर",
     nextSixMonths: "अगले 6 महीने का प्रक्षेपण",
@@ -335,7 +335,7 @@ export default function Results() {
 ║  • Browser: Ctrl/Cmd + (press 3-5 times)               ║
 ║                                                          ║
 ║  💡 This content is optimized for LARGE font display!    ║
-╚════════════════════════════════════��═════════════════════╝
+╚════════════════════════════════════��═════��═══════════════╝
 
 `;
 
@@ -361,7 +361,7 @@ ${language === "hindi" ? "💰 आय प्रक��षेपण:" : "💰 I
 
 
 🎯 ${language === "hindi" ? "प्रोफाइल सारांश:" : "PROFILE SUMMARY:"}
-────��───────────────────────────────────────────
+────��──��────────────────────────────────────────
 
 ${language === "hindi" ? "📱 प्लेटफॉर्म:" : "📱 Platform:"} ${quizData.primaryPlatform}
 
@@ -443,7 +443,7 @@ ${language === "hindi" ? "📹 कंटेंट प्रका��:" : "�
 
 
 📈 ${language === "hindi" ? "प्रदर्शन मेट्रिक्स:" : "PERFORMANCE METRICS:"}
-─────────────────────────────────────────────���──
+─────────────────────────────────────────────�����──
 
 ${language === "hindi" ? "⭐ फ���म स्क���र:" : "⭐ Fame Score:"} ${analysis.fameScore}/100
 
@@ -501,7 +501,7 @@ ${language === "hindi" ? "- ब्रांड पार्टनरशिप:" 
 
 ${language === "hindi" ? "मुख्य सफलता संकेतक (KPIs):" : "KEY SUCCESS INDICATORS (KPIs):"}
 ${language === "hindi" ? "- दैनिक एंगेजमेंट रेट" : "- Daily engagement rate"}
-${language === "hindi" ? "- साप्ताहिक नए फॉलो���र्स" : "- Weekly new followers"}
+${language === "hindi" ? "- साप्��ाहिक नए फॉलो���र्स" : "- Weekly new followers"}
 ${language === "hindi" ? "- मासिक ��्रांड इंक्���ायरी" : "- Monthly brand inquiries"}
 ${language === "hindi" ? "- कंटेंट पहुंच और छाप" : "- Content reach and impressions"}
 
@@ -693,7 +693,7 @@ ${language === "hindi" ? "💰 मोने���ाइज़ेशन ट्
 
 ${language === "hindi" ? "📊 साप्ताहिक ग्रोथ मेट्रिक्स:" : "📊 WEEKLY GROWTH METRICS:"}
 • ${language === "hindi" ? "सप्ताह" : "Week"} 1: टार��ेट ${Math.round(targetGrowthRate / 4)} new followers/day
-• ${language === "hindi" ? "सप्ताह" : "Week"} 2: टारगेट ${Math.round(targetGrowthRate / 4 * 1.1)} new followers/day
+• ${language === "hindi" ? "सप्ताह" : "Week"} 2: ��ारगेट ${Math.round(targetGrowthRate / 4 * 1.1)} new followers/day
 • ${language === "hindi" ? "सप्ताह" : "Week"} 3: टारगेट ${Math.round(targetGrowthRate / 4 * 1.2)} new followers/day
 • ${language === "hindi" ? "सप्ताह" : "Week"} 4: टारगेट ${Math.round(targetGrowthRate / 4 * 1.3)} new followers/day
 
@@ -705,7 +705,7 @@ ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस
 │ ${language === "hindi" ? "1घंटे में रीच" : "1hr Reach"}: _____ (टारगेट: 15-25%)  │
 │ ${language === "hindi" ? "24घंटे में रीच" : "24hr Reach"}: _____ (टारगेट: 70-85%) │
 │ ${language === "hindi" ? "स्टोरी व्यूज" : "Story Views"}: _____ (टारगेट: 40-60%) │
-└──────────────────────────────────────���──────┘
+└───────────────────────────────���──────���──────┘
 
 ${language === "hindi" ? "🔥 प्रो-लेवल एनालिटिक्स टिप्स:" : "🔥 PRO-LEVEL ANALYTICS TIPS:"}
 1. ${language === "hindi" ? "रीच 50% से कम = Algorithm penalty. तुरंत बेहतर कंटेंट पोस��ट करें" : "Reach below 50% = Algorithm penalty. Post better content immediately"}
@@ -732,7 +732,7 @@ ${language === "hindi" ? "📈 मासिक ROI ट्रैकर:" : "📈 
 └──────────────────────────────────────��──────┘
 
 ${language === "hindi" ? "⚡ एक्शन आइटम्स (हर हफ्ते करें):" : "⚡ ACTION ITEMS (Do Every Week):"}
-□ ${language === "hindi" ? "टॉप 3 परफॉर्मिंग पोस्ट्स को analyze करें और pattern ढूंढ���ं" : "Analyze top 3 performing posts and find patterns"}
+□ ${language === "hindi" ? "टॉप 3 परफॉर्मिंग पोस्ट्स को analyze ��रें और pattern ढूंढ���ं" : "Analyze top 3 performing posts and find patterns"}
 □ ${language === "hindi" ? "Competitor के टॉप प���स्ट्स स्टडी करें (कम से कम 5)" : "Study competitor top posts (minimum 5)"}
 □ ${language === "hindi" ? "हैशटैग परफॉर्मेंस चेक करें और underperforming को replace करें" : "Check hashtag performance and replace underperforming ones"}
 □ ${language === "hindi" ? "Audience insights द���खें - कब ऑनलाइन हैं, demographics" : "Review audience insights - when online, demographics"}
@@ -1024,31 +1024,35 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                   </div>
                 )}
 
-                {/* Always show at least one product */}
-                <div className="bg-white rounded-xl p-6 border border-orange-200">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <h3 className="font-bold text-lg text-orange-800 mb-2">
-                        {language === "hindi" ? "🎯 Brand Deal Negotiation Masterclass" : "🎯 Brand Deal Negotiation Masterclass"}
-                      </h3>
-                      <div className="text-orange-600 text-sm mb-2">
-                        {language === "hindi" ? "AI Match: 96% - आपके goals के लिए perfect match" : "AI Match: 96% - Perfect match for your goals"}
+                {/* Show only existing products based on user profile */}
+                {analysis.productRecommendations.slice(0, 2).map((rec, index) => (
+                  <div key={index} className="bg-white rounded-xl p-6 border border-orange-200">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <h3 className="font-bold text-lg text-orange-800 mb-2">
+                          {rec.name}
+                        </h3>
+                        <div className="text-orange-600 text-sm mb-2">
+                          {rec.priority === "high" ? "🔥 High Priority" : "⭐ Recommended"}
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-gray-400 line-through text-sm">
+                          {rec.name.includes("Complete") ? "₹199" : rec.name.includes("Reels") ? "₹397" : "₹299"}
+                        </div>
+                        <div className="text-orange-600 font-bold">
+                          {rec.name.includes("Complete") ? "₹99" : rec.name.includes("Reels") ? "₹197" : "₹149"}
+                        </div>
                       </div>
                     </div>
-                    <div className="text-right">
-                      <div className="text-gray-400 line-through text-sm">₹1,999</div>
-                      <div className="text-orange-600 font-bold">₹599</div>
+                    <p className="text-gray-600 text-sm mb-4">
+                      {rec.reason}
+                    </p>
+                    <div className="text-orange-600 text-sm font-medium">
+                      💡 {language === "hindi" ? "Specifically tailored for your profile" : "Specifically tailored for your profile"}
                     </div>
                   </div>
-                  <p className="text-gray-600 text-sm mb-4">
-                    {language === "hindi"
-                      ? "Professional negotiation techniques, rate card creation, और brands के साथ long-term partnerships बनाने की complete guide।"
-                      : "Professional negotiation techniques, rate card creation, and complete guide to building long-term brand partnerships."}
-                  </p>
-                  <div className="text-orange-600 text-sm font-medium">
-                    💰 {language === "hindi" ? "Average deal value increases by 250%" : "Average deal value increases by 250%"}
-                  </div>
-                </div>
+                ))}
               </div>
 
               <div className="mt-6 text-center">
@@ -1063,7 +1067,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                 >
                   <Sparkles className="w-5 h-5" />
                   {language === "hindi"
-                    ? "सभी AI Recommended Tools देखें"
+                    ? "सभी AI Recommended Tools दे��ें"
                     : "View All AI Recommended Tools"}
                   <ArrowRight className="w-5 h-5" />
                 </Link>
@@ -1389,7 +1393,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                                 </p>
                                 <p>
                                   {language === "hindi"
-                                    ? "• Trending audio का use करें first 24 hours में"
+                                    ? "• Trending audio का use करें first 24 hours मे���"
                                     : "• Use trending audio within first 24 hours"}
                                 </p>
                                 <p>
@@ -1496,7 +1500,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                                 </p>
                                 <p>
                                   {language === "hindi"
-                                    ? "��� Specific action plan बनाएं इस challenge के लिए"
+                                    ? "��� Specific action plan ब��ाएं इस challenge के लिए"
                                     : "• Create specific action plan for this challenge"}
                                 </p>
                                 <p>
