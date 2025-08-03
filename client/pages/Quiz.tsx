@@ -280,7 +280,7 @@ const languages = {
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
         "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुने��� जिनका आपने अनुभव किया है)",
-      monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
+      monthlyIncome: "कंटेंट से आपकी वर्तम���न मासिक आय क्या है?",
       engagementRate: "आपका औसत एंगेजमेंट रेट क्या है? Engagement rate = (likes + comments + shares) / followers",
       biggestChallenge:
         "आपकी सबसे बड़ी चुनौती क्या है? 3 तक चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
@@ -621,7 +621,7 @@ Optimal zoom: 150-200% for comfortable reading.
 ${language === "hindi" ? "व्यक्ति���त जानकारी:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
-${language === "hindi" ? "प्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
+${language === "hindi" ? "���्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "����ॉलो���र्स:" : "Followers:"} ${quizData.followerCount}
 
 ${language === "hindi" ? "सांख्यिकी और दर��ं:" : "STATISTICS & RATES:"}
@@ -662,7 +662,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] �
 ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में एक कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} फॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
-${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
+${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने म��ं विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
@@ -687,7 +687,7 @@ ${language === "hindi" ? "मैंने पिछले सप्ताह आ
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
-${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule कर सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
+${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule क��� सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
 
 ${language === "hindi" ? "Looking forward," : "Looking forward,"}
 ${userName}
@@ -706,7 +706,7 @@ ${language === "hindi" ? "• 1 feed post with your product" : "• 1 feed post 
 ${language === "hindi" ? "• 24-hour story promotion" : "• 24-hour story promotion"}
 ${language === "hindi" ? "• Professional photography" : "• Professional photography"}
 
-${language === "hindi" ? "📱 स्ट���री पैक���ज: ₹[आपकी rate]" : "📱 Story Package: ��[Your rate]"}
+${language === "hindi" ? "📱 स्ट���र�� पैक���ज: ₹[आपकी rate]" : "📱 Story Package: ��[Your rate]"}
 ${language === "hindi" ? "• 3-5 story slides" : "• 3-5 story slides"}
 ${language === "hindi" ? "• Behind-the-scenes content" : "• Behind-the-scenes content"}
 
@@ -739,7 +739,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 5: परफॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
+${language === "hindi" ? "टेम्प्लेट 5: प��फॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} x [Brand] - Campaign Performance Report` : `${userName} x [Brand] - Campaign Performance Report`}
 
 ${language === "hindi" ? "Dear [Brand Team]," : "Dear [Brand Team],"}
@@ -771,7 +771,7 @@ ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
 ${language === "hindi" ? "हमा��े successful collaboration के बा����, ���ैं एक long-term partnership propose करना चाहूंगा।" : "Following our successful collaboration, I'd like to propose a long-term partnership."}
 
 ${language === "hindi" ? "🤝 PROPOSED PARTNERSHIP:" : "🤝 PROPOSED PARTNERSHIP:"}
-${language === "hindi" ? "��� Monthly content creation" : "• Monthly content creation"}
+${language === "hindi" ? "���� Monthly content creation" : "• Monthly content creation"}
 ${language === "hindi" ? "• Product launches coverage" : "• Product launches coverage"}
 ${language === "hindi" ? "• Event participation" : "• Event participation"}
 ${language === "hindi" ? "• Brand ambassadorship" : "• Brand ambassadorship"}
@@ -787,7 +787,7 @@ ${language === "hindi" ? "• Authentic audience connection" : "• Authentic au
 ${language === "hindi" ? "• Better content planning" : "• Better content planning"}
 ${language === "hindi" ? "• Cost-effective marketing" : "• Cost-effective marketing"}
 
-${language === "hindi" ? "क्या आप इस opportunity को explore करने में interested हैं?" : "Would you be interested in exploring this opportunity?"}
+${language === "hindi" ? "क्या आप इस opportunity को explore करने ���ें interested हैं?" : "Would you be interested in exploring this opportunity?"}
 
 ${language === "hindi" ? "Best," : "Best,"}
 ${userName}
@@ -818,7 +818,7 @@ ${language === "hindi" ? `- ${quizData.niche} पर 10 कंटेंट आ�
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्स)" : "- Research hashtags (30 hashtag mix)"}
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
-${language === "hindi" ? "- इंटरैक्टिव कंटेंट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
+${language === "hindi" ? "- इंटरैक्टिव कंटे���ट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
 ${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोक��� करें" : "- Focus on community engagement"}
 ${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शु���ू क���ें" : "- Start tracking analytics"}
 
@@ -1008,7 +1008,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
               </h2>
               <p className="text-gray-600 mb-6">
                 {language === "hindi"
-                  ? "व्यक्तिगत SWOT विश्लेषण, विका��� रणनीति, और प्र��मियम टूल्��� के साथ अपनी क्रिएटर यात्���ा को तेज़ी से आगे बढ़ाएं।"
+                  ? "व्यक्तिगत SWOT विश्लेषण, ���िका��� रणनीति, और प्र��मियम टूल्��� के साथ अपनी क्रिएटर यात्���ा को तेज़ी से आगे बढ़ाएं।"
                   : "Get personalized SWOT analysis, growth strategy, and premium tools to accelerate your creator journey."}
               </p>
               <button
@@ -1350,40 +1350,65 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     </div>
 
                     <div>
-                      <div className="grid grid-cols-1 gap-4">
-                        {t.options.challenges.map((challenge) => (
-                          <button
-                            key={challenge}
-                            onClick={() =>
-                              toggleMultipleChoice(
-                                "biggestChallenge",
-                                challenge,
-                                3,
-                              )
+                      <div className="grid grid-cols-1 gap-6">
+                        {(() => {
+                          // Group challenges by category
+                          const groupedChallenges: { [key: string]: string[] } = {};
+                          t.options.challenges.forEach((challenge: string) => {
+                            const colonIndex = challenge.indexOf(':');
+                            if (colonIndex > 0) {
+                              const category = challenge.substring(0, colonIndex);
+                              const challengeText = challenge.substring(colonIndex + 1).trim();
+                              if (!groupedChallenges[category]) {
+                                groupedChallenges[category] = [];
+                              }
+                              groupedChallenges[category].push(challenge);
                             }
-                            disabled={
-                              !quizData.biggestChallenge.includes(challenge) &&
-                              quizData.biggestChallenge.length >= 3
-                            }
-                            className={`p-6 rounded-2xl border-2 text-left transition-all duration-300 hover:scale-102 ${
-                              !quizData.biggestChallenge.includes(challenge) &&
-                              quizData.biggestChallenge.length >= 3
-                                ? "opacity-50 cursor-not-allowed"
-                                : ""
-                            } ${
-                              quizData.biggestChallenge.includes(challenge)
-                                ? "bg-gradient-to-r from-red-50 to-orange-50 border-red-400 text-gray-900 shadow-xl transform scale-102"
-                                : "bg-white border-gray-200 text-gray-700 hover:border-red-300 hover:shadow-lg"
-                            }`}
-                          >
-                            <div className="flex items-start gap-4">
-                              {quizData.biggestChallenge.includes(challenge) && (
-                                <CheckCircle className="w-6 h-6 text-red-500 flex-shrink-0 mt-1" />
-                              )}
-                              <span className="text-lg font-medium leading-relaxed">{challenge}</span>
+                          });
+
+                          return Object.entries(groupedChallenges).map(([category, challenges]) => (
+                            <div key={category} className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
+                              <h3 className="text-xl font-bold text-gray-900 mb-4">{category}</h3>
+                              <div className="grid grid-cols-1 gap-3">
+                                {challenges.map((challenge) => (
+                                  <button
+                                    key={challenge}
+                                    onClick={() =>
+                                      toggleMultipleChoice(
+                                        "biggestChallenge",
+                                        challenge,
+                                        3,
+                                      )
+                                    }
+                                    disabled={
+                                      !quizData.biggestChallenge.includes(challenge) &&
+                                      quizData.biggestChallenge.length >= 3
+                                    }
+                                    className={`p-4 rounded-xl border-2 text-left transition-all duration-300 hover:scale-102 ${
+                                      !quizData.biggestChallenge.includes(challenge) &&
+                                      quizData.biggestChallenge.length >= 3
+                                        ? "opacity-50 cursor-not-allowed"
+                                        : ""
+                                    } ${
+                                      quizData.biggestChallenge.includes(challenge)
+                                        ? "bg-gradient-to-r from-red-50 to-orange-50 border-red-400 text-gray-900 shadow-xl transform scale-102"
+                                        : "bg-white border-gray-200 text-gray-700 hover:border-red-300 hover:shadow-lg"
+                                    }`}
+                                  >
+                                    <div className="flex items-start gap-3">
+                                      {quizData.biggestChallenge.includes(challenge) && (
+                                        <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-1" />
+                                      )}
+                                      <span className="text-base font-medium leading-relaxed">
+                                        {challenge.split(': ')[1] || challenge}
+                                      </span>
+                                    </div>
+                                  </button>
+                                ))}
+                              </div>
                             </div>
-                          </button>
-                        ))}
+                          ));
+                        })()}
                       </div>
                       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mt-6">
                         <p className="text-center text-blue-800 font-medium">
