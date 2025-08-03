@@ -274,7 +274,7 @@ const languages = {
       primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
-        "आप और कौन से प्लेटफॉर्म का उपयोग करते है��? (कई विकल्प चुनें)",
+        "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
       niche: "आपका कंटेंट किस विषय पर है?",
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
@@ -287,7 +287,7 @@ const languages = {
       goals:
         "What are your main goals for the next 6 months? (Select max 3)",
       socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
-      bio: "अपन��� और अपने कंटेंट के बारे में कुछ और ब��ाएं (वैकल्पिक)",
+      bio: "अपने और अपने कंटेंट के बारे ��ें कुछ और ब��ाएं (वैकल्पिक)",
     },
     options: {
       platforms: [
@@ -319,7 +319,7 @@ const languages = {
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
         "कला और डिज़ाइन",
-        "गेमि���ग और एस्पोर्ट्स",
+        "गेमिंग और एस्पोर्ट्स",
         "संगीत और नृत्य",
         "शिक्षा ���र सीखना",
         "खेल और एथलेटिक्स",
@@ -408,16 +408,17 @@ const languages = {
         }
       ],
       goals: [
-        "Reach 10K/50K/100K+ Followers",
-        "Earn ₹25K/50K/1L+ per month",
-        "Get Brand Collaborations",
-        "Build Personal Brand",
-        "Create Viral Content",
-        "Post More Consistently",
-        "Expand to New Platforms",
+        "Increase monthly income to ₹50K+",
+        "Build authentic community of 100K+",
+        "Land partnerships with dream brands",
+        "Launch my own product/course",
+        "Become go-to expert in my niche",
+        "Achieve viral content consistently",
+        "Build email list of 10K subscribers",
+        "Speak at industry events/podcasts",
         "Create passive income streams",
         "Quit my 9-5 and go full-time",
-        "Launch my own product/course",
+        "Expand into new platforms/formats",
         "Mentor other creators in my space",
       ],
     },
@@ -429,7 +430,7 @@ const languages = {
     freeResources: {
       title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संसाधन",
       subtitle:
-        "अपनी क्रिएटर यात्रा शुरू करने के लिए इन शक्तिशाली टूल्स क��� डाउनलोड करें",
+        "अपनी क्रिएटर यात्रा शुरू करने के लिए ��न शक्तिशाली टूल्स को डाउनलोड करें",
       mediaKit: {
         title: "प्रोफेशनल मीडिया किट टेम्प्लेट",
         description: "आकर्षक मीडिया किट बन���एं जो ब्रांड्स को पसंद आएंगे",
@@ -612,7 +613,7 @@ ${language === "hindi" ? "व्यक्ति���त जानकार�
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
 ${language === "hindi" ? "प्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
-${language === "hindi" ? "����ॉलोअर्स:" : "Followers:"} ${quizData.followerCount}
+${language === "hindi" ? "����ॉलो���र्स:" : "Followers:"} ${quizData.followerCount}
 
 ${language === "hindi" ? "सांख्यिकी और दर��ं:" : "STATISTICS & RATES:"}
 ${language === "hindi" ? "कंटेंट प्रकार:" : "Content Type:"} ${quizData.contentType}
@@ -631,7 +632,7 @@ ${language === "hindi" ? "Twitter पोस्ट:" : "Twitter Post:"} ₹${quiz
 ${language === "hindi" ? "Newsletter मेंश��:" : "Newsletter Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-2,500"}
 
 ${language === "hindi" ? "📦 पैकेज दरें:" : "📦 PACKAGE RATES:"}
-${language === "hindi" ? "• ब��सिक पैक���ज (1 पोस्ट + 2 स्टो���ी):" : "• Basic Package (1 Post + 2 Stories):"} ��${quizData.followerCount.includes("Less than 1K") ? "400-800" : quizData.followerCount.includes("1K - 5K") ? "800-1,500" : "1,500-4,000"}
+${language === "hindi" ? "• ब��सिक पैक���ज (1 पोस्ट + 2 स्टो���ी):" : "• Basic Package (1 Post + 2 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "400-800" : quizData.followerCount.includes("1K - 5K") ? "800-1,500" : "1,500-4,000"}
 ${language === "hindi" ? "• प्रीमियम पैकेज (2 पोस्ट + 1 र���ल + 3 स���टोरी):" : "• Premium Package (2 Posts + 1 Reel + 3 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,200-2,500" : quizData.followerCount.includes("1K - 5K") ? "2,500-4,500" : "4,500-12,000"}
 
 ${language === "hindi" ? "संपर्��:" : "CONTACT:"}
@@ -644,7 +645,7 @@ ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
         fontSizeIndicator +
         `${language === "hindi" ? "6+ ब्रांड आ���टरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
-${language === "hindi" ? "टेम्प्ल���ट 1: प्रारंभिक संपर्क (कोल्ड आउटरी���)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
+${language === "hindi" ? "टेम्प्ल���ट 1: प्रारंभिक संपर्क (कोल्ड आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
@@ -653,7 +654,7 @@ ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} 
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्पाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
-${language === "hindi" ? `- ���ेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
+${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने म��ं विशेषज्ञ हूं" : "- I specialize in creating authentic content"}
 
 ${language === "hindi" ? "स��ंख्यिकी:" : "Statistics:"}
@@ -671,7 +672,7 @@ ${userName}
 ${language === "hindi" ? "टेम्प्लेट 2: फॉलो-���प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
 
-${language === "hindi" ? "हैल��� [संपर्क नाम]," : "Hi [Contact Name],"}
+${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
 
 ${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration के बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
@@ -718,7 +719,7 @@ ${language === "hindi" ? "आपके proposal के लिए thank you! म�
 
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते हैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
-${language === "hindi" ? "• मेरी audience क�� [specific demographic] match कर���ा है आपके target से" : "• My audience demographic matches your target perfectly"}
+${language === "hindi" ? "• मेरी audience क�� [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "• मैं additional value add कर सकता हूं like [extra service]" : "• I can add additional value like [extra service]"}
 
@@ -734,7 +735,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Dear [Brand Team]," : "Dear [Brand Team],"}
 
-${language === "hindi" ? "हमारे recent collaboration के results share करना च���हता हूं:" : "I wanted to share the results from our recent collaboration:"}
+${language === "hindi" ? "हमारे recent collaboration के results share करना चाहता हूं:" : "I wanted to share the results from our recent collaboration:"}
 
 ${language === "hindi" ? "📊 PERFORMANCE METRICS:" : "📊 PERFORMANCE METRICS:"}
 ${language === "hindi" ? "• Post Reach: [number] impressions" : "• Post Reach: [number] impressions"}
@@ -753,7 +754,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्���ेट 6: लॉन्ग-टर्म पार्टनरशिप प्रपोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
+${language === "hindi" ? "टेम्प्लेट 6: लॉन्ग-टर्म पार्टनरशिप प्रपोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `Long-term Partnership Proposal - ${userName} x [Brand]` : `Long-term Partnership Proposal - ${userName} x [Brand]`}
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
@@ -810,7 +811,7 @@ ${language === "hindi" ? "- हैशटैग रिसर्च करें (
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटेंट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
 ${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोक��� करें" : "- Focus on community engagement"}
-${language === "hindi" ? "- ���नालिटिक्स ट्रैक करना शु���ू करें" : "- Start tracking analytics"}
+${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शु���ू करें" : "- Start tracking analytics"}
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
 ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करें (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफिक कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
@@ -819,7 +820,7 @@ ${language === "hindi" ? "- अन्य क्रिएटर्स के स�
 
 ${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
 ${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
-${language === "hindi" ? "- ब्रां�����्स से ���ंपर्क शुरू करें" : "- Start reaching out to brands"}
+${language === "hindi" ? "- ब्रां���्स से ���ंपर्क शुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
 
 ${language === "hindi" ? "अपेक्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
