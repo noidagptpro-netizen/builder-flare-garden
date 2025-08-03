@@ -126,7 +126,7 @@ const languages = {
   },
   hindi: {
     title: "आपका क्रिएटर विश्लेष���",
-    subtitle: "आपकी क्रिएटर यात्रा के लिए संपूर्ण व्यक्तिगत अंतर्दृष्टि",
+    subtitle: "आपकी क्रिए���र यात्रा के लिए संपूर्ण व्यक्तिगत अंतर्दृष्टि",
     profileSynopsis: "प्रोफ���इल स���नॉप्सिस",
     creatorProfile: "क्रिएटर प���रोफा��ल",
     currentStatus: "वर्तमान स्थिति",
@@ -142,7 +142,7 @@ const languages = {
     incomeProjection: "आय क्षमता",
     unlock: "अपना संपूर्ण क्रिएटर टूलकिट अनलॉक करे���",
     unlockSubtitle:
-      "अपनी व्यक्���िगत फेम स��कोर रिपोर्ट, प्��ोफ���शनल मीडिया किट टेम्प्लेट, और ग्रोथ स्ट्रैटेज�� + हमारे संपूर्ण प्रीमियम क्रिएटर टूल्स तक पहुंच प्राप्त करें।",
+      "अपनी व्यक्���िगत फेम स��कोर रिपोर्ट, प्��ोफ���शनल मीडिया किट टेम्प्लेट, और ग्रोथ स्ट्रैटेज�� + हमार��� संपूर्ण प्रीमियम क्रिएटर टूल्स तक पहुंच प्राप्त करें।",
     paymentForm: "अप���ी जानकारी पूरी करें",
     fullName: "पूरा नाम",
     emailAddress: "ईमेल पता",
@@ -160,7 +160,7 @@ const languages = {
     instantDownload: "तुरंत ड���उनलोड",
     moneyBack: "पैसे वापसी की गार��टी",
     backToQuiz: "क्विज़ पर वापस जाएं",
-    basedOnEngagement: "एंगेजमेंट क्षमता के ��धार पर",
+    basedOnEngagement: "एंगेजम���ंट क्षमता के ��धार पर",
     nextSixMonths: "अगले 6 महीने का प्रक्षेपण",
     monthlyTarget: "मासि����� प्राप���त करन�� योग्य लक्ष्य",
     primaryPlatform: "प्र��थमिक प��लेटफॉर्म:",
@@ -335,7 +335,7 @@ export default function Results() {
 ║  • Browser: Ctrl/Cmd + (press 3-5 times)               ║
 ║                                                          ║
 ║  💡 This content is optimized for LARGE font display!    ║
-╚══════════════════════════════════════════════════════════╝
+╚════════════════════════════════════��═════════════════════╝
 
 `;
 
@@ -361,7 +361,7 @@ ${language === "hindi" ? "💰 आय प्रक��षेपण:" : "💰 I
 
 
 🎯 ${language === "hindi" ? "प्रोफाइल सारांश:" : "PROFILE SUMMARY:"}
-────────────────────────────────────────────────
+────��───────────────────────────────────────────
 
 ${language === "hindi" ? "📱 प्लेटफॉर्म:" : "📱 Platform:"} ${quizData.primaryPlatform}
 
@@ -443,7 +443,7 @@ ${language === "hindi" ? "📹 कंटेंट प्रका��:" : "�
 
 
 📈 ${language === "hindi" ? "प्रदर्शन मेट्रिक्स:" : "PERFORMANCE METRICS:"}
-────────────────────────────────────────────────
+─────────────────────────────────────────────���──
 
 ${language === "hindi" ? "⭐ फ���म स्क���र:" : "⭐ Fame Score:"} ${analysis.fameScore}/100
 
@@ -652,7 +652,7 @@ ${language === "hindi" ? "⏱️ लास्ट अपडेटेड:" : "⏱�
 ${language === "hindi" ? "🚀 आपका व्यक्तिगत ग्रोथ डैशबोर्ड" : "🚀 YOUR PERSONALIZED GROWTH DASHBOARD"}
 ═══════════════════════════════════════════════════
 
-${language === "hindi" ? "📊 करंट स्टेट्स (" : "📊 CURRENT STATUS ("}${new Date().toLocaleDateString()}):
+${language === "hindi" ? "📊 करंट स्ट��ट्स (" : "📊 CURRENT STATUS ("}${new Date().toLocaleDateString()}):
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche} (${targetEngagementRate}% target engagement)
 ${language === "hindi" ? "प्��ेटफॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
@@ -685,7 +685,7 @@ ${language === "hindi" ? "💰 मोनेटाइज़ेशन ट्रै
 │ ${language === "hindi" ? "महीना:" : "Month:"} ___________                     │
 │ ${language === "hindi" ? "ब्रांड इंक्वायरी" : "Brand Inquiries"}: _____ (टारगेट: ${Math.round(currentFollowers / 5000)})   │
 �� ${language === "hindi" ? "पिच भेजे गए" : "Pitches Sent"}: _____ (टारगेट: 20-30)    │
-│ ${language === "hindi" ? "रिप्लाई मिले" : "Replies Received"}: _____ (टारगेट: 30%)     │
+│ ${language === "hindi" ? "��िप्लाई मिले" : "Replies Received"}: _____ (टारगेट: 30%)     │
 │ ${language === "hindi" ? "डील्स क्लोज्ड" : "Deals Closed"}: _____ (टारगेट: 15%)      │
 │ ${language === "hindi" ? "कुल कमाई" : "Total Earnings"}: ₹_____ (टारगेट: ₹${Math.round(currentFollowers * 0.5).toLocaleString()})│
 │ ${language === "hindi" ? "औ��त डील वैल्यू" : "Avg Deal Value"}: ₹_____ (टारगेट: ₹${Math.round(currentFollowers * 0.08).toLocaleString()}) ��
@@ -705,7 +705,7 @@ ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस
 │ ${language === "hindi" ? "1घंटे में रीच" : "1hr Reach"}: _____ (टारगेट: 15-25%)  │
 │ ${language === "hindi" ? "24घंटे में रीच" : "24hr Reach"}: _____ (टारगेट: 70-85%) │
 │ ${language === "hindi" ? "स्टोरी व्यूज" : "Story Views"}: _____ (टारगेट: 40-60%) │
-└─────────────────────────────────────────────┘
+└──────────────────────────────────────���──────┘
 
 ${language === "hindi" ? "🔥 प्रो-लेवल एनालिटिक्स टिप्स:" : "🔥 PRO-LEVEL ANALYTICS TIPS:"}
 1. ${language === "hindi" ? "रीच 50% से कम = Algorithm penalty. तुरंत बेहतर कंटेंट पोस��ट करें" : "Reach below 50% = Algorithm penalty. Post better content immediately"}
@@ -715,7 +715,7 @@ ${language === "hindi" ? "🔥 प्रो-लेवल एनालिटि�
 
 ${language === "hindi" ? "📈 मासिक ROI ट्रैकर:" : "📈 MONTHLY ROI TRACKER:"}
 ┌───────────���─────────────────────────────────┐
-│ ${language === "hindi" ? "कुल इन्वेस्टमेंट" : "Total Investment"}:              │
+│ ${language === "hindi" ? "क���ल इन्वेस्टमेंट" : "Total Investment"}:              │
 │ - Content tools: ₹_____ (Canva, etc.)    │
 │ - Equipment: ₹_____ (Phone, lights)      │
 │ - Ads/Promotion: ₹_____ (FB/Insta ads)   │
@@ -732,7 +732,7 @@ ${language === "hindi" ? "📈 मासिक ROI ट्रैकर:" : "📈 
 └──────────────────────────────────────��──────┘
 
 ${language === "hindi" ? "⚡ एक्शन आइटम्स (हर हफ्ते करें):" : "⚡ ACTION ITEMS (Do Every Week):"}
-□ ${language === "hindi" ? "टॉप 3 परफॉर्मिंग पोस्ट्स को analyze करें और pattern ढूंढें" : "Analyze top 3 performing posts and find patterns"}
+□ ${language === "hindi" ? "टॉप 3 परफॉर्मिंग पोस्ट्स को analyze करें और pattern ढूंढ���ं" : "Analyze top 3 performing posts and find patterns"}
 □ ${language === "hindi" ? "Competitor के टॉप प���स्ट्स स्टडी करें (कम से कम 5)" : "Study competitor top posts (minimum 5)"}
 □ ${language === "hindi" ? "हैशटैग परफॉर्मेंस चेक करें और underperforming को replace करें" : "Check hashtag performance and replace underperforming ones"}
 □ ${language === "hindi" ? "Audience insights द���खें - कब ऑनलाइन हैं, demographics" : "Review audience insights - when online, demographics"}
@@ -832,7 +832,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                 </h3>
                 <p className="text-gray-600 mb-6">
                   {language === "hindi"
-                    ? "आपका व्यक्तिगत फेम स्कोर और विस्तृत विश्लेषण"
+                    ? "आपका व्यक्तिगत फेम स्कोर ��र विस्तृत विश्लेषण"
                     : "Your personalized fame score and detailed analysis"}
                 </p>
                 <button
@@ -1365,26 +1365,155 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                   <Target className="w-5 h-5" />
                   {language === "hindi" ? "तुरंत सुधार के क्षेत्र" : "Immediate Improvement Areas"}
                 </h3>
-                <div className="space-y-3">
+                <div className="space-y-4">
                   {quizData.biggestChallenge.slice(0, 3).map((challenge, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-orange-500 rounded-full mt-2"></div>
-                      <p className="text-gray-700">
-                        {challenge.includes("Low views") && (language === "hindi"
-                          ? "Views बढ़ाने के लिए trending hashtags और peak time posting जरूरी है।"
-                          : "To boost views, focus on trending hashtags and optimal posting times.")}
-                        {challenge.includes("Algorithm") && (language === "hindi"
-                          ? "Algorithm के साथ बेहतर relationship के लि��� engagement rate 5%+ रखें।"
-                          : "Maintain 5%+ engagement rate for better algorithm relationship.")}
-                        {challenge.includes("voice") && (language === "hindi"
-                          ? "Unique voice develop करने के लिए अपनी personal story share करें।"
-                          : "Develop your unique voice by sharing your personal story and perspective.")}
-                        {!challenge.includes("Low views") && !challenge.includes("Algorithm") && !challenge.includes("voice") && (
-                          language === "hindi"
-                            ? "इस challenge को targeted strategy से आसानी से solve कर स���ते हैं।"
-                            : "This challenge can be easily solved with a targeted strategy."
-                        )}
-                      </p>
+                    <div key={index} className="bg-white rounded-lg p-4 border border-orange-200">
+                      <div className="flex items-start gap-3">
+                        <div className="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center text-white text-xs font-bold mt-1">
+                          {index + 1}
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-gray-900 mb-2">
+                            {challenge.split(': ')[1] || challenge}
+                          </h4>
+                          <div className="text-sm text-gray-700 space-y-1">
+                            {challenge.includes("Low views") && (
+                              <>
+                                <p className="font-medium text-orange-600">
+                                  {language === "hindi" ? "🎯 तुरंत करें:" : "🎯 Quick Actions:"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• 7-9 PM IST में post करें (35% ज्यादा reach)"
+                                    : "• Post during 7-9 PM IST (35% higher reach)"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Trending audio का use करें first 24 hours में"
+                                    : "• Use trending audio within first 24 hours"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Comments में questions पूछें engagement के लिए"
+                                    : "• Ask questions in captions to boost engagement"}
+                                </p>
+                              </>
+                            )}
+                            {challenge.includes("Algorithm") && (
+                              <>
+                                <p className="font-medium text-orange-600">
+                                  {language === "hindi" ? "🎯 Algorithm को खुश करें:" : "🎯 Algorithm Optimization:"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• पहले 30 minutes में actively respond करें"
+                                    : "• Respond actively in first 30 minutes after posting"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Stories में polls और questions daily use करें"
+                                    : "• Use Stories polls and questions daily"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Cross-platform पर भी same time post करें"
+                                    : "• Cross-post at same time on multiple platforms"}
+                                </p>
+                              </>
+                            )}
+                            {challenge.includes("voice") && (
+                              <>
+                                <p className="font-medium text-orange-600">
+                                  {language === "hindi" ? "🎯 Unique Voice बनाएं:" : "🎯 Build Unique Voice:"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• अपनी personal failures और lessons share करें"
+                                    : "• Share your personal failures and lessons learned"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Behind-the-scenes content regular post करें"
+                                    : "• Post behind-the-scenes content regularly"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• अपने opinions को boldly express करें"
+                                    : "• Express your opinions boldly and authentically"}
+                                </p>
+                              </>
+                            )}
+                            {challenge.includes("convert") && (
+                              <>
+                                <p className="font-medium text-orange-600">
+                                  {language === "hindi" ? "🎯 Conversion बढ़ाएं:" : "🎯 Boost Conversions:"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Clear CTA हर post में add करें"
+                                    : "• Add clear call-to-action in every post"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Free lead magnet create करें (checklist/template)"
+                                    : "• Create free lead magnet (checklist/template)"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Social proof और testimonials regularly share करें"
+                                    : "• Share social proof and testimonials regularly"}
+                                </p>
+                              </>
+                            )}
+                            {challenge.includes("collaborations") && (
+                              <>
+                                <p className="font-medium text-orange-600">
+                                  {language === "hindi" ? "🎯 Brand Deals पाएं:" : "🎯 Land Brand Deals:"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Professional media kit बनाएं और brands को email करें"
+                                    : "• Create professional media kit and email brands"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Brands को organically mention करें partnership से पहले"
+                                    : "• Organically mention brands before pitching partnership"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Weekly 10-15 brands को personalized emails भेजें"
+                                    : "• Send personalized emails to 10-15 brands weekly"}
+                                </p>
+                              </>
+                            )}
+                            {!challenge.includes("Low views") && !challenge.includes("Algorithm") &&
+                             !challenge.includes("voice") && !challenge.includes("convert") &&
+                             !challenge.includes("collaborations") && (
+                              <>
+                                <p className="font-medium text-orange-600">
+                                  {language === "hindi" ? "🎯 समाधान:" : "🎯 Solution:"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Specific action plan बनाएं इस challenge के लिए"
+                                    : "• Create specific action plan for this challenge"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Daily 30 minutes focus करें इस area पर"
+                                    : "• Focus 30 minutes daily on this specific area"}
+                                </p>
+                                <p>
+                                  {language === "hindi"
+                                    ? "• Weekly progress track करें और adjust करें"
+                                    : "• Track weekly progress and adjust strategy"}
+                                </p>
+                              </>
+                            )}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   ))}
                 </div>
