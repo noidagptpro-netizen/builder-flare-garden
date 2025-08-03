@@ -287,7 +287,7 @@ const languages = {
       goals:
         "What are your main goals for the next 6 months? (Select max 3)",
       socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
-      bio: "अपने और अपने कंटेंट के बारे ��ें कुछ और ब��ाएं (वैकल्पिक)",
+      bio: "अपने और अपने कंटेंट के बारे ����ें कुछ और ब��ाएं (वैकल्पिक)",
     },
     options: {
       platforms: [
@@ -320,7 +320,7 @@ const languages = {
         "जीवनशैली और कल्याण",
         "कला और डिज़ाइन",
         "गेमिंग और एस्पोर्ट्स",
-        "संगीत और नृत्य",
+        "��ंगीत और नृत्य",
         "शिक्षा ���र सीखना",
         "खेल और एथलेटिक्स",
         "प्रेरणा और स्व-सहायता",
@@ -353,7 +353,7 @@ const languages = {
         "सप्���ाह में 3-4 बार",
         "साप्ताहिक",
         "महीने में 2-3 बार",
-        "मासिक",
+        "��ासिक",
         "अनियमित",
       ],
       experiences: [
@@ -372,40 +372,20 @@ const languages = {
         "₹50K-1L",
         "₹1L+",
       ],
-      challengeCategories: [
-        {
-          title: "📈 Growth & Engagement",
-          challenges: [
-            "Low views & inconsistent engagement",
-            "Staying relevant with fast-moving trends",
-            "Algorithm changes killing reach",
-            "Competing with bigger creators"
-          ]
-        },
-        {
-          title: "🎯 Brand & Identity",
-          challenges: [
-            "Struggling to find my unique voice/style",
-            "Balancing authenticity with brand appeal",
-            "Building a real, connected community"
-          ]
-        },
-        {
-          title: "💰 Monetization & Scaling",
-          challenges: [
-            "Can't convert followers into paying customers",
-            "Not landing brand collaborations",
-            "Confused by analytics & metrics"
-          ]
-        },
-        {
-          title: "🧘 Creator Wellness",
-          challenges: [
-            "Burnout & content fatigue",
-            "Handling trolls/negativity",
-            "Managing too many platforms at once"
-          ]
-        }
+      challenges: [
+        "🔄 Growth & Engagement: Low views & inconsistent engagement",
+        "🧠 Growth & Engagement: Staying relevant with fast-moving trends",
+        "🔁 Growth & Engagement: Algorithm changes killing reach",
+        "🧍‍♀️ Growth & Engagement: Competing with bigger creators",
+        "🗣️ Brand & Identity: Struggling to find my unique voice/style",
+        "🤝 Brand & Identity: Balancing authenticity with brand appeal",
+        "🌱 Brand & Identity: Building a real, connected community",
+        "💔 Monetization & Scaling: Can't convert followers into paying customers",
+        "🤝 Monetization & Scaling: Not landing brand collaborations",
+        "📊 Monetization & Scaling: Confused by analytics & metrics",
+        "🥵 Creator Wellness: Burnout & content fatigue",
+        "💬 Creator Wellness: Handling trolls/negativity",
+        "📱 Creator Wellness: Managing too many platforms at once",
       ],
       goals: [
         "Increase monthly income to ₹50K+",
@@ -432,7 +412,7 @@ const languages = {
       subtitle:
         "अपनी क्रिएटर यात्रा शुरू करने के लिए ��न शक्तिशाली टूल्स को डाउनलोड करें",
       mediaKit: {
-        title: "प्रोफेशनल मीडिया किट टेम्प्लेट",
+        title: "प्र���फेशनल मीडिया किट टेम्प्लेट",
         description: "आकर्षक मीडिया किट बन���एं जो ब्रांड्स को पसंद आएंगे",
       },
       emailTemplates: {
@@ -703,7 +683,7 @@ ${language === "hindi" ? "• Behind-the-scenes content" : "• Behind-the-scene
 
 ${language === "hindi" ? "🎥 रील्स कंटेंट: ₹[आपकी rate]" : "���� Reels Content: ₹[Your rate]"}
 ${language === "hindi" ? "• High-quality reel creation" : "• High-quality reel creation"}
-${language === "hindi" ? "• Trending music/sounds" : "• Trending music/sounds"}
+${language === "hindi" ? "�� Trending music/sounds" : "• Trending music/sounds"}
 
 ${language === "hindi" ? "Best," : "Best,"}
 ${userName}
@@ -754,7 +734,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 6: लॉन्ग-टर्म पार्टनरशिप प्रपोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
+${language === "hindi" ? "टेम्प्लेट 6: लॉन्ग-टर्म पार्टनरशिप प्र���ोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `Long-term Partnership Proposal - ${userName} x [Brand]` : `Long-term Partnership Proposal - ${userName} x [Brand]`}
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
@@ -811,7 +791,7 @@ ${language === "hindi" ? "- हैशटैग रिसर्च करें (
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटेंट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
 ${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोक��� करें" : "- Focus on community engagement"}
-${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शु���ू करें" : "- Start tracking analytics"}
+${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शु���ू क���ें" : "- Start tracking analytics"}
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
 ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करें (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफिक कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
