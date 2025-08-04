@@ -161,7 +161,7 @@ const languages = {
     moneyBack: "प���से वापसी की गार��टी",
     backToQuiz: "क्विज़ पर वापस जाएं",
     basedOnEngagement: "एंगेजम���ंट क्षमता के ��धार पर",
-    nextSixMonths: "अगले 6 महीने का प्रक्षेपण",
+    nextSixMonths: "अगले 6 महीने का ��्रक्षेपण",
     monthlyTarget: "मासि����� प्राप���त करन�� योग्य लक्ष्���",
     primaryPlatform: "प्र��थमिक प��लेटफॉर्म:",
     contentNiche: "कंटेंट निच:",
@@ -620,7 +620,7 @@ ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
 ${language === "hindi" ? "प्लेटफॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
 ${language === "hindi" ? "पोस्टिंग फ्रीक्वेंसी:" : "Posting Frequency:"} ${quizData.postingFrequency}
 
-${language === "hindi" ? "🎯 मार्केट इंटेलिजेंस:" : "🎯 MARKET INTELLIGENCE:"}
+${language === "hindi" ? "🎯 मार्केट ��ंटेलिजेंस:" : "🎯 MARKET INTELLIGENCE:"}
 ${language === "hindi" ? "निच मल्टीप्लायर:" : "Niche Multiplier:"} ${niche.multiplier}x (${language === "hindi" ? "उद्योग औसत से " : "vs industry average"})
 ${language === "hindi" ? "औसत CPM:" : "Average CPM:"} ₹${niche.avgCPM}/1K views
 ${language === "hindi" ? "सक्रिय ब्रांड्स:" : "Active Brands:"} ${niche.brandCount.toLocaleString()} in your niche
@@ -719,7 +719,7 @@ ${language === "hindi" ? "🎯 ड��ली ट्रैकिंग (भर�
 │ ${language === "hindi" ? "����ोस्ट रीच" : "Post Reach"}: _______ (टा��गेट: ${estimatedReach.toLocaleString()})     │
 │ ${language === "hindi" ? "इंप्रेशन" : "Impressions"}: _______ (री��� × 2.5)        │
 │ ${language === "hindi" ? "लाइक्स" : "Likes"}: _______ (टारगेट: ${Math.round((estimatedReach * targetEngagementRate) / 100)})        │
-│ ${language === "hindi" ? "कमेंट्स" : "Comments"}: _______ (ल���इक्स क�� 8-12%)     │
+│ ${language === "hindi" ? "कमेंट्स" : "Comments"}: _______ (ल���इक्स क�� 8-12%)     ���
 │ ${language === "hindi" ? "शेयर्स" : "Shares"}: _______ (लाइक्स का 3-5%)       │
 │ ${language === "hindi" ? "सेव्स" : "Saves"}: _______ (सबसे इंप��र्टेंट!)       │
 │ ${language === "hindi" ? "नए फॉलोअर्स" : "New Followers"}: _______ (टारगेट: ${Math.round(targetGrowthRate)})  │
@@ -740,7 +740,7 @@ ${language === "hindi" ? "💰 मोने���ाइज़ेशन ट्
 │ ${language === "hindi" ? "डील���स क्लोज्ड" : "Deals Closed"}: _____ (टारगेट: 15%)      │
 │ ${language === "hindi" ? "कुल कमाई" : "Total Earnings"}: ���_____ (टारगेट: ₹${Math.round(currentFollowers * 0.5).toLocaleString()})│
 │ ${language === "hindi" ? "औ��त डील वैल्यू" : "Avg Deal Value"}: ₹_____ (टारगेट: ₹${Math.round(currentFollowers * 0.08).toLocaleString()}) ��
-└─����───────────────────────────────────────────┘
+���─����───────────────────────────────────────────┘
 
 ${language === "hindi" ? "📊 साप्ताहिक ग्रोथ मेट्रिक्स:" : "📊 WEEKLY GROWTH METRICS:"}
 • ${language === "hindi" ? "सप्ताह" : "Week"} 1: टार��ेट ${Math.round(targetGrowthRate / 4)} new followers/day
@@ -751,7 +751,7 @@ ${language === "hindi" ? "📊 साप्ताहिक ग्रोथ म�
 ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस स्कोरकार्ड:" : "🎯 CONTENT PERFORMANCE SCORECARD:"}
 ┌───────────────���────────────────────────────��┐
 �� ${language === "hindi" ? "कं���ेंट ���ाइप" : "Content Type"}: ________________    │
-│ ${language === "hindi" ? "पोस्ट टाइम" : "Post Time"}: ___:___ (बेस्ट: 7-9 PM)   │
+�� ${language === "hindi" ? "पोस्ट टाइम" : "Post Time"}: ___:___ (बेस्ट: 7-9 PM)   │
 │ ${language === "hindi" ? "हैशटैग्स यूज्ड" : "Hashtags Used"}: _____ (बेस्ट: 8-12)  │
 │ ${language === "hindi" ? "1घंटे में रीच" : "1hr Reach"}: _____ (टारगेट: 15-25%)  │
 │ ${language === "hindi" ? "24घंटे में रीच" : "24hr Reach"}: _____ (टारगेट: 70-85%) │
@@ -760,7 +760,7 @@ ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस
 
 ${language === "hindi" ? "🔥 प्रो-लेवल एनालिटिक्स टिप्स:" : "🔥 PRO-LEVEL ANALYTICS TIPS:"}
 1. ${language === "hindi" ? "रीच 50% से कम = Algorithm penalty. तुरंत बेह���र कंटेंट पोस��ट कर��ं" : "Reach below 50% = Algorithm penalty. Post better content immediately"}
-2. ${language === "hindi" ? "स��व रेट 2% से ज्यादा = वायरल potential. इसी ��रह का कंटेंट बनाएं" : "Save rate above 2% = Viral potential. Create similar content"}
+2. ${language === "hindi" ? "स��व रेट 2% से ज्यादा = वायरल potential. इसी ��रह क��� कंटेंट बनाएं" : "Save rate above 2% = Viral potential. Create similar content"}
 3. ${language === "hindi" ? "कमेंट्स में रिप्लाई जरूर करें - Engagement बढ़ेगा 40%" : "Always reply to comments - Boosts engagement by 40%"}
 4. ${language === "hindi" ? "पहले 30 मिनट में ज्यादा likes = Algorithm boost" : "High likes in first 30 minutes = Algorithm boost"}
 
@@ -841,16 +841,10 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                   <Home className="w-4 h-4" />
                   Back to Home
                 </Link>
-                <select
-                  value={language}
-                  onChange={(e) =>
-                    setLanguage(e.target.value as "english" | "hindi")
-                  }
-                  className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
-                >
-                  <option value="english">English</option>
-                  <option value="hindi">हिंदी</option>
-                </select>
+                {/* Hindi language disabled - English only */}
+                <div className="text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
+                  English
+                </div>
               </div>
             </div>
           </div>
@@ -896,7 +890,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                   className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all"
                 >
                   <Download className="w-4 h-4 inline mr-2" />
-                  {language === "hindi" ? "डाउनलोड करें" : "Download"}
+                  {language === "hindi" ? "ड��उनलोड करें" : "Download"}
                 </button>
               </div>
 
@@ -997,7 +991,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "💰 मोनेटाइज़ेशन प्रो टूल्स - अभी कमाना शुरू ���र���ं!"
+                  ? "💰 मोन��टाइज़ेशन प्रो टूल्स - अभी कमाना शुरू ���र���ं!"
                   : "💰 Monetization Pro Tools - Start Earning Now!"}
               </h2>
               <p className="text-gray-600 mb-6">
@@ -1297,7 +1291,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
               </div>
               <div className="text-lg text-gray-700 font-medium">
                 {language === "hindi"
-                  ? "आप अब एक प्रो क्रिएटर बनने के लिए तैयार हैं!"
+                  ? "आप अब एक प्रो क्रि���टर बनने के लिए तैयार हैं!"
                   : "You're now ready to become a Pro Creator!"}
               </div>
             </div>
@@ -1494,7 +1488,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                     <div className="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
                     <p className="text-gray-700">
                       {language === "hindi"
-                        ? `आपकी ${quizData.postingFrequency} पोस्टिं�� frequency algorithm �����े लिए बिल्कुल सही है। Consistency ही success की key है।`
+                        ? `आपकी ${quizData.postingFrequency} पोस्टिं�� frequency algorithm �����े लिए बिल्कुल सही है। Consistency ही success की key ह���।`
                         : `Your ${quizData.postingFrequency.toLowerCase()} posting frequency is optimal for algorithm growth. Consistency is the key to success.`}
                     </p>
                   </div>
@@ -1666,7 +1660,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                                     </p>
                                     <p>
                                       {language === "hindi"
-                                        ? "��� Specific action plan ब��ाएं इस challenge के लिए"
+                                        ? "����� Specific action plan ब��ाएं इस challenge के लिए"
                                         : "• Create specific action plan for this challenge"}
                                     </p>
                                     <p>
