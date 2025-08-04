@@ -115,7 +115,7 @@ const languages = {
       monthlyIncome: "What's your current monthly income from content?",
       biggestChallenge:
         "What are your biggest challenges as a creator? (Select max 3)",
-      goals: "आपके अगले 6 महीन��� के मुख्य लक्ष्य क्या हैं? (अधिकतम 3 ��ुनें)",
+      goals: "आपके अगले 6 महीन��� के मुख्य लक्ष्य क्या है���? (अधिकतम 3 चुनें)",
       socialLinks: "Share Your Social Presence (Optional)",
       bio: "Anything more about yourself and your content (optional)",
       engagementRate: "What's your average engagement rate?",
@@ -201,7 +201,7 @@ const languages = {
         "🧍‍♀️ Growth & Engagement: Competing with bigger creators",
         "🗣️ Brand & Identity: Struggling to find my unique voice/style",
         "🤝 Brand & Identity: Balancing authenticity with brand appeal",
-        "🌱 Brand & Identity: Building a real, connected community",
+        "��� Brand & Identity: Building a real, connected community",
         "💔 Monetization & Scaling: Can't convert followers into paying customers",
         "🤝 Monetization & Scaling: Not landing brand collaborations",
         "📊 Monetization & Scaling: Confused by analytics & metrics",
@@ -267,7 +267,7 @@ const languages = {
       9: "एंगेजमेंट रेट",
     },
     questions: {
-      primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
+      primaryPlatform: "आप मुख्यत��� किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयो�� करते हैं? (कई विकल्प चुनें)",
@@ -360,7 +360,7 @@ const languages = {
         "विशेषज्ञ (3+ साल)",
       ],
       incomes: [
-        "₹0 (अभी तक कोई आय नह��ं)",
+        "₹0 (अभी त��� कोई आय नहीं)",
         "₹1K–5K",
         "₹5K–15K",
         "₹15K–30K",
@@ -385,7 +385,7 @@ const languages = {
       ],
       goals: [
         "मासिक आय ���50K+ तक बढ़ाना",
-        "100K+ का authentic समुदाय बनाना",
+        "100K+ का authentic सम���दाय बनाना",
         "सपनों के ब्रांड्स के साथ पार्टनरशिप",
         "अपना प्रोडक्ट/कोर्स लॉन्च करना",
         "अपने निच में गो-टू ���क्सपर्ट बनना",
@@ -430,7 +430,7 @@ const languages = {
     freeResources: {
       title: "🎉 क्विज़ पूरा! यहाँ हैं ���पके मुफ्त क्रिएटर संसा��न",
       subtitle:
-        "अपनी क्रिएटर यात्रा शुरू कर���े के लिए ��न शक्तिशाली टूल्�� को डाउनलोड करें",
+        "अपनी क्रिएटर यात��रा शुरू करने के लिए ��न शक्तिशाली टूल्�� को डाउनलोड करें",
       mediaKit: {
         title: "प्र�����फेशनल मीडिया किट टेम्प्लेट",
         description: "आकर्षक मीडिया किट बन���एं जो ब्रांड्स को पसंद आएंगे",
@@ -620,7 +620,7 @@ Optimal zoom: 150-200% for comfortable reading.
         fontSizeIndicator +
         `${language === "hindi" ? "मीडिय��� किट" : "MEDIA KIT"} - ${userName}
 
-${language === "hindi" ? "व्यक्ति���त जा��कारी:" : "PERSONAL INFO:"}
+${language === "hindi" ? "व्यक��ति���त जानकारी:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
 ${language === "hindi" ? "���्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
@@ -663,7 +663,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] �
 
 ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
-${language === "hindi" ? "म���झे आपके ���्रांड के साथ काम करने में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
+${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने म��ं विश��षज्ञ हूं" : "- I specialize in creating authentic content"}
@@ -689,7 +689,7 @@ ${language === "hindi" ? "मैंने पिछले सप्ताह आ
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
-${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule क��� सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
+${language === "hindi" ? "क्या ह�� इस week एक quick 15-minute call schedule क��� सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
 
 ${language === "hindi" ? "Looking forward," : "Looking forward,"}
 ${userName}
@@ -726,7 +726,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
+${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested �����ं।" : "Thank you for your proposal! I'm definitely interested."}
 
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate क��� slightly adjust कर सकते ��ैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
@@ -787,7 +787,7 @@ ${language === "hindi" ? "📈 BENEFITS FOR YOUR BRAND:" : "📈 BENEFITS FOR YO
 ${language === "hindi" ? "• Consistent brand presence" : "• Consistent brand presence"}
 ${language === "hindi" ? "• Authentic audience connection" : "• Authentic audience connection"}
 ${language === "hindi" ? "• Better content planning" : "• Better content planning"}
-${language === "hindi" ? "• Cost-effective marketing" : "• Cost-effective marketing"}
+${language === "hindi" ? "• Cost-effective marketing" : "�� Cost-effective marketing"}
 
 ${language === "hindi" ? "क्या आप इस opportunity को explore करने ���ें interested ह���ं?" : "Would you be interested in exploring this opportunity?"}
 
@@ -1005,7 +1005,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
               <h2 className="text-lg font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "अपना ���ूरा विश्लेषण चाहते हैं?"
+                  ? "अपना ���ूरा विश्लेषण च��हते हैं?"
                   : "Want Your Complete Analysis?"}
               </h2>
               <p className="text-gray-600 mb-6">
@@ -1476,7 +1476,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       </h2>
                       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         {language === "hindi"
-                          ? "आप अगले 6 महीनों में ��्या हासि��� करना चाहते हैं? 3 लक्ष्य चुनें जो आपको सबसे ज���यादा उत्साहित करते हैं!"
+                          ? "आप अगले 6 महीनों में क्या हासि����� करना चाहते हैं? 3 लक्ष्य चुनें जो आपको सबसे ज���यादा उत्साहित करते हैं!"
                           : "What are your main goals for the next 6 months? Select up to 3 most important goals – this helps us personalize your recommendations"}
                       </p>
                     </div>
@@ -1522,8 +1522,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 8: Social Links */}
-                {currentStep === 8 && (
+                {/* Step 11: Social Links */}
+                {currentStep === 11 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-lg font-bold text-gray-900 mb-4">
