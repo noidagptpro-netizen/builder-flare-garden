@@ -115,7 +115,7 @@ const languages = {
       monthlyIncome: "What's your current monthly income from content?",
       biggestChallenge:
         "What are your biggest challenges as a creator? (Select max 3)",
-      goals: "आपके अ��ले 6 महीन��� के मुख्य लक्ष्य क्��ा हैं? (अधिकतम 3 चुनें)",
+      goals: "आपके अगले 6 महीन��� के मुख्य लक्ष्य क्��ा हैं? (अधिकतम 3 चुनें)",
       socialLinks: "Share Your Social Presence (Optional)",
       bio: "Anything more about yourself and your content (optional)",
       engagementRate: "What's your average engagement rate?",
@@ -264,7 +264,7 @@ const languages = {
       6: "सबसे बड़ी चुनौती",
       7: "���क्ष्य",
       8: "सोशल लिंक्स",
-      9: "एंगेजमे���ट रेट",
+      9: "एंगेजमेंट रेट",
     },
     questions: {
       primaryPlatform: "आप मु���्य��ः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
@@ -384,10 +384,10 @@ const languages = {
         "📱 Creator Wellness: Managing too many platforms at once",
       ],
       goals: [
-        "मासिक आय ���50K+ तक बढ़ाना",
+        "मासिक आय ����50K+ तक बढ़ाना",
         "100K+ का authentic ��मुदाय बनाना",
-        "सपनों के ब्रांड्स के साथ पार्टनरशिप",
-        "अपना प्रोड���्ट/कोर्�� लॉन्च क���ना",
+        "सपनों के ब्रांड्स के साथ पार्टन��शिप",
+        "अ���ना प्रोडक्ट/कोर्�� लॉन्च क���ना",
         "अपने निच में गो-टू ���क्सपर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइबर्स की ईमेल लिस्ट बनाना",
@@ -516,7 +516,7 @@ export default function Quiz() {
       case 8:
         return quizData.monthlyIncome;
       case 9:
-        return quizData.biggestChallenge.length > 0;
+        return quizData.biggestChallenge.length >= 1;
       case 10:
         return quizData.goals.length > 0;
       case 11:
@@ -618,7 +618,7 @@ This content is optimized for larger text display for better readability
     if (type === "mediaKit") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "मीडिय��� किट" : "MEDIA KIT"} - ${userName}
+        `${language === "hindi" ? "मीड���य��� किट" : "MEDIA KIT"} - ${userName}
 
 ${language === "hindi" ? "व्यक्ति������ जानकारी:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
@@ -671,7 +671,7 @@ ${language === "hindi" ? "- मैं प्रामाणिक कंटे�
 ${language === "hindi" ? "स��ंख्यिकी:" : "Statistics:"}
 ${language === "hindi" ? "- फॉ����ोअर्स:" : "- Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
-${language === "hindi" ? "- प��स्टिंग आव��त्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
+${language === "hindi" ? "- प�����्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
 ${language === "hindi" ? "क्या आप स���योग के अवसरों पर ���र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
@@ -949,7 +949,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   ✓ 6 proven email templates<br/>
                   ✓ Professional follow-up sequences<br/>
                   ✓ Ready-to-use pitch formats<br/>
-                  ��� Brand outreach best practices
+                  ✓ Brand outreach best practices
                 </div>
                 <button
                   onClick={() =>
