@@ -262,7 +262,7 @@ const languages = {
       4: "पोस्��िंग आवृत्ति",
       5: "अनुभव और आ��",
       6: "सबसे बड़ी चुनौती",
-      7: "लक्ष्य",
+      7: "���क्ष्य",
       8: "सोशल लिंक्स",
       9: "एंगेजमेंट रेट",
     },
@@ -321,7 +321,7 @@ const languages = {
         "खेल और एथलेटिक्स",
         "प्रेरणा और स्व-सह��यता",
         "पेरें���िंग और परिवार",
-        "DIY और शिल्प",
+        "DIY और श��ल्प",
         "���ध्यात्म और माइंडफुलनेस",
         "अन्य",
       ],
@@ -355,7 +355,7 @@ const languages = {
       experiences: [
         "अभी शुरू किया (0-6 महीन��)",
         "शुरुआती (6 ��ही�����े - 1 साल)",
-        "ब���़ रहे हैं (1-2 साल)",
+        "ब���़ रहे हैं (1-2 ���ाल)",
         "अन��भवी (2-3 साल)",
         "विशेषज्ञ (3+ साल)",
       ],
@@ -428,7 +428,7 @@ const languages = {
       submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संसा��न",
+      title: "🎉 क्विज़ पूरा! यहाँ हैं ���पके मुफ्त क्रिएटर संसा��न",
       subtitle:
         "अपनी क्रिएटर यात्रा शुरू करने के लिए ��न शक्तिशाली टूल्�� को डाउनलोड करें",
       mediaKit: {
@@ -652,7 +652,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] �
 
 ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
-${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में द���लचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
+${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने म��ं विश��षज्ञ हूं" : "- I specialize in creating authentic content"}
@@ -669,7 +669,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 2: फॉलो-����प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
+${language === "hindi" ? "टे��्प्लेट 2: फॉलो-����प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
@@ -697,7 +697,7 @@ ${language === "hindi" ? "• 1 feed post with your product" : "• 1 feed post 
 ${language === "hindi" ? "• 24-hour story promotion" : "• 24-hour story promotion"}
 ${language === "hindi" ? "• Professional photography" : "• Professional photography"}
 
-${language === "hindi" ? "📱 स्ट���र�� पैक���ज: ₹[आपकी rate]" : "📱 Story Package: ��[Your rate]"}
+${language === "hindi" ? "📱 स्ट���र�� पैक���ज: ₹[आपकी rate]" : "📱 Story Package: ����[Your rate]"}
 ${language === "hindi" ? "• 3-5 story slides" : "• 3-5 story slides"}
 ${language === "hindi" ? "• Behind-the-scenes content" : "• Behind-the-scenes content"}
 
@@ -778,7 +778,7 @@ ${language === "hindi" ? "• Authentic audience connection" : "• Authentic au
 ${language === "hindi" ? "• Better content planning" : "• Better content planning"}
 ${language === "hindi" ? "• Cost-effective marketing" : "• Cost-effective marketing"}
 
-${language === "hindi" ? "क्या आप इस opportunity को explore करने ���ें interested हैं?" : "Would you be interested in exploring this opportunity?"}
+${language === "hindi" ? "क्या आप इस opportunity को explore करने ���ें interested ह���ं?" : "Would you be interested in exploring this opportunity?"}
 
 ${language === "hindi" ? "Best," : "Best,"}
 ${userName}
@@ -798,7 +798,7 @@ ${language === "hindi" ? "• Grateful और humble रहें" : "• Be gra
         `${language === "hindi" ? "90-���िन ���� ग्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
-${language === "hindi" ? "वर्तमान स्थिति:" : "Current Status:"} ${quizData.followerCount} on ${quizData.primaryPlatform}
+${language === "hindi" ? "वर्तमान स्���िति:" : "Current Status:"} ${quizData.followerCount} on ${quizData.primaryPlatform}
 ${language === "hindi" ? "म��ख्य चुनौति���ां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 2).join(", ")}
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 2).join(", ")}
 
@@ -806,7 +806,7 @@ ${language === "hindi" ? "दिन 1-30: बुन�������ाद �
 ${language === "hindi" ? "सप्���ाह 1:" : "Week 1:"}
 ${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्तमान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
 ${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ���डिया तैयार करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
-${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्स)" : "- Research hashtags (30 hashtag mix)"}
+${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्��)" : "- Research hashtags (30 hashtag mix)"}
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटे���ट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
@@ -1291,7 +1291,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         onChange={(e) => updateQuizData("experience", e.target.value ? [e.target.value] : [])}
                         className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-soft-violet focus:outline-none transition-colors text-lg"
                       >
-                        <option value="">How long have you been creating content? (Select all levels you've experienced)</option>
+                        <option value="">Select your experience level</option>
                         {t.options.experiences.map((exp) => (
                           <option key={exp} value={exp}>
                             {exp}
