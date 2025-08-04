@@ -280,7 +280,7 @@ const languages = {
       engagementRate: "आपका औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
         "आपकी सबसे बड़ी चुनौती क्या है? 3 त��� चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
-      goals: "आपके अगले 6 महीने के मुख���य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
+      goals: "आपके अगले 6 महीने के मुख����� लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
       socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
       bio: "अपने और अपने कंटेंट के बारे ����ें कुछ और ब��ाएं (वैकल्��िक)",
     },
@@ -344,7 +344,7 @@ const languages = {
         "मिश्रित कंटेंट",
       ],
       frequencies: [
-        "रोज़ाना",
+        "रोज़ा���ा",
         "सप्���ाह में 3-4 बार",
         "सा���्ताहिक",
         "������ीने में 2-3 बार",
@@ -450,17 +450,7 @@ const languages = {
 export default function Quiz() {
   const [currentStep, setCurrentStep] = useState(1);
   const [quizData, setQuizData] = useState<QuizData>(initialQuizData);
-  const [language, setLanguage] = useState<"english" | "hindi">(() => {
-    // Get language from localStorage or URL params
-    const savedLanguage = localStorage.getItem("famechase-language");
-    const urlParams = new URLSearchParams(window.location.search);
-    const urlLanguage = urlParams.get("lang");
-    return (
-      (urlLanguage as "english" | "hindi") ||
-      (savedLanguage as "english" | "hindi") ||
-      "english"
-    );
-  });
+  const [language, setLanguage] = useState<"english" | "hindi">("english");
   const [isGenerating, setIsGenerating] = useState(false);
   const [showFreeResources, setShowFreeResources] = useState(false);
   const navigate = useNavigate();
@@ -471,8 +461,8 @@ export default function Quiz() {
 
   // Save language preference and update quiz data when language changes
   React.useEffect(() => {
-    localStorage.setItem("famechase-language", language);
-    setQuizData((prev) => ({ ...prev, language }));
+    localStorage.setItem("famechase-language", "english");
+    setQuizData((prev) => ({ ...prev, language: "english" }));
   }, [language]);
 
   // Scroll to top when quiz page loads
@@ -672,7 +662,7 @@ ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम कर��े में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
-${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने म��ं विश��षज्ञ हूं" : "- I specialize in creating authentic content"}
+${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने म��ं विश��षज्�� हूं" : "- I specialize in creating authentic content"}
 
 ${language === "hindi" ? "स��ंख्यिकी:" : "Statistics:"}
 ${language === "hindi" ? "- फॉ����ोअर्स:" : "- Followers:"} ${quizData.followerCount}
@@ -689,7 +679,7 @@ ${userName}
 ${language === "hindi" ? "टे��्प्लेट 2: फॉलो-����प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
 
-${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
+${language === "hindi" ? "हैल��� [संपर्क नाम]," : "Hi [Contact Name],"}
 
 ${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration क�� बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
@@ -828,7 +818,7 @@ ${language === "hindi" ? "- हैशटैग रिसर्च करें (
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटे���ट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
 ${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोक��� करें" : "- Focus on community engagement"}
-${language === "hindi" ? "- एनालिटिक्स ट्रैक करना शु���ू क������ं" : "- Start tracking analytics"}
+${language === "hindi" ? "- एनालिटिक्स ट्रै�� करना शु���ू क������ं" : "- Start tracking analytics"}
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
 ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करे�� (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफ���क कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
@@ -837,7 +827,7 @@ ${language === "hindi" ? "- अन्य क्रिएटर्स के स�
 
 ${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
 ${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
-${language === "hindi" ? "- ब्रां���्स से ���ंपर्क शुरू करें" : "- Start reaching out to brands"}
+${language === "hindi" ? "- ब्रां���्स स�� ���ंपर्क शुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
 
 ${language === "hindi" ? "अपेक्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
@@ -875,16 +865,10 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 <Home className="w-4 h-4" />
                 Back to Home
               </Link>
-              <select
-                value={language}
-                onChange={(e) =>
-                  setLanguage(e.target.value as "english" | "hindi")
-                }
-                className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
-              >
-                <option value="english">English</option>
-                <option value="hindi">हिंदी</option>
-              </select>
+              {/* Hindi language disabled - English only */}
+              <div className="text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
+                English
+              </div>
             </div>
           </div>
         </header>
@@ -1057,16 +1041,10 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
               <Home className="w-4 h-4" />
               Back to Home
             </Link>
-            <select
-              value={language}
-              onChange={(e) =>
-                setLanguage(e.target.value as "english" | "hindi")
-              }
-              className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
-            >
-              <option value="english">English</option>
-              <option value="hindi">हिंदी</option>
-            </select>
+            {/* Hindi language disabled - English only */}
+            <div className="text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
+              English
+            </div>
           </div>
         </div>
       </header>
@@ -1091,19 +1069,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
           </div>
 
           <div className="bg-white border-2 border-gray-100 rounded-3xl p-8 md:p-16 shadow-2xl backdrop-blur-sm">
-            {/* Add language selector in quiz */}
-            <div className="flex justify-end mb-6">
-              <select
-                value={language}
-                onChange={(e) =>
-                  setLanguage(e.target.value as "english" | "hindi")
-                }
-                className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
-              >
-                <option value="english">English</option>
-                <option value="hindi">हिंदी</option>
-              </select>
-            </div>
+            {/* Language is now fixed to English only */}
             {/* Loading State */}
             {isGenerating && (
               <div className="text-center py-12">
