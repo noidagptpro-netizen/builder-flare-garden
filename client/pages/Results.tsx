@@ -384,7 +384,7 @@ ${analysis.swotAnalysis.strengths.map((s: string, i: number) => `${i + 1}. ${s}\
 
 
 🔧 ${language === "hindi" ? "सु��ार के क्षेत्र:" : "AREAS FOR IMPROVEMENT:"}
-────────────────────────────────────────────────
+──────────────────────���─────────────────────────
 
 ${analysis.swotAnalysis.weaknesses.map((w: string, i: number) => `${i + 1}. ${w}\n`).join("\n")}
 
@@ -634,7 +634,7 @@ ${language === "hindi" ? "🔥 प्रो टिप्स:" : "🔥 PRO TIPS:"
 
 ${language === "hindi" ? "🎯 आपका कस्टम रेट कार्ड (तुर���त इ���्तेमाल ���रें):" : "�� YOUR CUSTOM RATE CARD (Use Immediately):"}
 ��═══��════════��═════════════���═══════════════════════
-${language === "hindi" ? "ब��सिक पैकेज:" : "Basic Package:"} ₹${Math.round(followerNum * 0.012 * niche.multiplier).toLocaleString()}
+${language === "hindi" ? "ब����िक पैकेज:" : "Basic Package:"} ₹${Math.round(followerNum * 0.012 * niche.multiplier).toLocaleString()}
 ${language === "hindi" ? "���्टैंडर्ड पैकेज:" : "Standard Package:"} ₹${Math.round(followerNum * 0.025 * niche.multiplier).toLocaleString()}
 ${language === "hindi" ? "प्रीमियम पैकेज:" : "Premium Package:"} ₹${Math.round(followerNum * 0.045 * niche.multiplier).toLocaleString()}
 
@@ -706,7 +706,7 @@ ${language === "hindi" ? "📊 साप्ताहिक ग्रोथ म�
 • ${language === "hindi" ? "सप्ताह" : "Week"} 4: टारगेट ${Math.round(targetGrowthRate / 4 * 1.3)} new followers/day
 
 ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस स्कोरकार्ड:" : "🎯 CONTENT PERFORMANCE SCORECARD:"}
-┌────────────────────────────────────────────��┐
+┌───────────────���────────────────────────────��┐
 �� ${language === "hindi" ? "कं���ेंट ���ाइप" : "Content Type"}: ________________    │
 │ ${language === "hindi" ? "पोस्ट टाइम" : "Post Time"}: ___:___ (बेस्ट: 7-9 PM)   │
 │ ${language === "hindi" ? "हैशटैग्स यूज्ड" : "Hashtags Used"}: _____ (बेस्ट: 8-12)  │
@@ -716,8 +716,8 @@ ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस
 └───────���───────────────────────���──────���──────┘
 
 ${language === "hindi" ? "🔥 प्रो-लेवल एनालिटिक्स टिप्स:" : "🔥 PRO-LEVEL ANALYTICS TIPS:"}
-1. ${language === "hindi" ? "रीच 50% से कम = Algorithm penalty. तुरंत बेह���र कंटेंट पोस��ट करें" : "Reach below 50% = Algorithm penalty. Post better content immediately"}
-2. ${language === "hindi" ? "स��व रेट 2% से ज्यादा = वायरल potential. इसी तरह का कंटेंट बनाएं" : "Save rate above 2% = Viral potential. Create similar content"}
+1. ${language === "hindi" ? "रीच 50% से कम = Algorithm penalty. तुरंत बेह���र कंटेंट पोस��ट कर��ं" : "Reach below 50% = Algorithm penalty. Post better content immediately"}
+2. ${language === "hindi" ? "स��व रेट 2% से ज्यादा = वायरल potential. इसी ��रह का कंटेंट बनाएं" : "Save rate above 2% = Viral potential. Create similar content"}
 3. ${language === "hindi" ? "कमेंट्स में रिप्लाई जरूर करें - Engagement बढ़ेगा 40%" : "Always reply to comments - Boosts engagement by 40%"}
 4. ${language === "hindi" ? "पहले 30 मिनट में ज्यादा likes = Algorithm boost" : "High likes in first 30 minutes = Algorithm boost"}
 
@@ -930,7 +930,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "💰 मोनेटाइज़ेशन प्रो टूल्स - अभी कमाना शुरू कर���ं!"
+                  ? "💰 मोनेटाइज़ेशन प्रो टूल्स - अभी कमाना शुरू ���र���ं!"
                   : "💰 Monetization Pro Tools - Start Earning Now!"}
               </h2>
               <p className="text-gray-600 mb-6">
@@ -948,7 +948,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     {language === "hindi"
-                      ? "जानें कि आप हर महीने कितन�� कमा ��कते हैं। टॉप क्रिएटर���स के डेटा पर आध��रित 95% सटीक कैलकुलेशन।"
+                      ? "जानें कि आप ���र महीने कितन�� कमा ��कते हैं। टॉप क्रिएटर���स के डेटा पर आध��रित 95% सटीक कैलकुलेशन।"
                       : "Calculate real-time earnings potential based on your follower count & niche"}
                   </p>
                   <button
@@ -968,12 +968,12 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                 <div className="bg-white rounded-xl p-6 border border-purple-200">
                   <h3 className="font-bold text-lg mb-2 text-purple-700">
                     {language === "hindi"
-                      ? "📊 प्रो-लेवल एनालिटिक्स ट्रैकर"
+                      ? "📊 प्रो-लेवल एनालिटिक्स ट्रैक��"
                       : "📊 Pro-Level Analytics Tracker"}
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     {language === "hindi"
-                      ? "वही ट्रैकिंग सिस्टम जो मिलियन-फॉलोअर क्रिएटर्स इस्तेमाल कर��े हैं। अ���नी ROI क��� 300% तक बढ़ाए��।"
+                      ? "वही ट्रैकिंग स���स्टम जो मिलियन-फॉलोअर क्रिएटर्स इस्तेमाल कर��े हैं। अ���नी ROI क��� 300% तक बढ़ाए��।"
                       : "The same tracking system used by million-follower creators. Boost your ROI by up to 300%."}
                   </p>
                   <button
@@ -994,7 +994,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
               <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-4">
                 <p className="text-amber-800 font-medium text-center">
                   {language === "hindi"
-                    ? "🎯 इन टूल्स की कीमत बाजार म��ं ₹5,000+ है - लेकिन आपको ये बिल्कुल फ���री मिल रहे है���!"
+                    ? "🎯 इन टूल्स ��ी कीमत बाजार म��ं ₹5,000+ है - लेकिन आपको ये बिल्कुल फ���री मिल रहे है���!"
                     : "🎯 This content is exclusively for premium users - FREE users don't get this!"}
                 </p>
               </div>
@@ -1788,10 +1788,34 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
               </div>
             </div>
 
+            {/* FOMO Section */}
+            <div className="bg-red-50 border-2 border-red-200 rounded-xl p-4 mb-6">
+              <div className="text-center">
+                <div className="text-red-600 font-bold text-sm mb-2">🔥 LIMITED TIME OFFER</div>
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-red-700">2.1M+</div>
+                    <div className="text-xs text-red-600">Creators in India</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-red-700">₹3.2L</div>
+                    <div className="text-xs text-red-600">Avg Annual Income</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-red-700">89%</div>
+                    <div className="text-xs text-red-600">Start Earning in 3mo</div>
+                  </div>
+                </div>
+                <div className="text-red-700 text-sm mt-2 font-medium">
+                  ⏰ Only {Math.floor(Math.random() * 47) + 23} left at this price today!
+                </div>
+              </div>
+            </div>
+
             {!showPaymentForm ? (
               <button
                 onClick={() => setShowPaymentForm(true)}
-                className="bg-gradient-to-r from-neon-green to-electric-blue text-black px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto"
+                className="bg-gradient-to-r from-neon-green to-electric-blue text-black px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:scale-105 transition-all duration-300 flex items-center gap-3 mx-auto animate-pulse"
               >
                 <Unlock className="w-5 h-5" />
                 Unlock Complete Toolkit - ₹99
