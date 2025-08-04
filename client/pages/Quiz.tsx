@@ -115,7 +115,7 @@ const languages = {
       monthlyIncome: "What's your current monthly income from content?",
       biggestChallenge:
         "What are your biggest challenges as a creator? (Select max 3)",
-      goals: "आपके अगले 6 महीन��� के मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
+      goals: "आपके अगले 6 महीन��� के मुख्य लक्ष्य क���या हैं? (अधिकतम 3 चुनें)",
       socialLinks: "Share Your Social Presence (Optional)",
       bio: "Anything more about yourself and your content (optional)",
       engagementRate: "What's your average engagement rate?",
@@ -267,7 +267,7 @@ const languages = {
       9: "एंगेजमेंट रेट",
     },
     questions: {
-      primaryPlatform: "आप मुख्यतः ���िस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
+      primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयो�� करते हैं? (कई विकल्प चुनें)",
@@ -326,7 +326,7 @@ const languages = {
         "अन्य",
       ],
       engagementRates: [
-        "1% से क���",
+        "1% से कम",
         "1-3%",
         "3-5%",
         "5-8%",
@@ -360,7 +360,7 @@ const languages = {
         "विशेषज्ञ (3+ साल)",
       ],
       incomes: [
-        "₹0 (अभी तक ���ोई आय नहीं)",
+        "₹0 (अभी तक कोई आय नहीं)",
         "₹1K–5K",
         "₹5K–15K",
         "₹15K–30K",
@@ -385,9 +385,9 @@ const languages = {
       ],
       goals: [
         "मासिक आय ���50K+ तक बढ़ाना",
-        "100K+ का authentic समु��ाय बनाना",
+        "100K+ का authentic समुदाय बनाना",
         "सपनों के ब्रांड्स के साथ पार्टनरशिप",
-        "अपना प्रोडक्ट/कोर्स लॉ���्च करना",
+        "अपना प्रोडक्ट/कोर्स लॉन्च करना",
         "अपने निच में गो-टू ���क्सपर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइबर्स की ईमेल लिस्ट बनाना",
@@ -430,7 +430,7 @@ const languages = {
     freeResources: {
       title: "🎉 क्विज़ पूरा! यहाँ हैं ���पके मुफ्त क्रिएटर संसा��न",
       subtitle:
-        "अपनी क्रिएटर यात्रा शुरू करने के लिए ��न शक्तिशाली टूल्�� को डाउनलोड करें",
+        "अपनी क्रिए��र यात्रा शुरू करने के लिए ��न शक्तिशाली टूल्�� को डाउनलोड करें",
       mediaKit: {
         title: "प्र�����फेशनल मीडिया किट टेम्प्लेट",
         description: "आकर्षक मीडिया किट बन���एं जो ब्रांड्स को पसंद आएंगे",
@@ -689,7 +689,7 @@ ${language === "hindi" ? "मैंने पिछले सप्ताह आ
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
-${language === "hindi" ? "क्या हम ��स week एक quick 15-minute call schedule क��� सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
+${language === "hindi" ? "��्या हम इस week एक quick 15-minute call schedule क��� सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
 
 ${language === "hindi" ? "Looking forward," : "Looking forward,"}
 ${userName}
@@ -726,7 +726,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested ह���ं।" : "Thank you for your proposal! I'm definitely interested."}
+${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
 
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate क��� slightly adjust कर सकते ��ैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
@@ -816,7 +816,7 @@ ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:
 ${language === "hindi" ? "दिन 1-30: बुन�������ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्���ाह 1:" : "Week 1:"}
 ${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्तमान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
-${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ���डिया तैयार करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
+${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ���डिया तैया��� करें` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्��)" : "- Research hashtags (30 hashtag mix)"}
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
@@ -1005,7 +1005,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
               <h2 className="text-lg font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "अपना ���ूरा विश्लेषण चाहते हैं?"
+                  ? "अपना ���ूरा विश्��ेषण चाहते हैं?"
                   : "Want Your Complete Analysis?"}
               </h2>
               <p className="text-gray-600 mb-6">
@@ -1283,8 +1283,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 4: Posting Frequency */}
-                {currentStep === 4 && (
+                {/* Step 6: Posting Frequency */}
+                {currentStep === 6 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-lg font-bold text-gray-900 mb-4">
