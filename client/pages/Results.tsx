@@ -326,7 +326,7 @@ export default function Results() {
 
     // Add enhanced font size indicator for optimal readability
     const fontSizeIndicator = `
-╔════════════════════════════════════════════════════════����╗
+╔══════════════════���═════════════════════════════════════����╗
 ║                 📖 READING INSTRUCTIONS                  ║
 ║                                                          ║
 ║  �� FONT SIZE: SET TO 24-32pt (MINIMUM 22pt)           ║
@@ -367,7 +367,7 @@ ${language === "hindi" ? "💰 आय प्रक��षेपण:" : "💰 I
 
 
 🎯 ${language === "hindi" ? "प्रोफाइल सारांश:" : "PROFILE SUMMARY:"}
-────��──��────────────────────────────────────────
+────��──��──────────────────────────────────���─────
 
 ${language === "hindi" ? "📱 प्लेटफॉर्म:" : "📱 Platform:"} ${quizData.primaryPlatform}
 
@@ -396,7 +396,7 @@ ${analysis.swotAnalysis.weaknesses.map((w: string, i: number) => `${i + 1}. ${w}
 ${analysis.swotAnalysis.opportunities.map((o: string, i: number) => `${i + 1}. ${o}\n`).join("\n")}
 
 
-🎯 ${language === "hindi" ? "मुख्य सुझाव:" : "KEY RECOMMENDATIONS:"}
+🎯 ${language === "hindi" ? "मुख्य स��झाव:" : "KEY RECOMMENDATIONS:"}
 ───────────��──────────��───────────────���─────────
 
 ${analysis.suggestions
@@ -479,7 +479,7 @@ ${language === "hindi" ? "वेबसाइट:" : "Website:"} ${quizData.socia
 
 ${language === "hindi" ? "वर्तमान ���्थिति विश्लेषण:" : "CURRENT SITUATION ANALYSIS:"}
 ${language === "hindi" ? "फॉलो���र्स:" : "Followers:"} ${quizData.followerCount}
-${language === "hindi" ? "म��ख्य चुनौत��यां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 3).join(", ")}
+${language === "hindi" ? "म����्य चुनौत��यां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 3).join(", ")}
 ${language === "hindi" ? "मु���्य ��क्ष���य:" : "Primary Goals:"} ${quizData.goals.slice(0, 3).join(", ")}
 ${language === "hindi" ? "वर्तमान आय:" : "Current Income:"} ${quizData.monthlyIncome}
 
@@ -731,7 +731,7 @@ ${language === "hindi" ? "⚡ एडवांस्ड एंगेजमें�
 • ${language === "hindi" ? "सेव रेट" : "Save Rate"} = Saves ÷ Reach × 100 (टारगेट: 2-4%)
 • ${language === "hindi" ? "कमे��ट रेट" : "Comment Rate"} = Comments ÷ Reach × 100 (टारगेट: 0.5-1.5%)
 
-${language === "hindi" ? "💰 मोने���ाइज़ेशन ट्रैकर (रियल वैल्यू):" : "💰 MONETIZATION TRACKER (Real Value):"}
+${language === "hindi" ? "💰 मोने���ाइज़े���न ट्रैकर (रियल वैल्यू):" : "💰 MONETIZATION TRACKER (Real Value):"}
 ┌────────────────────────────────────���────────┐
 │ ${language === "hindi" ? "महीना:" : "Month:"} ___________                     │
 │ ${language === "hindi" ? "ब्रांड इंक्वायरी" : "Brand Inquiries"}: _____ (टारगेट: ${Math.round(currentFollowers / 5000)})   │
@@ -740,7 +740,7 @@ ${language === "hindi" ? "💰 मोने���ाइज़ेशन ट्
 │ ${language === "hindi" ? "डील���स क्लोज्ड" : "Deals Closed"}: _____ (टारगेट: 15%)      │
 │ ${language === "hindi" ? "कुल कमाई" : "Total Earnings"}: ���_____ (टारगेट: ₹${Math.round(currentFollowers * 0.5).toLocaleString()})│
 │ ${language === "hindi" ? "औ��त डील वैल्यू" : "Avg Deal Value"}: ₹_____ (टारगेट: ₹${Math.round(currentFollowers * 0.08).toLocaleString()}) ��
-���─����───────────────────────────────────────────┘
+���������───────────────────────────────────────────┘
 
 ${language === "hindi" ? "📊 साप्ताहिक ग्रोथ मेट्रिक्स:" : "📊 WEEKLY GROWTH METRICS:"}
 • ${language === "hindi" ? "सप्ताह" : "Week"} 1: टार��ेट ${Math.round(targetGrowthRate / 4)} new followers/day
@@ -760,7 +760,7 @@ ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस
 
 ${language === "hindi" ? "🔥 प्रो-लेवल एनालिटिक्स टिप्स:" : "🔥 PRO-LEVEL ANALYTICS TIPS:"}
 1. ${language === "hindi" ? "रीच 50% से कम = Algorithm penalty. तुरंत बेह���र कंटेंट पोस��ट कर��ं" : "Reach below 50% = Algorithm penalty. Post better content immediately"}
-2. ${language === "hindi" ? "स��व रेट 2% से ज्यादा = वायरल potential. इसी ��रह क��� कंटेंट बनाएं" : "Save rate above 2% = Viral potential. Create similar content"}
+2. ${language === "hindi" ? "स��व रेट 2% से ज्यादा = वायरल potential. इसी ��रह क���� कंटेंट बनाएं" : "Save rate above 2% = Viral potential. Create similar content"}
 3. ${language === "hindi" ? "कमेंट्स में रिप्लाई जरूर करें - Engagement बढ़ेगा 40%" : "Always reply to comments - Boosts engagement by 40%"}
 4. ${language === "hindi" ? "पहले 30 मिनट में ज्यादा likes = Algorithm boost" : "High likes in first 30 minutes = Algorithm boost"}
 
@@ -787,7 +787,7 @@ ${language === "hindi" ? "⚡ एक्शन आइटम्स (हर हफ�
 □ ${language === "hindi" ? "Competitor के टॉप प���स्ट्स स्टडी करें (कम से कम 5)" : "Study competitor top posts (minimum 5)"}
 □ ${language === "hindi" ? "हैशटैग परफॉर्मेंस चेक करें और underperforming को replace करें" : "Check hashtag performance and replace underperforming ones"}
 □ ${language === "hindi" ? "Audience insights द���खें - कब ऑनलाइन हैं, demographics" : "Review audience insights - when online, demographics"}
-□ ${language === "hindi" ? "नए ट्रेंड्स research करें और next week plan करें" : "Research new trends and plan next week content"}
+□ ${language === "hindi" ? "नए ट्रे���ड्स research करें और next week plan करें" : "Research new trends and plan next week content"}
 
 ${language === "hindi" ? "🎯 अगले 30 दिन का टारगेट:" : "🎯 NEXT 30 DAYS TARGET:"}
 • ${projectedFollowers.toLocaleString()} followers (${targetGrowthRate}% growth)
@@ -1248,16 +1248,10 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                 <ArrowLeft className="w-4 h-4" />
                 {t.backToQuiz}
               </Link>
-              <select
-                value={language}
-                onChange={(e) =>
-                  setLanguage(e.target.value as "english" | "hindi")
-                }
-                className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
-              >
-                <option value="english">English</option>
-                <option value="hindi">हिंदी</option>
-              </select>
+              {/* Hindi language disabled - English only */}
+              <div className="text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
+                English
+              </div>
             </div>
           </div>
         </div>
@@ -1480,7 +1474,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                     <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
                     <p className="text-gray-700">
                       {language === "hindi"
-                        ? `आप ${quizData.niche} में कंटेंट बनाते हैं - यह ���क बहुत डिमांडिं��� निच है जहाँ ब्रांड्स ${quizData.followerCount.includes("1K") ? "3-5" : quizData.followerCount.includes("10K") ? "10-15" : "20+"} लाख रुपए साला���ा खर्च करते हैं।`
+                        ? `आप ${quizData.niche} में कंटेंट बनाते हैं - यह ���क बहुत डिमांडिं��� नि��� है जहाँ ब्रांड्स ${quizData.followerCount.includes("1K") ? "3-5" : quizData.followerCount.includes("10K") ? "10-15" : "20+"} लाख रुपए साला���ा खर्च करते हैं।`
                         : `You create ${quizData.contentType.toLowerCase()} in ${quizData.niche} - a high-demand niche where brands spend ₹${quizData.followerCount.includes("1K") ? "3-5" : quizData.followerCount.includes("10K") ? "10-15" : "20+"} lakhs annually.`}
                     </p>
                   </div>
