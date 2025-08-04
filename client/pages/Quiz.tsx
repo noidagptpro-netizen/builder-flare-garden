@@ -210,18 +210,13 @@ const languages = {
         "📱 Creator Wellness: Managing too many platforms at once",
       ],
       goals: [
-        "Increase monthly income to ₹50K+",
-        "Build authentic community of 100K+",
-        "Land partnerships with dream brands",
-        "Launch my own product/course",
-        "Become go-to expert in my niche",
-        "Achieve viral content consistently",
-        "Build email list of 10K subscribers",
-        "Speak at industry events/podcasts",
-        "Create passive income streams",
-        "Quit my 9-5 and go full-time",
-        "Expand into new platforms/formats",
-        "Mentor other creators in my space",
+        "Reach 10K / 50K / 100K+ Followers",
+        "Earn ₹25K / ₹50K / ₹1L+ per month",
+        "Get Brand Collaborations",
+        "Build Personal Brand",
+        "Create Viral Content",
+        "Post More Consistently",
+        "Expand to New Platforms",
       ],
       engagementRates: [
         "Less than 1%",
@@ -261,7 +256,7 @@ const languages = {
     title: "क्रिएटर सक्सेस क्विज़",
     subtitle: "3 मिनट में अपनी व्य��्तिगत ग्रोथ रणनीति प��एं",
     steps: {
-      1: "प्लेटफॉर्म और फॉलोअर्स",
+      1: "प्लेटफॉर्म औ�� फॉलोअर्स",
       2: "कंटे��ट निच",
       3: "कंटेंट प्रकार",
       4: "पोस्��िंग आवृत्ति",
@@ -280,7 +275,7 @@ const languages = {
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी ��ार कंटेंट पोस्ट क��ते हैं?",
       experience:
-        "आप कितने समय से कंटेंट बना रहे ���ैं? (सभी स्तर चुने��� जिनका आपने अनुभव किया है)",
+        "आप कित��े समय से कंटेंट बना रहे ���ैं? (सभी स्तर चुने��� जिनका आपने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आप���ी वर्तम���न मासिक आय क्या है?",
       engagementRate: "आपका औसत एंगेजमेंट रेट क्या है? Engagement rate = (likes + comments + shares) / followers",
       biggestChallenge:
@@ -288,7 +283,7 @@ const languages = {
       goals:
         "आपके अगले 6 महीने के मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
       socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
-      bio: "अपने और अपने कंटेंट के बारे ����ें कुछ और ब��ाएं (वैकल्पिक)",
+      bio: "अपने और अपने कंटेंट के बारे ����ें कुछ और ब��ाएं (वैकल्��िक)",
     },
     options: {
       platforms: [
@@ -354,12 +349,12 @@ const languages = {
         "सप्���ाह में 3-4 बार",
         "सा���्ताहिक",
         "������ीने में 2-3 बार",
-        "��ासिक",
+        "����सिक",
         "अनियमित",
       ],
       experiences: [
         "अभी शुरू किया (0-6 महीन��)",
-        "शुरुआती (6 ��ही���े - 1 साल)",
+        "शुरुआती (6 ��ही�����े - 1 साल)",
         "ब���़ रहे हैं (1-2 साल)",
         "अनुभवी (2-3 साल)",
         "विशेषज्ञ (3+ साल)",
@@ -418,18 +413,13 @@ const languages = {
         "📱 Creator Wellness: Managing too many platforms at once",
       ],
       goals: [
-        "Increase monthly income to ₹50K+",
-        "Build authentic community of 100K+",
-        "Land partnerships with dream brands",
-        "Launch my own product/course",
-        "Become go-to expert in my niche",
-        "Achieve viral content consistently",
-        "Build email list of 10K subscribers",
-        "Speak at industry events/podcasts",
-        "Create passive income streams",
-        "Quit my 9-5 and go full-time",
-        "Expand into new platforms/formats",
-        "Mentor other creators in my space",
+        "Reach 10K / 50K / 100K+ Followers",
+        "Earn ₹25K / ₹50K / ₹1L+ per month",
+        "Get Brand Collaborations",
+        "Build Personal Brand",
+        "Create Viral Content",
+        "Post More Consistently",
+        "Expand to New Platforms",
       ],
     },
     buttons: {
@@ -662,7 +652,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] �
 
 ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
-${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में दिलचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
+${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में द���लचस्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने म��ं विश��षज्ञ हूं" : "- I specialize in creating authentic content"}
@@ -769,7 +759,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
 
-${language === "hindi" ? "हमा��े successful collaboration के बा����, ���ैं एक long-term partnership propose करना चाहूं��ा।" : "Following our successful collaboration, I'd like to propose a long-term partnership."}
+${language === "hindi" ? "हमा��े successful collaboration के बा����, ���ैं एक long-term partnership propose करना चाहूं��ा��" : "Following our successful collaboration, I'd like to propose a long-term partnership."}
 
 ${language === "hindi" ? "🤝 PROPOSED PARTNERSHIP:" : "🤝 PROPOSED PARTNERSHIP:"}
 ${language === "hindi" ? "���� Monthly content creation" : "• Monthly content creation"}
@@ -805,7 +795,7 @@ ${language === "hindi" ? "• Grateful और humble रहें" : "• Be gra
     } else if (type === "growthStrategy") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "90-���िन ��ी ग्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
+        `${language === "hindi" ? "90-���िन ���� ग्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "वर्तमान स्थिति:" : "Current Status:"} ${quizData.followerCount} on ${quizData.primaryPlatform}
