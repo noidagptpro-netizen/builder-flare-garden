@@ -153,7 +153,7 @@ const languages = {
     processing: "प्रसंस्करण...",
     whatYouGet: "भुगतान ������ ��ाद आपको मिलेगा:",
     fameScoreReport: "फेम स्कोर रिपोर्���",
-    mediaKitTemplate: "मीडिया किट टेम्प्लेट",
+    mediaKitTemplate: "मीडिया किट ट��म्प्लेट",
     growthStrategy: "ग्रोथ स्��्रैटेजी",
     premiumTools: "और भी क्रिएटर टूल्स",
     securePayment: "सुरक्षित भुगतान",
@@ -480,7 +480,7 @@ ${language === "hindi" ? "मु���्य ��क्ष���य:" : 
 ${language === "hindi" ? "वर्तमान आय:" : "Current Income:"} ${quizData.monthlyIncome}
 
 ${language === "hindi" ? "30-द���� की ��ार्य ���ोजना:" : "30-DAY ACTION PLAN:"}
-${language === "hindi" ? "स���्ताह 1-2:" : "Week 1-2:"}
+${language === "hindi" ? "स����्ताह 1-2:" : "Week 1-2:"}
 ${analysis.suggestions
   .slice(0, 2)
   .map((s: string, i: number) => `${i + 1}. ${s}`)
@@ -703,7 +703,7 @@ ${language === "hindi" ? "📊 साप्ताहिक ग्रोथ म�
 • ${language === "hindi" ? "सप्ताह" : "Week"} 4: टारगेट ${Math.round(targetGrowthRate / 4 * 1.3)} new followers/day
 
 ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस स्कोरकार्ड:" : "🎯 CONTENT PERFORMANCE SCORECARD:"}
-┌────────────────────────────────────────────��┐
+┌────────────────────────────────���───────────��┐
 �� ${language === "hindi" ? "कं���ेंट ���ाइप" : "Content Type"}: ________________    │
 │ ${language === "hindi" ? "पोस्ट टाइम" : "Post Time"}: ___:___ (बेस्ट: 7-9 PM)   │
 │ ${language === "hindi" ? "हैशटैग्स यूज्ड" : "Hashtags Used"}: _____ (बेस्ट: 8-12)  │
@@ -1012,36 +1012,8 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
               </p>
 
               <div className="grid md:grid-cols-2 gap-6">
-                {/* Recommended based on biggest challenges */}
-                {quizData.biggestChallenge.some(c => c.includes("Low views") || c.includes("Algorithm")) && (
-                  <div className="bg-white rounded-xl p-6 border border-purple-200">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="font-bold text-lg text-purple-800 mb-2">
-                          {language === "hindi" ? "🚀 Viral Content Mastery Course" : "🚀 Viral Content Mastery Course"}
-                        </h3>
-                        <div className="text-purple-600 text-sm mb-2">
-                          {language === "hindi" ? "AI Match: 95% - Views और Algorithm problems के लिए perfect" : "AI Match: 95% - Perfect for views & algorithm issues"}
-                        </div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-gray-400 line-through text-sm">₹1,299</div>
-                        <div className="text-purple-600 font-bold">₹399</div>
-                      </div>
-                    </div>
-                    <p className="text-gray-600 text-sm mb-4">
-                      {language === "hindi"
-                        ? "Algorithm के साथ बेहतर relationship बनाएं, trending content create करें, और consistent viral videos बनाने का formula सीखें।"
-                        : "Master the algorithm, create trending content, and learn the exact formula for consistent viral videos."}
-                    </p>
-                    <div className="text-purple-600 text-sm font-medium">
-                      ✨ {language === "hindi" ? "30-day money-back guarantee" : "30-day money-back guarantee"}
-                    </div>
-                  </div>
-                )}
-
                 {/* Show only existing products based on user profile */}
-                {analysis.productRecommendations.slice(0, 2).map((rec, index) => (
+                {analysis.productRecommendations.slice(0, 4).map((rec, index) => (
                   <div key={index} className="bg-gradient-to-br from-white to-orange-50 rounded-2xl p-6 border-2 border-orange-200 hover:border-orange-300 hover:shadow-xl transition-all duration-300 transform hover:scale-102 relative overflow-hidden">
                     {/* Priority Badge */}
                     <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold ${
@@ -1548,7 +1520,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                                 </p>
                                 <p>
                                   {language === "hindi"
-                                    ? "��� Specific action plan ब��ाएं इस challenge के लिए"
+                                    ? "���� Specific action plan ब��ाएं इस challenge के लिए"
                                     : "• Create specific action plan for this challenge"}
                                 </p>
                                 <p>
