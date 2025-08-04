@@ -281,7 +281,7 @@ const languages = {
       biggestChallenge:
         "आपकी सबसे बड़ी चुनौती क्या है? 3 तक चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
       goals:
-        "आपके अगले 6 महीने के मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
+        "आपके अगले 6 महीने के मुख���य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
       socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
       bio: "अपने और अपने कंटेंट के बारे ����ें कुछ और ब��ाएं (वैकल्��िक)",
     },
@@ -310,7 +310,7 @@ const languages = {
         "खाना और खाना बनाना",
         "यात्रा और एडवेंचर",
         "फिटनेस और स्वास्थ्य",
-        "व्यक्तिगत वि��्त और निवेश",
+        "व्यक्तिगत वि��्त और नि��ेश",
         "मनोरंजन और कॉमेडी",
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
@@ -392,7 +392,7 @@ const languages = {
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइबर्स की ईमेल लिस्ट बनाना",
         "इंडस्ट्री इवेंट्स/पॉडकास्ट में बोलना",
-        "पैसिव इनकम स्ट्रीम बनाना",
+        "प���सिव इनकम स्ट्रीम बनाना",
         "अपनी 9-5 जॉब छोड़कर फुल-टाइम जाना",
         "नए प्लेटफॉर्म्स/��ॉर्मेट्स में expand करना",
         "अपने ��्पेस में ���ूसरे क्रिएटर्स को मेंटर करना",
@@ -621,7 +621,7 @@ ${language === "hindi" ? "���्ले���फॉर्म:" : "Platfo
 ${language === "hindi" ? "����ॉलो���र्स:" : "Followers:"} ${quizData.followerCount}
 
 ${language === "hindi" ? "सांख्यिकी ���र दर��ं:" : "STATISTICS & RATES:"}
-${language === "hindi" ? "कंटेंट प्रकार:" : "Content Type:"} ${quizData.contentType}
+${language === "hindi" ? "कंटेंट ��्रकार:" : "Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "पोस्ट���ंग आवृ���्ति:" : "Posting Frequency:"} ${quizData.postingFrequency}
 ${language === "hindi" ? "मासिक आ��:" : "Monthly Income:"} ${quizData.monthlyIncome}
 
@@ -759,7 +759,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 6: ल���न्ग-टर्म पार्टनरशिप प्र���ोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
+${language === "hindi" ? "टेम्प्लेट 6: ल���न��ग-टर्म पार्टनरशिप प्र���ोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `Long-term Partnership Proposal - ${userName} x [Brand]` : `Long-term Partnership Proposal - ${userName} x [Brand]`}
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
@@ -1309,23 +1309,18 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       <label className="block text-gray-900 font-semibold mb-4 text-lg">
                         {t.questions.monthlyIncome}
                       </label>
-                      <div className="grid grid-cols-2 gap-3">
+                      <select
+                        value={quizData.monthlyIncome}
+                        onChange={(e) => updateQuizData("monthlyIncome", e.target.value)}
+                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-soft-violet focus:outline-none transition-colors text-lg"
+                      >
+                        <option value="">What's your current monthly income from content?</option>
                         {t.options.incomes.map((income) => (
-                          <button
-                            key={income}
-                            onClick={() =>
-                              updateQuizData("monthlyIncome", income)
-                            }
-                            className={`p-4 rounded-xl border-2 text-base font-semibold transition-all duration-300 hover:scale-102 ${
-                              quizData.monthlyIncome === income
-                                ? "bg-gradient-to-r from-neon-green/20 to-electric-blue/20 border-neon-green text-gray-900 shadow-xl transform scale-102"
-                                : "bg-white border-gray-200 text-gray-700 hover:border-neon-green/50 hover:shadow-lg"
-                            }`}
-                          >
+                          <option key={income} value={income}>
                             {income}
-                          </button>
+                          </option>
                         ))}
-                      </div>
+                      </select>
                     </div>
                   </div>
                 )}
