@@ -287,7 +287,7 @@ const languages = {
     },
     options: {
       platforms: [
-        "���ंस्टाग्राम",
+        "���ंस्टाग्र��म",
         "यूट्यूब",
         "लिंक्��इन",
         "��िकट���क",
@@ -361,11 +361,11 @@ const languages = {
       ],
       incomes: [
         "₹0 (अभी तक कोई आय नहीं)",
-        "₹1-5K",
-        "₹5K-15K",
-        "₹15K-30K",
-        "₹30K-50K",
-        "₹50K-1L",
+        "₹1K–5K",
+        "₹5K–15K",
+        "₹15K–30K",
+        "₹30K–50K",
+        "₹50K–1L",
         "₹1L+",
       ],
       challenges: [
@@ -607,7 +607,7 @@ Optimal zoom: 150-200% for comfortable reading.
     if (type === "mediaKit") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "मीडिया किट" : "MEDIA KIT"} - ${userName}
+        `${language === "hindi" ? "मीडिय��� किट" : "MEDIA KIT"} - ${userName}
 
 ${language === "hindi" ? "व्यक्ति���त जानकारी:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
@@ -795,7 +795,7 @@ ${language === "hindi" ? "• Grateful और humble रहें" : "• Be gra
     } else if (type === "growthStrategy") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "90-���िन ���� ग्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
+        `${language === "hindi" ? "90-���िन ���� ��्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "वर्तमान स्���िति:" : "Current Status:"} ${quizData.followerCount} on ${quizData.primaryPlatform}
@@ -825,7 +825,7 @@ ${language === "hindi" ? "- ईमेल लिस्ट बनाना शु�
 
 ${language === "hindi" ? "अपेक्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
 ${language === "hindi" ? "- फॉलोअर ग्रोथ: 40-80%" : "- Follower Growth: 40-80%"}
-${language === "hindi" ? "- ��ंगेजमेंट में स���धार: 50-100%" : "- Engagement Improvement: 50-100%"}
+${language === "hindi" ? "- ��ंगेजमेंट में स�����धार: 50-100%" : "- Engagement Improvement: 50-100%"}
 ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8" : "- Brand Inquiries: 3-8"}`;
     }
 
