@@ -680,10 +680,41 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
   const currentMonth = new Date().getMonth();
   const currentYear = new Date().getFullYear();
 
-  // IMMEDIATE ACTION ITEMS (Top Priority)
-  recommendations.push(
-    "Use trending audio in Reels and post during peak hours (7-9 PM IST)",
-  );
+  // USER-SPECIFIC ANALYSIS FOR HYPER-PERSONALIZED SUGGESTIONS
+  const userProfile = {
+    stage: followerNum < 1000 ? 'foundation' : followerNum < 10000 ? 'growth' : followerNum < 50000 ? 'scaling' : 'influencer',
+    monetization: incomeNum === 0 ? 'none' : incomeNum < 15000 ? 'early' : incomeNum < 50000 ? 'moderate' : 'advanced',
+    consistency: data.postingFrequency === 'Daily' ? 'high' : data.postingFrequency.includes('3-4') ? 'good' : 'needs-improvement',
+    platform: data.primaryPlatform,
+    niche: data.niche,
+    challenges: data.biggestChallenge,
+    goals: data.goals,
+    experience: data.experience[0] || 'beginner'
+  };
+
+  // IMMEDIATE PRIORITY SUGGESTIONS based on biggest gaps
+  if (userProfile.monetization === 'none' && followerNum >= 5000) {
+    recommendations.push(
+      `🚨 URGENT: You're missing ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly income! Create a media kit this week and reach out to 10 brands in ${data.niche}`
+    );
+  }
+
+  if (userProfile.consistency === 'needs-improvement') {
+    recommendations.push(
+      `⚡ CRITICAL: Switch to daily posting immediately - your current ${data.postingFrequency} schedule is costing you 60% potential reach. Batch create 7 posts this Sunday`
+    );
+  }
+
+  // USER-SPECIFIC TOP PRIORITY ACTION (based on their exact situation)
+  if (data.biggestChallenge.some(c => c.includes('Low views'))) {
+    recommendations.push(
+      `🎯 YOUR #1 PRIORITY: Post ${data.primaryPlatform === 'Instagram' ? 'Reels' : 'short videos'} using trending audio daily at 7-9 PM IST. Your low views = algorithm penalty that needs immediate fixing`
+    );
+  } else {
+    recommendations.push(
+      `🚀 YOUR TOP OPPORTUNITY: Use trending audio in ${data.primaryPlatform === 'Instagram' ? 'Reels' : 'content'} and post during peak hours (7-9 PM IST) for maximum algorithmic boost`
+    );
+  }
 
   // Platform-specific strategic recommendations
   if (data.primaryPlatform === "Instagram") {
@@ -1279,8 +1310,97 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     "Document your creator journey to inspire and educate others",
   );
 
-  // Return significantly more recommendations (30-50 instead of 6)
-  return recommendations.slice(0, 45); // Return top 45 personalized recommendations
+  // HYPER-PERSONALIZED CHALLENGE-BASED RECOMMENDATIONS
+  data.biggestChallenge.forEach(challenge => {
+    if (challenge.includes('Low views & inconsistent engagement')) {
+      recommendations.push(
+        `📊 ENGAGEMENT FIX FOR YOU: Based on your ${data.followerCount} + ${data.niche} combination, post interactive content (polls, questions) in Stories daily and respond to ALL comments within 1 hour`
+      );
+      if (data.primaryPlatform === 'Instagram') {
+        recommendations.push(
+          `📱 INSTAGRAM ALGORITHM HACK: Create 5 Reels weekly using trending audio within 24 hours. Your low engagement suggests you're not leveraging Reels enough`
+        );
+      }
+    }
+
+    if (challenge.includes("Can't convert followers into paying customers")) {
+      recommendations.push(
+        `💰 CONVERSION STRATEGY FOR ${data.followerCount}: Add specific CTAs to every post directing to your bio link. With ${data.niche} content, focus on product recommendations with honest reviews`
+      );
+      if (followerNum >= 10000) {
+        recommendations.push(
+          `🛍️ IMMEDIATE MONETIZATION: Enable Instagram Shopping and create "Link in Bio" landing page. Your ${data.followerCount} should generate ₹${Math.round(followerNum * 0.5)}-₹${Math.round(followerNum * 1.5)}K monthly`
+        );
+      }
+    }
+
+    if (challenge.includes('Not landing brand collaborations')) {
+      recommendations.push(
+        `🤝 BRAND OUTREACH PLAN FOR YOU: Create media kit showcasing your ${data.followerCount} + ${data.niche} metrics. Email 20 relevant brands weekly with personalized pitches mentioning specific campaigns`
+      );
+      if (data.niche === 'Fashion & Beauty') {
+        recommendations.push(
+          `💄 BEAUTY BRAND STRATEGY: Partner with Nykaa, Myntra, and local beauty brands. Your niche commands ₹${Math.round(followerNum * 1.2)}-₹${Math.round(followerNum * 2)} per post rates`
+        );
+      } else if (data.niche === 'Technology & AI') {
+        recommendations.push(
+          `💻 TECH COLLABORATION GOLDMINE: Reach out to OnePlus, Xiaomi, Amazon for device reviews. Tech creators earn ₹${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3)} per collaboration`
+        );
+      }
+    }
+  });
+
+  // GOAL-SPECIFIC PERSONALIZED RECOMMENDATIONS
+  data.goals.forEach(goal => {
+    if (goal.includes('Earn ₹25K') || goal.includes('Earn ₹50K') || goal.includes('Earn ₹1L')) {
+      const targetIncome = goal.includes('₹1L') ? 100000 : goal.includes('₹50K') ? 50000 : 25000;
+      const monthsToTarget = Math.ceil(targetIncome / Math.max(followerNum * 0.8, 5000));
+      recommendations.push(
+        `💰 YOUR ₹${targetIncome/1000}K GOAL ROADMAP: Achievable in ${monthsToTarget} months through ${Math.ceil(targetIncome/3000)} brand partnerships monthly. Start with ₹${Math.round(followerNum * 0.8)} per post rates`
+      );
+    }
+
+    if (goal.includes('Create Viral Content')) {
+      recommendations.push(
+        `🚀 VIRAL CONTENT FORMULA FOR ${data.niche}: Study what went viral in your niche last 30 days, recreate with your unique angle within 48 hours of trending topics`
+      );
+    }
+
+    if (goal.includes('Build Personal Brand')) {
+      recommendations.push(
+        `🌟 PERSONAL BRAND STRATEGY: Share your ${data.niche} journey story, behind-the-scenes content, and personal failures/lessons. Authenticity = stronger connection with ${data.followerCount}`
+      );
+    }
+  });
+
+  // NICHE-SPECIFIC EXPERT RECOMMENDATIONS
+  if (data.niche === 'Fashion & Beauty') {
+    recommendations.push(
+      `💄 FASHION CREATOR ADVANTAGE: Post outfit transitions during festival season, collaborate with local designers, create "Get Ready With Me" content featuring affordable Indian brands under ₹500`
+    );
+  } else if (data.niche === 'Technology & AI') {
+    recommendations.push(
+      `💻 TECH AUTHORITY BUILDING: Create comparison videos between budget vs premium products, join Amazon/Flipkart affiliate programs, review apps solving Indian-specific problems`
+    );
+  } else if (data.niche === 'Personal Finance & Investing') {
+    recommendations.push(
+      `📈 FINANCE CREATOR PREMIUM: Create content around Indian stock market, tax-saving strategies, review investment apps. Finance creators earn 3x more per follower than lifestyle`
+    );
+  }
+
+  // EXPERIENCE-LEVEL SPECIFIC RECOMMENDATIONS
+  if (data.experience[0]?.includes('Just started') || data.experience[0]?.includes('Beginner')) {
+    recommendations.push(
+      `🌱 BEGINNER ACCELERATION: Focus on consistency over perfection. Post daily for 90 days, engage with 50 accounts in your niche weekly, study top creators' content patterns`
+    );
+  } else if (data.experience[0]?.includes('Expert')) {
+    recommendations.push(
+      `🏆 EXPERT LEVERAGE: Launch your own course/product priced ₹2999-₹9999, offer consulting at ₹5000-₹15000/hour, negotiate exclusive brand partnerships worth ₹50K-₹2L monthly`
+    );
+  }
+
+  // Return highly personalized recommendations
+  return recommendations.slice(0, 50); // Return top 50 hyper-personalized recommendations
 };
 
 const generateProductRecommendations = (data: QuizData, fameScore: number) => {
