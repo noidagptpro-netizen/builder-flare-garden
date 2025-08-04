@@ -267,7 +267,7 @@ const languages = {
       9: "एंगेजमेंट रेट",
     },
     questions: {
-      primaryPlatform: "आप मु���्यतः किस प्लेटफॉर्म पर कंटेंट बना���े हैं?",
+      primaryPlatform: "आप मु���्य��ः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयो�� करते हैं? (कई विकल्प चुनें)",
@@ -326,7 +326,7 @@ const languages = {
         "अन्य",
       ],
       engagementRates: [
-        "1% से कम",
+        "1% स�� कम",
         "1-3%",
         "3-5%",
         "5-8%",
@@ -385,10 +385,10 @@ const languages = {
       ],
       goals: [
         "मासिक आय ���50K+ तक बढ़ाना",
-        "100K+ का authentic समुदाय बनाना",
+        "100K+ का authentic ��मुदाय बनाना",
         "सपनों के ब्रांड्स के साथ पार्टनरशिप",
-        "अपना प्रोडक्ट/कोर्स लॉन्च क���ना",
-        "अपने निच मे�� गो-टू ���क्सपर्ट बनना",
+        "अपना प्रोडक्ट/कोर्�� लॉन्च क���ना",
+        "अपने निच में गो-टू ���क्सपर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइबर्स की ईमेल लिस्ट बनाना",
         "इंडस्ट्री इवेंट्स/पॉडकास्ट में बोलना",
@@ -430,7 +430,7 @@ const languages = {
     freeResources: {
       title: "🎉 क्विज़ पूरा! यहाँ हैं ���पके मुफ्त क्रिएटर संसा��न",
       subtitle:
-        "अपनी क्रिएटर यात्रा शुरू करने के लिए ��न शक्���िशाली टूल्�� को डाउनलोड करें",
+        "अपनी क्रिएटर यात्रा शुरू करने के लिए ��न शक्तिशाली टूल्�� को डाउनलोड करें",
       mediaKit: {
         title: "प्र�����फेशनल मीडिया किट टेम्प्लेट",
         description: "आकर्षक मीडिया किट बन���एं जो ब्रांड्स को पसंद आएंगे",
@@ -673,9 +673,9 @@ ${language === "hindi" ? "- फॉ����ोअर्स:" : "- Followers:"
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "- प��स्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
-${language === "hindi" ? "क्या आप स���योग ���े अवसरों पर ���र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
+${language === "hindi" ? "क्या आप स���योग के अवसरों पर ���र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
-${language === "hindi" ? "धन्यवा��," : "Best regards,"}
+${language === "hindi" ? "धन्यवाद," : "Best regards,"}
 ${userName}
 
 ---
@@ -689,7 +689,7 @@ ${language === "hindi" ? "मैंने पिछले सप्ताह आ
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
-${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule क���� सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
+${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule क��� सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
 
 ${language === "hindi" ? "Looking forward," : "Looking forward,"}
 ${userName}
@@ -706,7 +706,7 @@ ${language === "hindi" ? "आप��ी interest ��े लि��� ध
 ${language === "hindi" ? "📸 सिंगल ��ोस्ट: ₹[आपकी rate]" : "📸 Single Post: ₹[Your rate]"}
 ${language === "hindi" ? "• 1 feed post with your product" : "• 1 feed post with your product"}
 ${language === "hindi" ? "• 24-hour story promotion" : "• 24-hour story promotion"}
-${language === "hindi" ? "• Professional photography" : "• Professional photography"}
+${language === "hindi" ? "• Professional photography" : "�� Professional photography"}
 
 ${language === "hindi" ? "📱 स्ट���र�� पैक���ज: ₹[आपकी rate]" : "📱 Story Package: ����[Your rate]"}
 ${language === "hindi" ? "• 3-5 story slides" : "• 3-5 story slides"}
@@ -741,7 +741,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "���ेम्प्लेट 5: प��फॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
+${language === "hindi" ? "टेम्प्लेट 5: प��फॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} x [Brand] - Campaign Performance Report` : `${userName} x [Brand] - Campaign Performance Report`}
 
 ${language === "hindi" ? "Dear [Brand Team]," : "Dear [Brand Team],"}
@@ -756,7 +756,7 @@ ${language === "hindi" ? "�� Website Clicks: [number]" : "• Website Clicks
 
 ${language === "hindi" ? "🎯 AUDIENCE FEEDBACK:" : "🎯 AUDIENCE FEEDBACK:"}
 ${language === "hindi" ? "• [Positive feedback examples]" : "• [Positive feedback examples]"}
-${language === "hindi" ? "��� [Questions about product]" : "• [Questions about product]"}
+${language === "hindi" ? "• [Questions about product]" : "• [Questions about product]"}
 
 ${language === "hindi" ? "मुझे future collaborations मे��� interest है और आपके products को authentically promote करना पसंद ह���।" : "I'm interested in future collaborations and love authentically promoting your products."}
 
@@ -826,7 +826,7 @@ ${language === "hindi" ? "- एनालिटिक्स ट्रैक क�
 
 ${language === "hindi" ? "दिन 31-60: विकास और अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
 ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करे�� (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफिक कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
-${language === "hindi" ? "- ट्रेंड���ंग टॉपि��्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
+${language === "hindi" ? "- ट्रेंडिंग टॉपि��्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
@@ -1005,7 +1005,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
               <h2 className="text-lg font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "अपना ���ूरा विश्लेषण चाहते हैं?"
+                  ? "अपना ���ूरा व���श्लेषण चाहते हैं?"
                   : "Want Your Complete Analysis?"}
               </h2>
               <p className="text-gray-600 mb-6">
@@ -1683,7 +1683,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       </p>
                       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 max-w-2xl mx-auto">
                         <p className="text-blue-800 font-medium">
-                          💡 Engagement Rate = (likes + comments + shares) ÷ followers × 100
+                          💡 Engagement Rate = (likes + comments + shares)/followers × 100
                         </p>
                       </div>
                     </div>
