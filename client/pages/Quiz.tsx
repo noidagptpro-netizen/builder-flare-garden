@@ -264,7 +264,7 @@ const languages = {
       6: "सबसे बड़ी चुनौती",
       7: "���क्ष्य",
       8: "सोशल लिंक्स",
-      9: "एंगेजमेंट रेट",
+      9: "एंगे��मेंट रेट",
     },
     questions: {
       primaryPlatform: "आप मु���्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
@@ -277,7 +277,7 @@ const languages = {
       experience:
         "आप कित��े समय से कंटेंट बना रहे ���ैं? (सभी स्तर चुने��� जिनका आपने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आप���ी वर्तम���न मासिक आय क्या है?",
-      engagementRate: "आपका औसत एंगेजमेंट रेट क्या है? Engagement rate = (likes + comments + shares) / followers",
+      engagementRate: "आपका औसत एंगेज���ेंट रेट क्या है? Engagement rate = (likes + comments + shares) / followers",
       biggestChallenge:
         "आपकी सबसे बड़ी चुनौती क्या है? 3 तक चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
       goals:
@@ -322,7 +322,7 @@ const languages = {
         "प्रेरणा और स्व-सह��यता",
         "पेरें���िंग और परिवार",
         "DIY और श��ल्प",
-        "���ध्यात्म और माइंडफुलनेस",
+        "���ध्यात्म और माइ���डफुलनेस",
         "अन्य",
       ],
       engagementRates: [
@@ -441,7 +441,7 @@ const languages = {
       },
       growthGuide: {
         title: "90-��िन की ग्रोथ स्ट्रैटेजी गाइड",
-        description: "अपने फॉलोइंग बढ़ाने के लिए स्टेप-बाई-स्टेप रोडमैप",
+        description: "अपने फॉलोइंग बढ़ाने के लिए स्टेप-ब���ई-स्टेप रोडमैप",
       },
       downloadFree: "मुफ्त डाउनलोड करें",
     },
@@ -754,7 +754,7 @@ ${language === "hindi" ? "• Engagement Rate: [percentage]" : "• Engagement R
 ${language === "hindi" ? "• Story Views: [number]" : "• Story Views: [number]"}
 ${language === "hindi" ? "�� Website Clicks: [number]" : "• Website Clicks: [number]"}
 
-${language === "hindi" ? "🎯 AUDIENCE FEEDBACK:" : "🎯 AUDIENCE FEEDBACK:"}
+${language === "hindi" ? "��� AUDIENCE FEEDBACK:" : "🎯 AUDIENCE FEEDBACK:"}
 ${language === "hindi" ? "• [Positive feedback examples]" : "• [Positive feedback examples]"}
 ${language === "hindi" ? "• [Questions about product]" : "• [Questions about product]"}
 
@@ -1395,65 +1395,107 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     </div>
 
                     <div>
-                      <div className="grid grid-cols-1 gap-6">
-                        {(() => {
-                          // Group challenges by category
-                          const groupedChallenges: { [key: string]: string[] } = {};
-                          t.options.challenges.forEach((challenge: string) => {
-                            const colonIndex = challenge.indexOf(':');
-                            if (colonIndex > 0) {
-                              const category = challenge.substring(0, colonIndex);
-                              const challengeText = challenge.substring(colonIndex + 1).trim();
-                              if (!groupedChallenges[category]) {
-                                groupedChallenges[category] = [];
+                      <div className="space-y-6">
+                        <div>
+                          <label className="block text-gray-900 font-semibold mb-3 text-lg">
+                            1. Growth & Engagement
+                          </label>
+                          <select
+                            value={quizData.biggestChallenge.find(c => c.includes("Growth & Engagement")) || ""}
+                            onChange={(e) => {
+                              if (e.target.value) {
+                                const filtered = quizData.biggestChallenge.filter(c => !c.includes("Growth & Engagement"));
+                                if (filtered.length < 3) {
+                                  updateQuizData("biggestChallenge", [...filtered, e.target.value]);
+                                }
+                              } else {
+                                updateQuizData("biggestChallenge", quizData.biggestChallenge.filter(c => !c.includes("Growth & Engagement")));
                               }
-                              groupedChallenges[category].push(challenge);
-                            }
-                          });
+                            }}
+                            className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-red-400 focus:outline-none transition-colors text-base"
+                          >
+                            <option value="">Choose your Growth & Engagement challenge</option>
+                            <option value="🔄 Growth & Engagement: Low views & inconsistent engagement">Low views & inconsistent engagement</option>
+                            <option value="🧠 Growth & Engagement: Staying relevant with fast-moving trends">Staying relevant with fast-moving trends</option>
+                            <option value="🔁 Growth & Engagement: Algorithm changes killing reach">Algorithm changes killing reach</option>
+                            <option value="🧍‍♀️ Growth & Engagement: Competing with bigger creators">Competing with bigger creators</option>
+                          </select>
+                        </div>
 
-                          return Object.entries(groupedChallenges).map(([category, challenges]) => (
-                            <div key={category} className="bg-gray-50 rounded-2xl p-6 border-2 border-gray-200">
-                              <h3 className="text-xl font-bold text-gray-900 mb-4">{category}</h3>
-                              <div className="grid grid-cols-1 gap-3">
-                                {challenges.map((challenge) => (
-                                  <button
-                                    key={challenge}
-                                    onClick={() =>
-                                      toggleMultipleChoice(
-                                        "biggestChallenge",
-                                        challenge,
-                                        3,
-                                      )
-                                    }
-                                    disabled={
-                                      !quizData.biggestChallenge.includes(challenge) &&
-                                      quizData.biggestChallenge.length >= 3
-                                    }
-                                    className={`p-4 rounded-xl border-2 text-left transition-all duration-300 hover:scale-102 ${
-                                      !quizData.biggestChallenge.includes(challenge) &&
-                                      quizData.biggestChallenge.length >= 3
-                                        ? "opacity-50 cursor-not-allowed"
-                                        : ""
-                                    } ${
-                                      quizData.biggestChallenge.includes(challenge)
-                                        ? "bg-gradient-to-r from-red-50 to-orange-50 border-red-400 text-gray-900 shadow-xl transform scale-102"
-                                        : "bg-white border-gray-200 text-gray-700 hover:border-red-300 hover:shadow-lg"
-                                    }`}
-                                  >
-                                    <div className="flex items-start gap-3">
-                                      {quizData.biggestChallenge.includes(challenge) && (
-                                        <CheckCircle className="w-5 h-5 text-red-500 flex-shrink-0 mt-1" />
-                                      )}
-                                      <span className="text-base font-medium leading-relaxed">
-                                        {challenge.split(': ')[1] || challenge}
-                                      </span>
-                                    </div>
-                                  </button>
-                                ))}
-                              </div>
-                            </div>
-                          ));
-                        })()}
+                        <div>
+                          <label className="block text-gray-900 font-semibold mb-3 text-lg">
+                            2. Brand & Identity
+                          </label>
+                          <select
+                            value={quizData.biggestChallenge.find(c => c.includes("Brand & Identity")) || ""}
+                            onChange={(e) => {
+                              if (e.target.value) {
+                                const filtered = quizData.biggestChallenge.filter(c => !c.includes("Brand & Identity"));
+                                if (filtered.length < 3) {
+                                  updateQuizData("biggestChallenge", [...filtered, e.target.value]);
+                                }
+                              } else {
+                                updateQuizData("biggestChallenge", quizData.biggestChallenge.filter(c => !c.includes("Brand & Identity")));
+                              }
+                            }}
+                            className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-red-400 focus:outline-none transition-colors text-base"
+                          >
+                            <option value="">Choose your Brand & Identity challenge</option>
+                            <option value="🗣️ Brand & Identity: Struggling to find my unique voice/style">Struggling to find my unique voice/style</option>
+                            <option value="🤝 Brand & Identity: Balancing authenticity with brand appeal">Balancing authenticity with brand appeal</option>
+                            <option value="🌱 Brand & Identity: Building a real, connected community">Building a real, connected community</option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <label className="block text-gray-900 font-semibold mb-3 text-lg">
+                            3. Monetization & Scaling
+                          </label>
+                          <select
+                            value={quizData.biggestChallenge.find(c => c.includes("Monetization & Scaling")) || ""}
+                            onChange={(e) => {
+                              if (e.target.value) {
+                                const filtered = quizData.biggestChallenge.filter(c => !c.includes("Monetization & Scaling"));
+                                if (filtered.length < 3) {
+                                  updateQuizData("biggestChallenge", [...filtered, e.target.value]);
+                                }
+                              } else {
+                                updateQuizData("biggestChallenge", quizData.biggestChallenge.filter(c => !c.includes("Monetization & Scaling")));
+                              }
+                            }}
+                            className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-red-400 focus:outline-none transition-colors text-base"
+                          >
+                            <option value="">Choose your Monetization & Scaling challenge</option>
+                            <option value="💔 Monetization & Scaling: Can't convert followers into paying customers">Can't convert followers into paying customers</option>
+                            <option value="🤝 Monetization & Scaling: Not landing brand collaborations">Not landing brand collaborations</option>
+                            <option value="📊 Monetization & Scaling: Confused by analytics & metrics">Confused by analytics & metrics</option>
+                          </select>
+                        </div>
+
+                        <div>
+                          <label className="block text-gray-900 font-semibold mb-3 text-lg">
+                            4. Creator Wellness
+                          </label>
+                          <select
+                            value={quizData.biggestChallenge.find(c => c.includes("Creator Wellness")) || ""}
+                            onChange={(e) => {
+                              if (e.target.value) {
+                                const filtered = quizData.biggestChallenge.filter(c => !c.includes("Creator Wellness"));
+                                if (filtered.length < 3) {
+                                  updateQuizData("biggestChallenge", [...filtered, e.target.value]);
+                                }
+                              } else {
+                                updateQuizData("biggestChallenge", quizData.biggestChallenge.filter(c => !c.includes("Creator Wellness")));
+                              }
+                            }}
+                            className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-red-400 focus:outline-none transition-colors text-base"
+                          >
+                            <option value="">Choose your Creator Wellness challenge</option>
+                            <option value="🥵 Creator Wellness: Burnout & content fatigue">Burnout & content fatigue</option>
+                            <option value="💬 Creator Wellness: Handling trolls/negativity">Handling trolls/negativity</option>
+                            <option value="📱 Creator Wellness: Managing too many platforms at once">Managing too many platforms at once</option>
+                          </select>
+                        </div>
                       </div>
                       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mt-6">
                         <p className="text-center text-blue-800 font-medium">
@@ -1476,7 +1518,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       </h2>
                       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         {language === "hindi"
-                          ? "आप अगले 6 महीनों ���ें क्या हासि��� करना चाहते हैं? 3 लक्ष्य चुनें जो आपको सबसे ज���यादा उत्साहित करते हैं!"
+                          ? "आप अगले 6 महीन���ं ���ें क्या हासि��� करना चाहते हैं? 3 लक्ष्य चुनें जो आपको सबसे ज���यादा उत्साहित करते हैं!"
                           : "What are your main goals for the next 6 months? Select up to 3 most important goals – this helps us personalize your recommendations"}
                       </p>
                     </div>
