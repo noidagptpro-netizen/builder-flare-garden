@@ -187,11 +187,11 @@ const languages = {
       ],
       incomes: [
         "₹0 (No income yet)",
-        "₹1-5K",
-        "₹5K-15K",
-        "₹15K-30K",
-        "₹30K-50K",
-        "₹50K-1L",
+        "₹1K–5K",
+        "₹5K–15K",
+        "₹15K–30K",
+        "₹30K–50K",
+        "₹50K–1L",
         "₹1L+",
       ],
       challenges: [
@@ -259,7 +259,7 @@ const languages = {
   },
   hindi: {
     title: "क्रिएटर सक्सेस क्विज़",
-    subtitle: "3 मिनट में अपनी व्य��्तिगत ग्रोथ रणनीति पाएं",
+    subtitle: "3 मिनट में अपनी व्य��्तिगत ग्रोथ रणनीति प��एं",
     steps: {
       1: "प्लेटफॉर्म और फॉलोअर्स",
       2: "कंटे��ट निच",
@@ -278,7 +278,7 @@ const languages = {
         "आप और कौन से प्लेटफॉर्म का उपयो�� करते हैं? (कई विकल्प चुनें)",
       niche: "आपका कंटेंट किस विषय पर है?",
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
-      postingFrequency: "आप कितनी ��ार कंटेंट पोस्ट करते हैं?",
+      postingFrequency: "आप कितनी ��ार कंटेंट पोस्ट क��ते हैं?",
       experience:
         "आप कितने समय से कंटेंट बना रहे ���ैं? (सभी स्तर चुने��� जिनका आपने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आप���ी वर्तम���न मासिक आय क्या है?",
@@ -320,7 +320,7 @@ const languages = {
         "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
         "कला और डिज़ाइन",
-        "गेमिंग और ���स्पोर्ट्स",
+        "गेमिंग और ���स्पोर���ट्स",
         "��ंगीत और नृत्य",
         "शिक्षा ���र सीखना",
         "खेल और एथलेटिक्स",
@@ -353,7 +353,7 @@ const languages = {
         "रोज़ाना",
         "सप्���ाह में 3-4 बार",
         "सा���्ताहिक",
-        "���हीने में 2-3 बार",
+        "������ीने में 2-3 बार",
         "��ासिक",
         "अनियमित",
       ],
@@ -446,7 +446,7 @@ const languages = {
         description: "आकर्षक मीडिया किट बन���एं जो ब्रांड्स को पसंद आएंगे",
       },
       emailTemplates: {
-        title: "ब्रांड आउटरीच ईमेल टेम्प्लेट्स",
+        title: "ब्रांड आउटरीच ईमेल टेम्प���लेट्स",
         description: "��्रांड पार्टनरशिप के लिए 30+ स���द्ध ईमेल टेम्प्लेट्स",
       },
       growthGuide: {
@@ -637,7 +637,7 @@ ${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${
 ${language === "hindi" ? "Instagram Reel:" : "Instagram Reel:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "Instagram Story:" : "Instagram Story:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-300" : quizData.followerCount.includes("1K - 5K") ? "300-500" : "500-1,500"}
 ${language === "hindi" ? "YouTube शॉर्ट:" : "YouTube Short:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
-${language === "hindi" ? "YouTube वी���ियो मेंशन:" : "YouTube Video Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-2,000" : quizData.followerCount.includes("1K - 5K") ? "2,000-3,000" : "3,000-8,000"}
+${language === "hindi" ? "YouTube वी���ियो म���ंशन:" : "YouTube Video Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-2,000" : quizData.followerCount.includes("1K - 5K") ? "2,000-3,000" : "3,000-8,000"}
 ${language === "hindi" ? "Twitter पोस��ट:" : "Twitter Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-200" : quizData.followerCount.includes("1K - 5K") ? "200-400" : "400-1,000"}
 ${language === "hindi" ? "Newsletter मेंश��:" : "Newsletter Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-2,500"}
 
