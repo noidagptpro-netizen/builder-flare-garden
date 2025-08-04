@@ -277,7 +277,7 @@ const languages = {
       experience:
         "आप कित��े समय से कंटेंट बना रहे ���ैं? (सभी स्तर चुने��� जिनका आपने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आप���ी वर्तम���न मासिक आय क्या है?",
-      engagementRate: "आपका औसत एंगेजमेंट रेट क्या है? Engagement rate = (likes + comments + shares) / followers",
+      engagementRate: "आपका औ��त एंगेजमेंट रेट क्या है? Engagement rate = (likes + comments + shares) / followers",
       biggestChallenge:
         "आपकी सबसे बड़ी चुनौती क्या है? 3 तक चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
       goals:
@@ -464,7 +464,7 @@ export default function Quiz() {
   const quizContentRef = useRef<HTMLDivElement>(null);
 
   const t = languages[language];
-  const totalSteps = 9;
+  const totalSteps = 12;
 
   // Save language preference and update quiz data when language changes
   React.useEffect(() => {
@@ -657,7 +657,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] �
 
 ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
-${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम करने में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
+${language === "hindi" ? "मुझे आप���े ���्रांड के साथ काम करने में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने म��ं विश��षज्ञ हूं" : "- I specialize in creating authentic content"}
@@ -667,7 +667,7 @@ ${language === "hindi" ? "- फॉ����ोअर्स:" : "- Followers:"
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "- प��स्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
-${language === "hindi" ? "क्या आप स���योग के अवसरों पर ���र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
+${language === "hindi" ? "क्या आप स����योग के अवसरों पर ���र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
 ${language === "hindi" ? "धन्यवाद," : "Best regards,"}
 ${userName}
@@ -683,7 +683,7 @@ ${language === "hindi" ? "मैंने पिछले सप्ताह आ
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
-${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule क��� सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
+${language === "hindi" ? "क���या हम इस week एक quick 15-minute call schedule क��� सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
 
 ${language === "hindi" ? "Looking forward," : "Looking forward,"}
 ${userName}
