@@ -293,7 +293,7 @@ const languages = {
         "��िकट���क",
         "ट्विटर",
         "फेसबुक",
-        "वेबसाइट/ब्लॉग",
+        "वेबसाइट/���्लॉग",
       ],
       followerRanges: [
         "1K से कम",
@@ -322,7 +322,7 @@ const languages = {
         "प्रेरणा और स्व-सह��यता",
         "पेरें���िंग और परिवार",
         "DIY और शिल्प",
-        "आध्यात्म और माइंडफुलनेस",
+        "���ध्यात्म और माइंडफुलनेस",
         "अन्य",
       ],
       engagementRates: [
@@ -356,7 +356,7 @@ const languages = {
         "अभी शुरू किया (0-6 महीन��)",
         "शुरुआती (6 ��ही�����े - 1 साल)",
         "ब���़ रहे हैं (1-2 साल)",
-        "अनुभवी (2-3 साल)",
+        "अन��भवी (2-3 साल)",
         "विशेषज्ञ (3+ साल)",
       ],
       incomes: [
@@ -428,7 +428,7 @@ const languages = {
       submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संसाधन",
+      title: "🎉 क्विज़ पूरा! यहाँ हैं आपके मुफ्त क्रिएटर संसा��न",
       subtitle:
         "अपनी क्रिएटर यात्रा शुरू करने के लिए ��न शक्तिशाली टूल्�� को डाउनलोड करें",
       mediaKit: {
@@ -669,7 +669,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 2: फॉलो-���प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
+${language === "hindi" ? "टेम्प्लेट 2: फॉलो-����प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
 
 ${language === "hindi" ? "हैलो [संपर्क नाम]," : "Hi [Contact Name],"}
@@ -717,7 +717,7 @@ ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
 ${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
 
-${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate को slightly adjust कर सकते ��ैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
+${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate क��� slightly adjust कर सकते ��ैं? मैं ₹[your counter] suggest करूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
 ${language === "hindi" ? "• मेरी audience क�� [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
@@ -747,7 +747,7 @@ ${language === "hindi" ? "🎯 AUDIENCE FEEDBACK:" : "🎯 AUDIENCE FEEDBACK:"}
 ${language === "hindi" ? "• [Positive feedback examples]" : "• [Positive feedback examples]"}
 ${language === "hindi" ? "• [Questions about product]" : "• [Questions about product]"}
 
-${language === "hindi" ? "मुझे future collaborations में interest है और आपके products को authentically promote करना पसंद ह���।" : "I'm interested in future collaborations and love authentically promoting your products."}
+${language === "hindi" ? "मुझे future collaborations मे��� interest है और आपके products को authentically promote करना पसंद ह���।" : "I'm interested in future collaborations and love authentically promoting your products."}
 
 ${language === "hindi" ? "Thank you for trusting me!" : "Thank you for trusting me!"}
 ${userName}
@@ -1423,7 +1423,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         {language === "hindi"
                           ? "आप अगले 6 महीनों में क्या हासि��� करना चाहते हैं? 3 लक्ष्य चुनें जो आपको सबसे ज���यादा उत्साहित करते हैं!"
-                          : "What do you want to achieve in the next 6 months? Choose up to 3 goals that excite you most!"}
+                          : "What are your main goals for the next 6 months? Select up to 3 most important goals – this helps us personalize your recommendations"}
                       </p>
                     </div>
 
@@ -1473,7 +1473,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-lg font-bold text-gray-900 mb-4">
-                        Social Profiles 🔗
+                        Social Profiles ���
                       </h2>
                       <p className="text-gray-600">
                         Optional: Add your social links for better analysis
