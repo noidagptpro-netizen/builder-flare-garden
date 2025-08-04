@@ -280,8 +280,7 @@ const languages = {
       engagementRate: "आपका औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
         "आपकी सबसे बड़ी चुनौती क्या है? 3 तक चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
-      goals:
-        "आपके अगले 6 महीने के मुख���य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
+      goals: "आपके अगले 6 महीने के मुख���य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
       socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
       bio: "अपने और अपने कंटेंट के बारे ����ें कुछ और ब��ाएं (वैकल्��िक)",
     },
@@ -456,7 +455,11 @@ export default function Quiz() {
     const savedLanguage = localStorage.getItem("famechase-language");
     const urlParams = new URLSearchParams(window.location.search);
     const urlLanguage = urlParams.get("lang");
-    return (urlLanguage as "english" | "hindi") || (savedLanguage as "english" | "hindi") || "english";
+    return (
+      (urlLanguage as "english" | "hindi") ||
+      (savedLanguage as "english" | "hindi") ||
+      "english"
+    );
   });
   const [isGenerating, setIsGenerating] = useState(false);
   const [showFreeResources, setShowFreeResources] = useState(false);
@@ -469,7 +472,7 @@ export default function Quiz() {
   // Save language preference and update quiz data when language changes
   React.useEffect(() => {
     localStorage.setItem("famechase-language", language);
-    setQuizData(prev => ({ ...prev, language }));
+    setQuizData((prev) => ({ ...prev, language }));
   }, [language]);
 
   // Scroll to top when quiz page loads
@@ -909,13 +912,16 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   Basic Media Kit Template
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Simple media kit template with basic stats and contact info - perfect for getting started
+                  Simple media kit template with basic stats and contact info -
+                  perfect for getting started
                 </p>
                 <div className="text-sm text-green-600 mb-4">
-                  ✓ Professional template format<br/>
-                  ✓ Industry-standard rate suggestions<br/>
-                  ✓ Easy customization fields<br/>
-                  ✓ Multi-platform rate structure
+                  ✓ Professional template format
+                  <br />
+                  ✓ Industry-standard rate suggestions
+                  <br />
+                  ✓ Easy customization fields
+                  <br />✓ Multi-platform rate structure
                 </div>
                 <button
                   onClick={() =>
@@ -943,13 +949,16 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   Basic Email Templates (6)
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Essential outreach templates to get you started with brand partnerships
+                  Essential outreach templates to get you started with brand
+                  partnerships
                 </p>
                 <div className="text-sm text-green-600 mb-4">
-                  ✓ 6 proven email templates<br/>
-                  ✓ Professional follow-up sequences<br/>
-                  ✓ Ready-to-use pitch formats<br/>
-                  ✓ Brand outreach best practices
+                  ✓ 6 proven email templates
+                  <br />
+                  ✓ Professional follow-up sequences
+                  <br />
+                  ✓ Ready-to-use pitch formats
+                  <br />✓ Brand outreach best practices
                 </div>
                 <button
                   onClick={() =>
@@ -977,13 +986,16 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   Basic Growth Guide (30-Day)
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  Simple 30-day action plan to get you started on your growth journey
+                  Simple 30-day action plan to get you started on your growth
+                  journey
                 </p>
                 <div className="text-sm text-green-600 mb-4">
-                  ✓ Comprehensive 30-day action plan<br/>
-                  ✓ Proven growth strategies<br/>
-                  ✓ Daily actionable tasks<br/>
-                  ✓ Progress tracking templates
+                  ✓ Comprehensive 30-day action plan
+                  <br />
+                  ✓ Proven growth strategies
+                  <br />
+                  ✓ Daily actionable tasks
+                  <br />✓ Progress tracking templates
                 </div>
                 <button
                   onClick={() =>
@@ -999,8 +1011,6 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 </button>
               </div>
             </div>
-
-
 
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
               <h2 className="text-lg font-bold text-gray-900 mb-4">
@@ -1054,13 +1064,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
               <option value="english">English</option>
               <option value="hindi">हिंदी</option>
             </select>
-
-
           </div>
         </div>
       </header>
-
-
 
       {/* Quiz Content */}
       <main ref={quizContentRef} className="container mx-auto px-4 py-4">
@@ -1086,7 +1092,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
             <div className="flex justify-end mb-6">
               <select
                 value={language}
-                onChange={(e) => setLanguage(e.target.value as "english" | "hindi")}
+                onChange={(e) =>
+                  setLanguage(e.target.value as "english" | "hindi")
+                }
                 className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
               >
                 <option value="english">English</option>
@@ -1122,7 +1130,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         Your Main Platform
                       </h2>
                       <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Where do you create and share your content? This helps us understand your primary audience and platform-specific strategies.
+                        Where do you create and share your content? This helps
+                        us understand your primary audience and
+                        platform-specific strategies.
                       </p>
                     </div>
 
@@ -1132,7 +1142,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       </label>
                       <select
                         value={quizData.primaryPlatform}
-                        onChange={(e) => updateQuizData("primaryPlatform", e.target.value)}
+                        onChange={(e) =>
+                          updateQuizData("primaryPlatform", e.target.value)
+                        }
                         className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
                       >
                         <option value="">Select your primary platform</option>
@@ -1157,7 +1169,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         Your Audience Size
                       </h2>
                       <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        How many followers do you currently have on your primary platform?
+                        How many followers do you currently have on your primary
+                        platform?
                       </p>
                     </div>
 
@@ -1167,7 +1180,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       </label>
                       <select
                         value={quizData.followerCount}
-                        onChange={(e) => updateQuizData("followerCount", e.target.value)}
+                        onChange={(e) =>
+                          updateQuizData("followerCount", e.target.value)
+                        }
                         className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
                       >
                         <option value="">Select your follower count</option>
@@ -1237,10 +1252,14 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       </label>
                       <select
                         value={quizData.niche}
-                        onChange={(e) => updateQuizData("niche", e.target.value)}
+                        onChange={(e) =>
+                          updateQuizData("niche", e.target.value)
+                        }
                         className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-soft-violet focus:outline-none transition-colors text-lg"
                       >
-                        <option value="">What topics do you create content about?</option>
+                        <option value="">
+                          What topics do you create content about?
+                        </option>
                         {t.options.niches.map((niche) => (
                           <option key={niche} value={niche}>
                             {niche}
@@ -1269,10 +1288,14 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       </label>
                       <select
                         value={quizData.contentType}
-                        onChange={(e) => updateQuizData("contentType", e.target.value)}
+                        onChange={(e) =>
+                          updateQuizData("contentType", e.target.value)
+                        }
                         className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
                       >
-                        <option value="">What type of content do you primarily create?</option>
+                        <option value="">
+                          What type of content do you primarily create?
+                        </option>
                         {t.options.contentTypes.map((type) => (
                           <option key={type} value={type}>
                             {type}
@@ -1301,10 +1324,14 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       </label>
                       <select
                         value={quizData.postingFrequency}
-                        onChange={(e) => updateQuizData("postingFrequency", e.target.value)}
+                        onChange={(e) =>
+                          updateQuizData("postingFrequency", e.target.value)
+                        }
                         className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-neon-green focus:outline-none transition-colors text-lg"
                       >
-                        <option value="">How often do you share new content?</option>
+                        <option value="">
+                          How often do you share new content?
+                        </option>
                         {t.options.frequencies.map((freq) => (
                           <option key={freq} value={freq}>
                             {freq}
@@ -1333,7 +1360,12 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       </label>
                       <select
                         value={quizData.experience[0] || ""}
-                        onChange={(e) => updateQuizData("experience", e.target.value ? [e.target.value] : [])}
+                        onChange={(e) =>
+                          updateQuizData(
+                            "experience",
+                            e.target.value ? [e.target.value] : [],
+                          )
+                        }
                         className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-soft-violet focus:outline-none transition-colors text-lg"
                       >
                         <option value="">Select your experience level</option>
@@ -1355,7 +1387,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         Current Income 💰
                       </h2>
                       <p className="text-xl text-gray-600">
-                        What's your current monthly income from content creation?
+                        What's your current monthly income from content
+                        creation?
                       </p>
                     </div>
 
@@ -1365,10 +1398,14 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       </label>
                       <select
                         value={quizData.monthlyIncome}
-                        onChange={(e) => updateQuizData("monthlyIncome", e.target.value)}
+                        onChange={(e) =>
+                          updateQuizData("monthlyIncome", e.target.value)
+                        }
                         className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-soft-violet focus:outline-none transition-colors text-lg"
                       >
-                        <option value="">What's your current monthly income from content?</option>
+                        <option value="">
+                          What's your current monthly income from content?
+                        </option>
                         {t.options.incomes.map((income) => (
                           <option key={income} value={income}>
                             {income}
@@ -1390,7 +1427,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         What's Your Biggest Struggle?
                       </h2>
                       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Pick up to 3 challenges – we're all in this together! Understanding your pain points helps us provide better solutions.
+                        Pick up to 3 challenges – we're all in this together!
+                        Understanding your pain points helps us provide better
+                        solutions.
                       </p>
                     </div>
 
@@ -1401,24 +1440,49 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             1. Growth & Engagement
                           </label>
                           <select
-                            value={quizData.biggestChallenge.find(c => c.includes("Growth & Engagement")) || ""}
+                            value={
+                              quizData.biggestChallenge.find((c) =>
+                                c.includes("Growth & Engagement"),
+                              ) || ""
+                            }
                             onChange={(e) => {
                               if (e.target.value) {
-                                const filtered = quizData.biggestChallenge.filter(c => !c.includes("Growth & Engagement"));
+                                const filtered =
+                                  quizData.biggestChallenge.filter(
+                                    (c) => !c.includes("Growth & Engagement"),
+                                  );
                                 if (filtered.length < 3) {
-                                  updateQuizData("biggestChallenge", [...filtered, e.target.value]);
+                                  updateQuizData("biggestChallenge", [
+                                    ...filtered,
+                                    e.target.value,
+                                  ]);
                                 }
                               } else {
-                                updateQuizData("biggestChallenge", quizData.biggestChallenge.filter(c => !c.includes("Growth & Engagement")));
+                                updateQuizData(
+                                  "biggestChallenge",
+                                  quizData.biggestChallenge.filter(
+                                    (c) => !c.includes("Growth & Engagement"),
+                                  ),
+                                );
                               }
                             }}
                             className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-red-400 focus:outline-none transition-colors text-base"
                           >
-                            <option value="">Choose your Growth & Engagement challenge</option>
-                            <option value="🔄 Growth & Engagement: Low views & inconsistent engagement">Low views & inconsistent engagement</option>
-                            <option value="🧠 Growth & Engagement: Staying relevant with fast-moving trends">Staying relevant with fast-moving trends</option>
-                            <option value="🔁 Growth & Engagement: Algorithm changes killing reach">Algorithm changes killing reach</option>
-                            <option value="🧍‍♀️ Growth & Engagement: Competing with bigger creators">Competing with bigger creators</option>
+                            <option value="">
+                              Choose your Growth & Engagement challenge
+                            </option>
+                            <option value="🔄 Growth & Engagement: Low views & inconsistent engagement">
+                              Low views & inconsistent engagement
+                            </option>
+                            <option value="🧠 Growth & Engagement: Staying relevant with fast-moving trends">
+                              Staying relevant with fast-moving trends
+                            </option>
+                            <option value="🔁 Growth & Engagement: Algorithm changes killing reach">
+                              Algorithm changes killing reach
+                            </option>
+                            <option value="🧍‍♀️ Growth & Engagement: Competing with bigger creators">
+                              Competing with bigger creators
+                            </option>
                           </select>
                         </div>
 
@@ -1427,23 +1491,46 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             2. Brand & Identity
                           </label>
                           <select
-                            value={quizData.biggestChallenge.find(c => c.includes("Brand & Identity")) || ""}
+                            value={
+                              quizData.biggestChallenge.find((c) =>
+                                c.includes("Brand & Identity"),
+                              ) || ""
+                            }
                             onChange={(e) => {
                               if (e.target.value) {
-                                const filtered = quizData.biggestChallenge.filter(c => !c.includes("Brand & Identity"));
+                                const filtered =
+                                  quizData.biggestChallenge.filter(
+                                    (c) => !c.includes("Brand & Identity"),
+                                  );
                                 if (filtered.length < 3) {
-                                  updateQuizData("biggestChallenge", [...filtered, e.target.value]);
+                                  updateQuizData("biggestChallenge", [
+                                    ...filtered,
+                                    e.target.value,
+                                  ]);
                                 }
                               } else {
-                                updateQuizData("biggestChallenge", quizData.biggestChallenge.filter(c => !c.includes("Brand & Identity")));
+                                updateQuizData(
+                                  "biggestChallenge",
+                                  quizData.biggestChallenge.filter(
+                                    (c) => !c.includes("Brand & Identity"),
+                                  ),
+                                );
                               }
                             }}
                             className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-red-400 focus:outline-none transition-colors text-base"
                           >
-                            <option value="">Choose your Brand & Identity challenge</option>
-                            <option value="🗣️ Brand & Identity: Struggling to find my unique voice/style">Struggling to find my unique voice/style</option>
-                            <option value="🤝 Brand & Identity: Balancing authenticity with brand appeal">Balancing authenticity with brand appeal</option>
-                            <option value="🌱 Brand & Identity: Building a real, connected community">Building a real, connected community</option>
+                            <option value="">
+                              Choose your Brand & Identity challenge
+                            </option>
+                            <option value="🗣️ Brand & Identity: Struggling to find my unique voice/style">
+                              Struggling to find my unique voice/style
+                            </option>
+                            <option value="🤝 Brand & Identity: Balancing authenticity with brand appeal">
+                              Balancing authenticity with brand appeal
+                            </option>
+                            <option value="🌱 Brand & Identity: Building a real, connected community">
+                              Building a real, connected community
+                            </option>
                           </select>
                         </div>
 
@@ -1452,23 +1539,48 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             3. Monetization & Scaling
                           </label>
                           <select
-                            value={quizData.biggestChallenge.find(c => c.includes("Monetization & Scaling")) || ""}
+                            value={
+                              quizData.biggestChallenge.find((c) =>
+                                c.includes("Monetization & Scaling"),
+                              ) || ""
+                            }
                             onChange={(e) => {
                               if (e.target.value) {
-                                const filtered = quizData.biggestChallenge.filter(c => !c.includes("Monetization & Scaling"));
+                                const filtered =
+                                  quizData.biggestChallenge.filter(
+                                    (c) =>
+                                      !c.includes("Monetization & Scaling"),
+                                  );
                                 if (filtered.length < 3) {
-                                  updateQuizData("biggestChallenge", [...filtered, e.target.value]);
+                                  updateQuizData("biggestChallenge", [
+                                    ...filtered,
+                                    e.target.value,
+                                  ]);
                                 }
                               } else {
-                                updateQuizData("biggestChallenge", quizData.biggestChallenge.filter(c => !c.includes("Monetization & Scaling")));
+                                updateQuizData(
+                                  "biggestChallenge",
+                                  quizData.biggestChallenge.filter(
+                                    (c) =>
+                                      !c.includes("Monetization & Scaling"),
+                                  ),
+                                );
                               }
                             }}
                             className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-red-400 focus:outline-none transition-colors text-base"
                           >
-                            <option value="">Choose your Monetization & Scaling challenge</option>
-                            <option value="💔 Monetization & Scaling: Can't convert followers into paying customers">Can't convert followers into paying customers</option>
-                            <option value="🤝 Monetization & Scaling: Not landing brand collaborations">Not landing brand collaborations</option>
-                            <option value="📊 Monetization & Scaling: Confused by analytics & metrics">Confused by analytics & metrics</option>
+                            <option value="">
+                              Choose your Monetization & Scaling challenge
+                            </option>
+                            <option value="💔 Monetization & Scaling: Can't convert followers into paying customers">
+                              Can't convert followers into paying customers
+                            </option>
+                            <option value="🤝 Monetization & Scaling: Not landing brand collaborations">
+                              Not landing brand collaborations
+                            </option>
+                            <option value="📊 Monetization & Scaling: Confused by analytics & metrics">
+                              Confused by analytics & metrics
+                            </option>
                           </select>
                         </div>
 
@@ -1477,29 +1589,53 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             4. Creator Wellness
                           </label>
                           <select
-                            value={quizData.biggestChallenge.find(c => c.includes("Creator Wellness")) || ""}
+                            value={
+                              quizData.biggestChallenge.find((c) =>
+                                c.includes("Creator Wellness"),
+                              ) || ""
+                            }
                             onChange={(e) => {
                               if (e.target.value) {
-                                const filtered = quizData.biggestChallenge.filter(c => !c.includes("Creator Wellness"));
+                                const filtered =
+                                  quizData.biggestChallenge.filter(
+                                    (c) => !c.includes("Creator Wellness"),
+                                  );
                                 if (filtered.length < 3) {
-                                  updateQuizData("biggestChallenge", [...filtered, e.target.value]);
+                                  updateQuizData("biggestChallenge", [
+                                    ...filtered,
+                                    e.target.value,
+                                  ]);
                                 }
                               } else {
-                                updateQuizData("biggestChallenge", quizData.biggestChallenge.filter(c => !c.includes("Creator Wellness")));
+                                updateQuizData(
+                                  "biggestChallenge",
+                                  quizData.biggestChallenge.filter(
+                                    (c) => !c.includes("Creator Wellness"),
+                                  ),
+                                );
                               }
                             }}
                             className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-red-400 focus:outline-none transition-colors text-base"
                           >
-                            <option value="">Choose your Creator Wellness challenge</option>
-                            <option value="🥵 Creator Wellness: Burnout & content fatigue">Burnout & content fatigue</option>
-                            <option value="💬 Creator Wellness: Handling trolls/negativity">Handling trolls/negativity</option>
-                            <option value="📱 Creator Wellness: Managing too many platforms at once">Managing too many platforms at once</option>
+                            <option value="">
+                              Choose your Creator Wellness challenge
+                            </option>
+                            <option value="🥵 Creator Wellness: Burnout & content fatigue">
+                              Burnout & content fatigue
+                            </option>
+                            <option value="💬 Creator Wellness: Handling trolls/negativity">
+                              Handling trolls/negativity
+                            </option>
+                            <option value="📱 Creator Wellness: Managing too many platforms at once">
+                              Managing too many platforms at once
+                            </option>
                           </select>
                         </div>
                       </div>
                       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mt-6">
                         <p className="text-center text-blue-800 font-medium">
-                          Selected: {quizData.biggestChallenge.length} / 3 maximum
+                          Selected: {quizData.biggestChallenge.length} / 3
+                          maximum
                         </p>
                       </div>
                     </div>
@@ -1514,7 +1650,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         <TrendingUp className="w-10 h-10 text-white" />
                       </div>
                       <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        {language === "hindi" ? "आपके 6-महीने के ��क्ष्य" : "Your 6-Month Goals"}
+                        {language === "hindi"
+                          ? "आपके 6-महीने के ��क्ष्य"
+                          : "Your 6-Month Goals"}
                       </h2>
                       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         {language === "hindi"
@@ -1550,7 +1688,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                               {quizData.goals.includes(goal) && (
                                 <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
                               )}
-                              <span className="text-lg font-medium leading-relaxed">{goal}</span>
+                              <span className="text-lg font-medium leading-relaxed">
+                                {goal}
+                              </span>
                             </div>
                           </button>
                         ))}
@@ -1679,11 +1819,13 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         Engagement Analytics
                       </h2>
                       <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-6">
-                        Understanding your engagement helps us provide better monetization recommendations
+                        Understanding your engagement helps us provide better
+                        monetization recommendations
                       </p>
                       <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 max-w-2xl mx-auto">
                         <p className="text-blue-800 font-medium">
-                          💡 Engagement Rate = (likes + comments + shares)/followers × 100
+                          💡 Engagement Rate = (likes + comments +
+                          shares)/followers × 100
                         </p>
                       </div>
                     </div>
@@ -1696,7 +1838,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         {t.options.engagementRates.map((rate) => (
                           <button
                             key={rate}
-                            onClick={() => updateQuizData("engagementRate", rate)}
+                            onClick={() =>
+                              updateQuizData("engagementRate", rate)
+                            }
                             className={`p-6 rounded-2xl border-2 text-lg font-semibold transition-all duration-300 hover:scale-105 ${
                               quizData.engagementRate === rate
                                 ? "bg-gradient-to-r from-purple-50 to-pink-50 border-purple-400 text-gray-900 shadow-xl transform scale-105"

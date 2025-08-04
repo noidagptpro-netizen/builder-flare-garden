@@ -693,7 +693,6 @@ export default function Shop() {
                               <Download className="w-4 h-4" />
                               {currentLang.instantDownload}
                             </div>
-
                           </div>
                         </div>
                       </div>
