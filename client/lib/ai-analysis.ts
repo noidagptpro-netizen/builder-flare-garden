@@ -200,9 +200,14 @@ const getExperienceLevelDescription = (
   const postingConsistency = data?.postingFrequency || "Weekly";
 
   // Calculate experience efficiency score
-  const experienceEfficiency = fameScore >= 70 ? "excellent" :
-                              fameScore >= 50 ? "solid" :
-                              fameScore >= 30 ? "developing" : "foundational";
+  const experienceEfficiency =
+    fameScore >= 70
+      ? "excellent"
+      : fameScore >= 50
+        ? "solid"
+        : fameScore >= 30
+          ? "developing"
+          : "foundational";
 
   const experienceMap: { [key: string]: string } = {
     "Just started (0-6 months)": `🌱 BEGINNER CREATOR (${experienceText}) - You're in the learning phase but already showing ${experienceEfficiency} progress. Your ${data?.followerCount || "current audience"} in ${data ? Math.floor(6) : 6} months shows ${followerNum >= 1000 ? "accelerated" : "steady"} growth trajectory. Most creators take 12-18 months to reach your current level.`,
@@ -216,7 +221,8 @@ const getExperienceLevelDescription = (
     "Expert (3+ years)": `🏆 VETERAN CREATOR (${experienceText}) - Your 3+ year expertise demonstrates ${experienceEfficiency} creator business acumen. ${followerNum >= 100000 ? "Industry-leading" : "Authority-level"} status with ${data?.followerCount || "substantial influence"} ${incomeNum >= 50000 ? `and ₹${incomeNum.toLocaleString()}/month proving monetization mastery` : "and advanced monetization opportunities"}. Focus: Personal brand expansion and business scaling.`,
   };
 
-  let baseDescription = experienceMap[primaryExperience] || `Creator with ${experienceText}`;
+  let baseDescription =
+    experienceMap[primaryExperience] || `Creator with ${experienceText}`;
 
   // Add specific performance analysis based on fame score and data
   if (fameScore >= 80 && followerNum >= 50000) {
@@ -255,13 +261,27 @@ const getGrowthTrajectory = (data: QuizData, fameScore: number): string => {
   const age = parseInt(data.age) || 25;
 
   // Calculate specific earning potential based on their exact profile
-  const potentialMonthlyEarning = Math.round(followerNum * 0.8 + (fameScore * 100));
-  const brandDealsPerMonth = followerNum >= 50000 ? "15-25" : followerNum >= 10000 ? "5-12" : followerNum >= 5000 ? "2-6" : "1-3";
+  const potentialMonthlyEarning = Math.round(
+    followerNum * 0.8 + fameScore * 100,
+  );
+  const brandDealsPerMonth =
+    followerNum >= 50000
+      ? "15-25"
+      : followerNum >= 10000
+        ? "5-12"
+        : followerNum >= 5000
+          ? "2-6"
+          : "1-3";
 
   // Calculate growth timeline based on posting frequency
-  const monthsToNextMilestone = data.postingFrequency === "Daily" ? 3 :
-                                data.postingFrequency === "3-4 times a week" ? 4 :
-                                data.postingFrequency === "Weekly" ? 8 : 12;
+  const monthsToNextMilestone =
+    data.postingFrequency === "Daily"
+      ? 3
+      : data.postingFrequency === "3-4 times a week"
+        ? 4
+        : data.postingFrequency === "Weekly"
+          ? 8
+          : 12;
 
   let trajectory = "";
 
@@ -274,20 +294,22 @@ const getGrowthTrajectory = (data: QuizData, fameScore: number): string => {
   } else if (followerNum >= 5000) {
     trajectory = `📈 MONETIZATION READINESS: ${data.followerCount} followers puts you in the sweet spot for brand partnerships. Target: Reach 10K followers in ${monthsToNextMilestone} months with your ${data.postingFrequency.toLowerCase()} posting schedule, then start earning ₹${Math.round(followerNum * 1.2)}-₹${Math.round(followerNum * 2.5)}/month from ${brandDealsPerMonth} brand collaborations.`;
   } else if (followerNum >= 1000) {
-    trajectory = `🎯 GROWTH ACCELERATION: Your ${data.followerCount} foundation is solid. With ${data.postingFrequency.toLowerCase()} posting, you can realistically hit 5K followers in ${monthsToNextMilestone} months. Focus on ${data.primaryPlatform} algorithm optimization and cross-platform expansion to ${data.secondaryPlatforms.length > 0 ? 'your existing ' + data.secondaryPlatforms.join(', ') + ' presence' : '2-3 additional platforms'}.`;
+    trajectory = `🎯 GROWTH ACCELERATION: Your ${data.followerCount} foundation is solid. With ${data.postingFrequency.toLowerCase()} posting, you can realistically hit 5K followers in ${monthsToNextMilestone} months. Focus on ${data.primaryPlatform} algorithm optimization and cross-platform expansion to ${data.secondaryPlatforms.length > 0 ? "your existing " + data.secondaryPlatforms.join(", ") + " presence" : "2-3 additional platforms"}.`;
   } else {
-    trajectory = `🌱 FOUNDATION BUILDING: From ${data.followerCount} to 1K milestone requires ${monthsToNextMilestone} months of ${data.postingFrequency === "Daily" ? "daily" : "consistent"} posting. Your ${data.niche} niche has strong monetization potential once you hit 1K. Focus: Quality content, hashtag strategy, and engaging with your target audience in ${data.city || 'your city'}.`;
+    trajectory = `🌱 FOUNDATION BUILDING: From ${data.followerCount} to 1K milestone requires ${monthsToNextMilestone} months of ${data.postingFrequency === "Daily" ? "daily" : "consistent"} posting. Your ${data.niche} niche has strong monetization potential once you hit 1K. Focus: Quality content, hashtag strategy, and engaging with your target audience in ${data.city || "your city"}.`;
   }
 
   // Add ultra-specific challenge-based advice with real data
   if (data.biggestChallenge.length > 0) {
-    data.biggestChallenge.slice(0, 2).forEach(challenge => {
+    data.biggestChallenge.slice(0, 2).forEach((challenge) => {
       if (challenge.includes("Low views & inconsistent engagement")) {
         trajectory += ` 🎯 ENGAGEMENT FIX: Your low engagement can be solved in 4-6 weeks. Post during peak hours (7-9 PM IST), use trending audio within 24 hours, and respond to comments within 1 hour. Target: Increase engagement from current rate to 4-6% through interactive content.`;
-      } else if (challenge.includes("Can't convert followers into paying customers")) {
+      } else if (
+        challenge.includes("Can't convert followers into paying customers")
+      ) {
         trajectory += ` 💸 CONVERSION OPTIMIZATION: With ${data.followerCount}, you should be converting 2-5% to customers. Add clear CTAs, create lead magnets, and use Instagram Shopping features. Potential: ₹${Math.round(followerNum * 0.02 * 500)}-₹${Math.round(followerNum * 0.05 * 1500)}/month from direct sales.`;
       } else if (challenge.includes("Algorithm changes killing reach")) {
-        trajectory += ` ⚡ PLATFORM DIVERSIFICATION: Reduce algorithm risk by expanding to ${data.secondaryPlatforms.length === 0 ? '3 platforms' : (3 - data.secondaryPlatforms.length) + ' additional platforms'}. Current single-platform dependency is costing you 40-60% potential reach.`;
+        trajectory += ` ⚡ PLATFORM DIVERSIFICATION: Reduce algorithm risk by expanding to ${data.secondaryPlatforms.length === 0 ? "3 platforms" : 3 - data.secondaryPlatforms.length + " additional platforms"}. Current single-platform dependency is costing you 40-60% potential reach.`;
       } else if (challenge.includes("Not landing brand collaborations")) {
         trajectory += ` 🤝 BRAND OUTREACH SYSTEM: Your ${data.followerCount} qualifies for ₹${Math.round(followerNum * 0.5)}-₹${Math.round(followerNum * 2)} per post rates. Create professional media kit, research 50 relevant brands, send 5 personalized pitches weekly. Target: Land first paid collaboration within 30 days.`;
       } else if (challenge.includes("Running out of content ideas")) {
@@ -298,11 +320,21 @@ const getGrowthTrajectory = (data: QuizData, fameScore: number): string => {
 
   // Add goal-specific trajectory with exact numbers
   if (data.goals.length > 0) {
-    data.goals.slice(0, 2).forEach(goal => {
-      if (goal.includes("Earn ₹25K") || goal.includes("Earn ₹50K") || goal.includes("Earn ₹1L")) {
-        const targetIncome = goal.includes("₹1L") ? 100000 : goal.includes("₹50K") ? 50000 : 25000;
-        const monthsToTarget = Math.ceil(targetIncome / (potentialMonthlyEarning * 0.3));
-        trajectory += ` 💰 INCOME TARGET: Your ₹${(targetIncome/1000)}K monthly goal is achievable in ${monthsToTarget} months. Required: ${Math.ceil(targetIncome / 3000)} brand partnerships monthly at ₹${Math.round(followerNum * 1.2)} average rate.`;
+    data.goals.slice(0, 2).forEach((goal) => {
+      if (
+        goal.includes("Earn ₹25K") ||
+        goal.includes("Earn ₹50K") ||
+        goal.includes("Earn ₹1L")
+      ) {
+        const targetIncome = goal.includes("₹1L")
+          ? 100000
+          : goal.includes("₹50K")
+            ? 50000
+            : 25000;
+        const monthsToTarget = Math.ceil(
+          targetIncome / (potentialMonthlyEarning * 0.3),
+        );
+        trajectory += ` 💰 INCOME TARGET: Your ₹${targetIncome / 1000}K monthly goal is achievable in ${monthsToTarget} months. Required: ${Math.ceil(targetIncome / 3000)} brand partnerships monthly at ₹${Math.round(followerNum * 1.2)} average rate.`;
       } else if (goal.includes("Get Brand Collaborations")) {
         trajectory += ` 🤝 BRAND PARTNERSHIP ROADMAP: Target ${brandDealsPerMonth} brand collaborations monthly. Your ${data.followerCount} + ${data.niche} niche = ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)} per post rates. Start outreach to ${data.niche === "Fashion & Beauty" ? "Nykaa, Myntra, local fashion brands" : data.niche === "Technology" ? "tech brands, gadget companies, software tools" : "brands in your niche"}.`;
       }
@@ -313,8 +345,8 @@ const getGrowthTrajectory = (data: QuizData, fameScore: number): string => {
   const seasonalBonus = [9, 10, 11].includes(currentMonth)
     ? " 🎆 FESTIVAL SEASON ADVANTAGE: October-December is peak brand collaboration season. Rates increase 25-40% during festivals. Pitch Diwali/New Year campaigns NOW for maximum earnings."
     : currentMonth < 3
-    ? " 🎯 Q1 PLANNING SEASON: January-March is budget allocation time. Perfect for securing long-term brand partnerships and higher rates for the year."
-    : " 📅 MID-YEAR OPPORTUNITY: Focus on consistent growth to capitalize on festival season (Oct-Dec) when brand budgets peak.";
+      ? " 🎯 Q1 PLANNING SEASON: January-March is budget allocation time. Perfect for securing long-term brand partnerships and higher rates for the year."
+      : " 📅 MID-YEAR OPPORTUNITY: Focus on consistent growth to capitalize on festival season (Oct-Dec) when brand budgets peak.";
 
   trajectory += seasonalBonus;
 
@@ -466,34 +498,50 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
   }
 
   // REAL CHALLENGE-BASED INSIGHTS (from actual quiz responses)
-  data.biggestChallenge.forEach(challenge => {
+  data.biggestChallenge.forEach((challenge) => {
     if (challenge.includes("Low views & inconsistent engagement")) {
-      weaknesses.push("📉 Engagement Challenge: Your low views indicate algorithm or content timing issues. Focus on posting during peak hours (7-9 PM) and using trending hashtags.");
+      weaknesses.push(
+        "📉 Engagement Challenge: Your low views indicate algorithm or content timing issues. Focus on posting during peak hours (7-9 PM) and using trending hashtags.",
+      );
     }
     if (challenge.includes("Can't convert followers into paying customers")) {
-      weaknesses.push("💸 Monetization Gap: With your current follower count, you should be earning more. Consider creating clear calls-to-action and valuable lead magnets.");
+      weaknesses.push(
+        "💸 Monetization Gap: With your current follower count, you should be earning more. Consider creating clear calls-to-action and valuable lead magnets.",
+      );
     }
     if (challenge.includes("Algorithm changes killing reach")) {
-      weaknesses.push("⚡ Platform Dependency Risk: Over-reliance on one platform's algorithm is risky. Your current strategy needs diversification across multiple platforms.");
+      weaknesses.push(
+        "⚡ Platform Dependency Risk: Over-reliance on one platform's algorithm is risky. Your current strategy needs diversification across multiple platforms.",
+      );
     }
     if (challenge.includes("Not landing brand collaborations")) {
-      weaknesses.push("🤝 Brand Partnership Challenge: Your follower count suggests collaboration potential. Focus on creating a professional media kit and targeted outreach.");
+      weaknesses.push(
+        "🤝 Brand Partnership Challenge: Your follower count suggests collaboration potential. Focus on creating a professional media kit and targeted outreach.",
+      );
     }
   });
 
   // REAL GOAL-BASED OPPORTUNITIES (from actual quiz responses)
-  data.goals.forEach(goal => {
+  data.goals.forEach((goal) => {
     if (goal.includes("Earn ₹25K/50K/1L+ per month")) {
-      opportunities.push(`💰 HIGH INCOME POTENTIAL: With ${data.followerCount} followers in ${data.niche}, earning ₹${goal.split('₹')[1]} monthly is achievable through strategic brand partnerships and product sales.`);
+      opportunities.push(
+        `💰 HIGH INCOME POTENTIAL: With ${data.followerCount} followers in ${data.niche}, earning ₹${goal.split("₹")[1]} monthly is achievable through strategic brand partnerships and product sales.`,
+      );
     }
     if (goal.includes("Get Brand Collaborations")) {
-      opportunities.push(`🤝 BRAND PARTNERSHIP READINESS: Your ${data.followerCount} audience size puts you in the sweet spot for brand collaborations. Start reaching out to 20-30 relevant brands monthly.`);
+      opportunities.push(
+        `🤝 BRAND PARTNERSHIP READINESS: Your ${data.followerCount} audience size puts you in the sweet spot for brand collaborations. Start reaching out to 20-30 relevant brands monthly.`,
+      );
     }
     if (goal.includes("Create Viral Content")) {
-      opportunities.push(`🚀 VIRAL CONTENT STRATEGY: Your ${data.contentType} format has high viral potential. Focus on trending topics in ${data.niche} and post during peak engagement hours.`);
+      opportunities.push(
+        `🚀 VIRAL CONTENT STRATEGY: Your ${data.contentType} format has high viral potential. Focus on trending topics in ${data.niche} and post during peak engagement hours.`,
+      );
     }
     if (goal.includes("Launch my own product/course")) {
-      opportunities.push(`📚 PRODUCT LAUNCH OPPORTUNITY: Your ${data.niche} expertise + ${data.followerCount} audience = perfect product launch potential. Consider digital courses or consulting services.`);
+      opportunities.push(
+        `📚 PRODUCT LAUNCH OPPORTUNITY: Your ${data.niche} expertise + ${data.followerCount} audience = perfect product launch potential. Consider digital courses or consulting services.`,
+      );
     }
   });
 
@@ -682,37 +730,56 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
 
   // USER-SPECIFIC ANALYSIS FOR HYPER-PERSONALIZED SUGGESTIONS
   const userProfile = {
-    stage: followerNum < 1000 ? 'foundation' : followerNum < 10000 ? 'growth' : followerNum < 50000 ? 'scaling' : 'influencer',
-    monetization: incomeNum === 0 ? 'none' : incomeNum < 15000 ? 'early' : incomeNum < 50000 ? 'moderate' : 'advanced',
-    consistency: data.postingFrequency === 'Daily' ? 'high' : data.postingFrequency.includes('3-4') ? 'good' : 'needs-improvement',
+    stage:
+      followerNum < 1000
+        ? "foundation"
+        : followerNum < 10000
+          ? "growth"
+          : followerNum < 50000
+            ? "scaling"
+            : "influencer",
+    monetization:
+      incomeNum === 0
+        ? "none"
+        : incomeNum < 15000
+          ? "early"
+          : incomeNum < 50000
+            ? "moderate"
+            : "advanced",
+    consistency:
+      data.postingFrequency === "Daily"
+        ? "high"
+        : data.postingFrequency.includes("3-4")
+          ? "good"
+          : "needs-improvement",
     platform: data.primaryPlatform,
     niche: data.niche,
     challenges: data.biggestChallenge,
     goals: data.goals,
-    experience: data.experience[0] || 'beginner'
+    experience: data.experience[0] || "beginner",
   };
 
   // IMMEDIATE PRIORITY SUGGESTIONS based on biggest gaps
-  if (userProfile.monetization === 'none' && followerNum >= 5000) {
+  if (userProfile.monetization === "none" && followerNum >= 5000) {
     recommendations.push(
-      `🚨 URGENT: You're missing ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly income! Create a media kit this week and reach out to 10 brands in ${data.niche}`
+      `🚨 URGENT: You're missing ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly income! Create a media kit this week and reach out to 10 brands in ${data.niche}`,
     );
   }
 
-  if (userProfile.consistency === 'needs-improvement') {
+  if (userProfile.consistency === "needs-improvement") {
     recommendations.push(
-      `⚡ CRITICAL: Switch to daily posting immediately - your current ${data.postingFrequency} schedule is costing you 60% potential reach. Batch create 7 posts this Sunday`
+      `⚡ CRITICAL: Switch to daily posting immediately - your current ${data.postingFrequency} schedule is costing you 60% potential reach. Batch create 7 posts this Sunday`,
     );
   }
 
   // USER-SPECIFIC TOP PRIORITY ACTION (based on their exact situation)
-  if (data.biggestChallenge.some(c => c.includes('Low views'))) {
+  if (data.biggestChallenge.some((c) => c.includes("Low views"))) {
     recommendations.push(
-      `🎯 YOUR #1 PRIORITY: Post ${data.primaryPlatform === 'Instagram' ? 'Reels' : 'short videos'} using trending audio daily at 7-9 PM IST. Your low views = algorithm penalty that needs immediate fixing`
+      `🎯 YOUR #1 PRIORITY: Post ${data.primaryPlatform === "Instagram" ? "Reels" : "short videos"} using trending audio daily at 7-9 PM IST. Your low views = algorithm penalty that needs immediate fixing`,
     );
   } else {
     recommendations.push(
-      `🚀 YOUR TOP OPPORTUNITY: Use trending audio in ${data.primaryPlatform === 'Instagram' ? 'Reels' : 'content'} and post during peak hours (7-9 PM IST) for maximum algorithmic boost`
+      `🚀 YOUR TOP OPPORTUNITY: Use trending audio in ${data.primaryPlatform === "Instagram" ? "Reels" : "content"} and post during peak hours (7-9 PM IST) for maximum algorithmic boost`,
     );
   }
 
@@ -777,9 +844,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
       recommendations.push(
         "Enable YouTube monetization and join the Partner Program",
       );
-      recommendations.push(
-        "Create members-only content for recurring revenue",
-      );
+      recommendations.push("Create members-only content for recurring revenue");
     }
   }
 
@@ -805,9 +870,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "Jump on viral challenges and trends within 24-48 hours",
     );
-    recommendations.push(
-      "Create educational TikToks that provide quick value",
-    );
+    recommendations.push("Create educational TikToks that provide quick value");
     recommendations.push(
       "Use TikTok Creator Fund and live gifts for monetization",
     );
@@ -848,9 +911,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "Make comparison videos between budget vs premium tech products",
     );
-    recommendations.push(
-      "Share coding tutorials and tech tips for beginners",
-    );
+    recommendations.push("Share coding tutorials and tech tips for beginners");
     recommendations.push(
       "Review apps and software that solve Indian-specific problems",
     );
@@ -863,9 +924,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "Cover latest updates from Indian tech companies and startups",
     );
-    recommendations.push(
-      "Make predictions about tech trends affecting India",
-    );
+    recommendations.push("Make predictions about tech trends affecting India");
   }
 
   if (data.niche === "Education") {
@@ -878,9 +937,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "Share study tips and productivity hacks for students",
     );
-    recommendations.push(
-      "Create downloadable study materials and templates",
-    );
+    recommendations.push("Create downloadable study materials and templates");
     recommendations.push(
       "Offer live doubt-clearing sessions to build community engagement",
     );
@@ -893,12 +950,8 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
   }
 
   if (data.niche === "Fitness & Health") {
-    recommendations.push(
-      "Create home workout routines requiring no equipment",
-    );
-    recommendations.push(
-      "Share healthy Indian recipes with calorie counts",
-    );
+    recommendations.push("Create home workout routines requiring no equipment");
+    recommendations.push("Share healthy Indian recipes with calorie counts");
     recommendations.push(
       "Post transformation stories and progress tracking content",
     );
@@ -917,9 +970,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "Create quick 60-second recipe videos for viral potential",
     );
-    recommendations.push(
-      "Share regional Indian recipes with modern twists",
-    );
+    recommendations.push("Share regional Indian recipes with modern twists");
     recommendations.push(
       "Review kitchen gadgets and their effectiveness for Indian cooking",
     );
@@ -929,9 +980,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "Post restaurant reviews and hidden gems in your city",
     );
-    recommendations.push(
-      "Start a weekly cooking challenge with your audience",
-    );
+    recommendations.push("Start a weekly cooking challenge with your audience");
   }
 
   if (data.niche === "Business & Finance") {
@@ -957,7 +1006,9 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
 
   // Challenge-specific targeted solutions (expanded significantly)
   if (
-    data.biggestChallenge.some((challenge) => challenge.includes("Low views & inconsistent engagement"))
+    data.biggestChallenge.some((challenge) =>
+      challenge.includes("Low views & inconsistent engagement"),
+    )
   ) {
     recommendations.push(
       "Respond to every comment within 1 hour of posting for algorithm boost",
@@ -974,9 +1025,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "Post behind-the-scenes content to build personal connection",
     );
-    recommendations.push(
-      "Go live regularly to increase real-time engagement",
-    );
+    recommendations.push("Go live regularly to increase real-time engagement");
     recommendations.push(
       "Share user-generated content and tag original creators",
     );
@@ -986,7 +1035,9 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
   }
 
   if (
-    data.biggestChallenge.some((challenge) => challenge.includes("Algorithm changes killing reach"))
+    data.biggestChallenge.some((challenge) =>
+      challenge.includes("Algorithm changes killing reach"),
+    )
   ) {
     recommendations.push(
       "Diversify to at least 3 platforms to reduce algorithm dependency",
@@ -1000,16 +1051,16 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "Join trending conversations and hashtags within 24 hours",
     );
-    recommendations.push(
-      "Collaborate with other creators for cross-promotion",
-    );
+    recommendations.push("Collaborate with other creators for cross-promotion");
     recommendations.push(
       "Focus on building strong community rather than just follower count",
     );
   }
 
   if (
-    data.biggestChallenge.some((challenge) => challenge.includes("Can't convert followers into paying customers"))
+    data.biggestChallenge.some((challenge) =>
+      challenge.includes("Can't convert followers into paying customers"),
+    )
   ) {
     recommendations.push(
       "Create a clear content funnel: awareness → consideration → conversion",
@@ -1020,9 +1071,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "Offer exclusive discounts to your social media followers",
     );
-    recommendations.push(
-      "Create testimonial content from satisfied customers",
-    );
+    recommendations.push("Create testimonial content from satisfied customers");
     recommendations.push(
       "Use Instagram/Facebook Shopping to make purchasing seamless",
     );
@@ -1035,7 +1084,9 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
   }
 
   if (
-    data.biggestChallenge.some((challenge) => challenge.includes("Not landing brand collaborations"))
+    data.biggestChallenge.some((challenge) =>
+      challenge.includes("Not landing brand collaborations"),
+    )
   ) {
     recommendations.push(
       "Create a professional media kit with your best metrics and demographics",
@@ -1060,15 +1111,14 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
   if (
     data.biggestChallenge.some(
       (challenge) =>
-        challenge.includes("Running out of content ideas") || challenge.includes("content"),
+        challenge.includes("Running out of content ideas") ||
+        challenge.includes("content"),
     )
   ) {
     recommendations.push(
       "Create content pillars: 40% education, 30% entertainment, 20% inspiration, 10% promotion",
     );
-    recommendations.push(
-      "Batch create 10-15 pieces of content every Sunday",
-    );
+    recommendations.push("Batch create 10-15 pieces of content every Sunday");
     recommendations.push(
       "Repurpose one piece of content into 5 different formats",
     );
@@ -1100,9 +1150,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "Start affiliate marketing with high-commission products",
     );
-    recommendations.push(
-      "Offer consulting services at ₹5000-₹15000 per hour",
-    );
+    recommendations.push("Offer consulting services at ₹5000-₹15000 per hour");
   } else if (followerNum >= 10000) {
     recommendations.push(
       "Reach out to 30 brands monthly in your niche for paid partnerships",
@@ -1145,9 +1193,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "Start collecting email addresses for future newsletter",
     );
-    recommendations.push(
-      "Create valuable free content to establish expertise",
-    );
+    recommendations.push("Create valuable free content to establish expertise");
   } else {
     recommendations.push(
       "Focus on reaching 1K followers milestone through consistent posting",
@@ -1165,16 +1211,14 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     recommendations.push(
       "You're missing ₹10K-₹50K monthly income potential - start monetizing immediately",
     );
-    recommendations.push(
-      "Create your first paid digital product this month",
-    );
+    recommendations.push("Create your first paid digital product this month");
     recommendations.push(
       "Apply to 5 affiliate programs relevant to your niche",
     );
   }
 
   // Goal-specific recommendations
-  if (data.goals.some(g => g.includes("Earn ₹25K/50K/1L+ per month"))) {
+  if (data.goals.some((g) => g.includes("Earn ₹25K/50K/1L+ per month"))) {
     recommendations.push(
       "Diversify income streams: 40% brand deals, 30% digital products, 20% affiliate, 10% services",
     );
@@ -1186,7 +1230,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     );
   }
 
-  if (data.goals.some(g => g.includes("Get Brand Collaborations"))) {
+  if (data.goals.some((g) => g.includes("Get Brand Collaborations"))) {
     recommendations.push(
       "Create a brand collaboration rate card based on your engagement metrics",
     );
@@ -1198,7 +1242,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     );
   }
 
-  if (data.goals.some(g => g.includes("Create Viral Content"))) {
+  if (data.goals.some((g) => g.includes("Create Viral Content"))) {
     recommendations.push(
       "Study what went viral in your niche in the last 30 days and recreate with your twist",
     );
@@ -1226,7 +1270,10 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
   }
 
   // Frequency-specific recommendations
-  if (data.postingFrequency === "Irregular" || data.postingFrequency === "Monthly") {
+  if (
+    data.postingFrequency === "Irregular" ||
+    data.postingFrequency === "Monthly"
+  ) {
     recommendations.push(
       "Immediately increase posting to daily for next 30 days to boost algorithm favor",
     );
@@ -1311,91 +1358,104 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
   );
 
   // HYPER-PERSONALIZED CHALLENGE-BASED RECOMMENDATIONS
-  data.biggestChallenge.forEach(challenge => {
-    if (challenge.includes('Low views & inconsistent engagement')) {
+  data.biggestChallenge.forEach((challenge) => {
+    if (challenge.includes("Low views & inconsistent engagement")) {
       recommendations.push(
-        `📊 ENGAGEMENT FIX FOR YOU: Based on your ${data.followerCount} + ${data.niche} combination, post interactive content (polls, questions) in Stories daily and respond to ALL comments within 1 hour`
+        `📊 ENGAGEMENT FIX FOR YOU: Based on your ${data.followerCount} + ${data.niche} combination, post interactive content (polls, questions) in Stories daily and respond to ALL comments within 1 hour`,
       );
-      if (data.primaryPlatform === 'Instagram') {
+      if (data.primaryPlatform === "Instagram") {
         recommendations.push(
-          `📱 INSTAGRAM ALGORITHM HACK: Create 5 Reels weekly using trending audio within 24 hours. Your low engagement suggests you're not leveraging Reels enough`
+          `📱 INSTAGRAM ALGORITHM HACK: Create 5 Reels weekly using trending audio within 24 hours. Your low engagement suggests you're not leveraging Reels enough`,
         );
       }
     }
 
     if (challenge.includes("Can't convert followers into paying customers")) {
       recommendations.push(
-        `💰 CONVERSION STRATEGY FOR ${data.followerCount}: Add specific CTAs to every post directing to your bio link. With ${data.niche} content, focus on product recommendations with honest reviews`
+        `💰 CONVERSION STRATEGY FOR ${data.followerCount}: Add specific CTAs to every post directing to your bio link. With ${data.niche} content, focus on product recommendations with honest reviews`,
       );
       if (followerNum >= 10000) {
         recommendations.push(
-          `🛍️ IMMEDIATE MONETIZATION: Enable Instagram Shopping and create "Link in Bio" landing page. Your ${data.followerCount} should generate ₹${Math.round(followerNum * 0.5)}-₹${Math.round(followerNum * 1.5)}K monthly`
+          `🛍️ IMMEDIATE MONETIZATION: Enable Instagram Shopping and create "Link in Bio" landing page. Your ${data.followerCount} should generate ₹${Math.round(followerNum * 0.5)}-₹${Math.round(followerNum * 1.5)}K monthly`,
         );
       }
     }
 
-    if (challenge.includes('Not landing brand collaborations')) {
+    if (challenge.includes("Not landing brand collaborations")) {
       recommendations.push(
-        `🤝 BRAND OUTREACH PLAN FOR YOU: Create media kit showcasing your ${data.followerCount} + ${data.niche} metrics. Email 20 relevant brands weekly with personalized pitches mentioning specific campaigns`
+        `🤝 BRAND OUTREACH PLAN FOR YOU: Create media kit showcasing your ${data.followerCount} + ${data.niche} metrics. Email 20 relevant brands weekly with personalized pitches mentioning specific campaigns`,
       );
-      if (data.niche === 'Fashion & Beauty') {
+      if (data.niche === "Fashion & Beauty") {
         recommendations.push(
-          `💄 BEAUTY BRAND STRATEGY: Partner with Nykaa, Myntra, and local beauty brands. Your niche commands ₹${Math.round(followerNum * 1.2)}-₹${Math.round(followerNum * 2)} per post rates`
+          `💄 BEAUTY BRAND STRATEGY: Partner with Nykaa, Myntra, and local beauty brands. Your niche commands ₹${Math.round(followerNum * 1.2)}-₹${Math.round(followerNum * 2)} per post rates`,
         );
-      } else if (data.niche === 'Technology & AI') {
+      } else if (data.niche === "Technology & AI") {
         recommendations.push(
-          `💻 TECH COLLABORATION GOLDMINE: Reach out to OnePlus, Xiaomi, Amazon for device reviews. Tech creators earn ₹${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3)} per collaboration`
+          `💻 TECH COLLABORATION GOLDMINE: Reach out to OnePlus, Xiaomi, Amazon for device reviews. Tech creators earn ₹${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3)} per collaboration`,
         );
       }
     }
   });
 
   // GOAL-SPECIFIC PERSONALIZED RECOMMENDATIONS
-  data.goals.forEach(goal => {
-    if (goal.includes('Earn ₹25K') || goal.includes('Earn ₹50K') || goal.includes('Earn ₹1L')) {
-      const targetIncome = goal.includes('₹1L') ? 100000 : goal.includes('₹50K') ? 50000 : 25000;
-      const monthsToTarget = Math.ceil(targetIncome / Math.max(followerNum * 0.8, 5000));
+  data.goals.forEach((goal) => {
+    if (
+      goal.includes("Earn ₹25K") ||
+      goal.includes("Earn ₹50K") ||
+      goal.includes("Earn ₹1L")
+    ) {
+      const targetIncome = goal.includes("₹1L")
+        ? 100000
+        : goal.includes("₹50K")
+          ? 50000
+          : 25000;
+      const monthsToTarget = Math.ceil(
+        targetIncome / Math.max(followerNum * 0.8, 5000),
+      );
       recommendations.push(
-        `💰 YOUR ₹${targetIncome/1000}K GOAL ROADMAP: Achievable in ${monthsToTarget} months through ${Math.ceil(targetIncome/3000)} brand partnerships monthly. Start with ₹${Math.round(followerNum * 0.8)} per post rates`
+        `💰 YOUR ₹${targetIncome / 1000}K GOAL ROADMAP: Achievable in ${monthsToTarget} months through ${Math.ceil(targetIncome / 3000)} brand partnerships monthly. Start with ₹${Math.round(followerNum * 0.8)} per post rates`,
       );
     }
 
-    if (goal.includes('Create Viral Content')) {
+    if (goal.includes("Create Viral Content")) {
       recommendations.push(
-        `🚀 VIRAL CONTENT FORMULA FOR ${data.niche}: Study what went viral in your niche last 30 days, recreate with your unique angle within 48 hours of trending topics`
+        `🚀 VIRAL CONTENT FORMULA FOR ${data.niche}: Study what went viral in your niche last 30 days, recreate with your unique angle within 48 hours of trending topics`,
       );
     }
 
-    if (goal.includes('Build Personal Brand')) {
+    if (goal.includes("Build Personal Brand")) {
       recommendations.push(
-        `🌟 PERSONAL BRAND STRATEGY: Share your ${data.niche} journey story, behind-the-scenes content, and personal failures/lessons. Authenticity = stronger connection with ${data.followerCount}`
+        `🌟 PERSONAL BRAND STRATEGY: Share your ${data.niche} journey story, behind-the-scenes content, and personal failures/lessons. Authenticity = stronger connection with ${data.followerCount}`,
       );
     }
   });
 
   // NICHE-SPECIFIC EXPERT RECOMMENDATIONS
-  if (data.niche === 'Fashion & Beauty') {
+  if (data.niche === "Fashion & Beauty") {
     recommendations.push(
-      `💄 FASHION CREATOR ADVANTAGE: Post outfit transitions during festival season, collaborate with local designers, create "Get Ready With Me" content featuring affordable Indian brands under ₹500`
+      `💄 FASHION CREATOR ADVANTAGE: Post outfit transitions during festival season, collaborate with local designers, create "Get Ready With Me" content featuring affordable Indian brands under ₹500`,
     );
-  } else if (data.niche === 'Technology & AI') {
+  } else if (data.niche === "Technology & AI") {
     recommendations.push(
-      `💻 TECH AUTHORITY BUILDING: Create comparison videos between budget vs premium products, join Amazon/Flipkart affiliate programs, review apps solving Indian-specific problems`
+      `💻 TECH AUTHORITY BUILDING: Create comparison videos between budget vs premium products, join Amazon/Flipkart affiliate programs, review apps solving Indian-specific problems`,
     );
-  } else if (data.niche === 'Personal Finance & Investing') {
+  } else if (data.niche === "Personal Finance & Investing") {
     recommendations.push(
-      `📈 FINANCE CREATOR PREMIUM: Create content around Indian stock market, tax-saving strategies, review investment apps. Finance creators earn 3x more per follower than lifestyle`
+      `📈 FINANCE CREATOR PREMIUM: Create content around Indian stock market, tax-saving strategies, review investment apps. Finance creators earn 3x more per follower than lifestyle`,
     );
   }
 
   // EXPERIENCE-LEVEL SPECIFIC RECOMMENDATIONS
-  if (data.experience[0]?.includes('Just started') || data.experience[0]?.includes('Beginner')) {
+  if (
+    data.experience[0]?.includes("Just started") ||
+    data.experience[0]?.includes("Beginner")
+  ) {
     recommendations.push(
-      `🌱 BEGINNER ACCELERATION: Focus on consistency over perfection. Post daily for 90 days, engage with 50 accounts in your niche weekly, study top creators' content patterns`
+      `🌱 BEGINNER ACCELERATION: Focus on consistency over perfection. Post daily for 90 days, engage with 50 accounts in your niche weekly, study top creators' content patterns`,
     );
-  } else if (data.experience[0]?.includes('Expert')) {
+  } else if (data.experience[0]?.includes("Expert")) {
     recommendations.push(
-      `🏆 EXPERT LEVERAGE: Launch your own course/product priced ₹2999-₹9999, offer consulting at ₹5000-₹15000/hour, negotiate exclusive brand partnerships worth ₹50K-₹2L monthly`
+      `🏆 EXPERT LEVERAGE: Launch your own course/product priced ₹2999-₹9999, offer consulting at ₹5000-₹15000/hour, negotiate exclusive brand partnerships worth ₹50K-₹2L monthly`,
     );
   }
 
@@ -1415,17 +1475,20 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
   if (followerNum >= 5000 && incomeNum < 30000) {
     recommendations.push({
       name: "Complete Creator Growth Kit",
-      reason:
-        `With ${data.followerCount} followers but current income under ₹30K, this kit's media kit templates, brand outreach emails, and pricing calculator will help you unlock your monetization potential immediately.`,
+      reason: `With ${data.followerCount} followers but current income under ₹30K, this kit's media kit templates, brand outreach emails, and pricing calculator will help you unlock your monetization potential immediately.`,
       priority: "high" as const,
     });
   }
 
   // Instagram Reels Mastery Course - For users focused on Instagram and engagement challenges
-  if (data.primaryPlatform === "Instagram" &&
-      (data.biggestChallenge.some(challenge => challenge.includes("Low views & inconsistent engagement")) ||
-       data.contentType === "Photos & Carousels" ||
-       data.goals.some(goal => goal.includes("Create Viral Content")))) {
+  if (
+    data.primaryPlatform === "Instagram" &&
+    (data.biggestChallenge.some((challenge) =>
+      challenge.includes("Low views & inconsistent engagement"),
+    ) ||
+      data.contentType === "Photos & Carousels" ||
+      data.goals.some((goal) => goal.includes("Create Viral Content")))
+  ) {
     recommendations.push({
       name: "Instagram Reels Mastery Course",
       reason:
@@ -1442,7 +1505,7 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
         challenge.includes("brand") ||
         challenge.includes("collaboration"),
     ) ||
-    data.goals.some(goal => goal.includes("Get Brand Collaborations"))
+    data.goals.some((goal) => goal.includes("Get Brand Collaborations"))
   ) {
     recommendations.push({
       name: "Brand Collaboration Masterclass",
@@ -1453,9 +1516,11 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
   }
 
   // YouTube Mastery Course - For YouTube creators or those wanting to expand
-  if (data.primaryPlatform === "YouTube" ||
-      data.secondaryPlatforms.includes("YouTube") ||
-      data.goals.some(goal => goal.includes("Expand into new platforms"))) {
+  if (
+    data.primaryPlatform === "YouTube" ||
+    data.secondaryPlatforms.includes("YouTube") ||
+    data.goals.some((goal) => goal.includes("Expand into new platforms"))
+  ) {
     recommendations.push({
       name: "YouTube Mastery Course",
       reason:
@@ -1465,9 +1530,13 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
   }
 
   // Facebook Posting Mastery Course - For Facebook users or multi-platform strategy
-  if (data.primaryPlatform === "Facebook" ||
-      data.secondaryPlatforms.includes("Facebook") ||
-      data.biggestChallenge.some(challenge => challenge.includes("Algorithm changes killing reach"))) {
+  if (
+    data.primaryPlatform === "Facebook" ||
+    data.secondaryPlatforms.includes("Facebook") ||
+    data.biggestChallenge.some((challenge) =>
+      challenge.includes("Algorithm changes killing reach"),
+    )
+  ) {
     recommendations.push({
       name: "Facebook Posting Mastery Course",
       reason:
@@ -1477,39 +1546,46 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
   }
 
   // Complete Creator Bundle - For serious creators with higher goals
-  if ((followerNum >= 10000 && incomeNum < 50000) ||
-      data.goals.some(goal => goal.includes("Earn ₹25K/50K/1L+ per month")) ||
-      fameScore >= 70) {
+  if (
+    (followerNum >= 10000 && incomeNum < 50000) ||
+    data.goals.some((goal) => goal.includes("Earn ₹25K/50K/1L+ per month")) ||
+    fameScore >= 70
+  ) {
     recommendations.push({
       name: "Complete Creator Bundle",
-      reason:
-        `Your ${data.followerCount} audience and ambitious income goals make this bundle perfect. Get ALL premium products for 70% OFF - save ₹700+ and access everything needed to scale your creator business.`,
+      reason: `Your ${data.followerCount} audience and ambitious income goals make this bundle perfect. Get ALL premium products for 70% OFF - save ₹700+ and access everything needed to scale your creator business.`,
       priority: "high" as const,
     });
   }
 
   // Prioritize based on specific user challenges and goals
   if (
-    data.biggestChallenge.some(challenge => challenge.includes("Can't convert followers into paying customers")) &&
+    data.biggestChallenge.some((challenge) =>
+      challenge.includes("Can't convert followers into paying customers"),
+    ) &&
     followerNum >= 1000
   ) {
     // Prioritize Complete Creator Growth Kit for conversion issues
-    const existingKit = recommendations.find(r => r.name === "Complete Creator Growth Kit");
+    const existingKit = recommendations.find(
+      (r) => r.name === "Complete Creator Growth Kit",
+    );
     if (existingKit) {
       existingKit.priority = "high";
       existingKit.reason = `Your ${data.followerCount} followers aren't converting to income - this kit's pricing calculator, email templates, and rate cards will help you start monetizing immediately.`;
     } else {
       recommendations.push({
         name: "Complete Creator Growth Kit",
-        reason:
-          `Your follower conversion challenge needs immediate action. This kit provides all monetization tools: pricing calculator, brand outreach templates, and rate cards.`,
+        reason: `Your follower conversion challenge needs immediate action. This kit provides all monetization tools: pricing calculator, brand outreach templates, and rate cards.`,
         priority: "high" as const,
       });
     }
   }
 
   // Always recommend growth kit for new creators
-  if (followerNum < 5000 && !recommendations.some(r => r.name === "Complete Creator Growth Kit")) {
+  if (
+    followerNum < 5000 &&
+    !recommendations.some((r) => r.name === "Complete Creator Growth Kit")
+  ) {
     recommendations.push({
       name: "Complete Creator Growth Kit",
       reason:
@@ -2114,21 +2190,33 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
   fameScore += socialLinksCount * 2;
 
   // Real challenge-based scoring adjustments
-  if (data.biggestChallenge.some(c => c.includes("Low views & inconsistent engagement"))) {
+  if (
+    data.biggestChallenge.some((c) =>
+      c.includes("Low views & inconsistent engagement"),
+    )
+  ) {
     fameScore -= 5; // Engagement issues reduce score
   }
-  if (data.biggestChallenge.some(c => c.includes("Algorithm changes killing reach"))) {
+  if (
+    data.biggestChallenge.some((c) =>
+      c.includes("Algorithm changes killing reach"),
+    )
+  ) {
     fameScore -= 3; // Algorithm dependency
   }
-  if (data.biggestChallenge.some(c => c.includes("Can't convert followers into paying customers"))) {
+  if (
+    data.biggestChallenge.some((c) =>
+      c.includes("Can't convert followers into paying customers"),
+    )
+  ) {
     fameScore -= 4; // Monetization issues
   }
 
   // Goals-based scoring boosts
-  if (data.goals.some(g => g.includes("Build Personal Brand"))) {
+  if (data.goals.some((g) => g.includes("Build Personal Brand"))) {
     fameScore += 3; // Brand building focus
   }
-  if (data.goals.some(g => g.includes("Post More Consistently"))) {
+  if (data.goals.some((g) => g.includes("Post More Consistently"))) {
     fameScore += 2; // Consistency awareness
   }
 
@@ -2216,7 +2304,11 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
     // Proprietary FameChase Metrics - Competitive Advantage
     famePotentialIndex: Math.round(famePotentialIndex),
     monetizationReadinessIndex: Math.round(monetizationReadinessIndex),
-    experienceLevel: getExperienceLevelDescription(data.experience, fameScore, data),
+    experienceLevel: getExperienceLevelDescription(
+      data.experience,
+      fameScore,
+      data,
+    ),
     growthTrajectory: getGrowthTrajectory(data, fameScore),
     swotAnalysis: generateSWOTAnalysis(data, fameScore),
     marketInsights,
