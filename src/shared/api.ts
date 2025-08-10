@@ -1,4 +1,4 @@
-// src/shared/api.ts
+﻿// src/shared/api.ts
 // Central place for all API endpoint URLs
 
 export const API_BASE_URL =
@@ -11,4 +11,7 @@ export const API_ENDPOINTS = {
   products: `${API_BASE_URL}/products`,
   orders: `${API_BASE_URL}/orders`,
 };
+
+
+
 
