@@ -9,10 +9,11 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import QuizStart from "./pages/QuizStart";
 import Quiz from "./pages/Quiz";
-
 import Results from "./pages/Results";
 import Shop from "./pages/Shop";
-
+import PaymentSuccess from "./pages/PaymentSuccess";
+import PaymentFailure from "./pages/PaymentFailure";
+import AdminDashboard from "./pages/AdminDashboard";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
