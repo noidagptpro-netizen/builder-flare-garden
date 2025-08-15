@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { supabase, dbHelpers, User, Product, Purchase } from "../lib/supabase";
 import { paymentHelpers, PayUPaymentData } from "../lib/payu";
+import SupabaseConfigBanner from "../components/SupabaseConfigBanner";
 
 interface CustomerInfo {
   name: string;
@@ -681,7 +682,7 @@ export default function Shop() {
               <div className="bg-gray-50 rounded-lg p-4 mb-6">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">
-                    {language === "hindi" ? "मूल कीमत:" : "Original Price:"}
+                    {language === "hindi" ? "मूल कीम���:" : "Original Price:"}
                   </span>
                   <span className="text-gray-900">
                     ₹{products.find(p => p.id === showPaymentForm)?.price}
