@@ -81,6 +81,9 @@ export interface Download {
 // Auth Helper Functions
 export const authHelpers = {
   async signUp(email: string, password: string, userData: any) {
+    if (!supabase) {
+      return { data: null, error: { message: 'Supabase not configured' } }
+    }
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
@@ -92,6 +95,9 @@ export const authHelpers = {
   },
 
   async signIn(email: string, password: string) {
+    if (!supabase) {
+      return { data: null, error: { message: 'Supabase not configured' } }
+    }
     const { data, error } = await supabase.auth.signInWithPassword({
       email,
       password
@@ -100,11 +106,17 @@ export const authHelpers = {
   },
 
   async signOut() {
+    if (!supabase) {
+      return { error: { message: 'Supabase not configured' } }
+    }
     const { error } = await supabase.auth.signOut()
     return { error }
   },
 
   async getCurrentUser() {
+    if (!supabase) {
+      return null
+    }
     const { data: { user } } = await supabase.auth.getUser()
     return user
   }
