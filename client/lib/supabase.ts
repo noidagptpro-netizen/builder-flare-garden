@@ -126,6 +126,9 @@ export const authHelpers = {
 export const dbHelpers = {
   // Users
   async createUser(userData: Partial<User>) {
+    if (!supabase) {
+      return { data: null, error: { message: 'Supabase not configured' } }
+    }
     const { data, error } = await supabase
       .from('users')
       .insert([userData])
@@ -135,6 +138,9 @@ export const dbHelpers = {
   },
 
   async getUser(id: string) {
+    if (!supabase) {
+      return { data: null, error: { message: 'Supabase not configured' } }
+    }
     const { data, error } = await supabase
       .from('users')
       .select('*')
@@ -144,6 +150,9 @@ export const dbHelpers = {
   },
 
   async updateUser(id: string, updates: Partial<User>) {
+    if (!supabase) {
+      return { data: null, error: { message: 'Supabase not configured' } }
+    }
     const { data, error } = await supabase
       .from('users')
       .update(updates)
@@ -155,6 +164,25 @@ export const dbHelpers = {
 
   // Products
   async getProducts() {
+    if (!supabase) {
+      // Return mock data from the products.ts file when Supabase is not configured
+      const { productConfigs } = await import('./products')
+      return {
+        data: productConfigs.map(p => ({
+          id: p.id,
+          name: p.name,
+          price: p.price,
+          original_price: p.originalPrice,
+          description: p.description,
+          features: p.features,
+          is_enabled: p.isEnabled,
+          category: p.category,
+          created_at: new Date().toISOString(),
+          updated_at: new Date().toISOString()
+        })),
+        error: null
+      }
+    }
     const { data, error } = await supabase
       .from('products')
       .select('*')
@@ -164,6 +192,28 @@ export const dbHelpers = {
   },
 
   async getProduct(id: string) {
+    if (!supabase) {
+      const { productConfigs } = await import('./products')
+      const product = productConfigs.find(p => p.id === id)
+      if (product) {
+        return {
+          data: {
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            original_price: product.originalPrice,
+            description: product.description,
+            features: product.features,
+            is_enabled: product.isEnabled,
+            category: product.category,
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString()
+          },
+          error: null
+        }
+      }
+      return { data: null, error: { message: 'Product not found' } }
+    }
     const { data, error } = await supabase
       .from('products')
       .select('*')
@@ -174,6 +224,9 @@ export const dbHelpers = {
 
   // Purchases
   async createPurchase(purchaseData: Partial<Purchase>) {
+    if (!supabase) {
+      return { data: null, error: { message: 'Supabase not configured' } }
+    }
     const { data, error } = await supabase
       .from('purchases')
       .insert([purchaseData])
@@ -183,6 +236,9 @@ export const dbHelpers = {
   },
 
   async updatePurchase(id: string, updates: Partial<Purchase>) {
+    if (!supabase) {
+      return { data: null, error: { message: 'Supabase not configured' } }
+    }
     const { data, error } = await supabase
       .from('purchases')
       .update(updates)
@@ -193,6 +249,9 @@ export const dbHelpers = {
   },
 
   async getUserPurchases(userId: string) {
+    if (!supabase) {
+      return { data: [], error: null }
+    }
     const { data, error } = await supabase
       .from('purchases')
       .select(`
@@ -205,6 +264,9 @@ export const dbHelpers = {
   },
 
   async getPurchaseByPaymentId(paymentId: string) {
+    if (!supabase) {
+      return { data: null, error: { message: 'Supabase not configured' } }
+    }
     const { data, error } = await supabase
       .from('purchases')
       .select('*')
@@ -215,6 +277,9 @@ export const dbHelpers = {
 
   // Downloads
   async recordDownload(downloadData: Partial<Download>) {
+    if (!supabase) {
+      return { data: null, error: { message: 'Supabase not configured' } }
+    }
     const { data, error } = await supabase
       .from('downloads')
       .insert([downloadData])
@@ -224,6 +289,9 @@ export const dbHelpers = {
   },
 
   async getUserDownloads(userId: string) {
+    if (!supabase) {
+      return { data: [], error: null }
+    }
     const { data, error } = await supabase
       .from('downloads')
       .select('*')
