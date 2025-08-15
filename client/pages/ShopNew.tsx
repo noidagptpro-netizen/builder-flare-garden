@@ -53,17 +53,14 @@ export default function Shop() {
   const initializeComponent = async () => {
     try {
       setLoading(true);
-      
-      // Check authentication
-      const { data: { user: authUser } } = await supabase.auth.getUser();
-      
+
       // Load quiz data from localStorage
       const storedQuizData = localStorage.getItem("fameChaseQuizData");
       if (storedQuizData) {
         const data = JSON.parse(storedQuizData);
         setQuizData(data);
         setLanguage(data.language || "english");
-        
+
         // Pre-fill customer info from quiz data
         setCustomerInfo({
           name: data.name || "",
@@ -73,38 +70,51 @@ export default function Shop() {
         });
       }
 
-      // If user is authenticated, create/update user record
-      if (authUser && storedQuizData) {
-        const userData = JSON.parse(storedQuizData);
-        const { data: existingUser } = await dbHelpers.getUser(authUser.id);
-        
-        if (!existingUser) {
-          // Create new user record
-          await dbHelpers.createUser({
-            id: authUser.id,
-            name: userData.name,
-            email: userData.email || authUser.email,
-            phone: userData.phone,
-            city: userData.city,
-            niche: userData.niche,
-            primary_platform: userData.primaryPlatform,
-            follower_count: userData.followerCount,
-            goals: userData.goals,
-            quiz_data: userData,
-          });
+      // Check if Supabase is configured
+      if (supabase) {
+        // Check authentication
+        const { data: { user: authUser } } = await supabase.auth.getUser();
+
+        // If user is authenticated, create/update user record
+        if (authUser && storedQuizData) {
+          const userData = JSON.parse(storedQuizData);
+          const { data: existingUser } = await dbHelpers.getUser(authUser.id);
+
+          if (!existingUser) {
+            // Create new user record
+            await dbHelpers.createUser({
+              id: authUser.id,
+              name: userData.name,
+              email: userData.email || authUser.email,
+              phone: userData.phone,
+              city: userData.city,
+              niche: userData.niche,
+              primary_platform: userData.primaryPlatform,
+              follower_count: userData.followerCount,
+              goals: userData.goals,
+              quiz_data: userData,
+            });
+          }
+
+          setUser(existingUser || userData);
+
+          // Load user's purchases
+          const { data: purchases } = await dbHelpers.getUserPurchases(authUser.id);
+          setUserPurchases(purchases || []);
         }
-        
-        setUser(existingUser || userData);
-        
-        // Load user's purchases
-        const { data: purchases } = await dbHelpers.getUserPurchases(authUser.id);
-        setUserPurchases(purchases || []);
+      } else {
+        // Fallback to localStorage when Supabase is not configured
+        const stored = localStorage.getItem("purchasedProducts");
+        if (stored) {
+          const localPurchases = JSON.parse(stored);
+          setUserPurchases(localPurchases);
+        }
       }
 
-      // Load products
+      // Load products (this will use mock data if Supabase is not configured)
       const { data: productsData } = await dbHelpers.getProducts();
       setProducts(productsData || []);
-      
+
     } catch (error) {
       console.error("Error initializing component:", error);
     } finally {
