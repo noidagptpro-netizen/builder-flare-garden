@@ -384,6 +384,9 @@ export default function Shop() {
       </div>
 
       <main className="container mx-auto px-4 py-8">
+        {/* Configuration Banner */}
+        <SupabaseConfigBanner />
+
         {/* Hero Section */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -682,7 +685,7 @@ export default function Shop() {
               <div className="bg-gray-50 rounded-lg p-4 mb-6">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">
-                    {language === "hindi" ? "मूल कीम���:" : "Original Price:"}
+                    {language === "hindi" ? "मूल कीमत:" : "Original Price:"}
                   </span>
                   <span className="text-gray-900">
                     ₹{products.find(p => p.id === showPaymentForm)?.price}
