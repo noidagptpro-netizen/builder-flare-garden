@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { CheckCircle, Download, Home, Loader2 } from "lucide-react";
-import { supabase, dbHelpers } from "../lib/supabase";
+import { supabase, dbHelpers, isSupabaseConfigured } from "../lib/supabase";
 import { paymentHelpers } from "../lib/payu";
 
 export default function PaymentSuccess() {
