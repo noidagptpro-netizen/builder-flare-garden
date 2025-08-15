@@ -264,10 +264,10 @@ export default function Shop() {
 
   const isProductPurchased = (productId: string) => {
     return userPurchases.some(
-      (p) => p.product_id === productId && p.payment_status === 'success'
+      (p) => (p.product_id || p.id) === productId && (p.payment_status === 'success' || !p.payment_status)
     ) || (productId !== "complete-bundle" &&
       userPurchases.some(
-        (p) => p.product_id === "complete-bundle" && p.payment_status === 'success'
+        (p) => (p.product_id || p.id) === "complete-bundle" && (p.payment_status === 'success' || !p.payment_status)
       ));
   };
 
@@ -552,7 +552,7 @@ export default function Shop() {
             </h3>
             <p className="text-gray-600 mb-6">
               {language === "hindi"
-                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी होगी। य�� केवल 2 मिनट में हो जाएगा!"
+                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी होगी। यह केवल 2 मिनट में हो जाएगा!"
                 : "Before purchasing premium tools, you need to complete your creator profile. It takes only 2 minutes!"}
             </p>
             <div className="space-y-3">
