@@ -69,8 +69,22 @@ export default function AdminDashboard() {
     try {
       setLoading(true);
 
+      if (!isSupabaseConfigured()) {
+        // Show demo data when Supabase is not configured
+        console.warn('Supabase not configured, showing demo data');
+        setUsers([]);
+        setPurchases([]);
+        setStats({
+          totalUsers: 0,
+          totalPurchases: 0,
+          totalRevenue: 0,
+          successfulPayments: 0,
+        });
+        return;
+      }
+
       // Load users
-      const { data: usersData, error: usersError } = await supabase
+      const { data: usersData, error: usersError } = await supabase!
         .from('users')
         .select('*')
         .order('created_at', { ascending: false });
@@ -78,7 +92,7 @@ export default function AdminDashboard() {
       if (usersError) throw usersError;
 
       // Load purchases with user and product details
-      const { data: purchasesData, error: purchasesError } = await supabase
+      const { data: purchasesData, error: purchasesError } = await supabase!
         .from('purchases')
         .select(`
           *,
