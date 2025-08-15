@@ -195,35 +195,64 @@ export default function Shop() {
       if (!product) throw new Error("Product not found");
 
       const finalAmount = calculateDiscountedPrice(product.price);
-      
-      // Create payment via Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('create-payment', {
-        body: {
-          productId,
+
+      if (supabase) {
+        // Use Supabase Edge Function for payment
+        const { data, error } = await supabase.functions.invoke('create-payment', {
+          body: {
+            productId,
+            amount: finalAmount,
+            discountAmount: product.price - finalAmount,
+            promoCode: promoCode || null,
+            customerInfo
+          }
+        });
+
+        if (error) throw error;
+
+        // Redirect to PayU payment gateway
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'https://test.payu.in/_payment';
+
+        Object.entries(data.paymentData).forEach(([key, value]) => {
+          const input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = key;
+          input.value = value.toString();
+          form.appendChild(input);
+        });
+
+        document.body.appendChild(form);
+        form.submit();
+      } else {
+        // Fallback to localStorage simulation when Supabase is not configured
+        console.log("Supabase not configured, simulating payment...");
+
+        // Simulate payment processing
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+
+        // Save purchase to localStorage
+        const purchase = {
+          id: productId,
+          purchaseDate: new Date().toISOString(),
+          customerInfo: { ...customerInfo, ...quizData },
           amount: finalAmount,
-          discountAmount: product.price - finalAmount,
-          promoCode: promoCode || null,
-          customerInfo
-        }
-      });
+          product_id: productId,
+          payment_status: 'success'
+        };
 
-      if (error) throw error;
+        const stored = localStorage.getItem("purchasedProducts");
+        const existingPurchases = stored ? JSON.parse(stored) : [];
+        const updated = [...existingPurchases, purchase];
 
-      // Redirect to PayU payment gateway
-      const form = document.createElement('form');
-      form.method = 'POST';
-      form.action = 'https://test.payu.in/_payment';
+        localStorage.setItem("purchasedProducts", JSON.stringify(updated));
+        setUserPurchases(updated);
 
-      Object.entries(data.paymentData).forEach(([key, value]) => {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = key;
-        input.value = value.toString();
-        form.appendChild(input);
-      });
-
-      document.body.appendChild(form);
-      form.submit();
+        // Show success (you could redirect to a success page)
+        alert("Payment successful! (Demo mode - Supabase not configured)");
+        setShowPaymentForm(null);
+      }
 
     } catch (error) {
       console.error("Payment error:", error);
@@ -523,7 +552,7 @@ export default function Shop() {
             </h3>
             <p className="text-gray-600 mb-6">
               {language === "hindi"
-                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी होगी। यह केवल 2 मिनट में हो जाएगा!"
+                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी होगी। य�� केवल 2 मिनट में हो जाएगा!"
                 : "Before purchasing premium tools, you need to complete your creator profile. It takes only 2 minutes!"}
             </p>
             <div className="space-y-3">
