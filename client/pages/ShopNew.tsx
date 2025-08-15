@@ -74,7 +74,9 @@ export default function Shop() {
       // Check if Supabase is configured
       if (supabase) {
         // Check authentication
-        const { data: { user: authUser } } = await supabase.auth.getUser();
+        const {
+          data: { user: authUser },
+        } = await supabase.auth.getUser();
 
         // If user is authenticated, create/update user record
         if (authUser && storedQuizData) {
@@ -100,7 +102,9 @@ export default function Shop() {
           setUser(existingUser || userData);
 
           // Load user's purchases
-          const { data: purchases } = await dbHelpers.getUserPurchases(authUser.id);
+          const { data: purchases } = await dbHelpers.getUserPurchases(
+            authUser.id,
+          );
           setUserPurchases(purchases || []);
         }
       } else {
@@ -115,7 +119,6 @@ export default function Shop() {
       // Load products (this will use mock data if Supabase is not configured)
       const { data: productsData } = await dbHelpers.getProducts();
       setProducts(productsData || []);
-
     } catch (error) {
       console.error("Error initializing component:", error);
     } finally {
@@ -192,33 +195,36 @@ export default function Shop() {
     setIsSubmitting(true);
 
     try {
-      const product = products.find(p => p.id === productId);
+      const product = products.find((p) => p.id === productId);
       if (!product) throw new Error("Product not found");
 
       const finalAmount = calculateDiscountedPrice(product.price);
 
       if (supabase) {
         // Use Supabase Edge Function for payment
-        const { data, error } = await supabase.functions.invoke('create-payment', {
-          body: {
-            productId,
-            amount: finalAmount,
-            discountAmount: product.price - finalAmount,
-            promoCode: promoCode || null,
-            customerInfo
-          }
-        });
+        const { data, error } = await supabase.functions.invoke(
+          "create-payment",
+          {
+            body: {
+              productId,
+              amount: finalAmount,
+              discountAmount: product.price - finalAmount,
+              promoCode: promoCode || null,
+              customerInfo,
+            },
+          },
+        );
 
         if (error) throw error;
 
         // Redirect to PayU payment gateway
-        const form = document.createElement('form');
-        form.method = 'POST';
-        form.action = 'https://test.payu.in/_payment';
+        const form = document.createElement("form");
+        form.method = "POST";
+        form.action = "https://test.payu.in/_payment";
 
         Object.entries(data.paymentData).forEach(([key, value]) => {
-          const input = document.createElement('input');
-          input.type = 'hidden';
+          const input = document.createElement("input");
+          input.type = "hidden";
           input.name = key;
           input.value = value.toString();
           form.appendChild(input);
@@ -240,7 +246,7 @@ export default function Shop() {
           customerInfo: { ...customerInfo, ...quizData },
           amount: finalAmount,
           product_id: productId,
-          payment_status: 'success'
+          payment_status: "success",
         };
 
         const stored = localStorage.getItem("purchasedProducts");
@@ -254,7 +260,6 @@ export default function Shop() {
         alert("Payment successful! (Demo mode - Supabase not configured)");
         setShowPaymentForm(null);
       }
-
     } catch (error) {
       console.error("Payment error:", error);
       alert("Payment failed. Please try again.");
@@ -264,12 +269,19 @@ export default function Shop() {
   };
 
   const isProductPurchased = (productId: string) => {
-    return userPurchases.some(
-      (p) => (p.product_id || p.id) === productId && (p.payment_status === 'success' || !p.payment_status)
-    ) || (productId !== "complete-bundle" &&
+    return (
       userPurchases.some(
-        (p) => (p.product_id || p.id) === "complete-bundle" && (p.payment_status === 'success' || !p.payment_status)
-      ));
+        (p) =>
+          (p.product_id || p.id) === productId &&
+          (p.payment_status === "success" || !p.payment_status),
+      ) ||
+      (productId !== "complete-bundle" &&
+        userPurchases.some(
+          (p) =>
+            (p.product_id || p.id) === "complete-bundle" &&
+            (p.payment_status === "success" || !p.payment_status),
+        ))
+    );
   };
 
   const t = {
@@ -688,7 +700,7 @@ export default function Shop() {
                     {language === "hindi" ? "मूल कीमत:" : "Original Price:"}
                   </span>
                   <span className="text-gray-900">
-                    ₹{products.find(p => p.id === showPaymentForm)?.price}
+                    ₹{products.find((p) => p.id === showPaymentForm)?.price}
                   </span>
                 </div>
                 {appliedDiscount > 0 && (
@@ -699,9 +711,11 @@ export default function Shop() {
                     </span>
                     <span>
                       -₹
-                      {(products.find(p => p.id === showPaymentForm)?.price || 0) -
+                      {(products.find((p) => p.id === showPaymentForm)?.price ||
+                        0) -
                         calculateDiscountedPrice(
-                          products.find(p => p.id === showPaymentForm)?.price || 0,
+                          products.find((p) => p.id === showPaymentForm)
+                            ?.price || 0,
                         )}
                     </span>
                   </div>
@@ -713,7 +727,8 @@ export default function Shop() {
                   <span className="text-blue-600">
                     ₹
                     {calculateDiscountedPrice(
-                      products.find(p => p.id === showPaymentForm)?.price || 0,
+                      products.find((p) => p.id === showPaymentForm)?.price ||
+                        0,
                     )}
                   </span>
                 </div>

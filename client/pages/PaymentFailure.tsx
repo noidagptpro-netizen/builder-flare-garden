@@ -4,11 +4,12 @@ import { XCircle, Home, RefreshCw, Mail } from "lucide-react";
 
 export default function PaymentFailure() {
   const [searchParams] = useSearchParams();
-  
-  const errorMessage = searchParams.get('error_Message') || 'Payment was not completed';
-  const txnid = searchParams.get('txnid');
-  const amount = searchParams.get('amount');
-  const productinfo = searchParams.get('productinfo');
+
+  const errorMessage =
+    searchParams.get("error_Message") || "Payment was not completed";
+  const txnid = searchParams.get("txnid");
+  const amount = searchParams.get("amount");
+  const productinfo = searchParams.get("productinfo");
 
   return (
     <div className="min-h-screen bg-white">
@@ -42,12 +43,15 @@ export default function PaymentFailure() {
             Payment Failed
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            We couldn't process your payment. Don't worry, no money has been deducted from your account.
+            We couldn't process your payment. Don't worry, no money has been
+            deducted from your account.
           </p>
 
           {/* Error Details */}
           <div className="bg-red-50 border border-red-200 rounded-2xl p-6 mb-8 max-w-md mx-auto">
-            <h3 className="text-lg font-bold text-red-900 mb-4">Payment Details</h3>
+            <h3 className="text-lg font-bold text-red-900 mb-4">
+              Payment Details
+            </h3>
             <div className="space-y-2 text-sm">
               {txnid && (
                 <div className="flex justify-between">
@@ -76,10 +80,14 @@ export default function PaymentFailure() {
 
           {/* Common Reasons */}
           <div className="bg-gray-50 rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">Common Reasons for Payment Failure</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">
+              Common Reasons for Payment Failure
+            </h3>
             <div className="grid md:grid-cols-2 gap-4 text-sm text-left">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">💳 Card Issues</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  💳 Card Issues
+                </h4>
                 <ul className="text-gray-600 space-y-1">
                   <li>• Insufficient balance</li>
                   <li>• Card expired</li>
@@ -88,7 +96,9 @@ export default function PaymentFailure() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">🏦 Bank Issues</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  🏦 Bank Issues
+                </h4>
                 <ul className="text-gray-600 space-y-1">
                   <li>• Bank server down</li>
                   <li>• Transaction blocked by bank</li>
@@ -101,23 +111,42 @@ export default function PaymentFailure() {
 
           {/* Next Steps */}
           <div className="bg-blue-50 rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">What You Can Do</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">
+              What You Can Do
+            </h3>
             <div className="grid md:grid-cols-2 gap-4 text-sm text-left">
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">🔄 Try Again</h4>
-                <p className="text-gray-600">Wait a few minutes and retry the payment with the same or different card.</p>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  🔄 Try Again
+                </h4>
+                <p className="text-gray-600">
+                  Wait a few minutes and retry the payment with the same or
+                  different card.
+                </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">💬 Contact Bank</h4>
-                <p className="text-gray-600">Call your bank to check if they blocked the transaction.</p>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  💬 Contact Bank
+                </h4>
+                <p className="text-gray-600">
+                  Call your bank to check if they blocked the transaction.
+                </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">💳 Try Different Method</h4>
-                <p className="text-gray-600">Use a different card, net banking, or UPI for payment.</p>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  💳 Try Different Method
+                </h4>
+                <p className="text-gray-600">
+                  Use a different card, net banking, or UPI for payment.
+                </p>
               </div>
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">📞 Get Help</h4>
-                <p className="text-gray-600">Contact our support team if the issue persists.</p>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  📞 Get Help
+                </h4>
+                <p className="text-gray-600">
+                  Contact our support team if the issue persists.
+                </p>
               </div>
             </div>
           </div>

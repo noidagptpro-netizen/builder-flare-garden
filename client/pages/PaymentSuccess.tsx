@@ -21,20 +21,22 @@ export default function PaymentSuccess() {
 
       if (!isSupabaseConfigured()) {
         // Simulate successful payment when Supabase is not configured
-        console.log("Supabase not configured, simulating successful payment verification");
+        console.log(
+          "Supabase not configured, simulating successful payment verification",
+        );
         setVerificationResult({
           success: true,
           verified: true,
-          paymentStatus: 'success',
+          paymentStatus: "success",
           purchase: {
-            id: 'demo-purchase',
-            product_id: searchParams.get('udf3') || 'complete-growth-kit',
-            amount: parseFloat(searchParams.get('amount') || '99'),
-            payment_status: 'success'
-          }
+            id: "demo-purchase",
+            product_id: searchParams.get("udf3") || "complete-growth-kit",
+            amount: parseFloat(searchParams.get("amount") || "99"),
+            payment_status: "success",
+          },
         });
 
-        const productId = searchParams.get('udf3') || 'complete-growth-kit';
+        const productId = searchParams.get("udf3") || "complete-growth-kit";
         const { data: productData } = await dbHelpers.getProduct(productId);
         setProduct(productData);
         return;
@@ -42,76 +44,80 @@ export default function PaymentSuccess() {
 
       // Get all payment response parameters from URL
       const paymentResponse = {
-        mihpayid: searchParams.get('mihpayid') || '',
-        mode: searchParams.get('mode') || '',
-        status: searchParams.get('status') || '',
-        unmappedstatus: searchParams.get('unmappedstatus') || '',
-        key: searchParams.get('key') || '',
-        txnid: searchParams.get('txnid') || '',
-        amount: searchParams.get('amount') || '',
-        productinfo: searchParams.get('productinfo') || '',
-        firstname: searchParams.get('firstname') || '',
-        lastname: searchParams.get('lastname') || '',
-        address1: searchParams.get('address1') || '',
-        address2: searchParams.get('address2') || '',
-        city: searchParams.get('city') || '',
-        state: searchParams.get('state') || '',
-        country: searchParams.get('country') || '',
-        zipcode: searchParams.get('zipcode') || '',
-        email: searchParams.get('email') || '',
-        phone: searchParams.get('phone') || '',
-        udf1: searchParams.get('udf1') || '',
-        udf2: searchParams.get('udf2') || '',
-        udf3: searchParams.get('udf3') || '',
-        udf4: searchParams.get('udf4') || '',
-        udf5: searchParams.get('udf5') || '',
-        field1: searchParams.get('field1') || '',
-        field2: searchParams.get('field2') || '',
-        field3: searchParams.get('field3') || '',
-        field4: searchParams.get('field4') || '',
-        field5: searchParams.get('field5') || '',
-        field6: searchParams.get('field6') || '',
-        field7: searchParams.get('field7') || '',
-        field8: searchParams.get('field8') || '',
-        field9: searchParams.get('field9') || '',
-        error: searchParams.get('error') || '',
-        error_Message: searchParams.get('error_Message') || '',
-        net_amount_debit: searchParams.get('net_amount_debit') || '',
-        disc: searchParams.get('disc') || '',
-        addedon: searchParams.get('addedon') || '',
-        payment_source: searchParams.get('payment_source') || '',
-        PG_TYPE: searchParams.get('PG_TYPE') || '',
-        bank_ref_num: searchParams.get('bank_ref_num') || '',
-        bankcode: searchParams.get('bankcode') || '',
-        cardnum: searchParams.get('cardnum') || '',
-        hash: searchParams.get('hash') || ''
+        mihpayid: searchParams.get("mihpayid") || "",
+        mode: searchParams.get("mode") || "",
+        status: searchParams.get("status") || "",
+        unmappedstatus: searchParams.get("unmappedstatus") || "",
+        key: searchParams.get("key") || "",
+        txnid: searchParams.get("txnid") || "",
+        amount: searchParams.get("amount") || "",
+        productinfo: searchParams.get("productinfo") || "",
+        firstname: searchParams.get("firstname") || "",
+        lastname: searchParams.get("lastname") || "",
+        address1: searchParams.get("address1") || "",
+        address2: searchParams.get("address2") || "",
+        city: searchParams.get("city") || "",
+        state: searchParams.get("state") || "",
+        country: searchParams.get("country") || "",
+        zipcode: searchParams.get("zipcode") || "",
+        email: searchParams.get("email") || "",
+        phone: searchParams.get("phone") || "",
+        udf1: searchParams.get("udf1") || "",
+        udf2: searchParams.get("udf2") || "",
+        udf3: searchParams.get("udf3") || "",
+        udf4: searchParams.get("udf4") || "",
+        udf5: searchParams.get("udf5") || "",
+        field1: searchParams.get("field1") || "",
+        field2: searchParams.get("field2") || "",
+        field3: searchParams.get("field3") || "",
+        field4: searchParams.get("field4") || "",
+        field5: searchParams.get("field5") || "",
+        field6: searchParams.get("field6") || "",
+        field7: searchParams.get("field7") || "",
+        field8: searchParams.get("field8") || "",
+        field9: searchParams.get("field9") || "",
+        error: searchParams.get("error") || "",
+        error_Message: searchParams.get("error_Message") || "",
+        net_amount_debit: searchParams.get("net_amount_debit") || "",
+        disc: searchParams.get("disc") || "",
+        addedon: searchParams.get("addedon") || "",
+        payment_source: searchParams.get("payment_source") || "",
+        PG_TYPE: searchParams.get("PG_TYPE") || "",
+        bank_ref_num: searchParams.get("bank_ref_num") || "",
+        bankcode: searchParams.get("bankcode") || "",
+        cardnum: searchParams.get("cardnum") || "",
+        hash: searchParams.get("hash") || "",
       };
 
       // Verify payment via Supabase Edge Function
-      const { data, error } = await supabase!.functions.invoke('verify-payment', {
-        body: paymentResponse
-      });
+      const { data, error } = await supabase!.functions.invoke(
+        "verify-payment",
+        {
+          body: paymentResponse,
+        },
+      );
 
       if (error) {
-        console.error('Payment verification error:', error);
-        setVerificationResult({ success: false, error: 'Verification failed' });
+        console.error("Payment verification error:", error);
+        setVerificationResult({ success: false, error: "Verification failed" });
         return;
       }
 
       setVerificationResult(data);
 
-      if (data.success && data.verified && data.paymentStatus === 'success') {
+      if (data.success && data.verified && data.paymentStatus === "success") {
         // Get purchase and product details
         const purchaseData = data.purchase;
         setPurchase(purchaseData);
 
-        const { data: productData } = await dbHelpers.getProduct(purchaseData.product_id);
+        const { data: productData } = await dbHelpers.getProduct(
+          purchaseData.product_id,
+        );
         setProduct(productData);
       }
-
     } catch (error) {
-      console.error('Error verifying payment:', error);
-      setVerificationResult({ success: false, error: 'Verification failed' });
+      console.error("Error verifying payment:", error);
+      setVerificationResult({ success: false, error: "Verification failed" });
     } finally {
       setIsVerifying(false);
     }
@@ -120,7 +126,9 @@ export default function PaymentSuccess() {
   const handleDownload = async (productId: string) => {
     // This would trigger download of all product files
     // For now, we'll just show a success message
-    alert('Download functionality will be implemented with the actual product files.');
+    alert(
+      "Download functionality will be implemented with the actual product files.",
+    );
   };
 
   if (isVerifying) {
@@ -128,23 +136,34 @@ export default function PaymentSuccess() {
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center">
           <Loader2 className="w-12 h-12 animate-spin text-blue-500 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Verifying Payment</h2>
-          <p className="text-gray-600">Please wait while we verify your payment...</p>
+          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+            Verifying Payment
+          </h2>
+          <p className="text-gray-600">
+            Please wait while we verify your payment...
+          </p>
         </div>
       </div>
     );
   }
 
-  if (!verificationResult?.success || !verificationResult?.verified || verificationResult?.paymentStatus !== 'success') {
+  if (
+    !verificationResult?.success ||
+    !verificationResult?.verified ||
+    verificationResult?.paymentStatus !== "success"
+  ) {
     return (
       <div className="min-h-screen bg-white flex items-center justify-center">
         <div className="text-center max-w-md mx-auto p-8">
           <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <span className="text-3xl">❌</span>
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">Payment Verification Failed</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">
+            Payment Verification Failed
+          </h1>
           <p className="text-gray-600 mb-6">
-            We couldn't verify your payment. Please contact support if you believe this is an error.
+            We couldn't verify your payment. Please contact support if you
+            believe this is an error.
           </p>
           <div className="space-y-3">
             <Link
@@ -198,28 +217,39 @@ export default function PaymentSuccess() {
             Payment Successful! 🎉
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Thank you for your purchase! Your payment has been verified and your products are ready for download.
+            Thank you for your purchase! Your payment has been verified and your
+            products are ready for download.
           </p>
 
           {/* Payment Details */}
           <div className="bg-gray-50 rounded-2xl p-6 mb-8 max-w-md mx-auto">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">Payment Details</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">
+              Payment Details
+            </h3>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-gray-600">Transaction ID:</span>
-                <span className="font-mono text-gray-900">{searchParams.get('txnid')}</span>
+                <span className="font-mono text-gray-900">
+                  {searchParams.get("txnid")}
+                </span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Amount:</span>
-                <span className="font-bold text-gray-900">₹{searchParams.get('amount')}</span>
+                <span className="font-bold text-gray-900">
+                  ₹{searchParams.get("amount")}
+                </span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Product:</span>
-                <span className="text-gray-900">{product?.name || searchParams.get('productinfo')}</span>
+                <span className="text-gray-900">
+                  {product?.name || searchParams.get("productinfo")}
+                </span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Payment ID:</span>
-                <span className="font-mono text-gray-900">{searchParams.get('mihpayid')}</span>
+                <span className="font-mono text-gray-900">
+                  {searchParams.get("mihpayid")}
+                </span>
               </div>
             </div>
           </div>
@@ -253,30 +283,48 @@ export default function PaymentSuccess() {
             )}
 
             <p className="text-sm text-gray-600 mt-4 max-w-md mx-auto">
-              Your products will be available for download anytime from your account. 
-              We've also sent download links to your email address.
+              Your products will be available for download anytime from your
+              account. We've also sent download links to your email address.
             </p>
           </div>
 
           {/* Next Steps */}
           <div className="bg-blue-50 rounded-2xl p-6 mb-8 max-w-2xl mx-auto">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">What's Next?</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">
+              What's Next?
+            </h3>
             <div className="grid md:grid-cols-2 gap-4 text-sm">
               <div className="text-left">
-                <h4 className="font-semibold text-gray-900 mb-2">📧 Check Your Email</h4>
-                <p className="text-gray-600">We've sent you download links and product guides.</p>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  📧 Check Your Email
+                </h4>
+                <p className="text-gray-600">
+                  We've sent you download links and product guides.
+                </p>
               </div>
               <div className="text-left">
-                <h4 className="font-semibold text-gray-900 mb-2">🚀 Start Creating</h4>
-                <p className="text-gray-600">Use your new tools to accelerate your creator journey.</p>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  🚀 Start Creating
+                </h4>
+                <p className="text-gray-600">
+                  Use your new tools to accelerate your creator journey.
+                </p>
               </div>
               <div className="text-left">
-                <h4 className="font-semibold text-gray-900 mb-2">💬 Join Community</h4>
-                <p className="text-gray-600">Connect with other creators in our exclusive group.</p>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  💬 Join Community
+                </h4>
+                <p className="text-gray-600">
+                  Connect with other creators in our exclusive group.
+                </p>
               </div>
               <div className="text-left">
-                <h4 className="font-semibold text-gray-900 mb-2">📞 Get Support</h4>
-                <p className="text-gray-600">Reach out if you need help with any of your products.</p>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  📞 Get Support
+                </h4>
+                <p className="text-gray-600">
+                  Reach out if you need help with any of your products.
+                </p>
               </div>
             </div>
           </div>
