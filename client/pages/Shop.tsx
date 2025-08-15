@@ -517,7 +517,7 @@ export default function Shop() {
             </div>
             <p className="text-sm opacity-90">
               {language === "hindi"
-                ? "5000+ क्रिएटर्स का भरोसा • सफलता गारंटी • तुरंत डाउनलोड"
+                ? "5000+ क्रिएटर्स का भरोसा • स���लता गारंटी • तुरंत डाउनलोड"
                 : "Trusted by 5000+ creators • Success guaranteed • Instant download"}
             </p>
           </div>
@@ -635,8 +635,8 @@ export default function Shop() {
                         </div>
                         <div className="text-green-600 text-xs mt-1">
                           {language === "hindi"
-                            ? "तुरंत डाउनलोड • 30 दिन मन��-बैक गारंटी"
-                            : "Instant download • 30-day money-back guarantee"}
+                            ? "तुरंत डाउनलोड • सफलता गारंटी"
+                            : "Instant download • Success guarantee"}
                         </div>
                       </div>
                     </div>
