@@ -19,6 +19,27 @@ export default function PaymentSuccess() {
     try {
       setIsVerifying(true);
 
+      if (!isSupabaseConfigured()) {
+        // Simulate successful payment when Supabase is not configured
+        console.log("Supabase not configured, simulating successful payment verification");
+        setVerificationResult({
+          success: true,
+          verified: true,
+          paymentStatus: 'success',
+          purchase: {
+            id: 'demo-purchase',
+            product_id: searchParams.get('udf3') || 'complete-growth-kit',
+            amount: parseFloat(searchParams.get('amount') || '99'),
+            payment_status: 'success'
+          }
+        });
+
+        const productId = searchParams.get('udf3') || 'complete-growth-kit';
+        const { data: productData } = await dbHelpers.getProduct(productId);
+        setProduct(productData);
+        return;
+      }
+
       // Get all payment response parameters from URL
       const paymentResponse = {
         mihpayid: searchParams.get('mihpayid') || '',
@@ -67,7 +88,7 @@ export default function PaymentSuccess() {
       };
 
       // Verify payment via Supabase Edge Function
-      const { data, error } = await supabase.functions.invoke('verify-payment', {
+      const { data, error } = await supabase!.functions.invoke('verify-payment', {
         body: paymentResponse
       });
 
