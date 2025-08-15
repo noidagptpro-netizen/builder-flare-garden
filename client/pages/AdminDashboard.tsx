@@ -13,7 +13,7 @@ import {
   Home,
   Loader2,
 } from "lucide-react";
-import { supabase } from "../lib/supabase";
+import { supabase, isSupabaseConfigured } from "../lib/supabase";
 
 interface UserData {
   id: string;
