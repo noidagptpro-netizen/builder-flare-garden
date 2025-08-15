@@ -206,6 +206,24 @@ export default function AdminDashboard() {
       </header>
 
       <div className="container mx-auto px-4 py-8">
+        {/* Configuration Warning */}
+        {!isSupabaseConfigured() && (
+          <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
+                <span className="text-yellow-600 text-sm">⚠️</span>
+              </div>
+              <div>
+                <h3 className="text-yellow-800 font-semibold">Supabase Not Configured</h3>
+                <p className="text-yellow-700 text-sm">
+                  The admin dashboard requires Supabase configuration to display real data.
+                  Please set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY environment variables.
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Stats Cards */}
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-xl p-6 border border-gray-200">
