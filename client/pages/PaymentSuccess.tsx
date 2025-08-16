@@ -89,30 +89,43 @@ export default function PaymentSuccess() {
         hash: searchParams.get("hash") || "",
       };
 
-      // Verify payment via Supabase Edge Function
-      const { data, error } = await supabase!.functions.invoke(
-        "verify-payment",
-        {
-          body: paymentResponse,
-        },
-      );
+      // Direct payment verification without Edge Functions
+      const isSuccess = paymentResponse.status === 'success';
+      const txnid = paymentResponse.txnid;
 
-      if (error) {
-        console.error("Payment verification error:", error);
-        setVerificationResult({ success: false, error: "Verification failed" });
+      if (!txnid) {
+        setVerificationResult({ success: false, error: 'Missing transaction ID' });
         return;
       }
 
-      setVerificationResult(data);
+      // Update purchase status in Supabase
+      const { data: purchaseData, error: purchaseError } = await supabase!
+        .from('purchases')
+        .update({
+          payment_status: isSuccess ? 'success' : 'failed',
+          payu_response: paymentResponse,
+          updated_at: new Date().toISOString()
+        })
+        .eq('payment_id', txnid)
+        .select()
+        .single();
 
-      if (data.success && data.verified && data.paymentStatus === "success") {
-        // Get purchase and product details
-        const purchaseData = data.purchase;
+      if (purchaseError) {
+        console.error('Failed to update purchase:', purchaseError);
+        setVerificationResult({ success: false, error: 'Failed to update purchase' });
+        return;
+      }
+
+      setVerificationResult({
+        success: true,
+        verified: true,
+        paymentStatus: isSuccess ? 'success' : 'failed',
+        purchase: purchaseData
+      });
+
+      if (isSuccess && purchaseData) {
         setPurchase(purchaseData);
-
-        const { data: productData } = await dbHelpers.getProduct(
-          purchaseData.product_id,
-        );
+        const { data: productData } = await dbHelpers.getProduct(purchaseData.product_id);
         setProduct(productData);
       }
     } catch (error) {
