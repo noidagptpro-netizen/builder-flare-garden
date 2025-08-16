@@ -229,21 +229,25 @@ export default function Shop() {
         }
 
         // Create PayU payment data
-        const paymentData = paymentHelpers.createPaymentData(
-          finalAmount,
-          product.name,
-          customerInfo,
-          `${window.location.origin}/payment-success`,
-          `${window.location.origin}/payment-failure`,
-          {
-            udf1: purchaseData.id, // Purchase ID
-            udf2: productId,       // Product ID
-            udf3: finalAmount.toString() // Amount
-          }
-        );
+        const paymentData = {
+          txnid: txnid,
+          amount: finalAmount,
+          productinfo: product.name,
+          firstname: customerInfo.name,
+          email: customerInfo.email,
+          phone: customerInfo.phone,
+          surl: `${window.location.origin}/payment-success`,
+          furl: `${window.location.origin}/payment-failure`,
+          udf1: purchaseData.id, // Purchase ID
+          udf2: productId,       // Product ID
+          udf3: finalAmount.toString(), // Amount
+          udf4: '',
+          udf5: ''
+        };
 
-        // Override transaction ID with our generated one
-        paymentData.txnid = txnid;
+        // Generate hash using PayU helper
+        const { generatePayUHash } = await import("../lib/payu");
+        const hash = generatePayUHash(paymentData);
 
         // Redirect to PayU payment gateway
         const form = document.createElement("form");
@@ -254,7 +258,7 @@ export default function Shop() {
         const payuFields = {
           key: 'WBtjxn',
           txnid: paymentData.txnid,
-          amount: paymentData.amount,
+          amount: paymentData.amount.toString(),
           productinfo: paymentData.productinfo,
           firstname: paymentData.firstname,
           email: paymentData.email,
@@ -264,7 +268,9 @@ export default function Shop() {
           udf1: paymentData.udf1,
           udf2: paymentData.udf2,
           udf3: paymentData.udf3,
-          hash: paymentHelpers.generatePayUHash ? paymentHelpers.generatePayUHash(paymentData) : 'test_hash'
+          udf4: paymentData.udf4,
+          udf5: paymentData.udf5,
+          hash: hash
         };
 
         Object.entries(payuFields).forEach(([key, value]) => {
@@ -549,7 +555,7 @@ export default function Shop() {
                           </div>
                           {product.original_price > product.price && (
                             <div className="text-lg text-gray-500 line-through">
-                              ₹{product.original_price}
+                              ��{product.original_price}
                             </div>
                           )}
                           <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-4">
@@ -622,7 +628,7 @@ export default function Shop() {
                 className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all inline-block"
               >
                 {language === "hindi"
-                  ? "🎯 अभी प्रोफा��ल बनाएं"
+                  ? "🎯 अभी प्रोफाइल बनाएं"
                   : "🎯 Create Profile Now"}
               </Link>
               <button
@@ -742,7 +748,7 @@ export default function Shop() {
               <div className="bg-gray-50 rounded-lg p-4 mb-6">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">
-                    {language === "hindi" ? "��ूल कीमत:" : "Original Price:"}
+                    {language === "hindi" ? "मूल कीमत:" : "Original Price:"}
                   </span>
                   <span className="text-gray-900">
                     ₹{products.find((p) => p.id === showPaymentForm)?.price}
