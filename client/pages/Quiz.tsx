@@ -95,15 +95,16 @@ const languages = {
     title: "Creator Success Quiz",
     subtitle: "Get your personalized growth strategy in 3 minutes",
     steps: {
-      1: "Platform & Followers",
-      2: "Content Niche",
-      3: "Content Type",
-      4: "Posting Frequency",
-      5: "Experience & Income",
-      6: "Biggest Challenge",
-      7: "Goals",
-      8: "Social Links",
-      9: "Engagement Rate",
+      1: "Basic Information",
+      2: "Platform & Followers",
+      3: "Content Niche",
+      4: "Content Type",
+      5: "Posting Frequency",
+      6: "Experience & Income",
+      7: "Biggest Challenge",
+      8: "Goals",
+      9: "Social Links",
+      10: "Engagement Rate",
     },
     questions: {
       primaryPlatform: "What's your primary content platform?",
@@ -259,7 +260,7 @@ const languages = {
     title: "क्रिएटर सक्सेस क्विज़",
     subtitle: "3 मिनट में अपनी व्य��्तिगत ग्रोथ रणनीति प��एं",
     steps: {
-      1: "प���लेटफॉर्म औ�� फॉलोअर्स",
+      1: "प���ल���टफॉर्म औ�� फॉलोअर्स",
       2: "कंटे��ट निच",
       3: "कंटेंट प्रकार",
       4: "पोस्��िंग आवृत्ति",
@@ -284,8 +285,8 @@ const languages = {
       biggestChallenge:
         "आपकी सबसे बड़ी चुनौती क्या है? 3 त��� चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
       goals: "आपके अगले 6 महीने के मुख����� लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
-      socialLinks: "अपन��� सोशल उपस्थिति साझा करें (वैकल्पिक)",
-      bio: "अपने और अपने कंटेंट के बारे ����ें कुछ और ब��ाएं (वैकल्��िक)",
+      socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
+      bio: "अपने और अपने कंटेंट के बारे ����ें कुछ और ब��ाएं (वैकल्����िक)",
     },
     options: {
       platforms: [
@@ -314,7 +315,7 @@ const languages = {
         "फिटनेस और स्वास्थ्य",
         "व्यक्तिगत वि��्त और नि��ेश",
         "मनोरंजन और कॉमेडी",
-        "उद्यमिता और ���्यापार",
+        "उद्यमिता और व्यापार",
         "जीवनशैली और कल्याण",
         "कला और डिज़ाइन",
         "गेमिंग और ���स्पोर���ट्स",
@@ -344,7 +345,7 @@ const languages = {
         "स्टोरीज़",
         "लिखित पोस्ट",
         "पॉडकास्ट",
-        "मिश्रि��� कंटेंट",
+        "मिश्रित कंटेंट",
       ],
       frequencies: [
         "रोज़ा���ा",
@@ -378,7 +379,7 @@ const languages = {
         "🗣️ Brand & Identity: Struggling to find my unique voice/style",
         "🤝 Brand & Identity: Balancing authenticity with brand appeal",
         "🌱 Brand & Identity: Building a real, connected community",
-        "��� Monetization & Scaling: Can't convert followers into paying customers",
+        "💔 Monetization & Scaling: Can't convert followers into paying customers",
         "🤝 Monetization & Scaling: Not landing brand collaborations",
         "📊 Monetization & Scaling: Confused by analytics & metrics",
         "🥵 Creator Wellness: Burnout & content fatigue",
@@ -656,7 +657,7 @@ ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
         `${language === "hindi" ? "6+ ���्रांड आ���टरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
 ${language === "hindi" ? "टेम्प्ल���ट 1: प्रारंभिक संपर्क (कोल्�� आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
-${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प��रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
+${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
 
@@ -731,7 +732,7 @@ ${language === "hindi" ? "Considering my engagement rates और audience qualit
 
 ${language === "hindi" ? "• मेरी audience क�� [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
-${language === "hindi" ? "• मैं additional value add कर सकता ह��ं like [extra service]" : "• I can add additional value like [extra service]"}
+${language === "hindi" ? "�� मैं additional value add कर सकता ह��ं like [extra service]" : "• I can add additional value like [extra service]"}
 
 ${language === "hindi" ? "��ै��� flexible ह��ं औ��� ���� mutually beneficial deal बनाना �����हता हूं���" : "I'm flexible and want to create a mutually beneficial deal."}
 
@@ -764,7 +765,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 6: ल���न����-टर्म पार्टनरशिप प्र���ोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
+${language === "hindi" ? "टेम्प्लेट 6: ल���न��ग-टर्म पार्टनरशिप प्र���ोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `Long-term Partnership Proposal - ${userName} x [Brand]` : `Long-term Partnership Proposal - ${userName} x [Brand]`}
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
@@ -829,7 +830,7 @@ ${language === "hindi" ? "- ट्रेंडिंग टॉपि��्स
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
-${language === "hindi" ? "- मीडिया किट तैयार कर��ं" : "- Prepare media kit"}
+${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
 ${language === "hindi" ? "- ब्रां���्स स�� ���ंपर्क शुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
 
