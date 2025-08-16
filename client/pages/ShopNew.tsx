@@ -207,10 +207,36 @@ export default function Shop() {
         // Generate transaction ID
         const txnid = `FAMECHASE_${Date.now()}_${Math.random().toString(36).substring(2)}`.toUpperCase();
 
-        // Save purchase to Supabase first
+        // First, ensure user data is saved to Supabase
+        let userId = null;
+        if (quizData) {
+          const { data: userData, error: userError } = await supabase
+            .from('users')
+            .upsert([{
+              name: customerInfo.name,
+              email: customerInfo.email,
+              phone: customerInfo.phone,
+              city: customerInfo.city,
+              niche: quizData.niche,
+              primary_platform: quizData.primaryPlatform,
+              follower_count: quizData.followerCount,
+              goals: quizData.goals,
+              quiz_data: quizData,
+            }], {
+              onConflict: 'email',
+              ignoreDuplicates: false
+            })
+            .select()
+            .single();
+
+          if (userData) userId = userData.id;
+        }
+
+        // Save purchase to Supabase
         const { data: purchaseData, error: purchaseError } = await supabase
           .from('purchases')
           .insert([{
+            user_id: userId,
             product_id: productId,
             amount: finalAmount,
             discount_amount: product.price - finalAmount,
@@ -368,7 +394,7 @@ export default function Shop() {
       securePayment: "सुरक्षित भुगतान",
       instantDownload: "तुरंत डाउनलोड",
       buyNow: "अभी खरीदें",
-      downloadFree: "फ्री डाउनलोड करें",
+      downloadFree: "फ्री ड��उनलोड करें",
       paymentForm: "अपनी जानकारी पूरी करें",
       fullName: "पूरा नाम",
       emailAddress: "ईमेल पता",
@@ -433,7 +459,7 @@ export default function Shop() {
               <Award className="w-5 h-5" />
               <span className="font-semibold">
                 {language === "hindi"
-                  ? "प्रीमियम क्रिएटर टूल्स"
+                  ? "प्रीमिय�� क्रिएटर टूल्स"
                   : "Premium Creator Tools"}
               </span>
             </div>
@@ -619,7 +645,7 @@ export default function Shop() {
             </h3>
             <p className="text-gray-600 mb-6">
               {language === "hindi"
-                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी होगी। यह केवल 2 मिनट में हो जाएगा!"
+                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी होगी��� यह केवल 2 मिनट में हो जाएगा!"
                 : "Before purchasing premium tools, you need to complete your creator profile. It takes only 2 minutes!"}
             </p>
             <div className="space-y-3">
