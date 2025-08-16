@@ -610,7 +610,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
     )
   ) {
     weaknesses.push(
-      `💡 Monetization knowledge gap! The difference between earning ₹0 and ₹50K+ is usually just knowing the right strategies.`,
+      `��� Monetization knowledge gap! The difference between earning ₹0 and ₹50K+ is usually just knowing the right strategies.`,
     );
   }
 
@@ -1469,35 +1469,127 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
   const followerNum = getFollowerCount(data.followerCount);
   const incomeNum = getIncomeAmount(data.monthlyIncome);
 
-  // High priority recommendations based on user profile and existing shop products
+  // EXACT FAMECHASE SHOP PRODUCTS WITH REAL PRICES
+  const shopProducts = [
+    {
+      name: "Complete Creator Growth Kit",
+      price: 99,
+      originalPrice: 199,
+      description: "Everything you need to grow from 0 to 10K followers and start monetizing"
+    },
+    {
+      name: "Instagram Reels Mastery Course",
+      price: 197,
+      originalPrice: 397,
+      description: "Learn the viral formula that gets millions of views consistently"
+    },
+    {
+      name: "Brand Collaboration Masterclass",
+      price: 149,
+      originalPrice: 299,
+      description: "Get paid partnerships with top brands - step by step system"
+    },
+    {
+      name: "YouTube Mastery Course",
+      price: 297,
+      originalPrice: 597,
+      description: "Complete YouTube growth and monetization blueprint for creators"
+    },
+    {
+      name: "Facebook Posting Mastery Course",
+      price: 197,
+      originalPrice: 397,
+      description: "Master Facebook organic reach and engagement for maximum impact"
+    },
+    {
+      name: "Complete Creator Bundle",
+      price: 497,
+      originalPrice: 997,
+      description: "Get ALL premium products for 70% OFF - Save ₹700+ and become a creator success story"
+    }
+  ];
 
   // Complete Creator Growth Kit - For users with audience but low income
-  if (followerNum >= 5000 && incomeNum < 30000) {
+  if (followerNum >= 1000 && incomeNum < 30000) {
     recommendations.push({
       name: "Complete Creator Growth Kit",
-      reason: `With ${data.followerCount} followers but current income under ₹30K, this kit's media kit templates, brand outreach emails, and pricing calculator will help you unlock your monetization potential immediately.`,
+      reason: `With ${data.followerCount} followers, this growth kit's media kit templates, brand outreach emails, and pricing calculator will help you unlock ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly monetization potential.`,
       priority: "high" as const,
     });
   }
 
-  // Instagram Reels Mastery Course - For users focused on Instagram and engagement challenges
+  // Instagram Reels Mastery Course - For Instagram users and engagement challenges
   if (
-    data.primaryPlatform === "Instagram" &&
-    (data.biggestChallenge.some((challenge) =>
-      challenge.includes("Low views & inconsistent engagement"),
+    data.primaryPlatform === "Instagram" ||
+    data.secondaryPlatforms.includes("Instagram") ||
+    data.biggestChallenge.some((challenge) =>
+      challenge.includes("Low views & inconsistent engagement")
     ) ||
-      data.contentType === "Photos & Carousels" ||
-      data.goals.some((goal) => goal.includes("Create Viral Content")))
+    data.goals.some((goal) => goal.includes("Create Viral Content"))
   ) {
     recommendations.push({
       name: "Instagram Reels Mastery Course",
-      reason:
-        "Your Instagram focus and engagement challenges make this perfect. Learn the viral formula with 50+ reel ideas, editing templates, and algorithm secrets to boost your reach dramatically.",
+      reason: "Perfect for boosting your Instagram reach. This course includes 50+ viral reel ideas, editing templates, and algorithm secrets used by creators with 500K+ followers.",
       priority: "high" as const,
     });
   }
 
-  // Brand Collaboration Masterclass - For brand partnership challenges
+  // Brand Collaboration Masterclass - For brand partnership goals
+  if (
+    data.goals.some((goal) => goal.includes("Get Brand Collaborations")) ||
+    data.biggestChallenge.some((challenge) =>
+      challenge.includes("Not landing brand collaborations")
+    ) ||
+    followerNum >= 5000
+  ) {
+    recommendations.push({
+      name: "Brand Collaboration Masterclass",
+      reason: `With ${data.followerCount} followers in ${data.niche}, you can earn ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)} per post. This masterclass includes email scripts, media kit templates, and 50+ brand contacts.`,
+      priority: "high" as const,
+    });
+  }
+
+  // YouTube Mastery Course - For YouTube users or long-form content creators
+  if (
+    data.primaryPlatform === "YouTube" ||
+    data.secondaryPlatforms.includes("YouTube") ||
+    data.contentType === "Long-form Videos" ||
+    data.goals.some((goal) => goal.includes("monetization"))
+  ) {
+    recommendations.push({
+      name: "YouTube Mastery Course",
+      reason: "YouTube offers the highest creator revenue potential. This course covers SEO optimization, monetization strategies, and thumbnail psychology for maximum growth.",
+      priority: "medium" as const,
+    });
+  }
+
+  // Facebook Posting Mastery Course - For Facebook users or older demographics
+  if (
+    data.primaryPlatform === "Facebook" ||
+    data.secondaryPlatforms.includes("Facebook") ||
+    data.niche === "Business & Finance" ||
+    parseInt(data.age) >= 30
+  ) {
+    recommendations.push({
+      name: "Facebook Posting Mastery Course",
+      reason: "Facebook's algorithm changes in 2024 create massive opportunities. Learn the secrets to organic reach and community monetization strategies.",
+      priority: "medium" as const,
+    });
+  }
+
+  // Complete Creator Bundle - For serious creators or multiple platform users
+  if (
+    followerNum >= 10000 ||
+    data.secondaryPlatforms.length >= 2 ||
+    incomeNum >= 15000 ||
+    data.goals.some((goal) => goal.includes("₹1L"))
+  ) {
+    recommendations.push({
+      name: "Complete Creator Bundle",
+      reason: `Save ₹500 by getting ALL our products! With your ${data.followerCount} audience and multi-platform presence, this bundle gives you everything needed to scale to ₹1L+ monthly.`,
+      priority: "high" as const,
+    });
+  }
   if (
     data.biggestChallenge.some(
       (challenge) =>
@@ -1898,7 +1990,7 @@ const calculateGrowthPotential = (
     "Technology & AI",
     "टेक्नोलॉजी और AI",
     "Personal Finance & Investing",
-    "व्यक्तिगत वित्त और निवेश",
+    "व्यक्तिगत वित्त औ�� निवेश",
     "Gaming & Esports",
     "गेमिंग और एस्पोर्ट्स",
     "Education & Learning",
