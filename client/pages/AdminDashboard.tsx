@@ -49,6 +49,7 @@ interface StatsData {
 }
 
 export default function AdminDashboard() {
+  const navigate = useNavigate();
   const [users, setUsers] = useState<UserData[]>([]);
   const [purchases, setPurchases] = useState<PurchaseData[]>([]);
   const [stats, setStats] = useState<StatsData>({
@@ -64,9 +65,36 @@ export default function AdminDashboard() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filterStatus, setFilterStatus] = useState("all");
 
+  // Check admin authentication
   useEffect(() => {
+    const isLoggedIn = localStorage.getItem('famechase_admin_logged_in');
+    const loginTime = localStorage.getItem('famechase_admin_login_time');
+
+    if (!isLoggedIn || !loginTime) {
+      navigate('/admin-login');
+      return;
+    }
+
+    // Check if session is expired (24 hours)
+    const now = Date.now();
+    const loginTimestamp = parseInt(loginTime);
+    const sessionDuration = 24 * 60 * 60 * 1000; // 24 hours
+
+    if (now - loginTimestamp > sessionDuration) {
+      localStorage.removeItem('famechase_admin_logged_in');
+      localStorage.removeItem('famechase_admin_login_time');
+      navigate('/admin-login');
+      return;
+    }
+
     loadDashboardData();
-  }, []);
+  }, [navigate]);
+
+  const handleLogout = () => {
+    localStorage.removeItem('famechase_admin_logged_in');
+    localStorage.removeItem('famechase_admin_login_time');
+    navigate('/admin-login');
+  };
 
   const loadDashboardData = async () => {
     try {
