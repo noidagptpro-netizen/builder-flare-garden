@@ -35,6 +35,7 @@ import {
 interface QuizData {
   name: string;
   email: string;
+  phone: string;
   age: string;
   city: string;
   primaryPlatform: string;
@@ -271,7 +272,7 @@ const languages = {
       primaryPlatform: "आप मु���्य��ः किस प्लेटफॉर्म पर क��टेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
-        "आप और कौन से प्लेटफॉर्म का उपयो�� करते हैं? (कई विकल्प चुनें)",
+        "आप और कौन से प्��ेटफॉर्म का उपयो�� करते हैं? (कई विकल्प चुनें)",
       niche: "आपका कंटेंट किस विषय पर है?",
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी ��ार कंटेंट पोस्ट क��ते हैं?",
@@ -318,7 +319,7 @@ const languages = {
         "गेमिंग और ���स्पोर���ट्स",
         "��ंगीत और नृत्य",
         "शिक्षा ���र सीखना",
-        "खेल औ�� एथलेटिक्स",
+        "खेल और एथलेटिक्स",
         "प्रेरणा और स्व-सह��यता",
         "पेरें���िंग और परिवार",
         "DIY और श��ल्प",
@@ -628,7 +629,7 @@ ${language === "hindi" ? "कंटेंट ��्रकार:" : "Content 
 ${language === "hindi" ? "पोस्ट���ंग आवृ���्ति:" : "Posting Frequency:"} ${quizData.postingFrequency}
 ${language === "hindi" ? "मासिक आ��:" : "Monthly Income:"} ${quizData.monthlyIncome}
 
-${language === "hindi" ? "सुझावित दरें (भारतीय ब���जार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
+${language === "hindi" ? "सुझावित दरें (भारतीय बाजार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
 
 ${language === "hindi" ? "📱 प्लेटफॉर्म दरें:" : "��� PLATFORM RATES:"}
 ${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-3,000"}
@@ -653,12 +654,12 @@ ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
         fontSizeIndicator +
         `${language === "hindi" ? "6+ ���्रांड आ���टरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
-${language === "hindi" ? "टेम्प्ल���ट 1: प्रारंभिक संपर्क (कोल्�� आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
+${language === "hindi" ? "टेम्प्ल���ट 1: प्रारंभिक संपर्क (कोल्��� आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
 
-${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कं���ेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
+${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम कर��े में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
@@ -694,7 +695,7 @@ ${userName}
 ---
 
 ${language === "hindi" ? "टेम्प्लेट 3: रेट कार्ड प्रेजेंटेशन" : "TEMPLATE 3: RATE CARD PRESENTATION"}
-${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} - Collaboration rates & packages` : `${userName} - Collaboration rates & packages`}
+${language === "hindi" ? "���िषय:" : "Subject:"} ${language === "hindi" ? `${userName} - Collaboration rates & packages` : `${userName} - Collaboration rates & packages`}
 
 ${language === "hindi" ? "Dear [Brand Name]," : "Dear [Brand Name],"}
 
@@ -709,7 +710,7 @@ ${language === "hindi" ? "📱 स्ट���र�� पैक���ज
 ${language === "hindi" ? "• 3-5 story slides" : "• 3-5 story slides"}
 ${language === "hindi" ? "• Behind-the-scenes content" : "• Behind-the-scenes content"}
 
-${language === "hindi" ? "🎥 रील्स कंटेंट: ₹[आपकी rate]" : "���� Reels Content: ₹[Your rate]"}
+${language === "hindi" ? "🎥 रील्स कंटेंट: ₹[आप��ी rate]" : "���� Reels Content: ₹[Your rate]"}
 ${language === "hindi" ? "• High-quality reel creation" : "• High-quality reel creation"}
 ${language === "hindi" ? "�� Trending music/sounds" : "• Trending music/sounds"}
 
@@ -817,7 +818,7 @@ ${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्��)" : "- Research hashtags (30 hashtag mix)"}
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
-${language === "hindi" ? "- इंटरैक्टिव कंटे���ट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
+${language === "hindi" ? "- इंटरैक्टिव कंटे���ट बढ़ाएं (पोल्��, Q&A)" : "- Increase interactive content (polls, Q&A)"}
 ${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोक��� करें" : "- Focus on community engagement"}
 ${language === "hindi" ? "- एनालिटिक्स ट्रै�� करना शु���ू क������ं" : "- Start tracking analytics"}
 
@@ -826,7 +827,7 @@ ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "री
 ${language === "hindi" ? "- ट्रेंडिंग टॉपि��्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
-${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
+${language === "hindi" ? "द����न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
 ${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
 ${language === "hindi" ? "- ब्रां���्स स�� ���ंपर्क शुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनाना शुरू करें" : "- Start building email list"}
@@ -1542,7 +1543,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             <option value="">
                               Choose your Monetization & Scaling challenge
                             </option>
-                            <option value="�� Monetization & Scaling: Can't convert followers into paying customers">
+                            <option value="💔 Monetization & Scaling: Can't convert followers into paying customers">
                               Can't convert followers into paying customers
                             </option>
                             <option value="🤝 Monetization & Scaling: Not landing brand collaborations">
