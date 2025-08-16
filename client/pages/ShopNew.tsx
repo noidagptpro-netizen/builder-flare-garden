@@ -201,28 +201,73 @@ export default function Shop() {
       const finalAmount = calculateDiscountedPrice(product.price);
 
       if (supabase) {
-        // Use Supabase Edge Function for payment
-        const { data, error } = await supabase.functions.invoke(
-          "create-payment",
+        // Create PayU payment directly without Edge Functions
+        const { paymentHelpers } = await import("../lib/payu");
+
+        // Generate transaction ID
+        const txnid = `FAMECHASE_${Date.now()}_${Math.random().toString(36).substring(2)}`.toUpperCase();
+
+        // Save purchase to Supabase first
+        const { data: purchaseData, error: purchaseError } = await supabase
+          .from('purchases')
+          .insert([{
+            product_id: productId,
+            amount: finalAmount,
+            discount_amount: product.price - finalAmount,
+            promo_code: promoCode || null,
+            payment_id: txnid,
+            payment_status: 'pending',
+            payment_method: 'payu',
+            customer_info: customerInfo
+          }])
+          .select()
+          .single();
+
+        if (purchaseError) {
+          console.error('Purchase creation error:', purchaseError);
+          throw new Error('Failed to create purchase record');
+        }
+
+        // Create PayU payment data
+        const paymentData = paymentHelpers.createPaymentData(
+          finalAmount,
+          product.name,
+          customerInfo,
+          `${window.location.origin}/payment-success`,
+          `${window.location.origin}/payment-failure`,
           {
-            body: {
-              productId,
-              amount: finalAmount,
-              discountAmount: product.price - finalAmount,
-              promoCode: promoCode || null,
-              customerInfo,
-            },
-          },
+            udf1: purchaseData.id, // Purchase ID
+            udf2: productId,       // Product ID
+            udf3: finalAmount.toString() // Amount
+          }
         );
 
-        if (error) throw error;
+        // Override transaction ID with our generated one
+        paymentData.txnid = txnid;
 
         // Redirect to PayU payment gateway
         const form = document.createElement("form");
         form.method = "POST";
         form.action = "https://test.payu.in/_payment";
 
-        Object.entries(data.paymentData).forEach(([key, value]) => {
+        // PayU required fields
+        const payuFields = {
+          key: 'WBtjxn',
+          txnid: paymentData.txnid,
+          amount: paymentData.amount,
+          productinfo: paymentData.productinfo,
+          firstname: paymentData.firstname,
+          email: paymentData.email,
+          phone: paymentData.phone,
+          surl: paymentData.surl,
+          furl: paymentData.furl,
+          udf1: paymentData.udf1,
+          udf2: paymentData.udf2,
+          udf3: paymentData.udf3,
+          hash: paymentHelpers.generatePayUHash ? paymentHelpers.generatePayUHash(paymentData) : 'test_hash'
+        };
+
+        Object.entries(payuFields).forEach(([key, value]) => {
           const input = document.createElement("input");
           input.type = "hidden";
           input.name = key;
@@ -577,7 +622,7 @@ export default function Shop() {
                 className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all inline-block"
               >
                 {language === "hindi"
-                  ? "🎯 अभी प्रोफाइल बनाएं"
+                  ? "🎯 अभी प्रोफा��ल बनाएं"
                   : "🎯 Create Profile Now"}
               </Link>
               <button
@@ -697,7 +742,7 @@ export default function Shop() {
               <div className="bg-gray-50 rounded-lg p-4 mb-6">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-600">
-                    {language === "hindi" ? "मूल कीमत:" : "Original Price:"}
+                    {language === "hindi" ? "��ूल कीमत:" : "Original Price:"}
                   </span>
                   <span className="text-gray-900">
                     ₹{products.find((p) => p.id === showPaymentForm)?.price}
