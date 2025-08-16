@@ -233,13 +233,22 @@ export default function AdminDashboard() {
               </Link>
               <p className="text-sm text-gray-600 mt-1">Admin Dashboard</p>
             </div>
-            <Link
-              to="/"
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              <Home className="w-4 h-4" />
-              Back to Site
-            </Link>
+            <div className="flex items-center gap-4">
+              <Link
+                to="/"
+                className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                <Home className="w-4 h-4" />
+                Back to Site
+              </Link>
+              <button
+                onClick={handleLogout}
+                className="flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors"
+              >
+                <LogOut className="w-4 h-4" />
+                Logout
+              </button>
+            </div>
           </div>
         </div>
       </header>
