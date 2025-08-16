@@ -23,6 +23,7 @@ import {
   Layout,
 } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
+import { supabase, isSupabaseConfigured } from "@/lib/supabase";
 import {
   Dialog,
   DialogContent,
@@ -317,7 +318,7 @@ const languages = {
         "गेमिंग और ���स्पोर���ट्स",
         "��ंगीत और नृत्य",
         "शिक्षा ���र सीखना",
-        "खेल और एथलेटिक्स",
+        "खेल औ�� एथलेटिक्स",
         "प्रेरणा और स्व-सह��यता",
         "पेरें���िंग और परिवार",
         "DIY और श��ल्प",
@@ -627,7 +628,7 @@ ${language === "hindi" ? "कंटेंट ��्रकार:" : "Content 
 ${language === "hindi" ? "पोस्ट���ंग आवृ���्ति:" : "Posting Frequency:"} ${quizData.postingFrequency}
 ${language === "hindi" ? "मासिक आ��:" : "Monthly Income:"} ${quizData.monthlyIncome}
 
-${language === "hindi" ? "सुझावित दरें (भारतीय बाजार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
+${language === "hindi" ? "सुझावित दरें (भारतीय ब���जार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
 
 ${language === "hindi" ? "📱 प्लेटफॉर्म दरें:" : "��� PLATFORM RATES:"}
 ${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-3,000"}
@@ -657,7 +658,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
 
-${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
+${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कं���ेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम कर��े में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
@@ -1541,7 +1542,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             <option value="">
                               Choose your Monetization & Scaling challenge
                             </option>
-                            <option value="💔 Monetization & Scaling: Can't convert followers into paying customers">
+                            <option value="�� Monetization & Scaling: Can't convert followers into paying customers">
                               Can't convert followers into paying customers
                             </option>
                             <option value="🤝 Monetization & Scaling: Not landing brand collaborations">
