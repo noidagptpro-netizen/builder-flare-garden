@@ -270,7 +270,7 @@ const languages = {
       4: "कंटेंट प्रकार",
       5: "पोस्टिंग आवृत्ति",
       6: "अनुभव और आय",
-      7: "सबसे बड़ी चुनौती",
+      7: "सबसे बड़��� चुनौती",
       8: "लक्ष्य",
       9: "सोशल लिंक्स",
       10: "एंगेजमेंट रेट",
@@ -304,7 +304,7 @@ const languages = {
         "लिंक्��इन",
         "��िकट���क",
         "ट्विटर",
-        "फेसबुक",
+        "फेस��ुक",
         "वेबसाइट/���्लॉग",
       ],
       followerRanges: [
@@ -407,7 +407,7 @@ const languages = {
         "प���सिव इनकम स्ट्रीम बनाना",
         "अपनी 9-5 जॉब छोड़कर फुल-टाइम जाना",
         "नए प्लेटफॉर्म्स/��ॉर्मेट्स में expand करना",
-        "अपने ��्पेस में ���ूसरे क्रिएट��्स को मेंटर करना",
+        "अपने ��्पेस में ���ूसरे क्रिएट��्स ��ो मेंटर करना",
       ],
       challenges: [
         "🔄 Growth & Engagement: Low views & inconsistent engagement",
@@ -452,7 +452,7 @@ const languages = {
         description: "��्रांड पार्टनरशिप के लिए 30+ स���द्ध ईमेल टेम्प्लेट्स",
       },
       growthGuide: {
-        title: "90-��िन ��ी ग्रोथ स्ट्रैटेजी गाइड",
+        title: "90-��िन ��ी ��्रोथ स्ट्रैटेजी गाइड",
         description: "अपने फॉलोइंग बढ़ाने के लिए स्टेप-बाई-स्टेप रोडमैप",
       },
       downloadFree: "मुफ्त डाउनलोड करें",
@@ -772,7 +772,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्����्लेट 4: न��गोसिएशन/काउंटर ऑफर" : "TEMPLATE 4: NEGOTIATION/COUNTER OFFER"}
+${language === "hindi" ? "टेम्����्लेट 4: न��गोसिएशन/काउं���र ऑफर" : "TEMPLATE 4: NEGOTIATION/COUNTER OFFER"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? "Re: Collaboration proposal - Let's find a win-win" : "Re: Collaboration proposal - Let's find a win-win"}
 
 ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
@@ -1143,8 +1143,79 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
 
             {!isGenerating && (
               <>
-                {/* Step 1: Primary Platform */}
+                {/* Step 1: Contact Information */}
                 {currentStep === 1 && (
+                  <div className="space-y-10">
+                    <div className="text-center mb-12">
+                      <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <User className="w-10 h-10 text-white" />
+                      </div>
+                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                        Let's Get Started!
+                      </h2>
+                      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Tell us a bit about yourself so we can personalize your creator journey recommendations.
+                      </p>
+                    </div>
+
+                    <div className="space-y-6">
+                      <div>
+                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                          {t.questions.name}
+                        </label>
+                        <input
+                          type="text"
+                          value={quizData.name}
+                          onChange={(e) => updateQuizData("name", e.target.value)}
+                          placeholder="Your full name"
+                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                          {t.questions.email}
+                        </label>
+                        <input
+                          type="email"
+                          value={quizData.email}
+                          onChange={(e) => updateQuizData("email", e.target.value)}
+                          placeholder="your.email@example.com"
+                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                          {t.questions.phone}
+                        </label>
+                        <input
+                          type="tel"
+                          value={quizData.phone}
+                          onChange={(e) => updateQuizData("phone", e.target.value)}
+                          placeholder="+91 98765 43210"
+                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                          {t.questions.city}
+                        </label>
+                        <input
+                          type="text"
+                          value={quizData.city}
+                          onChange={(e) => updateQuizData("city", e.target.value)}
+                          placeholder="Mumbai, Delhi, Bangalore..."
+                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Step 2: Primary Platform */}
+                {currentStep === 2 && (
                   <div className="space-y-10">
                     <div className="text-center mb-12">
                       <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -1596,7 +1667,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             <option value="">
                               Choose your Monetization & Scaling challenge
                             </option>
-                            <option value="💔 Monetization & Scaling: Can't convert followers into paying customers">
+                            <option value="�� Monetization & Scaling: Can't convert followers into paying customers">
                               Can't convert followers into paying customers
                             </option>
                             <option value="🤝 Monetization & Scaling: Not landing brand collaborations">
