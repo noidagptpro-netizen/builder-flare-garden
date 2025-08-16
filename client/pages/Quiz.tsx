@@ -273,7 +273,7 @@ const languages = {
       7: "सबसे बड़ी चुनौती",
       8: "लक्ष्य",
       9: "सोशल लिंक्स",
-      10: "एंगेजमेंट रे���",
+      10: "एंगेजमेंट रेट",
     },
     questions: {
       name: "आपका नाम क्या है?",
@@ -288,7 +288,7 @@ const languages = {
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
-        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आप��े अनुभव किया है)",
+        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       engagementRate: "आपका औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
@@ -332,7 +332,7 @@ const languages = {
         "शिक्षा ���र सीखना",
         "खेल और एथलेटिक्स",
         "प्रेरणा और स्व-सह��यता",
-        "प���रें���िंग और परिवार",
+        "पेरें���िंग और परिवार",
         "DIY और श��ल्प",
         "���ध्यात्म और माइंडफुलनेस",
         "अन्य",
@@ -366,7 +366,7 @@ const languages = {
       ],
       experiences: [
         "अभी शुरू किया (0-6 महीन��)",
-        "शुरुआती (6 ����ही�������े - 1 साल)",
+        "शुरुआती (6 ��ही�������े - 1 साल)",
         "ब���़ रहे हैं (1-2 ���ाल)",
         "अन��भवी (2-3 साल)",
         "विशेषज्ञ (3+ साल)",
@@ -437,7 +437,7 @@ const languages = {
     buttons: {
       next: "अगला क���म",
       back: "पिछला",
-      submit: "मेरा क्��िएटर विश्��ेषण पाएं",
+      submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
     freeResources: {
       title: "🎉 क्विज़ पूरा! यहाँ हैं ���पके मुफ्त क्रिएटर संसा��न",
@@ -449,11 +449,11 @@ const languages = {
       },
       emailTemplates: {
         title: "ब्रांड आउटरीच ईमेल टेम्प���लेट्स",
-        description: "��्रांड पार्टनरशिप के लिए 30+ स���द्ध ईमेल टेम्प्लेट्स",
+        description: "��्��ांड पार्टनरशिप के लिए 30+ स���द्ध ईमेल टेम्प्लेट्स",
       },
       growthGuide: {
         title: "90-��िन ��ी ग्रोथ स्ट्रैटेजी गाइड",
-        description: "अपने फॉलोइंग बढ़ाने के लिए स्टे���-बाई-स्टेप रोडमैप",
+        description: "अपने फॉलोइंग बढ़ाने के लिए स्टेप-बाई-स्टेप रोडमैप",
       },
       downloadFree: "मुफ्त डाउनलोड करें",
     },
@@ -506,28 +506,30 @@ export default function Quiz() {
   const canProceed = () => {
     switch (currentStep) {
       case 1:
-        return quizData.primaryPlatform;
+        return quizData.name && quizData.email && quizData.city;
       case 2:
-        return quizData.followerCount;
+        return quizData.primaryPlatform;
       case 3:
-        return quizData.secondaryPlatforms.length > 0;
+        return quizData.followerCount;
       case 4:
-        return quizData.niche;
+        return quizData.secondaryPlatforms.length > 0;
       case 5:
-        return quizData.contentType;
+        return quizData.niche;
       case 6:
-        return quizData.postingFrequency;
+        return quizData.contentType;
       case 7:
-        return quizData.experience.length > 0;
+        return quizData.postingFrequency;
       case 8:
-        return quizData.monthlyIncome;
+        return quizData.experience.length > 0;
       case 9:
-        return quizData.biggestChallenge.length >= 1;
+        return quizData.monthlyIncome;
       case 10:
-        return quizData.goals.length > 0;
+        return quizData.biggestChallenge.length >= 1;
       case 11:
-        return true; // Optional step (social links)
+        return quizData.goals.length > 0;
       case 12:
+        return true; // Optional step (social links)
+      case 13:
         return quizData.engagementRate; // Engagement rate step
       default:
         return false;
@@ -677,12 +679,12 @@ ${language === "hindi" ? "- आपके उत्���ाद मेरे �
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने म��ं विश��षज्�� हूं" : "- I specialize in creating authentic content"}
 
-${language === "hindi" ? "स��ंख्यिकी:" : "Statistics:"}
+${language === "hindi" ? "स��ंख्यिक���:" : "Statistics:"}
 ${language === "hindi" ? "- फॉ����ोअर्स:" : "- Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "- प�����्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
-${language === "hindi" ? "क्या आप स�����योग के अवसरों पर �����र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
+${language === "hindi" ? "क्या आप स���योग के अवसरों पर �����र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
 ${language === "hindi" ? "धन्यवाद," : "Best regards,"}
 ${userName}
@@ -743,7 +745,7 @@ ${language === "hindi" ? "• मेरी audience क�� [specific demograp
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "�� मैं additional value add कर सकता ह��ं like [extra service]" : "• I can add additional value like [extra service]"}
 
-${language === "hindi" ? "��ै��� flexible ह���� औ��� ���� mutually beneficial deal बनाना �����हता हूं���" : "I'm flexible and want to create a mutually beneficial deal."}
+${language === "hindi" ? "��ै��� flexible ह��ं औ��� ���� mutually beneficial deal बनाना �����हता हूं���" : "I'm flexible and want to create a mutually beneficial deal."}
 
 ${language === "hindi" ? "Best regards," : "Best regards,"}
 ${userName}
@@ -774,7 +776,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 6: ल���न��ग-टर्म पार्टनरशिप प्र���ोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
+${language === "hindi" ? "टेम्प्लेट 6: ल���न��ग-टर्�� पार्टनरशिप प्र���ोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `Long-term Partnership Proposal - ${userName} x [Brand]` : `Long-term Partnership Proposal - ${userName} x [Brand]`}
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
@@ -822,7 +824,7 @@ ${language === "hindi" ? "वर्तमान स्���िति:" : "Cu
 ${language === "hindi" ? "म��ख्य चुनौति���ां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 2).join(", ")}
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 2).join(", ")}
 
-${language === "hindi" ? "दिन 1-30: बुन�������ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
+${language === "hindi" ? "दिन 1-30: बुन���������ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्���ाह 1:" : "Week 1:"}
 ${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्���मान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
 ${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ���डिया तैयार ���रें` : `- Prepare 10 content ideas for ${quizData.niche}`}
