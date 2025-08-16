@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import {
   Users,
   ShoppingCart,
@@ -12,6 +12,7 @@ import {
   DollarSign,
   Home,
   Loader2,
+  LogOut,
 } from "lucide-react";
 import { supabase, isSupabaseConfigured } from "../lib/supabase";
 
