@@ -46,6 +46,13 @@ export default function TestSupabase() {
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
           <h2 className="text-xl font-semibold mb-4">Connection Status</h2>
           <p className="text-lg mb-2">{status}</p>
+
+          <div className="bg-gray-50 rounded p-4 mb-4">
+            <h3 className="font-semibold mb-2">Environment Variables</h3>
+            <p className="text-sm text-gray-600">URL: {import.meta.env.VITE_SUPABASE_URL || 'Not set'}</p>
+            <p className="text-sm text-gray-600">Key: {import.meta.env.VITE_SUPABASE_ANON_KEY ? 'Set (hidden)' : 'Not set'}</p>
+          </div>
+
           {error && (
             <div className="bg-red-50 border border-red-200 rounded p-4 text-red-700">
               <strong>Error:</strong> {error}
