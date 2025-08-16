@@ -288,7 +288,7 @@ const languages = {
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
-        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया है)",
+        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया ���ै)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       engagementRate: "आपका औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
@@ -332,7 +332,7 @@ const languages = {
         "शिक्षा ���र सीखना",
         "खेल और एथलेटिक्स",
         "प्रेरणा और स्व-सह��यता",
-        "पेरें���िंग और परिवार",
+        "पेरें���िंग औ�� परिवार",
         "DIY और श��ल्प",
         "���ध्यात्म और माइंडफुलनेस",
         "अन्य",
@@ -396,7 +396,7 @@ const languages = {
         "📱 Creator Wellness: Managing too many platforms at once",
       ],
       goals: [
-        "मासिक आय ����50K+ तक बढ़ाना",
+        "मासिक आय ����50K+ तक ब���़ाना",
         "100K+ का authentic ��मुदाय बनाना",
         "सपनों के ब्रांड्स के साथ पार्टन��शिप",
         "अ���ना प्रोडक्ट/कोर्�� लॉन्च क���ना",
@@ -449,7 +449,7 @@ const languages = {
       },
       emailTemplates: {
         title: "ब्रांड आउटरीच ईमेल टेम्प���लेट्स",
-        description: "��्��ांड पार्टनरशिप के लिए 30+ स���द्ध ईमेल टेम्प्लेट्स",
+        description: "��्रांड पार्टनरशिप के लिए 30+ स���द्ध ईमेल टेम्प्लेट्स",
       },
       growthGuide: {
         title: "90-��िन ��ी ग्रोथ स्ट्रैटेजी गाइड",
@@ -570,22 +570,62 @@ export default function Quiz() {
 
   const handleSubmit = async () => {
     setIsGenerating(true);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    // Save quiz data with language preference (English only now)
-    const finalQuizData = { ...quizData, language: "english" };
-    localStorage.setItem("fameChaseQuizData", JSON.stringify(finalQuizData));
+    try {
+      // Save quiz data with language preference (English only now)
+      const finalQuizData = { ...quizData, language: "english" };
+      localStorage.setItem("fameChaseQuizData", JSON.stringify(finalQuizData));
 
-    // Navigate to results with immediate scroll to top
-    navigate("/results");
+      // Save user data to Supabase if configured
+      if (isSupabaseConfigured() && supabase) {
+        const userData = {
+          name: quizData.name,
+          email: quizData.email,
+          phone: quizData.phone || null,
+          city: quizData.city,
+          niche: quizData.niche,
+          primary_platform: quizData.primaryPlatform,
+          follower_count: quizData.followerCount,
+          goals: quizData.goals,
+          quiz_data: finalQuizData,
+        };
 
-    // Force immediate scroll to top of results page
-    window.scrollTo({ top: 0, behavior: "auto" });
+        const { error } = await supabase
+          .from('users')
+          .upsert([userData], {
+            onConflict: 'email',
+            ignoreDuplicates: false
+          });
 
-    // Additional scroll after navigation completes
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 50);
+        if (error) {
+          console.error('Error saving user data to Supabase:', error);
+          // Continue anyway - don't block the user experience
+        } else {
+          console.log('User data saved to Supabase successfully');
+        }
+      }
+
+      // Small delay for user experience
+      await new Promise((resolve) => setTimeout(resolve, 1500));
+
+      // Navigate to results with immediate scroll to top
+      navigate("/results");
+
+      // Force immediate scroll to top of results page
+      window.scrollTo({ top: 0, behavior: "auto" });
+
+      // Additional scroll after navigation completes
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 50);
+    } catch (error) {
+      console.error('Error in handleSubmit:', error);
+      // Continue with navigation even if there's an error
+      navigate("/results");
+      window.scrollTo({ top: 0, behavior: "auto" });
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   const toggleSecondaryPlatform = (platform: string) => {
@@ -650,7 +690,7 @@ ${language === "hindi" ? "Instagram Reel:" : "Instagram Reel:"} ₹${quizData.fo
 ${language === "hindi" ? "Instagram Story:" : "Instagram Story:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-300" : quizData.followerCount.includes("1K - 5K") ? "300-500" : "500-1,500"}
 ${language === "hindi" ? "YouTube शॉर्ट:" : "YouTube Short:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "YouTube वी���ियो म���ंशन:" : "YouTube Video Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-2,000" : quizData.followerCount.includes("1K - 5K") ? "2,000-3,000" : "3,000-8,000"}
-${language === "hindi" ? "Twitter पोस��ट:" : "Twitter Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-200" : quizData.followerCount.includes("1K - 5K") ? "200-400" : "400-1,000"}
+${language === "hindi" ? "Twitter पोस���ट:" : "Twitter Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-200" : quizData.followerCount.includes("1K - 5K") ? "200-400" : "400-1,000"}
 ${language === "hindi" ? "Newsletter में����:" : "Newsletter Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-2,500"}
 
 ${language === "hindi" ? "📦 पैकेज दरें:" : "📦 PACKAGE RATES:"}
@@ -674,12 +714,12 @@ ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] �
 
 ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
-${language === "hindi" ? "मुझे आपके ���्रांड के साथ काम कर��े में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
+${language === "hindi" ? "मुझे आपक��� ���्रांड के साथ काम कर��े में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने म��ं विश��षज्�� हूं" : "- I specialize in creating authentic content"}
 
-${language === "hindi" ? "स��ंख्यिक���:" : "Statistics:"}
+${language === "hindi" ? "स��ंख्यिकी:" : "Statistics:"}
 ${language === "hindi" ? "- फॉ����ोअर्स:" : "- Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
 ${language === "hindi" ? "- प�����्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
@@ -698,7 +738,7 @@ ${language === "hindi" ? "हैल��� [संपर्क नाम]," : 
 
 ${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration क�� बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
-${language === "hindi" ? "Recently मैंने [competitor brand] के साथ work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
+${language === "hindi" ? "Recently मैंने [competitor brand] के सा��� work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
 ${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule क��� सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
 
@@ -776,7 +816,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 6: ल���न��ग-टर्�� पार्टनरशिप प्र���ोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
+${language === "hindi" ? "टेम्प्लेट 6: ल���न��ग-टर्म पार्टनरशिप प्र���ोज़ल" : "TEMPLATE 6: LONG-TERM PARTNERSHIP PROPOSAL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `Long-term Partnership Proposal - ${userName} x [Brand]` : `Long-term Partnership Proposal - ${userName} x [Brand]`}
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
@@ -824,10 +864,10 @@ ${language === "hindi" ? "वर्तमान स्���िति:" : "Cu
 ${language === "hindi" ? "म��ख्य चुनौति���ां:" : "Main Challenges:"} ${quizData.biggestChallenge.slice(0, 2).join(", ")}
 ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:"} ${quizData.goals.slice(0, 2).join(", ")}
 
-${language === "hindi" ? "दिन 1-30: बुन���������ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
+${language === "hindi" ? "दिन 1-30: बुन�������ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्���ाह 1:" : "Week 1:"}
 ${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्���मान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
-${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ���डिया तैयार ���रें` : `- Prepare 10 content ideas for ${quizData.niche}`}
+${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ�����डिया तैयार ���रें` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्��)" : "- Research hashtags (30 hashtag mix)"}
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
@@ -847,7 +887,7 @@ ${language === "hindi" ? "- ईमेल लिस्ट बनान��� �
 
 ${language === "hindi" ? "अपेक्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
 ${language === "hindi" ? "- फॉलोअर ग्रोथ: 40-80%" : "- Follower Growth: 40-80%"}
-${language === "hindi" ? "- ��ंगेजमेंट में स�����धार: 50-100%" : "- Engagement Improvement: 50-100%"}
+${language === "hindi" ? "- ��ंगेजमेंट में स�������धार: 50-100%" : "- Engagement Improvement: 50-100%"}
 ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8" : "- Brand Inquiries: 3-8"}`;
     }
 
