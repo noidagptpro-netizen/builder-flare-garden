@@ -14,6 +14,7 @@ import ShopNew from "./pages/ShopNew";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import PaymentFailure from "./pages/PaymentFailure";
 import AdminDashboard from "./pages/AdminDashboard";
+import TestSupabase from "./pages/TestSupabase";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
