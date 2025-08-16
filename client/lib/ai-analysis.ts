@@ -1650,43 +1650,40 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
     });
   }
 
-  // Prioritize based on specific user challenges and goals
-  if (
-    data.biggestChallenge.some((challenge) =>
-      challenge.includes("Can't convert followers into paying customers"),
-    ) &&
-    followerNum >= 1000
-  ) {
-    // Prioritize Complete Creator Growth Kit for conversion issues
-    const existingKit = recommendations.find(
-      (r) => r.name === "Complete Creator Growth Kit",
-    );
-    if (existingKit) {
-      existingKit.priority = "high";
-      existingKit.reason = `Your ${data.followerCount} followers aren't converting to income - this kit's pricing calculator, email templates, and rate cards will help you start monetizing immediately.`;
-    } else {
-      recommendations.push({
+  // Ensure we always have exactly 4 product recommendations
+  if (recommendations.length < 4) {
+    const fallbackProducts = [
+      {
         name: "Complete Creator Growth Kit",
-        reason: `Your follower conversion challenge needs immediate action. This kit provides all monetization tools: pricing calculator, brand outreach templates, and rate cards.`,
-        priority: "high" as const,
-      });
+        reason: "Essential tools for growing and monetizing your creator business with proven templates and strategies.",
+        priority: "medium" as const,
+      },
+      {
+        name: "Brand Collaboration Masterclass",
+        reason: "Get paid brand partnerships with professional email scripts and 50+ brand contacts database.",
+        priority: "medium" as const,
+      },
+      {
+        name: "YouTube Mastery Course",
+        reason: "Complete YouTube growth and monetization blueprint for maximum creator revenue.",
+        priority: "medium" as const,
+      },
+      {
+        name: "Facebook Posting Mastery Course",
+        reason: "Master Facebook's 2024 algorithm for organic reach and community monetization.",
+        priority: "medium" as const,
+      }
+    ];
+
+    const existingNames = recommendations.map(r => r.name);
+    for (const product of fallbackProducts) {
+      if (!existingNames.includes(product.name) && recommendations.length < 4) {
+        recommendations.push(product);
+      }
     }
   }
 
-  // Always recommend growth kit for new creators
-  if (
-    followerNum < 5000 &&
-    !recommendations.some((r) => r.name === "Complete Creator Growth Kit")
-  ) {
-    recommendations.push({
-      name: "Complete Creator Growth Kit",
-      reason:
-        "Perfect foundation for growing creators. Get essential tools: media kit templates, content calendar, growth strategy workbook, and hashtag guide to accelerate your growth.",
-      priority: "medium" as const,
-    });
-  }
-
-  // Limit recommendations to top 3-4 most relevant
+  // Return exactly 4 most relevant recommendations
   return recommendations.slice(0, 4);
 };
 
