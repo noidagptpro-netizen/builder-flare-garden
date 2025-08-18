@@ -1,16 +1,17 @@
-exports.handler = async (event, context) => {
+import { Handler } from "@netlify/functions";
+
+// If you use Supabase, import client initialization here.
+
+// Main Netlify Lambda handler
+export const handler: Handler = async (event, context) => {
   const path = event.path || "";
   let response;
 
   if (path.endsWith("/payment/success")) {
-    // Handle PayU payment success webhook
-    // Parse body, verify hash, save to Supabase, return 200
     response = await handlePaymentSuccess(event);
   } else if (path.endsWith("/payment/failure")) {
-    // Handle PayU payment failure webhook
     response = await handlePaymentFailure(event);
   } else {
-    // Other API routes (if needed)
     response = {
       statusCode: 404,
       body: "Not Found",
@@ -20,38 +21,51 @@ exports.handler = async (event, context) => {
   return response;
 };
 
-// Example handler functions (to be filled out for your logic)
-async function handlePaymentSuccess(event) {
-  // Parse event.body, verify, save to DB, etc.
+// Handler for payment success webhook
+async function handlePaymentSuccess(event: any) {
+  // Parse body (PayU sends POST with form data)
+  const body = parseBody(event);
+
+  // Log for debugging
+  console.log("[PayU Success] Payload:", body);
+
+  // TODO: Verify PayU hash here
+  // TODO: Save payment info to Supabase
+
   return {
     statusCode: 200,
     body: JSON.stringify({ message: "Payment success handled" }),
   };
 }
 
-async function handlePaymentFailure(event) {
-  // Parse event.body, log failure, etc.
+// Handler for payment failure webhook
+async function handlePaymentFailure(event: any) {
+  const body = parseBody(event);
+
+  // Log for debugging
+  console.log("[PayU Failure] Payload:", body);
+
+  // TODO: Save failed payment info to Supabase
+
   return {
     statusCode: 200,
     body: JSON.stringify({ message: "Payment failure handled" }),
   };
 }
 
-// Basic logging middleware for debugging
-app.use((req, res, next) => {
-  console.log(`[API] ${req.method} ${req.url}`);
-  next();
-});
-
-// Health check endpoint for debugging
-app.get("/health", (req, res) => {
-  res.json({ status: "ok", timestamp: new Date().toISOString() });
-});
-
-// Error handler to prevent unhandled promise rejections
-app.use((err: any, req: any, res: any, next: any) => {
-  console.error("API Error:", err);
-  res.status(500).json({ error: "Internal Server Error" });
-});
-
-export const handler = serverless(app);
+// Helper to parse PayU POST body (x-www-form-urlencoded)
+function parseBody(event: any): Record<string, any> {
+  try {
+    if (!event.body) return {};
+    // PayU typically sends form-encoded data
+    return Object.fromEntries(
+      event.body.split("&").map((pair: string) => {
+        const [key, value] = pair.split("=");
+        return [key, decodeURIComponent(value || "")];
+      })
+    );
+  } catch (err) {
+    console.error("Failed to parse webhook body", err);
+    return {};
+  }
+}
