@@ -38,8 +38,8 @@ app.post("/api/payment", async (req, res) => {
     productinfo,
     firstname,
     email,
-    surl: "http://localhost:5000/api/payment/success", // change after deploy
-    furl: "http://localhost:5000/api/payment/failure",
+    surl: "https://famechase.com/api/payment/success",
+    furl: "https://famechase.com/api/payment/failure",
   };
 
   paymentData.hash = generateHash(paymentData);
