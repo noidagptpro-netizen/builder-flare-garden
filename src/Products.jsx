@@ -1,39 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { supabase } from "./supabaseClient";
+import PayUForm from "./components/PayUForm";
 
-function Products() {
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      setLoading(true);
-      const { data, error } = await supabase.from("products").select("*");
-      if (error) {
-        console.error("Error fetching products:", error);
-      } else {
-        setProducts(data);
-      }
-      setLoading(false);
-    };
-
-    fetchProducts();
-  }, []);
-
-  if (loading) return <p>Loading products...</p>;
-
+export default function Products() {
   return (
     <div>
-      <h2>Our Products</h2>
-      <ul>
-        {products.map((p) => (
-          <li key={p.id}>
-            {p.name} – ₹{p.price}
-          </li>
-        ))}
-      </ul>
+      <h1>Products Page</h1>
+      <PayUForm />
     </div>
   );
 }
-
-export default Products;
