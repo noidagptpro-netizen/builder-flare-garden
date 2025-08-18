@@ -593,18 +593,16 @@ export default function Quiz() {
           quiz_data: finalQuizData,
         };
 
-        const { error } = await supabase
-          .from('users')
-          .upsert([userData], {
-            onConflict: 'email',
-            ignoreDuplicates: false
-          });
+        const { error } = await supabase.from("users").upsert([userData], {
+          onConflict: "email",
+          ignoreDuplicates: false,
+        });
 
         if (error) {
-          console.error('Error saving user data to Supabase:', error);
+          console.error("Error saving user data to Supabase:", error);
           // Continue anyway - don't block the user experience
         } else {
-          console.log('User data saved to Supabase successfully');
+          console.log("User data saved to Supabase successfully");
         }
       }
 
@@ -622,7 +620,7 @@ export default function Quiz() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }, 50);
     } catch (error) {
-      console.error('Error in handleSubmit:', error);
+      console.error("Error in handleSubmit:", error);
       // Continue with navigation even if there's an error
       navigate("/results");
       window.scrollTo({ top: 0, behavior: "auto" });
@@ -1893,7 +1891,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         Almost Done! Contact Details
                       </h2>
                       <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Finally, let us know how to reach you with your personalized recommendations and resources.
+                        Finally, let us know how to reach you with your
+                        personalized recommendations and resources.
                       </p>
                     </div>
 
@@ -1905,7 +1904,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         <input
                           type="text"
                           value={quizData.name}
-                          onChange={(e) => updateQuizData("name", e.target.value)}
+                          onChange={(e) =>
+                            updateQuizData("name", e.target.value)
+                          }
                           placeholder="Your full name"
                           className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
                         />
@@ -1918,7 +1919,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         <input
                           type="email"
                           value={quizData.email}
-                          onChange={(e) => updateQuizData("email", e.target.value)}
+                          onChange={(e) =>
+                            updateQuizData("email", e.target.value)
+                          }
                           placeholder="your.email@example.com"
                           className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
                         />
@@ -1931,7 +1934,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         <input
                           type="tel"
                           value={quizData.phone}
-                          onChange={(e) => updateQuizData("phone", e.target.value)}
+                          onChange={(e) =>
+                            updateQuizData("phone", e.target.value)
+                          }
                           placeholder="+91 98765 43210"
                           className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
                         />
@@ -1944,7 +1949,9 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         <input
                           type="text"
                           value={quizData.city}
-                          onChange={(e) => updateQuizData("city", e.target.value)}
+                          onChange={(e) =>
+                            updateQuizData("city", e.target.value)
+                          }
                           placeholder="Mumbai, Delhi, Bangalore..."
                           className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
                         />
