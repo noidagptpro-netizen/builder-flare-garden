@@ -273,7 +273,7 @@ const languages = {
       4: "कंटेंट प्रकार",
       5: "पोस्टिंग आवृत्ति",
       6: "अनुभव और आय",
-      7: "सबसे बड़ी चुनौती",
+      7: "सबसे बड़ी च��नौती",
       8: "लक्ष्य",
       9: "सो��ल लिंक्स",
       10: "एंगेजमेंट रेट",
@@ -291,7 +291,7 @@ const languages = {
       contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
-        "आप कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया ���ै)",
+        "आ�� कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया ���ै)",
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       engagementRate: "आपका औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
@@ -302,12 +302,12 @@ const languages = {
     },
     options: {
       platforms: [
-        "���ंस्टाग्र��म",
+        "���ंस��टाग्र��म",
         "यूट्यूब",
         "लिंक्��इन",
         "��िकट���क",
         "ट्विटर",
-        "फेसबुक",
+        "फेसबु���",
         "वेबसाइट/���्लॉग",
       ],
       followerRanges: [
@@ -335,7 +335,7 @@ const languages = {
         "शिक्षा ���र सीखना",
         "खेल और एथलेटिक्स",
         "प्रेरणा और स्व-सह��यता",
-        "पेरें���िंग औ�� परिवार",
+        "पेरें���िंग औ�� पर��वार",
         "DIY और श��ल्प",
         "����ध्यात्म और माइंडफुलनेस",
         "अन्य",
@@ -410,7 +410,7 @@ const languages = {
         "प���सिव इनकम स्ट्रीम बनाना",
         "अपनी 9-5 जॉब छोड़कर फुल-टाइम जाना",
         "नए प्लेटफॉर्म्स/��ॉर्मेट्स में expand करना",
-        "अपने ��्पेस में ���ूसरे क्रिएट��्स को मेंटर करना",
+        "अपने ��्पेस में ���ूसरे क्रिएट���्स को मेंटर करना",
       ],
       challenges: [
         "🔄 Growth & Engagement: Low views & inconsistent engagement",
@@ -687,7 +687,7 @@ ${language === "hindi" ? "मासिक आ��:" : "Monthly Income:"} ${qui
 
 ${language === "hindi" ? "सुझावित दर���ं (भारतीय बाजार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
 
-${language === "hindi" ? "📱 प्लेटफॉर्म दरें:" : "��� PLATFORM RATES:"}
+${language === "hindi" ? "📱 प्लेट���ॉर्म दरें:" : "��� PLATFORM RATES:"}
 ${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-3,000"}
 ${language === "hindi" ? "Instagram Reel:" : "Instagram Reel:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "Instagram Story:" : "Instagram Story:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-300" : quizData.followerCount.includes("1K - 5K") ? "300-500" : "500-1,500"}
@@ -739,7 +739,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "हैल��� [संपर्क नाम]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration क�� बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create कर सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
+${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration क�� बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create ��र सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
 ${language === "hindi" ? "Recently मैंने [competitor brand] के सा��� work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
@@ -775,7 +775,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्����्लेट 4: न��गोसिएशन/काउंटर ऑफर" : "TEMPLATE 4: NEGOTIATION/COUNTER OFFER"}
+${language === "hindi" ? "टेम्����्लेट 4: न���गोसिएशन/काउंटर ऑफर" : "TEMPLATE 4: NEGOTIATION/COUNTER OFFER"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? "Re: Collaboration proposal - Let's find a win-win" : "Re: Collaboration proposal - Let's find a win-win"}
 
 ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
@@ -869,7 +869,7 @@ ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:
 
 ${language === "hindi" ? "दिन 1-30: बुन�������ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्���ाह 1:" : "Week 1:"}
-${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्���मान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़ाकर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
+${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्���मान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़��कर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
 ${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ�����डिया तैयार ���रें` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्��)" : "- Research hashtags (30 hashtag mix)"}
 
@@ -888,7 +888,7 @@ ${language === "hindi" ? "- मीडिया किट तैयार कर�
 ${language === "hindi" ? "- ब्रां���्स स�� ���ंपर्क शुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनान��� शुरू करें" : "- Start building email list"}
 
-${language === "hindi" ? "अपेक्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
+${language === "hindi" ? "अपे��्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
 ${language === "hindi" ? "- फॉलोअर ग्रोथ: 40-80%" : "- Follower Growth: 40-80%"}
 ${language === "hindi" ? "- ��ंगेजमेंट में स�������धार: 50-100%" : "- Engagement Improvement: 50-100%"}
 ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8" : "- Brand Inquiries: 3-8"}`;
@@ -1877,6 +1877,77 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                             {rate}
                           </button>
                         ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* Step 13: Contact Information (moved to end) */}
+                {currentStep === 13 && (
+                  <div className="space-y-10">
+                    <div className="text-center mb-12">
+                      <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <User className="w-10 h-10 text-white" />
+                      </div>
+                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                        Almost Done! Contact Details
+                      </h2>
+                      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                        Finally, let us know how to reach you with your personalized recommendations and resources.
+                      </p>
+                    </div>
+
+                    <div className="space-y-6">
+                      <div>
+                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                          {t.questions.name}
+                        </label>
+                        <input
+                          type="text"
+                          value={quizData.name}
+                          onChange={(e) => updateQuizData("name", e.target.value)}
+                          placeholder="Your full name"
+                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                          {t.questions.email}
+                        </label>
+                        <input
+                          type="email"
+                          value={quizData.email}
+                          onChange={(e) => updateQuizData("email", e.target.value)}
+                          placeholder="your.email@example.com"
+                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                          {t.questions.phone}
+                        </label>
+                        <input
+                          type="tel"
+                          value={quizData.phone}
+                          onChange={(e) => updateQuizData("phone", e.target.value)}
+                          placeholder="+91 98765 43210"
+                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                          {t.questions.city}
+                        </label>
+                        <input
+                          type="text"
+                          value={quizData.city}
+                          onChange={(e) => updateQuizData("city", e.target.value)}
+                          placeholder="Mumbai, Delhi, Bangalore..."
+                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        />
                       </div>
                     </div>
                   </div>
