@@ -275,7 +275,7 @@ const languages = {
       6: "अनुभव और आय",
       7: "सबसे बड़ी चुनौती",
       8: "लक्ष्य",
-      9: "सोशल लिंक्स",
+      9: "सो��ल लिंक्स",
       10: "एंगेजमेंट रेट",
     },
     questions: {
@@ -337,7 +337,7 @@ const languages = {
         "प्रेरणा और स्व-सह��यता",
         "पेरें���िंग औ�� परिवार",
         "DIY और श��ल्प",
-        "���ध्यात्म और माइंडफुलनेस",
+        "����ध्यात्म और माइंडफुलनेस",
         "अन्य",
       ],
       engagementRates: [
@@ -370,7 +370,7 @@ const languages = {
       experiences: [
         "अभी शुरू किया (0-6 महीन��)",
         "शुरुआती (6 ��ही�������े - 1 साल)",
-        "ब���़ रहे हैं (1-2 ���ाल)",
+        "ब���़ रहे हैं (1-2 ������ल)",
         "अन��भवी (2-3 साल)",
         "विशेषज्ञ (3+ साल)",
       ],
@@ -438,7 +438,7 @@ const languages = {
       ],
     },
     buttons: {
-      next: "अगला क���म",
+      next: "अ��ला क���म",
       back: "पिछला",
       submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
@@ -685,7 +685,7 @@ ${language === "hindi" ? "कंटेंट ��्रकार:" : "Content 
 ${language === "hindi" ? "पोस्ट���ंग आवृ���्ति:" : "Posting Frequency:"} ${quizData.postingFrequency}
 ${language === "hindi" ? "मासिक आ��:" : "Monthly Income:"} ${quizData.monthlyIncome}
 
-${language === "hindi" ? "सुझावित दरें (भारतीय बाजार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
+${language === "hindi" ? "सुझावित दर���ं (भारतीय बाजार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
 
 ${language === "hindi" ? "📱 प्लेटफॉर्म दरें:" : "��� PLATFORM RATES:"}
 ${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-3,000"}
@@ -725,7 +725,7 @@ ${language === "hindi" ? "- मैं प्रामाणिक कंटे�
 ${language === "hindi" ? "स��ंख्यिकी:" : "Statistics:"}
 ${language === "hindi" ? "- फॉ����ोअर्स:" : "- Followers:"} ${quizData.followerCount}
 ${language === "hindi" ? "- कंटेंट प्रकार:" : "- Content Type:"} ${quizData.contentType}
-${language === "hindi" ? "- प�����्टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
+${language === "hindi" ? "- प��������टिंग आवृत्ति:" : "- Posting Frequency:"} ${quizData.postingFrequency}
 
 ${language === "hindi" ? "क्या आप स���योग के अवसरों पर �����र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
@@ -786,7 +786,7 @@ ${language === "hindi" ? "Considering my engagement rates और audience qualit
 
 ${language === "hindi" ? "• मेरी audience क�� [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
-${language === "hindi" ? "�� मैं additional value add कर सकता ह��ं like [extra service]" : "• I can add additional value like [extra service]"}
+${language === "hindi" ? "�� मैं additional value add कर सकत�� ह��ं like [extra service]" : "• I can add additional value like [extra service]"}
 
 ${language === "hindi" ? "��ै��� flexible ह��ं औ��� ���� mutually beneficial deal बनाना �����हता हूं���" : "I'm flexible and want to create a mutually beneficial deal."}
 
@@ -855,7 +855,7 @@ ${language === "hindi" ? "• हमेशा personalize करें emails" :
 ${language === "hindi" ? "• Subject lines को catchy रखें" : "��� Keep subject lines catchy"}
 ${language === "hindi" ? "• Follow-up करना न भूलें" : "• Don't forget to follow up"}
 ${language === "hindi" ? "• Professional tone maintain करें" : "• Maintain a professional tone"}
-${language === "hindi" ? "• Results और metrics share करें" : "• Share results and metrics"}
+${language === "hindi" ? "• Results और metrics share ��रें" : "• Share results and metrics"}
 ${language === "hindi" ? "• Grateful और humble रहें" : "• Be grateful and humble"}`;
     } else if (type === "growthStrategy") {
       content =
@@ -879,7 +879,7 @@ ${language === "hindi" ? "- कम्युनिटी एंगेजमें
 ${language === "hindi" ? "- एनालिटिक्स ट्रै�� करना शु���ू क������ं" : "- Start tracking analytics"}
 
 ${language === "hindi" ? "दिन 31-60: विकास औ��� अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
-${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करे�� (60% कंटेंट)" : "प्लेटफॉर्म-स्पेसिफ���क कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
+${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करे�� (60% कंटें��)" : "प्लेटफॉर्म-स्पेसिफ���क कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
 ${language === "hindi" ? "- ट्रेंडिंग टॉपि��्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
@@ -1146,79 +1146,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
 
             {!isGenerating && (
               <>
-                {/* Step 1: Contact Information */}
+                {/* Step 1: Primary Platform */}
                 {currentStep === 1 && (
-                  <div className="space-y-10">
-                    <div className="text-center mb-12">
-                      <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <User className="w-10 h-10 text-white" />
-                      </div>
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        Let's Get Started!
-                      </h2>
-                      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Tell us a bit about yourself so we can personalize your creator journey recommendations.
-                      </p>
-                    </div>
-
-                    <div className="space-y-6">
-                      <div>
-                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
-                          {t.questions.name}
-                        </label>
-                        <input
-                          type="text"
-                          value={quizData.name}
-                          onChange={(e) => updateQuizData("name", e.target.value)}
-                          placeholder="Your full name"
-                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
-                          {t.questions.email}
-                        </label>
-                        <input
-                          type="email"
-                          value={quizData.email}
-                          onChange={(e) => updateQuizData("email", e.target.value)}
-                          placeholder="your.email@example.com"
-                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
-                          {t.questions.phone}
-                        </label>
-                        <input
-                          type="tel"
-                          value={quizData.phone}
-                          onChange={(e) => updateQuizData("phone", e.target.value)}
-                          placeholder="+91 98765 43210"
-                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-gray-900 font-semibold mb-4 text-lg">
-                          {t.questions.city}
-                        </label>
-                        <input
-                          type="text"
-                          value={quizData.city}
-                          onChange={(e) => updateQuizData("city", e.target.value)}
-                          placeholder="Mumbai, Delhi, Bangalore..."
-                          className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-4 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* Step 2: Primary Platform */}
-                {currentStep === 2 && (
                   <div className="space-y-10">
                     <div className="text-center mb-12">
                       <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
