@@ -1,11 +1,41 @@
-import serverless from "serverless-http";
-import { createServer } from "../../server";
+exports.handler = async (event, context) => {
+  const path = event.path || "";
+  let response;
 
-/**
- * Netlify serverless function entry point
- * Wraps our Express (or other) app in a serverless handler.
- */
-const app = createServer();
+  if (path.endsWith("/payment/success")) {
+    // Handle PayU payment success webhook
+    // Parse body, verify hash, save to Supabase, return 200
+    response = await handlePaymentSuccess(event);
+  } else if (path.endsWith("/payment/failure")) {
+    // Handle PayU payment failure webhook
+    response = await handlePaymentFailure(event);
+  } else {
+    // Other API routes (if needed)
+    response = {
+      statusCode: 404,
+      body: "Not Found",
+    };
+  }
+
+  return response;
+};
+
+// Example handler functions (to be filled out for your logic)
+async function handlePaymentSuccess(event) {
+  // Parse event.body, verify, save to DB, etc.
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: "Payment success handled" }),
+  };
+}
+
+async function handlePaymentFailure(event) {
+  // Parse event.body, log failure, etc.
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: "Payment failure handled" }),
+  };
+}
 
 // Basic logging middleware for debugging
 app.use((req, res, next) => {
