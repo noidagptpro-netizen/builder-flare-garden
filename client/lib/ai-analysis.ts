@@ -390,7 +390,7 @@ const getGrowthTrajectory = (data: QuizData, fameScore: number): string => {
         );
         trajectory += ` 💰 INCOME TARGET: Your ₹${targetIncome / 1000}K monthly goal is achievable in ${monthsToTarget} months. Required: ${Math.ceil(targetIncome / 3000)} brand partnerships monthly at ₹${Math.round(followerNum * 1.2)} average rate.`;
       } else if (goal.includes("Get Brand Collaborations")) {
-        trajectory += ` 🤝 BRAND PARTNERSHIP ROADMAP: Target ${brandDealsPerMonth} brand collaborations monthly. Your ${data.followerCount} + ${data.niche} niche = ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)} per post rates. Start outreach to ${data.niche === "Fashion & Beauty" ? "Nykaa, Myntra, local fashion brands" : data.niche === "Technology" ? "tech brands, gadget companies, software tools" : "brands in your niche"}.`;
+        trajectory += ` 🤝 BRAND PARTNERSHIP ROADMAP: Target ${brandDealsPerMonth} brand collaborations monthly. Your ${data.followerCount} + ${data.niche} niche = ₹${Math.round(followerNum * 0.8)}-��${Math.round(followerNum * 2)} per post rates. Start outreach to ${data.niche === "Fashion & Beauty" ? "Nykaa, Myntra, local fashion brands" : data.niche === "Technology" ? "tech brands, gadget companies, software tools" : "brands in your niche"}.`;
       }
     });
   }
@@ -813,16 +813,27 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     experience: data.experience[0] || "beginner",
   };
 
-  // IMMEDIATE PRIORITY SUGGESTIONS based on biggest gaps
+  // IMMEDIATE PRIORITY SUGGESTIONS with specific action steps and deadlines
   if (userProfile.monetization === "none" && followerNum >= 5000) {
+    const estimatedWeeklyEarning = Math.round(followerNum * 0.15);
     recommendations.push(
-      `🚨 URGENT: You're missing ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly income! Create a media kit this week and reach out to 10 brands in ${data.niche}`,
+      `🚨 URGENT (THIS WEEK): You're missing ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly! EXACT STEPS: Day 1-2: Create media kit with these rates: Post ₹${estimatedWeeklyEarning}, Story ₹${Math.round(estimatedWeeklyEarning * 0.6)}, Reel ₹${Math.round(estimatedWeeklyEarning * 1.2)}. Day 3-7: Email 10 ${data.niche} brands with template. Expected: 2-3 responses, 1 deal by month-end`,
     );
   }
 
   if (userProfile.consistency === "needs-improvement") {
     recommendations.push(
-      `⚡ CRITICAL: Switch to daily posting immediately - your current ${data.postingFrequency} schedule is costing you 60% potential reach. Batch create 7 posts this Sunday`,
+      `⚡ CRITICAL (START TOMORROW): Your ${data.postingFrequency} schedule = 60% less reach. ACTION PLAN: Sunday batch-create 7 posts, schedule for 7 PM daily. Use trending audio from @creators.famechase. Expected result: 40% reach increase in 2 weeks`,
+    );
+  }
+
+  // Add immediate money-making opportunity based on current follower count
+  if (followerNum >= 1000) {
+    const quickMoneyTactic = followerNum >= 10000 ?
+      `Start paid story promotions at ₹${Math.round(followerNum * 0.05)}/story - message 20 local businesses this week` :
+      `Create affiliate content for Amazon/Flipkart - earn ₹500-2000 this month with 3 review posts`;
+    recommendations.push(
+      `💰 QUICK MONEY (7 DAYS): ${quickMoneyTactic}. Template messages provided in download.`,
     );
   }
 
