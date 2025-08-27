@@ -283,7 +283,7 @@ const languages = {
       email: "आपका ईमेल पता क्या है?",
       phone: "आपका फोन नंबर क्या है? (वैकल्पिक)",
       city: "आप किस शहर से हैं?",
-      primaryPlatform: "आप मुख्यतः क���स प्ले���फॉर्म पर कंटेंट बनाते हैं?",
+      primaryPlatform: "���प मुख्यतः क���स प्ले���फॉर्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
@@ -402,7 +402,7 @@ const languages = {
         "मासिक आय ����50K+ तक ब���़ाना",
         "100K+ का authentic ��मुदाय बनाना",
         "सपन��ं के ब्रांड्स के साथ पार्टन��शिप",
-        "अ���ना प्रोडक्ट/कोर्�� लॉन्च क���ना",
+        "अ���ना प्रोड��्ट/कोर्�� लॉन्च क���ना",
         "अपने निच में गो-टू ���क्सपर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइ���र्स की ईमेल लिस्ट बनाना",
@@ -672,7 +672,7 @@ This content is optimized for larger text display for better readability
         fontSizeIndicator +
         `${language === "hindi" ? "मीड���य��� कि���" : "MEDIA KIT"} - ${userName}
 
-${language === "hindi" ? "व्यक्ति������ जानकारी:" : "PERSONAL INFO:"}
+${language === "hindi" ? "व्यक्ति������ जान���ारी:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
 ${language === "hindi" ? "���्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
@@ -706,7 +706,7 @@ ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
     } else if (type === "emailTemplates") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "6+ ���्रांड आ���टरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
+        `${language === "hindi" ? "6+ ���्रांड आ���टरीच ईमेल टेम्प्ले��्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
 ${language === "hindi" ? "टेम्प्ल���ट 1: प्रारंभिक संपर्क (कोल्�� आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
@@ -858,7 +858,7 @@ ${language === "hindi" ? "• Grateful और humble रहें" : "• Be gra
     } else if (type === "growthStrategy") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "90-���िन ���� ��्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
+        `${language === "hindi" ? "90-���िन ���� ����्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "वर्तमान स्���िति:" : "Current Status:"} ${quizData.followerCount} on ${quizData.primaryPlatform}
@@ -869,7 +869,7 @@ ${language === "hindi" ? "दिन 1-30: बुन�������ाद �
 ${language === "hindi" ? "सप्���ाह 1:" : "Week 1:"}
 ${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्���मान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़��कर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
 ${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ�����डिया तैयार ���रे��` : `- Prepare 10 content ideas for ${quizData.niche}`}
-${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्��)" : "- Research hashtags (30 hashtag mix)"}
+${language === "hindi" ? "- हैशट��ग रिसर्च करें (30 हैशटैग मिक्��)" : "- Research hashtags (30 hashtag mix)"}
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटे���ट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
@@ -1058,7 +1058,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
               <h2 className="text-lg font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "अपना ���ूरा व���श्लेषण चाहते हैं?"
+                  ? "अप��ा ���ूरा व���श्लेषण चाहते हैं?"
                   : "Want Your Complete Analysis?"}
               </h2>
               <p className="text-gray-600 mb-6">
@@ -1294,18 +1294,18 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
 
                 {/* Step 5: Content Type */}
                 {currentStep === 5 && (
-                  <div className="space-y-8">
-                    <div className="text-center mb-8">
-                      <h2 className="text-lg font-bold text-gray-900 mb-4">
-                        Content Format ��
+                  <div className="space-y-4 md:space-y-6 flex-1 flex flex-col">
+                    <div className="text-center mb-4 md:mb-6">
+                      <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                        Content Format 🎥
                       </h2>
-                      <p className="text-gray-600">
+                      <p className="text-sm md:text-base text-gray-600 px-2">
                         What type of content do you primarily create?
                       </p>
                     </div>
 
-                    <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                    <div className="flex-1">
+                      <label className="block text-gray-900 font-semibold mb-3 text-base md:text-lg">
                         {t.questions.contentType}
                       </label>
                       <select
@@ -1313,7 +1313,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         onChange={(e) =>
                           updateQuizData("contentType", e.target.value)
                         }
-                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-3 py-3 md:py-4 rounded-lg focus:border-electric-blue focus:outline-none transition-colors text-sm md:text-base"
                       >
                         <option value="">
                           What type of content do you primarily create?
