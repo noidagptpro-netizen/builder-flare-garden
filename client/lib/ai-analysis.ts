@@ -184,6 +184,60 @@ const getIncomeAmount = (income: string): number => {
   return incomeMap[income] || 0;
 };
 
+// Platform-specific income multipliers (based on Indian creator economy)
+const getPlatformIncomeMultiplier = (platform: string): number => {
+  const multiplierMap: { [key: string]: number } = {
+    "YouTube": 1.3, // Higher RPM and diverse monetization
+    "Instagram": 1.0, // Base multiplier
+    "LinkedIn": 1.2, // B2B premium rates
+    "TikTok": 0.7, // Lower monetization maturity in India
+    "Twitter": 0.8, // Limited monetization options
+    "Facebook": 0.6, // Declining engagement
+    "Website/Blog": 1.4, // Direct monetization control
+  };
+  return multiplierMap[platform] || 0.8;
+};
+
+// Niche-specific income multipliers (Indian market demand)
+const getNicheIncomeMultiplier = (niche: string): number => {
+  const multiplierMap: { [key: string]: number } = {
+    "Technology & AI": 1.4, // High-value audience
+    "Personal Finance & Investing": 1.3, // Premium audience
+    "Fitness & Health": 1.2, // Good monetization potential
+    "Fashion & Beauty": 1.1, // Established market
+    "Food & Cooking": 1.0, // Base market
+    "Entrepreneurship & Business": 1.3, // B2B premium
+    "Travel & Adventure": 0.9, // Seasonal/aspirational
+    "Entertainment & Comedy": 0.8, // Volume-based, lower rates
+    "Education & Learning": 1.1, // Consistent demand
+    "Gaming & Esports": 1.0, // Growing market
+  };
+  return multiplierMap[niche] || 0.9;
+};
+
+// Experience-based income multipliers
+const getExperienceIncomeMultiplier = (experience: string[]): number => {
+  if (experience.includes("Expert (3+ years)")) return 1.3;
+  if (experience.includes("Experienced (2-3 years)")) return 1.2;
+  if (experience.includes("Growing (1-2 years)")) return 1.1;
+  if (experience.includes("Beginner (6 months - 1 year)")) return 1.0;
+  return 0.8; // Just started
+};
+
+// Engagement-based income multipliers
+const getEngagementIncomeMultiplier = (engagementRate: string): number => {
+  const multiplierMap: { [key: string]: number } = {
+    "More than 12%": 1.4, // Excellent engagement
+    "8-12%": 1.3, // Very good engagement
+    "5-8%": 1.2, // Good engagement
+    "3-5%": 1.1, // Average engagement
+    "1-3%": 1.0, // Below average
+    "Less than 1%": 0.8, // Poor engagement
+    "I don't know": 0.9, // Conservative estimate
+  };
+  return multiplierMap[engagementRate] || 0.9;
+};
+
 const getExperienceLevelDescription = (
   experience: string[],
   fameScore: number,
@@ -487,7 +541,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
       "Fashion & Beauty": `💄 FASHION GOLDMINE: You're in a ₹1.2L crore market growing 25% annually! With ${data.followerCount}, you can charge ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 1.5)} per post. Fashion creators get 40% more brand deals.`,
       "Technology & AI": `💻 TECH AUTHORITY ADVANTAGE: Tech = ₹25-50 per 1K views (vs ₹8-15 for lifestyle)! Your ${data.followerCount} in tech could generate ₹${Math.round(followerNum * 1.2)}-₹${Math.round(followerNum * 2.5)} monthly from reviews alone.`,
       "Education & Learning": `📚 EDUCATION EMPIRE POTENTIAL: Ed-tech is ₹2.8L crore growing 40% YoY! Your knowledge in ${data.niche} + course creation = ₹${Math.round(followerNum * 2)}-₹${Math.round(followerNum * 5)} monthly potential.`,
-      "Business & Finance": `💼 FINANCE CREATOR PREMIUM: B2B creators earn 3x more per follower! Your expertise + ${data.followerCount} = ₹${Math.round(followerNum * 1.8)}-₹${Math.round(followerNum * 3.2)} monthly from fintech partnerships.`,
+      "Business & Finance": `�� FINANCE CREATOR PREMIUM: B2B creators earn 3x more per follower! Your expertise + ${data.followerCount} = ₹${Math.round(followerNum * 1.8)}-₹${Math.round(followerNum * 3.2)} monthly from fintech partnerships.`,
       "Fitness & Health": `💪 FITNESS BOOM POSITIONING: Post-COVID fitness market exploded! Health creators with ${data.followerCount} average ₹${Math.round(followerNum * 1.1)}-₹${Math.round(followerNum * 2.0)} monthly from supplement brands.`,
       "Food & Cooking": `🍳 FOOD CONTENT SUPREMACY: Food gets highest engagement (8-15% vs 2-4% average)! Your ${data.followerCount} + food = ₹${Math.round(followerNum * 0.9)}-₹${Math.round(followerNum * 1.8)} from restaurant partnerships.`,
       "Personal Finance & Investing": `💰 FINTECH PREMIUM NICHE: Personal finance creators earn 60% higher CPM rates! Your ${data.followerCount} audience + money content = ₹${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3.0)} monthly potential.`,
@@ -2021,7 +2075,7 @@ const calculateGrowthPotential = (
     "Achieve viral content",
     "Expand into new platforms",
     "authentic कम्यु��िटी बनाना",
-    "वा���रल कंटेंट बनाना",
+    "वायरल कंटेंट बनाना",
     "नए प्लेटफॉर्म्स में expand",
   ];
   if (data.goals.some((goal) => growthGoals.some((g) => goal.includes(g)))) {
