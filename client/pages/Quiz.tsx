@@ -280,7 +280,7 @@ const languages = {
     },
     questions: {
       name: "आपका नाम क्या है?",
-      email: "आपका ईमेल पता क्या है?",
+      email: "आपका ईमेल ���ता क्या है?",
       phone: "आपका फोन नंबर क्या है? (वैकल्पिक)",
       city: "आप किस शहर से हैं?",
       primaryPlatform: "आप मुख्यतः क���स प्लेटफॉर्म पर कंटेंट बनाते हैं?",
@@ -292,7 +292,7 @@ const languages = {
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
         "आ�� कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया ���ै)",
-      monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
+      monthlyIncome: "कंटेंट से आपकी वर्त��ान मासिक आय क्या है?",
       engagementRate: "आपका औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
         "आपकी सबसे बड़ी चुनौती क��या है? 3 तक चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
@@ -308,7 +308,7 @@ const languages = {
         "��िकट���क",
         "ट्विटर",
         "फेसबु���",
-        "वेबसाइट/���्लॉग",
+        "वेबसाइट/���्ल��ग",
       ],
       followerRanges: [
         "1K से कम",
@@ -375,7 +375,7 @@ const languages = {
         "विशेषज्ञ (3+ साल)",
       ],
       incomes: [
-        "₹0 (��भी तक कोई आय नहीं)",
+        "₹0 (��भी ��क कोई आय नहीं)",
         "₹1K–5K",
         "₹5K–15K",
         "₹15K–30K",
@@ -685,7 +685,7 @@ ${language === "hindi" ? "मासिक आ��:" : "Monthly Income:"} ${qui
 
 ${language === "hindi" ? "सुझावित दर���ं (भारतीय बाजार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
 
-${language === "hindi" ? "📱 प्लेट���ॉर्म दरें:" : "��� PLATFORM RATES:"}
+${language === "hindi" ? "📱 प���लेट���ॉर्म दरें:" : "��� PLATFORM RATES:"}
 ${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-3,000"}
 ${language === "hindi" ? "Instagram Reel:" : "Instagram Reel:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "Instagram Story:" : "Instagram Story:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-300" : quizData.followerCount.includes("1K - 5K") ? "300-500" : "500-1,500"}
@@ -739,7 +739,7 @@ ${language === "hindi" ? "हैल��� [संपर्क नाम]," : 
 
 ${language === "hindi" ? "मैंने पिछले सप्ताह आपक�� collaboration क�� बारे मे��� email भेजा था। मु���े लगता है कि हम एक amazing partnership create ��र सकते हैं!" : "I sent you an email last week about collaboration opportunities. I believe we could create an amazing partnership!"}
 
-${language === "hindi" ? "Recently मैंने [competitor brand] के सा��� work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
+${language === "hindi" ? "Recently मैंने [competitor brand] क�� सा��� work किया और ���स post ���ो [specific results] मिले।" : "Recently I worked with [competitor brand] and that post received [specific results]."}
 
 ${language === "hindi" ? "क्या हम इस week एक quick 15-minute call schedule क��� सकते हैं?" : "Could we schedule a quick 15-minute call this week?"}
 
@@ -786,7 +786,7 @@ ${language === "hindi" ? "• मेरी audience क�� [specific demograp
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "�� मैं additional value add कर सकत�� ह��ं like [extra service]" : "• I can add additional value like [extra service]"}
 
-${language === "hindi" ? "��ै��� flexible ह��ं औ��� ���� mutually beneficial deal बनाना �����हता हूं���" : "I'm flexible and want to create a mutually beneficial deal."}
+${language === "hindi" ? "����ै��� flexible ह��ं औ��� ���� mutually beneficial deal बनाना �����हता हूं���" : "I'm flexible and want to create a mutually beneficial deal."}
 
 ${language === "hindi" ? "Best regards," : "Best regards,"}
 ${userName}
@@ -854,7 +854,7 @@ ${language === "hindi" ? "• Subject lines को catchy रखें" : "��
 ${language === "hindi" ? "• Follow-up करना न भूलें" : "• Don't forget to follow up"}
 ${language === "hindi" ? "• Professional tone maintain करें" : "• Maintain a professional tone"}
 ${language === "hindi" ? "• Results और metrics share ��रें" : "• Share results and metrics"}
-${language === "hindi" ? "• Grateful और humble रहें" : "• Be grateful and humble"}`;
+${language === "hindi" ? "• Grateful और humble रहें" : "��� Be grateful and humble"}`;
     } else if (type === "growthStrategy") {
       content =
         fontSizeIndicator +
@@ -867,7 +867,7 @@ ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:
 
 ${language === "hindi" ? "दिन 1-30: बुन�������ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्���ाह 1:" : "Week 1:"}
-${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्���मान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़��कर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
+${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्���मान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़��कर दैनिक ���रें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
 ${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ�����डिया तैयार ���रे��` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्��)" : "- Research hashtags (30 hashtag mix)"}
 
@@ -1106,25 +1106,25 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
       </header>
 
       {/* Quiz Content */}
-      <main ref={quizContentRef} className="container mx-auto px-4 py-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+      <main ref={quizContentRef} className="container mx-auto px-2 md:px-4 py-2">
+        <div className="max-w-xl mx-auto">
+          <div className="text-center mb-4 md:mb-6">
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">
               {t.title}
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-600 leading-relaxed">
+            <p className="text-sm md:text-lg text-gray-600 leading-relaxed px-2">
               {t.subtitle}
             </p>
 
             {/* Animated Icons */}
-            <div className="flex justify-center gap-4 mt-6">
-              <Sparkles className="w-6 h-6 text-neon-green animate-pulse" />
-              <Star className="w-6 h-6 text-electric-blue animate-pulse" />
-              <Target className="w-6 h-6 text-soft-violet animate-pulse" />
+            <div className="flex justify-center gap-3 mt-3">
+              <Sparkles className="w-4 h-4 md:w-6 md:h-6 text-neon-green animate-pulse" />
+              <Star className="w-4 h-4 md:w-6 md:h-6 text-electric-blue animate-pulse" />
+              <Target className="w-4 h-4 md:w-6 md:h-6 text-soft-violet animate-pulse" />
             </div>
           </div>
 
-          <div className="bg-white border-2 border-gray-100 rounded-3xl p-8 md:p-16 shadow-2xl backdrop-blur-sm">
+          <div className="bg-white border-2 border-gray-100 rounded-2xl p-4 md:p-8 shadow-xl backdrop-blur-sm min-h-[70vh] flex flex-col justify-between">
             {/* Language is now fixed to English only */}
             {/* Loading State */}
             {isGenerating && (
