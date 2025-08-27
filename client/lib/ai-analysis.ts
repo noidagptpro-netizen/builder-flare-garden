@@ -2021,7 +2021,7 @@ const calculateGrowthPotential = (
     "Achieve viral content",
     "Expand into new platforms",
     "authentic कम्यु��िटी बनाना",
-    "वायरल कंटेंट बनाना",
+    "वा���रल कंटेंट बनाना",
     "नए प्लेटफॉर्म्स में expand",
   ];
   if (data.goals.some((goal) => growthGoals.some((g) => goal.includes(g)))) {
@@ -2343,29 +2343,62 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
 
   const confidenceExplanation = `Based on ${socialLinksCount > 0 ? "verified social profiles, " : ""}quiz completeness (${Math.round((Object.keys(data).filter((key) => data[key as keyof QuizData]).length / Object.keys(data).length) * 100)}%), and industry data matching your profile.`;
 
-  // Generate income projections
+  // Generate realistic income projections based on multiple factors
   const currentIncome = getIncomeAmount(data.monthlyIncome);
   const followerCount = getFollowerCount(data.followerCount);
+
+  // Calculate realistic income potential based on platform-specific metrics
+  const platformMultiplier = getPlatformIncomeMultiplier(data.primaryPlatform);
+  const nicheMultiplier = getNicheIncomeMultiplier(data.niche);
+  const experienceMultiplier = getExperienceIncomeMultiplier(data.experience);
+  const engagementMultiplier = getEngagementIncomeMultiplier(data.engagementRate);
+
+  // Calculate realistic baseline income potential per follower (Indian market)
+  let baselinePerFollower = 0;
+  if (data.primaryPlatform === "Instagram") {
+    baselinePerFollower = followerCount < 10000 ? 0.8 : followerCount < 100000 ? 1.2 : 2.0;
+  } else if (data.primaryPlatform === "YouTube") {
+    baselinePerFollower = followerCount < 10000 ? 1.5 : followerCount < 100000 ? 2.5 : 4.0;
+  } else if (data.primaryPlatform === "LinkedIn") {
+    baselinePerFollower = followerCount < 10000 ? 1.0 : followerCount < 100000 ? 1.8 : 3.0;
+  } else {
+    baselinePerFollower = 0.5; // Other platforms
+  }
+
+  // Calculate realistic potential
+  const realisticPotential = Math.round(
+    followerCount * baselinePerFollower * platformMultiplier * nicheMultiplier * experienceMultiplier * engagementMultiplier
+  );
 
   let threeMonthProjection = currentIncome;
   let sixMonthProjection = currentIncome;
 
-  if (fameScore >= 70) {
-    threeMonthProjection = Math.round(currentIncome * 1.5);
-    sixMonthProjection = Math.round(currentIncome * 2.2);
-  } else if (fameScore >= 50) {
-    threeMonthProjection = Math.round(currentIncome * 1.3);
-    sixMonthProjection = Math.round(currentIncome * 1.8);
-  } else if (fameScore >= 30) {
-    threeMonthProjection = Math.round(currentIncome * 1.2);
-    sixMonthProjection = Math.round(currentIncome * 1.5);
+  // Conservative growth projections based on fame score and current performance
+  if (currentIncome === 0) {
+    // First-time monetizers - realistic starting points
+    if (followerCount >= 50000) {
+      threeMonthProjection = Math.min(15000, realisticPotential * 0.3);
+      sixMonthProjection = Math.min(35000, realisticPotential * 0.6);
+    } else if (followerCount >= 10000) {
+      threeMonthProjection = Math.min(8000, realisticPotential * 0.4);
+      sixMonthProjection = Math.min(20000, realisticPotential * 0.7);
+    } else if (followerCount >= 5000) {
+      threeMonthProjection = Math.min(3000, realisticPotential * 0.5);
+      sixMonthProjection = Math.min(8000, realisticPotential * 0.8);
+    } else {
+      threeMonthProjection = Math.min(1000, realisticPotential * 0.6);
+      sixMonthProjection = Math.min(3000, realisticPotential);
+    }
+  } else {
+    // Existing earners - realistic growth based on current performance
+    const growthMultiplier = fameScore >= 70 ? 1.4 : fameScore >= 50 ? 1.25 : fameScore >= 30 ? 1.15 : 1.1;
+    threeMonthProjection = Math.round(Math.min(currentIncome * growthMultiplier, realisticPotential * 0.7));
+    sixMonthProjection = Math.round(Math.min(currentIncome * (growthMultiplier + 0.3), realisticPotential));
   }
 
-  // Minimum projections based on follower count
-  if (followerCount >= 10000 && threeMonthProjection < 15000) {
-    threeMonthProjection = 15000;
-    sixMonthProjection = 30000;
-  }
+  // Ensure projections don't exceed realistic potential by too much
+  threeMonthProjection = Math.min(threeMonthProjection, realisticPotential * 0.8);
+  sixMonthProjection = Math.min(sixMonthProjection, realisticPotential);
 
   const formatIncome = (amount: number) => {
     if (amount >= 100000) return `��${Math.round(amount / 1000)}K`;
