@@ -198,7 +198,7 @@ const languages = {
       ],
       incomes: [
         "₹0 (No income yet)",
-        "₹1K–5K",
+        "₹1K���5K",
         "₹5K–15K",
         "₹15K–30K",
         "₹30K–50K",
@@ -283,7 +283,7 @@ const languages = {
       email: "आपका ईमेल पता क्या है?",
       phone: "आपका फोन नंबर क्या है? (वैकल्पिक)",
       city: "आप किस शहर से हैं?",
-      primaryPlatform: "आप मुख्यतः किस प्लेटफॉर्म पर कंटेंट बनाते हैं?",
+      primaryPlatform: "आ�� मुख्यतः क���स प्ले���फॉर्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
@@ -295,9 +295,9 @@ const languages = {
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       engagementRate: "आपका औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
-        "आपकी सबसे बड़ी चुनौती क्या है? 3 तक चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
-      goals: "आपके अगले 6 महीने के मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
-      socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
+        "आपकी सबस��� बड़ी चुनौती क��या है? 3 तक चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
+      goals: "आपके ���गले 6 महीने के मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
+      socialLinks: "अपनी सोशल उपस्थिति सा��ा करें (वैकल्पिक)",
       bio: "अपने और अपने कंटेंट के बारे में कुछ और बताएं (वैकल्पिक)",
     },
     options: {
@@ -320,15 +320,15 @@ const languages = {
         "500K+",
       ],
       niches: [
-        "फैशन और ब��यूटी",
+        "फैशन ��र ब���यूटी",
         "टेक्नोलॉजी और AI",
         "खाना और खाना बनाना",
         "यात्रा और एडवेंचर",
-        "फिटनेस और स्वास्थ्य",
+        "���िटनेस और स्वास्थ्य",
         "व्यक्तिगत वि��्त और नि��ेश",
         "मनोरंजन और कॉमेडी",
         "उद्यमिता और व्यापार",
-        "जीवनशैली और कल्याण",
+        "जी��नशैली और कल्याण",
         "कला और डिज़ाइन",
         "गेमिंग और ���स्पोर���ट्स",
         "��ंगीत और नृत्���",
@@ -350,14 +350,14 @@ const languages = {
         "मुझे नहीं पता",
       ],
       contentTypes: [
-        "फोटो और कैरोसेल",
-        "छोटे वीडियो/र��ल्स",
+        "फोटो और क���रोसेल",
+        "छोटे वीडिय��/र��ल्स",
         "लंबे वीडियो",
         "लाइव स्ट्रीम",
         "स्टोरीज़",
         "लिखित पोस्ट",
         "पॉडकास्ट",
-        "मिश्रित कंटेंट",
+        "मिश्रित कंटे���ट",
       ],
       frequencies: [
         "रोज़ा���ा",
@@ -401,13 +401,13 @@ const languages = {
       goals: [
         "मासिक आय ����50K+ तक ब���़ाना",
         "100K+ का authentic ��मुदाय बनाना",
-        "सपनों के ब्रांड्स के साथ पार्टन��शिप",
+        "सपन��ं के ब्रांड्स के साथ पार्टन��शिप",
         "अ���ना प्रोडक्ट/कोर्�� लॉन्च क���ना",
         "अपने निच में गो-टू ���क्सपर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइ���र्स की ईमेल लिस्ट बनाना",
         "इंडस्ट्री इवेंट्स/पॉडकास्ट में बोलना",
-        "प���सिव इनकम स्ट्रीम बनाना",
+        "प���सिव इनकम स्ट्रीम बनान��",
         "अपनी 9-5 जॉब छोड़कर फुल-टाइम जाना",
         "नए प्लेटफॉर्म्स/��ॉर्मेट्स में expand करना",
         "अपने ��्पेस में ���ूसरे क्रिएट���्स को मेंटर करना",
@@ -416,7 +416,7 @@ const languages = {
         "🔄 Growth & Engagement: Low views & inconsistent engagement",
         "🧠 Growth & Engagement: Staying relevant with fast-moving trends",
         "🔁 Growth & Engagement: Algorithm changes killing reach",
-        "🧍‍♀️ Growth & Engagement: Competing with bigger creators",
+        "���‍♀️ Growth & Engagement: Competing with bigger creators",
         "🗣️ Brand & Identity: Struggling to find my unique voice/style",
         "🤝 Brand & Identity: Balancing authenticity with brand appeal",
         "🌱 Brand & Identity: Building a real, connected community",
@@ -443,9 +443,9 @@ const languages = {
       submit: "मेरा क्रिएटर विश्��ेषण पाएं",
     },
     freeResources: {
-      title: "🎉 क्विज़ पूरा! यहाँ हैं ���पके मुफ्त क्रिएटर संसा��न",
+      title: "🎉 क्विज़ पूर���! यहाँ हैं ���पके मुफ्त क्रिएटर संसा��न",
       subtitle:
-        "अपनी क्रिएटर यात्रा शुरू करने के लिए ��न शक्तिशाली ट���ल्�� को डाउनलोड करें",
+        "अपनी क्रिएटर यात्रा शुर�� करने के लिए ��न शक्तिशाली ट���ल्�� को डाउनलोड करें",
       mediaKit: {
         title: "प्र�����फेशनल मीडिया किट टेम्प्लेट",
         description: "आकर्षक मीडिया किट बन���एं जो ब्रांड्स को पसंद आएंगे",
@@ -477,14 +477,21 @@ export default function Quiz() {
 
   // Save language preference and update quiz data when language changes
   React.useEffect(() => {
-    localStorage.setItem("famechase-language", "english");
-    setQuizData((prev) => ({ ...prev, language: "english" }));
+    localStorage.setItem("famechase-language", language);
+    setQuizData((prev) => ({ ...prev, language: language }));
   }, [language]);
 
   // Scroll to top when quiz page loads
   React.useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
+
+  // Scroll to top when free resources page is shown
+  React.useEffect(() => {
+    if (showFreeResources) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [showFreeResources]);
 
   const updateQuizData = (field: keyof QuizData, value: any) => {
     setQuizData((prev) => ({
@@ -553,6 +560,10 @@ export default function Quiz() {
       }, 100);
     } else if (currentStep === totalSteps) {
       setShowFreeResources(true);
+      // Auto-scroll to top when showing free resources page
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 100);
     }
   };
 
@@ -575,8 +586,8 @@ export default function Quiz() {
     setIsGenerating(true);
 
     try {
-      // Save quiz data with language preference (English only now)
-      const finalQuizData = { ...quizData, language: "english" };
+      // Save quiz data with selected language preference
+      const finalQuizData = { ...quizData, language: language };
       localStorage.setItem("fameChaseQuizData", JSON.stringify(finalQuizData));
 
       // Save user data to Supabase if configured
@@ -670,9 +681,9 @@ This content is optimized for larger text display for better readability
     if (type === "mediaKit") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "मीड���य��� किट" : "MEDIA KIT"} - ${userName}
+        `${language === "hindi" ? "मीड���य��� कि���" : "MEDIA KIT"} - ${userName}
 
-${language === "hindi" ? "व्यक्ति������ जानकारी:" : "PERSONAL INFO:"}
+${language === "hindi" ? "व्यक्ति������ जानक���री:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
 ${language === "hindi" ? "���्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
@@ -692,7 +703,7 @@ ${language === "hindi" ? "Instagram Story:" : "Instagram Story:"} ₹${quizData.
 ${language === "hindi" ? "YouTube शॉर्ट:" : "YouTube Short:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "YouTube वी���ियो म���ंशन:" : "YouTube Video Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-2,000" : quizData.followerCount.includes("1K - 5K") ? "2,000-3,000" : "3,000-8,000"}
 ${language === "hindi" ? "Twitter पोस���ट:" : "Twitter Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-200" : quizData.followerCount.includes("1K - 5K") ? "200-400" : "400-1,000"}
-${language === "hindi" ? "Newsletter में����:" : "Newsletter Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-2,500"}
+${language === "hindi" ? "Newsletter में��������:" : "Newsletter Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-2,500"}
 
 ${language === "hindi" ? "📦 पैकेज दरें:" : "📦 PACKAGE RATES:"}
 ${language === "hindi" ? "�� ब��सिक पैक���ज (1 पोस्ट + 2 स्टो���ी):" : "• Basic Package (1 Post + 2 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "400-800" : quizData.followerCount.includes("1K - 5K") ? "800-1,500" : "1,500-4,000"}
@@ -706,9 +717,9 @@ ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
     } else if (type === "emailTemplates") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "6+ ���्रांड आ���टरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
+        `${language === "hindi" ? "6+ ���्रांड ������टरीच ईमेल ���ेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
-${language === "hindi" ? "टेम्प्ल���ट 1: प्रारंभिक संपर्क (कोल्�� आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
+${language === "hindi" ? "टेम्प्ल���ट 1: प्रारंभिक संपर्क (कोल्���� आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
@@ -716,7 +727,7 @@ ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] �
 ${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपक��� ���्रांड के साथ काम कर��े में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
-${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शकों के साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
+${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शक���ं ���े साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
 ${language === "hindi" ? `- मेरे दर्शक ${quizData.niche} में रुचि रखते हैं` : `- My audience is interested in ${quizData.niche}`}
 ${language === "hindi" ? "- मैं प्रामाणिक कंटेंट बनाने म��ं विश��षज्�� हूं" : "- I specialize in creating authentic content"}
 
@@ -727,12 +738,12 @@ ${language === "hindi" ? "- प��������टिंग आवृत
 
 ${language === "hindi" ? "क्या आप स���योग के अवसरों पर �����र��चा करने के लिए समय निकाल ���कते हैं?" : "Would you be available to discuss collaboration opportunities?"}
 
-${language === "hindi" ? "धन्यवाद," : "Best regards,"}
+${language === "hindi" ? "धन्यव���द," : "Best regards,"}
 ${userName}
 
 ---
 
-${language === "hindi" ? "टे��्प्लेट 2: फॉलो-����प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
+${language === "hindi" ? "टे����्प्लेट 2: फॉलो-����प ईमेल" : "TEMPLATE 2: FOLLOW-UP EMAIL"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `फॉलो-अप: ${userName} कोलैबोरेशन प्रस्ताव` : `Follow-up: ${userName} Collaboration Proposal`}
 
 ${language === "hindi" ? "हैल��� [संपर्क नाम]," : "Hi [Contact Name],"}
@@ -758,7 +769,7 @@ ${language === "hindi" ? "आप��ी interest ��े लि��� ध
 ${language === "hindi" ? "📸 सिंगल ��ोस्ट: ₹[आपकी rate]" : "📸 Single Post: ₹[Your rate]"}
 ${language === "hindi" ? "• 1 feed post with your product" : "• 1 feed post with your product"}
 ${language === "hindi" ? "• 24-hour story promotion" : "• 24-hour story promotion"}
-${language === "hindi" ? "• Professional photography" : "�� Professional photography"}
+${language === "hindi" ? "��� Professional photography" : "�� Professional photography"}
 
 ${language === "hindi" ? "📱 स्ट���र�� पैक���ज: ₹[आपकी rate]" : "📱 Story Package: ����[Your rate]"}
 ${language === "hindi" ? "• 3-5 story slides" : "• 3-5 story slides"}
@@ -778,7 +789,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
+${language === "hindi" ? "आपके proposal ��े लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
 
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate क��� slightly adjust कर सकते ��ैं? मैं ₹[your counter] suggest ��रूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
@@ -793,7 +804,7 @@ ${userName}
 
 ---
 
-${language === "hindi" ? "टेम्प्लेट 5: प��फॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
+${language === "hindi" ? "टेम्प्लेट 5: प�����ॉर्मेंस रिपो���्ट" : "TEMPLATE 5: PERFORMANCE REPORT"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `${userName} x [Brand] - Campaign Performance Report` : `${userName} x [Brand] - Campaign Performance Report`}
 
 ${language === "hindi" ? "Dear [Brand Team]," : "Dear [Brand Team],"}
@@ -822,7 +833,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Dear [Decision Maker]," : "Dear [Decision Maker],"}
 
-${language === "hindi" ? "हमा��े successful collaboration के बा����, ���ैं एक long-term partnership propose करना चाहूं��ा��" : "Following our successful collaboration, I'd like to propose a long-term partnership."}
+${language === "hindi" ? "हमा��े successful collaboration के बा����, ���ैं एक long-term partnership propose करना चा���ूं��ा��" : "Following our successful collaboration, I'd like to propose a long-term partnership."}
 
 ${language === "hindi" ? "🤝 PROPOSED PARTNERSHIP:" : "🤝 PROPOSED PARTNERSHIP:"}
 ${language === "hindi" ? "���� Monthly content creation" : "• Monthly content creation"}
@@ -858,7 +869,7 @@ ${language === "hindi" ? "• Grateful और humble रहें" : "• Be gra
     } else if (type === "growthStrategy") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "90-���िन ���� ��्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
+        `${language === "hindi" ? "90-���िन ���� ����रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "वर्तमान स्���िति:" : "Current Status:"} ${quizData.followerCount} on ${quizData.primaryPlatform}
@@ -868,7 +879,7 @@ ${language === "hindi" ? "मुख्य लक्ष्य:" : "Primary Goals:
 ${language === "hindi" ? "दिन 1-30: बुन�������ाद म��बूत करना" : "DAYS 1-30: FOUNDATION BUILDING"}
 ${language === "hindi" ? "सप्���ाह 1:" : "Week 1:"}
 ${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्���मान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़��कर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
-${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ�����डिया तैयार ���रें` : `- Prepare 10 content ideas for ${quizData.niche}`}
+${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ�����डिया तैयार ���रे��` : `- Prepare 10 content ideas for ${quizData.niche}`}
 ${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्��)" : "- Research hashtags (30 hashtag mix)"}
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
@@ -877,9 +888,9 @@ ${language === "hindi" ? "- कम्युनिटी एंगेजमें
 ${language === "hindi" ? "- एनालिटिक्स ट्रै�� करना शु���ू क������ं" : "- Start tracking analytics"}
 
 ${language === "hindi" ? "दिन 31-60: विकास औ��� अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
-${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करे�� (60% कंटें��)" : "प्लेटफॉर्म-स्पेसिफ���क कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
-${language === "hindi" ? "- ट्रेंडिंग टॉपि��्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
-${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
+${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करे�� (60% कंटें��)" : "प्लेटफॉर्म-स्पेसिफ������ कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
+${language === "hindi" ? "- ट��रेंडिंग ट���पि����्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
+${language === "hindi" ? "- अन्य क्रिए��र्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
 ${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
@@ -889,7 +900,7 @@ ${language === "hindi" ? "- ईमेल लिस्ट बनान��� �
 ${language === "hindi" ? "अपे��्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
 ${language === "hindi" ? "- फॉलोअर ग्रोथ: 40-80%" : "- Follower Growth: 40-80%"}
 ${language === "hindi" ? "- ��ंगेजमेंट में स�������धार: 50-100%" : "- Engagement Improvement: 50-100%"}
-${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8" : "- Brand Inquiries: 3-8"}`;
+${language === "hindi" ? "- ���्����ंड पूछ���ाछ: 3-8" : "- Brand Inquiries: 3-8"}`;
     }
 
     const blob = new Blob([content], { type: "text/plain" });
@@ -921,10 +932,17 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 <Home className="w-4 h-4" />
                 Back to Home
               </Link>
-              {/* Hindi language disabled - English only */}
-              <div className="text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
-                English
-              </div>
+              {/* Language Selector */}
+              <select
+                value={language}
+                onChange={(e) =>
+                  setLanguage(e.target.value as "english" | "hindi")
+                }
+                className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
+              >
+                <option value="english">English</option>
+                <option value="hindi">हिंदी</option>
+              </select>
             </div>
           </div>
         </header>
@@ -1083,49 +1101,59 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="relative z-10 px-4 py-6 bg-white border-b border-gray-100 sticky top-0 backdrop-blur-sm">
+      <header className="relative z-10 px-2 md:px-4 py-3 md:py-4 bg-white border-b border-gray-100 sticky top-0 backdrop-blur-sm">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-lg font-bold text-gray-900">
+          <Link to="/" className="text-base md:text-lg font-bold text-gray-900">
             FameChase<span className="text-neon-green">.com</span>
           </Link>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <Link
               to="/"
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              className="flex items-center gap-1 md:gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm md:text-base"
             >
-              <Home className="w-4 h-4" />
-              Back to Home
+              <Home className="w-3 h-3 md:w-4 md:h-4" />
+              <span className="hidden sm:inline">Back to Home</span>
+              <span className="sm:hidden">Home</span>
             </Link>
-            {/* Hindi language disabled - English only */}
-            <div className="text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
-              English
-            </div>
+            {/* Language Selector */}
+            <select
+              value={language}
+              onChange={(e) =>
+                setLanguage(e.target.value as "english" | "hindi")
+              }
+              className="bg-white border border-gray-300 text-gray-900 px-2 py-1 md:px-3 md:py-2 rounded-lg text-xs md:text-sm font-medium"
+            >
+              <option value="english">English</option>
+              <option value="hindi">हिंदी</option>
+            </select>
           </div>
         </div>
       </header>
 
       {/* Quiz Content */}
-      <main ref={quizContentRef} className="container mx-auto px-4 py-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+      <main
+        ref={quizContentRef}
+        className="container mx-auto px-2 md:px-4 py-2"
+      >
+        <div className="max-w-xl mx-auto">
+          <div className="text-center mb-4 md:mb-6">
+            <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">
               {t.title}
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-600 leading-relaxed">
+            <p className="text-sm md:text-lg text-gray-600 leading-relaxed px-2">
               {t.subtitle}
             </p>
 
             {/* Animated Icons */}
-            <div className="flex justify-center gap-4 mt-6">
-              <Sparkles className="w-6 h-6 text-neon-green animate-pulse" />
-              <Star className="w-6 h-6 text-electric-blue animate-pulse" />
-              <Target className="w-6 h-6 text-soft-violet animate-pulse" />
+            <div className="flex justify-center gap-3 mt-3">
+              <Sparkles className="w-4 h-4 md:w-6 md:h-6 text-neon-green animate-pulse" />
+              <Star className="w-4 h-4 md:w-6 md:h-6 text-electric-blue animate-pulse" />
+              <Target className="w-4 h-4 md:w-6 md:h-6 text-soft-violet animate-pulse" />
             </div>
           </div>
 
-          <div className="bg-white border-2 border-gray-100 rounded-3xl p-8 md:p-16 shadow-2xl backdrop-blur-sm">
-            {/* Language is now fixed to English only */}
+          <div className="bg-white border-2 border-gray-100 rounded-2xl p-4 md:p-8 shadow-xl backdrop-blur-sm min-h-[70vh] flex flex-col justify-between">
             {/* Loading State */}
             {isGenerating && (
               <div className="text-center py-12">
@@ -1146,23 +1174,21 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
               <>
                 {/* Step 1: Primary Platform */}
                 {currentStep === 1 && (
-                  <div className="space-y-10">
-                    <div className="text-center mb-12">
-                      <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <Globe className="w-10 h-10 text-white" />
+                  <div className="space-y-4 md:space-y-6 flex-1 flex flex-col">
+                    <div className="text-center mb-4 md:mb-6">
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Globe className="w-6 h-6 md:w-8 md:h-8 text-white" />
                       </div>
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-2">
                         Your Main Platform
                       </h2>
-                      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Where do you create and share your content? This helps
-                        us understand your primary audience and
-                        platform-specific strategies.
+                      <p className="text-sm md:text-base text-gray-600 px-2">
+                        Where do you create and share your content?
                       </p>
                     </div>
 
-                    <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-xl">
+                    <div className="flex-1">
+                      <label className="block text-gray-900 font-semibold mb-3 text-base md:text-lg">
                         {t.questions.primaryPlatform}
                       </label>
                       <select
@@ -1170,7 +1196,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         onChange={(e) =>
                           updateQuizData("primaryPlatform", e.target.value)
                         }
-                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-3 py-3 md:py-4 rounded-lg focus:border-electric-blue focus:outline-none transition-colors text-sm md:text-base"
                       >
                         <option value="">Select your primary platform</option>
                         {t.options.platforms.map((platform) => (
@@ -1183,24 +1209,23 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 3: Follower Count */}
-                {currentStep === 3 && (
-                  <div className="space-y-10">
-                    <div className="text-center mb-12">
-                      <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <Star className="w-10 h-10 text-white" />
+                {/* Step 2: Follower Count */}
+                {currentStep === 2 && (
+                  <div className="space-y-4 md:space-y-6 flex-1 flex flex-col">
+                    <div className="text-center mb-4 md:mb-6">
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Star className="w-6 h-6 md:w-8 md:h-8 text-white" />
                       </div>
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-2">
                         Your Audience Size
                       </h2>
-                      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        How many followers do you currently have on your primary
-                        platform?
+                      <p className="text-sm md:text-base text-gray-600 px-2">
+                        How many followers do you currently have?
                       </p>
                     </div>
 
-                    <div>
-                      <label className="block text-gray-900 font-bold mb-6 text-xl">
+                    <div className="flex-1">
+                      <label className="block text-gray-900 font-semibold mb-3 text-base md:text-lg">
                         {t.questions.followerCount}
                       </label>
                       <select
@@ -1208,7 +1233,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         onChange={(e) =>
                           updateQuizData("followerCount", e.target.value)
                         }
-                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-3 py-3 md:py-4 rounded-lg focus:border-electric-blue focus:outline-none transition-colors text-sm md:text-base"
                       >
                         <option value="">Select your follower count</option>
                         {t.options.followerRanges.map((range) => (
@@ -1221,31 +1246,31 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 4: Secondary Platforms */}
-                {currentStep === 4 && (
-                  <div className="space-y-10">
-                    <div className="text-center mb-12">
-                      <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <Layout className="w-10 h-10 text-white" />
+                {/* Step 3: Secondary Platforms */}
+                {currentStep === 3 && (
+                  <div className="space-y-4 md:space-y-6 flex-1 flex flex-col">
+                    <div className="text-center mb-4 md:mb-6">
+                      <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <Layout className="w-6 h-6 md:w-8 md:h-8 text-white" />
                       </div>
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      <h2 className="text-lg md:text-2xl font-bold text-gray-900 mb-2">
                         Other Platforms
                       </h2>
-                      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                        Which other platforms do you use to share your content?
+                      <p className="text-sm md:text-base text-gray-600 px-2">
+                        Which other platforms do you use?
                       </p>
                     </div>
 
-                    <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                    <div className="flex-1">
+                      <label className="block text-gray-900 font-semibold mb-3 text-base md:text-lg">
                         {t.questions.secondaryPlatforms}
                       </label>
-                      <div className="grid grid-cols-2 gap-2">
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                         {t.options.platforms.map((platform) => (
                           <button
                             key={platform}
                             onClick={() => toggleSecondaryPlatform(platform)}
-                            className={`p-3 rounded-lg border-2 text-sm font-medium transition-all duration-300 ${
+                            className={`p-2 md:p-3 rounded-lg border-2 text-xs md:text-sm font-medium transition-all duration-300 ${
                               quizData.secondaryPlatforms.includes(platform)
                                 ? "bg-gradient-to-r from-neon-green/10 to-electric-blue/10 border-neon-green text-gray-900 shadow-lg"
                                 : "bg-white border-gray-200 text-gray-700 hover:border-gray-300 hover:shadow-md"
@@ -1259,20 +1284,20 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 5: Content Niche */}
-                {currentStep === 5 && (
-                  <div className="space-y-8">
-                    <div className="text-center mb-8">
-                      <h2 className="text-lg font-bold text-gray-900 mb-4">
+                {/* Step 4: Content Niche */}
+                {currentStep === 4 && (
+                  <div className="space-y-4 md:space-y-6 flex-1 flex flex-col">
+                    <div className="text-center mb-4 md:mb-6">
+                      <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
                         Your Content Niche 🎯
                       </h2>
-                      <p className="text-gray-600">
+                      <p className="text-sm md:text-base text-gray-600 px-2">
                         What topics do you create content about?
                       </p>
                     </div>
 
-                    <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                    <div className="flex-1">
+                      <label className="block text-gray-900 font-semibold mb-3 text-base md:text-lg">
                         {t.questions.niche}
                       </label>
                       <select
@@ -1280,7 +1305,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         onChange={(e) =>
                           updateQuizData("niche", e.target.value)
                         }
-                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-soft-violet focus:outline-none transition-colors text-lg"
+                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-3 py-3 md:py-4 rounded-lg focus:border-soft-violet focus:outline-none transition-colors text-sm md:text-base"
                       >
                         <option value="">
                           What topics do you create content about?
@@ -1295,20 +1320,20 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 6: Content Type */}
-                {currentStep === 6 && (
-                  <div className="space-y-8">
-                    <div className="text-center mb-8">
-                      <h2 className="text-lg font-bold text-gray-900 mb-4">
-                        Content Format ��
+                {/* Step 5: Content Type */}
+                {currentStep === 5 && (
+                  <div className="space-y-4 md:space-y-6 flex-1 flex flex-col">
+                    <div className="text-center mb-4 md:mb-6">
+                      <h2 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                        Content Format 🎥
                       </h2>
-                      <p className="text-gray-600">
+                      <p className="text-sm md:text-base text-gray-600 px-2">
                         What type of content do you primarily create?
                       </p>
                     </div>
 
-                    <div>
-                      <label className="block text-gray-900 font-semibold mb-4 text-lg">
+                    <div className="flex-1">
+                      <label className="block text-gray-900 font-semibold mb-3 text-base md:text-lg">
                         {t.questions.contentType}
                       </label>
                       <select
@@ -1316,7 +1341,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                         onChange={(e) =>
                           updateQuizData("contentType", e.target.value)
                         }
-                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-4 py-6 rounded-xl focus:border-electric-blue focus:outline-none transition-colors text-lg"
+                        className="w-full bg-white border-2 border-gray-300 text-gray-900 px-3 py-3 md:py-4 rounded-lg focus:border-electric-blue focus:outline-none transition-colors text-sm md:text-base"
                       >
                         <option value="">
                           What type of content do you primarily create?
@@ -1331,8 +1356,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 7: Posting Frequency */}
-                {currentStep === 7 && (
+                {/* Step 6: Posting Frequency */}
+                {currentStep === 6 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-lg font-bold text-gray-900 mb-4">
@@ -1367,8 +1392,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 8: Experience */}
-                {currentStep === 8 && (
+                {/* Step 7: Experience */}
+                {currentStep === 7 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -1404,8 +1429,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 9: Monthly Income */}
-                {currentStep === 9 && (
+                {/* Step 8: Monthly Income */}
+                {currentStep === 8 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -1441,8 +1466,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 10: Biggest Challenge */}
-                {currentStep === 10 && (
+                {/* Step 9: Biggest Challenge */}
+                {currentStep === 9 && (
                   <div className="space-y-10">
                     <div className="text-center mb-12">
                       <div className="w-20 h-20 bg-gradient-to-r from-red-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -1667,8 +1692,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 11: Goals */}
-                {currentStep === 11 && (
+                {/* Step 10: Goals */}
+                {currentStep === 10 && (
                   <div className="space-y-10">
                     <div className="text-center mb-12">
                       <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -1681,7 +1706,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                       </h2>
                       <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         {language === "hindi"
-                          ? "आप अगले 6 म���ीनों ���ें क्या हासि��� करना चाहते हैं? 3 लक्ष्य चुनें जो आपको सबसे ज���यादा उत्साहित करते हैं!"
+                          ? "आप अगले 6 म���ीनों ���ें क्या हासि��� करन��� चाहते हैं? 3 लक्ष्य चुनें जो आपको सबसे ज������ादा उत्साहित करते हैं!"
                           : "What are your main goals for the next 6 months? Select up to 3 most important goals – this helps us personalize your recommendations"}
                       </p>
                     </div>
@@ -1729,8 +1754,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 12: Social Links */}
-                {currentStep === 12 && (
+                {/* Step 11: Social Links */}
+                {currentStep === 11 && (
                   <div className="space-y-8">
                     <div className="text-center mb-8">
                       <h2 className="text-lg font-bold text-gray-900 mb-4">
@@ -1833,8 +1858,8 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                   </div>
                 )}
 
-                {/* Step 13: Engagement Rate */}
-                {currentStep === 13 && (
+                {/* Step 12: Engagement Rate */}
+                {currentStep === 12 && (
                   <div className="space-y-10">
                     <div className="text-center mb-12">
                       <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -1961,14 +1986,14 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 )}
 
                 {/* Navigation Buttons */}
-                <div className="flex justify-between items-center mt-16 pt-8 border-t-2 border-gray-100">
+                <div className="flex justify-between items-center mt-4 md:mt-6 pt-4 border-t border-gray-200">
                   {currentStep > 1 ? (
                     <button
                       onClick={handleBack}
-                      className="flex items-center gap-3 bg-gray-100 text-gray-700 px-8 py-4 rounded-2xl font-bold hover:bg-gray-200 hover:shadow-lg transition-all duration-300 hover:scale-105"
+                      className="flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all text-sm md:text-base"
                     >
-                      <ArrowLeft className="w-5 h-5" />
-                      {t.buttons.back}
+                      <ArrowLeft className="w-4 h-4" />
+                      <span className="hidden sm:inline">{t.buttons.back}</span>
                     </button>
                   ) : (
                     <div></div>
@@ -1976,10 +2001,10 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
 
                   {/* Progress indicator */}
                   <div className="text-center">
-                    <div className="text-sm text-gray-500 mb-2">
+                    <div className="text-xs md:text-sm text-gray-500 mb-1">
                       Step {currentStep} of {totalSteps}
                     </div>
-                    <div className="text-2xl font-bold text-gray-900">
+                    <div className="text-lg md:text-xl font-bold text-gray-900">
                       {Math.round((currentStep / totalSteps) * 100)}%
                     </div>
                   </div>
@@ -1988,15 +2013,16 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     <button
                       onClick={handleNext}
                       disabled={!canProceed()}
-                      className="flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black px-10 py-4 rounded-2xl font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
+                      className="flex items-center gap-2 bg-gradient-to-r from-neon-green to-electric-blue text-black px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base"
                     >
-                      {t.buttons.next}
-                      <ArrowRight className="w-6 h-6" />
+                      <span className="hidden sm:inline">{t.buttons.next}</span>
+                      <span className="sm:hidden">Next</span>
+                      <ArrowRight className="w-4 h-4" />
                     </button>
                   ) : (
                     <button
                       onClick={handleNext}
-                      className="flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-4 rounded-2xl font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
+                      className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold hover:shadow-lg transition-all text-sm md:text-base"
                     >
                       Complete Quiz
                       <Sparkles className="w-6 h-6" />

@@ -136,7 +136,7 @@ const languages = {
     opportunities: "अवसर",
     threats: "खतरे",
     keySuggestions: "म���ख्य स��झाव",
-    creatorVitalStats: "आपके क्रिएटर महत्वपूर��ण आंकड़े",
+    creatorVitalStats: "आपके क्रिए��र महत्वपूर��ण आंकड़े",
     fameScore: "फेम स्कोर",
     growthPotential: "विकास ��्षमता",
     incomeProjection: "आय क्षमता",
@@ -271,8 +271,11 @@ export default function Results() {
       const data = JSON.parse(storedData);
       setQuizData(data);
 
-      // Set language to English only
-      setLanguage("english");
+      // Use saved language preference
+      const savedLanguage =
+        (localStorage.getItem("famechase-language") as "english" | "hindi") ||
+        "english";
+      setLanguage(savedLanguage);
 
       setPersonalInfo({
         name: data.name || "",
@@ -379,7 +382,7 @@ ${language === "hindi" ? "💵 मासिक आय:" : "💵 Monthly Income:"
 
 
 💪 ${language === "hindi" ? "मजबू����:" : "STRENGTHS:"}
-───────���────────────────────────────────────────
+───────���───────���────────────────────────────────
 
 ${analysis.swotAnalysis.strengths.map((s: string, i: number) => `${i + 1}. ${s}\n`).join("\n")}
 
@@ -405,7 +408,7 @@ ${analysis.suggestions
   .join("\n")}
 
 
-📋 ${language === "hindi" ? "अगले कदम:" : "NEXT STEPS:"}
+📋 ${language === "hindi" ? "अग���े कदम:" : "NEXT STEPS:"}
 ────��───────────────────────���──��────────────────
 
 ${language === "hindi" ? "1. अपनी कंटें��� रणनीति को अनुकूलित करें" : "1. Optimize your content strategy"}
@@ -442,7 +445,7 @@ ${language === "hindi" ? "🏙️ शह���:" : "🏙️ City:"} ${persona
 📊 ${language === "hindi" ? "सोशल मीडिया प्रोफाइल:" : "SOCIAL MEDIA PROFILES:"}
 ───����──────────────────────────────────────────���─
 
-${language === "hindi" ? "📱 प्राथमिक प्लेटफॉर��म:" : "📱 Primary Platform:"} ${quizData.primaryPlatform}
+${language === "hindi" ? "📱 प्राथमिक प्ले��फॉर��म:" : "📱 Primary Platform:"} ${quizData.primaryPlatform}
 
 ${language === "hindi" ? "👥 फॉलोअर����:" : "��� Followers:"} ${quizData.followerCount}
 
@@ -467,7 +470,7 @@ ${language === "hindi" ? "Instagram स्टोरी:" : "Instagram Story:"} �
 ${language === "hindi" ? "YouTube शॉर्ट:" : "YouTube Short:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "YouTube वीडि��ो मेंशन:" : "YouTube Video Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-2,000" : quizData.followerCount.includes("1K - 5K") ? "2,000-3,000" : "3,000-8,000"}
 
-${language === "hindi" ? "व���शेषताएं:" : "SPECIALTIES:"}
+${language === "hindi" ? "व���श���षताएं:" : "SPECIALTIES:"}
 - ${analysis.suggestions.slice(0, 3).join("\n- ")}
 
 ${language === "hindi" ? "संप���्क:" : "CONTACT INFORMATION:"}
@@ -503,7 +506,7 @@ ${language === "hindi" ? "- एंगेजमेंट मेट्रिक्
 ${language === "hindi" ? "- नेटवर्किंग और ��ह���ोग" : "- Networking and collaborations"}
 
 ${language === "hindi" ? "90-दिन के लक्ष्य:" : "90-DAY GOALS:"}
-${language === "hindi" ? "- फ��लोअर वृद्धि:" : "- Follower Growth:"} 30-50%
+${language === "hindi" ? "- फ���लोअर वृद्धि:" : "- Follower Growth:"} 30-50%
 ${language === "hindi" ? "- एंगे��मेंट वृद्धि:" : "- Engagement Increase:"} 40-80%
 ${language === "hindi" ? "- आय लक��ष्य:" : "- Income Target:"} ${analysis.incomeProjection}
 ${language === "hindi" ? "- ब्रांड ��ार्टनरशिप:" : "- Brand Partnerships:"} 2-5 ${language === "hindi" ? "��ह��ोग" : "collaborations"}
@@ -515,7 +518,7 @@ ${language === "hindi" ? "- मासिक ��्रांड इंक्�
 ${language === "hindi" ? "- कंटेंट पहुंच और छाप" : "- Content reach and impressions"}
 
 ${language === "hindi" ? "अनुशंसित उपकरण:" : "RECOMMENDED TOOLS:"}
-${language === "hindi" ? "- कंटेंट शेड्यूलिंग: Later य��� Buffer" : "- Content Scheduling: Later or Buffer"}
+${language === "hindi" ? "- कंटेंट शेड्यूलिंग: Later य����� Buffer" : "- Content Scheduling: Later or Buffer"}
 ${language === "hindi" ? "- डिज���ाइन: Canva Pro" : "- Design: Canva Pro"}
 ${language === "hindi" ? "- एनालि���िक्स: Creator Studio" : "- Analytics: Creator Studio"}
 ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchimp" : "- Email Marketing: Mailchimp"}`;
@@ -611,7 +614,7 @@ ${language === "hindi" ? "- ईमेल मार्केटिंग: Mailchi
         fontSizeIndicator +
         `${language === "hindi" ? "🚀 AI-पावर्ड प्रो मोनेटाइ��़ेशन कैल��ुलेटर" : "🚀 AI-POWERED PRO MONETIZATION CALCULATOR"} - ${userName}
 
-${language === "hindi" ? "📊 रियल-टाइम मार्केट एन���लिसिस रिपोर्ट" : "📊 REAL-TIME MARKET ANALYSIS REPORT"}
+${language === "hindi" ? "📊 रि���ल-टाइम मार्केट एन���लिसिस रिपोर्ट" : "📊 REAL-TIME MARKET ANALYSIS REPORT"}
 ═══════════════════════════════════════════════════
 
 ${language === "hindi" ? "👤 आ��की प्रोफाइल:" : "👤 YOUR PROFILE:"}
@@ -700,7 +703,7 @@ ${language === "hindi" ? "⏱️ लास्ट अपडेटेड:" : "⏱�
         fontSizeIndicator +
         `${language === "hindi" ? "💎 प्रो-लेवल एनालिटिक्स मास्टर ट्रैकर" : "💎 PRO-LEVEL ANALYTICS MASTER TRACKER"} - ${userName}
 
-${language === "hindi" ? "🚀 आपका व्यक्तिगत ग्रोथ डैशबोर्ड" : "🚀 YOUR PERSONALIZED GROWTH DASHBOARD"}
+${language === "hindi" ? "🚀 आ��का व्यक्तिगत ग्रोथ डैशबोर्ड" : "🚀 YOUR PERSONALIZED GROWTH DASHBOARD"}
 ═════════════════════════════════════════════════��═
 
 ${language === "hindi" ? "📊 करंट स्ट��ट्स (" : "📊 CURRENT STATUS ("}${new Date().toLocaleDateString()}):
@@ -778,11 +781,11 @@ ${language === "hindi" ? "📈 मासिक ROI ट्रैकर:" : "📈 
 │ - Product sales: ₹_____                  │
 │ - Other: ₹_____                          │
 │                                           │
-│ ${language === "hindi" ? "नेट प्रॉफिट" : "Net Profit"}: ₹_____ - ₹_____ = ₹_____ │
+│ ${language === "hindi" ? "नेट प्रॉफिट" : "Net Profit"}: ₹_____ - ₹_____ = ���_____ │
 │ ROI: (_____ ÷ _____) × 100 = _____%      │
 └──────────────────��───────────────────��──────┘
 
-${language === "hindi" ? "⚡ एक्शन आइटम्स (हर हफ्ते करें):" : "⚡ ACTION ITEMS (Do Every Week):"}
+${language === "hindi" ? "⚡ एक्शन ��इटम्स (हर हफ्ते करें):" : "⚡ ACTION ITEMS (Do Every Week):"}
 □ ${language === "hindi" ? "टॉप 3 परफॉर्मिंग पोस्ट्स को analyze ��रें और pattern ढू���ढ���ं" : "Analyze top 3 performing posts and find patterns"}
 □ ${language === "hindi" ? "Competitor के टॉप प���स्ट्स स्टडी करें (कम से कम 5)" : "Study competitor top posts (minimum 5)"}
 □ ${language === "hindi" ? "हैशटैग परफॉर्मेंस चेक करें और underperforming को replace करें" : "Check hashtag performance and replace underperforming ones"}
@@ -997,7 +1000,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "💰 मोन��टाइज़ेशन प्रो टूल्स - अभी कमाना शुरू ���र���ं!"
+                  ? "💰 मोन��टाइज़ेशन प्रो ट���ल्स - अभी कमाना शुरू ���र���ं!"
                   : "💰 Monetization Pro Tools - Start Earning Now!"}
               </h2>
               <p className="text-gray-600 mb-6">
@@ -1821,14 +1824,49 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                 <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
                   <DollarSign className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-purple-700 mb-1">
+                <div className="text-2xl md:text-3xl font-bold text-purple-700 mb-1">
                   {analysis.incomeProjection}
                 </div>
-                <div className="text-purple-600 font-medium">
+                <div className="text-purple-600 font-medium mb-2">
                   {t.incomeProjection}
                 </div>
-                <div className="text-sm text-purple-600 mt-1">
-                  {t.monthlyTarget}
+                <div className="text-xs md:text-sm text-purple-600 bg-purple-50 px-3 py-2 rounded-lg">
+                  <div className="font-semibold mb-1">{t.monthlyTarget}</div>
+                  <div className="text-purple-500">
+                    Based on your {quizData?.followerCount} followers in{" "}
+                    {quizData?.niche} on {quizData?.primaryPlatform}
+                  </div>
+                  {analysis.monetizationRoadmap?.incomeProjection && (
+                    <div className="mt-2 space-y-1">
+                      <div className="flex justify-between text-xs">
+                        <span>Current:</span>
+                        <span className="font-medium">
+                          {
+                            analysis.monetizationRoadmap.incomeProjection
+                              .current
+                          }
+                        </span>
+                      </div>
+                      <div className="flex justify-between text-xs">
+                        <span>3 months:</span>
+                        <span className="font-medium">
+                          {
+                            analysis.monetizationRoadmap.incomeProjection
+                              .threeMonth
+                          }
+                        </span>
+                      </div>
+                      <div className="flex justify-between text-xs">
+                        <span>6 months:</span>
+                        <span className="font-semibold text-purple-700">
+                          {
+                            analysis.monetizationRoadmap.incomeProjection
+                              .sixMonth
+                          }
+                        </span>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -1934,7 +1972,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                 </div>
                 <div className="text-xs text-gray-500 mt-1">
                   {quizData.secondaryPlatforms.length > 0
-                    ? `+${quizData.secondaryPlatforms.length} ${language === "hindi" ? "और प्लेटफॉर्��" : "more platforms"}`
+                    ? `+${quizData.secondaryPlatforms.length} ${language === "hindi" ? "��र प्लेटफॉर्��" : "more platforms"}`
                     : language === "hindi"
                       ? "Single platform"
                       : "Single platform"}

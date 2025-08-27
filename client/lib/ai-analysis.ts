@@ -184,6 +184,60 @@ const getIncomeAmount = (income: string): number => {
   return incomeMap[income] || 0;
 };
 
+// Platform-specific income multipliers (based on Indian creator economy)
+const getPlatformIncomeMultiplier = (platform: string): number => {
+  const multiplierMap: { [key: string]: number } = {
+    YouTube: 1.3, // Higher RPM and diverse monetization
+    Instagram: 1.0, // Base multiplier
+    LinkedIn: 1.2, // B2B premium rates
+    TikTok: 0.7, // Lower monetization maturity in India
+    Twitter: 0.8, // Limited monetization options
+    Facebook: 0.6, // Declining engagement
+    "Website/Blog": 1.4, // Direct monetization control
+  };
+  return multiplierMap[platform] || 0.8;
+};
+
+// Niche-specific income multipliers (Indian market demand)
+const getNicheIncomeMultiplier = (niche: string): number => {
+  const multiplierMap: { [key: string]: number } = {
+    "Technology & AI": 1.4, // High-value audience
+    "Personal Finance & Investing": 1.3, // Premium audience
+    "Fitness & Health": 1.2, // Good monetization potential
+    "Fashion & Beauty": 1.1, // Established market
+    "Food & Cooking": 1.0, // Base market
+    "Entrepreneurship & Business": 1.3, // B2B premium
+    "Travel & Adventure": 0.9, // Seasonal/aspirational
+    "Entertainment & Comedy": 0.8, // Volume-based, lower rates
+    "Education & Learning": 1.1, // Consistent demand
+    "Gaming & Esports": 1.0, // Growing market
+  };
+  return multiplierMap[niche] || 0.9;
+};
+
+// Experience-based income multipliers
+const getExperienceIncomeMultiplier = (experience: string[]): number => {
+  if (experience.includes("Expert (3+ years)")) return 1.3;
+  if (experience.includes("Experienced (2-3 years)")) return 1.2;
+  if (experience.includes("Growing (1-2 years)")) return 1.1;
+  if (experience.includes("Beginner (6 months - 1 year)")) return 1.0;
+  return 0.8; // Just started
+};
+
+// Engagement-based income multipliers
+const getEngagementIncomeMultiplier = (engagementRate: string): number => {
+  const multiplierMap: { [key: string]: number } = {
+    "More than 12%": 1.4, // Excellent engagement
+    "8-12%": 1.3, // Very good engagement
+    "5-8%": 1.2, // Good engagement
+    "3-5%": 1.1, // Average engagement
+    "1-3%": 1.0, // Below average
+    "Less than 1%": 0.8, // Poor engagement
+    "I don't know": 0.9, // Conservative estimate
+  };
+  return multiplierMap[engagementRate] || 0.9;
+};
+
 const getExperienceLevelDescription = (
   experience: string[],
   fameScore: number,
@@ -487,7 +541,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
       "Fashion & Beauty": `💄 FASHION GOLDMINE: You're in a ₹1.2L crore market growing 25% annually! With ${data.followerCount}, you can charge ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 1.5)} per post. Fashion creators get 40% more brand deals.`,
       "Technology & AI": `💻 TECH AUTHORITY ADVANTAGE: Tech = ₹25-50 per 1K views (vs ₹8-15 for lifestyle)! Your ${data.followerCount} in tech could generate ₹${Math.round(followerNum * 1.2)}-₹${Math.round(followerNum * 2.5)} monthly from reviews alone.`,
       "Education & Learning": `📚 EDUCATION EMPIRE POTENTIAL: Ed-tech is ₹2.8L crore growing 40% YoY! Your knowledge in ${data.niche} + course creation = ₹${Math.round(followerNum * 2)}-₹${Math.round(followerNum * 5)} monthly potential.`,
-      "Business & Finance": `💼 FINANCE CREATOR PREMIUM: B2B creators earn 3x more per follower! Your expertise + ${data.followerCount} = ₹${Math.round(followerNum * 1.8)}-₹${Math.round(followerNum * 3.2)} monthly from fintech partnerships.`,
+      "Business & Finance": `�� FINANCE CREATOR PREMIUM: B2B creators earn 3x more per follower! Your expertise + ${data.followerCount} = ₹${Math.round(followerNum * 1.8)}-₹${Math.round(followerNum * 3.2)} monthly from fintech partnerships.`,
       "Fitness & Health": `💪 FITNESS BOOM POSITIONING: Post-COVID fitness market exploded! Health creators with ${data.followerCount} average ₹${Math.round(followerNum * 1.1)}-₹${Math.round(followerNum * 2.0)} monthly from supplement brands.`,
       "Food & Cooking": `🍳 FOOD CONTENT SUPREMACY: Food gets highest engagement (8-15% vs 2-4% average)! Your ${data.followerCount} + food = ₹${Math.round(followerNum * 0.9)}-₹${Math.round(followerNum * 1.8)} from restaurant partnerships.`,
       "Personal Finance & Investing": `💰 FINTECH PREMIUM NICHE: Personal finance creators earn 60% higher CPM rates! Your ${data.followerCount} audience + money content = ₹${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3.0)} monthly potential.`,
@@ -759,16 +813,28 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     experience: data.experience[0] || "beginner",
   };
 
-  // IMMEDIATE PRIORITY SUGGESTIONS based on biggest gaps
+  // IMMEDIATE PRIORITY SUGGESTIONS with specific action steps and deadlines
   if (userProfile.monetization === "none" && followerNum >= 5000) {
+    const estimatedWeeklyEarning = Math.round(followerNum * 0.15);
     recommendations.push(
-      `🚨 URGENT: You're missing ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly income! Create a media kit this week and reach out to 10 brands in ${data.niche}`,
+      `🚨 URGENT (THIS WEEK): You're missing ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)}K monthly! EXACT STEPS: Day 1-2: Create media kit with these rates: Post ₹${estimatedWeeklyEarning}, Story ₹${Math.round(estimatedWeeklyEarning * 0.6)}, Reel ₹${Math.round(estimatedWeeklyEarning * 1.2)}. Day 3-7: Email 10 ${data.niche} brands with template. Expected: 2-3 responses, 1 deal by month-end`,
     );
   }
 
   if (userProfile.consistency === "needs-improvement") {
     recommendations.push(
-      `⚡ CRITICAL: Switch to daily posting immediately - your current ${data.postingFrequency} schedule is costing you 60% potential reach. Batch create 7 posts this Sunday`,
+      `⚡ CRITICAL (START TOMORROW): Your ${data.postingFrequency} schedule = 60% less reach. ACTION PLAN: Sunday batch-create 7 posts, schedule for 7 PM daily. Use trending audio from @creators.famechase. Expected result: 40% reach increase in 2 weeks`,
+    );
+  }
+
+  // Add immediate money-making opportunity based on current follower count
+  if (followerNum >= 1000) {
+    const quickMoneyTactic =
+      followerNum >= 10000
+        ? `Start paid story promotions at ₹${Math.round(followerNum * 0.05)}/story - message 20 local businesses this week`
+        : `Create affiliate content for Amazon/Flipkart - earn ₹500-2000 this month with 3 review posts`;
+    recommendations.push(
+      `💰 QUICK MONEY (7 DAYS): ${quickMoneyTactic}. Template messages provided in download.`,
     );
   }
 
@@ -783,37 +849,33 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     );
   }
 
-  // Platform-specific strategic recommendations
+  // Platform-specific strategic recommendations with exact execution plans
   if (data.primaryPlatform === "Instagram") {
     recommendations.push(
-      "Post 3-5 Instagram Reels weekly using trending sounds and hashtags",
+      `📱 INSTAGRAM FORMULA (START TODAY): Post 1 Reel daily at 7-9 PM using trending audio from @creators.famechase. Expected: 2x reach in 14 days. Use these hashtags: 10 trending + 10 niche + 5 small ones`,
     );
     recommendations.push(
-      "Create carousel posts with actionable tips (8-10 slides perform best)",
+      `📊 CAROUSEL STRATEGY (WEEKLY): Every Tuesday post 8-slide carousel with actionable tips. Use Canva template #CreatorTips. Expected: 3x saves, 40% more profile visits`,
     );
     recommendations.push(
-      "Go live twice weekly during peak hours to boost algorithm favorability",
+      `🔴 LIVE HACK (2X WEEKLY): Go live Tuesday & Friday 7-8 PM. Topics: Q&A, behind-scenes, tutorials. Expected: Algorithm boost for next 3 posts`,
     );
     recommendations.push(
-      "Use Instagram Stories polls, questions, and sliders daily for engagement",
-    );
-    recommendations.push(
-      "Post user-generated content and tag customers to build community",
-    );
-    recommendations.push(
-      "Create Instagram Guides to showcase your expertise and increase discovery",
+      `📝 STORY ENGAGEMENT (DAILY): Use 2 polls + 1 question sticker daily. Reply to every DM within 2 hours. Expected: 25% higher story completion rate`,
     );
     if (data.contentType === "Photos & Carousels") {
       recommendations.push(
-        "Add Reels to your content mix immediately - they get 5x more reach than static posts",
+        `⚡ URGENT SWITCH (THIS WEEK): Add 3 Reels to your feed immediately - they get 5x more reach. Use trending transitions from TikTok adapted for Instagram`,
       );
     }
     if (followerNum >= 10000) {
       recommendations.push(
-        "Apply for Instagram Creator Fund and enable shopping features",
+        `💳 MONETIZATION SETUP (BY FRIDAY): Apply for Instagram Creator Fund, enable Instagram Shopping. Expected approval: 7-14 days. Potential earnings: ₹${Math.round(followerNum * 0.12)}/month`,
       );
+    }
+    if (followerNum >= 5000) {
       recommendations.push(
-        "Create Instagram Shopping posts to monetize your recommendations",
+        `🛍️ SHOPPING POSTS (MONTHLY): Create 4 shopping posts/month featuring products you use. Use Amazon affiliate links. Expected: ₹2000-8000/month additional income`,
       );
     }
   }
@@ -876,55 +938,45 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     );
   }
 
-  // Niche-specific strategic recommendations (significantly expanded)
+  // NICHE-SPECIFIC MONETIZATION STRATEGIES with exact execution plans
   if (data.niche === "Fashion & Beauty") {
-    recommendations.push(
-      "Partner with 5-10 local Indian beauty brands for authentic collaborations",
+    const expectedBrandRate = Math.round(
+      followerNum * (followerNum >= 10000 ? 0.8 : 0.5),
     );
     recommendations.push(
-      "Create 'Get Ready With Me' content featuring affordable Indian brands",
+      `💄 BRAND PARTNERSHIPS (THIS MONTH): Email 10 Indian beauty brands (Nykaa, Sugar, Lakme) with media kit. Rate: ₹${expectedBrandRate}/post. Template provided. Expected: 2-3 collaborations`,
     );
     recommendations.push(
-      "Post outfit transition reels during festival seasons for viral potential",
+      `📹 GRWM SERIES (WEEKLY): Post 'Get Ready With Me' every Wednesday featuring products under ₹500. Add affiliate links. Expected: ₹1500-4000/month commission`,
     );
     recommendations.push(
-      "Share makeup tutorials using products under ₹500 for mass appeal",
+      `✨ FESTIVAL STRATEGY (NEXT 30 DAYS): Create outfit transitions for upcoming festivals. Use trending audio. Post at 6 PM for maximum reach. Expected: 3x normal views`,
     );
     recommendations.push(
-      "Create seasonal lookbooks targeting Indian weather and occasions",
+      `🛒 AMAZON AFFILIATE (START TODAY): Review 3 affordable beauty products weekly. Use Amazon affiliate links. Expected: ₹2000-6000/month additional income`,
     );
     recommendations.push(
-      "Review and compare beauty products with honest opinions for trust-building",
-    );
-    recommendations.push(
-      "Collaborate with local fashion photographers for premium content",
-    );
-    recommendations.push(
-      "Start a 30-day style challenge to boost engagement and followers",
+      `🎯 30-DAY CHALLENGE (LAUNCH MONDAY): Start #StyleWithYou challenge. Daily outfit posts with budget breakdown. Expected: 500+ new followers, 5+ brand inquiries`,
     );
   }
 
-  if (data.niche === "Technology") {
+  if (data.niche === "Technology" || data.niche === "Technology & AI") {
+    const techAffiliateEarning = Math.round(followerNum * 0.3);
     recommendations.push(
-      "Create unboxing videos of latest gadgets trending in India",
+      `📱 UNBOXING STRATEGY (WEEKLY): Review 1 trending gadget under ₹5000 every Monday. Apply for Amazon/Flipkart affiliate. Expected: ₹${techAffiliateEarning}-${techAffiliateEarning * 2}/month commission`,
     );
     recommendations.push(
-      "Make comparison videos between budget vs premium tech products",
-    );
-    recommendations.push("Share coding tutorials and tech tips for beginners");
-    recommendations.push(
-      "Review apps and software that solve Indian-specific problems",
+      `⚡ COMPARISON SERIES (MONTHLY): Create 'Budget vs Premium' videos. Focus on Indian prices. Use affiliate links for both. Expected: 2x normal views, higher conversion`,
     );
     recommendations.push(
-      "Join Amazon, Flipkart, and tech brand affiliate programs",
+      `💻 CODING MONETIZATION (START THIS WEEK): Post daily coding tips, create paid course on Udemy/Skillshare. Price: ₹999-2999. Expected: 50+ sales/month = ₹50K-150K`,
     );
     recommendations.push(
-      "Create 'Tech on a Budget' content series for mass Indian audience",
+      `📲 APP REVIEWS (2X WEEKLY): Review Indian apps + international apps for Indian market. Contact app developers for paid reviews. Rate: ₹${Math.round(followerNum * 0.1)}-${Math.round(followerNum * 0.3)}/review`,
     );
     recommendations.push(
-      "Cover latest updates from Indian tech companies and startups",
+      `🏆 TECH BUDGET SERIES (LAUNCH FRIDAY): 'Best Tech Under ₹5K/10K/20K' monthly series. Partner with brands for launch exclusives. Expected: Brand partnerships worth ₹10K-50K/month`,
     );
-    recommendations.push("Make predictions about tech trends affecting India");
   }
 
   if (data.niche === "Education") {
@@ -1475,38 +1527,44 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
       name: "Complete Creator Growth Kit",
       price: 99,
       originalPrice: 199,
-      description: "Everything you need to grow from 0 to 10K followers and start monetizing"
+      description:
+        "Everything you need to grow from 0 to 10K followers and start monetizing",
     },
     {
       name: "Instagram Reels Mastery Course",
       price: 197,
       originalPrice: 397,
-      description: "Learn the viral formula that gets millions of views consistently"
+      description:
+        "Learn the viral formula that gets millions of views consistently",
     },
     {
       name: "Brand Collaboration Masterclass",
       price: 149,
       originalPrice: 299,
-      description: "Get paid partnerships with top brands - step by step system"
+      description:
+        "Get paid partnerships with top brands - step by step system",
     },
     {
       name: "YouTube Mastery Course",
       price: 297,
       originalPrice: 597,
-      description: "Complete YouTube growth and monetization blueprint for creators"
+      description:
+        "Complete YouTube growth and monetization blueprint for creators",
     },
     {
       name: "Facebook Posting Mastery Course",
       price: 197,
       originalPrice: 397,
-      description: "Master Facebook organic reach and engagement for maximum impact"
+      description:
+        "Master Facebook organic reach and engagement for maximum impact",
     },
     {
       name: "Complete Creator Bundle",
       price: 497,
       originalPrice: 997,
-      description: "Get ALL premium products for 70% OFF - Save ₹700+ and become a creator success story"
-    }
+      description:
+        "Get ALL premium products for 70% OFF - Save ₹700+ and become a creator success story",
+    },
   ];
 
   // Complete Creator Growth Kit - For users with audience but low income
@@ -1523,13 +1581,14 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
     data.primaryPlatform === "Instagram" ||
     data.secondaryPlatforms.includes("Instagram") ||
     data.biggestChallenge.some((challenge) =>
-      challenge.includes("Low views & inconsistent engagement")
+      challenge.includes("Low views & inconsistent engagement"),
     ) ||
     data.goals.some((goal) => goal.includes("Create Viral Content"))
   ) {
     recommendations.push({
       name: "Instagram Reels Mastery Course",
-      reason: "Perfect for boosting your Instagram reach. This course includes 50+ viral reel ideas, editing templates, and algorithm secrets used by creators with 500K+ followers.",
+      reason:
+        "Perfect for boosting your Instagram reach. This course includes 50+ viral reel ideas, editing templates, and algorithm secrets used by creators with 500K+ followers.",
       priority: "high" as const,
     });
   }
@@ -1538,7 +1597,7 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
   if (
     data.goals.some((goal) => goal.includes("Get Brand Collaborations")) ||
     data.biggestChallenge.some((challenge) =>
-      challenge.includes("Not landing brand collaborations")
+      challenge.includes("Not landing brand collaborations"),
     ) ||
     followerNum >= 5000
   ) {
@@ -1558,7 +1617,8 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
   ) {
     recommendations.push({
       name: "YouTube Mastery Course",
-      reason: "YouTube offers the highest creator revenue potential. This course covers SEO optimization, monetization strategies, and thumbnail psychology for maximum growth.",
+      reason:
+        "YouTube offers the highest creator revenue potential. This course covers SEO optimization, monetization strategies, and thumbnail psychology for maximum growth.",
       priority: "medium" as const,
     });
   }
@@ -1572,7 +1632,8 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
   ) {
     recommendations.push({
       name: "Facebook Posting Mastery Course",
-      reason: "Facebook's algorithm changes in 2024 create massive opportunities. Learn the secrets to organic reach and community monetization strategies.",
+      reason:
+        "Facebook's algorithm changes in 2024 create massive opportunities. Learn the secrets to organic reach and community monetization strategies.",
       priority: "medium" as const,
     });
   }
@@ -1655,27 +1716,31 @@ const generateProductRecommendations = (data: QuizData, fameScore: number) => {
     const fallbackProducts = [
       {
         name: "Complete Creator Growth Kit",
-        reason: "Essential tools for growing and monetizing your creator business with proven templates and strategies.",
+        reason:
+          "Essential tools for growing and monetizing your creator business with proven templates and strategies.",
         priority: "medium" as const,
       },
       {
         name: "Brand Collaboration Masterclass",
-        reason: "Get paid brand partnerships with professional email scripts and 50+ brand contacts database.",
+        reason:
+          "Get paid brand partnerships with professional email scripts and 50+ brand contacts database.",
         priority: "medium" as const,
       },
       {
         name: "YouTube Mastery Course",
-        reason: "Complete YouTube growth and monetization blueprint for maximum creator revenue.",
+        reason:
+          "Complete YouTube growth and monetization blueprint for maximum creator revenue.",
         priority: "medium" as const,
       },
       {
         name: "Facebook Posting Mastery Course",
-        reason: "Master Facebook's 2024 algorithm for organic reach and community monetization.",
+        reason:
+          "Master Facebook's 2024 algorithm for organic reach and community monetization.",
         priority: "medium" as const,
-      }
+      },
     ];
 
-    const existingNames = recommendations.map(r => r.name);
+    const existingNames = recommendations.map((r) => r.name);
     for (const product of fallbackProducts) {
       if (!existingNames.includes(product.name) && recommendations.length < 4) {
         recommendations.push(product);
@@ -2343,29 +2408,86 @@ export const analyzeQuizData = (data: QuizData): FameScoreAnalysis => {
 
   const confidenceExplanation = `Based on ${socialLinksCount > 0 ? "verified social profiles, " : ""}quiz completeness (${Math.round((Object.keys(data).filter((key) => data[key as keyof QuizData]).length / Object.keys(data).length) * 100)}%), and industry data matching your profile.`;
 
-  // Generate income projections
+  // Generate realistic income projections based on multiple factors
   const currentIncome = getIncomeAmount(data.monthlyIncome);
   const followerCount = getFollowerCount(data.followerCount);
+
+  // Calculate realistic income potential based on platform-specific metrics
+  const platformMultiplier = getPlatformIncomeMultiplier(data.primaryPlatform);
+  const nicheMultiplier = getNicheIncomeMultiplier(data.niche);
+  const experienceMultiplier = getExperienceIncomeMultiplier(data.experience);
+  const engagementMultiplier = getEngagementIncomeMultiplier(
+    data.engagementRate,
+  );
+
+  // Calculate realistic baseline income potential per follower (Indian market)
+  let baselinePerFollower = 0;
+  if (data.primaryPlatform === "Instagram") {
+    baselinePerFollower =
+      followerCount < 10000 ? 0.8 : followerCount < 100000 ? 1.2 : 2.0;
+  } else if (data.primaryPlatform === "YouTube") {
+    baselinePerFollower =
+      followerCount < 10000 ? 1.5 : followerCount < 100000 ? 2.5 : 4.0;
+  } else if (data.primaryPlatform === "LinkedIn") {
+    baselinePerFollower =
+      followerCount < 10000 ? 1.0 : followerCount < 100000 ? 1.8 : 3.0;
+  } else {
+    baselinePerFollower = 0.5; // Other platforms
+  }
+
+  // Calculate realistic potential
+  const realisticPotential = Math.round(
+    followerCount *
+      baselinePerFollower *
+      platformMultiplier *
+      nicheMultiplier *
+      experienceMultiplier *
+      engagementMultiplier,
+  );
 
   let threeMonthProjection = currentIncome;
   let sixMonthProjection = currentIncome;
 
-  if (fameScore >= 70) {
-    threeMonthProjection = Math.round(currentIncome * 1.5);
-    sixMonthProjection = Math.round(currentIncome * 2.2);
-  } else if (fameScore >= 50) {
-    threeMonthProjection = Math.round(currentIncome * 1.3);
-    sixMonthProjection = Math.round(currentIncome * 1.8);
-  } else if (fameScore >= 30) {
-    threeMonthProjection = Math.round(currentIncome * 1.2);
-    sixMonthProjection = Math.round(currentIncome * 1.5);
+  // Conservative growth projections based on fame score and current performance
+  if (currentIncome === 0) {
+    // First-time monetizers - realistic starting points
+    if (followerCount >= 50000) {
+      threeMonthProjection = Math.min(15000, realisticPotential * 0.3);
+      sixMonthProjection = Math.min(35000, realisticPotential * 0.6);
+    } else if (followerCount >= 10000) {
+      threeMonthProjection = Math.min(8000, realisticPotential * 0.4);
+      sixMonthProjection = Math.min(20000, realisticPotential * 0.7);
+    } else if (followerCount >= 5000) {
+      threeMonthProjection = Math.min(3000, realisticPotential * 0.5);
+      sixMonthProjection = Math.min(8000, realisticPotential * 0.8);
+    } else {
+      threeMonthProjection = Math.min(1000, realisticPotential * 0.6);
+      sixMonthProjection = Math.min(3000, realisticPotential);
+    }
+  } else {
+    // Existing earners - realistic growth based on current performance
+    const growthMultiplier =
+      fameScore >= 70
+        ? 1.4
+        : fameScore >= 50
+          ? 1.25
+          : fameScore >= 30
+            ? 1.15
+            : 1.1;
+    threeMonthProjection = Math.round(
+      Math.min(currentIncome * growthMultiplier, realisticPotential * 0.7),
+    );
+    sixMonthProjection = Math.round(
+      Math.min(currentIncome * (growthMultiplier + 0.3), realisticPotential),
+    );
   }
 
-  // Minimum projections based on follower count
-  if (followerCount >= 10000 && threeMonthProjection < 15000) {
-    threeMonthProjection = 15000;
-    sixMonthProjection = 30000;
-  }
+  // Ensure projections don't exceed realistic potential by too much
+  threeMonthProjection = Math.min(
+    threeMonthProjection,
+    realisticPotential * 0.8,
+  );
+  sixMonthProjection = Math.min(sixMonthProjection, realisticPotential);
 
   const formatIncome = (amount: number) => {
     if (amount >= 100000) return `��${Math.round(amount / 1000)}K`;
