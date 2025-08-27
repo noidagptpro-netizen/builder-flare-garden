@@ -390,7 +390,7 @@ const getGrowthTrajectory = (data: QuizData, fameScore: number): string => {
         );
         trajectory += ` 💰 INCOME TARGET: Your ₹${targetIncome / 1000}K monthly goal is achievable in ${monthsToTarget} months. Required: ${Math.ceil(targetIncome / 3000)} brand partnerships monthly at ₹${Math.round(followerNum * 1.2)} average rate.`;
       } else if (goal.includes("Get Brand Collaborations")) {
-        trajectory += ` 🤝 BRAND PARTNERSHIP ROADMAP: Target ${brandDealsPerMonth} brand collaborations monthly. Your ${data.followerCount} + ${data.niche} niche = ₹${Math.round(followerNum * 0.8)}-��${Math.round(followerNum * 2)} per post rates. Start outreach to ${data.niche === "Fashion & Beauty" ? "Nykaa, Myntra, local fashion brands" : data.niche === "Technology" ? "tech brands, gadget companies, software tools" : "brands in your niche"}.`;
+        trajectory += ` 🤝 BRAND PARTNERSHIP ROADMAP: Target ${brandDealsPerMonth} brand collaborations monthly. Your ${data.followerCount} + ${data.niche} niche = ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)} per post rates. Start outreach to ${data.niche === "Fashion & Beauty" ? "Nykaa, Myntra, local fashion brands" : data.niche === "Technology" ? "tech brands, gadget companies, software tools" : "brands in your niche"}.`;
       }
     });
   }
@@ -848,37 +848,33 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     );
   }
 
-  // Platform-specific strategic recommendations
+  // Platform-specific strategic recommendations with exact execution plans
   if (data.primaryPlatform === "Instagram") {
     recommendations.push(
-      "Post 3-5 Instagram Reels weekly using trending sounds and hashtags",
+      `📱 INSTAGRAM FORMULA (START TODAY): Post 1 Reel daily at 7-9 PM using trending audio from @creators.famechase. Expected: 2x reach in 14 days. Use these hashtags: 10 trending + 10 niche + 5 small ones`,
     );
     recommendations.push(
-      "Create carousel posts with actionable tips (8-10 slides perform best)",
+      `📊 CAROUSEL STRATEGY (WEEKLY): Every Tuesday post 8-slide carousel with actionable tips. Use Canva template #CreatorTips. Expected: 3x saves, 40% more profile visits`,
     );
     recommendations.push(
-      "Go live twice weekly during peak hours to boost algorithm favorability",
+      `🔴 LIVE HACK (2X WEEKLY): Go live Tuesday & Friday 7-8 PM. Topics: Q&A, behind-scenes, tutorials. Expected: Algorithm boost for next 3 posts`,
     );
     recommendations.push(
-      "Use Instagram Stories polls, questions, and sliders daily for engagement",
-    );
-    recommendations.push(
-      "Post user-generated content and tag customers to build community",
-    );
-    recommendations.push(
-      "Create Instagram Guides to showcase your expertise and increase discovery",
+      `📝 STORY ENGAGEMENT (DAILY): Use 2 polls + 1 question sticker daily. Reply to every DM within 2 hours. Expected: 25% higher story completion rate`,
     );
     if (data.contentType === "Photos & Carousels") {
       recommendations.push(
-        "Add Reels to your content mix immediately - they get 5x more reach than static posts",
+        `⚡ URGENT SWITCH (THIS WEEK): Add 3 Reels to your feed immediately - they get 5x more reach. Use trending transitions from TikTok adapted for Instagram`,
       );
     }
     if (followerNum >= 10000) {
       recommendations.push(
-        "Apply for Instagram Creator Fund and enable shopping features",
+        `💳 MONETIZATION SETUP (BY FRIDAY): Apply for Instagram Creator Fund, enable Instagram Shopping. Expected approval: 7-14 days. Potential earnings: ₹${Math.round(followerNum * 0.12)}/month`,
       );
+    }
+    if (followerNum >= 5000) {
       recommendations.push(
-        "Create Instagram Shopping posts to monetize your recommendations",
+        `🛍️ SHOPPING POSTS (MONTHLY): Create 4 shopping posts/month featuring products you use. Use Amazon affiliate links. Expected: ₹2000-8000/month additional income`,
       );
     }
   }
@@ -2099,7 +2095,7 @@ const calculateGrowthPotential = (
     "Understanding analytics",
     "Converting followers",
     "ल���ातार व्यूज",
-    "एनालिटिक्स",
+    "एनाल���टिक्स",
     "फॉलोअर्स को पेइंग कस्टमर",
   ];
   if (
