@@ -270,7 +270,7 @@ const languages = {
       1: "बुनियादी जानकारी",
       2: "प्लेट���ॉर्म और फॉलोअर्स",
       3: "कंटेंट निच",
-      4: "कंटेंट प्रकार",
+      4: "��ंटेंट प्रकार",
       5: "पोस्टिंग आवृत्ति",
       6: "अनुभव और आय",
       7: "सबसे बड़ी च��नौती",
@@ -288,7 +288,7 @@ const languages = {
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
       niche: "आपका कंटेंट किस विषय पर है?",
-      contentType: "आप किस प्रकार का कंटेंट बनाते हैं?",
+      contentType: "आप किस प्रकार का कं��ेंट बनाते हैं?",
       postingFrequency: "आप कितनी बार कंटेंट पोस्ट करते हैं?",
       experience:
         "आ�� कितने समय से कंटेंट बना रहे हैं? (सभी स्तर चुनें जिनका आपने अनुभव किया ���ै)",
@@ -302,7 +302,7 @@ const languages = {
     },
     options: {
       platforms: [
-        "���ंस��टाग्र��म",
+        "���ंस�����ाग्र��म",
         "यूट्यूब",
         "लिंक्��इन",
         "��िकट���क",
@@ -408,9 +408,9 @@ const languages = {
         "10K सब्सक्राइ���र्स की ईमेल लिस्ट बनाना",
         "इंडस्ट्री इवेंट्स/पॉडकास्ट में बोलना",
         "प���सिव इनकम स्ट्रीम बनाना",
-        "अपनी 9-5 जॉब छोड़कर फुल-टाइम जाना",
+        "अपनी 9-5 जॉब छोड़कर फुल-टाइम जा��ा",
         "नए प्लेटफॉर्म्स/��ॉर्मेट्स में expand करना",
-        "अपने ��्पेस में ���ूसरे क्रिएट���्स को ��ेंटर करना",
+        "अपने ��्पेस में ���ूसरे क्रिएट���्स को मेंटर करना",
       ],
       challenges: [
         "🔄 Growth & Engagement: Low views & inconsistent engagement",
@@ -455,7 +455,7 @@ const languages = {
         description: "��्रांड पार्टनरशिप के लिए 30+ स���द्ध ईमेल टेम्प्लेट्स",
       },
       growthGuide: {
-        title: "90-��िन ���ी ग्रोथ स्ट्रैटेजी गाइड",
+        title: "90-��िन ��ी ग्रोथ स्ट्रैटेजी गाइड",
         description: "अपने फॉलोइंग बढ़ाने के लिए स्टेप-बाई-स्टेप रोडमैप",
       },
       downloadFree: "मुफ्त डाउनलोड करें",
@@ -685,7 +685,7 @@ ${language === "hindi" ? "मासिक आ��:" : "Monthly Income:"} ${qui
 
 ${language === "hindi" ? "सुझावित दर���ं (भारतीय बाजार के आधार पर):" : "SUGGESTED RATES (Based on Indian Market):"}
 
-${language === "hindi" ? "📱 प्लेट���ॉर्म ���रें:" : "��� PLATFORM RATES:"}
+${language === "hindi" ? "📱 प्लेट���ॉर्म दरें:" : "��� PLATFORM RATES:"}
 ${language === "hindi" ? "Instagram पोस्ट:" : "Instagram Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-3,000"}
 ${language === "hindi" ? "Instagram Reel:" : "Instagram Reel:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "Instagram Story:" : "Instagram Story:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-300" : quizData.followerCount.includes("1K - 5K") ? "300-500" : "500-1,500"}
@@ -713,7 +713,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "प्रिय [ब्रांड ���ाम] टीम," : "Dear [Brand Name] Team,"}
 
-${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ������्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
+${language === "hindi" ? `��ैं ${userName} हूं, ${quizData.niche} में ���क कंटेंट क्रिएटर हूं जिसके ${quizData.primaryPlatform} पर ${quizData.followerCount} ���ॉलोअ����्स हैं।` : `I'm ${userName}, a content creator in ${quizData.niche} with ${quizData.followerCount} followers on ${quizData.primaryPlatform}.`}
 
 ${language === "hindi" ? "मुझे आपक��� ���्रांड के साथ काम कर��े में द���लच��्पी है क्योंकि:" : "I'd love to work with your brand because:"}
 ${language === "hindi" ? "- आपके उत्���ाद मेरे दर्शकों ���े साथ पूरी तरह ���ेल खाते हैं" : "- Your products align perfectly with my audience"}
@@ -782,7 +782,7 @@ ${language === "hindi" ? "आपके proposal के लिए thank you! म�
 
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate क��� slightly adjust कर सकते ��ैं? मैं ₹[your counter] suggest ��रूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
-${language === "hindi" ? "• मेरी audience क�� [specific demographic] match करता है आपके target से" : "• My audience demographic matches your target perfectly"}
+${language === "hindi" ? "• मेरी audience क�� [specific demographic] match करता है आपके target ��े" : "• My audience demographic matches your target perfectly"}
 ${language === "hindi" ? "• मेरे recent collaborations में [specific results] मिले हैं" : "• My recent collaborations achieved [specific results]"}
 ${language === "hindi" ? "�� मैं additional value add कर सकत�� ह��ं like [extra service]" : "• I can add additional value like [extra service]"}
 
@@ -850,7 +850,7 @@ ${userName}
 
 ${language === "hindi" ? "बोनस टिप्स:" : "BONUS TIPS:"}
 ${language === "hindi" ? "• हमेशा personalize करें emails" : "• Always personalize your emails"}
-${language === "hindi" ? "• Subject lines को catchy रखें" : "��� Keep subject lines catchy"}
+${language === "hindi" ? "• Subject lines को catchy रख���ं" : "��� Keep subject lines catchy"}
 ${language === "hindi" ? "• Follow-up करना न भूलें" : "• Don't forget to follow up"}
 ${language === "hindi" ? "• Professional tone maintain करें" : "• Maintain a professional tone"}
 ${language === "hindi" ? "• Results और metrics share ��रें" : "• Share results and metrics"}
@@ -874,7 +874,7 @@ ${language === "hindi" ? "- हैशटैग रिसर्च करें (
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटे���ट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
 ${language === "hindi" ? "- कम्युनिटी एंगेजमेंट फोक��� करें" : "- Focus on community engagement"}
-${language === "hindi" ? "- एनालिटिक्स ट्रै�� करना शु���ू क������ं" : "- Start tracking analytics"}
+${language === "hindi" ? "- एनालिटिक्स ट्रै�� करना शु���ू ���������ं" : "- Start tracking analytics"}
 
 ${language === "hindi" ? "दिन 31-60: विकास औ��� अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
 ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करे�� (60% कंटें��)" : "प्लेटफॉर्म-स्पेसिफ���क कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
@@ -883,7 +883,7 @@ ${language === "hindi" ? "- अन्य क्रिएटर्स के स�
 
 ${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
 ${language === "hindi" ? "- मीडिया किट तैयार करें" : "- Prepare media kit"}
-${language === "hindi" ? "- ब्रां���्स स�� ���ंपर्क शुरू करें" : "- Start reaching out to brands"}
+${language === "hindi" ? "- ब्रां���्स स�� ���ंपर्क ��ुरू करें" : "- Start reaching out to brands"}
 ${language === "hindi" ? "- ईमेल लिस्ट बनान��� शुरू करें" : "- Start building email list"}
 
 ${language === "hindi" ? "अपे��्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
@@ -1959,14 +1959,14 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                 )}
 
                 {/* Navigation Buttons */}
-                <div className="flex justify-between items-center mt-16 pt-8 border-t-2 border-gray-100">
+                <div className="flex justify-between items-center mt-4 md:mt-6 pt-4 border-t border-gray-200">
                   {currentStep > 1 ? (
                     <button
                       onClick={handleBack}
-                      className="flex items-center gap-3 bg-gray-100 text-gray-700 px-8 py-4 rounded-2xl font-bold hover:bg-gray-200 hover:shadow-lg transition-all duration-300 hover:scale-105"
+                      className="flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold hover:bg-gray-200 transition-all text-sm md:text-base"
                     >
-                      <ArrowLeft className="w-5 h-5" />
-                      {t.buttons.back}
+                      <ArrowLeft className="w-4 h-4" />
+                      <span className="hidden sm:inline">{t.buttons.back}</span>
                     </button>
                   ) : (
                     <div></div>
@@ -1974,10 +1974,10 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
 
                   {/* Progress indicator */}
                   <div className="text-center">
-                    <div className="text-sm text-gray-500 mb-2">
+                    <div className="text-xs md:text-sm text-gray-500 mb-1">
                       Step {currentStep} of {totalSteps}
                     </div>
-                    <div className="text-2xl font-bold text-gray-900">
+                    <div className="text-lg md:text-xl font-bold text-gray-900">
                       {Math.round((currentStep / totalSteps) * 100)}%
                     </div>
                   </div>
@@ -1986,15 +1986,16 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
                     <button
                       onClick={handleNext}
                       disabled={!canProceed()}
-                      className="flex items-center gap-3 bg-gradient-to-r from-neon-green to-electric-blue text-black px-10 py-4 rounded-2xl font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed text-lg"
+                      className="flex items-center gap-2 bg-gradient-to-r from-neon-green to-electric-blue text-black px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold hover:shadow-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed text-sm md:text-base"
                     >
-                      {t.buttons.next}
-                      <ArrowRight className="w-6 h-6" />
+                      <span className="hidden sm:inline">{t.buttons.next}</span>
+                      <span className="sm:hidden">Next</span>
+                      <ArrowRight className="w-4 h-4" />
                     </button>
                   ) : (
                     <button
                       onClick={handleNext}
-                      className="flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-10 py-4 rounded-2xl font-bold hover:shadow-xl hover:scale-105 transition-all duration-300 text-lg"
+                      className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 md:px-6 md:py-3 rounded-lg font-semibold hover:shadow-lg transition-all text-sm md:text-base"
                     >
                       Complete Quiz
                       <Sparkles className="w-6 h-6" />
