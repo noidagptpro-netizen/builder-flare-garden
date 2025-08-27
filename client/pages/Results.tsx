@@ -126,7 +126,7 @@ const languages = {
   },
   hindi: {
     title: "आपका क्रिएटर विश्लेष���",
-    subtitle: "आपकी क्रिए���र यात्रा के लिए संपूर्ण ���्यक्तिगत अंतर्दृष्टि",
+    subtitle: "आपकी क्रिए���र य��त्रा के लिए संपूर्ण ���्यक्तिगत अंतर्दृष्टि",
     profileSynopsis: "प्रोफ���इल स���नॉप्सिस",
     creatorProfile: "क्रिएटर प���रोफा����",
     currentStatus: "वर्तमान स्थिति",
@@ -341,7 +341,7 @@ export default function Results() {
 ║  • Browser: Ctrl/Cmd + (press 3-5 times)               ║
 ║                                                          ║
 ║  💡 This content is optimized for LARGE font display!    ║
-╚════════════════════════════════════��═════��══════���════════╝
+╚════════════════════��═══════════════��═════��══════���════════╝
 
 `;
 
@@ -367,7 +367,7 @@ ${language === "hindi" ? "💰 आय प्रक��षेपण:" : "💰 I
 
 
 🎯 ${language === "hindi" ? "प्रोफाइल सारांश:" : "PROFILE SUMMARY:"}
-────��──��──────────────────────────────────���─────
+────��──��──────────────────────────────────�����─────
 
 ${language === "hindi" ? "📱 प्लेटफॉर्म:" : "📱 Platform:"} ${quizData.primaryPlatform}
 
@@ -391,7 +391,7 @@ ${analysis.swotAnalysis.weaknesses.map((w: string, i: number) => `${i + 1}. ${w}
 
 
 🚀 ${language === "hindi" ? "अवसर:" : "OPPORTUNITIES:"}
-────────────���───────────────────────────────────
+────────────���───────────��───────────────────────
 
 ${analysis.swotAnalysis.opportunities.map((o: string, i: number) => `${i + 1}. ${o}\n`).join("\n")}
 
@@ -432,7 +432,7 @@ ${language === "hindi" ? "3. अपने एंग���ज��ेंट �
 
 ${language === "hindi" ? "📝 नाम:" : "📝 Name:"} ${userName}
 
-${language === "hindi" ? "📧 ईमेल:" : "📧 Email:"} ${personalInfo.email}
+${language === "hindi" ? "📧 ईमे��:" : "📧 Email:"} ${personalInfo.email}
 
 ${language === "hindi" ? "📞 फोन:" : "📞 Phone:"} ${personalInfo.phone}
 
@@ -452,7 +452,7 @@ ${language === "hindi" ? "📹 कंटेंट प्रका��:" : "�
 
 
 📈 ${language === "hindi" ? "प्रदर्शन मेट्रिक्स:" : "PERFORMANCE METRICS:"}
-─────────────────────────────────────────────�����──
+─────────────────────────────────────────────������──
 
 ${language === "hindi" ? "⭐ फ���म स्क���र:" : "⭐ Fame Score:"} ${analysis.fameScore}/100
 
@@ -647,7 +647,7 @@ ${language === "hindi" ? "महीना 5-6:" : "Month 5-6:"} ₹${Math.round(
 ⚡ FACT: 73% of creators who follow structured plans see 5x income growth vs. those without plans
 💡 TIMING MATTERS: Best time to start monetization is NOW - creator economy growing 25% yearly
 
-${language === "hindi" ? "🎯 ब्रांड कोलैबोर�����न पोटेंशियल:" : "🎯 BRAND COLLABORATION POTENTIAL:"}
+${language === "hindi" ? "🎯 ब्रांड कोलैबोर������न पोटेंशियल:" : "🎯 BRAND COLLABORATION POTENTIAL:"}
 ${language === "hindi" ? "मासिक इंक��वायरी:" : "Monthly Inquiries:"} ${Math.round(followerNum / 5000)}-${Math.round(followerNum / 2000)}
 ${language === "hindi" ? "कन्वर्जन रेट:" : "Conversion Rate:"} 15-30%
 ${language === "hindi" ? "औसत डील वैल्यू:" : "Average Deal Value:"} ₹${Math.round(followerNum * 0.012 * niche.multiplier).toLocaleString()}
@@ -718,7 +718,7 @@ ${language === "hindi" ? "🎯 ड��ली ट्रैकिंग (भर�
 │ ${language === "hindi" ? "दिनांक" : "Date"}: ___/___/2024                    │
 │ ${language === "hindi" ? "����ोस्ट रीच" : "Post Reach"}: _______ (टा��गेट: ${estimatedReach.toLocaleString()})     │
 │ ${language === "hindi" ? "इंप्रेशन" : "Impressions"}: _______ (री��� × 2.5)        │
-│ ${language === "hindi" ? "लाइक्स" : "Likes"}: _______ (टारगेट: ${Math.round((estimatedReach * targetEngagementRate) / 100)})        │
+│ ${language === "hindi" ? "��ाइक्स" : "Likes"}: _______ (टारगेट: ${Math.round((estimatedReach * targetEngagementRate) / 100)})        │
 │ ${language === "hindi" ? "कमेंट्स" : "Comments"}: _______ (ल���इक्स क�� 8-12%)     ���
 │ ${language === "hindi" ? "शेयर्स" : "Shares"}: _______ (लाइक्स का 3-5%)       │
 │ ${language === "hindi" ? "सेव्स" : "Saves"}: _______ (सबसे इंप��र्टेंट!)       │
@@ -909,7 +909,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                 </h3>
                 <p className="text-gray-600 mb-6">
                   {language === "hindi"
-                    ? "ब्रांड��स के लिए आपकी प्रोफेशनल मीडिय��� किट"
+                    ? "ब्रांड��स के लिए आपकी प्रोफेशनल मीड���य��� किट"
                     : "Your professional media kit for brands"}
                 </p>
                 <button
@@ -1204,7 +1204,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
               </h2>
               <p className="text-gray-600 mb-6">
                 {language === "hindi"
-                  ? "ह��ारे एडवांस्ड प्रीमि����� कोर्सेज के साथ अपनी क्रिएटर यात्रा को तेज़ी से आगे बढ़ाएं।"
+                  ? "ह��ा���े एडवांस्ड प्रीमि����� कोर्सेज के साथ अपनी क्रिएटर यात्रा को तेज़ी से आगे बढ़ाएं।"
                   : "Accelerate your creator journey with our advanced premium courses."}
               </p>
               <Link
@@ -1590,7 +1590,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                                   </p>
                                   <p>
                                     {language === "hindi"
-                                      ? "• अपनी personal failures और lessons share करें"
+                                      ? "• अपनी personal failures और lessons share करे��"
                                       : "• Share your personal failures and lessons learned"}
                                   </p>
                                   <p>
@@ -1821,14 +1821,33 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                 <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-3">
                   <DollarSign className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-3xl font-bold text-purple-700 mb-1">
+                <div className="text-2xl md:text-3xl font-bold text-purple-700 mb-1">
                   {analysis.incomeProjection}
                 </div>
-                <div className="text-purple-600 font-medium">
+                <div className="text-purple-600 font-medium mb-2">
                   {t.incomeProjection}
                 </div>
-                <div className="text-sm text-purple-600 mt-1">
-                  {t.monthlyTarget}
+                <div className="text-xs md:text-sm text-purple-600 bg-purple-50 px-3 py-2 rounded-lg">
+                  <div className="font-semibold mb-1">{t.monthlyTarget}</div>
+                  <div className="text-purple-500">
+                    Based on your {quizData?.followerCount} followers in {quizData?.niche} on {quizData?.primaryPlatform}
+                  </div>
+                  {analysis.monetizationRoadmap?.incomeProjection && (
+                    <div className="mt-2 space-y-1">
+                      <div className="flex justify-between text-xs">
+                        <span>Current:</span>
+                        <span className="font-medium">{analysis.monetizationRoadmap.incomeProjection.current}</span>
+                      </div>
+                      <div className="flex justify-between text-xs">
+                        <span>3 months:</span>
+                        <span className="font-medium">{analysis.monetizationRoadmap.incomeProjection.threeMonth}</span>
+                      </div>
+                      <div className="flex justify-between text-xs">
+                        <span>6 months:</span>
+                        <span className="font-semibold text-purple-700">{analysis.monetizationRoadmap.incomeProjection.sixMonth}</span>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
