@@ -272,7 +272,9 @@ export default function Results() {
       setQuizData(data);
 
       // Use saved language preference
-      const savedLanguage = localStorage.getItem("famechase-language") as "english" | "hindi" || "english";
+      const savedLanguage =
+        (localStorage.getItem("famechase-language") as "english" | "hindi") ||
+        "english";
       setLanguage(savedLanguage);
 
       setPersonalInfo({
@@ -1831,21 +1833,37 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                 <div className="text-xs md:text-sm text-purple-600 bg-purple-50 px-3 py-2 rounded-lg">
                   <div className="font-semibold mb-1">{t.monthlyTarget}</div>
                   <div className="text-purple-500">
-                    Based on your {quizData?.followerCount} followers in {quizData?.niche} on {quizData?.primaryPlatform}
+                    Based on your {quizData?.followerCount} followers in{" "}
+                    {quizData?.niche} on {quizData?.primaryPlatform}
                   </div>
                   {analysis.monetizationRoadmap?.incomeProjection && (
                     <div className="mt-2 space-y-1">
                       <div className="flex justify-between text-xs">
                         <span>Current:</span>
-                        <span className="font-medium">{analysis.monetizationRoadmap.incomeProjection.current}</span>
+                        <span className="font-medium">
+                          {
+                            analysis.monetizationRoadmap.incomeProjection
+                              .current
+                          }
+                        </span>
                       </div>
                       <div className="flex justify-between text-xs">
                         <span>3 months:</span>
-                        <span className="font-medium">{analysis.monetizationRoadmap.incomeProjection.threeMonth}</span>
+                        <span className="font-medium">
+                          {
+                            analysis.monetizationRoadmap.incomeProjection
+                              .threeMonth
+                          }
+                        </span>
                       </div>
                       <div className="flex justify-between text-xs">
                         <span>6 months:</span>
-                        <span className="font-semibold text-purple-700">{analysis.monetizationRoadmap.incomeProjection.sixMonth}</span>
+                        <span className="font-semibold text-purple-700">
+                          {
+                            analysis.monetizationRoadmap.incomeProjection
+                              .sixMonth
+                          }
+                        </span>
                       </div>
                     </div>
                   )}

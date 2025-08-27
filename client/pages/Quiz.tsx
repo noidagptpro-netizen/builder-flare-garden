@@ -935,7 +935,9 @@ ${language === "hindi" ? "- ���्����ंड पूछ���ा
               {/* Language Selector */}
               <select
                 value={language}
-                onChange={(e) => setLanguage(e.target.value as "english" | "hindi")}
+                onChange={(e) =>
+                  setLanguage(e.target.value as "english" | "hindi")
+                }
                 className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
               >
                 <option value="english">English</option>
@@ -1117,7 +1119,9 @@ ${language === "hindi" ? "- ���्����ंड पूछ���ा
             {/* Language Selector */}
             <select
               value={language}
-              onChange={(e) => setLanguage(e.target.value as "english" | "hindi")}
+              onChange={(e) =>
+                setLanguage(e.target.value as "english" | "hindi")
+              }
               className="bg-white border border-gray-300 text-gray-900 px-2 py-1 md:px-3 md:py-2 rounded-lg text-xs md:text-sm font-medium"
             >
               <option value="english">English</option>
@@ -1128,7 +1132,10 @@ ${language === "hindi" ? "- ���्����ंड पूछ���ा
       </header>
 
       {/* Quiz Content */}
-      <main ref={quizContentRef} className="container mx-auto px-2 md:px-4 py-2">
+      <main
+        ref={quizContentRef}
+        className="container mx-auto px-2 md:px-4 py-2"
+      >
         <div className="max-w-xl mx-auto">
           <div className="text-center mb-4 md:mb-6">
             <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-2 md:mb-4">

@@ -452,7 +452,9 @@ FameChase.com का उपयोग करके, आप निम्नलि�
 
 export default function Index() {
   const [language, setLanguage] = useState<"english" | "hindi">(() => {
-    const saved = localStorage.getItem("famechase-language") as "english" | "hindi";
+    const saved = localStorage.getItem("famechase-language") as
+      | "english"
+      | "hindi";
     return saved || "english";
   });
   const [showLegalModal, setShowLegalModal] = useState<string | null>(null);
@@ -503,7 +505,9 @@ export default function Index() {
             {/* Language Selector */}
             <select
               value={language}
-              onChange={(e) => handleLanguageChange(e.target.value as "english" | "hindi")}
+              onChange={(e) =>
+                handleLanguageChange(e.target.value as "english" | "hindi")
+              }
               className="bg-white border border-gray-300 text-gray-900 px-3 py-2 rounded-lg text-sm font-medium"
             >
               <option value="english">English</option>
