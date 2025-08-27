@@ -717,7 +717,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
 
   if (data.goals.includes("brand deals") || data.goals.includes("monetizing")) {
     opportunities.push(
-      `🤝 Brand partnership boom! ${currentYear} saw 340% increase in influencer marketing budgets. Your timing is perfect!`,
+      `�� Brand partnership boom! ${currentYear} saw 340% increase in influencer marketing budgets. Your timing is perfect!`,
     );
   }
 
@@ -937,31 +937,23 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     );
   }
 
-  // Niche-specific strategic recommendations (significantly expanded)
+  // NICHE-SPECIFIC MONETIZATION STRATEGIES with exact execution plans
   if (data.niche === "Fashion & Beauty") {
+    const expectedBrandRate = Math.round(followerNum * (followerNum >= 10000 ? 0.8 : 0.5));
     recommendations.push(
-      "Partner with 5-10 local Indian beauty brands for authentic collaborations",
+      `💄 BRAND PARTNERSHIPS (THIS MONTH): Email 10 Indian beauty brands (Nykaa, Sugar, Lakme) with media kit. Rate: ₹${expectedBrandRate}/post. Template provided. Expected: 2-3 collaborations`,
     );
     recommendations.push(
-      "Create 'Get Ready With Me' content featuring affordable Indian brands",
+      `📹 GRWM SERIES (WEEKLY): Post 'Get Ready With Me' every Wednesday featuring products under ₹500. Add affiliate links. Expected: ₹1500-4000/month commission`,
     );
     recommendations.push(
-      "Post outfit transition reels during festival seasons for viral potential",
+      `✨ FESTIVAL STRATEGY (NEXT 30 DAYS): Create outfit transitions for upcoming festivals. Use trending audio. Post at 6 PM for maximum reach. Expected: 3x normal views`,
     );
     recommendations.push(
-      "Share makeup tutorials using products under ₹500 for mass appeal",
+      `🛒 AMAZON AFFILIATE (START TODAY): Review 3 affordable beauty products weekly. Use Amazon affiliate links. Expected: ₹2000-6000/month additional income`,
     );
     recommendations.push(
-      "Create seasonal lookbooks targeting Indian weather and occasions",
-    );
-    recommendations.push(
-      "Review and compare beauty products with honest opinions for trust-building",
-    );
-    recommendations.push(
-      "Collaborate with local fashion photographers for premium content",
-    );
-    recommendations.push(
-      "Start a 30-day style challenge to boost engagement and followers",
+      `🎯 30-DAY CHALLENGE (LAUNCH MONDAY): Start #StyleWithYou challenge. Daily outfit posts with budget breakdown. Expected: 500+ new followers, 5+ brand inquiries`,
     );
   }
 
@@ -1206,7 +1198,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
       "Negotiate exclusive brand partnerships worth ₹50K-₹2L per month",
     );
     recommendations.push(
-      "Create a membership community with monthly subscription ₹499-₹999",
+      "Create a membership community with monthly subscription ���499-₹999",
     );
     recommendations.push(
       "Start affiliate marketing with high-commission products",
@@ -2071,7 +2063,7 @@ const calculateGrowthPotential = (
     potential += 4;
   } else if (
     data.contentType === "Mixed Content" ||
-    data.contentType === "मिश्रित कंटेंट"
+    data.contentType === "मि���्रित कंटेंट"
   ) {
     potential += 3;
   }
@@ -2095,7 +2087,7 @@ const calculateGrowthPotential = (
     "Understanding analytics",
     "Converting followers",
     "ल���ातार व्यूज",
-    "एनाल���टिक्स",
+    "एनालिटिक्स",
     "फॉलोअर्स को पेइंग कस्टमर",
   ];
   if (
