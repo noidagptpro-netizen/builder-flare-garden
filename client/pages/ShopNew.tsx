@@ -262,8 +262,8 @@ export default function Shop() {
           firstname: customerInfo.name,
           email: customerInfo.email,
           phone: customerInfo.phone,
-          surl: `${window.location.origin}/payment-success`,
-          furl: `${window.location.origin}/payment-failure`,
+          surl: `https://famechase.com/payment/success`,
+          furl: `https://famechase.com/payment/failure`,
           udf1: purchaseData.id, // Purchase ID
           udf2: productId,       // Product ID
           udf3: finalAmount.toString(), // Amount
@@ -282,7 +282,7 @@ export default function Shop() {
 
         // PayU required fields
         const payuFields = {
-          key: 'WBtjxn',
+          key: import.meta.env.VITE_PAYU_KEY || 'uWkEEH',
           txnid: paymentData.txnid,
           amount: paymentData.amount.toString(),
           productinfo: paymentData.productinfo,

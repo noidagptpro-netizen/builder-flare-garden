@@ -29,7 +29,18 @@
 
 # Custom domain configuration
 [context.production]
-  environment = { VITE_APP_ENV = "production", VITE_APP_URL = "https://famechase.com" }
+  environment = { 
+    VITE_APP_ENV = "production", 
+    VITE_APP_URL = "https://famechase.com",
+    VITE_SUPABASE_URL = "https://fjtuagjmijlvsntzytlr.supabase.co",
+    VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHVhZ2ptaWpsdnNudHp5dGxyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYzMTMyMDIsImV4cCI6MjA3MTg4OTIwMn0.j40OiKT5pVoUBESfIp07i5XyJu-ayrddiL8YAt8zL54",
+    VITE_PAYU_KEY = "uWkEEH",
+    VITE_PAYU_SALT = "AdMkAcEHOieHcOCmUf9Z5x2lapCSV0Oo",
+    PAYU_KEY = "uWkEEH",
+    PAYU_SALT = "AdMkAcEHOieHcOCmUf9Z5x2lapCSV0Oo",
+    SUPABASE_URL = "https://fjtuagjmijlvsntzytlr.supabase.co",
+    SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZqdHVhZ2ptaWpsdnNudHp5dGxyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTYzMTMyMDIsImV4cCI6MjA3MTg4OTIwMn0.j40OiKT5pVoUBESfIp07i5XyJu-ayrddiL8YAt8zL54"
+  }
 
 [context.deploy-preview]
   environment = { VITE_APP_ENV = "preview" }

@@ -1,10 +1,15 @@
 # SPA redirects
 /api/* /.netlify/functions/api/:splat 200
-/* /index.html 200
 
-# Payment redirects for PayU
-/payment-success /payment-success 200
-/payment-failure /payment-failure 200
+# Payment webhooks from PayU - these process payment data and redirect users
+/payment/success /.netlify/functions/api/payment/success 200
+/payment/failure /.netlify/functions/api/payment/failure 200
+
+# Optional separate webhook endpoints (if needed for server-to-server calls)
+/webhook/payment/success /.netlify/functions/api/webhook/payment/success 200  
+/webhook/payment/failure /.netlify/functions/api/webhook/payment/failure 200
+
+/* /index.html 200
 
 # Admin routes
 /admin /admin 200

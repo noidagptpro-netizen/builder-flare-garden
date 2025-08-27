@@ -2,8 +2,8 @@ import CryptoJS from "crypto-js";
 
 // PayU Configuration
 const PAYU_CONFIG = {
-  merchantKey: import.meta.env.VITE_PAYU_MERCHANT_KEY || "WBtjxn",
-  salt: import.meta.env.VITE_PAYU_SALT || "Ui1z2GLGDx7sUixAtCdl42",
+  merchantKey: import.meta.env.VITE_PAYU_KEY || "uWkEEH",
+  salt: import.meta.env.VITE_PAYU_SALT || "AdMkAcEHOieHcOCmUf9Z5x2lapCSV0Oo",
   baseUrl:
     import.meta.env.VITE_PAYU_BASE_URL || "https://test.payu.in/_payment",
   mode: import.meta.env.VITE_PAYU_MODE || "test",
