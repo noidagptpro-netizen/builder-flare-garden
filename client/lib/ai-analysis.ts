@@ -717,7 +717,7 @@ const generateSWOTAnalysis = (data: QuizData, fameScore: number) => {
 
   if (data.goals.includes("brand deals") || data.goals.includes("monetizing")) {
     opportunities.push(
-      `�� Brand partnership boom! ${currentYear} saw 340% increase in influencer marketing budgets. Your timing is perfect!`,
+      `🤝 Brand partnership boom! ${currentYear} saw 340% increase in influencer marketing budgets. Your timing is perfect!`,
     );
   }
 
@@ -957,27 +957,23 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
     );
   }
 
-  if (data.niche === "Technology") {
+  if (data.niche === "Technology" || data.niche === "Technology & AI") {
+    const techAffiliateEarning = Math.round(followerNum * 0.3);
     recommendations.push(
-      "Create unboxing videos of latest gadgets trending in India",
+      `📱 UNBOXING STRATEGY (WEEKLY): Review 1 trending gadget under ₹5000 every Monday. Apply for Amazon/Flipkart affiliate. Expected: ₹${techAffiliateEarning}-${techAffiliateEarning * 2}/month commission`,
     );
     recommendations.push(
-      "Make comparison videos between budget vs premium tech products",
-    );
-    recommendations.push("Share coding tutorials and tech tips for beginners");
-    recommendations.push(
-      "Review apps and software that solve Indian-specific problems",
+      `⚡ COMPARISON SERIES (MONTHLY): Create 'Budget vs Premium' videos. Focus on Indian prices. Use affiliate links for both. Expected: 2x normal views, higher conversion`,
     );
     recommendations.push(
-      "Join Amazon, Flipkart, and tech brand affiliate programs",
+      `💻 CODING MONETIZATION (START THIS WEEK): Post daily coding tips, create paid course on Udemy/Skillshare. Price: ₹999-2999. Expected: 50+ sales/month = ₹50K-150K`,
     );
     recommendations.push(
-      "Create 'Tech on a Budget' content series for mass Indian audience",
+      `📲 APP REVIEWS (2X WEEKLY): Review Indian apps + international apps for Indian market. Contact app developers for paid reviews. Rate: ₹${Math.round(followerNum * 0.1)}-${Math.round(followerNum * 0.3)}/review`,
     );
     recommendations.push(
-      "Cover latest updates from Indian tech companies and startups",
+      `🏆 TECH BUDGET SERIES (LAUNCH FRIDAY): 'Best Tech Under ₹5K/10K/20K' monthly series. Partner with brands for launch exclusives. Expected: Brand partnerships worth ₹10K-50K/month`,
     );
-    recommendations.push("Make predictions about tech trends affecting India");
   }
 
   if (data.niche === "Education") {
@@ -1198,7 +1194,7 @@ const generatePersonalizedRecommendations = (data: QuizData): string[] => {
       "Negotiate exclusive brand partnerships worth ₹50K-₹2L per month",
     );
     recommendations.push(
-      "Create a membership community with monthly subscription ���499-₹999",
+      "Create a membership community with monthly subscription ₹499-₹999",
     );
     recommendations.push(
       "Start affiliate marketing with high-commission products",
@@ -2063,7 +2059,7 @@ const calculateGrowthPotential = (
     potential += 4;
   } else if (
     data.contentType === "Mixed Content" ||
-    data.contentType === "मि���्रित कंटेंट"
+    data.contentType === "मिश्रित कंटेंट"
   ) {
     potential += 3;
   }
