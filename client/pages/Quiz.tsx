@@ -283,7 +283,7 @@ const languages = {
       email: "आपका ईमेल पता क्या है?",
       phone: "आपका फोन नंबर क्या है? (वैकल्पिक)",
       city: "आप किस शहर से हैं?",
-      primaryPlatform: "���प मुख्यतः क���स प्ले���फॉर्म पर कंटेंट बनाते हैं?",
+      primaryPlatform: "आ�� मुख्यतः क���स प्ले���फॉर्म पर कंटेंट बनाते हैं?",
       followerCount: "आपके प्राथमिक प्लेटफॉर्म पर कितने फॉलोअर्स हैं?",
       secondaryPlatforms:
         "आप और कौन से प्लेटफॉर्म का उपयोग करते हैं? (कई विकल्प चुनें)",
@@ -295,7 +295,7 @@ const languages = {
       monthlyIncome: "कंटेंट से आपकी वर्तमान मासिक आय क्या है?",
       engagementRate: "आपका औसत एंगेजमेंट रेट क्या है?",
       biggestChallenge:
-        "आपकी सबसे बड़ी चुनौती क��या है? 3 तक चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
+        "आपकी सबस��� बड़ी चुनौती क��या है? 3 तक चुनें – हम सब इसमें एक साथ हैं! आपकी परेशानियों को समझना हमें बेहतर समाधान देने में मदद करता है।",
       goals: "आपके अगले 6 महीने के मुख्य लक्ष्य क्या हैं? (अधिकतम 3 चुनें)",
       socialLinks: "अपनी सोशल उपस्थिति साझा करें (वैकल्पिक)",
       bio: "अपने और अपने कंटेंट के बारे में कुछ और बताएं (वैकल्पिक)",
@@ -350,7 +350,7 @@ const languages = {
         "मुझे नहीं पता",
       ],
       contentTypes: [
-        "फोटो और कैरोसेल",
+        "फोटो और क���रोसेल",
         "छोटे वीडिय��/र��ल्स",
         "लंबे वीडियो",
         "लाइव स्ट्रीम",
@@ -402,7 +402,7 @@ const languages = {
         "मासिक आय ����50K+ तक ब���़ाना",
         "100K+ का authentic ��मुदाय बनाना",
         "सपन��ं के ब्रांड्स के साथ पार्टन��शिप",
-        "अ���ना प्रोड��्ट/कोर्�� लॉन्च क���ना",
+        "अ���ना प्रोडक्ट/कोर्�� लॉन्च क���ना",
         "अपने निच में गो-टू ���क्सपर्ट बनना",
         "लगातार वायरल कंटेंट बनाना",
         "10K सब्सक्राइ���र्स की ईमेल लिस्ट बनाना",
@@ -672,7 +672,7 @@ This content is optimized for larger text display for better readability
         fontSizeIndicator +
         `${language === "hindi" ? "मीड���य��� कि���" : "MEDIA KIT"} - ${userName}
 
-${language === "hindi" ? "व्यक्ति������ जान���ारी:" : "PERSONAL INFO:"}
+${language === "hindi" ? "व्यक्ति������ जानक��री:" : "PERSONAL INFO:"}
 ${language === "hindi" ? "नाम:" : "Name:"} ${userName}
 ${language === "hindi" ? "निच:" : "Niche:"} ${quizData.niche}
 ${language === "hindi" ? "���्ले���फॉर्म:" : "Platform:"} ${quizData.primaryPlatform}
@@ -692,7 +692,7 @@ ${language === "hindi" ? "Instagram Story:" : "Instagram Story:"} ₹${quizData.
 ${language === "hindi" ? "YouTube शॉर्ट:" : "YouTube Short:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "YouTube वी���ियो म���ंशन:" : "YouTube Video Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-2,000" : quizData.followerCount.includes("1K - 5K") ? "2,000-3,000" : "3,000-8,000"}
 ${language === "hindi" ? "Twitter पोस���ट:" : "Twitter Post:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-200" : quizData.followerCount.includes("1K - 5K") ? "200-400" : "400-1,000"}
-${language === "hindi" ? "Newsletter में����:" : "Newsletter Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-2,500"}
+${language === "hindi" ? "Newsletter में������:" : "Newsletter Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "200-500" : quizData.followerCount.includes("1K - 5K") ? "500-1,000" : "1,000-2,500"}
 
 ${language === "hindi" ? "📦 पैकेज दरें:" : "📦 PACKAGE RATES:"}
 ${language === "hindi" ? "�� ब��सिक पैक���ज (1 पोस्ट + 2 स्टो���ी):" : "• Basic Package (1 Post + 2 Stories):"} ₹${quizData.followerCount.includes("Less than 1K") ? "400-800" : quizData.followerCount.includes("1K - 5K") ? "800-1,500" : "1,500-4,000"}
@@ -706,7 +706,7 @@ ${language === "hindi" ? "सोशल लिंक्स:" : "Social Links:"}
     } else if (type === "emailTemplates") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "6+ ���्रांड आ���टरीच ईमेल टेम्प्ले��्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
+        `${language === "hindi" ? "6+ ���्रांड आ���टरीच ईमेल टेम्प्लेट्स" : "6+ BRAND OUTREACH EMAIL TEMPLATES"} - ${userName}
 
 ${language === "hindi" ? "टेम्प्ल���ट 1: प्रारंभिक संपर्क (कोल्�� आउटरीच)" : "TEMPLATE 1: INITIAL OUTREACH (COLD EMAIL)"}
 ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? `सहयोग का प्रस्ताव - ${userName} X [ब्रांड नाम]` : `Collaboration Proposal - ${userName} X [Brand Name]`}
@@ -758,7 +758,7 @@ ${language === "hindi" ? "आप��ी interest ��े लि��� ध
 ${language === "hindi" ? "📸 सिंगल ��ोस्ट: ₹[आपकी rate]" : "📸 Single Post: ₹[Your rate]"}
 ${language === "hindi" ? "• 1 feed post with your product" : "• 1 feed post with your product"}
 ${language === "hindi" ? "• 24-hour story promotion" : "• 24-hour story promotion"}
-${language === "hindi" ? "• Professional photography" : "�� Professional photography"}
+${language === "hindi" ? "��� Professional photography" : "�� Professional photography"}
 
 ${language === "hindi" ? "📱 स्ट���र�� पैक���ज: ₹[आपकी rate]" : "📱 Story Package: ����[Your rate]"}
 ${language === "hindi" ? "• 3-5 story slides" : "• 3-5 story slides"}
@@ -778,7 +778,7 @@ ${language === "hindi" ? "विषय:" : "Subject:"} ${language === "hindi" ? 
 
 ${language === "hindi" ? "Hi [Contact Name]," : "Hi [Contact Name],"}
 
-${language === "hindi" ? "आपके proposal के लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
+${language === "hindi" ? "आपके proposal ��े लिए thank you! म��ं definitely interested ह��ं।" : "Thank you for your proposal! I'm definitely interested."}
 
 ${language === "hindi" ? "Considering my engagement rates और audience quality, क्या हम rate क��� slightly adjust कर सकते ��ैं? मैं ₹[your counter] suggest ��रूं��ा because:" : "Considering my engagement rates and audience quality, could we adjust the rate slightly? I'd suggest ₹[your counter] because:"}
 
@@ -858,7 +858,7 @@ ${language === "hindi" ? "• Grateful और humble रहें" : "• Be gra
     } else if (type === "growthStrategy") {
       content =
         fontSizeIndicator +
-        `${language === "hindi" ? "90-���िन ���� ����्रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
+        `${language === "hindi" ? "90-���िन ���� ����रोथ रणनीति" : "90-DAY GROWTH STRATEGY"} - ${userName}
 
 ${language === "hindi" ? "व्यक्तिगत विश्लेषण:" : "PERSONAL ANALYSIS:"}
 ${language === "hindi" ? "वर्तमान स्���िति:" : "Current Status:"} ${quizData.followerCount} on ${quizData.primaryPlatform}
@@ -869,7 +869,7 @@ ${language === "hindi" ? "दिन 1-30: बुन�������ाद �
 ${language === "hindi" ? "सप्���ाह 1:" : "Week 1:"}
 ${language === "hindi" ? `- ${quizData.postingFrequency === "Daily" ? "अपनी वर्���मान आवृत्त��� बनाए रखें" : "पोस्टिंग आवृत्ति बढ़��कर दैनिक करें"}` : `- ${quizData.postingFrequency === "Daily" ? "Maintain your current posting frequency" : "Increase posting frequency to daily"}`}
 ${language === "hindi" ? `- ${quizData.niche} पर 10 क���टेंट आ�����डिया तैयार ���रे��` : `- Prepare 10 content ideas for ${quizData.niche}`}
-${language === "hindi" ? "- हैशट��ग रिसर्च करें (30 हैशटैग मिक्��)" : "- Research hashtags (30 hashtag mix)"}
+${language === "hindi" ? "- हैशटैग रिसर्च करें (30 हैशटैग मिक्��)" : "- Research hashtags (30 hashtag mix)"}
 
 ${language === "hindi" ? "सप्त��ह 2-4:" : "Week 2-4:"}
 ${language === "hindi" ? "- इंटरैक्टिव कंटे���ट बढ़ाएं (पोल्स, Q&A)" : "- Increase interactive content (polls, Q&A)"}
@@ -878,7 +878,7 @@ ${language === "hindi" ? "- एनालिटिक्स ट्रै�� �
 
 ${language === "hindi" ? "दिन 31-60: विकास औ��� अनुकूलन" : "DAYS 31-60: GROWTH & OPTIMIZATION"}
 ${language === "hindi" ? `- ${quizData.primaryPlatform === "Instagram" ? "रील्स पर फोकस करे�� (60% कंटें��)" : "प्लेटफॉर्म-स्पेसिफ���क कंटेंट बढ़ाएं"}` : `- ${quizData.primaryPlatform === "Instagram" ? "Focus on Reels (60% content)" : "Increase platform-specific content"}`}
-${language === "hindi" ? "- ट्रेंडिंग टॉपि��्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
+${language === "hindi" ? "- ट्रेंडिंग टॉपि����्स पर कंटेंट बनाएं" : "- Create content on trending topics"}
 ${language === "hindi" ? "- अन्य क्रिएटर्स के साथ कोलैबोरेशन शुरू ���रें" : "- Start collaborations with other creators"}
 
 ${language === "hindi" ? "द��न 61-90: मुद्रीकरण की तैयारी" : "DAYS 61-90: MONETIZATION PREP"}
@@ -889,7 +889,7 @@ ${language === "hindi" ? "- ईमेल लिस्ट बनान��� �
 ${language === "hindi" ? "अपे��्षित परिणाम (90 दिन):" : "EXPECTED RESULTS (90 days):"}
 ${language === "hindi" ? "- फॉलोअर ग्रोथ: 40-80%" : "- Follower Growth: 40-80%"}
 ${language === "hindi" ? "- ��ंगेजमेंट में स�������धार: 50-100%" : "- Engagement Improvement: 50-100%"}
-${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8" : "- Brand Inquiries: 3-8"}`;
+${language === "hindi" ? "- ���्र��ंड पूछ���ाछ: 3-8" : "- Brand Inquiries: 3-8"}`;
     }
 
     const blob = new Blob([content], { type: "text/plain" });
@@ -1058,7 +1058,7 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
             <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border-2 border-yellow-200 rounded-2xl p-8">
               <h2 className="text-lg font-bold text-gray-900 mb-4">
                 {language === "hindi"
-                  ? "अप��ा ���ूरा व���श्लेषण चाहते हैं?"
+                  ? "अपना ���ूरा व���श्लेषण चाहते हैं?"
                   : "Want Your Complete Analysis?"}
               </h2>
               <p className="text-gray-600 mb-6">
@@ -1083,22 +1083,23 @@ ${language === "hindi" ? "- ���्र��ंड पूछताछ: 3-8"
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="relative z-10 px-4 py-6 bg-white border-b border-gray-100 sticky top-0 backdrop-blur-sm">
+      <header className="relative z-10 px-2 md:px-4 py-3 md:py-4 bg-white border-b border-gray-100 sticky top-0 backdrop-blur-sm">
         <div className="container mx-auto flex justify-between items-center">
-          <Link to="/" className="text-lg font-bold text-gray-900">
+          <Link to="/" className="text-base md:text-lg font-bold text-gray-900">
             FameChase<span className="text-neon-green">.com</span>
           </Link>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <Link
               to="/"
-              className="flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors"
+              className="flex items-center gap-1 md:gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm md:text-base"
             >
-              <Home className="w-4 h-4" />
-              Back to Home
+              <Home className="w-3 h-3 md:w-4 md:h-4" />
+              <span className="hidden sm:inline">Back to Home</span>
+              <span className="sm:hidden">Home</span>
             </Link>
             {/* Hindi language disabled - English only */}
-            <div className="text-sm text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
+            <div className="text-xs md:text-sm text-gray-600 bg-gray-50 px-2 py-1 md:px-3 md:py-2 rounded-lg">
               English
             </div>
           </div>
