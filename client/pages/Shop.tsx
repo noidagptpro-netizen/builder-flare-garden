@@ -36,6 +36,7 @@ import {
   ProductConfig,
   productConfigs,
 } from "../lib/products";
+import { supabase, dbHelpers, isSupabaseConfigured } from "@/lib/supabase";
 
 interface PurchasedProduct {
   id: string;
@@ -314,7 +315,7 @@ export default function Shop() {
     setShowSuccessPage(productId);
   };
 
-  const handleDownload = (productId: string, downloadId: string) => {
+  const handleDownload = async (productId: string, downloadId: string) => {
     const content = generateProductDownload(
       productId,
       downloadId,
@@ -326,6 +327,23 @@ export default function Shop() {
 
     if (content && download) {
       downloadFile(content, download.fileName, language);
+      // optional: record download
+      try {
+        if (isSupabaseConfigured() && supabase) {
+          const { data } = await supabase.auth.getUser();
+          const userId = data.user?.id;
+          if (userId) {
+            await dbHelpers.recordDownload({
+              user_id: userId,
+              product_id: productId,
+              download_id: downloadId,
+              downloaded_at: new Date().toISOString(),
+            });
+          }
+        }
+      } catch (e) {
+        // no-op
+      }
     }
   };
 
