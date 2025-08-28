@@ -205,7 +205,7 @@ export default function Shop() {
     if (validatePromoCode(promoCode)) {
       // Code is valid, discount already applied
     } else {
-      alert(language === "hindi" ? "अम��न्य प्रोमो कोड" : "Invalid promo code");
+      alert(language === "hindi" ? "अमान्य प्रोमो कोड" : "Invalid promo code");
     }
   };
 
@@ -268,7 +268,7 @@ export default function Shop() {
       offerEnds: "ऑफर समाप्त होता है",
       downloads: "डाउनलोड",
       rating: "रेटिंग",
-      securePayment: "सुरक्��ित भुगतान",
+      securePayment: "सुरक्षित भुगतान",
       instantDownload: "तुरंत डाउनलोड",
       buyNow: "अभी खरीदें",
       downloadFree: "फ्री डाउनलोड करें",
