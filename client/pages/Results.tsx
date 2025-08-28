@@ -37,6 +37,7 @@ import {
   Heart,
 } from "lucide-react";
 import { analyzeQuizData } from "../lib/ai-analysis";
+import { supabase, dbHelpers, isSupabaseConfigured } from "@/lib/supabase";
 
 interface QuizData {
   name: string;
@@ -63,6 +64,7 @@ interface QuizData {
   };
   bio: string;
   language: string;
+  engagementRate: string;
 }
 
 interface PersonalInfo {
@@ -140,7 +142,7 @@ const languages = {
     fameScore: "फेम स्कोर",
     growthPotential: "विकास ��्षमता",
     incomeProjection: "आय क्षमता",
-    unlock: "अपना संपूर्ण क्रिएटर टूलकिट अनलॉक करे���",
+    unlock: "अपना संपूर्�� क्रिएटर टूलकिट अनलॉक करे���",
     unlockSubtitle:
       "अपनी व्यक्���िगत फेम स��कोर रिपोर्ट, प्��ोफ���शनल मीडिया किट टेम्प्लेट, और ग्रोथ स्ट्रैटेज�� + हमार��� संपूर्ण प्रीमियम क्रिएटर टूल्स तक पहुंच प्राप्त करें।",
     paymentForm: "अप���ी जानकारी पूरी करें",
@@ -348,7 +350,55 @@ export default function Results() {
 
 `;
 
-    if (type === "fameScore") {
+    // helper for dynamic rates
+    const getFollowerNumber = (range: string): number => {
+      const map: { [k: string]: number } = {
+        "Less than 1K": 500,
+        "1K - 5K": 3000,
+        "5K - 10K": 7500,
+        "10K - 50K": 30000,
+        "50K - 100K": 75000,
+        "100K - 500K": 300000,
+        "500K+": 750000,
+      };
+      return map[range] || 1000;
+    };
+    const followerNum = getFollowerNumber(quizData.followerCount);
+    const nicheMultiplierMap: Record<string, number> = {
+      "Fashion & Beauty": 1.4,
+      "Technology & AI": 1.8,
+      "Personal Finance & Investing": 2.2,
+      "Gaming & Esports": 1.6,
+      "Education & Learning": 1.9,
+      "Fitness & Health": 1.5,
+      "Food & Cooking": 1.3,
+      "Business & Finance": 2.0,
+      Lifestyle: 1.2,
+    };
+    const nicheMultiplier = nicheMultiplierMap[quizData.niche] ?? 1.0;
+    const primaryRatesBase: any = {
+      Instagram: {
+        post: followerNum * 0.008 * nicheMultiplier,
+        reel: followerNum * 0.015 * nicheMultiplier,
+        story: followerNum * 0.004 * nicheMultiplier,
+      },
+      YouTube: {
+        video: followerNum * 0.025 * nicheMultiplier,
+        short: followerNum * 0.012 * nicheMultiplier,
+        mention: followerNum * 0.006 * nicheMultiplier,
+      },
+      LinkedIn: {
+        post: followerNum * 0.018 * nicheMultiplier,
+        article: followerNum * 0.035 * nicheMultiplier,
+      },
+      Twitter: {
+        tweet: followerNum * 0.006 * nicheMultiplier,
+        thread: followerNum * 0.012 * nicheMultiplier,
+      },
+    };
+    const primaryRates = primaryRatesBase[quizData.primaryPlatform] || primaryRatesBase["Instagram"];
+
+  if (type === "fameScore") {
       content =
         fontSizeIndicator +
         `
@@ -420,7 +470,7 @@ ${language === "hindi" ? "3. अपने एंग���ज��ेंट �
 
 ────────────────────────────────────────────────
 ���� ${language === "hindi" ? "जेनरेट किया गया:" : "Generated:"} ${new Date().toLocaleDateString()}
-═════════════════�������══════════���════════��═══════════════════`;
+═════════════════�������══════════���════════���═══════════════════`;
     } else if (type === "mediaKit") {
       content =
         fontSizeIndicator +
@@ -469,6 +519,13 @@ ${language === "hindi" ? "Instagram रील:" : "Instagram Reel:"} ₹${quizDa
 ${language === "hindi" ? "Instagram स्टोरी:" : "Instagram Story:"} ₹${quizData.followerCount.includes("Less than 1K") ? "100-300" : quizData.followerCount.includes("1K - 5K") ? "300-500" : "500-1,500"}
 ${language === "hindi" ? "YouTube शॉर्ट:" : "YouTube Short:"} ₹${quizData.followerCount.includes("Less than 1K") ? "500-1,000" : quizData.followerCount.includes("1K - 5K") ? "1,000-2,000" : "2,000-5,000"}
 ${language === "hindi" ? "YouTube वीडि��ो मेंशन:" : "YouTube Video Mention:"} ₹${quizData.followerCount.includes("Less than 1K") ? "1,000-2,000" : quizData.followerCount.includes("1K - 5K") ? "2,000-3,000" : "3,000-8,000"}
+
+${language === "hindi" ? "📊 डायनामिक रेट कार्ड:" : "📊 DYNAMIC RATE CARD:"}
+${Object.entries(primaryRates)
+  .map(
+    ([k, v]) => `${k.charAt(0).toUpperCase() + k.slice(1)}: ₹${Math.round(v as number).toLocaleString()}-₹${Math.round((v as number) * 1.8).toLocaleString()}`,
+  )
+  .join("\n")}
 
 ${language === "hindi" ? "व���श���षताएं:" : "SPECIALTIES:"}
 - ${analysis.suggestions.slice(0, 3).join("\n- ")}
@@ -634,7 +691,7 @@ ${language === "hindi" ? "कंजर्������टिव:" : "Conser
 ${language === "hindi" ? "ऑप्टिमिस्ट��क:" : "Optimistic:"} ₹${realisticMonthlyMax.toLocaleString()}
 ${language === "hindi" ? "औसत टारगेट:" : "Average Target:"} ₹${Math.round((realisticMonthlyMin + realisticMonthlyMax) / 2).toLocaleString()}
 
-${language === "hindi" ? "📊 प्रीमियम प्लेटफॉर्म रेट कार्ड:" : "📊 PREMIUM PLATFORM RATE CARD:"}
+${language === "hindi" ? "📊 प्रीमियम प���लेटफॉर्म रेट कार्ड:" : "📊 PREMIUM PLATFORM RATE CARD:"}
 ${Object.entries(primaryPlatformRates)
   .map(
     ([type, rate]) =>
@@ -734,7 +791,7 @@ ${language === "hindi" ? "⚡ एडवांस्ड एंगे���म�
 • ${language === "hindi" ? "सेव रेट" : "Save Rate"} = Saves ÷ Reach × 100 (टारगेट: 2-4%)
 • ${language === "hindi" ? "कमे��ट रेट" : "Comment Rate"} = Comments ÷ Reach × 100 (टारगेट: 0.5-1.5%)
 
-${language === "hindi" ? "💰 मोने���ाइज़े���न ट्रैकर (रियल वैल्यू):" : "💰 MONETIZATION TRACKER (Real Value):"}
+${language === "hindi" ? "💰 मोने���ाइज़े���न ट्रैकर (रियल व���ल्यू):" : "💰 MONETIZATION TRACKER (Real Value):"}
 ┌────────────────────────────────────���────────┐
 │ ${language === "hindi" ? "महीना:" : "Month:"} ___________                     │
 │ ${language === "hindi" ? "ब्रांड इंक्वायरी" : "Brand Inquiries"}: _____ (टारगेट: ${Math.round(currentFollowers / 5000)})   │
@@ -754,7 +811,7 @@ ${language === "hindi" ? "📊 साप्ताहिक ग्रोथ म�
 ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस स्कोरकार्ड:" : "🎯 CONTENT PERFORMANCE SCORECARD:"}
 ┌───────────────���────────────────────────────��┐
 �� ${language === "hindi" ? "कं���ेंट ���ाइप" : "Content Type"}: ________________    │
-�� ${language === "hindi" ? "पोस्ट टाइम" : "Post Time"}: ___:___ (बेस्ट: 7-9 PM)   │
+�� ${language === "hindi" ? "पोस���ट टाइम" : "Post Time"}: ___:___ (बेस्ट: 7-9 PM)   │
 │ ${language === "hindi" ? "हैशटैग्स यूज्ड" : "Hashtags Used"}: _____ (बेस्ट: 8-12)  │
 │ ${language === "hindi" ? "1घंटे में रीच" : "1hr Reach"}: _____ (टारगेट: 15-25%)  │
 │ ${language === "hindi" ? "24घंटे में रीच" : "24hr Reach"}: _____ (टारगेट: 70-85%) │
@@ -763,7 +820,7 @@ ${language === "hindi" ? "🎯 कंटेंट परफॉर्मेंस
 
 ${language === "hindi" ? "🔥 प्रो-लेवल एनालिटिक्स टिप्स:" : "🔥 PRO-LEVEL ANALYTICS TIPS:"}
 1. ${language === "hindi" ? "रीच 50% से कम = Algorithm penalty. तुरंत बेह���र कंटेंट पोस��ट कर��ं" : "Reach below 50% = Algorithm penalty. Post better content immediately"}
-2. ${language === "hindi" ? "स��व रेट 2% से ज्यादा = वायरल potential. इसी ��रह क���� कंटेंट बनाएं" : "Save rate above 2% = Viral potential. Create similar content"}
+2. ${language === "hindi" ? "स��व रेट 2% से ज्यादा = वायरल potential. इसी ��रह क���� कंटेंट बन���एं" : "Save rate above 2% = Viral potential. Create similar content"}
 3. ${language === "hindi" ? "कमेंट्स में रिप्लाई जरूर करें - Engagement बढ़ेगा 40%" : "Always reply to comments - Boosts engagement by 40%"}
 4. ${language === "hindi" ? "पहले 30 मिनट में ज्यादा likes = Algorithm boost" : "High likes in first 30 minutes = Algorithm boost"}
 
@@ -777,7 +834,7 @@ ${language === "hindi" ? "📈 मासिक ROI ट्रैकर:" : "📈 
 │                                           │
 │ ${language === "hindi" ? "कुल क���ाई" : "Total Earnings"}:                      │
 │ - Brand deals: ₹_____                    │
-│ - Affiliate: ���_____                      │
+│ - Affiliate: ���_____                      ��
 │ - Product sales: ₹_____                  │
 │ - Other: ₹_____                          │
 │                                           │
@@ -811,6 +868,26 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+
+    // record download if possible
+    (async () => {
+      try {
+        if (isSupabaseConfigured() && supabase) {
+          const { data } = await supabase.auth.getUser();
+          const userId = data.user?.id;
+          if (userId) {
+            await dbHelpers.recordDownload({
+              user_id: userId,
+              product_id: "analysis",
+              download_id: type,
+              downloaded_at: new Date().toISOString(),
+            });
+          }
+        }
+      } catch (e) {
+        // no-op
+      }
+    })();
   };
 
   if (!quizData || !analysis) {
@@ -1005,7 +1082,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
               </h2>
               <p className="text-gray-600 mb-6">
                 {language === "hindi"
-                  ? "साबित किए गए टूल्स जो टॉप क्रिएटर्स अपनी आय 5X ��ढ़ाने के ���िए इस्तेमाल करते हैं। ���ह सब कुछ बिल्कुल फ्री है!"
+                  ? "साबित किए गए टूल्स जो टॉप क्रिएटर्स अपनी आय 5X ��ढ़ाने के �����ए इस्तेमाल करते हैं। ���ह सब कुछ बिल्कुल फ्री है!"
                   : "Proven tools that top creators use to 5X their income. Get everything absolutely free after completing your quiz!"}
               </p>
 
@@ -1043,7 +1120,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
                   </h3>
                   <p className="text-gray-600 text-sm mb-4">
                     {language === "hindi"
-                      ? "वही ट्रैकिंग स���स्टम जो मिलियन-फॉलोअर क्रिएटर्स इस्तेमाल कर��े हैं। अ���नी ROI क��� 300% तक बढ़ाए��।"
+                      ? "वही ट्रैकिंग स���स्टम जो मिलियन-फॉलोअर क्रिएटर्स इस्��ेमाल कर��े हैं। अ���नी ROI क��� 300% तक बढ़ाए��।"
                       : "The same tracking system used by million-follower creators. Boost your ROI by up to 300%."}
                   </p>
                   <button
@@ -1274,7 +1351,7 @@ ${language === "hindi" ? "💡 नेक्स्ट रिव्यू:" : "�
 
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-4xl mx-auto">
-          {/* 🎉 SURPRISE CELEBRATION SECTION */}
+          {/* ���� SURPRISE CELEBRATION SECTION */}
           <div className="text-center mb-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-purple-100 via-pink-50 to-yellow-100 opacity-50 animate-pulse"></div>
             <div className="relative">
