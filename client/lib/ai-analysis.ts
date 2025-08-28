@@ -23,6 +23,7 @@ interface QuizData {
   };
   bio: string;
   language: string;
+  engagementRate: string;
 }
 
 interface FameScoreAnalysis {
@@ -282,7 +283,7 @@ const getExperienceLevelDescription = (
   if (fameScore >= 80 && followerNum >= 50000) {
     baseDescription += ` 🌟 MARKET LEADER: Your combination of experience + ${fameScore} Fame Score + ${data?.followerCount || "substantial following"} puts you in the top 2% of creators. Command premium rates: ₹${Math.round(followerNum * 1.5)}-₹${Math.round(followerNum * 3)} per post.`;
   } else if (fameScore >= 70 && followerNum >= 10000) {
-    baseDescription += ` ⭐ HIGH PERFORMER: Your ${fameScore} Fame Score with ${data?.followerCount || "strong following"} shows excellent creator-market fit. Target rates: ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)} per collaboration.`;
+    baseDescription += ` �� HIGH PERFORMER: Your ${fameScore} Fame Score with ${data?.followerCount || "strong following"} shows excellent creator-market fit. Target rates: ₹${Math.round(followerNum * 0.8)}-₹${Math.round(followerNum * 2)} per collaboration.`;
   } else if (fameScore >= 50) {
     baseDescription += ` 📊 SOLID FOUNDATION: Your ${fameScore} Fame Score indicates ${experienceEfficiency} growth trajectory. Focus on scaling to next milestone with current ${postingConsistency.toLowerCase()} consistency.`;
   } else if (fameScore >= 30) {
