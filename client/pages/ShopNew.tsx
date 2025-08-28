@@ -180,7 +180,9 @@ export default function Shop() {
     if (validatePromoCode(promoCode)) {
       // Code is valid, discount already applied
     } else {
-      alert(language === "hindi" ? "अमा���्य प्रोमो कोड" : "Invalid promo code");
+      alert(
+        language === "hindi" ? "अमा���्य प्रोमो कोड" : "Invalid promo code",
+      );
     }
   };
 
@@ -205,27 +207,33 @@ export default function Shop() {
         const { paymentHelpers } = await import("../lib/payu");
 
         // Generate transaction ID
-        const txnid = `FAMECHASE_${Date.now()}_${Math.random().toString(36).substring(2)}`.toUpperCase();
+        const txnid =
+          `FAMECHASE_${Date.now()}_${Math.random().toString(36).substring(2)}`.toUpperCase();
 
         // First, ensure user data is saved to Supabase
         let userId = null;
         if (quizData) {
           const { data: userData, error: userError } = await supabase
-            .from('users')
-            .upsert([{
-              name: customerInfo.name,
-              email: customerInfo.email,
-              phone: customerInfo.phone,
-              city: customerInfo.city,
-              niche: quizData.niche,
-              primary_platform: quizData.primaryPlatform,
-              follower_count: quizData.followerCount,
-              goals: quizData.goals,
-              quiz_data: quizData,
-            }], {
-              onConflict: 'email',
-              ignoreDuplicates: false
-            })
+            .from("users")
+            .upsert(
+              [
+                {
+                  name: customerInfo.name,
+                  email: customerInfo.email,
+                  phone: customerInfo.phone,
+                  city: customerInfo.city,
+                  niche: quizData.niche,
+                  primary_platform: quizData.primaryPlatform,
+                  follower_count: quizData.followerCount,
+                  goals: quizData.goals,
+                  quiz_data: quizData,
+                },
+              ],
+              {
+                onConflict: "email",
+                ignoreDuplicates: false,
+              },
+            )
             .select()
             .single();
 
@@ -234,24 +242,26 @@ export default function Shop() {
 
         // Save purchase to Supabase
         const { data: purchaseData, error: purchaseError } = await supabase
-          .from('purchases')
-          .insert([{
-            user_id: userId,
-            product_id: productId,
-            amount: finalAmount,
-            discount_amount: product.price - finalAmount,
-            promo_code: promoCode || null,
-            payment_id: txnid,
-            payment_status: 'pending',
-            payment_method: 'payu',
-            customer_info: customerInfo
-          }])
+          .from("purchases")
+          .insert([
+            {
+              user_id: userId,
+              product_id: productId,
+              amount: finalAmount,
+              discount_amount: product.price - finalAmount,
+              promo_code: promoCode || null,
+              payment_id: txnid,
+              payment_status: "pending",
+              payment_method: "payu",
+              customer_info: customerInfo,
+            },
+          ])
           .select()
           .single();
 
         if (purchaseError) {
-          console.error('Purchase creation error:', purchaseError);
-          throw new Error('Failed to create purchase record');
+          console.error("Purchase creation error:", purchaseError);
+          throw new Error("Failed to create purchase record");
         }
 
         // Create PayU payment data
@@ -265,10 +275,10 @@ export default function Shop() {
           surl: `${window.location.origin}/payment-success`,
           furl: `${window.location.origin}/payment-failure`,
           udf1: purchaseData.id, // Purchase ID
-          udf2: productId,       // Product ID
+          udf2: productId, // Product ID
           udf3: finalAmount.toString(), // Amount
-          udf4: '',
-          udf5: ''
+          udf4: "",
+          udf5: "",
         };
 
         // Generate hash using PayU helper
@@ -282,7 +292,7 @@ export default function Shop() {
 
         // PayU required fields
         const payuFields = {
-          key: 'WBtjxn',
+          key: "WBtjxn",
           txnid: paymentData.txnid,
           amount: paymentData.amount.toString(),
           productinfo: paymentData.productinfo,
@@ -296,7 +306,7 @@ export default function Shop() {
           udf3: paymentData.udf3,
           udf4: paymentData.udf4,
           udf5: paymentData.udf5,
-          hash: hash
+          hash: hash,
         };
 
         Object.entries(payuFields).forEach(([key, value]) => {
