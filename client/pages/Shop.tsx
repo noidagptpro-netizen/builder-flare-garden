@@ -283,7 +283,7 @@ export default function Shop() {
       city: "शहर",
       processing: "प्रसंस्करण...",
       paySecure: "सुरक्षित भुगतान करें",
-      downloadYourProducts: "अपने प्रोडक्ट्स डाउनल���ड करें",
+      downloadYourProducts: "अपने प्रोडक्ट्स डाउनलोड करें",
       purchaseSuccess: "खरीदारी सफल! 🎉",
       thanksForPurchase:
         "आपकी खरीदारी के लिए धन्यवाद! आपके प्रोडक्ट्स डाउनलोड के लिए तैयार हैं।",
@@ -746,7 +746,7 @@ export default function Shop() {
                 className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all inline-block"
               >
                 {language === "hindi"
-                  ? "🎯 अभ�� प्रोफाइल बनाएं"
+                  ? "🎯 अभी प्रोफाइल बनाएं"
                   : "🎯 Create Profile Now"}
               </Link>
               <button
@@ -854,7 +854,7 @@ export default function Shop() {
                   <div className="mt-2 text-green-600 text-sm font-medium">
                     ✅ {appliedDiscount}%{" "}
                     {language === "hindi"
-                      ? "छूट लागू की गई!"
+                      ? "छूट ��ागू की गई!"
                       : "discount applied!"}
                   </div>
                 )}
@@ -875,7 +875,7 @@ export default function Shop() {
                 {appliedDiscount > 0 && (
                   <div className="flex justify-between items-center text-green-600">
                     <span>
-                      {language === "hindi" ? "��ूट:" : "Discount:"} (
+                      {language === "hindi" ? "छूट:" : "Discount:"} (
                       {appliedDiscount}%)
                     </span>
                     <span>
