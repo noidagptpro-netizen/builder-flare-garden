@@ -16,7 +16,7 @@ export default function AdminLogin() {
     setError('');
 
     // Simple admin credentials (in production, use proper authentication)
-    if (username === 'admin' && password === 'famechase2025') {
+    if (username === 'admin' && password === 'admin123') {
       localStorage.setItem('famechase_admin_logged_in', 'true');
       localStorage.setItem('famechase_admin_login_time', Date.now().toString());
       navigate('/admin');
@@ -105,7 +105,7 @@ export default function AdminLogin() {
           <div className="mt-6 p-4 bg-gray-50 rounded-lg">
             <h3 className="text-sm font-semibold text-gray-700 mb-2">Demo Credentials:</h3>
             <p className="text-sm text-gray-600">Username: <code className="bg-gray-200 px-1 rounded">admin</code></p>
-            <p className="text-sm text-gray-600">Password: <code className="bg-gray-200 px-1 rounded">famechase2025</code></p>
+            <p className="text-sm text-gray-600">Password: <code className="bg-gray-200 px-1 rounded">admin123</code></p>
           </div>
         </div>
 
