@@ -180,7 +180,7 @@ export default function Shop() {
     if (validatePromoCode(promoCode)) {
       // Code is valid, discount already applied
     } else {
-      alert(language === "hindi" ? "अमान्य प्रोमो कोड" : "Invalid promo code");
+      alert(language === "hindi" ? "अमा���्य प्रोमो कोड" : "Invalid promo code");
     }
   };
 
@@ -459,7 +459,7 @@ export default function Shop() {
               <Award className="w-5 h-5" />
               <span className="font-semibold">
                 {language === "hindi"
-                  ? "प्रीमिय�� क्रिएटर टूल्स"
+                  ? "प्रीमियम क्रिएटर टूल्स"
                   : "Premium Creator Tools"}
               </span>
             </div>
@@ -645,7 +645,7 @@ export default function Shop() {
             </h3>
             <p className="text-gray-600 mb-6">
               {language === "hindi"
-                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी होगी��� यह केवल 2 मिनट में हो जाएगा!"
+                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी होगी। यह केवल 2 मिनट में हो जाएगा!"
                 : "Before purchasing premium tools, you need to complete your creator profile. It takes only 2 minutes!"}
             </p>
             <div className="space-y-3">
