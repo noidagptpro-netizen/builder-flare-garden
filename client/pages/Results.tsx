@@ -396,9 +396,11 @@ export default function Results() {
         thread: followerNum * 0.012 * nicheMultiplier,
       },
     };
-    const primaryRates = primaryRatesBase[quizData.primaryPlatform] || primaryRatesBase["Instagram"];
+    const primaryRates =
+      primaryRatesBase[quizData.primaryPlatform] ||
+      primaryRatesBase["Instagram"];
 
-  if (type === "fameScore") {
+    if (type === "fameScore") {
       content =
         fontSizeIndicator +
         `
@@ -523,7 +525,8 @@ ${language === "hindi" ? "YouTube वीडि��ो मेंशन:" : "You
 ${language === "hindi" ? "📊 डायनामिक रेट कार्ड:" : "📊 DYNAMIC RATE CARD:"}
 ${Object.entries(primaryRates)
   .map(
-    ([k, v]) => `${k.charAt(0).toUpperCase() + k.slice(1)}: ₹${Math.round(v as number).toLocaleString()}-₹${Math.round((v as number) * 1.8).toLocaleString()}`,
+    ([k, v]) =>
+      `${k.charAt(0).toUpperCase() + k.slice(1)}: ₹${Math.round(v as number).toLocaleString()}-₹${Math.round((v as number) * 1.8).toLocaleString()}`,
   )
   .join("\n")}
 
