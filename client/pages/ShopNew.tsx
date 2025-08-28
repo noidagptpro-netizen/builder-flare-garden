@@ -394,7 +394,7 @@ export default function Shop() {
       securePayment: "सुरक्षित भुगतान",
       instantDownload: "तुरंत डाउनलोड",
       buyNow: "अभी खरीदें",
-      downloadFree: "फ्री ड��उनलोड करें",
+      downloadFree: "फ्री डाउनलोड करें",
       paymentForm: "अपनी जानकारी पूरी करें",
       fullName: "पूरा नाम",
       emailAddress: "ईमेल पता",
