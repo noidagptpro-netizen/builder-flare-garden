@@ -43,6 +43,7 @@ export interface User {
   follower_count?: string;
   goals?: string[];
   quiz_data?: any;
+  role?: string;
   created_at: string;
   updated_at: string;
 }
@@ -83,6 +84,26 @@ export interface Download {
   download_id: string;
   downloaded_at: string;
   user_id: string;
+}
+
+export interface Role {
+  id: string;
+  role_name: string;
+  permissions: any;
+  description?: string;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface Setting {
+  id: string;
+  key: string;
+  value: any;
+  description?: string;
+  category: string;
+  is_public: boolean;
+  created_at: string;
+  updated_at: string;
 }
 
 // Auth Helper Functions
@@ -308,6 +329,114 @@ export const dbHelpers = {
       .select("*")
       .eq("user_id", userId)
       .order("downloaded_at", { ascending: false });
+    return { data, error };
+  },
+
+  // Roles
+  async getRoles() {
+    if (!supabase) {
+      return { data: [], error: null };
+    }
+    const { data, error } = await supabase
+      .from("roles")
+      .select("*")
+      .order("role_name", { ascending: true });
+    return { data, error };
+  },
+
+  async createRole(roleData: Partial<Role>) {
+    if (!supabase) {
+      return { data: null, error: { message: "Supabase not configured" } };
+    }
+    const { data, error } = await supabase
+      .from("roles")
+      .insert([roleData])
+      .select()
+      .single();
+    return { data, error };
+  },
+
+  async updateRole(id: string, updates: Partial<Role>) {
+    if (!supabase) {
+      return { data: null, error: { message: "Supabase not configured" } };
+    }
+    const { data, error } = await supabase
+      .from("roles")
+      .update(updates)
+      .eq("id", id)
+      .select()
+      .single();
+    return { data, error };
+  },
+
+  async deleteRole(id: string) {
+    if (!supabase) {
+      return { data: null, error: { message: "Supabase not configured" } };
+    }
+    const { data, error } = await supabase
+      .from("roles")
+      .delete()
+      .eq("id", id);
+    return { data, error };
+  },
+
+  // Settings
+  async getSettings() {
+    if (!supabase) {
+      return { data: [], error: null };
+    }
+    const { data, error } = await supabase
+      .from("settings")
+      .select("*")
+      .order("category", { ascending: true });
+    return { data, error };
+  },
+
+  async getSetting(key: string) {
+    if (!supabase) {
+      return { data: null, error: { message: "Supabase not configured" } };
+    }
+    const { data, error } = await supabase
+      .from("settings")
+      .select("*")
+      .eq("key", key)
+      .single();
+    return { data, error };
+  },
+
+  async updateSetting(key: string, value: any, description?: string) {
+    if (!supabase) {
+      return { data: null, error: { message: "Supabase not configured" } };
+    }
+    const { data, error } = await supabase
+      .from("settings")
+      .update({ value, ...(description && { description }) })
+      .eq("key", key)
+      .select()
+      .single();
+    return { data, error };
+  },
+
+  async createSetting(settingData: Partial<Setting>) {
+    if (!supabase) {
+      return { data: null, error: { message: "Supabase not configured" } };
+    }
+    const { data, error } = await supabase
+      .from("settings")
+      .insert([settingData])
+      .select()
+      .single();
+    return { data, error };
+  },
+
+  async deleteSetting(key: string) {
+    if (!supabase) {
+      return { data: null, error: { message: "Supabase not configured" } };
+    }
+    const { data, error } = await supabase
+      .from("settings")
+      .delete()
+      .eq("key", key);
     return { data, error };
   },
 };

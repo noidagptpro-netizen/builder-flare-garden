@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS users (
   follower_count TEXT,
   goals TEXT[],
   quiz_data JSONB,
+  role TEXT DEFAULT 'user',
   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
@@ -59,6 +60,28 @@ CREATE TABLE IF NOT EXISTS downloads (
   download_id TEXT,
   downloaded_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
   user_id UUID REFERENCES users(id)
+);
+
+-- Create roles table
+CREATE TABLE IF NOT EXISTS roles (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  role_name TEXT UNIQUE NOT NULL,
+  permissions JSONB DEFAULT '[]'::jsonb,
+  description TEXT,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+
+-- Create settings table for application-wide key-value settings
+CREATE TABLE IF NOT EXISTS settings (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  key TEXT UNIQUE NOT NULL,
+  value JSONB,
+  description TEXT,
+  category TEXT DEFAULT 'general',
+  is_public BOOLEAN DEFAULT false,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
 -- Insert initial products
@@ -122,6 +145,8 @@ ALTER TABLE users ENABLE ROW LEVEL SECURITY;
 ALTER TABLE purchases ENABLE ROW LEVEL SECURITY;
 ALTER TABLE downloads ENABLE ROW LEVEL SECURITY;
 ALTER TABLE products ENABLE ROW LEVEL SECURITY;
+ALTER TABLE roles ENABLE ROW LEVEL SECURITY;
+ALTER TABLE settings ENABLE ROW LEVEL SECURITY;
 
 -- Create policies for users
 CREATE POLICY "Users can view their own data" ON users
@@ -154,13 +179,36 @@ CREATE POLICY "Users can view their own downloads" ON downloads
 CREATE POLICY "Users can insert their own downloads" ON downloads
   FOR INSERT WITH CHECK (user_id = auth.uid());
 
+-- Create policies for roles (admin-only access)
+CREATE POLICY "Only admins can manage roles" ON roles
+  FOR ALL USING (
+    EXISTS (
+      SELECT 1 FROM users WHERE users.id = auth.uid() AND users.role = 'admin'
+    )
+  );
+
+-- Create policies for settings (admin-only access for private settings, public read for public ones)
+CREATE POLICY "Public settings are readable by all" ON settings
+  FOR SELECT USING (is_public = true);
+
+CREATE POLICY "Only admins can manage settings" ON settings
+  FOR ALL USING (
+    EXISTS (
+      SELECT 1 FROM users WHERE users.id = auth.uid() AND users.role = 'admin'
+    )
+  );
+
 -- Create indexes for better performance
 CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
+CREATE INDEX IF NOT EXISTS idx_users_role ON users(role);
 CREATE INDEX IF NOT EXISTS idx_purchases_user_id ON purchases(user_id);
 CREATE INDEX IF NOT EXISTS idx_purchases_payment_id ON purchases(payment_id);
 CREATE INDEX IF NOT EXISTS idx_purchases_status ON purchases(payment_status);
 CREATE INDEX IF NOT EXISTS idx_downloads_user_id ON downloads(user_id);
 CREATE INDEX IF NOT EXISTS idx_downloads_purchase_id ON downloads(purchase_id);
+CREATE INDEX IF NOT EXISTS idx_roles_name ON roles(role_name);
+CREATE INDEX IF NOT EXISTS idx_settings_key ON settings(key);
+CREATE INDEX IF NOT EXISTS idx_settings_category ON settings(category);
 
 -- Create updated_at trigger function
 CREATE OR REPLACE FUNCTION update_updated_at_column()
@@ -176,6 +224,12 @@ CREATE TRIGGER update_users_updated_at BEFORE UPDATE ON users
     FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
 CREATE TRIGGER update_purchases_updated_at BEFORE UPDATE ON purchases
+    FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+CREATE TRIGGER update_roles_updated_at BEFORE UPDATE ON roles
+    FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+CREATE TRIGGER update_settings_updated_at BEFORE UPDATE ON settings
     FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
 
 -- Create admin user function (optional)
@@ -196,8 +250,26 @@ GRANT USAGE ON SCHEMA public TO postgres, anon, authenticated, service_role;
 GRANT ALL ON ALL TABLES IN SCHEMA public TO postgres, service_role;
 GRANT SELECT ON ALL TABLES IN SCHEMA public TO anon, authenticated;
 GRANT INSERT, UPDATE, DELETE ON users, purchases, downloads TO authenticated;
+GRANT SELECT ON roles, settings TO authenticated;
 GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO postgres, service_role;
 GRANT USAGE ON ALL SEQUENCES IN SCHEMA public TO authenticated;
+
+-- Insert initial roles
+INSERT INTO roles (role_name, permissions, description) VALUES
+('admin', '["all"]'::jsonb, 'Full administrative access'),
+('user', '["read_own_data", "update_own_data"]'::jsonb, 'Standard user access'),
+('moderator', '["moderate_content", "view_users"]'::jsonb, 'Content moderation access')
+ON CONFLICT (role_name) DO NOTHING;
+
+-- Insert initial settings
+INSERT INTO settings (key, value, description, category, is_public) VALUES
+('site_name', '"FameChase Admin Dashboard"'::jsonb, 'Name of the application', 'general', true),
+('admin_email', '"admin@famechase.com"'::jsonb, 'Admin contact email', 'general', false),
+('max_users_per_page', '50'::jsonb, 'Number of users to display per page', 'pagination', false),
+('maintenance_mode', 'false'::jsonb, 'Whether the site is in maintenance mode', 'system', false),
+('user_registration_enabled', 'true'::jsonb, 'Allow new user registration', 'system', false),
+('default_user_role', '"user"'::jsonb, 'Default role for new users', 'system', false)
+ON CONFLICT (key) DO NOTHING;
 
 -- Insert some sample data for testing (optional)
 -- INSERT INTO users (id, name, email, niche, primary_platform) VALUES

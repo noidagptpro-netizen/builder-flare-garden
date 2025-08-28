@@ -13,8 +13,13 @@ import {
   Home,
   Loader2,
   LogOut,
+  Settings,
+  UserCog,
+  Save,
+  Plus,
+  Trash2,
 } from "lucide-react";
-import { supabase, isSupabaseConfigured } from "../lib/supabase";
+import { supabase, isSupabaseConfigured, dbHelpers, Role, Setting } from "../lib/supabase";
 
 interface UserData {
   id: string;
@@ -60,10 +65,13 @@ export default function AdminDashboard() {
   });
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<
-    "overview" | "users" | "purchases"
+    "overview" | "users" | "purchases" | "settings"
   >("overview");
   const [searchTerm, setSearchTerm] = useState("");
   const [filterStatus, setFilterStatus] = useState("all");
+  const [roles, setRoles] = useState<Role[]>([]);
+  const [settings, setSettings] = useState<Setting[]>([]);
+  const [newSetting, setNewSetting] = useState({ key: '', value: '', description: '', category: 'general' });
 
   // Check admin authentication
   useEffect(() => {
@@ -156,6 +164,15 @@ export default function AdminDashboard() {
         totalRevenue,
         successfulPayments,
       });
+
+      // Load roles and settings
+      const { data: rolesData, error: rolesError } = await dbHelpers.getRoles();
+      if (rolesError) console.error("Error loading roles:", rolesError);
+      else setRoles(rolesData || []);
+
+      const { data: settingsData, error: settingsError } = await dbHelpers.getSettings();
+      if (settingsError) console.error("Error loading settings:", settingsError);
+      else setSettings(settingsData || []);
     } catch (error) {
       console.error("Error loading dashboard data:", error);
     } finally {
@@ -191,6 +208,62 @@ export default function AdminDashboard() {
       hour: "2-digit",
       minute: "2-digit",
     });
+  };
+
+  const handleUpdateSetting = async (key: string, value: any) => {
+    try {
+      const { error } = await dbHelpers.updateSetting(key, value);
+      if (error) {
+        console.error("Error updating setting:", error);
+        return;
+      }
+      // Reload settings
+      const { data: settingsData } = await dbHelpers.getSettings();
+      setSettings(settingsData || []);
+    } catch (error) {
+      console.error("Error updating setting:", error);
+    }
+  };
+
+  const handleCreateSetting = async () => {
+    try {
+      if (!newSetting.key || !newSetting.value) return;
+      
+      const { error } = await dbHelpers.createSetting({
+        key: newSetting.key,
+        value: newSetting.value,
+        description: newSetting.description,
+        category: newSetting.category,
+        is_public: false,
+      });
+      
+      if (error) {
+        console.error("Error creating setting:", error);
+        return;
+      }
+      
+      // Reset form and reload settings
+      setNewSetting({ key: '', value: '', description: '', category: 'general' });
+      const { data: settingsData } = await dbHelpers.getSettings();
+      setSettings(settingsData || []);
+    } catch (error) {
+      console.error("Error creating setting:", error);
+    }
+  };
+
+  const handleDeleteSetting = async (key: string) => {
+    try {
+      const { error } = await dbHelpers.deleteSetting(key);
+      if (error) {
+        console.error("Error deleting setting:", error);
+        return;
+      }
+      // Reload settings
+      const { data: settingsData } = await dbHelpers.getSettings();
+      setSettings(settingsData || []);
+    } catch (error) {
+      console.error("Error deleting setting:", error);
+    }
   };
 
   const formatCurrency = (amount: number) => {
@@ -369,6 +442,17 @@ export default function AdminDashboard() {
                 }`}
               >
                 Purchases ({stats.totalPurchases})
+              </button>
+              <button
+                onClick={() => setActiveTab("settings")}
+                className={`px-6 py-4 text-sm font-medium border-b-2 flex items-center gap-2 ${
+                  activeTab === "settings"
+                    ? "border-blue-500 text-blue-600"
+                    : "border-transparent text-gray-500 hover:text-gray-700"
+                }`}
+              >
+                <Settings className="w-4 h-4" />
+                Settings
               </button>
             </nav>
           </div>
@@ -583,6 +667,157 @@ export default function AdminDashboard() {
                     ))}
                   </tbody>
                 </table>
+              </div>
+            )}
+
+            {/* Settings Tab */}
+            {activeTab === "settings" && (
+              <div className="space-y-8">
+                {/* Roles Section */}
+                <div>
+                  <div className="flex items-center gap-2 mb-4">
+                    <UserCog className="w-5 h-5 text-gray-600" />
+                    <h3 className="text-lg font-semibold text-gray-900">User Roles</h3>
+                  </div>
+                  <div className="bg-gray-50 rounded-lg p-4">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                      {roles.map((role) => (
+                        <div key={role.id} className="bg-white p-4 rounded-lg border border-gray-200">
+                          <h4 className="font-medium text-gray-900 mb-2">{role.role_name}</h4>
+                          <p className="text-sm text-gray-600 mb-2">{role.description}</p>
+                          <div className="text-xs text-gray-500">
+                            Permissions: {Array.isArray(role.permissions) ? role.permissions.join(', ') : 'N/A'}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Settings Section */}
+                <div>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                      <Settings className="w-5 h-5 text-gray-600" />
+                      <h3 className="text-lg font-semibold text-gray-900">Application Settings</h3>
+                    </div>
+                  </div>
+
+                  {/* Add New Setting */}
+                  <div className="bg-gray-50 rounded-lg p-4 mb-6">
+                    <h4 className="font-medium text-gray-900 mb-3">Add New Setting</h4>
+                    <div className="grid md:grid-cols-4 gap-3">
+                      <input
+                        type="text"
+                        placeholder="Key"
+                        value={newSetting.key}
+                        onChange={(e) => setNewSetting({ ...newSetting, key: e.target.value })}
+                        className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                      />
+                      <input
+                        type="text"
+                        placeholder="Value"
+                        value={newSetting.value}
+                        onChange={(e) => setNewSetting({ ...newSetting, value: e.target.value })}
+                        className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                      />
+                      <input
+                        type="text"
+                        placeholder="Description"
+                        value={newSetting.description}
+                        onChange={(e) => setNewSetting({ ...newSetting, description: e.target.value })}
+                        className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                      />
+                      <select
+                        value={newSetting.category}
+                        onChange={(e) => setNewSetting({ ...newSetting, category: e.target.value })}
+                        className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500"
+                      >
+                        <option value="general">General</option>
+                        <option value="system">System</option>
+                        <option value="ui">UI</option>
+                        <option value="api">API</option>
+                      </select>
+                    </div>
+                    <button
+                      onClick={handleCreateSetting}
+                      className="mt-3 flex items-center gap-2 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
+                      disabled={!newSetting.key || !newSetting.value}
+                    >
+                      <Plus className="w-4 h-4" />
+                      Add Setting
+                    </button>
+                  </div>
+
+                  {/* Settings Table */}
+                  <div className="overflow-x-auto">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b border-gray-200">
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">Key</th>
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">Value</th>
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">Description</th>
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">Category</th>
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">Public</th>
+                          <th className="text-left py-3 px-4 font-semibold text-gray-900">Actions</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {settings.map((setting) => (
+                          <tr key={setting.id} className="border-b border-gray-100">
+                            <td className="py-3 px-4">
+                              <span className="font-mono text-sm bg-gray-100 px-2 py-1 rounded">
+                                {setting.key}
+                              </span>
+                            </td>
+                            <td className="py-3 px-4">
+                              <input
+                                type="text"
+                                value={typeof setting.value === 'object' ? JSON.stringify(setting.value) : setting.value}
+                                onChange={(e) => {
+                                  const newValue = e.target.value;
+                                  // Try to parse as JSON, fallback to string
+                                  let parsedValue = newValue;
+                                  try {
+                                    parsedValue = JSON.parse(newValue);
+                                  } catch {
+                                    parsedValue = newValue;
+                                  }
+                                  handleUpdateSetting(setting.key, parsedValue);
+                                }}
+                                className="w-full px-2 py-1 text-sm border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                              />
+                            </td>
+                            <td className="py-3 px-4 text-sm text-gray-600">
+                              {setting.description || 'N/A'}
+                            </td>
+                            <td className="py-3 px-4">
+                              <span className="inline-block px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                                {setting.category}
+                              </span>
+                            </td>
+                            <td className="py-3 px-4">
+                              <span className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${
+                                setting.is_public ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'
+                              }`}>
+                                {setting.is_public ? 'Public' : 'Private'}
+                              </span>
+                            </td>
+                            <td className="py-3 px-4">
+                              <button
+                                onClick={() => handleDeleteSetting(setting.key)}
+                                className="flex items-center gap-1 px-2 py-1 text-red-600 hover:text-red-700 transition-colors"
+                              >
+                                <Trash2 className="w-4 h-4" />
+                                Delete
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             )}
           </div>
