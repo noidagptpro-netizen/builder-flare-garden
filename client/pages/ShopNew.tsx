@@ -14,7 +14,7 @@ import {
   Loader2,
 } from "lucide-react";
 import { supabase, dbHelpers, User, Product, Purchase } from "../lib/supabase";
-import { paymentHelpers, PayUPaymentData } from "../lib/payu";
+import { paymentHelpers, PayUPaymentData, PAYU_CONFIG } from "../lib/payu";
 import SupabaseConfigBanner from "../components/SupabaseConfigBanner";
 
 interface CustomerInfo {
@@ -181,7 +181,7 @@ export default function Shop() {
       // Code is valid, discount already applied
     } else {
       alert(
-        language === "hindi" ? "अमा���्य प्रोमो कोड" : "Invalid promo code",
+        language === "hindi" ? "अमान्य प्रोमो कोड" : "Invalid promo code",
       );
     }
   };
@@ -288,11 +288,11 @@ export default function Shop() {
         // Redirect to PayU payment gateway
         const form = document.createElement("form");
         form.method = "POST";
-        form.action = "https://test.payu.in/_payment";
+        form.action = PAYU_CONFIG.baseUrl;
 
         // PayU required fields
         const payuFields = {
-          key: "WBtjxn",
+          key: PAYU_CONFIG.merchantKey,
           txnid: paymentData.txnid,
           amount: paymentData.amount.toString(),
           productinfo: paymentData.productinfo,
@@ -591,7 +591,7 @@ export default function Shop() {
                           </div>
                           {product.original_price > product.price && (
                             <div className="text-lg text-gray-500 line-through">
-                              ��{product.original_price}
+                              ₹{product.original_price}
                             </div>
                           )}
                           <div className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold mb-4">
@@ -664,7 +664,7 @@ export default function Shop() {
                 className="w-full bg-gradient-to-r from-neon-green to-electric-blue text-black font-bold py-3 px-6 rounded-xl hover:shadow-lg transition-all inline-block"
               >
                 {language === "hindi"
-                  ? "🎯 अभी प्रोफाइल बनाएं"
+                  ? "🎯 अभी प्रोफाइल ��नाएं"
                   : "🎯 Create Profile Now"}
               </Link>
               <button
