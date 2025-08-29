@@ -535,7 +535,7 @@ export default function Shop() {
             </div>
             <p className="text-sm opacity-90">
               {language === "hindi"
-                ? "5000+ क्रिएटर्स का भरोसा • सफलता गारंटी • तुरंत डाउनलोड"
+                ? "5000+ ��्रिएटर्स का भरोसा • सफलता गारंटी • तुरंत डाउनलोड"
                 : "Trusted by 5000+ creators • Success guaranteed • Instant download"}
             </p>
           </div>
@@ -590,7 +590,7 @@ export default function Shop() {
                     {product.category === "masterclass" && (
                       <div className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-bold">
                         {language === "hindi"
-                          ? "एक्सपर्ट गाइड"
+                          ? "एक���सपर्ट गाइड"
                           : "Expert Guide"}
                       </div>
                     )}
@@ -737,7 +737,7 @@ export default function Shop() {
             </h3>
             <p className="text-gray-600 mb-6">
               {language === "hindi"
-                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क्रिएटर प्रोफाइल बनानी होगी। यह केवल 2 मिनट में हो जाएगा!"
+                ? "प्रीमियम टूल्स को खरीदने से पहले आपको अपनी क���रिएटर प्रोफाइल बनानी होगी। यह केवल 2 मिनट में हो जाएगा!"
                 : "Before purchasing premium tools, you need to complete your creator profile. It takes only 2 minutes!"}
             </p>
             <div className="space-y-3">
@@ -854,7 +854,7 @@ export default function Shop() {
                   <div className="mt-2 text-green-600 text-sm font-medium">
                     ✅ {appliedDiscount}%{" "}
                     {language === "hindi"
-                      ? "छूट ��ागू की गई!"
+                      ? "छूट लागू की गई!"
                       : "discount applied!"}
                   </div>
                 )}
