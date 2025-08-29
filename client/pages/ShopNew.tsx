@@ -180,9 +180,7 @@ export default function Shop() {
     if (validatePromoCode(promoCode)) {
       // Code is valid, discount already applied
     } else {
-      alert(
-        language === "hindi" ? "अमान्य प्रोमो कोड" : "Invalid promo code",
-      );
+      alert(language === "hindi" ? "अमान्य प्रोमो कोड" : "Invalid promo code");
     }
   };
 
