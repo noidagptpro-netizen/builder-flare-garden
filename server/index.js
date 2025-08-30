@@ -78,7 +78,7 @@ function createServer() {
 
   app.get('/pay/:txnid', (req, res) => {
     const txnId = req.params.txnid;
-    const html = `<!doctype html>\n<html>\n<head>\n  <meta charset="utf-8" />\n  <title>Simulated PayU Gateway</title>\n</head>\n<body style="font-family: Arial, sans-serif; display:flex; align-items:center; justify-content:center; height:100vh;">\n  <div>\n    <h2>Simulated PayU Gateway</h2>\n    <p>Simulated payment page for txn ${txnId}</p>\n  </div>\n</body>\n</html>`;
+    const html = `<!doctype html>\n<html>\n<head>\n  <meta charset=\"utf-8\" />\n  <title>Simulated PayU Gateway</title>\n</head>\n<body style=\"font-family: Arial, sans-serif; display:flex; align-it[...]`;
     res.setHeader('Content-Type', 'text/html');
     res.send(html);
   });
@@ -93,10 +93,10 @@ function createServer() {
   return app;
 }
 
-// Export the factory for other modules (like server/node-build.ts) to import
-module.exports = {
-  createServer,
-};
+// Provide both a named CommonJS export and an __esModule flag so bundlers
+// doing ES import analysis (like Rollup) can detect `createServer` as a named export.
+exports.createServer = createServer;
+Object.defineProperty(exports, "__esModule", { value: true });
 
 // If this file is run directly, start listening (preserve current behavior)
 if (require.main === module) {
