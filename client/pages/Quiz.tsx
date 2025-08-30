@@ -1,4 +1,3 @@
-// Replace languages.hindi.options with the object below (no duplicate 'challenges' or 'goals')
 options: {
   platforms: [
     "इंस्टाग्राम",
