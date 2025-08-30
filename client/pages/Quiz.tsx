@@ -942,4 +942,56 @@ export default function Quiz() {
             )}
 
             {!isGenerating && (
-              <>
+              <> 
+                  <div className="py-6">
+                    <h2 className="text-xl font-semibold text-gray-900 mb-2">
+                      {t.steps[currentStep]}
+                    </h2>
+
+                    <div className="text-gray-600">
+                      {/* Minimal placeholder content per step to keep the component valid.
+                          You can extend the step UI later as needed. */}
+                      {currentStep === 1 && (
+                        <p>{t.questions.primaryPlatform}</p>
+                      )}
+                      {currentStep === 2 && <p>{t.questions.followerCount}</p>}
+                      {currentStep > 2 && <p>{t.subtitle}</p>}
+                    </div>
+                  </div>
+
+                  <div className="flex justify-between items-center mt-6">
+                    <button
+                      onClick={handleBack}
+                      className="flex items-center gap-2 bg-gray-100 px-4 py-2 rounded text-sm font-medium"
+                      disabled={currentStep === 1}
+                    >
+                      <ArrowLeft className="w-4 h-4" />
+                      {t.buttons.back}
+                    </button>
+
+                    {currentStep < totalSteps ? (
+                      <button
+                        onClick={handleNext}
+                        className="flex items-center gap-2 bg-gradient-to-r from-neon-green to-electric-blue text-black px-4 py-2 rounded text-sm font-bold"
+                      >
+                        {t.buttons.next}
+                        <ArrowRight className="w-4 h-4" />
+                      </button>
+                    ) : (
+                      <button
+                        onClick={handleSubmit}
+                        className="bg-gradient-to-r from-neon-green to-electric-blue text-black px-4 py-2 rounded text-sm font-bold"
+                      >
+                        {t.buttons.submit}
+                      </button>
+                    )}
+                  </div>
+                </>
+              )}
+
+            </div> {/* close quiz card */}
+          </div> {/* close max-w container */}
+        </main>
+      </div>
+    );
+  }
